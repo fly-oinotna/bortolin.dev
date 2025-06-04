@@ -1,5 +1,11 @@
 export const GTM_ID = 'GTM-M87QWFCB'
 
+declare global {
+  interface Window {
+    gtag?: (command: 'consent', action: 'update', params: Record<string, string>) => void
+  }
+}
+
 type ConsentState = 'granted' | 'denied'
 
 export function updateConsent(consent: {

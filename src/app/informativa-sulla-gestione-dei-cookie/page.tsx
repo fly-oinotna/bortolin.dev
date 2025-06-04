@@ -24,20 +24,20 @@ export default function CookiesPolicy() {
 
                     <h2>2. Tipi di cookie utilizzati</h2>
                     <ul>
-                        <li><strong>Cookie tecnici:</strong> Necessari per il funzionamento del sito e per l’utilizzo delle sue funzionalità, ad esempio per l’invio dei moduli di contatto (richiesta gratuita o messaggio).</li>
-                        <li><strong>Cookie analitici:</strong> Utilizzati per raccogliere informazioni anonime sull’utilizzo del sito e migliorarne le prestazioni.</li>
-                        <li><strong>Cookie di preferenza:</strong> Utilizzati per memorizzare le scelte dell’utente, come la lingua o il consenso ai cookie.</li>
+                        <li><strong>Cookie tecnici:</strong> Necessari per il funzionamento del sito e per l'utilizzo delle sue funzionalità, ad esempio per l'invio dei moduli di contatto (richiesta gratuita o messaggio).</li>
+                        <li><strong>Cookie analitici:</strong> Utilizzati per raccogliere informazioni anonime sull'utilizzo del sito e migliorarne le prestazioni.</li>
+                        <li><strong>Cookie di preferenza:</strong> Utilizzati per memorizzare le scelte dell'utente, come la lingua o il consenso ai cookie.</li>
                     </ul>
 
                     <h2>3. Cookie di terze parti</h2>
                     <p>Il sito utilizza i seguenti servizi esterni che possono impostare cookie nel tuo browser:</p>
                     <ul>
                         <li><strong>Google Tag Manager:</strong> Permette la gestione di script e tag di terze parti in modo efficiente.</li>
-                        <li><strong>Google Analytics:</strong> Raccoglie dati aggregati e anonimi sull’uso del sito per analisi statistiche e miglioramenti.</li>
+                        <li><strong>Google Analytics:</strong> Raccoglie dati aggregati e anonimi sull'uso del sito per analisi statistiche e miglioramenti.</li>
                     </ul>
 
                     <h2>4. Gestione dei cookie</h2>
-                    <p>Puoi gestire le tue preferenze sui cookie direttamente tramite le impostazioni del browser, scegliendo di accettarli, bloccarli o ricevere un avviso prima dell’installazione. Disattivare i cookie tecnici potrebbe compromettere alcune funzionalità del sito.</p>
+                    <p>Puoi gestire le tue preferenze sui cookie direttamente tramite le impostazioni del browser, scegliendo di accettarli, bloccarli o ricevere un avviso prima dell'installazione. Disattivare i cookie tecnici potrebbe compromettere alcune funzionalità del sito.</p>
 
                     <h2>5. Consenso</h2>
                     <p>Al primo accesso viene mostrato un banner per la gestione del consenso. Puoi modificarlo in qualsiasi momento cliccando sul link dedicato nel footer del sito.</p>
