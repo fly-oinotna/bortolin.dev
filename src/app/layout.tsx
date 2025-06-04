@@ -4,51 +4,9 @@ import Script from 'next/script'
 import { GTM_ID } from '@/lib/gtm'
 
 import type { Metadata } from 'next'
-import localFont from 'next/font/local'
 import "./globals.css"
 
 import CookieBanner from '@/components/CookieBanner'
-
-const PlusJakartaSans = localFont({
-  display: 'swap',
-  src: [
-    {
-      path: './fonts/PlusJakartaSans-Regular.woff2',
-      weight: '400',
-      style: 'normal',
-    },
-    {
-      path: './fonts/PlusJakartaSans-Light.woff2',
-      weight: '300',
-      style: 'normal',
-    },
-    {
-      path: './fonts/PlusJakartaSans-Extralight.woff2',
-      weight: '100',
-      style: 'normal',
-    },
-    {
-      path: './fonts/PlusJakartaSans-Medium.woff2',
-      weight: '500',
-      style: 'normal',
-    },
-    {
-      path: './fonts/PlusJakartaSans-SemiBold.woff2',
-      weight: '600',
-      style: 'normal',
-    },
-    {
-      path: './fonts/PlusJakartaSans-Bold.woff2',
-      weight: '700',
-      style: 'normal',
-    },
-    {
-      path: './fonts/PlusJakartaSans-Extrabold.woff2',
-      weight: '800',
-      style: 'normal',
-    },
-  ],
-})
 
 export const metadata: Metadata = {
   icons: {
@@ -162,7 +120,7 @@ export default function RootLayout({
           }}
         />
       </Head>
-      <html lang="it" className={PlusJakartaSans.className + ' scroll-smooth'}>
+      <html lang="it" className='scroll-smooth'>
         <body className='text-gray-800'>
           <noscript>
             <iframe

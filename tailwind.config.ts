@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import { fontFamily } from 'tailwindcss/defaultTheme'
 
 export default {
   content: [
@@ -16,11 +17,14 @@ export default {
           darkgreen: '#8bca4c'
         }
       },
+      fontFamily: {
+        sans: ['"Plus Jakarta Sans"', ...fontFamily.sans],
+      },
       fontSize: {
         '2xs': ['.55rem', {
-            lineHeight: '1rem',
+          lineHeight: '1rem',
         }],
-    },
+      },
     },
   },
   plugins: [],
