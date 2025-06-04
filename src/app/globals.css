@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a, button {
+  @apply hover:opacity-50 transition-opacity duration-300
+}
+
+h1 {
+  @apply text-4xl font-bold leading-tight mb-6
+}
+
+h2 {
+  @apply text-3xl font-bold leading-snug mb-5
+}
+
+h3 {
+  @apply text-2xl font-semibold leading-normal mb-4
+}
+
+h4 {
+  @apply text-xl font-medium leading-relaxed mb-3.5
+}
+
+p {
+  @apply text-base leading-relaxed mb-3.5
+}
+
+
+
+.btn-empty-primary {
+  @apply border border-black rounded-full px-6 py-2.5 text-base font-medium inline-flex items-center gap-0.5 hover:opacity-75 hover:scale-105 transition-all duration-300 shadow
+}
+
+.btn-empty-secondary {
+  @apply border border-white rounded-full px-6 py-2.5 text-base font-medium inline-flex items-center gap-0.5 hover:opacity-75 hover:scale-105 transition-all duration-300 shadow
+}
+
+.btn-primary {
+  @apply bg-bd-green border border-bd-green rounded-full px-6 py-2.5 text-base font-medium inline-flex items-center hover:opacity-75 hover:scale-105 transition-all duration-300 shadow
+}
+
+.btn-secondary {
+  @apply bg-black text-white border border-black rounded-full px-6 py-2.5 text-base font-medium inline-flex items-center hover:opacity-75 hover:scale-105 transition-all duration-300 shadow
+}
+
+
+.container {
+  @apply mx-auto px-4
+}
+
+.content {
+  @apply max-w-3xl mx-auto py-10 md:py-16 lg:py-20
+}
+
+.content h2 {
+  @apply mt-4
+}
+
+.content h3 {
+  @apply mt-3
+}
+
+.content ul {
+  @apply list-disc list-inside mb-4
+}
+
+.content ul li {
+  @apply mb-2
+}
+
+
+li.submenu {
+  @apply relative hover:md:bg-bd-green rounded-t-3xl font-semibold md:font-normal text-lg md:text-base transition-colors duration-300
+}
+
+li.submenu>a {
+  @apply block w-full h-full md:px-4 py-2
+}
+
+li.submenu ul {
+  @apply md:absolute md:min-w-52 md:top-10 md:left-0 md:z-10 md:bg-bd-green md:shadow-sm md:rounded-b-3xl md:rounded-tr-3xl px-4 pt-4 md:pb-4 md:opacity-0 md:overflow-hidden md:max-h-0 transition-all duration-300
+}
+
+li.submenu:hover ul {
+  @apply md:absolute md:z-10 md:opacity-100 md:overflow-visible md:max-h-screen
+}
+
+li.submenu ul li {
+  @apply font-normal
+}
+
+/* Custom Scrollbar Styles */
+.styled-scrollbar::-webkit-scrollbar {
+  @apply w-2
+}
+
+.styled-scrollbar::-webkit-scrollbar-track {
+  @apply bg-gray-200 rounded-full
+}
+
+.styled-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full w-20 hover:opacity-75 cursor-pointer transition-opacity duration-300
+}
