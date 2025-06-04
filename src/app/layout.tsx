@@ -13,37 +13,37 @@ const PlusJakartaSans = localFont({
   display: 'swap',
   src: [
     {
-      path: './fonts/PlusJakartaSans-Regular.woff2',
+      path: '/fonts/PlusJakartaSans-Regular.woff2',
       weight: '400',
       style: 'normal',
     },
     {
-      path: './fonts/PlusJakartaSans-Light.woff2',
+      path: '/fonts/PlusJakartaSans-Light.woff2',
       weight: '300',
       style: 'normal',
     },
     {
-      path: './fonts/PlusJakartaSans-Extralight.woff2',
+      path: '/fonts/PlusJakartaSans-Extralight.woff2',
       weight: '100',
       style: 'normal',
     },
     {
-      path: './fonts/PlusJakartaSans-Medium.woff2',
+      path: '/fonts/PlusJakartaSans-Medium.woff2',
       weight: '500',
       style: 'normal',
     },
     {
-      path: './fonts/PlusJakartaSans-SemiBold.woff2',
+      path: '/fonts/PlusJakartaSans-SemiBold.woff2',
       weight: '600',
       style: 'normal',
     },
     {
-      path: './fonts/PlusJakartaSans-Bold.woff2',
+      path: '/fonts/PlusJakartaSans-Bold.woff2',
       weight: '700',
       style: 'normal',
     },
     {
-      path: './fonts/PlusJakartaSans-Extrabold.woff2',
+      path: '/fonts/PlusJakartaSans-Extrabold.woff2',
       weight: '800',
       style: 'normal',
     },
