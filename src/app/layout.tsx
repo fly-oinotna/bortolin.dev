@@ -47,8 +47,12 @@ export default function RootLayout({
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
         />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-YH2Q50YGVK"></script>
-        <Script strategy="afterInteractive">
+        <Script
+          id="gtm"
+          async
+          src={`https://www.googletagmanager.com/gtag/js?id=G-YH2Q50YGVK`}
+        />
+        <Script>
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
