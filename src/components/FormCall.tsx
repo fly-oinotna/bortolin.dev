@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState } from 'react'
 
 function ContactForm() {
@@ -8,7 +10,7 @@ function ContactForm() {
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [time, setTime] = useState('08:30')
-    const [consent, setConsent] = useState(false)
+    const [consent, setConsent] = useState(true)
     const [error, setError] = useState('')
     const [success, setSuccess] = useState('')
 
@@ -26,7 +28,7 @@ function ContactForm() {
         const data = { name, email, date, time }
 
         try {
-            const response = await fetch('https://webhook.site/4e9b0dfb-86c8-4fc8-83b8-36cd15dec7aa', {
+            const response = await fetch('/api/call-me', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -36,8 +38,14 @@ function ContactForm() {
 
             if (response.ok) {
                 setSuccess('La tua richiesta è stata inviata con successo. Riceverai una conferma via email.')
+                setName('')
+                setEmail('')
+                setDate(formattedDate)
+                setTime('08:30')
+                setConsent(false)
             } else {
-                throw new Error('Si è verificato un errore durante l\'invio della richiesta.')
+                const res = await response.json()
+                throw new Error(res.error || 'Si è verificato un errore durante l\'invio della richiesta.')
             }
         } catch (error) {
             setError('Si è verificato un errore. Riprova più tardi.')
@@ -48,10 +56,6 @@ function ContactForm() {
         <form className='p-4' onSubmit={handleSubmit}>
             <fieldset className='grid grid-cols-1 lg:grid-cols-2 gap-y-4 gap-x-6 lg:gap-x-8'>
                 <legend className='lg:col-span-2 text-xl font-semibold mb-6'>Richiedi consulenza gratuita</legend>
-
-                {error && <p className="text-red-500 text-xs mb-4">{error}</p>}
-                {success && <p className="text-green-500 text-xs mb-4">{success}</p>}
-
                 <div>
                     <label className='block text-xs text-gray-600 pb-1' htmlFor="callmeback_name">Nome e cognome</label>
                     <input
@@ -116,6 +120,8 @@ function ContactForm() {
                 <div>
                     <button className='btn-primary' type='submit'>Invia richiesta</button>
                 </div>
+                {error && <div className='lg:col-span-2 border-red-700 text-red-700 bg-red-100 p-4 rounded-lg text-xs mb-4'>{error}</div>}
+                {success && <div className='lg:col-span-2 border border-green-700 text-green-700 bg-green-100 p-4 rounded-lg text-xs mb-4'>{success}</div>}
             </fieldset>
         </form>
     )
