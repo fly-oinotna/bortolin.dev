@@ -48,7 +48,6 @@ export default function RootLayout({
           src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
         />
         <Script
-          id="gtm"
           async
           src={`https://www.googletagmanager.com/gtag/js?id=G-YH2Q50YGVK`}
         />
