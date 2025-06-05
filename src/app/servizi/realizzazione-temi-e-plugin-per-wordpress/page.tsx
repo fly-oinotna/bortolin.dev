@@ -137,25 +137,6 @@ export default function WordPressDevelopment() {
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify(
                         {
-                            "@context": "https://schema.org/",
-                            "@type": "Product",
-                            "name": "Sviluppo di Plugin e Temi WordPress",
-                            "image": "https://bortolin.dev/images/og-image.jpg",
-                            "description": "Realizzo plugin e temi WordPress su misura per le esigenze del tuo progetto. Scopri come posso aiutarti a creare soluzioni altamente personalizzate, performanti e sicure.",
-                            "brand": {
-                                "@type": "Brand",
-                                "name": "Antonio Bortolin - Sviluppatore Web"
-                            },
-                        }
-                    )
-                }}
-            />
-
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(
-                        {
                             "@context": "https://schema.org",
                             "@type": "Service",
                             "@id": "https://bortolin.dev/servizi/realizzazione-temi-e-plugin-per-wordpress",

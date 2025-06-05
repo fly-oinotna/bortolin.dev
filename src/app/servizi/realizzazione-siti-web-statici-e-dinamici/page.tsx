@@ -208,33 +208,12 @@ export default function WebDesignServices() {
                 </div>
             </section>
 
-
-
             <section className='bg-gray-100 py-10 md:py-16 lg:py-20 mb-10 md:mb-16 lg:mb-20' id='faq'>
                 <div className='container'>
                     <h2 className='lg:text-4xl text-black mb-8'>Domande Frequenti</h2>
                     <FAQ faqs={faqs} />
                 </div>
             </section>
-
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(
-                        {
-                            "@context": "https://schema.org/",
-                            "@type": "Product",
-                            "name": "Design e sviluppo di siti web",
-                            "image": "https://bortolin.dev/images/og-image.jpg",
-                            "description": "Un sito web di qualità è essenziale per il successo della tua azienda. Scopri come posso aiutarti a creare una presenza online efficace, professionale e competitiva.",
-                            "brand": {
-                                "@type": "Brand",
-                                "name": "Antonio Bortolin - Sviluppatore Web"
-                            },
-                        }
-                    )
-                }}
-            />
 
             <script
                 type="application/ld+json"

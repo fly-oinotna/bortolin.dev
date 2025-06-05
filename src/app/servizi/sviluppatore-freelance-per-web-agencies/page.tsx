@@ -138,25 +138,6 @@ export default function FreelancerForAgencies() {
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify(
                         {
-                            "@context": "https://schema.org/",
-                            "@type": "Product",
-                            "name": "Sviluppo Web per Agenzie",
-                            "image": "https://bortolin.dev/images/og-image.jpg",
-                            "description": "Sviluppo siti WordPress, plugin, temi e applicazioni web su misura per web agency e freelance. Preventivi chiari, rispetto delle scadenze e codice performante.",
-                            "brand": {
-                                "@type": "Brand",
-                                "name": "Antonio Bortolin - Sviluppatore Web"
-                            },
-                        }
-                    )
-                }}
-            />
-
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(
-                        {
                             "@context": "https://schema.org",
                             "@type": "Service",
                             "@id": "https://bortolin.dev/servizi/sviluppatore-freelance-per-web-agencies",

@@ -133,25 +133,6 @@ export default function ProjectManagerFreelance() {
                 dangerouslySetInnerHTML={{
                     __html: JSON.stringify(
                         {
-                            "@context": "https://schema.org/",
-                            "@type": "Product",
-                            "name": "Project Manager Freelance per Agenzie Web",
-                            "image": "https://bortolin.dev/images/og-image.jpg",
-                            "description": "Gestione professionale di progetti web per agenzie: mi occupo del team, del cliente e della consegna puntuale di siti e applicazioni personalizzate.",
-                            "brand": {
-                                "@type": "Brand",
-                                "name": "Antonio Bortolin - Sviluppatore Web"
-                            },
-                        }
-                    )
-                }}
-            />
-
-            <script
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{
-                    __html: JSON.stringify(
-                        {
                             "@context": "https://schema.org",
                             "@type": "Service",
                             "@id": "https://bortolin.dev/servizi/project-manager-freelance-per-web-agencies",
