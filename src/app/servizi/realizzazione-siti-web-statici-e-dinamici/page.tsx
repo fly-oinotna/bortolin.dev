@@ -217,6 +217,64 @@ export default function WebDesignServices() {
                 </div>
             </section>
 
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(
+                        {
+                            "@context": "https://schema.org/",
+                            "@type": "Product",
+                            "name": "Design e sviluppo di siti web",
+                            "image": "https://bortolin.dev/images/og-image.jpg",
+                            "description": "Un sito web di qualità è essenziale per il successo della tua azienda. Scopri come posso aiutarti a creare una presenza online efficace, professionale e competitiva.",
+                            "brand": {
+                                "@type": "Brand",
+                                "name": "Antonio Bortolin - Sviluppatore Web"
+                            },
+                        }
+                    )
+                }}
+            />
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "Service",
+                            "@id": "https://bortolin.dev/servizi/realizzazione-siti-web-statici-e-dinamici",
+                            "name": "Design e sviluppo di siti web",
+                            "url": "https://bortolin.dev/servizi/realizzazione-siti-web-statici-e-dinamici",
+                            "mainEntityOfPage": "https://bortolin.dev/servizi/realizzazione-siti-web-statici-e-dinamici",
+                            "areaServed": "https://en.wikipedia.org/wiki/Europe",
+                            "additionalType": "https://en.wikipedia.org/wiki/Web_design",
+                            "logo": "https://bortolin.dev/images/logo-bortolin-sviluppatore-web-freelance.svg",
+                            "image": "https://bortolin.dev/images/og-image.jpg",
+                            "description": "Un sito web di qualità è essenziale per il successo della tua azienda. Scopri come posso aiutarti a creare una presenza online efficace, professionale e competitiva.",
+                            "provider": [{
+                                "@context": "https://schema.org",
+                                "@type": "Organization",
+                                "name": "Antonio Bortolin - Sviluppatore Web",
+                                "url": "https://bortolin.dev",
+                                "logo": "https://bortolin.dev/images/logo-bortolin-sviluppatore-web-freelance.svg",
+                                "contactPoint": {
+                                    "@type": "ContactPoint",
+                                    "telephone": "+39 371 596 2874",
+                                    "contactType": "Customer Service",
+                                    "areaServed": "IT",
+                                    "availableLanguage": "Italian"
+                                },
+                                "sameAs": [
+                                    "https://www.facebook.com/bortolin.dev",
+                                    "https://www.linkedin.com/in/antonio-bortolin",
+                                ]
+                            }]
+                        }
+                    )
+                }}
+            />
+
             <Footer />
         </>
     )

@@ -128,6 +128,64 @@ export default function ProjectManagerFreelance() {
                 </div>
             </section>
 
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(
+                        {
+                            "@context": "https://schema.org/",
+                            "@type": "Product",
+                            "name": "Project Manager Freelance per Agenzie Web",
+                            "image": "https://bortolin.dev/images/og-image.jpg",
+                            "description": "Gestione professionale di progetti web per agenzie: mi occupo del team, del cliente e della consegna puntuale di siti e applicazioni personalizzate.",
+                            "brand": {
+                                "@type": "Brand",
+                                "name": "Antonio Bortolin - Sviluppatore Web"
+                            },
+                        }
+                    )
+                }}
+            />
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "Service",
+                            "@id": "https://bortolin.dev/servizi/project-manager-freelance-per-web-agencies",
+                            "name": "Project Manager Freelance per Agenzie Web",
+                            "url": "https://bortolin.dev/servizi/project-manager-freelance-per-web-agencies",
+                            "mainEntityOfPage": "https://bortolin.dev/servizi/project-manager-freelance-per-web-agencies",
+                            "areaServed": "https://en.wikipedia.org/wiki/Europe",
+                            "additionalType": "https://en.wikipedia.org/wiki/Project_manager",
+                            "logo": "https://bortolin.dev/images/logo-bortolin-sviluppatore-web-freelance.svg",
+                            "image": "https://bortolin.dev/images/og-image.jpg",
+                            "description": "Gestione professionale di progetti web per agenzie: mi occupo del team, del cliente e della consegna puntuale di siti e applicazioni personalizzate.",
+                            "provider": [{
+                                "@context": "https://schema.org",
+                                "@type": "Organization",
+                                "name": "Antonio Bortolin - Sviluppatore Web",
+                                "url": "https://bortolin.dev",
+                                "logo": "https://bortolin.dev/images/logo-bortolin-sviluppatore-web-freelance.svg",
+                                "contactPoint": {
+                                    "@type": "ContactPoint",
+                                    "telephone": "+39 371 596 2874",
+                                    "contactType": "Customer Service",
+                                    "areaServed": "IT",
+                                    "availableLanguage": "Italian"
+                                },
+                                "sameAs": [
+                                    "https://www.facebook.com/bortolin.dev",
+                                    "https://www.linkedin.com/in/antonio-bortolin",
+                                ]
+                            }]
+                        }
+                    )
+                }}
+            />
+
             <Footer />
         </>
     )

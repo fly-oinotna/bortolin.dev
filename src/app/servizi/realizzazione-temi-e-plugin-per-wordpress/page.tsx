@@ -132,6 +132,64 @@ export default function WordPressDevelopment() {
                 </div>
             </section>
 
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(
+                        {
+                            "@context": "https://schema.org/",
+                            "@type": "Product",
+                            "name": "Sviluppo di Plugin e Temi WordPress",
+                            "image": "https://bortolin.dev/images/og-image.jpg",
+                            "description": "Realizzo plugin e temi WordPress su misura per le esigenze del tuo progetto. Scopri come posso aiutarti a creare soluzioni altamente personalizzate, performanti e sicure.",
+                            "brand": {
+                                "@type": "Brand",
+                                "name": "Antonio Bortolin - Sviluppatore Web"
+                            },
+                        }
+                    )
+                }}
+            />
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "Service",
+                            "@id": "https://bortolin.dev/servizi/realizzazione-temi-e-plugin-per-wordpress",
+                            "name": "Sviluppo di Plugin e Temi WordPress",
+                            "url": "https://bortolin.dev/servizi/realizzazione-temi-e-plugin-per-wordpress",
+                            "mainEntityOfPage": "https://bortolin.dev/servizi/realizzazione-temi-e-plugin-per-wordpress",
+                            "areaServed": "https://en.wikipedia.org/wiki/Europe",
+                            "additionalType": "https://en.wikipedia.org/wiki/WordPress#Themes",
+                            "logo": "https://bortolin.dev/images/logo-bortolin-sviluppatore-web-freelance.svg",
+                            "image": "https://bortolin.dev/images/og-image.jpg",
+                            "description": "Realizzo plugin e temi WordPress su misura per le esigenze del tuo progetto. Scopri come posso aiutarti a creare soluzioni altamente personalizzate, performanti e sicure.",
+                            "provider": [{
+                                "@context": "https://schema.org",
+                                "@type": "Organization",
+                                "name": "Antonio Bortolin - Sviluppatore Web",
+                                "url": "https://bortolin.dev",
+                                "logo": "https://bortolin.dev/images/logo-bortolin-sviluppatore-web-freelance.svg",
+                                "contactPoint": {
+                                    "@type": "ContactPoint",
+                                    "telephone": "+39 371 596 2874",
+                                    "contactType": "Customer Service",
+                                    "areaServed": "IT",
+                                    "availableLanguage": "Italian"
+                                },
+                                "sameAs": [
+                                    "https://www.facebook.com/bortolin.dev",
+                                    "https://www.linkedin.com/in/antonio-bortolin",
+                                ]
+                            }]
+                        }
+                    )
+                }}
+            />
+
             <Footer />
         </>
     )

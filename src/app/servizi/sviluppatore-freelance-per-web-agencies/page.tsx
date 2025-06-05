@@ -14,20 +14,20 @@ import Speed from '@/components/icons/Speed'
 import SEO from '@/components/icons/SEO'
 
 export const metadata: Metadata = {
-  title: 'Sviluppo Web per Agenzie | WordPress, Plugin, Temi e Web App Personalizzati',
-  description: 'Sviluppo siti WordPress, plugin, temi e applicazioni web su misura per web agency e freelance. Preventivi chiari, rispetto delle scadenze e codice performante.',
-  keywords: [
-    'sviluppo web agenzie',
-    'sviluppo plugin WordPress',
-    'temi WordPress personalizzati',
-    'web app su misura',
-    'freelance sviluppo WordPress',
-    'collaborazione agenzie web',
-    'sviluppatore WordPress',
-    'realizzazione siti per agenzie',
-    'white label WordPress',
-    'soluzioni digitali personalizzate'
-  ]
+    title: 'Sviluppo Web per Agenzie | WordPress, Plugin, Temi e Web App Personalizzati',
+    description: 'Sviluppo siti WordPress, plugin, temi e applicazioni web su misura per web agency e freelance. Preventivi chiari, rispetto delle scadenze e codice performante.',
+    keywords: [
+        'sviluppo web agenzie',
+        'sviluppo plugin WordPress',
+        'temi WordPress personalizzati',
+        'web app su misura',
+        'freelance sviluppo WordPress',
+        'collaborazione agenzie web',
+        'sviluppatore WordPress',
+        'realizzazione siti per agenzie',
+        'white label WordPress',
+        'soluzioni digitali personalizzate'
+    ]
 }
 
 
@@ -132,6 +132,64 @@ export default function FreelancerForAgencies() {
                     <FAQ faqs={faqs} />
                 </div>
             </section>
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(
+                        {
+                            "@context": "https://schema.org/",
+                            "@type": "Product",
+                            "name": "Sviluppo Web per Agenzie",
+                            "image": "https://bortolin.dev/images/og-image.jpg",
+                            "description": "Sviluppo siti WordPress, plugin, temi e applicazioni web su misura per web agency e freelance. Preventivi chiari, rispetto delle scadenze e codice performante.",
+                            "brand": {
+                                "@type": "Brand",
+                                "name": "Antonio Bortolin - Sviluppatore Web"
+                            },
+                        }
+                    )
+                }}
+            />
+
+            <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                    __html: JSON.stringify(
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "Service",
+                            "@id": "https://bortolin.dev/servizi/sviluppatore-freelance-per-web-agencies",
+                            "name": "Sviluppo Web per Agenzie",
+                            "url": "https://bortolin.dev/servizi/sviluppatore-freelance-per-web-agencies",
+                            "mainEntityOfPage": "https://bortolin.dev/servizi/sviluppatore-freelance-per-web-agencies",
+                            "areaServed": "https://en.wikipedia.org/wiki/Europe",
+                            "additionalType": "https://en.wikipedia.org/wiki/Web_design",
+                            "logo": "https://bortolin.dev/images/logo-bortolin-sviluppatore-web-freelance.svg",
+                            "image": "https://bortolin.dev/images/og-image.jpg",
+                            "description": "Sviluppo siti WordPress, plugin, temi e applicazioni web su misura per web agency e freelance. Preventivi chiari, rispetto delle scadenze e codice performante.",
+                            "provider": [{
+                                "@context": "https://schema.org",
+                                "@type": "Organization",
+                                "name": "Antonio Bortolin - Sviluppatore Web",
+                                "url": "https://bortolin.dev",
+                                "logo": "https://bortolin.dev/images/logo-bortolin-sviluppatore-web-freelance.svg",
+                                "contactPoint": {
+                                    "@type": "ContactPoint",
+                                    "telephone": "+39 371 596 2874",
+                                    "contactType": "Customer Service",
+                                    "areaServed": "IT",
+                                    "availableLanguage": "Italian"
+                                },
+                                "sameAs": [
+                                    "https://www.facebook.com/bortolin.dev",
+                                    "https://www.linkedin.com/in/antonio-bortolin",
+                                ]
+                            }]
+                        }
+                    )
+                }}
+            />
 
             <Footer />
         </>

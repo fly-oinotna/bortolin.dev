@@ -16,6 +16,16 @@ export const metadata: Metadata = {
     apple: [
       { url: '/images/icons/apple-touch-icon.png', sizes: '180x180' }
     ]
+  },
+  openGraph: {
+    images: [
+      {
+        url: 'https://bortolin.dev/images/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Antonio Bortolin - Sviluppatore Web'
+      }
+    ]
   }
 }
 
@@ -51,7 +61,7 @@ export default function RootLayout({
               "@type": "Organization",
               "name": "Antonio Bortolin - Sviluppatore Web",
               "url": "https://bortolin.dev",
-              "logo": "https://bortolin.dev/path-to-your-logo.png",
+              "logo": "https://bortolin.dev/images/logo-bortolin-sviluppatore-web-freelance.svg",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+39 371 596 2874",

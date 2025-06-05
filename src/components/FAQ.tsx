@@ -1,7 +1,6 @@
 'use client'
 
 import { useState } from 'react'
-import Head from 'next/head'
 
 import Minus from '@/components/icons/Minus'
 import Plus from '@/components/icons/Plus'
