@@ -37,9 +37,7 @@ export default function FAQAccordion({ faqs }: FAQAccordionProps) {
 
     return (
         <>
-            <Head>
-                <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
-            </Head>
+            <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
             {faqs.map((faq, index) => (
                 <div key={index} className='block max-w-4xl mx-auto py-2 lg:py-4'>
                     <div className='shadow-lg rounded-2xl overflow-hidden'>

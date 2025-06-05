@@ -54,15 +54,14 @@ export default function RootLayout({
               "logo": "https://bortolin.dev/path-to-your-logo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+39-123-456-789",
+                "telephone": "+39 371 596 2874",
                 "contactType": "Customer Service",
                 "areaServed": "IT",
                 "availableLanguage": "Italian"
               },
               "sameAs": [
+                "https://www.facebook.com/bortolin.dev",
                 "https://www.linkedin.com/in/antonio-bortolin",
-                "https://twitter.com/antonio_bortolin",
-                "https://github.com/antonio-bortolin"
               ]
             })
           }}
