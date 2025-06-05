@@ -5,6 +5,7 @@ import type { Metadata } from 'next'
 import "./globals.css"
 
 import CookieBanner from '@/components/CookieBanner'
+import BreadcrumbSchema from '@/components/BreadcrumbSchema'
 
 export const metadata: Metadata = {
   icons: {
@@ -103,24 +104,7 @@ export default function RootLayout({
             })
           }}
         />
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "BreadcrumbList",
-              "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  "position": 1,
-                  "name": "Home",
-                  "item": "https://bortolin.dev"
-                }
-              ]
-            })
-          }}
-        />
+        <BreadcrumbSchema />
       </head>
       <body className="text-gray-800">
         <noscript>
