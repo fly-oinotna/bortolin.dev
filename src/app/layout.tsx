@@ -45,13 +45,13 @@ export default function RootLayout({
           strategy="afterInteractive"
           src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
         />
-        <Script
+        <script
           async
           src={`https://www.googletagmanager.com/gtag/js?id=G-YH2Q50YGVK`}
         />
-        <Script>
+        <script>
           {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-YH2Q50YGVK');`}
-        </Script>
+        </script>
 
         <script
           type="application/ld+json"
