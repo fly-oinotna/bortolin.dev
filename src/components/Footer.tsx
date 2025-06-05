@@ -11,7 +11,7 @@ import FormContact from '@/components/FormContact'
 import ArrowRight from '@/components/icons/ArrowRight'
 import Envelope from '@/components/icons/Envelope'
 import Facebook from '@/components/icons/Facebook'
-import Instagram from '@/components/icons/Instagram'
+import Cookie from '@/components/icons/Cookie'
 import LinkedIn from '@/components/icons/LinkedIn'
 import Phone from '@/components/icons/Phone'
 
@@ -124,10 +124,10 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div className='md:col-span-2 lg:col-span-4 text-center'>
+                    <p className='text-xs text-center'>© {new Date().getFullYear()} Antonio Bortolin - P.IVA: IT05504860262</p>
                     <p className='text-xs text-center'><Link className='text-xs font-semibold' href={'/informativa-sulla-privacy'} title='Informativa sulla privacy'>Privacy policy</Link> - <Link className='text-xs font-semibold' href={'/informativa-sulla-gestione-dei-cookie'} title='Informativa sulla gestione dei cookies'>Cookies policy</Link></p>
-                    <p className='text-xs m-0 text-center'>© {new Date().getFullYear()} Antonio Bortolin - P.IVA: IT05504860262</p>
-                    <button onClick={reopenBanner} className="text-sm underline text-gray-600">
-                        Gestisci preferenze cookie
+                    <button onClick={reopenBanner} className="text-xs text-black mt-4 flex items-center justify-center mx-auto">
+                        <Cookie width={20} height={20} /><span>Preferenze cookies</span>
                     </button>
                 </div>
             </footer>
