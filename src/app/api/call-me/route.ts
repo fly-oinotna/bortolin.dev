@@ -13,8 +13,8 @@ export async function POST(req: Request) {
     }
 
     const result = await client.sendEmail({
-      From: 'antonio@bortolin.at',
-      To: 'antonio@bortolin.at',
+      From: 'antonio@bortolin.dev',
+      To: 'antonio@bortolin.dev',
       Subject: 'Nuova richiesta di consulenza',
       HtmlBody: `
         <h1>Nuova richiesta</h1>
