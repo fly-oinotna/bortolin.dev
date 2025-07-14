@@ -4,11 +4,26 @@ import { useEffect, useState } from 'react'
 import { updateConsent } from '@/lib/gtm'
 
 const storageKey = 'cookie_consent'
+const GTM_ID = 'GTM-M87QWFCB'
 
 type ConsentSettings = {
     necessary: boolean
     marketing: boolean
     analytics: boolean
+}
+
+function loadGTM(id: string) {
+    if (document.getElementById('gtm-script')) return
+
+    const script = document.createElement('script')
+    script.id = 'gtm-script'
+    script.src = `https://www.googletagmanager.com/gtm.js?id=${id}`
+    script.async = true
+    document.head.appendChild(script)
+
+    const noscript = document.createElement('noscript')
+    noscript.innerHTML = `<iframe src="https://www.googletagmanager.com/ns.html?id=${id}" height="0" width="0" style="display:none;visibility:hidden"></iframe>`
+    document.body.appendChild(noscript)
 }
 
 export default function CookieBanner() {
@@ -22,7 +37,12 @@ export default function CookieBanner() {
 
     useEffect(() => {
         const consent = localStorage.getItem(storageKey)
-        if (!consent) setVisible(true)
+        if (!consent) {
+            setVisible(true)
+        } else {
+            const parsed = JSON.parse(consent)
+            if (parsed.marketing || parsed.analytics) loadGTM(GTM_ID)
+        }
     }, [])
 
     const acceptAll = () => {
@@ -31,6 +51,7 @@ export default function CookieBanner() {
             analytics_storage: 'granted',
         })
         localStorage.setItem(storageKey, JSON.stringify({ marketing: true, analytics: true }))
+        loadGTM(GTM_ID)
         setVisible(false)
     }
 
@@ -49,6 +70,7 @@ export default function CookieBanner() {
             analytics_storage: settings.analytics ? 'granted' : 'denied',
         })
         localStorage.setItem(storageKey, JSON.stringify(settings))
+        if (settings.marketing || settings.analytics) loadGTM(GTM_ID)
         setVisible(false)
         setShowSettings(false)
     }

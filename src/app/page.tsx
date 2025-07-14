@@ -62,7 +62,7 @@ export default function Home() {
       <section className='bg-gray-100 py-10 md:py-16 lg:py-20' id='chi-sono'>
         <div className='container grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 items-center'>
           <div className='md:col-span-2 md:order-2'>
-            <Image className='w-full h-auto aspect-square object-cover rounded-2xl' src={'/images/antonio-bortolin-design-e-sviluppo-web.webp'} alt='bortolin.dev' width={500} height={500} />
+            <Image className='w-full h-auto aspect-square object-cover rounded-2xl' src={'/images/antonio-bortolin-design-e-sviluppo-web.webp'} alt='bortolin.dev' width={500} height={500} priority />
           </div>
           <div className='md:col-span-3 md:order-1'>
             <h2 className='lg:text-4xl text-black mb-6'>Con chi lavorerai</h2>

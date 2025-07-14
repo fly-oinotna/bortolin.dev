@@ -3,6 +3,7 @@ import { GTM_ID } from '@/lib/gtm'
 
 import type { Metadata } from 'next'
 import "./globals.css"
+import { plusJakartaSans } from '../lib/fonts';
 
 import CookieBanner from '@/components/CookieBanner'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
@@ -36,7 +37,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="it" className="scroll-smooth">
+    <html lang="it" className={plusJakartaSans.variable + ' scroll-smooth'}>
       <head>
         <Script id="gtm-init" strategy="afterInteractive">
           {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('consent', 'default', { ad_storage: 'denied', analytics_storage: 'denied', functionality_storage: 'denied', personalization_storage: 'denied', security_storage: 'granted' });`}
