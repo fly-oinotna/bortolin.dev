@@ -92,19 +92,19 @@ export default function CookieBanner() {
                         Puoi scegliere quali cookie accettare, oppure dire “no grazie” a quelli che non vuoi. Se vuoi saperne di più o cambiare idea, le impostazioni sono sempre a portata di clic.<br /><br />
                         Grazie per essere qui con noi! 💚
                     </p>
-                    <div className="flex gap-2 pt-4">
-                        <button onClick={acceptAll} className="btn btn-primary">
+                    <div className="pt-4">
+                        <button onClick={acceptAll} className="inline-block btn btn-primary mb-2 w-full text-center justify-center">
                             Accetta tutti
                         </button>
                         <button
                             onClick={declineAll}
-                            className="border border-black rounded-full px-6 py-2.5 text-base font-medium inline-flex items-center hover:opacity-75 hover:scale-105 transition-all duration-300 shadow"
+                            className="mb-2 inline-block w-full text-center border border-black rounded-full px-6 py-2.5 text-base font-medium hover:opacity-75 hover:scale-105 transition-all duration-300 shadow"
                         >
                             Rifiuta tutti
                         </button>
                         <button
                             onClick={() => setShowSettings(true)}
-                            className="text-sm underline text-gray-600"
+                            className="inline-block text-sm underline text-gray-600 text-center w-full"
                         >
                             Impostazioni
                         </button>
