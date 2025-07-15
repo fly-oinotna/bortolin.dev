@@ -27,8 +27,8 @@ export default function Home() {
       <Header />
 
       <section className='pt-10 md:pt-16 lg:pt-20 pb-16 md:pb-24 lg:pb-32'>
-        <div className='container grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12'>
-          <div className='md:col-span-3'>
+        <div className='container grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12'>
+          <div className='lg:col-span-3'>
             <h1 className='text-black leading-4'><span className='text-base font-normal'>Web designer & developer per piccole e medie imprese, privati e web agencies</span></h1>
             <h2 className='text-black'><span className='lg:text-6xl'>Siti internet veloci e sicuri che rappresentano al meglio la presenza online della tua azienda</span></h2>
             <p className='my-6'>Offro soluzioni su misura per la tua presenza online, combinando siti web innovativi e strategie di marketing online collaudate per posizionare con successo la tua azienda nel mondo digitale.</p>
@@ -37,7 +37,7 @@ export default function Home() {
               <Link href={'/#chi-sono'} title='Chi sono'>Chi sono</Link>
             </div>
           </div>
-          <div className='md:col-span-2 grid grid-cols-2 grid-rows-2 gap-4 md:gap-6'>
+          <div className='lg:col-span-2 grid grid-cols-2 grid-rows-2 gap-4 lg:gap-6'>
             <div className='bg-gray-100 rounded-3xl flex flex-col items-center justify-center'>
               <p className='m-0 text-center'>
                 Oltre
@@ -60,17 +60,17 @@ export default function Home() {
       </section>
 
       <section className='bg-gray-100 py-10 md:py-16 lg:py-20' id='chi-sono'>
-        <div className='container grid grid-cols-1 md:grid-cols-5 gap-8 md:gap-12 items-center'>
-          <div className='md:col-span-2 md:order-2'>
+        <div className='container grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-center'>
+          <div className='lg:col-span-2 lg:order-2'>
             <Image className='w-full h-auto aspect-square object-cover rounded-2xl' src={'/images/antonio-bortolin-design-e-sviluppo-web.webp'} alt='bortolin.dev' width={500} height={500} priority />
           </div>
-          <div className='md:col-span-3 md:order-1'>
+          <div className='lg:col-span-3 lg:order-1'>
             <h2 className='lg:text-4xl text-black mb-6'>Con chi lavorerai</h2>
             <p>Mi chiamo Antonio e sono uno sviluppatore e designer di siti web con oltre {experience} anni di esperienza. Ho lavorato per alcune web agencies all'estero, inizialmente come <em>junior developer</em>, poi come <em>senior developer </em>&nbsp;ed infine come <em>lead developer </em>&nbsp;(a capo del team di sviluppo); nel 2016 ho iniziato a collaborare con queste agenzie come freelancer sia con progetti singoli che con collaborazioni continuative.</p>
             <p>Sono friulano di origine ma vivo in Veneto e sono madrelingua italiano. In 11 anni all'estero, ho imparato a parlare fluentemente inglese, tedesco e spagnolo.</p>
             <p>Le mie passioni sono l'aviazione, il motociclismo, le escursioni nella natura ed il buon cibo.</p>
             <h3 className='mt-6'>Perché lavorare con me?</h3>
-            <ul className='grid grid-cols-2 md:grid-cols-4 gap-4'>
+            <ul className='grid grid-cols-2 lg:grid-cols-4 gap-4'>
               <li className='flex gap-3'>
                 <div>
                   <Certificate width={32} height={32} />
