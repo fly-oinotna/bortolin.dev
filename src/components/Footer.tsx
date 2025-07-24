@@ -134,7 +134,7 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div className='md:col-span-2 lg:col-span-4 text-center'>
-                    <p className='text-xs text-center'>©{new Date().getFullYear()} <span className='font-semibold'>bortolin<span className=' text-bd-darkgreen'>.dev</span></span> - P.IVA: IT05504860262</p>
+                    <p className='text-xs text-center'>©{new Date().getFullYear()} <span className='font-semibold'>bortolin.dev</span> - P.IVA: IT05504860262</p>
                     <p className='text-xs text-center'><Link className='text-xs font-semibold' href={'/informativa-sulla-privacy'} title='Informativa sulla privacy'>Privacy policy</Link> - <Link className='text-xs font-semibold' href={'/informativa-sulla-gestione-dei-cookie'} title='Informativa sulla gestione dei cookies'>Cookies policy</Link></p>
                     <button onClick={reopenBanner} className="text-xs text-black mt-4 flex items-center justify-center mx-auto">
                         <Cookie width={20} height={20} /><span>Preferenze cookies</span>

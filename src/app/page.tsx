@@ -22,6 +22,7 @@ export default function Home() {
   const experience = new Date().getFullYear() - 2010
   const projects = 300
 
+
   return (
     <>
       <Header />

@@ -2,8 +2,8 @@ import Script from 'next/script'
 import { GTM_ID } from '@/lib/gtm'
 
 import type { Metadata } from 'next'
-import "./globals.css"
-import { plusJakartaSans } from '../lib/fonts';
+import './globals.css'
+import { plusJakartaSans } from '../lib/fonts'
 
 import CookieBanner from '@/components/CookieBanner'
 import BreadcrumbSchema from '@/components/BreadcrumbSchema'
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     icon: [
       { url: '/images/icons/favicon.svg', type: 'image/svg+xml' },
       { url: '/images/icons/favicon.png', type: 'image/png', sizes: '32x32' },
-      { url: '/images/icons/favicon-512.png', type: 'image/png', sizes: '512x512' },
+      { url: '/images/icons/favicon-512.png', type: 'image/png', sizes: '512x512' }
     ],
     apple: [
       { url: '/images/icons/apple-touch-icon.png', sizes: '180x180' }
@@ -32,28 +32,37 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="it" className={plusJakartaSans.variable + ' scroll-smooth'}>
       <head>
-        <Script id="gtm-init" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('consent', 'default', { ad_storage: 'denied', analytics_storage: 'denied', functionality_storage: 'denied', personalization_storage: 'denied', security_storage: 'granted' });`}
+        <Script id="gtm-consent" strategy="beforeInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('consent', 'default', {
+              ad_storage: 'denied',
+              analytics_storage: 'denied',
+              functionality_storage: 'denied',
+              personalization_storage: 'denied',
+              security_storage: 'granted'
+            });
+          `}
         </Script>
-        <Script
-          id="gtm"
-          strategy="afterInteractive"
-          src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
-        />
-        <script
-          async
-          src={`https://www.googletagmanager.com/gtag/js?id=G-YH2Q50YGVK`}
-        />
-        <script>
-          {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-YH2Q50YGVK');`}
-        </script>
+
+        <Script id="gtm-loader" strategy="lazyOnload">
+          {`
+            setTimeout(() => {
+              const s = document.createElement('script');
+              s.src = "https://www.googletagmanager.com/gtm.js?id=${GTM_ID}";
+              s.async = true;
+              document.head.appendChild(s);
+            }, 3000);
+          `}
+        </Script>
 
         <script
           type="application/ld+json"
@@ -73,7 +82,7 @@ export default function RootLayout({
               },
               "sameAs": [
                 "https://www.facebook.com/bortolin.dev",
-                "https://www.linkedin.com/in/antonio-bortolin",
+                "https://www.linkedin.com/in/antonio-bortolin"
               ]
             })
           }}
@@ -87,24 +96,28 @@ export default function RootLayout({
               "@type": "WebSite",
               "url": "https://bortolin.dev",
               "name": "Antonio Bortolin - Sviluppatore Web",
-              "description": "Sito web di Antonio Bortolin, sviluppatore web freelance che offre soluzioni personalizzate per siti web e applicazioni.",
+              "description":
+                "Sito web di Antonio Bortolin, sviluppatore web freelance che offre soluzioni personalizzate per siti web e applicazioni.",
               "potentialAction": [
                 {
                   "@type": "ContactAction",
                   "name": "Compila il modulo di contatto",
                   "target": "https://bortolin.dev/contatti",
-                  "description": "Compila il modulo di contatto per metterti in contatto con Antonio Bortolin per richieste o informazioni."
+                  "description":
+                    "Compila il modulo di contatto per metterti in contatto con Antonio Bortolin per richieste o informazioni."
                 },
                 {
                   "@type": "ReserveAction",
                   "name": "Prenota una chiamata gratuita",
                   "target": "https://bortolin.dev/prenota",
-                  "description": "Prenota una videochiamata gratuita di 15 minuti con Antonio Bortolin per discutere delle tue esigenze."
+                  "description":
+                    "Prenota una videochiamata gratuita di 15 minuti con Antonio Bortolin per discutere delle tue esigenze."
                 }
               ]
             })
           }}
         />
+
         <BreadcrumbSchema />
       </head>
       <body className="text-gray-800">
