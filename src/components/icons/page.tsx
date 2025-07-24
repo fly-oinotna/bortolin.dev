@@ -59,7 +59,7 @@ export default function ProjectManagerFreelance() {
             <section className='py-10 md:py-16 lg:py-20'>
                 <div className='container grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12'>
                     <div className='lg:col-span-3'>
-                        <h1 className='text-black leading-4'><span className='text-base font-normal'>Project manager freelance per agenzie web</span></h1>
+                        <h1 className='text-black leading-4'><span className='text-sm font-normal'>Project manager freelance per agenzie web</span></h1>
                         <h2 className='text-black'><span className='lg:text-6xl'>Gestione completa di progetti digitali</span></h2>
                         <p className='my-6'>Gestisco progetti digitali per agenzie che vogliono esternalizzare la figura del project manager. Mi occupo del team, del cliente e di tutte le fasi operative per garantire risultati concreti, precisi e consegne nei tempi previsti.</p>
                         <div className='flex items-center gap-4'>

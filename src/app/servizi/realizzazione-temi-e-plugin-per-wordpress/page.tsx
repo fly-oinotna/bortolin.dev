@@ -63,7 +63,7 @@ export default function WordPressDevelopment() {
             <section className='py-10 md:py-16 lg:py-20'>
                 <div className='container grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12'>
                     <div className='lg:col-span-3'>
-                        <h1 className='text-black leading-4'><span className='text-base font-normal'>Sviluppo di temi e plugin personalizzati per WordPress</span></h1>
+                        <h1 className='text-black leading-4'><span className='text-sm font-normal'>Sviluppo di temi e plugin personalizzati per WordPress</span></h1>
                         <h2 className='text-black'><span className='lg:text-6xl'>Soluzioni su misura per il tuo progetto</span></h2>
                         <p className='my-6'>Un sito WordPress veramente efficace deve essere costruito su misura. Temi e plugin personalizzati garantiscono flessibilità, performance e una gestione ottimale del tuo progetto online.</p>
                         <div className='flex items-center gap-4'>

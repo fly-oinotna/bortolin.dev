@@ -3,7 +3,6 @@
 import { useState } from 'react'
 
 import Link from 'next/link'
-import Image from 'next/image'
 
 import FormCall from '@/components/FormCall'
 import FormContact from '@/components/FormContact'
@@ -14,6 +13,7 @@ import Facebook from '@/components/icons/Facebook'
 import Cookie from '@/components/icons/Cookie'
 import LinkedIn from '@/components/icons/LinkedIn'
 import Phone from '@/components/icons/Phone'
+import Whatsapp from '@/components/icons/Whatsapp'
 
 
 export default function Footer() {
@@ -72,8 +72,18 @@ export default function Footer() {
                         <div className='text-xl md:text-2xl lg:text-3xl font-bold text-black flex items-center'>bortolin<div className='bg-bd-green w-14 h-14 rounded-full text-xl flex justify-center items-center'>.dev</div></div>
                     </Link>
                     <p className='my-4 text-sm lg:mr-24'>Sono uno sviluppatore web che collabora con aziende e web agency, creando soluzioni su misura e gestendo progetti e risorse per assicurare risultati di qualità.</p>
-                    <Link className='font-semibold flex items-center gap-1.5 my-2' href={'mailto:antonio@bortolin.dev'} title={'Scrivimi un\'e-mail'}><Envelope width={24} height={24} /> antonio@bortolin.dev</Link>
-                    <Link className='font-semibold flex items-center gap-1.5 mb-2' href={'tel:+393715962874'} title='Chiamami adesso'><Phone width={24} height={24} /> +39 371 596 2874</Link>
+                    <Link className='font-semibold flex items-center gap-1.5 my-2' href={'mailto:antonio@bortolin.dev'} title={'Scrivimi un\'e-mail'}>
+                        <Envelope width={24} height={24} />
+                        <span>antonio@bortolin.dev</span>
+                    </Link>
+                    <Link className='font-semibold flex items-center gap-1.5 my-2' href={'tel:+393715962874'} title='Chiamami adesso'>
+                        <Phone width={24} height={24} />
+                        <span>+39 371 596 2874</span>
+                    </Link>
+                    <Link className='font-semibold flex items-center gap-1.5 my-2' href={'https://wa.me/message/YPJNFZYIJD6WK1'} title={'Contattami con WhatsApp'} target='_blank' rel='noreferrer noopener'>
+                        <Whatsapp width={24} height={24} />
+                        <span>WhatsApp</span>
+                    </Link>
                     <ul className='flex items-center gap-1 pt-4'>
                         <li>
                             <Link href={'https://www.facebook.com/bortolin.dev'} title='Seguimi su Facebook' target='_blank'><Facebook /></Link>
@@ -124,7 +134,7 @@ export default function Footer() {
                     </ul>
                 </div>
                 <div className='md:col-span-2 lg:col-span-4 text-center'>
-                    <p className='text-xs text-center'>© {new Date().getFullYear()} Antonio Bortolin - P.IVA: IT05504860262</p>
+                    <p className='text-xs text-center'>©{new Date().getFullYear()} <span className='font-semibold'>bortolin<span className=' text-bd-darkgreen'>.dev</span></span> - P.IVA: IT05504860262</p>
                     <p className='text-xs text-center'><Link className='text-xs font-semibold' href={'/informativa-sulla-privacy'} title='Informativa sulla privacy'>Privacy policy</Link> - <Link className='text-xs font-semibold' href={'/informativa-sulla-gestione-dei-cookie'} title='Informativa sulla gestione dei cookies'>Cookies policy</Link></p>
                     <button onClick={reopenBanner} className="text-xs text-black mt-4 flex items-center justify-center mx-auto">
                         <Cookie width={20} height={20} /><span>Preferenze cookies</span>

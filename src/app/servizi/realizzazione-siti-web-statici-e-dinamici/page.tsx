@@ -56,7 +56,7 @@ export default function WebDesignServices() {
             <section className='py-10 md:py-16 lg:py-20'>
                 <div className='container grid grid-cols-1 lg:grid-cols-5 gap-8 md:gap-12'>
                     <div className='lg:col-span-3'>
-                        <h1 className='text-black leading-4'><span className='text-base font-normal'>Design e sviluppo di siti web per piccole e medie imprese, privati e web agencies</span></h1>
+                        <h1 className='text-black leading-4'><span className='text-sm font-normal'>Design e sviluppo di siti web per piccole e medie imprese, privati e web agencies</span></h1>
                         <h2 className='text-black'><span className='lg:text-6xl'>La tua azienda merita una presenza online di qualità</span></h2>
                         <p className='my-6'>Puoi offrire i migliori servizi o prodotti sul mercato, ma senza una presenza web di qualità rischi di restare invisibile. Un sito ben progettato non è solo una vetrina, ma uno strumento strategico per trasmettere credibilità, attrarre clienti e distinguerti dalla concorrenza.<br />Aiuta la tua azienda a comunicare il suo valore in modo efficace.</p>
                         <div className='flex items-center gap-4'>

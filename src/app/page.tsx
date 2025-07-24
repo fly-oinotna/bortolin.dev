@@ -29,7 +29,7 @@ export default function Home() {
       <section className='pt-10 md:pt-16 lg:pt-20 pb-16 md:pb-24 lg:pb-32'>
         <div className='container grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12'>
           <div className='lg:col-span-3'>
-            <h1 className='text-black leading-4'><span className='text-base font-normal'>Web designer & developer per piccole e medie imprese, privati e web agencies</span></h1>
+            <h1 className='text-black leading-4'><span className='text-sm font-normal'>Web designer & developer per piccole e medie imprese, privati e web agencies</span></h1>
             <h2 className='text-black'><span className='lg:text-6xl'>Siti internet veloci e sicuri che rappresentano al meglio la presenza online della tua azienda</span></h2>
             <p className='my-6'>Offro soluzioni su misura per la tua presenza online, combinando siti web innovativi e strategie di marketing online collaudate per posizionare con successo la tua azienda nel mondo digitale.</p>
             <div className='flex items-center gap-4'>

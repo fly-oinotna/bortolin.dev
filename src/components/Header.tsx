@@ -11,6 +11,7 @@ import Instagram from '@/components/icons/Instagram'
 import LinkedIn from '@/components/icons/LinkedIn'
 import Menu from '@/components/icons/Menu'
 import Phone from '@/components/icons/Phone'
+import Whatsapp from '@/components/icons/Whatsapp'
 
 
 export default function Header() {
@@ -48,8 +49,20 @@ export default function Header() {
         <>
             <div className='bg-black py-2'>
                 <div className='container text-xs flex justify-between'>
-                    <Link className='text-bd-green flex items-center gap-1' href={'mailto:antonio@bortolin.dev'}  title={'Scrivimi un\'e-mail'}><Envelope width={16} height={16} /> antonio@bortolin.dev</Link>
-                    <Link className='text-bd-green flex items-center gap-1' href={'tel:+393715962874'} title='Chiamami adesso'><Phone width={16} height={16} /> +39 371 596 2874</Link>
+                    <Link className='text-bd-green items-center gap-1 hidden sm:flex' href={'mailto:antonio@bortolin.dev'} title={'Scrivimi un\'e-mail'}>
+                        <Envelope width={16} height={16} />
+                        <span>antonio@bortolin.dev</span>
+                    </Link>
+                    <div className='flex gap-3'>
+                        <Link className='text-bd-green flex items-center gap-1' href={'tel:+393715962874'} title='Chiamami adesso'>
+                            <Phone width={16} height={16} />
+                            <span>+39 371 596 2874</span>
+                        </Link>
+                        <Link className='text-bd-green flex items-center gap-1' href={'https://wa.me/message/YPJNFZYIJD6WK1'} title={'Contattami con WhatsApp'} target='_blank' rel='noreferrer noopener'>
+                            <Whatsapp width={16} height={16} className='fill-bd-green' />
+                            <span>WhatsApp</span>
+                        </Link>
+                    </div>
                 </div>
             </div>
             <header className={`bg-white sticky py-4 md:py-3 top-0 w-full z-30 transition-all duration-150 ease-in-out ${isScrolled ? 'shadow-lg' : ''}`}>
@@ -60,8 +73,8 @@ export default function Header() {
                     <div className='flex items-center justify-between'>
                         <nav
                             className={`${isOpen ?
-                                    'top-0 left-0 z-20 w-screen md:w-full h-screen md:h-full bg-white opacity-100 overflow-visible' :
-                                    'top-0 left-0 w-0 md:w-full h-0 md:h-full opacity-0 md:opacity-100 overflow-hidden md:overflow-visible'
+                                'top-0 left-0 z-20 w-screen md:w-full h-screen md:h-full bg-white opacity-100 overflow-visible' :
+                                'top-0 left-0 w-0 md:w-full h-0 md:h-full opacity-0 md:opacity-100 overflow-hidden md:overflow-visible'
                                 } fixed md:relative flex items-center justify-center md:justify-between transition-opacity duration-300`}
                         >
                             <div className='md:hidden absolute top-0 left-0 w-full px-4 py-4 md:py-3 flex justify-between'>
