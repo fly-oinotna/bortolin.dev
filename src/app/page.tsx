@@ -12,6 +12,8 @@ import ToolTip from '@/components/ToolTip'
 import ArrowRight from '@/components/icons/ArrowRight'
 import Certificate from '@/components/icons/Certificate'
 
+import './hero.css'
+
 export const metadata: Metadata = {
   title: 'Bortolin.dev | 💻 Sviluppo Siti Web & Project Management 🚀',
   description: 'Sviluppo siti web e gestione progetti per privati, aziende e web agency. 🌐 Soluzioni personalizzate per ogni esigenza! 📈',
@@ -27,34 +29,34 @@ export default function Home() {
     <>
       <Header />
 
-      <section className='pt-10 md:pt-16 lg:pt-20 pb-16 md:pb-24 lg:pb-32'>
-        <div className='container grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12'>
-          <div className='lg:col-span-3'>
-            <h1 className='text-black leading-4'><span className='text-sm font-normal'>Web designer & developer per piccole e medie imprese, privati e web agencies</span></h1>
-            <h2 className='text-black'><span className='lg:text-6xl'>Siti internet veloci e sicuri che rappresentano al meglio la presenza online della tua azienda</span></h2>
-            <p className='my-6'>Offro soluzioni su misura per la tua presenza online, combinando siti web innovativi e strategie di marketing online collaudate per posizionare con successo la tua azienda nel mondo digitale.</p>
-            <div className='flex items-center gap-4'>
-              <Link className='btn-secondary' href={'#lavoriamo-assieme'} title='Lavoriamo assieme'>Lavoriamo assieme <ArrowRight /></Link>
+      <section className='hero'>
+        <div className='hero-wrapper'>
+          <div>
+            <h1 className=''><span className=''>Web designer & developer per piccole e medie imprese, privati e web agencies</span></h1>
+            <h2 className=''><span className=''>Siti internet veloci e sicuri che rappresentano al meglio la presenza online della tua azienda</span></h2>
+            <p className=''>Offro soluzioni su misura per la tua presenza online, combinando siti web innovativi e strategie di marketing online collaudate per posizionare con successo la tua azienda nel mondo digitale.</p>
+            <div className=''>
+              <Link className='button' href={'#lavoriamo-assieme'} title='Lavoriamo assieme'>Lavoriamo assieme <ArrowRight /></Link>
               <Link href={'/#chi-sono'} title='Chi sono'>Chi sono</Link>
             </div>
           </div>
-          <div className='lg:col-span-2 grid grid-cols-2 grid-rows-2 gap-4 lg:gap-6'>
-            <div className='bg-gray-100 rounded-3xl flex flex-col items-center justify-center'>
-              <p className='m-0 text-center'>
+          <div>
+            <div className=''>
+              <p className=''>
                 Oltre
-                <span className='block text-3xl md:text-4xl lg:text-5xl text-black font-bold'><Counter countTo={projects} /></span>
+                <span className=''><Counter countTo={projects} /></span>
                 progetti
               </p>
             </div>
-            <div className='bg-bd-green rounded-3xl flex flex-col items-center justify-center'>
-              <p className='m-0 text-center'>
-                <span className='block text-3xl md:text-4xl lg:text-5xl text-black font-bold'><Counter countTo={experience} speed={100} /></span>
+            <div className=''>
+              <p className=''>
+                <span className=''><Counter countTo={experience} speed={100} /></span>
                 Anni di esperienza
               </p>
             </div>
-            <div className='col-span-2 bg-black rounded-3xl p-4 md:p-6'>
-              <h3 className='text-bd-green'>Zero soprese</h3>
-              <p className='text-white m-0 text-sm'>Patti chiari, amicizia lunga: fornisco un preventivo dettagliato ad ogni progetto che seguo; il preventivo stabilirà da subito le <strong className='text-bd-green'>funzionalità incluse</strong>, i <strong className='text-bd-green'>tempi di consegna</strong> e, soprattutto, <strong className='text-bd-green'>il prezzo</strong>. L'importo in fattura sarà indentico a quello del preventivo.</p>
+            <div className=''>
+              <h3 className=''>Zero soprese</h3>
+              <p className=''>Patti chiari, amicizia lunga: fornisco un preventivo dettagliato ad ogni progetto che seguo; il preventivo stabilirà da subito le <strong className='text-bd-green'>funzionalità incluse</strong>, i <strong className='text-bd-green'>tempi di consegna</strong> e, soprattutto, <strong className='text-bd-green'>il prezzo</strong>. L'importo in fattura sarà indentico a quello del preventivo.</p>
             </div>
           </div>
         </div>

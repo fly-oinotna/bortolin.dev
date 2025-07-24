@@ -1,0 +1,80 @@
+.hero {
+  @apply pt-10 md:pt-16 lg:pt-20 pb-16 md:pb-24 lg:pb-32
+}
+
+.hero h1 {
+  @apply text-black leading-4
+}
+
+
+.hero h1 span {
+  @apply text-sm font-normal
+}
+
+.hero h2 {
+  @apply text-black
+}
+
+.hero h2 span {
+  @apply lg:text-6xl
+}
+
+.hero .button {
+  @apply bg-black text-white border border-black rounded-full px-6 py-2.5 text-base font-medium inline-flex items-center hover:opacity-75 hover:scale-105 transition-all duration-300 shadow
+}
+
+.hero .hero-wrapper {
+  @apply mx-auto px-4 grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12
+}
+
+.hero .hero-wrapper > div:nth-child(1) {
+  @apply lg:col-span-3
+}
+
+.hero .hero-wrapper > div:nth-child(1) p {
+  @apply my-6
+}
+
+
+.hero .hero-wrapper > div:nth-child(1) > div {
+  @apply flex items-center gap-4
+}
+
+.hero .hero-wrapper > div:nth-child(2) {
+  @apply lg:col-span-2 grid grid-cols-2 grid-rows-2 gap-4 lg:gap-6
+}
+
+.hero .hero-wrapper > div:nth-child(2) > div:nth-child(1) {
+  @apply bg-gray-100 rounded-3xl flex flex-col items-center justify-center
+}
+
+.hero .hero-wrapper > div:nth-child(2) > div:nth-child(1) > p {
+  @apply m-0 text-center
+}
+
+.hero .hero-wrapper > div:nth-child(2) > div:nth-child(1) > p > span {
+  @apply block text-3xl md:text-4xl lg:text-5xl text-black font-bold
+}
+
+.hero .hero-wrapper > div:nth-child(2) > div:nth-child(2) {
+  @apply bg-bd-green rounded-3xl flex flex-col items-center justify-center
+}
+.hero .hero-wrapper > div:nth-child(2) > div:nth-child(2) > p {
+  @apply m-0 text-center
+}
+.hero .hero-wrapper > div:nth-child(2) > div:nth-child(2) > p > span {
+  @apply m-0 text-center
+}
+
+.hero .hero-wrapper > div:nth-child(2) > div:nth-child(3) {
+  @apply col-span-2 bg-black rounded-3xl p-4 md:p-6
+}
+
+.hero .hero-wrapper > div:nth-child(2) > div:nth-child(3) > h3 {
+  @apply text-bd-green
+}
+
+
+.hero .hero-wrapper > div:nth-child(2) > div:nth-child(3) > p{
+  @apply text-white m-0 text-sm
+}
