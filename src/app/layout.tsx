@@ -55,6 +55,11 @@ export default function RootLayout({
           {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-YH2Q50YGVK');`}
         </script>
 
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17412384593"></script>
+        <script>
+          {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-17412384593');`}
+        </script>
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
