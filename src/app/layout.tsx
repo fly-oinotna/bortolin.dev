@@ -60,6 +60,24 @@ export default function RootLayout({
           {`window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-17412384593');`}
         </script>
 
+        <Script id="gtag-conversion" strategy="afterInteractive">
+          {`
+            function gtag_report_conversion(url) {
+              var callback = function () {
+                if (typeof(url) != 'undefined') {
+                  window.location = url;
+                }
+              };
+              gtag('event', 'conversion', {
+                'send_to': 'AW-17412384593/n8MMCPDU7vsaENHO7-5A',
+                'event_callback': callback
+              });
+              return false;
+            }
+          `}
+        </Script>
+
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

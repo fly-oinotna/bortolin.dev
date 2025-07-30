@@ -37,6 +37,10 @@ function ContactForm() {
                 setName('')
                 setEmail('')
                 setMessage('')
+                if (typeof window !== 'undefined' && typeof window.gtag_report_conversion === 'function') {
+                    window.gtag_report_conversion()
+                    console.log('conversion')
+                }
             } else {
                 throw new Error('Errore nella richiesta')
             }

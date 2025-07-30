@@ -2,6 +2,12 @@
 
 import React, { useState } from 'react'
 
+declare global {
+  interface Window {
+    gtag_report_conversion: (url?: string) => void
+  }
+}
+
 function ContactForm() {
     const today = new Date()
     const formattedDate = today.toISOString().split('T')[0]
@@ -43,6 +49,10 @@ function ContactForm() {
                 setDate(formattedDate)
                 setTime('08:30')
                 setConsent(false)
+                if (typeof window !== 'undefined' && typeof window.gtag_report_conversion === 'function') {
+                    window.gtag_report_conversion()
+                    console.log('conversion')
+                }
             } else {
                 const res = await response.json()
                 throw new Error(res.error || 'Si è verificato un errore durante l\'invio della richiesta.')
