@@ -9,8 +9,8 @@ import Envelope from '@/components/icons/Envelope'
 import Facebook from '@/components/icons/Facebook'
 import Instagram from '@/components/icons/Instagram'
 import LinkedIn from '@/components/icons/LinkedIn'
-import Menu from '@/components/icons/Menu'
 import Phone from '@/components/icons/Phone'
+import Support from '@/components/icons/Support'
 import Whatsapp from '@/components/icons/Whatsapp'
 
 
@@ -109,7 +109,7 @@ export default function Header() {
                                     </ul>
                                 </li>
                                 <li className='py-2' onClick={closeMenu}>
-                                    <Link className='btn-primary' href={'#lavoriamo-assieme'}>Lavoriamo assieme <ArrowRight /></Link>
+                                    <Link className='btn-primary' href={'#lavoriamo-insieme'} title='Lavoriamo insieme'>Lavoriamo insieme <ArrowRight /></Link>
                                 </li>
                             </ul>
                             <ul className='md:hidden absolute bottom-20 left-0 w-full'>
@@ -132,8 +132,16 @@ export default function Header() {
                                 </li>
                             </ul>
                         </nav>
+                        <Link className='bg-bd-green rounded-full p-3 md:hidden mr-3' href={'#contatti'} title='Vai ai contatti'>
+                            <span className='sr-only'>Vai ai contatti</span>
+                            <Support />
+                        </Link>
                         <button className='md:hidden' onClick={toggleMenu}>
-                            <Menu width={30} height={30} />
+                            <div className='flex flex-col gap-1.5 justify-center items-end'>
+                                <div className='h-[1.5px] w-8 bg-black rounded'></div>
+                                <div className='h-[1.5px] w-5 bg-black rounded'></div>
+                                <div className='h-[1.5px] w-6 bg-black rounded'></div>
+                            </div>
                             <span className='sr-only'>Chiudi menù</span>
                         </button>
                     </div>

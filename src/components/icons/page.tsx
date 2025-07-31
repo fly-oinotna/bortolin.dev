@@ -63,7 +63,7 @@ export default function ProjectManagerFreelance() {
                         <h2 className='text-black'><span className='lg:text-6xl'>Gestione completa di progetti digitali</span></h2>
                         <p className='my-6'>Gestisco progetti digitali per agenzie che vogliono esternalizzare la figura del project manager. Mi occupo del team, del cliente e di tutte le fasi operative per garantire risultati concreti, precisi e consegne nei tempi previsti.</p>
                         <div className='flex items-center gap-4'>
-                            <Link className='btn-secondary' href={'#lavoriamo-assieme'} title='Contattami'>Contattami <ArrowRight /></Link>
+                            <Link className='btn-secondary' href={'#lavoriamo-insieme'} title='Contattami'>Contattami <ArrowRight /></Link>
                             <Link href={'#faq'} title='FAQs'>Domande frequenti</Link>
                         </div>
                     </div>
@@ -117,7 +117,7 @@ export default function ProjectManagerFreelance() {
                 <div className='bg-bd-green rounded-3xl p-4 md:p-6 lg:p-8 text-center'>
                     <h2 className='text-black'>Hai bisogno di un project manager freelance?</h2>
                     <p>Ti affidi a un professionista che conosce le dinamiche delle agenzie.<br />Gestisco progetti web con metodo, visione e precisione.</p>
-                    <Link className='btn-secondary mt-2' href={'#lavoriamo-assieme'} title='Contattami'>Parliamone <ArrowRight /></Link>
+                    <Link className='btn-secondary mt-2' href={'#lavoriamo-insieme'} title='Contattami'>Parliamone <ArrowRight /></Link>
                 </div>
             </section>
 

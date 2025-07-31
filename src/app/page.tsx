@@ -33,7 +33,7 @@ export default function Home() {
             <h2 className='text-black'><span className='lg:text-6xl'>Siti internet veloci e sicuri che rappresentano al meglio la presenza online della tua azienda</span></h2>
             <p className='my-6'>Offro soluzioni su misura per la tua presenza online, combinando siti web innovativi e strategie di marketing online collaudate per posizionare con successo la tua azienda nel mondo digitale.</p>
             <div className='flex items-center gap-4'>
-              <Link className='btn-secondary' href={'#lavoriamo-assieme'} title='Lavoriamo assieme'>Lavoriamo assieme <ArrowRight /></Link>
+              <Link className='btn-secondary' href={'#lavoriamo-insieme'} title='Lavoriamo insieme'>Lavoriamo insieme <ArrowRight /></Link>
               <Link href={'/#chi-sono'} title='Chi sono'>Chi sono</Link>
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function Home() {
               </li>
             </ul>
             <div className='flex items-center gap-4 pt-8'>
-              <Link className='btn-primary' href={'#lavoriamo-assieme'} title='Lavoriamo assieme'>Lavoriamo assieme <ArrowRight /></Link>
+              <Link className='btn-primary' href={'#lavoriamo-insieme'} title='Lavoriamo insieme'>Lavoriamo insieme <ArrowRight /></Link>
               <Link href={'/#servizi'} title='Servizi'>Scopri i servizi</Link>
             </div>
           </div>
@@ -115,7 +115,7 @@ export default function Home() {
               <p>Nessuna sorpresa: il <strong>prezzo è fisso</strong> e stabilito sin dall'inizio!</p>
               <Link href={'/servizi/realizzazione-siti-web-statici-e-dinamici'} className='btn-empty-primary text-black mt-3'>Scopri di più <ArrowRight /></Link>
             </div>
-            <Link className='bg-black rounded-2xl h-full flex items-center hover:opacity-75 p-4 md:p-6' href={'#lavoriamo-assieme'} title='Lavoriamo assieme'>
+            <Link className='bg-black rounded-2xl h-full flex items-center hover:opacity-75 p-4 md:p-6' href={'#lavoriamo-insieme'} title='Lavoriamo insieme'>
               <div>
                 <h4 className='text-bd-green font-semibold'>Ottieni il massimo</h4>
                 <p className='text-white m-0 text-sm'>Raggiungi i tuoi potenziali clienti con un sito <strong className='text-bd-green'>professionale</strong>, performante e che funziona davvero.</p>
@@ -132,7 +132,7 @@ export default function Home() {
               <p>Anche qui, nessuna sorpresa: il <strong>prezzo è fisso</strong> e stabilito sin dall'inizio!</p>
               <Link href={'/servizi/realizzazione-temi-e-plugin-per-wordpress'} className='btn-empty-primary text-black mt-3'>Scopri di più <ArrowRight /></Link>
             </div>
-            <Link className='bg-bd-green rounded-2xl h-full flex items-center hover:opacity-75 p-4 md:p-6' href={'#lavoriamo-assieme'} title='Lavoriamo assieme'>
+            <Link className='bg-bd-green rounded-2xl h-full flex items-center hover:opacity-75 p-4 md:p-6' href={'#lavoriamo-insieme'} title='Lavoriamo insieme'>
               <div>
                 <h4 className='text-black font-semibold'>Arricchisci il tuo sito</h4>
                 <p className='text-black m-0 text-sm'>Strumenti professionali realizzati <strong>su misura per te</strong>, senza funzioni inutili e senza peggiorare le prestazioni.</p>

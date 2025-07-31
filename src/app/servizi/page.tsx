@@ -37,7 +37,7 @@ export default function WebDesignServices() {
                             <p>Realizzo siti web personalizzati, ottimizzati per prestazioni e <ToolTip text={'La SEO (Search Engine Optimization) ottimizza un sito per apparire tra i primi risultati su Google; migliorando contenuti, struttura, velocità e link esterni si può aumentare la visibilità senza pagare per la pubblicità.'}>SEO</ToolTip>, con un design moderno e funzionale. Che si tratti di siti vetrina, e-commerce o soluzioni su misura, garantisco un'esperienza utente fluida ed intuitiva.</p>
                             <Link href={'/servizi/realizzazione-siti-web-statici-e-dinamici'} className='btn-empty-primary text-black mt-3'>Scopri di più <ArrowRight /></Link>
                         </div>
-                        <Link className='bg-black rounded-2xl h-full flex items-center hover:opacity-75 p-4 md:p-6' href={'#lavoriamo-assieme'} title='Lavoriamo assieme'>
+                        <Link className='bg-black rounded-2xl h-full flex items-center hover:opacity-75 p-4 md:p-6' href={'#lavoriamo-insieme'} title='Lavoriamo insieme'>
                             <div>
                                 <h4 className='text-bd-green font-semibold'>Ottieni il massimo</h4>
                                 <p className='text-white m-0 text-sm'>Raggiungi i tuoi potenziali clienti con un sito <strong className='text-bd-green'>professionale</strong>, performante e che funziona davvero.</p>
@@ -53,7 +53,7 @@ export default function WebDesignServices() {
                             <p>Sviluppo temi e plugin personalizzati per WordPress, perfettamente integrati con il tuo sito e ottimizzati per velocità, sicurezza e compatibilità. Creazioni su misura per migliorare funzionalità e design in base alle tue esigenze.</p>
                             <Link href={'/servizi/realizzazione-temi-e-plugin-per-wordpress'} className='btn-empty-primary text-black mt-3'>Scopri di più <ArrowRight /></Link>
                         </div>
-                        <Link className='bg-bd-green rounded-2xl h-full flex items-center hover:opacity-75 p-4 md:p-6' href={'#lavoriamo-assieme'} title='Lavoriamo assieme'>
+                        <Link className='bg-bd-green rounded-2xl h-full flex items-center hover:opacity-75 p-4 md:p-6' href={'#lavoriamo-insieme'} title='Lavoriamo insieme'>
                             <div>
                                 <h4 className='text-black font-semibold'>Arricchisci il tuo sito</h4>
                                 <p className='text-black m-0 text-sm'>Strumenti professionali realizzati <strong>su misura per te</strong>, senza funzioni inutili e senza peggiorare le prestazioni.</p>

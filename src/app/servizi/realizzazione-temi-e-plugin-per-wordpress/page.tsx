@@ -67,7 +67,7 @@ export default function WordPressDevelopment() {
                         <h2 className='text-black'><span className='lg:text-6xl'>Soluzioni su misura per il tuo progetto</span></h2>
                         <p className='my-6'>Un sito WordPress veramente efficace deve essere costruito su misura. Temi e plugin personalizzati garantiscono flessibilità, performance e una gestione ottimale del tuo progetto online.</p>
                         <div className='flex items-center gap-4'>
-                            <Link className='btn-secondary' href={'#lavoriamo-assieme'} title='Contattami'>Contattami <ArrowRight /></Link>
+                            <Link className='btn-secondary' href={'#lavoriamo-insieme'} title='Contattami'>Contattami <ArrowRight /></Link>
                             <Link href={'#faq'} title='FAQs'>Domande frequenti</Link>
                         </div>
                     </div>
@@ -121,7 +121,7 @@ export default function WordPressDevelopment() {
                 <div className='bg-bd-green rounded-3xl p-4 md:p-6 lg:p-8 text-center'>
                     <h2 className='text-black'>Porta il tuo sito WordPress al livello successivo</h2>
                     <p>Un tema o un plugin personalizzato fa la differenza.<br />Affidati ad un esperto per ottenere la massima qualità e flessibilità.</p>
-                    <Link className='btn-secondary mt-2' href={'#lavoriamo-assieme'} title='Contattami'>Parliamone <ArrowRight /></Link>
+                    <Link className='btn-secondary mt-2' href={'#lavoriamo-insieme'} title='Contattami'>Parliamone <ArrowRight /></Link>
                 </div>
             </section>
 

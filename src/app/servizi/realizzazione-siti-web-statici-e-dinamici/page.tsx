@@ -60,7 +60,7 @@ export default function WebDesignServices() {
                         <h2 className='text-black'><span className='lg:text-6xl'>La tua azienda merita una presenza online di qualità</span></h2>
                         <p className='my-6'>Puoi offrire i migliori servizi o prodotti sul mercato, ma senza una presenza web di qualità rischi di restare invisibile. Un sito ben progettato non è solo una vetrina, ma uno strumento strategico per trasmettere credibilità, attrarre clienti e distinguerti dalla concorrenza.<br />Aiuta la tua azienda a comunicare il suo valore in modo efficace.</p>
                         <div className='flex items-center gap-4'>
-                            <Link className='btn-secondary' href={'#lavoriamo-assieme'} title='Lavoriamo assieme'>Lavoriamo assieme <ArrowRight /></Link>
+                            <Link className='btn-secondary' href={'#lavoriamo-insieme'} title='Lavoriamo insieme'>Lavoriamo insieme <ArrowRight /></Link>
                             <Link href={'#faq'} title='FAQs'>Domande frequenti</Link>
                         </div>
                     </div>
@@ -101,7 +101,7 @@ export default function WebDesignServices() {
                         <div className='sticky top-28'>
                             <h2 className='text-black'>Il mio metodo di lavoro</h2>
                             <p>Un processo ben strutturato è essenziale per ottenere risultati eccellenti. Lavoro con un metodo chiaro e definito, che riduce gli imprevisti, migliora l’efficienza e garantisce il massimo della qualità. Dall’analisi iniziale alla manutenzione post-lancio, ogni fase è progettata per soddisfare al meglio le esigenze dei clienti, ottimizzando tempi e risorse.</p>
-                            <Link className='btn-primary mt-3' href={'#lavoriamo-assieme'}>Lavoriamo assieme <ArrowRight /></Link>
+                            <Link className='btn-primary mt-3' href={'#lavoriamo-insieme'}>Lavoriamo insieme <ArrowRight /></Link>
                         </div>
                     </div>
                     <div className='relative'>
@@ -204,7 +204,7 @@ export default function WebDesignServices() {
                 <div className='bg-bd-green rounded-3xl p-4 md:p-6 lg:p-8 text-center'>
                     <h2 className='text-black'>Dai valore alla tua presenza online</h2>
                     <p>Un sito web professionale è un investimento strategico per il tuo business. <br />Migliora la tua immagine, attrai nuovi clienti e fai crescere la tua attività.</p>
-                    <Link className='btn-secondary mt-2' href={'#lavoriamo-assieme'} title='Lavoriamo assieme'>Parliamone <ArrowRight /></Link>
+                    <Link className='btn-secondary mt-2' href={'#lavoriamo-insieme'} title='Lavoriamo insieme'>Parliamone <ArrowRight /></Link>
                 </div>
             </section>
 
