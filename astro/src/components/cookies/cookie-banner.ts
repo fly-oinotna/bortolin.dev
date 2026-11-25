@@ -2,6 +2,8 @@
 // 1. Google Consent Mode v2: valori predefiniti dei tipi di consenso (obbligatori = concessi)
 // 2. visita senza scelta salvata → il banner compare dopo il ritardo impostato
 // 3. scelta salvata nel browser → applicata subito; GTM parte solo se c'è almeno un consenso non obbligatorio
+// 4. anteprima di Tag Assistant (?gtm_debug=… nell'indirizzo, poi per tutta la sessione): GTM parte subito,
+//    con i consensi ancora "denied", così l'anteprima si collega anche senza toccare il banner
 type ConsentType = { type: string; default: 'denied' | 'granted' | 'required' };
 type State = Record<string, 'granted' | 'denied'>;
 
@@ -31,10 +33,18 @@ if (root) {
   const load = (): State | null => { try { return JSON.parse(localStorage.getItem(KEY) || 'null'); } catch { return null; } };
   const save = (s: State) => { try { localStorage.setItem(KEY, JSON.stringify(s)); } catch { /* browser senza storage: la scelta vale solo per questa pagina */ } };
 
+  const DEBUG_KEY = 'bd-gtm-debug';
+  const debug = (() => {
+    try {
+      if (/[?&]gtm_debug=/.test(location.search)) sessionStorage.setItem(DEBUG_KEY, '1');
+      return sessionStorage.getItem(DEBUG_KEY) === '1';
+    } catch { return /[?&]gtm_debug=/.test(location.search); }
+  })();
+
   let gtmLoaded = false;
-  const maybeLoadGtm = (s: State) => {
+  const maybeLoadGtm = (s: State, force = false) => {
     const anyOptional = types.some((t) => t.default !== 'required' && s[t.type] === 'granted');
-    if (!gtmId || gtmLoaded || !anyOptional) return;
+    if (!gtmId || gtmLoaded || (!anyOptional && !force)) return;
     gtmLoaded = true;
     window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
     const js = document.createElement('script');
@@ -93,6 +103,7 @@ if (root) {
   });
 
   // ---- avvio
+  if (debug) maybeLoadGtm(defaults, true);
   const stored = load();
   if (stored) {
     window.gtag('consent', 'update', stored);
