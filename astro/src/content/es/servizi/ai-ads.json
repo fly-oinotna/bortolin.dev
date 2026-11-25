@@ -1,0 +1,306 @@
+{
+  "hero": {
+    "breadcrumb": "Publicidad en IA",
+    "eyebrow": "El nuevo canal",
+    "title": "Publicidad en IA: tu anuncio dentro de las respuestas de la inteligencia artificial",
+    "text": "Cada vez más gente pide consejo a ChatGPT, Gemini o Copilot en lugar de buscar en Google. Y los asistentes de IA empiezan a mostrar **anuncios junto a sus respuestas**: estar ahí antes que tu competencia es una ventaja real.\n",
+    "ctaLabel": "Comprueba si te conviene",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Dónde aparecen los anuncios",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#dove"
+    },
+    "highlights": [
+      "Gestión con tarifa cerrada",
+      "Empezamos con una prueba",
+      "Medición incluida"
+    ],
+    "chatTitle": "Asistente de IA",
+    "chatPlaceholder": "Pregunta lo que quieras…",
+    "demoLabel": "Elige un ejemplo",
+    "demoCaption": "Ejemplos ilustrativos con negocios inventados: el aspecto de los anuncios cambia según la plataforma.",
+    "examples": [
+      {
+        "tab": "Electricista",
+        "question": "¿Me recomiendas un electricista de confianza en Zaragoza?",
+        "answer": "Para elegir electricista en Zaragoza, comprueba que esté autorizado, mira opiniones recientes y tiempos de respuesta. Pide siempre un presupuesto por escrito antes de empezar.",
+        "letter": "E",
+        "name": "Electricista Zaragoza",
+        "place": "Zaragoza y alrededores",
+        "title": "Urgencias eléctricas en Zaragoza",
+        "text": "Instalaciones, averías y boletines. Presupuesto gratis en 24 horas.",
+        "button": "Pide presupuesto",
+        "products": []
+      },
+      {
+        "tab": "Tienda",
+        "question": "¿Dónde puedo probar una bici eléctrica en Barcelona?",
+        "answer": "Muchas tiendas especializadas ofrecen pruebas gratuitas. Pregunta por la autonomía de la batería, la duración de la garantía y cómo funciona el taller.",
+        "letter": "B",
+        "name": "Tienda de bicis Barcelona",
+        "place": "Eixample, Barcelona · abierto también los sábados",
+        "title": "Prueba gratis las e-bikes en nuestra tienda de Barcelona",
+        "text": "Más de 40 modelos para probar, taller propio y entrega a domicilio.",
+        "button": "Reserva tu prueba",
+        "products": []
+      },
+      {
+        "tab": "E-commerce",
+        "question": "¿Qué regalo típico español puedo enviar por Navidad?",
+        "answer": "Una cesta de productos ibéricos siempre triunfa: jamón ibérico, un queso manchego curado y aceite de oliva virgen extra, en una caja regalo.",
+        "letter": "C",
+        "name": "Cestas gourmet",
+        "place": "Tienda online · envíos a toda España",
+        "title": "",
+        "text": "",
+        "button": "",
+        "products": [
+          {
+            "name": "Cesta «Sabores de España»",
+            "price": "49,00 €"
+          },
+          {
+            "name": "Queso manchego curado 1 kg",
+            "price": "22,90 €"
+          },
+          {
+            "name": "Aceite de oliva virgen extra 1 l",
+            "price": "14,90 €"
+          }
+        ]
+      },
+      {
+        "tab": "Asador",
+        "question": "¿Un asador para comer el domingo en La Rioja?",
+        "answer": "Entre Haro y Logroño hay varios asadores con cocina de temporada y vino de la propia bodega. Los domingos conviene reservar con unos días de antelación.",
+        "letter": "A",
+        "name": "Asador en La Rioja",
+        "place": "Rioja Alta, La Rioja",
+        "title": "Comida de domingo entre viñedos",
+        "text": "Cocina de temporada con productos de nuestra huerta y vinos propios. Plazas limitadas.",
+        "button": "Reserva mesa",
+        "products": []
+      }
+    ],
+    "adLabel": "Patrocinado"
+  },
+  "why": {
+    "eyebrow": "Por qué ahora",
+    "title": "La gente ya no solo busca: pregunta",
+    "text": "Quien escribe a un asistente de IA suele saber ya lo que quiere y lo describe con detalle. Un anuncio que responde justo a esa necesidad, en el momento adecuado, tiene muchas más posibilidades de ser elegido.\n",
+    "items": [
+      {
+        "value": "«…en Barcelona?»",
+        "title": "Preguntas concretas",
+        "text": "En una conversación la gente dice dónde, cuándo y con qué presupuesto: sabes exactamente qué busca."
+      },
+      {
+        "value": "Contexto",
+        "title": "El anuncio adecuado en el momento justo",
+        "text": "Apareces cuando la conversación trata de lo que ofreces, no solo cuando alguien escribe una palabra clave."
+      },
+      {
+        "value": "Primero",
+        "title": "Llega antes que tu competencia",
+        "text": "Es un canal nuevo: en muchos sectores la competencia aún es baja. Quien aprende pronto, sale con ventaja."
+      }
+    ]
+  },
+  "where": {
+    "eyebrow": "Dónde aparecen",
+    "title": "Los asistentes de IA donde puedes anunciarte",
+    "text": "El sector cambia mes a mes. Sigo las novedades por ti y te propongo solo los canales que de verdad están disponibles y son útiles para tu negocio.\n",
+    "items": [
+      {
+        "title": "Google",
+        "subtitle": "Anuncios en las respuestas generadas con IA",
+        "text": "Con las campañas de Google Ads adecuadas, los anuncios también pueden aparecer en los resúmenes de IA y en las respuestas conversacionales de Google.",
+        "highlight": false
+      },
+      {
+        "title": "ChatGPT",
+        "subtitle": "Anuncios en las conversaciones",
+        "text": "OpenAI está introduciendo anuncios en ChatGPT. Disponibilidad, formatos y acceso varían según el país: compruebo cuándo y cómo puedes empezar.",
+        "highlight": true
+      },
+      {
+        "title": "Microsoft Copilot",
+        "subtitle": "Anuncios en el asistente de Microsoft",
+        "text": "A través de Microsoft Advertising, los anuncios pueden aparecer en las respuestas de Copilot y en la búsqueda de Bing.",
+        "highlight": false
+      }
+    ],
+    "note": "Google, ChatGPT y Microsoft Copilot son marcas de sus respectivos propietarios, citadas solo a título informativo. La disponibilidad y los formatos de los anuncios dependen de las plataformas y pueden cambiar."
+  },
+  "compare": {
+    "eyebrow": "Qué cambia",
+    "title": "Publicidad en IA y Google Ads: primos, no gemelos",
+    "text": "La base es la misma, pero la forma en que te encuentran es distinta. Por eso hacen falta una estrategia y unos anuncios pensados específicamente.\n",
+    "colA": "Google Ads",
+    "colB": "Publicidad en IA",
+    "rows": [
+      {
+        "label": "Cómo se elige el público",
+        "a": "Palabras clave buscadas en Google",
+        "b": "El contexto de la conversación"
+      },
+      {
+        "label": "Qué escribe el usuario",
+        "a": "Búsquedas cortas: «e-bike barcelona»",
+        "b": "Preguntas completas, con necesidades concretas"
+      },
+      {
+        "label": "Dónde aparece el anuncio",
+        "a": "Encima y debajo de los resultados",
+        "b": "Junto o debajo de la respuesta del asistente"
+      },
+      {
+        "label": "Madurez",
+        "a": "Herramientas consolidadas desde hace años",
+        "b": "Formatos nuevos, en rápida evolución"
+      }
+    ],
+    "note": "¿Ya usas Google Ads? [Mira cómo trabajo las campañas de Google](/servizi/google-ads/).\n"
+  },
+  "included": {
+    "eyebrow": "Qué incluye",
+    "title": "Del análisis a los resultados, en una sola gestión",
+    "text": "Una tarifa cerrada, nunca un porcentaje de la inversión. La cuenta y los datos son tuyos.\n",
+    "ctaLabel": "Comprueba si te conviene",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "items": [
+      {
+        "title": "Análisis del potencial",
+        "text": "Te digo con sinceridad si hoy tiene sentido para tu negocio o si es mejor esperar."
+      },
+      {
+        "title": "Configuración de campañas",
+        "text": "Cuenta, presupuesto, objetivos y reglas: todo en orden desde el primer día."
+      },
+      {
+        "title": "Contextos y temas",
+        "text": "Las conversaciones en las que tiene sentido aparecer, no solo palabras clave."
+      },
+      {
+        "title": "Anuncios y creatividades",
+        "text": "Textos e imágenes pensados para encajar de forma útil en una respuesta."
+      },
+      {
+        "title": "Páginas de destino",
+        "text": "Quien llega desde una conversación quiere respuestas rápidas: la página tiene que dárselas."
+      },
+      {
+        "title": "Medición de conversiones",
+        "text": "Solicitudes y ventas medidas, para saber qué te devuelve cada euro."
+      },
+      {
+        "title": "Optimización continua",
+        "text": "Recorto lo que no rinde e invierto en lo que funciona."
+      },
+      {
+        "title": "Vídeo-informe mensual",
+        "text": "Qué ha pasado, qué significa y qué hacemos ahora."
+      },
+      {
+        "title": "Estrategia con tus otros canales",
+        "text": "Publicidad en IA junto a Google Ads, Meta Ads y tu web, sin solapamientos."
+      }
+    ]
+  },
+  "method": {
+    "eyebrow": "El método",
+    "title": "Empezar con poco, crecer con datos",
+    "text": "No te la juegas en un canal nuevo: pruebas, mides e inviertes solo donde funciona.\n",
+    "items": [
+      {
+        "title": "Análisis",
+        "text": "Compruebo disponibilidad, formatos y potencial en tu sector y tu zona."
+      },
+      {
+        "title": "Prueba",
+        "text": "Empezamos con poco presupuesto y objetivos claros, midiéndolo todo."
+      },
+      {
+        "title": "Escalado",
+        "text": "Invierto más solo en lo que trae solicitudes y ventas reales."
+      },
+      {
+        "title": "Integración",
+        "text": "Coordino la publicidad en IA con Google, Meta y la web, para que no pagues dos veces por el mismo cliente."
+      }
+    ]
+  },
+  "offer": {
+    "show": false,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Preguntas sobre publicidad en IA",
+    "text": "¿No encuentras la tuya? [Escríbeme](#contatti) y te respondo en un día laborable.\n",
+    "items": [
+      {
+        "question": "¿La publicidad en IA ya está disponible en España?",
+        "answer": "Depende de la plataforma: algunos formatos ya están activos, otros están en pruebas o se van abriendo poco a poco en distintos países. En el análisis inicial te digo qué puedes usar hoy y qué conviene preparar para mañana.\n"
+      },
+      {
+        "question": "¿Para qué negocios es adecuada?",
+        "answer": "Sobre todo para quien vende servicios o productos sobre los que la gente pide consejo: oficios, tiendas, e-commerce, turismo, profesionales. Si hoy no compensa en tu sector, te lo diré.\n"
+      },
+      {
+        "question": "¿Cuánto presupuesto necesito?",
+        "answer": "Empezamos con una prueba de poco presupuesto, para reunir datos reales antes de invertir más. Te doy una estimación antes de arrancar.\n"
+      },
+      {
+        "question": "¿Sustituye a Google Ads?",
+        "answer": "No, lo complementa. Google Ads sigue siendo clave para quien busca de la forma clásica; la publicidad en IA llega a quien pide consejo a un asistente. Juntos cubren más momentos de la decisión.\n"
+      },
+      {
+        "question": "¿Cómo se miden los resultados?",
+        "answer": "Igual que en las demás campañas: midiendo solicitudes y ventas en tu web, para saber qué te devuelve cada euro invertido.\n"
+      },
+      {
+        "question": "¿Cuánto cuesta la gestión?",
+        "answer": "Una tarifa cerrada, fijada en el presupuesto. Nunca un porcentaje de la inversión publicitaria.\n"
+      }
+    ],
+    "ctaLabel": "Comprueba si te conviene",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "advertising"
+    ],
+    "title": "Más sobre publicidad en la IA",
+    "text": "Qué sabemos de los anuncios en los asistentes de IA y cómo prepararse, sin perseguir modas.\n",
+    "buttonLabel": "Todos los artículos"
+  },
+  "contact": {
+    "title": "Adelántate en las respuestas de la IA",
+    "formTitle": "Pide un análisis gratis",
+    "topics": [
+      "ads"
+    ]
+  },
+  "seo": {
+    "slug": "publicidad-ia",
+    "title": "Publicidad en ChatGPT y asistentes de IA | bortolin.dev",
+    "description": "Anuncios junto a las respuestas de ChatGPT, Google y Copilot: analizo el potencial para tu negocio, hago pruebas y mido los resultados. Tarifa cerrada.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

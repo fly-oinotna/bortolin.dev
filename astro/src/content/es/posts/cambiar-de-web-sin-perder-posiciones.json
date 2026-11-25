@@ -1,0 +1,23 @@
+{
+  "title": "Cambiar de web sin perder posiciones en Google",
+  "content": {
+    "image": "@it",
+    "imageAlt": "Fichas de madera que forman la palabra «migration» sobre una mesa",
+    "excerpt": "Una migración mal hecha puede reducir las visitas a la mitad de un día para otro. Las 10 comprobaciones antes, durante y después de lanzar la web nueva.",
+    "lead": "Una web nueva es una gran noticia, pero si la migración se hace mal, las visitas desde Google pueden hundirse de un día para otro. Pasa más a menudo de lo que crees. Estas son las comprobaciones que hay que hacer antes, durante y después del lanzamiento para no perder lo que has construido.",
+    "text": "## Por qué se pierden posiciones\n\nGoogle conoce las páginas de tu web antigua y las muestra en sus resultados. Si en la web nueva esas páginas cambian de dirección o desaparecen sin aviso, Google encuentra errores y quien hace clic llega a una página que no existe. El valor acumulado durante años se pierde.\n\n## Antes: haz inventario de las páginas\n\n1. Exporta la lista de **todas las páginas** de la web actual (desde el sitemap y con una herramienta de rastreo).\n2. Con Search Console y Analytics localiza las que traen más **visitas y contactos**.\n3. Apunta también las páginas que reciben **enlaces** de otras webs.\n\n## El mapa de redirecciones\n\nPara cada dirección antigua decide a dónde debe llevar en la web nueva y configura una **redirección permanente (301)**. Reglas sencillas:\n\n- cada página se redirige a la página nueva **más parecida**, no todas a la portada;\n- evita las cadenas de redirecciones (A → B → C);\n- las páginas eliminadas de verdad y sin equivalente pueden devolver un error 410 o 404.\n\n## Contenidos y estructura\n\nSi la web nueva cambia los textos, cuidado con no perder lo que hoy funciona en Google: temas, palabras clave, preguntas a las que respondes. Mantén los títulos y las descripciones de las páginas importantes, o mejóralos a conciencia.\n\n## El día del lanzamiento\n\n- comprueba que la web **no esté bloqueada** para los buscadores (pasa a menudo: estaba bloqueada en desarrollo y nadie la desbloquea);\n- prueba por muestreo las redirecciones de las páginas más importantes;\n- envía el nuevo **sitemap** en Search Console;\n- si también cambias de dominio, usa la herramienta de cambio de dirección de Search Console;\n- comprueba que la medición de Analytics y de las conversiones funciona.\n\n## En las semanas siguientes\n\nEs normal ver algunas oscilaciones los primeros días. Revisa cada semana en Search Console los **errores de rastreo** y las páginas no encontradas, y corrige las redirecciones que falten. Compara visitas y posiciones con el periodo anterior para detectar si algo va mal.\n\n## La checklist en 10 puntos\n\n1. Lista completa de las páginas actuales.\n2. Páginas más importantes por visitas, contactos y enlaces.\n3. Mapa dirección antigua → dirección nueva.\n4. Redirecciones 301, sin cadenas.\n5. Títulos y contenidos clave conservados.\n6. Web desbloqueada para los buscadores.\n7. Nuevo sitemap enviado.\n8. Medición comprobada.\n9. Revisión semanal de errores.\n10. Comparación de datos al mes y a los tres meses."
+  },
+  "seo": {
+    "title": "Cambiar de web sin perder posiciones en Google | bortolin.dev",
+    "description": "Una migración mal hecha puede reducir las visitas a la mitad de golpe. Las 10 comprobaciones antes, durante y después de lanzar la web nueva.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "cambiare-sito-senza-perdere-posizioni"
+}

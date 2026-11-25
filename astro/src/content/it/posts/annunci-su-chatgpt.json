@@ -1,0 +1,25 @@
+{
+  "title": "Annunci su ChatGPT: cosa sappiamo e come prepararsi",
+  "content": {
+    "date": "2026-09-11",
+    "category": "advertising",
+    "image": "/src/assets/images/blog/annunci-su-chatgpt.webp",
+    "imageAlt": "Mano che tiene uno smartphone con una conversazione in un’app di chat",
+    "excerpt": "La pubblicità sta entrando negli assistenti AI. Cosa cambia rispetto a Google Ads, cosa è già disponibile e cosa conviene fare oggi.",
+    "lead": "La pubblicità sta entrando negli assistenti di intelligenza artificiale. Accanto alle risposte di ChatGPT, delle panoramiche AI di Google e di Microsoft Copilot iniziano a comparire annunci sponsorizzati. Cosa sappiamo, cosa cambia rispetto alla pubblicità classica e cosa conviene fare oggi.",
+    "text": "## Cosa sta succedendo\n\nLe persone usano sempre di più gli assistenti AI per informarsi e scegliere. Le piattaforme stanno quindi introducendo formati pubblicitari pensati per questo contesto. La situazione cambia rapidamente: **disponibilità, formati e regole variano da piattaforma a piattaforma e da Paese a Paese**, e molte funzioni sono ancora in fase di test.\n\n## Dove compaiono gli annunci\n\n- **Google**: con le campagne giuste, gli annunci possono comparire anche nelle panoramiche e nelle risposte generate dall’AI.\n- **Microsoft Copilot**: tramite Microsoft Advertising, gli annunci possono comparire nelle risposte dell’assistente e nella ricerca Bing.\n- **ChatGPT**: OpenAI sta introducendo gli annunci nelle conversazioni, con un accesso che si sta allargando gradualmente.\n\n## Cosa cambia rispetto a Google Ads classico\n\nNella ricerca classica le persone scrivono poche parole (“bici elettrica Udine”). In una conversazione con un assistente raccontano molto di più: budget, esigenze, dubbi. Gli annunci quindi tendono a basarsi sul **contesto della conversazione** più che su singole parole chiave, e devono inserirsi in modo utile nella risposta.\n\n## Per chi ha senso oggi\n\nSoprattutto per chi vende prodotti o servizi su cui le persone chiedono consiglio: artigiani, negozi, e-commerce, turismo, professionisti. Per altri settori può essere ancora presto. In ogni caso conviene partire con un **test a budget contenuto** e misurare i risultati prima di investire di più.\n\n## Come prepararsi\n\n1. Assicurati che il **tracciamento** delle conversioni sul sito sia corretto: senza, non saprai cosa funziona.\n2. Prepara **pagine di destinazione** chiare e veloci: chi arriva da una conversazione vuole risposte immediate.\n3. Lavora sulla tua **visibilità organica** nelle AI (la GEO): annunci e citazioni spontanee si rafforzano a vicenda.\n4. Segui le novità delle piattaforme o affidati a chi lo fa per te.\n\n## Rischi da evitare\n\nCome per ogni canale nuovo, il rischio è spendere senza misurare, inseguendo l’entusiasmo del momento. Evita impegni lunghi, pretendi report chiari e valuta i risultati sul **costo per contatto o per vendita**, non sulle visualizzazioni.\n\n## In sintesi\n\nLa pubblicità negli assistenti AI è un canale nuovo e promettente, soprattutto per chi arriva prima dei concorrenti. Ma resta pubblicità: funziona se il tracciamento è corretto, se il sito converte e se si parte con un test misurato. Il resto lo dicono i dati."
+  },
+  "seo": {
+    "title": "Annunci su ChatGPT: come prepararsi | bortolin.dev",
+    "description": "La pubblicità sta entrando negli assistenti AI. Cosa cambia rispetto a Google Ads, cosa è già disponibile e cosa conviene fare oggi.",
+    "ogImage": "/src/assets/images/social/og-blog-annunci-su-chatgpt.png",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "markdown": null,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

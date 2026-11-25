@@ -1,0 +1,170 @@
+{
+  "title": "European Forensic Institute",
+  "card": {
+    "domain": "eufor.eu",
+    "sectors": [
+      "formazione",
+      "multilingua"
+    ],
+    "tags": [
+      "Educación superior",
+      "Multiidioma EN · ES · IT",
+      "WordPress"
+    ],
+    "summary": "Un centro de educación superior con sede en Malta: grados y másteres acreditados en ciencias forenses, criminología e investigación de delitos informáticos.",
+    "features": [
+      "Una web en tres idiomas para estudiantes internacionales",
+      "Páginas de grados y másteres, eventos y noticias",
+      "Un proceso de admisión claro, de los requisitos a la solicitud"
+    ],
+    "dark": true,
+    "desktopImage": "@it",
+    "desktopAlt": "Página de inicio de la web del European Forensic Institute",
+    "mobileImage": "@it",
+    "mobileAlt": "Web del European Forensic Institute en el móvil",
+    "longImage": "@it",
+    "longAlt": "Página de inicio completa de la web del European Forensic Institute"
+  },
+  "hero": {
+    "eyebrow": "Caso de éxito",
+    "intro": "La web en tres idiomas de un centro de educación superior, pensada para guiar a estudiantes de todo el mundo desde que descubren los cursos hasta que se matriculan.",
+    "tags": [
+      "Educación superior",
+      "Multiidioma EN · ES · IT",
+      "WordPress"
+    ],
+    "ctaLabel": "Quiero un proyecto parecido",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "details": [
+      {
+        "label": "Cliente",
+        "value": "European Forensic Institute"
+      },
+      {
+        "label": "Sector",
+        "value": "Educación superior"
+      },
+      {
+        "label": "Ubicación",
+        "value": "Malta, con estudiantes internacionales"
+      },
+      {
+        "label": "Tipo de proyecto",
+        "value": "Web multiidioma"
+      },
+      {
+        "label": "Tecnología",
+        "value": "WordPress"
+      }
+    ]
+  },
+  "client": {
+    "eyebrow": "El cliente",
+    "title": "Quién es el European Forensic Institute",
+    "text": "El European Forensic Institute es un centro de educación superior que ofrece grados y másteres acreditados en ciencias forenses, criminología e investigación de delitos informáticos, para estudiantes de toda Europa y de fuera de ella.\n",
+    "challengeLabel": "El reto",
+    "challengeText": "Un público internacional, muchos cursos y un proceso de admisión con requisitos concretos. La web tenía que hablar a estudiantes de distintos países, en su idioma, y acompañarlos sin dudas hasta la solicitud.",
+    "challengePoints": [
+      "Tres idiomas que gestionar con orden",
+      "Grados y másteres que presentar con claridad",
+      "Eventos, jornadas de puertas abiertas y noticias siempre al día"
+    ]
+  },
+  "solution": {
+    "eyebrow": "La solución",
+    "title": "Qué he hecho",
+    "text": "Primero la estructura, luego el diseño: cada decisión parte de quién usará la web y qué necesita encontrar.\n",
+    "items": [
+      {
+        "icon": "globe",
+        "title": "Una web en tres idiomas",
+        "text": "Inglés, español e italiano, con el selector de idioma siempre visible y las versiones enlazadas entre sí, también para Google."
+      },
+      {
+        "icon": "graduation",
+        "title": "Páginas de los cursos",
+        "text": "Grados y másteres presentados de forma homogénea, fáciles de comparar y elegir."
+      },
+      {
+        "icon": "route",
+        "title": "Proceso de admisión",
+        "text": "Requisitos y pasos de la solicitud explicados en orden, del primer contacto a la matrícula."
+      },
+      {
+        "icon": "event",
+        "title": "Eventos y noticias",
+        "text": "Jornadas de puertas abiertas, webinars y noticias destacadas, para convertir el interés en un primer contacto."
+      }
+    ]
+  },
+  "showcase": {
+    "eyebrow": "La web",
+    "title": "El resultado, en cualquier pantalla",
+    "text": "Pasa el ratón por la página para desplazarla.\n",
+    "scrollLabel": "Vista previa desplazable de la página de inicio del European Forensic Institute",
+    "mobileCaption": "Versión móvil"
+  },
+  "results": {
+    "eyebrow": "Antes y después",
+    "title": "Qué ha cambiado",
+    "beforeLabel": "Antes",
+    "before": [
+      "Por completar: cómo era la web o el punto de partida",
+      "Por completar: el problema principal"
+    ],
+    "afterLabel": "Después",
+    "after": [
+      "Una web en tres idiomas",
+      "Páginas de los cursos",
+      "Proceso de admisión",
+      "Eventos y noticias"
+    ],
+    "kpis": [
+      {
+        "label": "Resultado 1",
+        "value": "—",
+        "note": "p. ej. solicitudes al mes"
+      },
+      {
+        "label": "Resultado 2",
+        "value": "—",
+        "note": "p. ej. visitas desde Google"
+      },
+      {
+        "label": "Resultado 3",
+        "value": "—",
+        "note": "p. ej. nota de Lighthouse"
+      }
+    ]
+  },
+  "cta": {
+    "title": "El próximo caso de éxito puede ser el tuyo",
+    "text": "Cuéntame tu negocio en la llamada gratuita de 25 minutos: te diré cómo lo haría, cuánto tardaría y con qué precio cerrado.",
+    "ctaLabel": "Reserva tu llamada gratis",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "contact": {
+    "title": "¿Quieres una web así?",
+    "formTitle": "Pide tu presupuesto gratis",
+    "topics": [
+      "nuovo-sito"
+    ]
+  },
+  "seo": {
+    "title": "European Forensic Institute: web multiidioma | bortolin.dev",
+    "description": "Cómo creé la web multiidioma del European Forensic Institute, centro de educación superior en ciencias forenses: el reto, la solución y los resultados.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "european-forensic-institute"
+}

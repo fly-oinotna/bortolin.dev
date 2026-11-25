@@ -1,0 +1,18 @@
+{
+  "title": "Privacy policy",
+  "content": {
+    "text": "**Last updated:** 3 June 2025\n\nThe data controller is:\n\n**Antonio Bortolin**\\\nEmail: [antonio@bortolin.dev](mailto:antonio@bortolin.dev)\\\nVAT No.: IT05504860262\n\n## **Data collected**\n\nWhen you use this website, the following personal data may be collected:\n\n- **Data provided voluntarily:** name, email and other data entered in the contact forms.\n- **Browsing data:** IP address, browser type, device, operating system, pages visited and visit duration.\n- **Cookies:** files used to improve the browsing experience. For details, see the [Cookie Policy](/informativa-sulla-gestione-dei-cookie).\n\n## **Purposes and legal basis**\n\nData is processed in order to:\n\n1. Reply to requests received via form or email.\n1. Analyze use of the website and improve how it works.\n1. Fulfill legal or tax obligations.\n\nProcessing is based on the data subject’s consent, the performance of a contract or legal obligations.\n\n## **Data recipients**\n\nYour data will never be sold. It may be disclosed to:\n\n- **Technical service providers** (e.g. hosting, web analytics).\n- **Competent authorities**, on request or where required by law.\n\n## **Retention**\n\nPersonal data will be kept for as long as necessary for the purposes stated or to comply with legal obligations.\n\n## **Your rights**\n\nAt any time you can exercise the rights provided by the GDPR, including:\n\n- The right to access, rectify and erase your data.\n- Restriction of and objection to processing.\n- Data portability.\n- Withdrawal of consent previously given.\n- Lodging a complaint with the competent supervisory authority.\n\nTo exercise your rights, email me at: [antonio@bortolin.dev](mailto:antonio@bortolin.dev)\n"
+  },
+  "seo": {
+    "title": "Privacy policy: how your data is handled | bortolin.dev",
+    "description": "How bortolin.dev collects, uses and protects your personal data under the GDPR, and how to exercise your rights at any time.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false
+  },
+  "original": "informativa-sulla-privacy"
+}

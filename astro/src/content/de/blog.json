@@ -1,0 +1,185 @@
+{
+  "hero": {
+    "breadcrumb": "Blog",
+    "eyebrow": "Der Blog von bortolin.dev",
+    "title": "Klare Gedanken zum {% verde %}Web{% /verde %}, einfach erklärt\n",
+    "text": "SEO, Ladezeit, künstliche Intelligenz, Kampagnen und Digitalisierung: praxisnahe Ratgeber für alle, die ein Unternehmen führen und verstehen wollen, statt nur zu delegieren.\n",
+    "searchLabel": "Artikel durchsuchen",
+    "searchPlaceholder": "Thema suchen, z. B. „Google“",
+    "featuredLabel": "Empfohlen",
+    "featured": null,
+    "readingLabel": "Lesezeit"
+  },
+  "list": {
+    "filterLabel": "Nach Kategorie filtern",
+    "allLabel": "Alle",
+    "countOne": "1 Artikel",
+    "countMany": "{n} Artikel",
+    "emptyTitle": "Keine Artikel gefunden",
+    "emptyText": "Versuchen Sie ein anderes Wort oder sehen Sie sich alle Kategorien an.",
+    "emptyButton": "Alle Artikel anzeigen",
+    "extraAfter": 6,
+    "extraEyebrow": "Sie haben eine Frage?",
+    "extraTitle": "Reicht ein Artikel nicht, fragen Sie mich.",
+    "extraText": "Kostenloses 25-Minuten-Gespräch: verständliche Antworten, unverbindlich.",
+    "extraCtaLabel": "Gespräch buchen",
+    "extraCtaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "help": {
+    "eyebrow": "Nicht gefunden, was Sie suchen?",
+    "title": "Jedes Unternehmen hat andere Fragen. Schreiben Sie mir Ihre",
+    "text": "Liegt Ihnen ein Thema am Herzen, schreiben Sie mir: Es könnte der nächste Artikel werden. Oder buchen Sie ein kostenloses 25-Minuten-Gespräch, und wir sprechen direkt darüber.",
+    "ctaLabel": "Gespräch buchen",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Leistungen ansehen",
+    "linkLink": {
+      "discriminant": "/servizi/"
+    },
+    "topicsTitle": "Themen"
+  },
+  "post": {
+    "tocTitle": "In diesem Artikel",
+    "sideText": "Kostenloses 25-Minuten-Gespräch, unverbindlich.",
+    "sideButton": "Gespräch buchen",
+    "ctaButton": "Sprechen wir darüber",
+    "ctaLabel": "Handlungsaufforderung",
+    "authorLabel": "Geschrieben von",
+    "authorName": "Antonio Bortolin",
+    "authorRole": "Webdesigner und SEO-Berater",
+    "authorBio": "Webdesigner, Entwickler und SEO-Berater mit über 15 Jahren Erfahrung. Ich helfe Unternehmen und Selbstständigen in Italien und im Ausland, online zu wachsen, und erkläre alles verständlich.",
+    "authorImage": "@it",
+    "authorAlt": "Antonio Bortolin",
+    "authorPageLabel": "Über mich",
+    "authorPageLink": {
+      "discriminant": "custom",
+      "value": "/#chi-sono"
+    },
+    "bannerLabel": "Die passende Leistung",
+    "bannerSuffix": " Festpreis, ein Ansprechpartner und alles verständlich erklärt.",
+    "bannerButton": "Zur Leistung",
+    "bannerCallLabel": "Gespräch buchen",
+    "bannerCallLink": {
+      "discriminant": "#contatti"
+    },
+    "relatedTitle": "Weiterlesen",
+    "relatedAll": "Alle Artikel",
+    "contactTitle": "Fragen zu diesem Thema?"
+  },
+  "categories": {
+    "items": [
+      {
+        "category": "seo",
+        "service": "SEO-Beratung",
+        "link": {
+          "discriminant": "/servizi/consulenza-seo/"
+        },
+        "text": "Ich analysiere Ihre Website und Ihre Präsenz bei Google und sage Ihnen, was zuerst zu tun ist.",
+        "offer": "audit-seo",
+        "cta1Title": "Mehr Kunden über Google?",
+        "cta1Text": "Ich analysiere Ihre Website und sage Ihnen verständlich, was zuerst zu tun ist.",
+        "cta2Title": "Sie wissen nicht, wo Sie mit SEO anfangen sollen?",
+        "cta2Text": "Im kostenlosen 25-Minuten-Gespräch zeige ich Ihnen die Prioritäten für Ihr Unternehmen."
+      },
+      {
+        "category": "performance",
+        "service": "Performance-Optimierung",
+        "link": {
+          "discriminant": "/servizi/miglioramento-prestazioni-siti-web/"
+        },
+        "text": "Ich messe sie mit Lighthouse und mache sie schnell, ohne Neubau.",
+        "offer": "check-up-velocita",
+        "cta1Title": "Ist Ihre Website langsam?",
+        "cta1Text": "Ich messe sie mit Lighthouse und mache sie schnell, ohne Neubau.",
+        "cta2Title": "Core Web Vitals im roten Bereich?",
+        "cta2Text": "Ich sage Ihnen, was sie bremst und was die Behebung kostet, zum Festpreis."
+      },
+      {
+        "category": "ai",
+        "service": "KI-Integration",
+        "link": {
+          "discriminant": "/servizi/integrazione-ai/"
+        },
+        "text": "Wir starten mit einem konkreten Fall und messen die gesparte Zeit.",
+        "offer": "seo-con-ai",
+        "cta1Title": "Sie möchten KI im Unternehmen nutzen?",
+        "cta1Text": "Wir starten mit einem konkreten Fall und messen die gesparte Zeit.",
+        "cta2Title": "KI in Ihrer Website, auch in der bestehenden",
+        "cta2Text": "Meta-Tags, Texte und Kundenantworten per Klick: Sehen wir uns an, was möglich ist."
+      },
+      {
+        "category": "siti-web",
+        "service": "Komplette Websites",
+        "link": {
+          "discriminant": "/servizi/siti-web/"
+        },
+        "text": "Design, Texte, SEO und Performance inklusive, zum Festpreis.",
+        "offer": "nuovo-sito-3-mesi-seo",
+        "cta1Title": "Sie denken über eine neue Website nach?",
+        "cta1Text": "Design, Texte, SEO und Performance inklusive, zum Festpreis.",
+        "cta2Title": "Ein klares Angebot ohne Überraschungen?",
+        "cta2Text": "Ich sage Ihnen vorab, was Sie wirklich brauchen und was es kostet."
+      },
+      {
+        "category": "advertising",
+        "service": "Google Ads und Meta Ads",
+        "link": {
+          "discriminant": "/servizi/google-ads/"
+        },
+        "text": "Kampagnen zum Festpreis, optimiert auf Anfragen und Verkäufe.",
+        "offer": null,
+        "cta1Title": "Mehr Anfragen, und zwar sofort?",
+        "cta1Text": "Kampagnen zum Festpreis, optimiert auf Anfragen und Verkäufe.",
+        "cta2Title": "Lohnen sich Ihre Kampagnen wirklich?",
+        "cta2Text": "Ich prüfe Konto und Tracking und zeige Ihnen, wo Budget verpufft."
+      },
+      {
+        "category": "digitalizzazione",
+        "service": "Digitalberatung",
+        "link": {
+          "discriminant": "/servizi/consulenza-digitale/"
+        },
+        "text": "Gemeinsam sehen wir, was sich in Ihrem Unternehmen automatisieren lässt.",
+        "offer": null,
+        "cta1Title": "Zu viel Zeit im Büro verloren?",
+        "cta1Text": "Gemeinsam sehen wir, was sich in Ihrem Unternehmen automatisieren lässt.",
+        "cta2Title": "Wo mit der Digitalisierung anfangen?",
+        "cta2Text": "Wir starten bei den Zielen und gehen einen Prozess nach dem anderen an, mit gemessener Zeitersparnis."
+      },
+      {
+        "category": "dati",
+        "service": "Digitalberatung",
+        "link": {
+          "discriminant": "/servizi/consulenza-digitale/"
+        },
+        "text": "Ich prüfe Tracking, Analytics und Cookie-Einwilligung.",
+        "offer": null,
+        "cta1Title": "Wissen Sie wirklich, woher Ihre Kunden kommen?",
+        "cta1Text": "Ich prüfe Tracking, Analytics und Cookie-Einwilligung.",
+        "cta2Title": "Zahlen in Analytics, die nicht stimmen?",
+        "cta2Text": "Ich prüfe die Einrichtung und erkläre Ihnen, was wirklich zu messen ist."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Genug gelesen? Sprechen wir darüber",
+    "formTitle": "Kostenloses Angebot anfordern",
+    "topics": []
+  },
+  "seo": {
+    "slug": "blog",
+    "title": "Blog zu SEO, Websites, KI und Marketing | bortolin.dev",
+    "description": "Praxisnahe Ratgeber zu SEO, Ladezeit, künstlicher Intelligenz, Google Ads, Meta Ads und Digitalisierung für KMU, verständlich erklärt.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

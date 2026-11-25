@@ -1,0 +1,321 @@
+{
+  "hero": {
+    "breadcrumb": "Speed optimization",
+    "eyebrow": "For live websites",
+    "title": "Slow website? I’ll make it lightning fast, no rebuild needed",
+    "text": "I go through the website you already have, find what’s dragging it down and fix it: **Core Web Vitals in Google’s green zone**, green Lighthouse scores and visitors who stick around. All explained in plain English.\n",
+    "ctaLabel": "",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "",
+    "linkLink": {
+      "discriminant": "#contatti"
+    },
+    "highlights": [],
+    "formPlaceholder": "www.yourwebsite.com",
+    "formButton": "Test it now",
+    "formNote": "This opens PageSpeed Insights, Google’s official tool. Then [send me the results](#contatti).\n",
+    "reportDevice": "yourwebsite.com · mobile",
+    "reportBadge": "Example",
+    "beforeTitle": "Before",
+    "beforeLabel": "Sample scores before optimization",
+    "before": [
+      {
+        "label": "Performance",
+        "value": 38
+      },
+      {
+        "label": "Accessibility",
+        "value": 81
+      },
+      {
+        "label": "Best practices",
+        "value": 74
+      },
+      {
+        "label": "SEO",
+        "value": 85
+      }
+    ],
+    "afterTitle": "After optimization",
+    "afterLabel": "Target after optimization: 100 across the board",
+    "after": [
+      {
+        "label": "Performance",
+        "value": 100
+      },
+      {
+        "label": "Accessibility",
+        "value": 100
+      },
+      {
+        "label": "Best practices",
+        "value": 100
+      },
+      {
+        "label": "SEO",
+        "value": 100
+      }
+    ],
+    "reportCaption": "Illustrative example of Lighthouse scores before and after optimization."
+  },
+  "costs": {
+    "eyebrow": "Why it matters",
+    "title": "A slow website costs you money, every single day",
+    "text": "It never shows up on an invoice, but it shows up in your results. Here’s where you’re quietly losing out.\n",
+    "items": [
+      {
+        "value": ">50%",
+        "title": "Visitors who give up",
+        "text": "According to Google, over half of mobile visitors leave if a page takes more than 3 seconds to load."
+      },
+      {
+        "value": "SEO",
+        "title": "Lost Google rankings",
+        "text": "Core Web Vitals are one of the signals Google uses to judge page experience. With equal content, the faster website gets a head start."
+      },
+      {
+        "value": "€€€",
+        "title": "Pricier ads",
+        "text": "Every paid click that lands on a slow page risks going to waste. Google Ads also factors in landing page experience."
+      }
+    ]
+  },
+  "selfcheck": {
+    "eyebrow": "Quick self-check",
+    "title": "Does your website need a tune-up?",
+    "text": "Tick the symptoms you recognize. It takes 30 seconds and nothing is sent anywhere: it all stays in your browser.\n",
+    "image": "@it",
+    "imageAlt": "Illustration of a website with Lighthouse scores of 100 and Core Web Vitals in the green",
+    "question": "Which of these sound familiar?",
+    "symptoms": [
+      "On phones, the website takes more than 3 seconds to load",
+      "Text and buttons “jump” while the page loads",
+      "Lighthouse or PageSpeed show red or orange scores",
+      "Search Console flags “poor” or “needs improvement” URLs",
+      "The website runs on a page builder or lots of plugins",
+      "Ad campaigns cost more than expected"
+    ],
+    "msg0": "Tick the symptoms you recognize and I’ll tell you what I think.",
+    "msg1": "{n} of {tot} symptoms: there’s room to improve. A check-up shows you how much, and where.",
+    "msg2": "{n} of {tot} symptoms: your website is losing customers. Time to act.",
+    "ctaLabel": "Book a check-up",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "vitals": {
+    "eyebrow": "Core Web Vitals",
+    "title": "What happens when someone opens your website",
+    "text": "Google measures three moments in your real visitors’ experience. Here they are, frame by frame.\n",
+    "lcpTitle": "LCP · how long the main content takes to show up",
+    "lcpGood": "Good: under 2.5 s",
+    "lcpFramesLabel": "Example of a fast page loading",
+    "lcpFrames": [
+      {
+        "time": "0.0 s",
+        "label": ""
+      },
+      {
+        "time": "0.4 s",
+        "label": "First content"
+      },
+      {
+        "time": "0.8 s",
+        "label": ""
+      },
+      {
+        "time": "1.4 s",
+        "label": "LCP"
+      },
+      {
+        "time": "1.8 s",
+        "label": "Done"
+      }
+    ],
+    "lcpCaption": "Example of a fast page: the main content (the green image) appears in 1.4 seconds.",
+    "inpTitle": "INP · responsiveness",
+    "inpGood": "Good: under 200 ms",
+    "inpText": "The time between a tap and the page reacting. Too slow, and visitors tap twice, lose patience and assume the website is broken.",
+    "inpValue": "80 ms",
+    "clsTitle": "CLS · stability",
+    "clsGood": "Good: under 0.1",
+    "clsText": "How much the page shifts around as it loads. You know when you go to tap a link and a banner pops up and shoves it down? That.",
+    "clsBad": "Unstable",
+    "clsOk": "Stable"
+  },
+  "optimize": {
+    "eyebrow": "What I optimize",
+    "title": "Where slowdowns hide (and how I get rid of them)",
+    "text": "Every website is different: I only touch what needs fixing, starting with what makes the biggest difference.\n",
+    "platformsLabel": "Platforms I work on",
+    "platforms": [
+      "WordPress",
+      "WooCommerce",
+      "Shopify",
+      "Next.js · React",
+      "Custom websites"
+    ],
+    "items": [
+      {
+        "icon": "image",
+        "title": "Images and video",
+        "text": "Modern formats (WebP, AVIF), the right size for every screen, loaded only when needed."
+      },
+      {
+        "icon": "code",
+        "title": "CSS and JavaScript",
+        "text": "I strip out what’s not needed, defer what can wait and slim down the rest."
+      },
+      {
+        "icon": "font",
+        "title": "Fonts",
+        "text": "Self-hosted, with no text jumping around as the page opens."
+      },
+      {
+        "icon": "server",
+        "title": "Server, caching and CDN",
+        "text": "The right hosting, properly configured caching, compression and content served close to your visitors."
+      },
+      {
+        "icon": "globe",
+        "title": "Third-party scripts",
+        "text": "Chat widgets, maps, videos, pixels and cookie banners, loaded so they never hold the page up."
+      },
+      {
+        "icon": "wordpress",
+        "title": "WordPress and plugins",
+        "text": "Heavy page builders, plugins you don’t need, a bloated database: I clean it all up without breaking a thing."
+      }
+    ]
+  },
+  "proof": {
+    "eyebrow": "The proof",
+    "title": "Don’t take my word for it: test this website",
+    "text": "The website you’re on was built with the same method I’ll use on yours. Run it through PageSpeed Insights and see the numbers for yourself.\n",
+    "ctaLabel": "Test bortolin.dev",
+    "ctaLink": {
+      "discriminant": "custom",
+      "value": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fbortolin.dev%2F"
+    },
+    "ctaNewTab": true,
+    "boxTitle": "bortolin.dev · target on every page",
+    "scoresLabel": "Target: 100 out of 100 across the board",
+    "scores": [
+      {
+        "label": "Performance",
+        "value": 100
+      },
+      {
+        "label": "Accessibility",
+        "value": 100
+      },
+      {
+        "label": "Best practices",
+        "value": 100
+      },
+      {
+        "label": "SEO",
+        "value": 100
+      }
+    ]
+  },
+  "steps": {
+    "eyebrow": "How I work",
+    "title": "Measure, fix, prove it",
+    "text": "Every improvement is measured before and after, so you know exactly what you paid for and what you got.\n",
+    "items": [
+      {
+        "title": "Measure",
+        "text": "Lighthouse, Google’s real-user data (Search Console and CrUX) and page-by-page analysis."
+      },
+      {
+        "title": "Diagnose",
+        "text": "You get a list of issues with their impact and estimated cost, ranked by value."
+      },
+      {
+        "title": "Fix",
+        "text": "I work on a copy of your website, then publish the changes with zero downtime."
+      },
+      {
+        "title": "Verify",
+        "text": "A before-and-after comparison and, if you like, monthly monitoring to keep the website fast."
+      }
+    ],
+    "boxTitle": "Not sure where to start?",
+    "boxText": "Start with a check-up: within a few days you’ll know what’s slowing your website down and what it costs to fix.",
+    "boxCtaLabel": "Book a check-up",
+    "boxCtaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "offer": {
+    "show": true,
+    "item": "check-up-velocita"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions about speed",
+    "text": "Can’t see yours? [Drop me a line](#contatti) and I’ll reply by the next business day.\n",
+    "items": [
+      {
+        "question": "Do I need a new website to make it fast?",
+        "answer": "Hardly ever. In the vast majority of cases, the big gains come from working on the website you have: images, scripts, caching, plugins. If it has structural limits I’ll tell you straight away, with the alternatives.\n"
+      },
+      {
+        "question": "Will I hit 100 on Lighthouse?",
+        "answer": "It depends on the website: themes, plugins and external services sometimes set limits. The check-up gives you a realistic picture of how far we can go, before you commit to anything.\n"
+      },
+      {
+        "question": "Could the changes break anything?",
+        "answer": "I work on a copy of your website and check every page before publishing. I always take a full backup, so we can roll back at any time.\n"
+      },
+      {
+        "question": "How long does it take?",
+        "answer": "The check-up takes a few business days. The fixes depend on what turns up: the quote gives you timing and costs, at a fixed price.\n"
+      },
+      {
+        "question": "When will I see results on Google?",
+        "answer": "Lighthouse scores improve straight away. Real-visitor data, which Google uses for Core Web Vitals, catches up over about 28 days.\n"
+      },
+      {
+        "question": "Will my website stay fast?",
+        "answer": "New plugins, unoptimized image uploads and scripts added over time can slow it down again. That’s why I offer monthly monitoring and leave you a few simple rules to follow.\n"
+      }
+    ],
+    "ctaLabel": "Book a check-up",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "performance"
+    ],
+    "title": "Get to grips with website speed",
+    "text": "Core Web Vitals, Lighthouse and the usual suspects behind a slow website, explained simply.\n",
+    "buttonLabel": "All articles"
+  },
+  "contact": {
+    "title": "Let’s make your website fast",
+    "formTitle": "Ask for a check-up or a quote",
+    "topics": [
+      "performance"
+    ]
+  },
+  "seo": {
+    "slug": "website-speed-optimization",
+    "title": "Website speed optimization and Core Web Vitals | bortolin.dev",
+    "description": "I make your current website fast: Core Web Vitals in Google’s green zone and green Lighthouse scores, no rebuild needed. Check-up plus before and after.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "title": "GA4 und Consent Mode: Die Website messen und den Datenschutz wahren",
+  "content": {
+    "image": "@it",
+    "imageAlt": "Diagramm der Seitenaufrufe in einem Webanalyse-Dashboard",
+    "excerpt": "Cookie-Banner, Einwilligung und Daten, die aus Analytics „verschwinden“: wie Sie alles richtig einrichten und trotzdem wissen, was funktioniert.",
+    "lead": "Seit es Cookie-Banner gibt, klagen viele, dass die Zahlen in Google Analytics „nicht stimmen“: Besuche, die verschwunden scheinen, Conversions, die einbrechen. Oft liegt das nicht an der Website, sondern an der Einrichtung. So messen Sie richtig und wahren den Datenschutz.",
+    "text": "## Warum Daten „verschwinden“\n\nNach europäischem Recht dürfen Analyse- und Werbetools, die Cookies nutzen, erst nach der **Einwilligung** des Besuchers aktiviert werden. Wer Cookies ablehnt, wird also nicht auf dieselbe Weise erfasst. Das ist richtig so, aber bei falscher Einrichtung verlieren Sie womöglich auch Daten, die sich korrekt messen ließen, oder erheben umgekehrt Daten ohne Einwilligung.\n\n## Was der Consent Mode ist\n\nDer **Consent Mode** von Google übermittelt Google Analytics und Google Ads, was der Besucher im Cookie-Banner gewählt hat. Je nach Einwilligung verhalten sich die Google-Dienste anders: Mit Einwilligung arbeiten sie normal, ohne Einwilligung nutzen sie keine Cookies zur Messung und Profilbildung.\n\nSeit März 2024 verlangt Google den Consent Mode (Version 2) von allen, die seine Werbedienste mit Nutzern im Europäischen Wirtschaftsraum einsetzen und weiterhin alle Mess- und Personalisierungsfunktionen nutzen wollen.\n\n## Einfach oder erweitert?\n\n- **Einfach**: Die Google-Tags laden erst, wenn der Besucher einwilligt. Maximale Vorsicht, weniger Daten.\n- **Erweitert**: Die Tags laden sofort, senden ohne Einwilligung aber nur cookielose Signale. Google nutzt sie, um fehlende Conversions mit statistischen Modellen zu schätzen.\n\nDie Entscheidung treffen Sie am besten gemeinsam mit dem, der in Ihrem Unternehmen für Recht und Datenschutz zuständig ist.\n\n## Eine saubere Einrichtung\n\n1. Ein rechtskonformes **Cookie-Banner**, bei dem Akzeptieren und Ablehnen gleich einfach sind.\n2. Der **Consent Mode v2**, mit dem Banner verbunden.\n3. **Google Tag Manager**, um alle Tags an einem Ort zu verwalten.\n4. Die wichtigen **Conversions** (Anfragen, Angebotsanfragen, Käufe) in GA4 eingerichtet und, wenn Sie werben, in Google Ads.\n\n## Was wirklich gemessen werden sollte\n\nWichtiger als Besucherzahlen sind die Aktionen, die Aufträge bringen: **abgeschickte Formulare, Anrufe über die Website, WhatsApp-Klicks, Käufe**. Konzentrieren Sie sich auf wenige klare Kennzahlen und betrachten Sie sie Monat für Monat auf dieselbe Weise.\n\n## So prüfen Sie, ob alles stimmt\n\n- Testen Sie das Banner: Lehnen Sie Cookies ab, dürfen Marketing-Tags keine Cookies nutzen.\n- Nutzen Sie den Vorschaumodus von Tag Manager, um zu sehen, was wann ausgelöst wird.\n- Prüfen Sie in GA4, ob Test-Conversions erfasst werden.\n- Vergleichen Sie die in Analytics erfassten Anfragen mit denen, die tatsächlich bei Ihnen ankommen.\n\n## Fazit\n\nDatenschutz und Messung schließen sich nicht aus. Mit einem korrekten Banner, dem Consent Mode und wenigen gut eingerichteten Conversions wissen Sie, was in Ihrem Marketing funktioniert, und respektieren die Entscheidungen Ihrer Besucher."
+  },
+  "seo": {
+    "title": "GA4 und Consent Mode: Messen mit Datenschutz | bortolin.dev",
+    "description": "Cookie-Banner, Einwilligung und Daten, die aus Analytics „verschwinden“: So richten Sie alles korrekt ein und wissen weiter, was funktioniert.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "ga4-consent-mode-privacy"
+}

@@ -1,0 +1,300 @@
+{
+  "hero": {
+    "breadcrumb": "Google Ads",
+    "eyebrow": "Publicidad",
+    "title": "Google Ads que traen solicitudes, no solo clics",
+    "text": "Aparece arriba en Google **justo cuando un cliente te está buscando**. Configuro y gestiono tus campañas para que cada euro de inversión trabaje para traerte llamadas, solicitudes y ventas, y te lo demuestro con números.\n",
+    "ctaLabel": "Pide un análisis gratis",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Cómo funciona",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#come-funziona"
+    },
+    "highlights": [
+      "Gestión con tarifa cerrada",
+      "Cuenta a tu nombre",
+      "Vídeo-informe mensual"
+    ],
+    "demoLabel": "Elige un ejemplo",
+    "demoCaption": "Ejemplos de anuncios patrocinados en los resultados de Google.",
+    "s1Tab": "Electricista",
+    "s1Query": "electricista madrid",
+    "s1Ad": "Patrocinado",
+    "s1Letter": "E",
+    "s1Name": "Tu electricista",
+    "s1Url": "www.tuweb.es › urgencias",
+    "s1Title": "Electricista en Madrid | Urgencias en el Día",
+    "s1Text": "Instalaciones para viviendas y locales, averías y boletines eléctricos. Presupuesto gratis y precios claros.",
+    "s1Call": "Llamar",
+    "s1Chips": [
+      "Presupuesto gratis",
+      "Urgencias 24 h"
+    ],
+    "s2Tab": "Tienda",
+    "s2Query": "tienda bicis valencia",
+    "s2Ad": "Patrocinado",
+    "s2Letter": "B",
+    "s2Name": "Tu tienda de bicis",
+    "s2Url": "www.tutienda.es",
+    "s2Title": "Tienda de Bicis en Valencia | E-bikes y Mountain Bike",
+    "s2Text": "Prueba en tienda las nuevas bicis eléctricas. Taller propio y puesta a punto.",
+    "s2Place": "Centro de Valencia",
+    "s2Hours": "Abierto hasta las 20:30",
+    "s2Tiles": [
+      "Bicis eléctricas",
+      "Mountain bike",
+      "Taller"
+    ],
+    "s3Tab": "E-commerce",
+    "s3Query": "zapatillas trekking hombre",
+    "s3Ad": "Patrocinado · Productos",
+    "s3Products": [
+      {
+        "name": "Zapatilla de trekking impermeable",
+        "price": "89,90 €",
+        "shop": "tutienda.es",
+        "rating": "4,8"
+      },
+      {
+        "name": "Zapatilla trail ligera",
+        "price": "74,00 €",
+        "shop": "tutienda.es",
+        "rating": "4,6"
+      },
+      {
+        "name": "Bota de alta montaña",
+        "price": "139,00 €",
+        "shop": "tutienda.es",
+        "rating": "4,9"
+      }
+    ],
+    "s3Note": "Devolución gratis · Envío en 24/48 h"
+  },
+  "how": {
+    "eyebrow": "Cómo funciona",
+    "title": "Google Ads, explicado fácil",
+    "text": "Eliges las búsquedas en las que quieres aparecer, escribes un anuncio y **solo pagas cuando alguien hace clic**. Pero no siempre gana quien más paga: Google también premia la calidad. Estos son los tres ingredientes.\n",
+    "items": [
+      {
+        "icon": "lens",
+        "title": "1. Las búsquedas adecuadas",
+        "text": "«Electricista urgente Sevilla» vale mucho más que «cómo funciona un diferencial». Elijo las búsquedas de quien está listo para contactarte."
+      },
+      {
+        "icon": "ad",
+        "title": "2. Un anuncio que convence",
+        "text": "Pocos caracteres para decir por qué elegirte a ti: ventajas claras, pruebas concretas y una llamada a la acción."
+      },
+      {
+        "icon": "bolt",
+        "title": "3. Una página que convierte",
+        "text": "Dónde llega la gente tras el clic importa tanto como el anuncio. Una página rápida y clara trae más solicitudes, y Google la premia con un coste por clic más bajo."
+      }
+    ]
+  },
+  "types": {
+    "eyebrow": "Tipos de campaña",
+    "title": "La campaña adecuada para tu negocio",
+    "text": "No hace falta estar en todas partes: hay que estar donde están tus clientes. Elegimos juntos las campañas que tienen sentido para tu presupuesto.\n",
+    "items": [
+      {
+        "title": "Red de Búsqueda",
+        "text": "Aparece cuando alguien busca justo lo que ofreces.",
+        "ideal": "Ideal para servicios y profesionales",
+        "highlight": true
+      },
+      {
+        "title": "Performance Max",
+        "text": "Una sola campaña en Búsqueda, YouTube, Gmail, Maps y Display.",
+        "ideal": "Ideal con una buena medición",
+        "highlight": false
+      },
+      {
+        "title": "Shopping",
+        "text": "Tus productos con foto y precio, directamente en los resultados.",
+        "ideal": "Ideal para tiendas online",
+        "highlight": false
+      },
+      {
+        "title": "Anuncios locales y en Maps",
+        "text": "Más llamadas y visitas a tu local de gente cercana.",
+        "ideal": "Ideal para negocios locales",
+        "highlight": false
+      },
+      {
+        "title": "YouTube y Display",
+        "text": "Date a conocer y que te recuerde quien ya te ha visitado.",
+        "ideal": "Ideal para remarketing",
+        "highlight": false
+      }
+    ]
+  },
+  "included": {
+    "eyebrow": "Qué incluye",
+    "title": "Gestión completa, no solo «encender» campañas",
+    "text": "El seguimiento de conversiones siempre está incluido: sin él, inviertes a ciegas.\n",
+    "ctaLabel": "Pide un análisis gratis",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "items": [
+      {
+        "title": "Palabras clave y estrategia",
+        "text": "Las búsquedas de quien está listo para comprar, no de quien curiosea."
+      },
+      {
+        "title": "Estructura de campañas",
+        "text": "Organizadas por servicio y zona: sabes a dónde va cada euro."
+      },
+      {
+        "title": "Textos de los anuncios",
+        "text": "Escritos para que te elijan, con las extensiones adecuadas."
+      },
+      {
+        "title": "Seguimiento de conversiones",
+        "text": "Tag Manager, GA4, conversiones mejoradas y Consent Mode."
+      },
+      {
+        "title": "Palabras clave negativas",
+        "text": "Excluyo las búsquedas inútiles: menos desperdicio desde el primer día."
+      },
+      {
+        "title": "Gestión de pujas",
+        "text": "Optimizo para solicitudes y ventas, no para clics."
+      },
+      {
+        "title": "Pruebas A/B",
+        "text": "Anuncios y páginas comparados, y nos quedamos con los mejores."
+      },
+      {
+        "title": "Asesoría de landing page",
+        "text": "Una página rápida y clara convierte más y cuesta menos."
+      },
+      {
+        "title": "Vídeo-informe mensual",
+        "text": "Los números que importan, explicados en pocos minutos."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Transparencia",
+    "title": "Una tarifa cerrada, no un porcentaje de tu inversión",
+    "text": "Muchas agencias cobran un porcentaje de lo que inviertes en anuncios: cuanto más gastas, más ganan. Yo no. **La gestión tiene una tarifa cerrada**, así que mi único interés es que cada euro rinda al máximo para ti.\n",
+    "points": [
+      {
+        "text": "**La cuenta es tuya**: campañas, datos e historial se quedan contigo, siempre.\n"
+      },
+      {
+        "text": "**La inversión la pagas directamente a Google**: sin recargos ocultos.\n"
+      },
+      {
+        "text": "**Sin permanencias largas**: si no estás contento, eres libre de irte.\n"
+      }
+    ],
+    "otherLabel": "Por porcentaje",
+    "otherValue": "15–20 %",
+    "otherText": "de la inversión: si gastas más, quien gestiona gana más, aunque no te convenga.",
+    "mineLabel": "Conmigo",
+    "mineValue": "Cerrada",
+    "mineText": "Una tarifa clara, fijada en el presupuesto. La inversión publicitaria la decides tú.",
+    "note": "Los porcentajes indicados son un ejemplo de las tarifas más habituales del mercado."
+  },
+  "method": {
+    "eyebrow": "El método",
+    "title": "Primero se mide, luego se invierte",
+    "text": "",
+    "items": [
+      {
+        "title": "Análisis",
+        "text": "Estudio el mercado, la competencia, las búsquedas y tu web."
+      },
+      {
+        "title": "Medición",
+        "text": "Antes de gastar un solo euro, mido cada solicitud y cada venta."
+      },
+      {
+        "title": "Lanzamiento",
+        "text": "Campañas, anuncios y exclusiones listos y revisados."
+      },
+      {
+        "title": "Optimización",
+        "text": "Cada semana recorto lo que no rinde y potencio lo que funciona."
+      },
+      {
+        "title": "Informe",
+        "text": "Un vídeo cada mes: qué ha pasado y qué hacemos ahora."
+      }
+    ]
+  },
+  "offer": {
+    "show": false,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Preguntas sobre Google Ads",
+    "text": "¿No encuentras la tuya? [Escríbeme](#contatti) y te respondo en un día laborable.\n",
+    "items": [
+      {
+        "question": "¿Cuánto presupuesto necesito para empezar?",
+        "answer": "Depende del sector y de la zona: en algunos mercados bastan unos pocos euros al día, en otros hace falta más para tener datos útiles. En el análisis gratuito te doy una estimación realista, antes de gastar nada.\n"
+      },
+      {
+        "question": "¿Cuánto cuesta la gestión?",
+        "answer": "Una tarifa mensual cerrada, fijada en el presupuesto según el número y la complejidad de las campañas. Nunca un porcentaje de la inversión.\n"
+      },
+      {
+        "question": "¿Cuándo veré los primeros resultados?",
+        "answer": "Los primeros datos llegan en pocos días. La optimización de verdad suele llevar unas semanas, el tiempo necesario para reunir suficientes clics y conversiones.\n"
+      },
+      {
+        "question": "¿La cuenta de Google Ads es mía?",
+        "answer": "Sí. La cuenta está a tu nombre, pagas directamente a Google y yo trabajo con acceso de administrador. Si un día cambias de proveedor, todo se queda contigo.\n"
+      },
+      {
+        "question": "¿Google Ads o SEO: qué es mejor?",
+        "answer": "Se complementan: Google Ads da resultados enseguida y se para cuando dejas de pagar; el SEO tarda más pero perdura. A menudo la mejor estrategia combina los dos.\n"
+      },
+      {
+        "question": "¿Puedo pausar las campañas cuando quiera?",
+        "answer": "Sí, las campañas se pueden pausar en cualquier momento, por ejemplo en vacaciones o cuando tienes demasiado trabajo.\n"
+      }
+    ],
+    "ctaLabel": "Pide un análisis gratis",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "advertising"
+    ],
+    "title": "Más sobre publicidad online",
+    "text": "Cómo elegir el canal adecuado y qué está cambiando con la llegada de los asistentes de IA.\n",
+    "buttonLabel": "Todos los artículos"
+  },
+  "contact": {
+    "title": "Consigamos clientes con Google Ads",
+    "formTitle": "Pide un análisis gratis",
+    "topics": [
+      "ads"
+    ]
+  },
+  "seo": {
+    "slug": "google-ads",
+    "title": "Gestión de Google Ads con tarifa cerrada | bortolin.dev",
+    "description": "Gestión de Google Ads con tarifa cerrada, nunca un porcentaje de tu inversión: campañas de búsqueda, Shopping y locales, medición incluida e informe mensual.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

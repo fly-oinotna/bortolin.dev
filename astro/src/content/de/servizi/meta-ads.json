@@ -1,0 +1,370 @@
+{
+  "hero": {
+    "breadcrumb": "Meta Ads",
+    "eyebrow": "Meta · Facebook · Instagram",
+    "title": "Meta Ads: Kunden über Facebook und Instagram, nicht nur Likes",
+    "text": "Ihre Kunden verbringen jeden Tag Zeit auf Facebook und Instagram. Mit durchdachten Anzeigen erreichen Sie sie **in Ihrer Region, mit der richtigen Botschaft** und machen daraus Anfragen, Buchungen und Verkäufe.\n",
+    "ctaLabel": "Kostenlose Analyse anfordern",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Formate ansehen",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#formati"
+    },
+    "highlights": [
+      "Betreuung zum Festpreis",
+      "Pixel und Conversions API inklusive",
+      "Monatlicher Video-Bericht"
+    ],
+    "floatFacebook": "Facebook",
+    "floatInstagram": "Instagram",
+    "floatLead": "Neuer Kontakt aus dem Formular",
+    "feedHome": "Startseite",
+    "storyMine": "Deine Story",
+    "stories": [
+      "berlin",
+      "hamburg",
+      "koeln",
+      "muenchen"
+    ],
+    "likes": "Gefällt {n} Personen",
+    "posts": [
+      {
+        "tab": "Fitnessstudio",
+        "kind": "image",
+        "style": "dark",
+        "letter": "F",
+        "name": "Fitnessstudio Leipzig",
+        "place": "Gesponsert · Leipzig",
+        "icon": "dumbbell",
+        "visual": "7 TAGE\nGRATIS TRAINIEREN",
+        "badge": "",
+        "barText": "7 Tage gratis testen",
+        "button": "Jetzt anmelden",
+        "likes": 127,
+        "caption": "Neue Kurse und ein komplett erneuerter Gerätebereich: Sichern Sie sich Ihre Probewoche 💪",
+        "products": [],
+        "formTitle": "",
+        "f1Label": "",
+        "f1Value": "",
+        "f2Label": "",
+        "f2Value": "",
+        "submit": "",
+        "sent": ""
+      },
+      {
+        "tab": "Weingut",
+        "kind": "carousel",
+        "style": "light",
+        "letter": "W",
+        "name": "Weingut an der Mosel",
+        "place": "Gesponsert · Mosel",
+        "icon": "monitor",
+        "visual": "",
+        "badge": "",
+        "barText": "Versandkostenfrei ab 6 Flaschen",
+        "button": "Jetzt kaufen",
+        "likes": 342,
+        "caption": "Unsere Weine, vom Steilhang auf Ihren Tisch. Wischen Sie und finden Sie Ihren Favoriten 🍷",
+        "products": [
+          {
+            "name": "Riesling trocken",
+            "price": "14,00 €"
+          },
+          {
+            "name": "Riesling Spätlese",
+            "price": "22,00 €"
+          },
+          {
+            "name": "Rosé Gutswein",
+            "price": "9,50 €"
+          }
+        ],
+        "formTitle": "",
+        "f1Label": "",
+        "f1Value": "",
+        "f2Label": "",
+        "f2Value": "",
+        "submit": "",
+        "sent": ""
+      },
+      {
+        "tab": "Fenster",
+        "kind": "form",
+        "style": "light",
+        "letter": "F",
+        "name": "Fensterbau Stuttgart",
+        "place": "Gesponsert · Stuttgart und Umgebung",
+        "icon": "window",
+        "visual": "Neue Fenster?\nAntwort in 48 Stunden",
+        "badge": "Kostenloses Angebot",
+        "barText": "Ihre Kontaktdaten",
+        "button": "Anfragen",
+        "likes": 58,
+        "caption": "Mehr Wohnkomfort, weniger Heizkosten: Wir rufen Sie an und vereinbaren einen kostenlosen Vor-Ort-Termin.",
+        "products": [],
+        "formTitle": "Angebot anfordern",
+        "f1Label": "Vor- und Nachname",
+        "f1Value": "Julia M.",
+        "f2Label": "Telefon",
+        "f2Value": "01•• ••••••18",
+        "submit": "Senden",
+        "sent": "Anfrage gesendet"
+      },
+      {
+        "tab": "Restaurant",
+        "kind": "image",
+        "style": "green",
+        "letter": "R",
+        "name": "Fischrestaurant in Kiel",
+        "place": "Gesponsert · Kiel",
+        "icon": "fish",
+        "visual": "Freitagabend\nFischmenü",
+        "badge": "",
+        "barText": "Begrenzte Plätze",
+        "button": "Reservieren",
+        "likes": 215,
+        "caption": "Jeden Freitag fangfrischer Fisch, direkt an der Förde. Reservieren Sie Ihren Tisch 🐟",
+        "products": [],
+        "formTitle": "",
+        "f1Label": "",
+        "f1Value": "",
+        "f2Label": "",
+        "f2Value": "",
+        "submit": "",
+        "sent": ""
+      }
+    ],
+    "demoLabel": "Beispiel wählen",
+    "demoCaption": "Beispielhafte Anzeigen auf Facebook und Instagram."
+  },
+  "platforms": {
+    "eyebrow": "Zwei Plattformen, eine Kampagne",
+    "title": "Facebook und Instagram, gemeinsam betreut",
+    "text": "Mit Meta Ads kann eine einzige Kampagne auf beiden Plattformen laufen, und Meta zeigt die Anzeigen dort, wo sie am besten funktionieren. Ich wähle Zielgruppe, Formate und Botschaften passend für jede Plattform.\n",
+    "toolTitle": "Ein einziges Tool: der Werbeanzeigenmanager",
+    "toolText": "Dort richte ich die Kampagnen auf Facebook und Instagram ein, messe und optimiere sie, mit einem Budget und einem Bericht.",
+    "items": [
+      {
+        "platform": "facebook",
+        "title": "Facebook",
+        "text": "Ideal, um Erwachsene und Familien in Ihrer Region, lokale Gruppen und Events zu erreichen. Perfekt für Dienstleister, lokale Betriebe und Kontaktformulare.",
+        "chips": [
+          "Lokale Zielgruppe",
+          "Formulare",
+          "Events"
+        ]
+      },
+      {
+        "platform": "instagram",
+        "title": "Instagram",
+        "text": "Das Reich von Bild und Hochformat-Video: Stories und Reels, um entdeckt zu werden, Karussells, um Produkte und Ergebnisse zu zeigen.",
+        "chips": [
+          "Stories und Reels",
+          "Karussells",
+          "Shopping"
+        ]
+      }
+    ],
+    "note": "Facebook, Instagram und Meta sind Marken von Meta Platforms, Inc. und werden nur zur Kennzeichnung der Plattformen genannt; es besteht keine Verbindung."
+  },
+  "formats": {
+    "eyebrow": "Formate",
+    "title": "Das richtige Format für jedes Ziel",
+    "text": "Auf Facebook und Instagram sucht niemand nach Ihnen: Deshalb muss die Anzeige das Scrollen in einer Sekunde stoppen. Ich wähle das Format nach dem, was Sie erreichen wollen.\n",
+    "items": [
+      {
+        "title": "Bild und Video",
+        "text": "Das klassische Feed-Format: eine klare Botschaft und ein Button.",
+        "ideal": "Um bekannt zu werden",
+        "highlight": false
+      },
+      {
+        "title": "Karussell",
+        "text": "Mehrere Produkte oder Vorteile zum Durchwischen in einer Anzeige.",
+        "ideal": "Für Geschäfte und Onlineshops",
+        "highlight": false
+      },
+      {
+        "title": "Stories und Reels",
+        "text": "Bildschirmfüllend, im Hochformat, im meistgesehenen Format.",
+        "ideal": "Um Aufmerksamkeit zu gewinnen",
+        "highlight": false
+      },
+      {
+        "title": "Kontaktformulare",
+        "text": "Die Anfrage wird ausgefüllt, ohne Facebook oder Instagram zu verlassen.",
+        "ideal": "Für Dienstleistungen und Angebote",
+        "highlight": true
+      },
+      {
+        "title": "Remarketing und Katalog",
+        "text": "Zeigt angesehene Produkte erneut allen, die noch nicht gekauft haben.",
+        "ideal": "Um mehr zu verkaufen",
+        "highlight": false
+      }
+    ]
+  },
+  "results": {
+    "eyebrow": "Was wirklich zählt",
+    "title": "Kunden, keine Likes",
+    "text": "Follower und Likes sind schön, bezahlen aber keine Rechnungen. Ich lege Kampagnen auf **Anfragen, Buchungen und Verkäufe** aus und messe, was Sie jeder einzelne kostet.\n",
+    "noLabel": "Reicht mir nicht",
+    "noItems": [
+      "Likes",
+      "Follower",
+      "Aufrufe"
+    ],
+    "yesLabel": "Was ich messe",
+    "yesItems": [
+      "Anfragen",
+      "Buchungen",
+      "Verkäufe"
+    ],
+    "banner": "Und die Kosten pro Kontakt, Monat für Monat."
+  },
+  "included": {
+    "eyebrow": "Leistungsumfang",
+    "title": "Alles, was Sie brauchen, vom Pixel bis zum Bericht",
+    "text": "Ein Festpreis, nie ein Prozentsatz des Werbebudgets. Werbekonto und Daten gehören Ihnen.\n",
+    "ctaLabel": "Kostenlose Analyse anfordern",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "items": [
+      {
+        "title": "Zielgruppe und Strategie",
+        "text": "Wer Ihre Kunden sind, wo sie wohnen, was sie interessiert."
+      },
+      {
+        "title": "Pixel und Conversions API",
+        "text": "Zuverlässige Messung auch bei Cookie-Blockern und iOS."
+      },
+      {
+        "title": "Creatives",
+        "text": "Ideen für Bilder, Videos, Karussells, Stories und Reels."
+      },
+      {
+        "title": "Struktur und Funnel",
+        "text": "Kampagnen, damit man Sie kennenlernt, sich an Sie erinnert und Sie wählt."
+      },
+      {
+        "title": "Leadgenerierung",
+        "text": "Native Formulare, Landingpages und Direktnachrichten."
+      },
+      {
+        "title": "Remarketing",
+        "text": "Erneut erreichen, wer Ihre Website schon besucht oder mit Ihnen interagiert hat."
+      },
+      {
+        "title": "A/B-Tests",
+        "text": "Creatives und Zielgruppen im Vergleich: Was funktioniert, bleibt."
+      },
+      {
+        "title": "Monatlicher Video-Bericht",
+        "text": "Kontakte, Kosten und nächste Schritte, verständlich erklärt."
+      },
+      {
+        "title": "Einwilligung und Datenschutz",
+        "text": "Pixel und Messung DSGVO-konform und abgestimmt auf Ihr Cookie-Banner."
+      }
+    ]
+  },
+  "method": {
+    "eyebrow": "Die Methode",
+    "title": "Von der ersten Anzeige zu den richtigen Kosten pro Kontakt",
+    "text": "",
+    "items": [
+      {
+        "title": "Analyse",
+        "text": "Zielgruppe, Wettbewerb, Angebot und Ziele."
+      },
+      {
+        "title": "Tracking",
+        "text": "Pixel, Conversions API und Einwilligung, bevor ein Euro fließt."
+      },
+      {
+        "title": "Creatives",
+        "text": "Texte, Bilder und Videos, die das Scrollen stoppen."
+      },
+      {
+        "title": "Start und Tests",
+        "text": "Mehrere Varianten im Vergleich, Budget unter Kontrolle."
+      },
+      {
+        "title": "Optimierung",
+        "text": "Jede Woche, auf die Kosten pro Kontakt, nicht auf Likes."
+      }
+    ]
+  },
+  "offer": {
+    "show": false,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "title": "Fragen zu Meta Ads",
+    "text": "Ihre Frage ist nicht dabei? [Schreiben Sie mir](#contatti), ich antworte innerhalb eines Werktags.\n",
+    "items": [
+      {
+        "question": "Meta Ads oder Google Ads: Was ist besser?",
+        "answer": "Sie leisten Unterschiedliches: Google Ads erreicht Menschen, die Sie bereits suchen, Meta Ads macht Sie bei denen bekannt, die Sie noch nicht kennen. Für viele Unternehmen funktioniert die Kombination besser als jedes für sich.\n"
+      },
+      {
+        "question": "Wie viel Budget brauche ich?",
+        "answer": "Sie können klein anfangen, vor allem mit einer lokalen Zielgruppe. In der kostenlosen Analyse bekommen Sie eine realistische Einschätzung für Ihre Region und Ihr Ziel.\n"
+      },
+      {
+        "question": "Brauche ich professionelle Fotos und Videos?",
+        "answer": "Sie helfen, sind aber nicht immer nötig: Authentische Inhalte, mit dem Smartphone gefilmt, funktionieren oft sogar besser. Ich sage Ihnen, was Sie vorbereiten sollten und wie.\n"
+      },
+      {
+        "question": "Was sind Pixel und Conversions API?",
+        "answer": "Das sind die Werkzeuge, die Meta mitteilen, welche Anzeigen Anfragen und Verkäufe bringen. Richtig eingerichtet, machen sie Kampagnen effizienter und die Messung zuverlässiger, unter Beachtung der Cookie-Einwilligung.\n"
+      },
+      {
+        "question": "Muss ich jeden Tag posten?",
+        "answer": "Nein. Werbung und organische Beiträge sind zwei verschiedene Dinge: Die Kampagnen funktionieren, auch wenn die Seite nicht oft aktualisiert wird. Eine gepflegte Seite hilft aber, Vertrauen aufzubauen.\n"
+      },
+      {
+        "question": "Gehört das Werbekonto mir?",
+        "answer": "Ja. Konto, Seite und Daten gehören Ihnen; ich arbeite mit Partnerzugriff. Das Werbebudget zahlen Sie direkt an Meta, ohne Aufschläge.\n"
+      }
+    ],
+    "ctaLabel": "Kostenlose Analyse anfordern",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "advertising"
+    ],
+    "title": "Mehr zum Thema Online-Werbung",
+    "text": "Facebook, Instagram oder Google? Wie Sie den richtigen Kanal wählen und Ihr Budget gut investieren.\n",
+    "buttonLabel": "Alle Artikel"
+  },
+  "contact": {
+    "title": "Machen wir aus Social Media Kunden",
+    "formTitle": "Kostenlose Analyse anfordern",
+    "topics": [
+      "ads"
+    ]
+  },
+  "seo": {
+    "slug": "meta-ads",
+    "title": "Meta-Ads-Betreuung: Facebook und Instagram | bortolin.dev",
+    "description": "Meta-Ads-Kampagnen auf Facebook und Instagram, die Kunden bringen statt nur Likes: lokale Zielgruppe, Pixel und Conversions API, Festpreis.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

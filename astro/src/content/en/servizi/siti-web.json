@@ -1,0 +1,285 @@
+{
+  "hero": {
+    "breadcrumb": "Websites",
+    "eyebrow": "Complete websites",
+    "title": "Websites that win you customers",
+    "text": "Business websites, online stores and custom builds that are **fast, easy to find on Google and ready for AI**. Design, copy, SEO, tracking and training all come included. One quote, one **fixed price**.\n",
+    "ctaLabel": "Get a free quote",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "See my work",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#casi-studio"
+    },
+    "highlights": [
+      "Fixed price",
+      "You own it",
+      "Copywriting included",
+      "Multilingual too"
+    ],
+    "demoUrl": "yourbusiness.com",
+    "demoBrand": "Your business",
+    "demoTitle": "Your website,\nfast and found",
+    "demoCta": "Contact us",
+    "demoSteps": [
+      "Structure",
+      "Design",
+      "Copy",
+      "Live"
+    ],
+    "demoStepsLabel": "The stages of building your website",
+    "demoToast": "Your website is live",
+    "demoCaption": "From sitemap to launch: every stage is included in the price.",
+    "badgeTitle": "Fast by design",
+    "badgeText": "tested with Lighthouse",
+    "badgeLink": {
+      "discriminant": "custom",
+      "value": "#qualita"
+    }
+  },
+  "manifesto": {
+    "line1": "A beautiful website nobody finds is a cost.",
+    "line2": "A fast website Google loves is an investment.",
+    "text": "I don’t start with the visuals. I start with who your customers are, what they search for on Google and what gets them to pick up the phone. Good looks come next, and they work for the results.\n"
+  },
+  "types": {
+    "eyebrow": "What kind of website do you need?",
+    "title": "Your business deserves its own website, not a template",
+    "text": "I’ll help you pick the right solution for your goals and budget. Whatever you choose, the quality bar stays the same.\n",
+    "items": [
+      {
+        "icon": "monitor",
+        "title": "Business website",
+        "text": "Showcase your business, services and team, and turn visitors into enquiries.",
+        "audience": "For companies, firms and professionals"
+      },
+      {
+        "icon": "cart",
+        "title": "Online store",
+        "text": "A fast, easy-to-run online store with product pages built for Google and secure checkout.",
+        "audience": "For anyone selling online"
+      },
+      {
+        "icon": "target",
+        "title": "Landing page",
+        "text": "One page, one goal: made for Google and Meta Ads campaigns, with every click tracked.",
+        "audience": "For campaigns and launches"
+      },
+      {
+        "icon": "stack",
+        "title": "Custom projects",
+        "text": "Multilingual websites, members’ areas, e-learning, product configurators and links to your business software.",
+        "audience": "For specific requirements"
+      }
+    ]
+  },
+  "included": {
+    "eyebrow": "What’s included",
+    "title": "Everything you need, for one price",
+    "text": "No “extras” sprung on you halfway through. The quote covers every stage, from the first analysis to the final training session.\n",
+    "image": "@it",
+    "imageAlt": "Illustration: from sitemap to wireframe to finished website",
+    "ctaLabel": "Get a free quote",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "items": [
+      {
+        "title": "Goals and research",
+        "text": "I gather materials, logins, goals and competitors, and study what your customers search for on Google before anything gets decided."
+      },
+      {
+        "title": "Site structure",
+        "text": "Pages, user journeys and content mapped out before the design, so visitors find what they need straight away."
+      },
+      {
+        "title": "Copy that sells",
+        "text": "I write the copy in the words your customers use and Google rewards. You sign it off before it goes live."
+      },
+      {
+        "title": "Custom design",
+        "text": "Designed for desktop, tablet and phone. No templates: the website tells your story, not someone else’s."
+      },
+      {
+        "title": "Clean code",
+        "text": "WordPress when you want to run it yourself, custom builds when you need top speed. Never bloated page builders."
+      },
+      {
+        "title": "Technical SEO and AI visibility",
+        "text": "Titles, descriptions, structured data, sitemap and local SEO. Clear content that ChatGPT, Gemini and Perplexity can read and quote, too."
+      },
+      {
+        "title": "Speed and Core Web Vitals",
+        "text": "Optimized images, lean code, fonts that load properly. Every page is tested with Lighthouse before handover."
+      },
+      {
+        "title": "Tracking from day one",
+        "text": "Google Analytics 4, Tag Manager, Search Console and Consent Mode set up, so you know how many enquiries come in and where from."
+      },
+      {
+        "title": "Accessible, secure and compliant",
+        "text": "Meets the European Accessibility Act, with HTTPS, security headers, and privacy and cookies sorted."
+      },
+      {
+        "title": "Training, handover and… it’s yours",
+        "text": "I show you how to update the website yourself. Domain, logins and code are in your name: no lock-in, ever."
+      }
+    ]
+  },
+  "quality": {
+    "eyebrow": "Quality you can check",
+    "title": "Don’t take my word for it: check for yourself",
+    "text": "Every website is handed over after a test with **Google Lighthouse**, the free tool anyone can use to measure a page’s speed, accessibility, technical quality and SEO. I aim for 100 in all four.\n",
+    "linkLabel": "What Lighthouse is, in plain English",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "/#lighthouse"
+    },
+    "linkNewTab": true,
+    "scoresLabel": "Lighthouse target: 100 out of 100 in all four categories",
+    "scores": [
+      {
+        "label": "Performance",
+        "value": 100
+      },
+      {
+        "label": "Accessibility",
+        "value": 100
+      },
+      {
+        "label": "Best practices",
+        "value": 100
+      },
+      {
+        "label": "SEO",
+        "value": 100
+      }
+    ],
+    "checks": [
+      "Core Web Vitals in Google’s green zone",
+      "HTTPS and security headers",
+      "Structured data for Google and AI",
+      "Fully usable with just a keyboard"
+    ]
+  },
+  "cases": {
+    "eyebrow": "Case studies",
+    "title": "A few websites I’ve built",
+    "text": "Different industries, same approach: understand who’ll use the website, then build it around them.\n",
+    "items": [
+      "projsystem",
+      "european-forensic-institute"
+    ]
+  },
+  "steps": {
+    "eyebrow": "How it works",
+    "title": "From first call to launch, with no surprises",
+    "text": "You always know where things stand, what I need from you and what’s coming next.\n",
+    "items": [
+      {
+        "title": "Free call",
+        "text": "25 minutes to get to know each other and talk goals, timeline and budget."
+      },
+      {
+        "title": "Research and quote",
+        "text": "I study your business and your competitors, then send a fixed-price quote with dates."
+      },
+      {
+        "title": "Structure and copy",
+        "text": "We plan the pages and content. I write the copy, you sign it off."
+      },
+      {
+        "title": "Design",
+        "text": "You see the website before it’s built and ask for any changes you like."
+      },
+      {
+        "title": "Build and testing",
+        "text": "I build the website and test it on every device and with Lighthouse."
+      },
+      {
+        "title": "Launch and training",
+        "text": "Go-live, SEO redirects from your old website and training to run the new one."
+      }
+    ],
+    "boxTitle": "The first step is the easy one",
+    "boxText": "A free 25-minute call, no strings attached. You’ll come away knowing what you need and what it costs.",
+    "boxCtaLabel": "Book a free call",
+    "boxCtaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "offer": {
+    "show": true,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions about websites",
+    "text": "Can’t see yours? [Drop me a line](#contatti) and I’ll reply by the next business day.\n",
+    "items": [
+      {
+        "question": "How much does a website cost?",
+        "answer": "It depends on the number of pages, features, languages and content. After the free call you get a **fixed-price** quote covering everything on this page: no hidden costs, no extra hours.\n"
+      },
+      {
+        "question": "How long does it take?",
+        "answer": "Mostly it depends on the size of the website and how quickly things get signed off. The quote gives you a date for each stage and for launch, and I stick to them.\n"
+      },
+      {
+        "question": "Can I update the website myself?",
+        "answer": "Yes. Training is included: I’ll show you how to edit text, images and pages. Rather not deal with it? I can handle it for you with a support plan.\n"
+      },
+      {
+        "question": "I already have a website: will I lose my Google rankings?",
+        "answer": "Not if the migration is done right. Before launch I map every existing page and set up redirects, so Google and your visitors land on the new addresses straight away.\n"
+      },
+      {
+        "question": "What technology do you use?",
+        "answer": "Whatever’s right for you. WordPress if you want to manage the content yourself, custom builds when speed and security come first. Either way, no bloated page builders slowing the website down.\n"
+      },
+      {
+        "question": "Can you help with copy and photos too?",
+        "answer": "I write the copy myself, after a chat with you. For photos I’ll tell you what’s needed and, if you like, put you in touch with photographers I trust; otherwise I use high-quality stock images.\n"
+      },
+      {
+        "question": "Will the website really be mine?",
+        "answer": "Yes: domain, hosting, code and accounts (Google, Analytics) are all in your name. You can switch providers whenever you like, no strings attached.\n"
+      }
+    ],
+    "ctaLabel": "Get a free quote",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "siti-web"
+    ],
+    "title": "Read this before you build a website",
+    "text": "Costs, accessibility, the must-haves: answers to the questions I hear most before a project kicks off.\n",
+    "buttonLabel": "All articles"
+  },
+  "contact": {
+    "title": "Let’s talk about your new website",
+    "formTitle": "Get a free quote",
+    "topics": [
+      "nuovo-sito"
+    ]
+  },
+  "seo": {
+    "slug": "websites",
+    "title": "Website design and development, done for you | bortolin.dev",
+    "description": "Business websites, online stores and custom builds: design, copy, SEO, Lighthouse-tested speed, tracking and training included. Fixed price, fully yours.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

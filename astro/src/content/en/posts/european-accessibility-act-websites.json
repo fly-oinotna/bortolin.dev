@@ -1,0 +1,23 @@
+{
+  "title": "The European Accessibility Act: what it means for your website",
+  "content": {
+    "image": "@it",
+    "imageAlt": "Hands typing on a computer keyboard",
+    "excerpt": "Since 28 June 2025, many websites that sell online must be accessible. Who it applies to, what to check and where to start.",
+    "lead": "Since **28 June 2025**, the European Accessibility Act has applied across the European Union. It requires many digital products and services to be usable by people with disabilities, and that includes plenty of websites and online stores. Here’s who it applies to and where to start.",
+    "text": "## What the European Accessibility Act is\n\nIt’s an EU directive (2019/882) that each member state has written into its own national law. It sets common accessibility requirements for a range of products and services, so that everyone can use them: including people with low vision, blind people and those who rely on a keyboard or a screen reader.\n\n## Who it applies to\n\nThe services covered include **e-commerce** aimed at consumers, banking, transport, e-books and some electronic communications. In practice, if you sell products or services online to consumers in the EU, the rules very likely apply to you, and that includes businesses based outside the EU, in the UK or the US for example.\n\nThere are exemptions for **micro-enterprises** providing services (fewer than 10 employees and annual turnover or balance sheet of up to €2 million). Every case needs checking, though: if in doubt, talk to a legal adviser.\n\n## What “accessible” means in practice\n\nThe technical reference is the European standard EN 301 549, which is based on the international WCAG guidelines. In concrete terms, an accessible website:\n\n- can be used **with the keyboard alone**, always showing where you are;\n- has text with enough **contrast** against the background;\n- describes important images with **alt text**;\n- has forms with clear labels and understandable error messages;\n- works with the **screen readers** used by blind people.\n\n## Not just a legal duty: the upside\n\nAn accessible website is easier for everyone to use: someone on their phone in bright sunlight, someone in a hurry, older people. And many accessibility best practices are the same ones that help SEO, like a clear heading structure and descriptive alt text.\n\n## How to run a first check\n\n1. Try navigating the website **using only the Tab key**: can you reach everything and tell where you are?\n2. Run your main pages through **Lighthouse** and look at the Accessibility section.\n3. Check that every important image has meaningful alt text.\n4. Fill in your contact and checkout forms without a mouse.\n\nThese automated and manual checks don’t replace a full audit, but they give you a clear idea of how much work there is to do.\n\n## The accessibility statement\n\nIf the rules apply to you, you also need to explain how your service meets the accessibility requirements, usually on a dedicated page of your website. It’s a document to prepare carefully, keep up to date and link to prominently.\n\n## Where to start\n\nStart with the pages that matter most: homepage, product pages, cart, checkout, contact. Fix the problems that stop people using the site first (keyboard navigation, forms, contrast), then move on to the details. And make accessibility part of how you work: every new page should be accessible from day one."
+  },
+  "seo": {
+    "title": "European Accessibility Act: what it means for you | bortolin.dev",
+    "description": "Since 28 June 2025, many websites that sell online must be accessible. Who it applies to, what to check and where to start.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "european-accessibility-act-siti-web"
+}

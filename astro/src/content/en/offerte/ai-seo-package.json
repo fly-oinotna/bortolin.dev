@@ -1,0 +1,46 @@
+{
+  "name": "AI SEO package",
+  "offer": {
+    "eyebrow": "Launch offer",
+    "deadlineLabel": "Ends 31 January 2027",
+    "title": "The {% verde %}“SEO with AI”{% /verde %} package for your website",
+    "text": "The “Generate with AI” button you just saw, built into your website’s dashboard: meta titles, descriptions and image alt text in one click, on every page.\n",
+    "items": [
+      {
+        "title": "Meta titles and descriptions",
+        "text": "for every page and product"
+      },
+      {
+        "title": "Alt text",
+        "text": "for every image"
+      },
+      {
+        "title": "Training included",
+        "text": "plus a month of support"
+      }
+    ],
+    "ctaLabel": "Get the package",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "note": "For WordPress and WooCommerce · prices excl. VAT",
+    "image": "@it",
+    "boxEyebrow": "AI SEO package",
+    "boxValue": "€490",
+    "boxOldValue": "€790",
+    "boxText": "AI usage costs not included",
+    "stamp": "−38%"
+  },
+  "menu": {
+    "megaTitle": "“SEO with AI” package for €490 instead of €790",
+    "megaText": "Order by 31 January 2027:",
+    "megaItems": [
+      "Meta titles and descriptions in one click, on every page",
+      "Alt text for every image",
+      "Training and a month of support included"
+    ],
+    "mobileText": "when you order by 31 January 2027",
+    "cardText": "Meta titles, descriptions and alt text in one click, on WordPress."
+  },
+  "original": "seo-con-ai"
+}

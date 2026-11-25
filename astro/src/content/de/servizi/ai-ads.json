@@ -1,0 +1,306 @@
+{
+  "hero": {
+    "breadcrumb": "KI-Werbung",
+    "eyebrow": "Der neue Kanal",
+    "title": "KI-Werbung: Ihre Anzeige direkt in den Antworten der künstlichen Intelligenz",
+    "text": "Immer mehr Menschen fragen ChatGPT, Gemini oder Copilot um Rat, statt bei Google zu suchen. Und KI-Assistenten zeigen zunehmend **Anzeigen neben ihren Antworten**: Wer dort vor der Konkurrenz präsent ist, hat einen echten Vorsprung.\n",
+    "ctaLabel": "Prüfen, ob es sich lohnt",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Wo die Anzeigen erscheinen",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#dove"
+    },
+    "highlights": [
+      "Betreuung zum Festpreis",
+      "Start mit einem Test",
+      "Tracking inklusive"
+    ],
+    "chatTitle": "KI-Assistent",
+    "chatPlaceholder": "Fragen Sie, was Sie möchten …",
+    "demoLabel": "Beispiel wählen",
+    "demoCaption": "Beispiele mit erfundenen Unternehmen: Das Aussehen der Anzeigen hängt von der Plattform ab.",
+    "examples": [
+      {
+        "tab": "Elektriker",
+        "question": "Kannst du mir einen zuverlässigen Elektriker in Nürnberg empfehlen?",
+        "answer": "Achte bei der Wahl eines Elektrikers in Nürnberg auf den Eintrag in die Handwerksrolle, aktuelle Bewertungen und Reaktionszeiten. Lass dir vor Beginn immer ein schriftliches Angebot geben.",
+        "letter": "E",
+        "name": "Elektro Nürnberg",
+        "place": "Nürnberg und Umgebung",
+        "title": "Elektro-Notdienst in Nürnberg",
+        "text": "Installationen, Störungen und E-Check. Kostenloses Angebot in 24 Stunden.",
+        "button": "Angebot anfordern",
+        "products": []
+      },
+      {
+        "tab": "Fachgeschäft",
+        "question": "Wo kann ich in Freiburg ein E-Bike Probe fahren?",
+        "answer": "Viele Fachhändler bieten kostenlose Probefahrten an. Frag nach der Akkureichweite, der Garantiedauer und wie die Werkstatt arbeitet.",
+        "letter": "F",
+        "name": "Fahrradladen Freiburg",
+        "place": "Wiehre, Freiburg · auch samstags geöffnet",
+        "title": "E-Bikes kostenlos Probe fahren in unserem Laden in Freiburg",
+        "text": "Über 40 Modelle zum Testen, eigene Werkstatt und Lieferung nach Hause.",
+        "button": "Probefahrt buchen",
+        "products": []
+      },
+      {
+        "tab": "Onlineshop",
+        "question": "Welches typisch deutsche Geschenk kann ich zu Weihnachten verschicken?",
+        "answer": "Ein Präsentkorb mit regionalen Spezialitäten kommt immer gut an: Nürnberger Elisenlebkuchen, ein Dresdner Christstollen und ein Riesling von der Mosel, schön verpackt in einer Geschenkbox.",
+        "letter": "P",
+        "name": "Feinkost-Präsentkörbe",
+        "place": "Onlineshop · Versand in ganz Deutschland",
+        "title": "",
+        "text": "",
+        "button": "",
+        "products": [
+          {
+            "name": "Präsentkorb „Deutsche Weihnacht“",
+            "price": "49,00 €"
+          },
+          {
+            "name": "Dresdner Christstollen 1 kg",
+            "price": "22,90 €"
+          },
+          {
+            "name": "Nürnberger Elisenlebkuchen",
+            "price": "14,90 €"
+          }
+        ]
+      },
+      {
+        "tab": "Weinstube",
+        "question": "Eine Weinstube fürs Sonntagsessen in der Pfalz?",
+        "answer": "Zwischen Neustadt und Deidesheim gibt es mehrere Weinstuben mit saisonaler Küche und Wein vom eigenen Weingut. Sonntags sollte man ein paar Tage vorher reservieren.",
+        "letter": "W",
+        "name": "Weinstube in der Pfalz",
+        "place": "Deutsche Weinstraße, Pfalz",
+        "title": "Sonntagsessen zwischen den Reben",
+        "text": "Saisonale Küche mit Zutaten aus dem eigenen Garten und Weinen vom eigenen Gut. Begrenzte Plätze.",
+        "button": "Tisch reservieren",
+        "products": []
+      }
+    ],
+    "adLabel": "Gesponsert"
+  },
+  "why": {
+    "eyebrow": "Warum jetzt",
+    "title": "Die Leute suchen nicht mehr nur: Sie fragen",
+    "text": "Wer einem KI-Assistenten schreibt, weiß meist schon, was er will, und beschreibt es genau. Eine Anzeige, die genau auf diesen Bedarf antwortet, im richtigen Moment, hat deutlich bessere Chancen, gewählt zu werden.\n",
+    "items": [
+      {
+        "value": "„… in Freiburg?“",
+        "title": "Konkrete Fragen",
+        "text": "Im Gespräch sagen die Leute, wo, wann und mit welchem Budget: Sie wissen genau, was gesucht wird."
+      },
+      {
+        "value": "Kontext",
+        "title": "Die richtige Anzeige im richtigen Moment",
+        "text": "Sie erscheinen, wenn es im Gespräch um Ihr Angebot geht, nicht nur, wenn jemand ein Keyword eintippt."
+      },
+      {
+        "value": "Erster sein",
+        "title": "Vor der Konkurrenz da sein",
+        "text": "Es ist ein neuer Kanal: In vielen Branchen ist der Wettbewerb noch gering. Wer früh lernt, hat einen Vorsprung."
+      }
+    ]
+  },
+  "where": {
+    "eyebrow": "Wo sie erscheinen",
+    "title": "Die KI-Assistenten, in denen Sie werben können",
+    "text": "Die Branche verändert sich von Monat zu Monat. Ich verfolge die Neuerungen für Sie und schlage nur Kanäle vor, die wirklich verfügbar und für Ihr Unternehmen sinnvoll sind.\n",
+    "items": [
+      {
+        "title": "Google",
+        "subtitle": "Anzeigen in KI-generierten Antworten",
+        "text": "Mit den richtigen Google-Ads-Kampagnen können Anzeigen auch in den KI-Übersichten und den dialogbasierten Antworten von Google erscheinen.",
+        "highlight": false
+      },
+      {
+        "title": "ChatGPT",
+        "subtitle": "Anzeigen in Unterhaltungen",
+        "text": "OpenAI führt Anzeigen in ChatGPT ein. Verfügbarkeit, Formate und Zugang variieren je nach Land: Ich prüfe, wann und wie Sie starten können.",
+        "highlight": true
+      },
+      {
+        "title": "Microsoft Copilot",
+        "subtitle": "Anzeigen im Microsoft-Assistenten",
+        "text": "Über Microsoft Advertising können Anzeigen in den Antworten von Copilot und in der Bing-Suche erscheinen.",
+        "highlight": false
+      }
+    ],
+    "note": "Google, ChatGPT und Microsoft Copilot sind Marken ihrer jeweiligen Inhaber und werden nur zu Informationszwecken genannt. Verfügbarkeit und Formate der Anzeigen hängen von den Plattformen ab und können sich ändern."
+  },
+  "compare": {
+    "eyebrow": "Was sich ändert",
+    "title": "KI-Werbung und Google Ads: Cousins, keine Zwillinge",
+    "text": "Die Basis ist dieselbe, aber die Art, wie man Sie findet, ist eine andere. Deshalb braucht es eine eigene Strategie und eigens dafür gedachte Anzeigen.\n",
+    "colA": "Google Ads",
+    "colB": "KI-Werbung",
+    "rows": [
+      {
+        "label": "Wie die Zielgruppe gewählt wird",
+        "a": "Bei Google gesuchte Keywords",
+        "b": "Der Kontext des Gesprächs"
+      },
+      {
+        "label": "Was der Nutzer schreibt",
+        "a": "Kurze Suchanfragen: „e-bike freiburg“",
+        "b": "Ganze Fragen, mit konkreten Bedürfnissen"
+      },
+      {
+        "label": "Wo die Anzeige erscheint",
+        "a": "Über und unter den Suchergebnissen",
+        "b": "Neben oder unter der Antwort des Assistenten"
+      },
+      {
+        "label": "Reife",
+        "a": "Seit Jahren etablierte Tools",
+        "b": "Neue Formate, die sich schnell entwickeln"
+      }
+    ],
+    "note": "Sie nutzen schon Google Ads? [So betreue ich Google-Kampagnen](/servizi/google-ads/).\n"
+  },
+  "included": {
+    "eyebrow": "Leistungsumfang",
+    "title": "Von der Analyse zu den Ergebnissen, aus einer Hand",
+    "text": "Ein Festpreis, nie ein Prozentsatz des Werbebudgets. Konto und Daten gehören Ihnen.\n",
+    "ctaLabel": "Prüfen, ob es sich lohnt",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "items": [
+      {
+        "title": "Potenzialanalyse",
+        "text": "Ich sage Ihnen ehrlich, ob es heute für Ihr Unternehmen sinnvoll ist oder ob Warten besser ist."
+      },
+      {
+        "title": "Kampagnen-Setup",
+        "text": "Konto, Budget, Ziele und Regeln: alles sauber ab dem ersten Tag."
+      },
+      {
+        "title": "Kontexte und Themen",
+        "text": "Die Gespräche, in denen Ihre Präsenz Sinn ergibt, nicht nur Keywords."
+      },
+      {
+        "title": "Anzeigen und Creatives",
+        "text": "Texte und Bilder, die sich sinnvoll in eine Antwort einfügen."
+      },
+      {
+        "title": "Zielseiten",
+        "text": "Wer aus einem Gespräch kommt, will schnelle Antworten: Die Seite muss sie liefern."
+      },
+      {
+        "title": "Conversion-Tracking",
+        "text": "Anfragen und Verkäufe gemessen, damit Sie wissen, was jeder Euro bringt."
+      },
+      {
+        "title": "Laufende Optimierung",
+        "text": "Ich streiche, was nicht läuft, und investiere in das, was funktioniert."
+      },
+      {
+        "title": "Monatlicher Video-Bericht",
+        "text": "Was passiert ist, was es bedeutet und was als Nächstes kommt."
+      },
+      {
+        "title": "Strategie mit Ihren anderen Kanälen",
+        "text": "KI-Werbung zusammen mit Google Ads, Meta Ads und Ihrer Website, ohne Überschneidungen."
+      }
+    ]
+  },
+  "method": {
+    "eyebrow": "Die Methode",
+    "title": "Klein anfangen, mit Daten wachsen",
+    "text": "Sie setzen nicht alles auf einen neuen Kanal: Sie testen, messen und investieren nur dort, wo es funktioniert.\n",
+    "items": [
+      {
+        "title": "Analyse",
+        "text": "Ich prüfe Verfügbarkeit, Formate und Potenzial in Ihrer Branche und Region."
+      },
+      {
+        "title": "Test",
+        "text": "Wir starten mit kleinem Budget und klaren Zielen und messen alles."
+      },
+      {
+        "title": "Skalierung",
+        "text": "Mehr investiere ich nur in das, was echte Anfragen und Verkäufe bringt."
+      },
+      {
+        "title": "Integration",
+        "text": "Ich stimme KI-Werbung mit Google, Meta und der Website ab, damit Sie nicht zweimal für denselben Kunden zahlen."
+      }
+    ]
+  },
+  "offer": {
+    "show": false,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "title": "Fragen zur KI-Werbung",
+    "text": "Ihre Frage ist nicht dabei? [Schreiben Sie mir](#contatti), ich antworte innerhalb eines Werktags.\n",
+    "items": [
+      {
+        "question": "Ist KI-Werbung in Deutschland schon verfügbar?",
+        "answer": "Das hängt von der Plattform ab: Manche Formate sind schon aktiv, andere im Test oder werden schrittweise in einzelnen Ländern freigeschaltet. In der ersten Analyse sage ich Ihnen, was Sie heute nutzen können und was Sie für morgen vorbereiten sollten.\n"
+      },
+      {
+        "question": "Für welche Unternehmen eignet sie sich?",
+        "answer": "Vor allem für alle, die Leistungen oder Produkte verkaufen, zu denen Menschen um Rat fragen: Handwerk, Fachgeschäfte, Onlineshops, Tourismus, freie Berufe. Lohnt es sich in Ihrer Branche heute nicht, sage ich es Ihnen.\n"
+      },
+      {
+        "question": "Wie viel Budget brauche ich?",
+        "answer": "Wir starten mit einem Test mit kleinem Budget, um echte Daten zu sammeln, bevor mehr investiert wird. Vor dem Start bekommen Sie eine Einschätzung.\n"
+      },
+      {
+        "question": "Ersetzt sie Google Ads?",
+        "answer": "Nein, sie ergänzt Google Ads. Google Ads bleibt wichtig für alle, die klassisch suchen; KI-Werbung erreicht Menschen, die einen Assistenten um Rat fragen. Zusammen decken beide mehr Momente der Entscheidung ab.\n"
+      },
+      {
+        "question": "Wie werden die Ergebnisse gemessen?",
+        "answer": "Wie bei anderen Kampagnen auch: über Anfragen und Verkäufe auf Ihrer Website, damit Sie wissen, was jeder investierte Euro bringt.\n"
+      },
+      {
+        "question": "Was kostet die Betreuung?",
+        "answer": "Einen Festpreis, im Angebot festgelegt. Nie einen Prozentsatz des Werbebudgets.\n"
+      }
+    ],
+    "ctaLabel": "Prüfen, ob es sich lohnt",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "advertising"
+    ],
+    "title": "Mehr zur Werbung in der KI",
+    "text": "Was wir über Anzeigen in KI-Assistenten wissen und wie man sich vorbereitet, ohne jedem Trend hinterherzulaufen.\n",
+    "buttonLabel": "Alle Artikel"
+  },
+  "contact": {
+    "title": "Seien Sie in den KI-Antworten vorn dabei",
+    "formTitle": "Kostenlose Analyse anfordern",
+    "topics": [
+      "ads"
+    ]
+  },
+  "seo": {
+    "slug": "ki-werbung",
+    "title": "Werbung in ChatGPT und KI-Assistenten | bortolin.dev",
+    "description": "Anzeigen neben den Antworten von ChatGPT, Google und Copilot: Ich analysiere das Potenzial für Ihr Unternehmen, teste und messe die Ergebnisse. Festpreis.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

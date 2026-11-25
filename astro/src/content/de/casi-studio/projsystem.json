@@ -1,0 +1,170 @@
+{
+  "title": "Proj.System",
+  "card": {
+    "domain": "projsystem.com",
+    "sectors": [
+      "aziende",
+      "servizi"
+    ],
+    "tags": [
+      "Ingenieurwesen und Arbeitssicherheit",
+      "Firmenwebsite",
+      "WordPress"
+    ],
+    "summary": "Ein Ingenieurbüro aus Porcia (Pordenone, Italien), das seit 2001 Planung, Sicherheit auf der Baustelle und am Arbeitsplatz, Messungen und Schulungen anbietet.",
+    "features": [
+      "Ein breites Leistungsspektrum klar präsentiert: Ingenieurwesen, Sicherheit, Messungen, Schulungen",
+      "Eigene Seiten für das Büro und sein Team von Fachleuten",
+      "Blog, E-Learning und Beratungsanfrage immer nur einen Klick entfernt"
+    ],
+    "dark": false,
+    "desktopImage": "@it",
+    "desktopAlt": "Startseite der Website von Proj.System, Ingenieur- und Architekturbüro",
+    "mobileImage": "@it",
+    "mobileAlt": "Website von Proj.System auf dem Smartphone",
+    "longImage": "@it",
+    "longAlt": "Vollständige Startseite der Website von Proj.System"
+  },
+  "hero": {
+    "eyebrow": "Fallstudie",
+    "intro": "Die Website eines Ingenieurbüros mit sehr breitem Angebot, so aufgebaut, dass jeder Kunde sofort die passende Leistung findet.",
+    "tags": [
+      "Firmenwebsite",
+      "Ingenieurwesen und Arbeitssicherheit",
+      "WordPress"
+    ],
+    "ctaLabel": "Ich möchte ein ähnliches Projekt",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "details": [
+      {
+        "label": "Kunde",
+        "value": "Proj.System"
+      },
+      {
+        "label": "Branche",
+        "value": "Ingenieurwesen, Arbeitssicherheit und Schulung"
+      },
+      {
+        "label": "Standort",
+        "value": "Porcia (Pordenone), Friaul-Julisch Venetien, Italien"
+      },
+      {
+        "label": "Projektart",
+        "value": "Firmenwebsite"
+      },
+      {
+        "label": "Technologie",
+        "value": "WordPress"
+      }
+    ]
+  },
+  "client": {
+    "eyebrow": "Der Kunde",
+    "title": "Wer ist Proj.System",
+    "text": "Proj.System ist ein Ingenieurbüro, 2001 in Porcia (Italien) gegründet. Ingenieure, Architekten, Bautechniker, Wirtschaftsingenieure und Fachkräfte für Arbeitssicherheit kümmern sich um Planung, Sicherheit auf der Baustelle und am Arbeitsplatz, Messungen, technische Beratung und Schulungen.\n",
+    "challengeLabel": "Die Herausforderung",
+    "challengeText": "Ein sehr breites Angebot für ganz unterschiedliche Zielgruppen: Unternehmen, Behörden, Privatpersonen und Kursteilnehmer. Das Risiko: eine unübersichtliche Website, auf der sich verliert, wer nur eine einzige Leistung sucht.",
+    "challengePoints": [
+      "Vier sehr unterschiedliche Leistungsbereiche",
+      "Ein großes Team von Fachleuten, das sichtbar werden sollte",
+      "Kurse und Schulungen, die beworben und oft aktualisiert werden"
+    ]
+  },
+  "solution": {
+    "eyebrow": "Die Lösung",
+    "title": "Was ich umgesetzt habe",
+    "text": "Erst die Struktur, dann das Design: Jede Entscheidung geht davon aus, wer die Website nutzt und was er dort finden muss.\n",
+    "items": [
+      {
+        "icon": "grid",
+        "title": "Leistungen in vier Bereichen",
+        "text": "Ingenieurwesen und Architektur, Sicherheit, Messungen, Schulung: Jeder Besucher gelangt direkt zum Bereich, der ihn interessiert."
+      },
+      {
+        "icon": "users",
+        "title": "Das Team im Mittelpunkt",
+        "text": "Eine eigene Seite für die Fachleute, mit Rollen und Spezialgebieten: Vertrauen beginnt bei den Menschen."
+      },
+      {
+        "icon": "chat",
+        "title": "Beratungsanfrage immer sichtbar",
+        "text": "Der Button zur Kontaktaufnahme ist auf jeder Seite, auch auf dem Smartphone."
+      },
+      {
+        "icon": "book-open",
+        "title": "Blog und E-Learning",
+        "text": "Neuigkeiten, Fachartikel und ein Bereich für Online-Schulungen, alles intern leicht zu pflegen."
+      }
+    ]
+  },
+  "showcase": {
+    "eyebrow": "Die Website",
+    "title": "Das Ergebnis, auf jedem Bildschirm",
+    "text": "Fahren Sie mit der Maus über die Seite, um sie zu scrollen.\n",
+    "scrollLabel": "Scrollbare Vorschau der Startseite von Proj.System",
+    "mobileCaption": "Mobile Version"
+  },
+  "results": {
+    "eyebrow": "Vorher und nachher",
+    "title": "Was sich verändert hat",
+    "beforeLabel": "Vorher",
+    "before": [
+      "Noch zu ergänzen: wie die Website vorher aussah oder der Ausgangspunkt",
+      "Noch zu ergänzen: das Hauptproblem"
+    ],
+    "afterLabel": "Nachher",
+    "after": [
+      "Leistungen in vier Bereichen",
+      "Das Team im Mittelpunkt",
+      "Beratungsanfrage immer sichtbar",
+      "Blog und E-Learning"
+    ],
+    "kpis": [
+      {
+        "label": "Ergebnis 1",
+        "value": "—",
+        "note": "z. B. Anfragen pro Monat"
+      },
+      {
+        "label": "Ergebnis 2",
+        "value": "—",
+        "note": "z. B. Besuche über Google"
+      },
+      {
+        "label": "Ergebnis 3",
+        "value": "—",
+        "note": "z. B. Lighthouse-Wert"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Die nächste Erfolgsgeschichte könnte Ihre sein",
+    "text": "Erzählen Sie mir im kostenlosen 25-Minuten-Gespräch von Ihrem Unternehmen: Ich sage Ihnen, wie ich vorgehen würde, wie lange es dauert und zu welchem Festpreis.",
+    "ctaLabel": "Kostenloses Gespräch buchen",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "contact": {
+    "title": "Sie möchten so eine Website?",
+    "formTitle": "Kostenloses Angebot anfordern",
+    "topics": [
+      "nuovo-sito"
+    ]
+  },
+  "seo": {
+    "title": "Proj.System: Website für ein Ingenieurbüro | bortolin.dev",
+    "description": "Wie ich die Website von Proj.System gebaut habe, Büro für Ingenieurwesen, Architektur und Arbeitssicherheit in Porcia (Italien): Aufgabe, Lösung, Ergebnis.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "projsystem"
+}

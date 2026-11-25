@@ -1,0 +1,170 @@
+{
+  "title": "Proj.System",
+  "card": {
+    "domain": "projsystem.com",
+    "sectors": [
+      "aziende",
+      "servizi"
+    ],
+    "tags": [
+      "Engineering and safety",
+      "Company website",
+      "WordPress"
+    ],
+    "summary": "A multidisciplinary practice in Porcia (PN), Italy, working since 2001 in design, construction and workplace safety, instrumental testing and training.",
+    "features": [
+      "A clear showcase for a wide range of services: engineering, safety, testing, training",
+      "Dedicated pages for the practice and its team of professionals",
+      "Blog, e-learning and consultation requests always one click away"
+    ],
+    "dark": false,
+    "desktopImage": "@it",
+    "desktopAlt": "Home page of the Proj.System website, an engineering and architecture practice",
+    "mobileImage": "@it",
+    "mobileAlt": "Proj.System website on a phone",
+    "longImage": "@it",
+    "longAlt": "Full home page of the Proj.System website"
+  },
+  "hero": {
+    "eyebrow": "Case study",
+    "intro": "A website for a practice with a wide range of services, organized so every client finds what they need straight away.",
+    "tags": [
+      "Company website",
+      "Engineering and safety",
+      "WordPress"
+    ],
+    "ctaLabel": "I want a project like this",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "details": [
+      {
+        "label": "Client",
+        "value": "Proj.System"
+      },
+      {
+        "label": "Industry",
+        "value": "Engineering, safety and training"
+      },
+      {
+        "label": "Location",
+        "value": "Porcia (PN), Friuli Venezia Giulia, Italy"
+      },
+      {
+        "label": "Project type",
+        "value": "Company website"
+      },
+      {
+        "label": "Technology",
+        "value": "WordPress"
+      }
+    ]
+  },
+  "client": {
+    "eyebrow": "The client",
+    "title": "Meet Proj.System",
+    "text": "Proj.System is a multidisciplinary practice founded in Porcia, Italy, in 2001. Its engineers, architects, surveyors, industrial specialists and safety experts cover design, construction and workplace safety, instrumental testing, technical consulting and training.\n",
+    "challengeLabel": "The challenge",
+    "challengeText": "A very wide range of services for very different audiences: companies, public bodies, private clients and trainees. The risk was a confusing website, where anyone looking for one specific service gets lost in the pages.",
+    "challengePoints": [
+      "Four very different service areas",
+      "A large team of professionals to showcase",
+      "Courses and training to promote and update regularly"
+    ]
+  },
+  "solution": {
+    "eyebrow": "The solution",
+    "title": "What I built",
+    "text": "Structure first, design second: every decision starts from who will use the website and what they need to find.\n",
+    "items": [
+      {
+        "icon": "grid",
+        "title": "Services in four areas",
+        "text": "Engineering and architecture, Safety, Instrumental testing, Training: every visitor heads straight to the right area."
+      },
+      {
+        "icon": "users",
+        "title": "The team in the spotlight",
+        "text": "A page dedicated to the professionals, with their roles and expertise: trust starts with people."
+      },
+      {
+        "icon": "chat",
+        "title": "Consultation requests always in view",
+        "text": "The button to contact the practice is on every page, on phones too."
+      },
+      {
+        "icon": "book-open",
+        "title": "Blog and e-learning",
+        "text": "News, in-depth articles and an online training area, all easy to update in-house."
+      }
+    ]
+  },
+  "showcase": {
+    "eyebrow": "The website",
+    "title": "The result, on every screen",
+    "text": "Hover over the page to scroll through it.\n",
+    "scrollLabel": "Scrollable preview of the Proj.System home page",
+    "mobileCaption": "Phone version"
+  },
+  "results": {
+    "eyebrow": "Before and after",
+    "title": "What changed",
+    "beforeLabel": "Before",
+    "before": [
+      "To be completed: what the website or the starting point looked like",
+      "To be completed: the main problem"
+    ],
+    "afterLabel": "After",
+    "after": [
+      "Services in four areas",
+      "The team in the spotlight",
+      "Consultation requests always in view",
+      "Blog and e-learning"
+    ],
+    "kpis": [
+      {
+        "label": "Result 1",
+        "value": "—",
+        "note": "e.g. enquiries per month"
+      },
+      {
+        "label": "Result 2",
+        "value": "—",
+        "note": "e.g. visits from Google"
+      },
+      {
+        "label": "Result 3",
+        "value": "—",
+        "note": "e.g. Lighthouse score"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Your project could be next",
+    "text": "Tell me about your business on a free 25-minute call: I’ll tell you how I’d approach it, how long it would take and the fixed price.",
+    "ctaLabel": "Book a free call",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "contact": {
+    "title": "Want a website like this?",
+    "formTitle": "Get a free quote",
+    "topics": [
+      "nuovo-sito"
+    ]
+  },
+  "seo": {
+    "title": "Proj.System: website for an engineering practice | bortolin.dev",
+    "description": "How I built the website for Proj.System, an engineering, architecture and workplace safety practice in Porcia, Italy: the challenge, the solution, the results.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "projsystem"
+}

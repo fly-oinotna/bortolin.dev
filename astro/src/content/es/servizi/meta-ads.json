@@ -1,0 +1,370 @@
+{
+  "hero": {
+    "breadcrumb": "Meta Ads",
+    "eyebrow": "Meta · Facebook · Instagram",
+    "title": "Meta Ads: clientes desde Facebook e Instagram, no solo «me gusta»",
+    "text": "Tus clientes pasan tiempo en Facebook e Instagram cada día. Con anuncios bien pensados llegas a ellos **en tu zona, con el mensaje adecuado**, y los conviertes en solicitudes de presupuesto, reservas y ventas.\n",
+    "ctaLabel": "Pide un análisis gratis",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Ver los formatos",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#formati"
+    },
+    "highlights": [
+      "Gestión con tarifa cerrada",
+      "Píxel y API de Conversiones incluidos",
+      "Vídeo-informe mensual"
+    ],
+    "floatFacebook": "Facebook",
+    "floatInstagram": "Instagram",
+    "floatLead": "Nuevo contacto desde el formulario",
+    "feedHome": "Inicio",
+    "storyMine": "Tu historia",
+    "stories": [
+      "madrid",
+      "sevilla",
+      "bilbao",
+      "malaga"
+    ],
+    "likes": "Les gusta a {n} personas",
+    "posts": [
+      {
+        "tab": "Gimnasio",
+        "kind": "image",
+        "style": "dark",
+        "letter": "G",
+        "name": "Gimnasio Valencia",
+        "place": "Publicidad · Valencia",
+        "icon": "dumbbell",
+        "visual": "PRUEBA\n7 DÍAS GRATIS",
+        "badge": "",
+        "barText": "Prueba gratis 7 días",
+        "button": "Apúntate",
+        "likes": 127,
+        "caption": "Nuevas clases colectivas y sala de musculación renovada: reserva tu semana de prueba 💪",
+        "products": [],
+        "formTitle": "",
+        "f1Label": "",
+        "f1Value": "",
+        "f2Label": "",
+        "f2Value": "",
+        "submit": "",
+        "sent": ""
+      },
+      {
+        "tab": "Bodega",
+        "kind": "carousel",
+        "style": "light",
+        "letter": "B",
+        "name": "Bodega Ribera del Duero",
+        "place": "Publicidad · Ribera del Duero",
+        "icon": "monitor",
+        "visual": "",
+        "badge": "",
+        "barText": "Envío gratis a partir de 6 botellas",
+        "button": "Comprar",
+        "likes": 342,
+        "caption": "Nuestros vinos, del viñedo a tu mesa. Desliza y elige tu favorito 🍷",
+        "products": [
+          {
+            "name": "Tinto Crianza",
+            "price": "14,00 €"
+          },
+          {
+            "name": "Tinto Reserva",
+            "price": "22,00 €"
+          },
+          {
+            "name": "Rosado joven",
+            "price": "9,50 €"
+          }
+        ],
+        "formTitle": "",
+        "f1Label": "",
+        "f1Value": "",
+        "f2Label": "",
+        "f2Value": "",
+        "submit": "",
+        "sent": ""
+      },
+      {
+        "tab": "Ventanas",
+        "kind": "form",
+        "style": "light",
+        "letter": "V",
+        "name": "Ventanas Zaragoza",
+        "place": "Publicidad · Zaragoza y alrededores",
+        "icon": "window",
+        "visual": "¿Ventanas nuevas?\nRespuesta en 48 horas",
+        "badge": "Presupuesto gratis",
+        "barText": "Déjanos tus datos",
+        "button": "Solicitar",
+        "likes": 58,
+        "caption": "Más confort y menos gasto en calefacción: te llamamos para concertar una visita gratuita.",
+        "products": [],
+        "formTitle": "Pide presupuesto",
+        "f1Label": "Nombre y apellidos",
+        "f1Value": "María G.",
+        "f2Label": "Teléfono",
+        "f2Value": "6•• ••• •18",
+        "submit": "Enviar",
+        "sent": "Solicitud enviada"
+      },
+      {
+        "tab": "Restaurante",
+        "kind": "image",
+        "style": "green",
+        "letter": "R",
+        "name": "Restaurante en Cádiz",
+        "place": "Publicidad · Cádiz",
+        "icon": "fish",
+        "visual": "Viernes noche\nmenú de pescado",
+        "badge": "",
+        "barText": "Plazas limitadas",
+        "button": "Reservar",
+        "likes": 215,
+        "caption": "Cada viernes, pescado fresco de la lonja a dos pasos del mar. Reserva tu mesa 🐟",
+        "products": [],
+        "formTitle": "",
+        "f1Label": "",
+        "f1Value": "",
+        "f2Label": "",
+        "f2Value": "",
+        "submit": "",
+        "sent": ""
+      }
+    ],
+    "demoLabel": "Elige un ejemplo",
+    "demoCaption": "Ejemplos ilustrativos de anuncios en Facebook e Instagram."
+  },
+  "platforms": {
+    "eyebrow": "Dos plataformas, una campaña",
+    "title": "Facebook e Instagram, gestionados juntos",
+    "text": "Con Meta Ads una sola campaña puede aparecer en las dos plataformas, y Meta muestra los anuncios donde mejor funcionan. Elijo el público, los formatos y los mensajes adecuados para cada una.\n",
+    "toolTitle": "Una sola herramienta: el Administrador de anuncios",
+    "toolText": "Ahí configuro, mido y optimizo las campañas en Facebook e Instagram, con un único presupuesto y un único informe.",
+    "items": [
+      {
+        "platform": "facebook",
+        "title": "Facebook",
+        "text": "Ideal para llegar a adultos y familias de tu zona, grupos locales y eventos. Perfecto para servicios, negocios locales y formularios de contacto.",
+        "chips": [
+          "Público local",
+          "Formularios",
+          "Eventos"
+        ]
+      },
+      {
+        "platform": "instagram",
+        "title": "Instagram",
+        "text": "El reino de la imagen y el vídeo vertical: Stories y Reels para que te descubran, carruseles para mostrar productos y resultados.",
+        "chips": [
+          "Stories y Reels",
+          "Carruseles",
+          "Shopping"
+        ]
+      }
+    ],
+    "note": "Facebook, Instagram y Meta son marcas de Meta Platforms, Inc., citadas solo para identificar las plataformas; no existe ninguna afiliación."
+  },
+  "formats": {
+    "eyebrow": "Formatos",
+    "title": "El formato adecuado para cada objetivo",
+    "text": "En Facebook e Instagram la gente no te está buscando: por eso el anuncio tiene que frenar el scroll en un segundo. Elijo el formato según lo que quieras conseguir.\n",
+    "items": [
+      {
+        "title": "Imagen y vídeo",
+        "text": "El formato clásico del feed: un mensaje claro y un botón.",
+        "ideal": "Para darte a conocer",
+        "highlight": false
+      },
+      {
+        "title": "Carrusel",
+        "text": "Varios productos o ventajas para deslizar en un solo anuncio.",
+        "ideal": "Para tiendas y e-commerce",
+        "highlight": false
+      },
+      {
+        "title": "Stories y Reels",
+        "text": "A pantalla completa, en vertical, en el formato más visto.",
+        "ideal": "Para captar la atención",
+        "highlight": false
+      },
+      {
+        "title": "Formularios de contacto",
+        "text": "La solicitud se rellena sin salir de Facebook o Instagram.",
+        "ideal": "Para servicios y presupuestos",
+        "highlight": true
+      },
+      {
+        "title": "Remarketing y catálogo",
+        "text": "Vuelve a mostrar los productos vistos a quien aún no ha comprado.",
+        "ideal": "Para vender más",
+        "highlight": false
+      }
+    ]
+  },
+  "results": {
+    "eyebrow": "Lo que de verdad importa",
+    "title": "Clientes, no «me gusta»",
+    "text": "Seguidores y «me gusta» están bien, pero no pagan las facturas. Planteo las campañas para conseguir **solicitudes, reservas y ventas**, y mido cuánto te cuesta cada una.\n",
+    "noLabel": "No me basta",
+    "noItems": [
+      "Me gusta",
+      "Seguidores",
+      "Visualizaciones"
+    ],
+    "yesLabel": "Lo que mido",
+    "yesItems": [
+      "Solicitudes",
+      "Reservas",
+      "Ventas"
+    ],
+    "banner": "Y el coste por contacto, mes a mes."
+  },
+  "included": {
+    "eyebrow": "Qué incluye",
+    "title": "Todo lo que necesitas, del píxel al informe",
+    "text": "Una tarifa cerrada, nunca un porcentaje de la inversión. La cuenta publicitaria y los datos son tuyos.\n",
+    "ctaLabel": "Pide un análisis gratis",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "items": [
+      {
+        "title": "Público y estrategia",
+        "text": "Quiénes son tus clientes, dónde viven, qué les interesa."
+      },
+      {
+        "title": "Píxel y API de Conversiones",
+        "text": "Medición fiable incluso con bloqueo de cookies e iOS."
+      },
+      {
+        "title": "Creatividades",
+        "text": "Ideas para imágenes, vídeos, carruseles, Stories y Reels."
+      },
+      {
+        "title": "Estructura y embudo",
+        "text": "Campañas para que te conozcan, te recuerden y te elijan."
+      },
+      {
+        "title": "Captación de contactos",
+        "text": "Formularios nativos, landing pages y mensajes directos."
+      },
+      {
+        "title": "Remarketing",
+        "text": "Vuelve a llegar a quien ya ha visitado tu web o ha interactuado contigo."
+      },
+      {
+        "title": "Pruebas A/B",
+        "text": "Creatividades y públicos comparados: nos quedamos con lo que rinde."
+      },
+      {
+        "title": "Vídeo-informe mensual",
+        "text": "Contactos, costes y próximos pasos, explicados fácil."
+      },
+      {
+        "title": "Consentimiento y privacidad",
+        "text": "Píxel y medición conformes con el RGPD y tu banner de cookies."
+      }
+    ]
+  },
+  "method": {
+    "eyebrow": "El método",
+    "title": "Del primer anuncio al coste por contacto adecuado",
+    "text": "",
+    "items": [
+      {
+        "title": "Análisis",
+        "text": "Público, competencia, oferta y objetivos."
+      },
+      {
+        "title": "Medición",
+        "text": "Píxel, API de Conversiones y consentimiento, antes de gastar nada."
+      },
+      {
+        "title": "Creatividades",
+        "text": "Textos, imágenes y vídeos pensados para frenar el scroll."
+      },
+      {
+        "title": "Lanzamiento y pruebas",
+        "text": "Varias versiones comparadas, presupuesto bajo control."
+      },
+      {
+        "title": "Optimización",
+        "text": "Cada semana, sobre el coste por contacto, no sobre los «me gusta»."
+      }
+    ]
+  },
+  "offer": {
+    "show": false,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Preguntas sobre Meta Ads",
+    "text": "¿No encuentras la tuya? [Escríbeme](#contatti) y te respondo en un día laborable.\n",
+    "items": [
+      {
+        "question": "¿Meta Ads o Google Ads: qué es mejor?",
+        "answer": "Hacen cosas distintas: Google Ads llega a quien ya te está buscando, Meta Ads te da a conocer a quien todavía no te conoce. Para muchos negocios, la combinación funciona mejor que cada uno por separado.\n"
+      },
+      {
+        "question": "¿Cuánto presupuesto necesito?",
+        "answer": "Se puede empezar con poco, sobre todo con un público local. En el análisis gratuito te doy una estimación realista según tu zona y tu objetivo.\n"
+      },
+      {
+        "question": "¿Necesito fotos y vídeos profesionales?",
+        "answer": "Ayudan, pero no siempre hacen falta: un contenido auténtico grabado con el móvil a menudo funciona mejor. Te digo qué preparar y cómo.\n"
+      },
+      {
+        "question": "¿Qué son el Píxel y la API de Conversiones?",
+        "answer": "Son las herramientas que le dicen a Meta qué anuncios traen solicitudes y ventas. Bien configuradas, hacen las campañas más eficientes y la medición más fiable, respetando el consentimiento de cookies.\n"
+      },
+      {
+        "question": "¿Tengo que publicar todos los días?",
+        "answer": "No. La publicidad y las publicaciones orgánicas son dos cosas distintas: las campañas funcionan aunque la página no se actualice a menudo. Eso sí, una página cuidada ayuda a generar confianza.\n"
+      },
+      {
+        "question": "¿La cuenta publicitaria es mía?",
+        "answer": "Sí. La cuenta, la página y los datos son tuyos; yo trabajo con acceso de socio. La inversión la pagas directamente a Meta, sin recargos.\n"
+      }
+    ],
+    "ctaLabel": "Pide un análisis gratis",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "advertising"
+    ],
+    "title": "Más sobre publicidad online",
+    "text": "¿Facebook, Instagram o Google? Cómo elegir el canal adecuado e invertir bien tu presupuesto.\n",
+    "buttonLabel": "Todos los artículos"
+  },
+  "contact": {
+    "title": "Convirtamos las redes sociales en clientes",
+    "formTitle": "Pide un análisis gratis",
+    "topics": [
+      "ads"
+    ]
+  },
+  "seo": {
+    "slug": "meta-ads",
+    "title": "Gestión de Meta Ads: Facebook e Instagram | bortolin.dev",
+    "description": "Campañas de Meta Ads en Facebook e Instagram que traen clientes, no solo «me gusta»: público local, Píxel y API de Conversiones y tarifa cerrada.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "general": {
+    "description": "Schnelle Websites mit SEO, Performance und KI inklusive, dazu SEO-Beratung, KI-Integration und Online-Werbung."
+  },
+  "person": {
+    "jobTitle": "Webdesigner, Entwickler und SEO-Berater",
+    "knowsAbout": [
+      "SEO",
+      "Core Web Vitals",
+      "Lighthouse",
+      "Web-Performance",
+      "Künstliche Intelligenz",
+      "Google Ads",
+      "Meta Ads",
+      "WordPress"
+    ]
+  }
+}

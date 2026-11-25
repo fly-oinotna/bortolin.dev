@@ -1,0 +1,25 @@
+{
+  "title": "Cambiare sito senza perdere le posizioni su Google",
+  "content": {
+    "date": "2026-09-18",
+    "category": "seo",
+    "image": "/src/assets/images/blog/cambiare-sito-senza-perdere-posizioni.webp",
+    "imageAlt": "Tessere di legno che compongono la parola “migration” su un tavolo",
+    "excerpt": "Una migrazione fatta male può dimezzare le visite in una notte. Le 10 verifiche da fare prima, durante e dopo il lancio del nuovo sito.",
+    "lead": "Un nuovo sito è un’ottima notizia, ma se la migrazione è fatta male può far crollare le visite da Google da un giorno all’altro. Succede più spesso di quanto si pensi. Ecco le verifiche da fare prima, durante e dopo il lancio per non perdere quello che hai costruito.",
+    "text": "## Perché si perdono le posizioni\n\nGoogle conosce le pagine del tuo vecchio sito e le mostra nei risultati. Se con il nuovo sito quelle pagine cambiano indirizzo o spariscono senza indicazioni, Google trova errori e le persone che cliccano arrivano su una pagina inesistente. Il valore accumulato in anni va perso.\n\n## Prima: fai l’inventario delle pagine\n\n1. Esporta l’elenco di **tutte le pagine** del sito attuale (dalla sitemap e con uno strumento di scansione).\n2. Da Search Console e Analytics individua quelle che portano più **visite e contatti**.\n3. Annota anche le pagine che ricevono **link** da altri siti.\n\n## La mappa dei reindirizzamenti\n\nPer ogni vecchio indirizzo decidi dove deve portare nel nuovo sito, e imposta un **reindirizzamento permanente (301)**. Regole semplici:\n\n- ogni pagina va reindirizzata alla pagina nuova **più simile**, non tutte alla home;\n- evita catene di reindirizzamenti (A → B → C);\n- le pagine davvero eliminate e senza un equivalente possono restituire un errore 410 o 404.\n\n## Contenuti e struttura\n\nSe il nuovo sito cambia i testi, fai attenzione a non perdere le parti che oggi funzionano su Google: argomenti, parole chiave, domande a cui rispondi. Mantieni titoli e descrizioni delle pagine importanti, o migliorali consapevolmente.\n\n## Il giorno del lancio\n\n- verifica che il sito **non sia bloccato** ai motori di ricerca (succede spesso: era bloccato in sviluppo e nessuno lo sblocca);\n- prova a campione i reindirizzamenti delle pagine più importanti;\n- invia la nuova **sitemap** in Search Console;\n- se cambi anche il dominio, usa lo strumento di cambio indirizzo di Search Console;\n- controlla che il tracciamento di Analytics e delle conversioni funzioni.\n\n## Nelle settimane successive\n\nÈ normale vedere qualche oscillazione nei primi giorni. Controlla ogni settimana in Search Console gli **errori di scansione** e le pagine non trovate, e correggi i reindirizzamenti mancanti. Confronta visite e posizioni con il periodo precedente per capire se qualcosa non va.\n\n## La checklist in 10 punti\n\n1. Elenco completo delle pagine attuali.\n2. Pagine più importanti per visite, contatti e link.\n3. Mappa vecchio indirizzo → nuovo indirizzo.\n4. Reindirizzamenti 301, senza catene.\n5. Titoli e contenuti chiave preservati.\n6. Sito sbloccato per i motori di ricerca.\n7. Nuova sitemap inviata.\n8. Tracciamento verificato.\n9. Controllo settimanale degli errori.\n10. Confronto dei dati dopo uno e tre mesi."
+  },
+  "seo": {
+    "title": "Cambiare sito senza perdere le posizioni su Google | bortolin.dev",
+    "description": "Una migrazione fatta male può dimezzare le visite in una notte. Le 10 verifiche da fare prima, durante e dopo il lancio del nuovo sito.",
+    "ogImage": "/src/assets/images/social/og-blog-cambiare-sito-senza-perdere-posizioni.png",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "markdown": null,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

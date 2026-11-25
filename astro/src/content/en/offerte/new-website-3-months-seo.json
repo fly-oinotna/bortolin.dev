@@ -1,0 +1,47 @@
+{
+  "name": "New website, with {% verde %}3 months of SEO on the house{% /verde %}",
+  "offer": {
+    "eyebrow": "Launch offer",
+    "deadlineLabel": "Ends 31 January 2027",
+    "title": "Your new website, with {% verde %}3 months of SEO on the house{% /verde %}",
+    "text": "Confirm your new website by 31 January 2027 and after launch I’ll keep working on your Google visibility at no extra cost.",
+    "items": [
+      {
+        "title": "3 months of SEO",
+        "text": "ongoing work after launch"
+      },
+      {
+        "title": "Safe migration",
+        "text": "keep your Google rankings"
+      },
+      {
+        "title": "Lighthouse guarantee",
+        "text": "90+ or I fix it for free"
+      }
+    ],
+    "ctaLabel": "Get a free quote",
+    "ctaLink": {
+      "discriminant": "#contatti",
+      "value": null
+    },
+    "note": "Free 25-minute discovery call",
+    "image": "@it",
+    "boxEyebrow": "Included in the offer",
+    "boxValue": "3 months",
+    "boxOldValue": "",
+    "boxText": "of SEO work after launch",
+    "stamp": "until\n31 Jan"
+  },
+  "menu": {
+    "megaTitle": "New website + 3 months of SEO included",
+    "megaText": "Confirm your website by 31 January 2027:",
+    "megaItems": [
+      "3 months of SEO work after launch",
+      "Migration that keeps your Google rankings",
+      "Lighthouse guarantee: 90+ on all 4 scores, or I fix it for free"
+    ],
+    "mobileText": "when you confirm by 31 January 2027",
+    "cardText": "Confirm by January: SEO-safe migration and Lighthouse guarantee included."
+  },
+  "original": "nuovo-sito-3-mesi-seo"
+}

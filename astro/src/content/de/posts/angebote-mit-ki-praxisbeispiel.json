@@ -1,0 +1,23 @@
+{
+  "title": "Angebote mit künstlicher Intelligenz: ein Praxisbeispiel",
+  "content": {
+    "image": "@it",
+    "imageAlt": "Taschenrechner und Stift auf Tabellenausdrucken",
+    "excerpt": "Von der Kundenanfrage zum Angebotsentwurf in wenigen Minuten, mit Ihren Preislisten. Wie es funktioniert, was Sie brauchen und wo weiterhin ein Mensch gefragt ist.",
+    "lead": "Für viele Handwerksbetriebe und kleine Unternehmen heißt Angebote schreiben: Abende zwischen Preislisten, Tabellen und Dokumenten zum Abtippen. Künstliche Intelligenz kann heute in wenigen Minuten einen **Entwurf** vorbereiten. Ich zeige Ihnen an einem konkreten Beispiel, wie das funktioniert, was Sie dafür brauchen und wo ein Mensch unverzichtbar bleibt.",
+    "text": "## Das Beispiel: ein Fensterbauer aus Augsburg\n\nEine E-Mail kommt an: „Ich hätte gern ein Angebot für den Austausch von 6 Kunststofffenstern in einem Haus in Friedberg, inklusive Entsorgung der alten.“ Heute öffnet der Inhaber die Preisliste, berechnet Maße und Mengen, ergänzt Montage und Entsorgung, setzt alles auf und verschickt es. Eine halbe Stunde, wenn es gut läuft.\n\nMit einem KI-gestützten System wird die Anfrage automatisch gelesen, die Positionen werden erkannt und der Preisliste zugeordnet, und nach wenigen Augenblicken liegt ein Entwurf mit Positionen, Mengen und Summe vor. Der Inhaber prüft ihn, korrigiert ein Detail und schickt ihn ab.\n\n## So funktioniert es im Hintergrund\n\n1. **Lesen**: Die KI liest die Anfrage (E-Mail, Website-Formular, transkribierte Sprachnachricht) und filtert heraus, was gebraucht wird.\n2. **Zuordnen**: Sie verknüpft jede Position mit Ihren Produkten, Leistungen und Preisen.\n3. **Regeln**: Sie wendet Ihre Konditionen an, etwa Mindestmengen, Anfahrtskosten, Rabatte.\n4. **Entwurf**: Sie erstellt das Dokument in Ihrem Format, fertig zur Prüfung.\n\n## Was Sie für den Start brauchen\n\n- eine aktuelle **Preisliste** in digitaler Form (eine Tabelle genügt);\n- Ihre **Kalkulationsregeln**, klar aufgeschrieben;\n- einige **frühere Angebote** als Beispiel;\n- die Anbindung an Ihre vorhandenen Tools: E-Mail, Unternehmenssoftware, Dokumentenablage.\n\n## Wo weiterhin ein Mensch gefragt ist\n\nKI ist hervorragend bei Routinearbeit, kennt den Kunden aber nicht so wie Sie. Menschlich bleiben:\n\n- **Vor-Ort-Termine** und echtes Aufmaß;\n- die Einschätzung von **Sonderfällen**;\n- die **letzte Entscheidung** über Preis und Versand.\n\n> Die goldene Regel: Die KI bereitet vor, ein Mensch prüft und entscheidet.\n\n## Von Angeboten zu Abrechnungen\n\nDasselbe Prinzip gilt nach Abschluss der Arbeit. Arbeitsberichte per Smartphone, Stunden und Material direkt vor Ort erfasst: **Abrechnung** und Rechnungsentwurf entstehen von selbst, ohne am Monatsende alles zusammenzusuchen.\n\n## Und die Kundendaten?\n\nAngebote enthalten personenbezogene und geschäftliche Daten. Deshalb ist es wichtig, professionelle Dienste zu nutzen, der KI nur die nötigen Informationen zu geben und alles DSGVO-konform einzurichten. Klären Sie vor dem Start immer, wo die Daten verarbeitet und wie lange sie gespeichert werden.\n\n## Wie viel Zeit Sie sparen\n\nDas hängt davon ab, wie viele Angebote Sie schreiben und wie ähnlich sie sich sind. Am besten finden Sie es durch Messen heraus: Wie lange brauchen Sie heute für ein typisches Angebot, und wie lange nach einem Monat Nutzung? Gibt es eine Ersparnis, weiten Sie das auf andere Prozesse aus; wenn nicht, schlagen Sie einen anderen Weg ein."
+  },
+  "seo": {
+    "title": "Angebote mit KI erstellen: ein Praxisbeispiel | bortolin.dev",
+    "description": "Von der Kundenanfrage zum Angebotsentwurf in Minuten, mit Ihren Preislisten. Wie es funktioniert, was Sie brauchen und wo ein Mensch gefragt bleibt.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "preventivi-con-intelligenza-artificiale"
+}

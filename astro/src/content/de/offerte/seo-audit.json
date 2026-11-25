@@ -1,0 +1,46 @@
+{
+  "name": "SEO-Audit für 290 €",
+  "offer": {
+    "eyebrow": "Einführungsangebot",
+    "deadlineLabel": "Gültig bis 31. Januar 2027",
+    "title": "Komplettes SEO-Audit für {% verde %}290 € statt 490 €{% /verde %}",
+    "text": "In 5 Werktagen wissen Sie, was Ihre Website bei Google ausbremst und was zuerst zu tun ist. Und wenn Sie danach die SEO-Beratung buchen, wird das Audit mit dem ersten Monat verrechnet.\n",
+    "items": [
+      {
+        "title": "Technische Analyse",
+        "text": "Indexierung, Ladezeit, Fehler"
+      },
+      {
+        "title": "Keywords",
+        "text": "und Wettbewerbsanalyse"
+      },
+      {
+        "title": "Video und Maßnahmenplan",
+        "text": "klare Prioritäten, verständlich erklärt"
+      }
+    ],
+    "ctaLabel": "Audit buchen",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "note": "Preise zzgl. MwSt. · Lieferung in 5 Werktagen",
+    "image": "@it",
+    "boxEyebrow": "Komplettes SEO-Audit",
+    "boxValue": "290 €",
+    "boxOldValue": "490 €",
+    "boxText": "wird mit dem ersten Beratungsmonat verrechnet",
+    "stamp": "−40 %"
+  },
+  "menu": {
+    "megaTitle": "Komplettes SEO-Audit für 290 € statt 490 €",
+    "megaText": "Bei Buchung bis 31. Januar 2027:",
+    "megaItems": [
+      "Technische Analyse: Indexierung, Ladezeit, Fehler",
+      "Keywords und Wettbewerbsanalyse",
+      "Video und Maßnahmenplan, verrechenbar mit dem ersten Beratungsmonat"
+    ],
+    "mobileText": "bei Buchung bis 31. Januar 2027",
+    "cardText": "Lieferung in 5 Werktagen, verrechenbar mit dem ersten Beratungsmonat."
+  },
+  "original": "audit-seo"
+}

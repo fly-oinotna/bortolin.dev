@@ -1,0 +1,25 @@
+{
+  "title": "Farsi citare da ChatGPT: cos’è la GEO e come iniziare",
+  "content": {
+    "date": "2026-11-06",
+    "category": "ai",
+    "image": "/src/assets/images/blog/geo-farsi-citare-da-chatgpt.webp",
+    "imageAlt": "Mani che scrivono su un portatile",
+    "excerpt": "Sempre più persone chiedono consigli a un’intelligenza artificiale. Come fare in modo che nella risposta ci sia anche la tua attività, senza promesse impossibili.",
+    "lead": "Sempre più persone, invece di cercare su Google, chiedono a ChatGPT, Gemini o Perplexity: “Mi consigli un commercialista a Treviso?”, “Qual è il miglior gestionale per un’officina?”. Le risposte citano poche fonti e pochi nomi. La **GEO** è il lavoro che serve per aumentare le probabilità che tra quei nomi ci sia anche il tuo.",
+    "text": "## Cos’è la GEO\n\nGEO sta per *Generative Engine Optimization*: ottimizzazione per i motori “generativi”, cioè gli assistenti che rispondono con un testo scritto invece che con un elenco di link. L’obiettivo è lo stesso della SEO, farsi trovare, ma il modo di arrivarci cambia un po’.\n\nUna premessa onesta: **nessuno può garantirti di essere citato**. Le risposte delle AI cambiano da persona a persona e da giorno a giorno. Si può però lavorare per diventare una fonte affidabile e facile da citare.\n\n## Come scelgono le fonti gli assistenti AI\n\nSemplificando molto, gli assistenti mettono insieme due cose: quello che hanno “imparato” durante l’addestramento e, sempre più spesso, quello che trovano cercando sul web in tempo reale. Microsoft Copilot, per esempio, si appoggia a Bing; le panoramiche AI di Google usano l’indice di Google.\n\nQuesto significa che **le basi della SEO restano fondamentali**: se il tuo sito non è trovato e capito dai motori di ricerca, difficilmente un assistente lo userà come fonte.\n\n## Contenuti facili da citare\n\nUn assistente cerca risposte chiare a domande precise. Aiutalo:\n\n- scrivi pagine che rispondono a **domande reali** dei clienti, con la risposta nelle prime righe;\n- usa **titoli chiari**, elenchi e paragrafi brevi;\n- inserisci **dati concreti**: zone servite, tempi, prezzi indicativi, caratteristiche;\n- tieni le informazioni **aggiornate** e coerenti in tutte le pagine.\n\n## Dati strutturati: chi sei, cosa fai, dove\n\nI dati strutturati sono un piccolo codice, invisibile ai visitatori, che descrive in modo preciso la tua attività: nome, indirizzo, orari, servizi, recensioni, domande frequenti. Per un motore di ricerca o un assistente sono come una carta d’identità ben compilata.\n\nNon fanno miracoli da soli, ma riducono il rischio che vengano capite male informazioni importanti, come la zona in cui lavori o il tipo di servizio che offri.\n\n## La tua reputazione fuori dal sito\n\nGli assistenti si fidano di ciò che trovano confermato in più posti. Per questo contano molto:\n\n- le **recensioni** su Google e sui portali del tuo settore;\n- le **citazioni** su giornali locali, associazioni di categoria, siti di partner;\n- la **coerenza** di nome, indirizzo e descrizione su tutto il web.\n\n## Come verificare se ti citano\n\nIl metodo più semplice è anche il più efficace: **fai le domande che farebbero i tuoi clienti**. Chiedi a ChatGPT, Gemini, Copilot e Perplexity di consigliarti un’attività come la tua nella tua zona, e annota chi compare e quali fonti vengono citate.\n\nRipeti il controllo ogni mese: ti dà un’idea di come stai andando e, soprattutto, ti mostra quali siti gli assistenti considerano autorevoli nel tuo settore.\n\n## Da dove iniziare, in pratica\n\n1. Sistema le basi SEO: sito veloce, chiaro, con le pagine giuste.\n2. Crea una pagina di domande frequenti con risposte vere e complete.\n3. Aggiungi i dati strutturati della tua attività.\n4. Cura il profilo Google e le recensioni.\n5. Controlla ogni mese cosa rispondono gli assistenti."
+  },
+  "seo": {
+    "title": "GEO: come farsi citare da ChatGPT | bortolin.dev",
+    "description": "Cos’è la GEO e come aumentare le probabilità che ChatGPT, Gemini e Perplexity citino il tuo sito: contenuti chiari, dati strutturati, autorevolezza.",
+    "ogImage": "/src/assets/images/social/og-blog-geo-farsi-citare-da-chatgpt.png",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "markdown": null,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

@@ -1,0 +1,67 @@
+---
+// BANNER COOKIE (testi e consensi in Keystatic → Cookies), sul modello di AM Tools 3 → Cookies.
+// Tre parti: il banner (compare dopo il ritardo impostato), la finestra "Impostazioni" con un interruttore
+// per ogni tipo di consenso, e il pulsante rotondo che riapre le impostazioni dopo aver scelto.
+// Il comportamento è in ./cookie-banner.ts; GTM parte solo dopo un consenso (Consent Mode v2).
+import Rich from '../ui/Rich.astro';
+import { href } from '../../lib/links';
+import type { Globals } from '../../lib/content';
+interface Props { g: Globals; gtm?: string }
+const { g, gtm } = Astro.props;
+const c = g.cookies;
+const b = c.banner;
+const types = c.types.items.map((t) => ({ type: t.type, default: t.default }));
+const btn = 'rounded-full px-5 py-2.5 text-sm font-semibold transition-colors focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black';
+const cookieIcon = 'M21.6 12.3a9.6 9.6 0 1 1-9.9-9.9 3 3 0 0 0 3.5 3.6 3 3 0 0 0 3.2 3.2 3 3 0 0 0 3.2 3.1Z';
+---
+<div id="bd-cookies" data-delay={c.general.delay ?? 5} data-gtm={gtm ?? ''} data-types={JSON.stringify(types)}>
+
+  <!-- Banner -->
+  <section data-bd-cookies-banner hidden role="dialog" aria-labelledby="bd-cookies-title" aria-describedby="bd-cookies-text"
+    class="fixed inset-x-4 bottom-4 z-[60] mx-auto max-w-xl rounded-3xl bg-white p-6 text-gray-700 shadow-2xl ring-1 ring-black/5 md:right-auto md:bottom-6 md:left-6">
+    <p id="bd-cookies-title" class="flex items-center gap-2 text-lg font-bold text-black">
+      <svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" class="text-bd-green-dark"><path d={cookieIcon} /><circle cx="8.5" cy="11" r="1" fill="currentColor" /><circle cx="12" cy="16" r="1" fill="currentColor" /><circle cx="15.5" cy="12.5" r=".8" fill="currentColor" /></svg>
+      {b.title}
+    </p>
+    <div id="bd-cookies-text" class="mt-2 text-sm"><Rich value={b.text} /></div>
+    <p class="mt-2 text-sm">{b.privacyText} <a href={href(b.privacyLink)} class="font-semibold text-black underline underline-offset-4">{b.privacyLinkText}</a>.</p>
+    <div class="mt-5 flex flex-wrap gap-2">
+      <button type="button" data-bd-cookies="settings" class:list={[btn, 'bg-gray-100 text-black hover:bg-gray-200']}>{b.settings}</button>
+      <button type="button" data-bd-cookies="reject" class:list={[btn, 'bg-gray-100 text-black hover:bg-gray-200']}>{b.deny}</button>
+      <button type="button" data-bd-cookies="accept" class:list={[btn, 'ml-auto bg-bd-green text-black hover:bg-black hover:text-bd-green']}>{b.accept}</button>
+    </div>
+  </section>
+
+  <!-- Impostazioni -->
+  <div data-bd-cookies-settings hidden class="fixed inset-0 z-[70] grid place-items-center bg-black/60 p-4">
+    <form role="dialog" aria-modal="true" aria-labelledby="bd-cookies-settings-title" class="max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-3xl bg-white p-6 text-gray-700 shadow-2xl md:p-8">
+      <h2 id="bd-cookies-settings-title" class="text-2xl">{c.preferences.title}</h2>
+      <div class="mt-2 text-sm"><Rich value={c.preferences.text} /></div>
+      <ul class="mt-5 space-y-4">
+        {c.types.items.map((t) => (
+          <li>
+            <label class="flex cursor-pointer items-start gap-3">
+              <input type="checkbox" role="switch" name={t.type} value="granted" class="peer sr-only" checked={t.default !== 'denied'} disabled={t.default === 'required'} />
+              <span aria-hidden="true" class="relative mt-0.5 h-6 w-11 shrink-0 rounded-full bg-gray-300 transition-colors peer-checked:bg-bd-green peer-disabled:opacity-60 peer-focus-visible:ring-2 peer-focus-visible:ring-black after:absolute after:top-0.5 after:left-0.5 after:h-5 after:w-5 after:rounded-full after:bg-white after:shadow after:transition-transform peer-checked:after:translate-x-5"></span>
+              <span><strong class="block text-black">{t.title}</strong><span class="block text-sm">{t.description}</span></span>
+            </label>
+          </li>
+        ))}
+      </ul>
+      <div class="mt-6 flex flex-wrap gap-2">
+        <button type="button" data-bd-cookies="close" class:list={[btn, 'bg-gray-100 text-black hover:bg-gray-200']}>{b.close}</button>
+        <button type="button" data-bd-cookies="reject" class:list={[btn, 'bg-gray-100 text-black hover:bg-gray-200']}>{b.deny}</button>
+        <button type="submit" class:list={[btn, 'bg-black text-white hover:bg-gray-800']}>{b.save}</button>
+        <button type="button" data-bd-cookies="accept" class:list={[btn, 'bg-bd-green text-black hover:bg-black hover:text-bd-green']}>{b.acceptAll}</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Pulsante per riaprire le impostazioni (compare dopo aver scelto) -->
+  <button type="button" data-bd-cookies="open" hidden aria-label={b.preferences} title={b.preferences}
+    class="fixed bottom-4 left-4 z-[55] grid h-11 w-11 place-items-center rounded-full bg-black text-bd-green shadow-lg transition-transform hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black">
+    <svg aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d={cookieIcon} /><circle cx="8.5" cy="11" r="1" fill="currentColor" /><circle cx="12" cy="16" r="1" fill="currentColor" /><circle cx="15.5" cy="12.5" r=".8" fill="currentColor" /></svg>
+  </button>
+</div>
+
+<script src="./cookie-banner.ts"></script>

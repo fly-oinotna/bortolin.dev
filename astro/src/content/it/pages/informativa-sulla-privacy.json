@@ -1,0 +1,17 @@
+{
+  "title": "Informativa sulla privacy",
+  "content": {
+    "text": "**Ultimo aggiornamento:** 3 giugno 2025\n\nIl titolare del trattamento dei dati è:\n\n**Antonio Bortolin**\\\nEmail: [antonio@bortolin.dev](mailto:antonio@bortolin.dev)\\\nPartita IVA: IT05504860262\n\n## **Dati raccolti**\n\nDurante l'utilizzo del sito, possono essere raccolti i seguenti dati personali:\n\n- **Dati forniti volontariamente:** nome, email e altri dati inseriti nei moduli di contatto.\n- **Dati di navigazione:** indirizzo IP, tipo di browser, dispositivo, sistema operativo, pagine visitate e durata della visita.\n- **Cookie:** file utilizzati per migliorare l’esperienza di navigazione. Per dettagli, consulta la [Cookie Policy](/informativa-sulla-gestione-dei-cookie).\n\n## **Finalità e base giuridica**\n\nI dati sono trattati per:\n\n1. Rispondere alle richieste ricevute via modulo o email.\n1. Analizzare l’uso del sito e migliorarne il funzionamento.\n1. Assolvere a obblighi legali o fiscali.\n\nIl trattamento si basa sul consenso dell’interessato, sull’esecuzione di un contratto o su obblighi di legge.\n\n## **Destinatari dei dati**\n\nI dati non saranno mai venduti. Potrebbero essere comunicati a:\n\n- **Fornitori di servizi tecnici** (es. hosting, analisi web).\n- **Autorità competenti**, su richiesta o per obbligo di legge.\n\n## **Conservazione**\n\nI dati personali saranno conservati per il tempo necessario alle finalità indicate o per obblighi normativi.\n\n## **Diritti dell’utente**\n\nIn ogni momento puoi esercitare i diritti previsti dal GDPR, tra cui:\n\n- Diritto di accesso, rettifica, cancellazione dei dati.\n- Limitazione e opposizione al trattamento.\n- Portabilità dei dati.\n- Revoca del consenso precedentemente prestato.\n- Reclamo all’autorità di controllo competente.\n\nPer esercitare i tuoi diritti, scrivimi a: [antonio@bortolin.dev](mailto:antonio@bortolin.dev)\n"
+  },
+  "seo": {
+    "title": "Informativa sulla privacy | bortolin.dev",
+    "description": "Consulta l'informativa sulla privacy di bortolin.dev: scopri come vengono raccolti, trattati e protetti i tuoi dati personali ai sensi del GDPR.",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "ogImage": "/src/assets/images/social/og-privacy.png"
+  }
+}

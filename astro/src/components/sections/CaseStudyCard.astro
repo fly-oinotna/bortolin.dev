@@ -1,0 +1,46 @@
+---
+// Scheda di un caso studio (Keystatic → Casi studio → Scheda): finestra del browser + smartphone, caratteristiche e link.
+// Usata nelle pagine servizio e nell'archivio dei casi studio. "Scheda scura" = sfondo nero e immagini a destra.
+import Icon from '../ui/Icon.astro';
+import Img from '../ui/Img.astro';
+import type { Globals } from '../../lib/content';
+import { t } from '../../i18n/ui';
+interface Props { g: Globals; slug: string; title: string; card: any; class?: string }
+const { g, slug, title, card: c, class: cls = 'mt-6' } = Astro.props;
+const s = g.settings.caseStudies;
+const ui = t(g.lang);
+const dark = c.dark;
+---
+<article class:list={['grid grid-cols-1 items-center gap-10 rounded-3xl p-6 md:p-10 lg:grid-cols-2 lg:gap-16', dark ? 'bg-black text-white' : 'bg-gray-100', cls]}>
+  <div class:list={['relative pb-8', dark ? 'pr-6 sm:pr-10 lg:order-2' : 'pl-6 sm:pl-10']}>
+    <figure class:list={['overflow-hidden rounded-2xl border-[3px] shadow-xl', dark ? 'mac-window' : 'mac-window-dark']}>
+      <div class={dark ? 'mac-bar' : 'mac-bar-dark'}><span class="mac-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="mac-url">{c.domain}</span><span class="mac-spacer" aria-hidden="true"></span></div>
+      <Img src={c.desktopImage} alt={c.desktopAlt} widths={[720, 1200]} sizes="(min-width: 1024px) 560px, 88vw" class="block aspect-[16/10] w-full object-cover object-top" />
+    </figure>
+    {c.mobileImage && (
+      <figure class:list={['absolute bottom-0 w-[27%] overflow-hidden rounded-[1.4rem] border-[4px] shadow-xl', dark ? 'right-0 phone-frame' : 'left-0 phone-frame-dark']}>
+        <span class="phone-bar rounded-t-[1rem]" aria-hidden="true"><span>{c.domain}</span></span>
+        <Img src={c.mobileImage} alt={c.mobileAlt} widths={[220, 440]} sizes="(min-width: 1024px) 150px, 24vw" class="block aspect-[9/19.5] w-full rounded-b-[1rem] object-cover object-top" />
+      </figure>
+    )}
+  </div>
+  <div class:list={[dark && 'lg:order-1']}>
+    {c.tags.length > 0 && (
+      <ul class="mb-4 flex flex-wrap gap-2" aria-label={g.settings.a11y.projectTags}>
+        {c.tags.map((tag: string) => <li class:list={['rounded-full px-3 py-1 text-xs font-semibold', dark ? 'bg-white/15 text-white' : 'bg-white text-black']}>{tag}</li>)}
+      </ul>
+    )}
+    <h3 class:list={['text-2xl lg:text-3xl', dark && 'text-bd-green']}>{title}</h3>
+    <p class:list={[dark && 'text-gray-300']}>{c.summary}</p>
+    {c.features.length > 0 && (
+      <>
+        <p class:list={['mt-4 font-semibold', dark ? 'text-white' : 'text-black']}>{s.featuresTitle}</p>
+        <ul class:list={['mt-2 space-y-2 text-sm', dark && 'text-gray-200']}>
+          {c.features.map((f: string) => <li class="flex gap-2"><Icon name="check" size={18} stroke={3} class:list={['mt-0.5 shrink-0', dark && 'text-bd-green']} />{f}</li>)}
+        </ul>
+      </>
+    )}
+    <a href={g.url(`/casi-studio/${slug}/`)} class:list={['mt-6 mr-3', dark ? 'btn-primary' : 'btn-secondary']}>{s.readLabel}<span class="sr-only">: {title}</span></a>
+    {c.siteUrl && <a href={c.siteUrl} target="_blank" rel="noopener" class:list={['mt-6', dark ? 'btn-empty-secondary' : 'btn-empty-primary']}>{s.visitLabel} <Icon name="external" size={18} /><span class="sr-only">{ui.newTab}</span></a>}
+  </div>
+</article>

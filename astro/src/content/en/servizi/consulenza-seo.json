@@ -1,0 +1,387 @@
+{
+  "hero": {
+    "breadcrumb": "SEO consulting",
+    "eyebrow": "My specialty",
+    "title": "SEO consulting: be found by the people already looking for you",
+    "text": "Every day, someone searches Google, or asks ChatGPT, for exactly what you sell. My job is to make sure they find **you**, not a competitor. With a clear method and reports that make sense, even if you’re not a techie.\n",
+    "ctaLabel": "Get an SEO audit",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "How SEO works",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#come-funziona"
+    },
+    "highlights": [
+      "15+ years in technical SEO",
+      "Google and AI search",
+      "Also in IT · DE · ES"
+    ],
+    "serpQuery": "seo consultant near me",
+    "serpAiTitle": "AI Overview",
+    "serpAiText": "For clear, measurable SEO consulting, **bortolin.dev** offers technical audits, local SEO and…\n",
+    "serpRank": "#1",
+    "serpUrl": "bortolin.dev › en › services › seo-consulting",
+    "serpTitle": "Freelance SEO consultant | bortolin.dev",
+    "serpMeta": "5.0 · Fixed price · Reports that make sense"
+  },
+  "steps": {
+    "eyebrow": "SEO in plain English",
+    "title": "How does Google decide who to show?",
+    "text": "Think of Google as a giant librarian. To recommend your website it has to do three things, and at each step you can win or lose customers.\n",
+    "stepLabel": "Step",
+    "items": [
+      {
+        "icon": "lens",
+        "title": "It finds your website",
+        "text": "Google explores the web by following links. If your website is slow, riddled with errors or poorly linked, some pages simply never get seen.",
+        "work": "**What I work on:** speed, sitemap, internal links, technical errors.\n"
+      },
+      {
+        "icon": "book",
+        "title": "It works out what you do",
+        "text": "It reads titles, copy and structured data to understand what you offer, to whom and where. Send mixed messages and you’ll show up for the wrong searches.",
+        "work": "**What I work on:** keywords, content, page structure.\n"
+      },
+      {
+        "icon": "trophy",
+        "title": "It picks who gets the top spot",
+        "text": "Out of every website answering the same question, it rewards the most useful, trustworthy and enjoyable to use.",
+        "work": "**What I work on:** authority, reviews, user experience.\n"
+      }
+    ]
+  },
+  "pillars": {
+    "eyebrow": "What I do",
+    "title": "Three pillars, one goal: more customers from Google",
+    "tabsLabel": "SEO pillars",
+    "items": [
+      {
+        "tab": "Technical SEO",
+        "title": "Technical SEO: the foundations",
+        "text": "Everything that helps Google find, read and rate your website. It’s often where the costliest problems hide, and where the quickest wins are.\n",
+        "points": [
+          {
+            "title": "Indexing",
+            "text": "The right pages on Google, the useless ones out."
+          },
+          {
+            "title": "Speed and Core Web Vitals",
+            "text": "The fast website Google rewards."
+          },
+          {
+            "title": "Structured data",
+            "text": "Stars, prices, FAQs and opening hours in search results."
+          },
+          {
+            "title": "Structure and internal links",
+            "text": "Every key page just a few clicks away."
+          },
+          {
+            "title": "Multilingual (hreflang)",
+            "text": "The right language for the right audience."
+          },
+          {
+            "title": "Migrations",
+            "text": "A new website without losing your rankings."
+          }
+        ]
+      },
+      {
+        "tab": "Content",
+        "title": "Content: answering real questions",
+        "text": "Nobody searches for “excellent services”: people want answers to real problems. I find out what those problems are, how people phrase them, and build pages that answer them better than anyone else.\n",
+        "points": [
+          {
+            "title": "Keyword research",
+            "text": "What your customers are really searching for."
+          },
+          {
+            "title": "Competitor analysis",
+            "text": "Who’s outranking you, and why."
+          },
+          {
+            "title": "On-page optimization",
+            "text": "Titles, copy and descriptions that persuade."
+          },
+          {
+            "title": "Content plan",
+            "text": "Articles and guides that pull in visitors."
+          }
+        ]
+      },
+      {
+        "tab": "Authority",
+        "title": "Authority: your online reputation",
+        "text": "Google trusts websites that others trust: other websites mentioning you, customers reviewing you, the same details everywhere. I build that trust the clean way, with no risky shortcuts.\n",
+        "points": [
+          {
+            "title": "Quality links and mentions",
+            "text": "From real websites in your industry and area."
+          },
+          {
+            "title": "Reviews",
+            "text": "A simple system to get more of them."
+          },
+          {
+            "title": "Google Business Profile",
+            "text": "Complete, polished and up to date."
+          },
+          {
+            "title": "Brand consistency",
+            "text": "The same details all over the web."
+          }
+        ]
+      }
+    ]
+  },
+  "local": {
+    "eyebrow": "Local SEO",
+    "title": "Top of the map when people search nearby",
+    "text": "“Plumber Austin”, “accountant Manchester”, “restaurants open now”: for searches like these Google shows a map with three businesses first. Being one of those three beats any ad.\n",
+    "image": "@it",
+    "imageAlt": "Illustration: a map with your business highlighted and a five-star listing",
+    "points": [
+      {
+        "text": "A complete **Google Business Profile**, with photos, services, opening hours and updates.\n"
+      },
+      {
+        "text": "**Reviews**: a simple way to ask happy customers for them, and to reply well.\n"
+      },
+      {
+        "text": "**Location pages** on your website that are genuinely useful, not copy-and-paste.\n"
+      },
+      {
+        "text": "**Consistent details** (name, address, phone) across directories and industry sites.\n"
+      }
+    ]
+  },
+  "ai": {
+    "eyebrow": "Visibility in AI search",
+    "title": "More and more people ask AI. Will it mention you?",
+    "text": "ChatGPT, Gemini, Perplexity and Google’s AI Overviews reply in plain text and cite only a handful of sources. I work to make your website one of them, with clear, verifiable information that’s easy to summarize. It’s called **GEO** (Generative Engine Optimization), and it stands on the same foundations as good SEO.\n",
+    "image": "@it",
+    "imageAlt": "Illustration of an AI assistant connected to a website, email, documents and analytics",
+    "cards": [
+      {
+        "title": "Quotable content",
+        "text": "Clear answers, hard data, sources."
+      },
+      {
+        "title": "Structured data",
+        "text": "Who you are, what you do, where you work."
+      },
+      {
+        "title": "Brand presence",
+        "text": "Mentions on authoritative websites."
+      },
+      {
+        "title": "Monitoring",
+        "text": "I check if, and how, AI tools mention you."
+      }
+    ],
+    "note": "**To be honest:** nobody controls what AI says. I can boost your chances of being cited, not guarantee it.\n"
+  },
+  "formats": {
+    "eyebrow": "How we can work together",
+    "title": "Pick the option that suits you",
+    "text": "Every option has a fixed price, agreed after the free call. Start with an audit and decide later whether to carry on.\n",
+    "items": [
+      {
+        "label": "One-off",
+        "title": "SEO audit",
+        "text": "A complete snapshot of your website and your competitors, with a to-do list ranked by priority.",
+        "points": [
+          "Technical and Lighthouse review",
+          "Keywords and competitors",
+          "Walkthrough video and action plan"
+        ],
+        "note": "**Ideal if** you want to know where you stand and what to do next, even on your own.\n",
+        "ctaLabel": "",
+        "ctaLink": {
+          "discriminant": "#contatti"
+        },
+        "highlight": false,
+        "badge": ""
+      },
+      {
+        "label": "Monthly",
+        "title": "Ongoing SEO",
+        "text": "I work on your website month after month: technical fixes, content, local SEO and AI visibility.",
+        "points": [
+          "Monthly work, by priority",
+          "Monthly video report",
+          "Quarterly strategy review"
+        ],
+        "note": "",
+        "ctaLabel": "Let’s talk",
+        "ctaLink": {
+          "discriminant": "#contatti"
+        },
+        "highlight": true,
+        "badge": "Most popular"
+      },
+      {
+        "label": "Tailored",
+        "title": "Training and projects",
+        "text": "For in-house teams, agencies and high-stakes moments that call for an expert at your side.",
+        "points": [
+          "SEO workshop for your team",
+          "SEO-safe website migration",
+          "Second opinion on your agency"
+        ],
+        "note": "**Ideal if** you have a team or a project to protect.\n",
+        "ctaLabel": "",
+        "ctaLink": {
+          "discriminant": "#contatti"
+        },
+        "highlight": false,
+        "badge": ""
+      }
+    ]
+  },
+  "method": {
+    "eyebrow": "The method",
+    "title": "From data to action, step by step",
+    "steps": [
+      {
+        "title": "Free discovery call",
+        "text": "25 minutes to understand your business, customers, goals and competitors."
+      },
+      {
+        "title": "Audit",
+        "text": "I analyze the website with Search Console, Lighthouse and pro tools, and study the searches and who’s beating you."
+      },
+      {
+        "title": "Action plan",
+        "text": "Every task with its priority, likely impact and effort. You always know what to tackle first."
+      },
+      {
+        "title": "Implementation",
+        "text": "I do the work myself, or guide your team or agency step by step."
+      },
+      {
+        "title": "Measure and improve",
+        "text": "A monthly video report: what changed, why, and what’s next."
+      }
+    ],
+    "ctaLabel": "Start with a free call",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "reportEyebrow": "Sample action plan",
+    "reportTitle": "SEO audit · yourwebsite.com",
+    "reportItems": [
+      {
+        "text": "12 key pages missing from Google",
+        "priority": "alta"
+      },
+      {
+        "text": "Oversized images on service pages",
+        "priority": "alta"
+      },
+      {
+        "text": "Duplicate titles on 8 pages",
+        "priority": "media"
+      },
+      {
+        "text": "Google profile with no services or photos",
+        "priority": "media"
+      },
+      {
+        "text": "No FAQ structured data",
+        "priority": "bassa"
+      }
+    ],
+    "reportBox": "**For every item:** what it means, why it matters and how to fix it, in plain English. Plus a video where I walk you through it.\n",
+    "reportNote": "Sample content, for illustration only."
+  },
+  "promises": {
+    "eyebrow": "Straight talk",
+    "title": "Promises you’ll never hear from me",
+    "text": "SEO is full of easy promises. Here are the ones I won’t make, and what you get instead.\n",
+    "items": [
+      {
+        "promise": "“Guaranteed #1 ranking”",
+        "instead": "**Instead:** realistic, measurable goals we agree on together.\n"
+      },
+      {
+        "promise": "“Results in a week”",
+        "instead": "**Instead:** early signs within weeks, solid results in 3–6 months.\n"
+      },
+      {
+        "promise": "“1,000 backlinks for €99”",
+        "instead": "**Instead:** only clean techniques that never put your website at risk.\n"
+      }
+    ]
+  },
+  "offer": {
+    "show": true,
+    "item": "audit-seo"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions about SEO",
+    "text": "Can’t see yours? [Drop me a line](#contatti) and I’ll reply by the next business day.\n",
+    "items": [
+      {
+        "question": "How soon will I see results?",
+        "answer": "Once technical issues are fixed, early signs often appear within a few weeks. Solid results for competitive searches usually take 3 to 6 months. The upside: unlike ads, they stick around.\n"
+      },
+      {
+        "question": "How much does SEO consulting cost?",
+        "answer": "It depends on the option and the size of your website. The audit has a fixed price; ongoing SEO a fixed monthly fee. It’s all in writing in the quote, after the free call.\n"
+      },
+      {
+        "question": "Can you guarantee me the top spot on Google?",
+        "answer": "No, and be wary of anyone who does: nobody controls Google’s algorithm. What I guarantee is methodical work, clear priorities and full transparency about what I do and what you get.\n"
+      },
+      {
+        "question": "Do I need a new website for SEO?",
+        "answer": "Hardly ever. Most websites can be improved a great deal without a rebuild. If yours has structural limits, I’ll tell you straight and walk you through the alternatives.\n"
+      },
+      {
+        "question": "Can you work with my agency or developer?",
+        "answer": "Yes, happily. I can do the work myself or write precise instructions for whoever already looks after your website.\n"
+      },
+      {
+        "question": "Do you do SEO for websites in other languages?",
+        "answer": "Yes: I speak English, German and Spanish and handle multilingual websites, from the technical setup to keyword research for each market.\n"
+      }
+    ],
+    "ctaLabel": "Get an SEO audit",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "seo"
+    ],
+    "title": "More on SEO",
+    "text": "Practical guides to getting found on Google and in your local area, minus the jargon.\n",
+    "buttonLabel": "All articles"
+  },
+  "contact": {
+    "title": "Let’s talk about your Google visibility",
+    "formTitle": "Ask for an audit or a free quote",
+    "topics": [
+      "seo"
+    ]
+  },
+  "seo": {
+    "slug": "seo-consulting",
+    "title": "Freelance SEO consultant: audits and local SEO | bortolin.dev",
+    "description": "Freelance SEO consultant: technical audits, local SEO, migrations and visibility on ChatGPT and Gemini. Clear reports, fixed price.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

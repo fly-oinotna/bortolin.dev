@@ -1,0 +1,25 @@
+{
+  "title": "Quanto costa un sito web nel 2026? Cosa incide davvero sul prezzo",
+  "content": {
+    "date": "2026-10-30",
+    "category": "siti-web",
+    "image": "/src/assets/images/blog/quanto-costa-un-sito-web.webp",
+    "imageAlt": "Persona che lavora a un sito web su un portatile",
+    "excerpt": "Da poche centinaia a decine di migliaia di euro: perché i preventivi sono così diversi e quali voci non dovrebbero mai mancare in un sito fatto bene.",
+    "lead": "“Quanto costa un sito?” è la domanda che ricevo più spesso, e la risposta onesta è: **dipende**. Ma non è una scusa. In questa guida ti spiego da cosa dipende davvero il prezzo, perché due preventivi possono essere lontanissimi e cosa non dovrebbe mai mancare.",
+    "text": "## Perché i preventivi sono così diversi\n\nPuoi ricevere offerte da poche centinaia a decine di migliaia di euro per quello che sembra lo stesso lavoro. La differenza raramente è il “numero di pagine”: è **cosa c’è dentro** il prezzo. Testi scritti o da fornire, design su misura o tema già pronto, SEO e velocità curate o trascurate, formazione e assistenza incluse o escluse.\n\nPer confrontare due preventivi, quindi, non guardare solo il totale: guarda cosa comprende ciascuno.\n\n## Cosa incide davvero sul prezzo\n\n- **Tipo di sito**: un sito vetrina costa meno di un e-commerce o di un’area riservata.\n- **Funzionalità**: prenotazioni, configuratori, integrazioni con gestionali, multilingua.\n- **Contenuti**: se i testi li scrive il professionista o li fornisci tu.\n- **Design**: su misura o adattato da un modello.\n- **Qualità tecnica**: velocità, accessibilità, SEO, sicurezza.\n\n## Cosa non dovrebbe mai mancare\n\nQualunque sia il budget, un sito fatto bene dovrebbe includere:\n\n- un design che funziona **prima di tutto da smartphone**;\n- le basi **SEO**: titoli, descrizioni, struttura, dati strutturati;\n- una buona **velocità** di caricamento;\n- il **tracciamento** delle visite e dei contatti, con il consenso cookie in regola;\n- privacy e cookie policy, e il rispetto delle norme di **accessibilità** quando richieste;\n- la **proprietà** di dominio, accessi e contenuti intestata a te.\n\n## I costi ricorrenti da mettere in conto\n\nOltre al progetto ci sono alcune spese annuali: dominio, hosting, eventuali licenze di plugin o servizi, e la manutenzione (aggiornamenti, backup, sicurezza). Chiedi sempre che vengano indicate nel preventivo, così non ci sono sorprese dopo il lancio.\n\n## Prezzo fisso o a ore?\n\nCon il prezzo a ore sai quanto costa un’ora, ma non quanto costerà il progetto. Con il **prezzo fisso** sai fin dall’inizio la cifra finale, a fronte di un elenco chiaro di cosa è incluso. Per un’azienda che deve pianificare un budget, il secondo è quasi sempre più sereno.\n\n> Un buon preventivo non è il più basso: è quello in cui capisci esattamente cosa stai comprando.\n\n## Dove si può risparmiare (e dove no)\n\nSi può risparmiare partendo con meno pagine ben fatte, fornendo foto e materiali già pronti, rimandando funzioni non indispensabili. Non conviene invece risparmiare su velocità, SEO e sicurezza: sono le cose che fanno lavorare il sito e che, se trascurate, costano molto di più da sistemare dopo.\n\n## Le domande da fare prima di firmare\n\n1. Cosa è incluso esattamente, e cosa no?\n2. Chi scrive i testi?\n3. Il sito sarà mio, con tutti gli accessi?\n4. Quanto sarà veloce, e come lo verifichiamo?\n5. Quali sono i costi annuali dopo il lancio?\n6. Cosa succede se servono modifiche dopo la consegna?"
+  },
+  "seo": {
+    "title": "Quanto costa un sito web nel 2026? | bortolin.dev",
+    "description": "Da poche centinaia a decine di migliaia di euro: perché i preventivi sono così diversi e quali voci non dovrebbero mai mancare in un sito fatto bene.",
+    "ogImage": "/src/assets/images/social/og-blog-quanto-costa-un-sito-web.png",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "markdown": null,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

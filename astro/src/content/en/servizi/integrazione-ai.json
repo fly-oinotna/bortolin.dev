@@ -1,0 +1,353 @@
+{
+  "hero": {
+    "breadcrumb": "AI integration",
+    "eyebrow": "Artificial intelligence",
+    "title": "AI built into your website: more visibility, less busywork",
+    "text": "I build AI into your website, **including the one you already have**: in the dashboard, to write meta tags, copy and translations in one click, and on the website, to answer your customers. Powered by **Gemini, Claude or ChatGPT**, with you always having the final say.\n",
+    "ctaLabel": "Tell me about your project",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "See what AI can do",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#dentro-il-sito"
+    },
+    "highlights": [],
+    "demoBar": "Edit page",
+    "demoPanel": "Website dashboard",
+    "demoPageLabel": "Page title",
+    "demoSeo": "SEO",
+    "demoButton": "Generate with AI",
+    "demoTitleLabel": "Meta title",
+    "demoDescLabel": "Meta description",
+    "demoReady": "Page content is ready",
+    "demoWorking": "Reading the content…",
+    "demoDone": "Done in 2 seconds. Review and save.",
+    "demoDoneShort": "Done. Review and save.",
+    "demoWorks": "Works with",
+    "demoCaption": "Try it: hit “Generate with AI” to see another business. Ten examples, from tradespeople and shops to online stores, blogs and more.",
+    "examples": [
+      {
+        "type": "Tradesperson",
+        "page": "Complete bathroom remodels",
+        "title": "Bathroom Remodeling in Austin | Free Quote in 48 Hours",
+        "desc": "Complete bathroom remodels in Austin and nearby: design, materials and installation for a fixed price. Free site visit and a quote within 48 hours."
+      },
+      {
+        "type": "Online store",
+        "page": "Waterproof hiking shoe",
+        "title": "Men’s Waterproof Hiking Shoes | Next-Day Delivery",
+        "desc": "Waterproof, breathable men’s hiking shoe with a grippy sole for every trail. Next-day delivery and free 30-day returns."
+      },
+      {
+        "type": "Blog",
+        "page": "How to cut your electricity bill",
+        "title": "How to Cut Your Electricity Bill: 10 Easy Tips",
+        "desc": "Ten practical ways to use less energy at home without sacrificing comfort: appliances, lighting, timing and small daily habits."
+      },
+      {
+        "type": "Shop",
+        "page": "Florist in central Bath",
+        "title": "Florist in Bath | Fresh Bouquets, Same-Day Delivery",
+        "desc": "Fresh bouquets, plants and arrangements for every occasion, in the heart of Bath. Order online or pop in: same-day delivery across the city."
+      },
+      {
+        "type": "Restaurant",
+        "page": "Seafood tasting menu",
+        "title": "Seafood Restaurant in Brighton | Tasting Menu by the Sea",
+        "desc": "Today’s catch, tasting menus and a seafront terrace in Brighton. Pick your evening and book a table online in seconds."
+      },
+      {
+        "type": "Professional",
+        "page": "Tax help for freelancers",
+        "title": "Accountant in Leeds for Freelancers and Sole Traders",
+        "desc": "Getting set up as self-employed, tax returns, bookkeeping and tax advice in Leeds. Free first meeting and clear fees from day one."
+      },
+      {
+        "type": "Hotels and B&Bs",
+        "page": "Rooms with Rocky Mountain views",
+        "title": "B&B in Banff with Rocky Mountain Views",
+        "desc": "Cozy rooms looking out on the Rockies, breakfast with local produce and free parking. Book direct on our website for the best rate."
+      },
+      {
+        "type": "Gym",
+        "page": "Pilates for beginners",
+        "title": "Pilates for Beginners in Dublin | First Class Free",
+        "desc": "Small-group beginner pilates in Dublin, with certified instructors and flexible times. Your first class is on us: book your spot."
+      },
+      {
+        "type": "Joinery workshop",
+        "page": "Custom wooden kitchens",
+        "title": "Custom Wooden Kitchens | Handcrafted Joinery",
+        "desc": "Custom solid-wood kitchens, designed and built from first sketch to installation with hand-picked materials. Free home visit in Portland and nearby."
+      },
+      {
+        "type": "Dental practice",
+        "page": "Dental cleaning and whitening",
+        "title": "Dentist in Melbourne | Dental Cleaning and Whitening",
+        "desc": "Professional cleaning, whitening and check-ups in Melbourne, in a modern, welcoming practice. Book your first appointment online."
+      }
+    ]
+  },
+  "uses": {
+    "eyebrow": "What it can do for you",
+    "title": "AI that gets real work done, minus the hype",
+    "text": "Everyone’s talking about AI, but for a small business only two things matter: **time saved and more customers**. Here’s where I put it to work with real results.\n",
+    "items": [
+      {
+        "icon": "chat",
+        "title": "Website assistant",
+        "text": "Answers customers 24/7 using your information (opening hours, services, prices) and passes you qualified leads.",
+        "wide": true,
+        "dark": true
+      },
+      {
+        "icon": "flow",
+        "title": "Automations",
+        "text": "Quotes, email replies, sorting requests, updating your CRM: let the machine do the busywork.",
+        "wide": false,
+        "dark": false
+      },
+      {
+        "icon": "file",
+        "title": "Content and catalogs",
+        "text": "Product sheets, descriptions and translations written with AI and always checked by a human.",
+        "wide": false,
+        "dark": false
+      },
+      {
+        "icon": "search-text",
+        "title": "In-house assistant",
+        "text": "Your team asks questions of company manuals, price lists and procedures and gets answers in seconds.",
+        "wide": false,
+        "dark": false
+      },
+      {
+        "icon": "spark",
+        "title": "Visibility in AI search",
+        "text": "Structured data and clear content, so ChatGPT, Gemini and Perplexity know who you are and recommend you.",
+        "wide": false,
+        "dark": false
+      },
+      {
+        "icon": "graduation",
+        "title": "Training",
+        "text": "Hands-on workshops to use AI every day, safely and without putting customer data at risk.",
+        "wide": true,
+        "dark": false
+      }
+    ]
+  },
+  "inside": {
+    "eyebrow": "AI on your website",
+    "title": "In your dashboard and on your website. Even the one you have now",
+    "text": "No need to start over: I add AI to the website you already have, whether it runs on **WordPress, WooCommerce, Shopify** or custom code. It works where you need it, with your content.\n",
+    "backBadge": "Back end · for whoever runs the website",
+    "backTitle": "Hours of work, in one click",
+    "backText": "A “Generate with AI” button right where you edit pages and products. The AI suggests, you check and save.",
+    "backItems": [
+      {
+        "title": "Meta titles and descriptions",
+        "text": "for every page, based on what’s actually on it"
+      },
+      {
+        "title": "Image alt text",
+        "text": "better accessibility and more visibility in Google Images"
+      },
+      {
+        "title": "Translations",
+        "text": "into every language on your website, reviewed in one click"
+      },
+      {
+        "title": "Structured data",
+        "text": "FAQs, products, events: generated and checked"
+      },
+      {
+        "title": "Internal link suggestions",
+        "text": "between related articles and pages"
+      },
+      {
+        "title": "Copy checks",
+        "text": "typos, tone of voice and readability"
+      }
+    ],
+    "frontBadge": "Front end · for your visitors",
+    "frontTitle": "A website that answers back",
+    "frontText": "Visitors find what they need straight away, even at 11 pm on a Sunday.",
+    "frontItems": [
+      {
+        "title": "An assistant that knows your website",
+        "text": "answers with links to your pages"
+      },
+      {
+        "title": "Smart search",
+        "text": "understands what people mean, whatever words they use"
+      },
+      {
+        "title": "Product recommendations",
+        "text": "relevant suggestions in your online store"
+      },
+      {
+        "title": "Smart forms",
+        "text": "enquiries arrive sorted and routed to the right person"
+      }
+    ]
+  },
+  "seoWork": {
+    "eyebrow": "More SEO, less effort",
+    "title": "Every page optimized, without giving up your evenings",
+    "text": "SEO is full of tedious details: meta tags, alt text, translations, structured data. On a website with dozens or hundreds of pages, they’re often left half-finished. With AI built in, they become part of the daily routine.\n",
+    "image": "@it",
+    "imageAlt": "Illustration of an AI assistant connected to a website, email, documents and analytics",
+    "items": [
+      {
+        "title": "No more half-finished pages",
+        "text": "Every page and image gets its meta tags and alt text."
+      },
+      {
+        "title": "Consistency",
+        "text": "The same tone of voice and SEO rules across the whole website."
+      },
+      {
+        "title": "Multilingual, made easier",
+        "text": "Translations ready to review, not to write from scratch."
+      },
+      {
+        "title": "You stay in control",
+        "text": "The AI suggests, you approve. Nothing goes live without your OK."
+      }
+    ]
+  },
+  "models": {
+    "eyebrow": "The models",
+    "title": "Gemini, Claude or ChatGPT: I pick the right one for you",
+    "text": "Each model has its own strengths in writing quality, speed, cost and data handling. I choose the best fit for your needs, and build the integration so you **can switch models without starting over**.\n",
+    "items": [
+      {
+        "logo": "@it",
+        "title": "Gemini",
+        "company": "by Google",
+        "text": "Plays nicely with the Google ecosystem and handles large volumes of content well."
+      },
+      {
+        "logo": "@it",
+        "title": "Claude",
+        "company": "by Anthropic",
+        "text": "Known for the quality of its writing and for sticking closely to instructions and tone of voice."
+      },
+      {
+        "logo": "",
+        "title": "ChatGPT",
+        "company": "by OpenAI",
+        "text": "The best known: versatile, with a huge ecosystem of tools and integrations."
+      }
+    ],
+    "privacyTitle": "Privacy and compliance first",
+    "privacyItems": [
+      "I use the business versions of these services, set up so your data isn’t used to train the models, wherever the provider allows it.",
+      "The AI only gets the data it needs, nothing more.",
+      "Projects in line with the GDPR and the transparency rules of the EU AI Act."
+    ],
+    "costsTitle": "What about running costs?",
+    "costsText": "The models are pay-as-you-go. For most websites the cost is modest, and I give you a realistic estimate before we start, so there are no surprises.",
+    "disclaimer": "Gemini is a trademark of Google LLC, Claude is a trademark of Anthropic PBC, ChatGPT is a trademark of OpenAI. These trademarks are mentioned only to show compatibility; there is no affiliation with these companies."
+  },
+  "steps": {
+    "eyebrow": "How I work",
+    "title": "From idea to everyday tool",
+    "text": "",
+    "items": [
+      {
+        "title": "Use case",
+        "text": "We start from a real problem: where are you losing time or customers? If AI isn’t the answer, I’ll tell you."
+      },
+      {
+        "title": "Prototype",
+        "text": "A first working version on your own data, so you see results before you invest."
+      },
+      {
+        "title": "Integration",
+        "text": "Into your website, your dashboard or the tools you already use, existing ones included."
+      },
+      {
+        "title": "Training and results",
+        "text": "I show you how to use it, and we measure the time saved and the results."
+      }
+    ],
+    "boxTitle": "Got an idea but not sure it’s doable?",
+    "boxText": "Tell me about it on a free 25-minute call and I’ll tell you straight away whether, and how, it can be done.",
+    "boxCtaLabel": "Book a free call",
+    "boxCtaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "offer": {
+    "show": true,
+    "item": "seo-con-ai"
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions about AI",
+    "text": "Can’t see yours? [Drop me a line](#contatti) and I’ll reply by the next business day.\n",
+    "items": [
+      {
+        "question": "Can I add AI to my current website?",
+        "answer": "Yes. I work with WordPress, WooCommerce, Shopify and custom websites, adding AI features to the dashboard you already use or to the public website, with no rebuild.\n"
+      },
+      {
+        "question": "Can AI make mistakes?",
+        "answer": "Yes, sometimes. That’s why in my projects the AI suggests and a human approves: nothing is published or sent to customers unchecked, unless you decide otherwise.\n"
+      },
+      {
+        "question": "Does Google penalize AI-written copy?",
+        "answer": "Google rewards helpful content, however it was written. The real risk is generic, mass-produced copy, which is why the AI works from your real content and a human reviews it.\n"
+      },
+      {
+        "question": "Which model is best: Gemini, Claude or ChatGPT?",
+        "answer": "It depends on the task, the budget and how you want your data handled. I know all three and pick the best fit, and the integration is built so you can switch later.\n"
+      },
+      {
+        "question": "Is my data safe?",
+        "answer": "I use the business versions of these services, send only the data that’s needed and set everything up in line with the GDPR. For especially sensitive data, we weigh up the most cautious options together.\n"
+      },
+      {
+        "question": "How much does it cost?",
+        "answer": "The project has a fixed price, agreed after the free call. Model usage is billed separately, pay-as-you-go, and I estimate it before we start.\n"
+      }
+    ],
+    "ctaLabel": "Tell me about your project",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "ai"
+    ],
+    "title": "AI in practice",
+    "text": "Real examples of how AI can save you time and help customers find you.\n",
+    "buttonLabel": "All articles"
+  },
+  "contact": {
+    "title": "Let’s put AI to work for you",
+    "formTitle": "Tell me your idea",
+    "topics": [
+      "ai"
+    ]
+  },
+  "seo": {
+    "slug": "ai-integration",
+    "title": "AI website integration: Gemini, Claude, ChatGPT | bortolin.dev",
+    "description": "I build AI into your website, including your current one: meta tags, copy and translations in one click, plus a customer assistant. Gemini, Claude or ChatGPT.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

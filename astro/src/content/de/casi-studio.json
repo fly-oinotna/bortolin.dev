@@ -1,0 +1,93 @@
+{
+  "hero": {
+    "breadcrumb": "Referenzen",
+    "eyebrow": "Referenzen",
+    "title": "Websites, die wirklich funktionieren, aus der Nähe betrachtet",
+    "text": "Jedes Projekt beginnt mit einem konkreten Problem. Hier sehen Sie einige der Websites, die ich gebaut habe: die Herausforderung, die Entscheidungen und das Ergebnis, auf jedem Bildschirm.\n",
+    "ctaLabel": "Sprechen wir über Ihr Projekt",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Projekte ansehen",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#elenco"
+    },
+    "projectsLabel": "Abgeschlossene Projekte",
+    "projectsValue": 400,
+    "yearsLabel": "Jahre Erfahrung",
+    "yearsValue": 15,
+    "suffix": "+",
+    "languagesLabel": "Arbeitssprachen",
+    "languagesValue": "DE · EN · IT · ES"
+  },
+  "list": {
+    "eyebrow": "Die Projekte",
+    "title": "Branche wählen",
+    "filterLabel": "Referenzen filtern",
+    "allLabel": "Alle",
+    "filters": [
+      {
+        "value": "aziende",
+        "label": "Unternehmen"
+      },
+      {
+        "value": "servizi",
+        "label": "Freie Berufe"
+      },
+      {
+        "value": "formazione",
+        "label": "Bildung"
+      },
+      {
+        "value": "multilingua",
+        "label": "Mehrsprachig"
+      }
+    ],
+    "items": [
+      "projsystem",
+      "european-forensic-institute"
+    ],
+    "tagsLabel": "Das Wichtigste",
+    "nextTitle": "Das nächste Projekt könnte Ihres sein",
+    "nextText": "Neue Website, Relaunch, SEO oder KI-Integration: Erzählen Sie mir von Ihrem Projekt und Sie erhalten ein Angebot zum Festpreis.",
+    "nextLabel": "Angebot anfordern",
+    "nextLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "banner": {
+    "title": "Überzeugt? Lassen Sie uns sprechen",
+    "text": "Ein kostenloses Erstgespräch von 25 Minuten: Ziele, Zeitrahmen und eine klare Vorstellung der Kosten, zum Festpreis.",
+    "ctaLabel": "Gespräch buchen",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Leistungen ansehen",
+    "linkLink": {
+      "discriminant": "/servizi/"
+    }
+  },
+  "related": {
+    "title": "Weitere Referenzen",
+    "allLabel": "Alle Referenzen"
+  },
+  "contact": {
+    "title": "Werden Sie die nächste Erfolgsgeschichte",
+    "formTitle": "Kostenloses Angebot anfordern",
+    "topics": []
+  },
+  "seo": {
+    "slug": "referenzen",
+    "title": "Referenzen: Websites, die ich gebaut habe | bortolin.dev",
+    "description": "Referenzen von Websites, die ich gebaut habe: Herausforderung, Entscheidungen und Ergebnis auf jedem Bildschirm. Firmenwebsites, mehrsprachig und WordPress.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

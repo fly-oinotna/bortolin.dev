@@ -1,0 +1,321 @@
+{
+  "hero": {
+    "breadcrumb": "Optimización de velocidad",
+    "eyebrow": "Para webs ya publicadas",
+    "title": "¿Tu web va lenta? La hago volar, sin rehacerla",
+    "text": "Analizo la web que ya tienes, encuentro lo que la frena y lo corrijo: **Core Web Vitals dentro de los umbrales de Google**, notas de Lighthouse en verde y visitantes que ya no se van. Todo explicado sin tecnicismos.\n",
+    "ctaLabel": "",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "",
+    "linkLink": {
+      "discriminant": "#contatti"
+    },
+    "highlights": [],
+    "formPlaceholder": "www.tuweb.es",
+    "formButton": "Analizar ahora",
+    "formNote": "Se abrirá PageSpeed Insights, la herramienta oficial de Google. Luego [envíame el resultado](#contatti).\n",
+    "reportDevice": "tuweb.es · móvil",
+    "reportBadge": "Ejemplo",
+    "beforeTitle": "Antes",
+    "beforeLabel": "Notas de ejemplo antes de la optimización",
+    "before": [
+      {
+        "label": "Rendimiento",
+        "value": 38
+      },
+      {
+        "label": "Accesibilidad",
+        "value": 81
+      },
+      {
+        "label": "Buenas prácticas",
+        "value": 74
+      },
+      {
+        "label": "SEO",
+        "value": 85
+      }
+    ],
+    "afterTitle": "Tras la optimización",
+    "afterLabel": "Objetivo tras la optimización: 100 en todas las categorías",
+    "after": [
+      {
+        "label": "Rendimiento",
+        "value": 100
+      },
+      {
+        "label": "Accesibilidad",
+        "value": 100
+      },
+      {
+        "label": "Buenas prácticas",
+        "value": 100
+      },
+      {
+        "label": "SEO",
+        "value": 100
+      }
+    ],
+    "reportCaption": "Ejemplo ilustrativo de notas de Lighthouse antes y después de una optimización."
+  },
+  "costs": {
+    "eyebrow": "Por qué importa",
+    "title": "Una web lenta te cuesta dinero, cada día",
+    "text": "No aparece en ninguna factura, pero se nota en los resultados. Aquí es donde pierdes sin darte cuenta.\n",
+    "items": [
+      {
+        "value": ">50 %",
+        "title": "Visitas que se van",
+        "text": "Según Google, más de la mitad de las visitas desde el móvil se abandonan si la página tarda más de 3 segundos en cargar."
+      },
+      {
+        "value": "SEO",
+        "title": "Posiciones perdidas en Google",
+        "text": "Las Core Web Vitals están entre las señales que Google usa para valorar la experiencia de una página. A igualdad de contenido, la web más rápida sale con ventaja."
+      },
+      {
+        "value": "€€€",
+        "title": "Anuncios más caros",
+        "text": "Cada clic de pago que llega a una página lenta puede acabar desperdiciado. Y Google Ads también tiene en cuenta la experiencia en la página de destino."
+      }
+    ]
+  },
+  "selfcheck": {
+    "eyebrow": "Autodiagnóstico",
+    "title": "¿Tu web necesita una puesta a punto?",
+    "text": "Marca los síntomas que reconoces. Son 30 segundos y no se envía ningún dato: todo se queda en tu navegador.\n",
+    "image": "@it",
+    "imageAlt": "Ilustración de una web con notas de Lighthouse en 100 y Core Web Vitals en verde",
+    "question": "¿Cuáles te suenan?",
+    "symptoms": [
+      "En el móvil la web tarda más de 3 segundos en abrirse",
+      "Mientras carga, textos y botones «saltan»",
+      "Lighthouse o PageSpeed muestran números en rojo o naranja",
+      "Search Console marca URL «deficientes» o que «necesitan mejoras»",
+      "La web usa un maquetador o muchos plugins",
+      "Las campañas de publicidad cuestan más de lo previsto"
+    ],
+    "msg0": "Marca los síntomas que reconoces y te digo lo que pienso.",
+    "msg1": "{n} síntomas de {tot}: hay margen de mejora. Un chequeo te dice cuánto y dónde.",
+    "msg2": "{n} síntomas de {tot}: tu web está perdiendo clientes. Es momento de actuar.",
+    "ctaLabel": "Reserva el chequeo",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "vitals": {
+    "eyebrow": "Core Web Vitals",
+    "title": "Qué pasa cuando alguien abre tu web",
+    "text": "Google mide tres momentos de la experiencia de tus visitantes reales. Aquí los tienes, fotograma a fotograma.\n",
+    "lcpTitle": "LCP · lo que tarda en aparecer el contenido principal",
+    "lcpGood": "Bien: menos de 2,5 s",
+    "lcpFramesLabel": "Ejemplo de carga de una página rápida",
+    "lcpFrames": [
+      {
+        "time": "0,0 s",
+        "label": ""
+      },
+      {
+        "time": "0,4 s",
+        "label": "Primer contenido"
+      },
+      {
+        "time": "0,8 s",
+        "label": ""
+      },
+      {
+        "time": "1,4 s",
+        "label": "LCP"
+      },
+      {
+        "time": "1,8 s",
+        "label": "Completa"
+      }
+    ],
+    "lcpCaption": "Ejemplo de página rápida: el contenido principal (la imagen verde) aparece en 1,4 segundos.",
+    "inpTitle": "INP · capacidad de respuesta",
+    "inpGood": "Bien: menos de 200 ms",
+    "inpText": "El tiempo entre un toque y la respuesta de la página. Si es lento, el visitante pulsa dos veces, se impacienta y cree que la web no funciona.",
+    "inpValue": "80 ms",
+    "clsTitle": "CLS · estabilidad",
+    "clsGood": "Bien: menos de 0,1",
+    "clsText": "Cuánto se «mueve» la página al cargar. ¿Sabes cuando vas a pulsar un enlace y de repente aparece un banner que lo empuja hacia abajo? Eso.",
+    "clsBad": "Inestable",
+    "clsOk": "Estable"
+  },
+  "optimize": {
+    "eyebrow": "Qué optimizo",
+    "title": "Dónde se esconde la lentitud (y cómo la elimino)",
+    "text": "Cada web es distinta: intervengo solo donde hace falta, empezando por lo que más pesa.\n",
+    "platformsLabel": "Plataformas con las que trabajo",
+    "platforms": [
+      "WordPress",
+      "WooCommerce",
+      "Shopify",
+      "Next.js · React",
+      "Webs a medida"
+    ],
+    "items": [
+      {
+        "icon": "image",
+        "title": "Imágenes y vídeo",
+        "text": "Formatos modernos (WebP, AVIF), el tamaño justo para cada pantalla, cargados solo cuando hacen falta."
+      },
+      {
+        "icon": "code",
+        "title": "Código CSS y JavaScript",
+        "text": "Elimino lo que sobra, aplazo lo que puede esperar y aligero el resto."
+      },
+      {
+        "icon": "font",
+        "title": "Fuentes",
+        "text": "Alojadas en tu servidor y sin textos que «saltan» al abrir la página."
+      },
+      {
+        "icon": "server",
+        "title": "Servidor, caché y CDN",
+        "text": "Hosting adecuado, caché bien configurada, compresión y contenidos servidos cerca de tus visitantes."
+      },
+      {
+        "icon": "globe",
+        "title": "Scripts de terceros",
+        "text": "Chats, mapas, vídeos, píxeles y banners de cookies: los cargo para que no bloqueen la página."
+      },
+      {
+        "icon": "wordpress",
+        "title": "WordPress y plugins",
+        "text": "Maquetadores pesados, plugins innecesarios, base de datos sobrecargada: lo limpio sin romper nada."
+      }
+    ]
+  },
+  "proof": {
+    "eyebrow": "La prueba",
+    "title": "No te fíes de mí: analiza esta web",
+    "text": "La web que estás viendo está hecha con el mismo método que usaré en la tuya. Ábrela en PageSpeed Insights y mira los números tú mismo.\n",
+    "ctaLabel": "Analizar bortolin.dev",
+    "ctaLink": {
+      "discriminant": "custom",
+      "value": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fbortolin.dev%2F"
+    },
+    "ctaNewTab": true,
+    "boxTitle": "bortolin.dev · objetivo en cada página",
+    "scoresLabel": "Objetivo: 100 sobre 100 en todas las categorías",
+    "scores": [
+      {
+        "label": "Rendimiento",
+        "value": 100
+      },
+      {
+        "label": "Accesibilidad",
+        "value": 100
+      },
+      {
+        "label": "Buenas prácticas",
+        "value": 100
+      },
+      {
+        "label": "SEO",
+        "value": 100
+      }
+    ]
+  },
+  "steps": {
+    "eyebrow": "Cómo trabajo",
+    "title": "Mido, corrijo, lo demuestro",
+    "text": "Cada mejora se mide antes y después: al final sabes exactamente qué has pagado y qué has conseguido.\n",
+    "items": [
+      {
+        "title": "Medición",
+        "text": "Lighthouse, datos de usuarios reales de Google (Search Console y CrUX) y análisis página a página."
+      },
+      {
+        "title": "Diagnóstico",
+        "text": "Te doy la lista de problemas con su impacto y su coste estimado, ordenados por rentabilidad."
+      },
+      {
+        "title": "Correcciones",
+        "text": "Trabajo sobre una copia de la web y luego publico los cambios sin interrupciones."
+      },
+      {
+        "title": "Comprobación",
+        "text": "Comparativa antes y después y, si quieres, seguimiento mensual para que la web siga siendo rápida."
+      }
+    ],
+    "boxTitle": "¿No sabes por dónde empezar?",
+    "boxText": "Empieza por el chequeo: en pocos días sabrás qué frena tu web y cuánto cuesta arreglarlo.",
+    "boxCtaLabel": "Reserva el chequeo",
+    "boxCtaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "offer": {
+    "show": true,
+    "item": "check-up-velocita"
+  },
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Preguntas sobre velocidad",
+    "text": "¿No encuentras la tuya? [Escríbeme](#contatti) y te respondo en un día laborable.\n",
+    "items": [
+      {
+        "question": "¿Tengo que rehacer la web para que sea rápida?",
+        "answer": "Casi nunca. En la gran mayoría de los casos las grandes mejoras llegan trabajando sobre la web existente: imágenes, scripts, caché, plugins. Si la web tiene límites estructurales te lo digo enseguida, con las alternativas.\n"
+      },
+      {
+        "question": "¿Llegaré a 100 en Lighthouse?",
+        "answer": "Depende de la web: el tema, los plugins y los servicios externos a veces ponen límites. En el chequeo te digo de forma realista hasta dónde podemos llegar, antes de que decidas nada.\n"
+      },
+      {
+        "question": "¿Los cambios pueden romper algo?",
+        "answer": "Trabajo sobre una copia de la web y reviso cada página antes de publicar. Siempre hago una copia de seguridad completa, así podemos volver atrás en cualquier momento.\n"
+      },
+      {
+        "question": "¿Cuánto se tarda?",
+        "answer": "El chequeo lleva unos pocos días laborables. Las correcciones dependen de lo que salga: en el presupuesto tienes plazos y costes, con precio cerrado.\n"
+      },
+      {
+        "question": "¿Cuándo veré resultados en Google?",
+        "answer": "Lighthouse mejora al instante. Los datos de visitantes reales, los que Google usa para las Core Web Vitals, se actualizan en unos 28 días.\n"
+      },
+      {
+        "question": "¿La web seguirá siendo rápida con el tiempo?",
+        "answer": "Plugins nuevos, imágenes subidas sin optimizar y scripts añadidos con el tiempo pueden volver a ralentizarla. Por eso ofrezco también un seguimiento mensual y te dejo unas reglas sencillas.\n"
+      }
+    ],
+    "ctaLabel": "Reserva el chequeo",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "performance"
+    ],
+    "title": "Entiende la velocidad de tu web",
+    "text": "Core Web Vitals, Lighthouse y las causas más habituales de una web lenta, explicadas fácil.\n",
+    "buttonLabel": "Todos los artículos"
+  },
+  "contact": {
+    "title": "Hagamos que tu web vuele",
+    "formTitle": "Pide un chequeo o un presupuesto",
+    "topics": [
+      "performance"
+    ]
+  },
+  "seo": {
+    "slug": "optimizacion-velocidad-web",
+    "title": "Optimización de velocidad web y Core Web Vitals | bortolin.dev",
+    "description": "Hago rápida la web que ya tienes: Core Web Vitals dentro de los umbrales de Google y Lighthouse en verde, sin rehacerla. Chequeo y antes/después.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

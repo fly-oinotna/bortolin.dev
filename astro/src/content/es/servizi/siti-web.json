@@ -1,0 +1,285 @@
+{
+  "hero": {
+    "breadcrumb": "Páginas web",
+    "eyebrow": "Páginas web completas",
+    "title": "Webs que te traen clientes",
+    "text": "Webs corporativas, tiendas online y proyectos a medida: **rápidas, visibles en Google y preparadas para la inteligencia artificial**. Diseño, textos, SEO, medición y formación ya incluidos. Un único presupuesto, con **precio cerrado**.\n",
+    "ctaLabel": "Pide tu presupuesto gratis",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Ver mis trabajos",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#casi-studio"
+    },
+    "highlights": [
+      "Precio cerrado",
+      "La web es tuya",
+      "Textos incluidos",
+      "También multidioma"
+    ],
+    "demoUrl": "tunegocio.es",
+    "demoBrand": "Tu negocio",
+    "demoTitle": "Tu web,\nrápida y visible",
+    "demoCta": "Contacta",
+    "demoSteps": [
+      "Estructura",
+      "Diseño",
+      "Textos",
+      "Online"
+    ],
+    "demoStepsLabel": "Las fases de creación de la web",
+    "demoToast": "La web está online",
+    "demoCaption": "De la estructura a la web publicada: todas las fases están incluidas en el precio.",
+    "badgeTitle": "Rápida desde el diseño",
+    "badgeText": "comprobada con Lighthouse",
+    "badgeLink": {
+      "discriminant": "custom",
+      "value": "#qualita"
+    }
+  },
+  "manifesto": {
+    "line1": "Una web bonita que nadie encuentra es un gasto.",
+    "line2": "Una web rápida que Google muestra es una inversión.",
+    "text": "No empiezo por el diseño gráfico, sino por quiénes son tus clientes, qué buscan en Google y qué les convence para contactarte. La estética viene después, y está al servicio de los resultados.\n"
+  },
+  "types": {
+    "eyebrow": "¿Qué tipo de web necesitas?",
+    "title": "Cada negocio necesita su propia web, no una plantilla",
+    "text": "Te ayudo a elegir la solución adecuada para tus objetivos y tu presupuesto. Sea cual sea el tipo de web, la calidad de base es la misma.\n",
+    "items": [
+      {
+        "icon": "monitor",
+        "title": "Web corporativa",
+        "text": "Presenta tu negocio, tus servicios y tu equipo, y convierte las visitas en solicitudes.",
+        "audience": "Para empresas, despachos y profesionales"
+      },
+      {
+        "icon": "cart",
+        "title": "Tienda online",
+        "text": "Un e-commerce rápido y fácil de gestionar, con fichas de producto optimizadas para Google y pagos seguros.",
+        "audience": "Para quien vende online"
+      },
+      {
+        "icon": "target",
+        "title": "Landing page",
+        "text": "Una página, un objetivo: perfecta para campañas de Google y Meta Ads, medida al detalle.",
+        "audience": "Para campañas y lanzamientos"
+      },
+      {
+        "icon": "stack",
+        "title": "Proyectos a medida",
+        "text": "Webs multiidioma, áreas privadas, e-learning, configuradores e integraciones con tu software de gestión.",
+        "audience": "Para necesidades especiales"
+      }
+    ]
+  },
+  "included": {
+    "eyebrow": "Qué incluye",
+    "title": "Todo lo que necesitas, en un único precio",
+    "text": "Nada de «extras» que aparecen a mitad de proyecto. El presupuesto cubre todas las fases, desde el primer análisis hasta la formación final.\n",
+    "image": "@it",
+    "imageAlt": "Ilustración: del mapa del sitio al wireframe, hasta la web terminada",
+    "ctaLabel": "Pide tu presupuesto gratis",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "items": [
+      {
+        "title": "Análisis y objetivos",
+        "text": "Recopilo materiales, accesos, objetivos y competidores. Estudio qué buscan tus clientes en Google antes de decidir nada."
+      },
+      {
+        "title": "Estructura de la web",
+        "text": "Páginas, recorridos y contenidos organizados antes del diseño, para que el visitante encuentre enseguida lo que busca."
+      },
+      {
+        "title": "Textos que venden",
+        "text": "Escribo los textos con las palabras que usan tus clientes y que Google premia. Tú los apruebas antes de publicarlos."
+      },
+      {
+        "title": "Diseño a medida",
+        "text": "Pensado para ordenador, tablet y móvil. Sin plantillas: la web cuenta tu negocio, no el de otro."
+      },
+      {
+        "title": "Desarrollo limpio",
+        "text": "WordPress si quieres gestionarla tú, soluciones a medida cuando hace falta la máxima velocidad. Nunca maquetadores pesados."
+      },
+      {
+        "title": "SEO técnico y visibilidad en la IA",
+        "text": "Títulos, descripciones, datos estructurados, sitemap y SEO local. Contenidos claros que también ChatGPT, Gemini y Perplexity pueden leer y citar."
+      },
+      {
+        "title": "Velocidad y Core Web Vitals",
+        "text": "Imágenes optimizadas, código ligero, fuentes bien cargadas. Cada página se revisa con Lighthouse antes de la entrega."
+      },
+      {
+        "title": "Medición desde el primer día",
+        "text": "Google Analytics 4, Tag Manager, Search Console y Consent Mode configurados: sabes cuántas solicitudes llegan y de dónde."
+      },
+      {
+        "title": "Accesible, segura y conforme",
+        "text": "Cumple la Ley Europea de Accesibilidad, con conexión segura (HTTPS), cabeceras de seguridad y privacidad y cookies en regla."
+      },
+      {
+        "title": "Formación, entrega y… es tuya",
+        "text": "Te enseño a actualizar la web tú mismo. Dominio, accesos y código están a tu nombre: sin ataduras, nunca."
+      }
+    ]
+  },
+  "quality": {
+    "eyebrow": "Calidad comprobable",
+    "title": "No tienes que fiarte de mí: puedes comprobarlo",
+    "text": "Cada web se entrega tras una revisión con **Google Lighthouse**, la herramienta gratuita con la que cualquiera puede medir la velocidad, la accesibilidad, la calidad técnica y el SEO de una página. Mi objetivo es 100 en las cuatro categorías.\n",
+    "linkLabel": "Qué es Lighthouse, explicado fácil",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "/#lighthouse"
+    },
+    "linkNewTab": true,
+    "scoresLabel": "Objetivo Lighthouse: 100 sobre 100 en las cuatro categorías",
+    "scores": [
+      {
+        "label": "Rendimiento",
+        "value": 100
+      },
+      {
+        "label": "Accesibilidad",
+        "value": 100
+      },
+      {
+        "label": "Buenas prácticas",
+        "value": 100
+      },
+      {
+        "label": "SEO",
+        "value": 100
+      }
+    ],
+    "checks": [
+      "Core Web Vitals dentro de los umbrales de Google",
+      "HTTPS y cabeceras de seguridad",
+      "Datos estructurados para Google y la IA",
+      "Se puede usar entera solo con el teclado"
+    ]
+  },
+  "cases": {
+    "eyebrow": "Casos de éxito",
+    "title": "Algunas webs que he creado",
+    "text": "Sectores distintos, mismo método: entender quién usará la web y construirla a su medida.\n",
+    "items": [
+      "projsystem",
+      "european-forensic-institute"
+    ]
+  },
+  "steps": {
+    "eyebrow": "Cómo funciona",
+    "title": "De la llamada a la web publicada, sin sorpresas",
+    "text": "Siempre sabes en qué punto estamos, qué necesito de ti y cuándo llega el siguiente paso.\n",
+    "items": [
+      {
+        "title": "Llamada gratuita",
+        "text": "25 minutos para conocernos y entender objetivos, plazos y presupuesto."
+      },
+      {
+        "title": "Análisis y presupuesto",
+        "text": "Estudio tu negocio y tu competencia, y recibes un presupuesto cerrado con fechas."
+      },
+      {
+        "title": "Estructura y textos",
+        "text": "Definimos páginas y contenidos. Yo escribo los textos, tú los apruebas."
+      },
+      {
+        "title": "Diseño",
+        "text": "Ves la web antes de desarrollarla y pides los cambios que quieras."
+      },
+      {
+        "title": "Desarrollo y pruebas",
+        "text": "Desarrollo la web y la pruebo en todos los dispositivos y con Lighthouse."
+      },
+      {
+        "title": "Publicación y formación",
+        "text": "Puesta en marcha, redirecciones SEO desde la web antigua y formación para gestionarla."
+      }
+    ],
+    "boxTitle": "El primer paso es el más fácil",
+    "boxText": "Una llamada de 25 minutos, gratis y sin compromiso. Al final sabrás qué necesitas y cuánto cuesta.",
+    "boxCtaLabel": "Reserva tu llamada gratis",
+    "boxCtaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "offer": {
+    "show": true,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Preguntas sobre páginas web",
+    "text": "¿No encuentras la tuya? [Escríbeme](#contatti) y te respondo en un día laborable.\n",
+    "items": [
+      {
+        "question": "¿Cuánto cuesta una página web?",
+        "answer": "Depende del número de páginas, funciones, idiomas y contenidos. Tras la llamada gratuita recibes un presupuesto con **precio cerrado** que incluye todo lo que ves en esta página: sin costes ocultos ni horas extra.\n"
+      },
+      {
+        "question": "¿Cuánto se tarda en hacerla?",
+        "answer": "Depende sobre todo del tamaño de la web y de la rapidez en las aprobaciones. En el presupuesto tienes las fechas de cada fase y la de entrega, y las cumplo.\n"
+      },
+      {
+        "question": "¿Podré actualizar la web yo mismo?",
+        "answer": "Sí. La formación está incluida: te enseño a cambiar textos, imágenes y páginas. Si prefieres no ocuparte, puedo hacerlo yo con un plan de mantenimiento.\n"
+      },
+      {
+        "question": "Ya tengo web: ¿perderé mis posiciones en Google?",
+        "answer": "No, si la migración se hace bien. Antes de publicar mapeo todas las páginas existentes y configuro las redirecciones, para que Google y los visitantes encuentren enseguida las nuevas direcciones.\n"
+      },
+      {
+        "question": "¿Qué tecnología usas?",
+        "answer": "La que te conviene. WordPress si quieres gestionar los contenidos tú, soluciones a medida cuando la velocidad y la seguridad son lo primero. En ambos casos, sin maquetadores pesados que ralentizan la web.\n"
+      },
+      {
+        "question": "¿Me ayudas también con textos y fotos?",
+        "answer": "Los textos los escribo yo, a partir de una charla contigo. Para las fotos te asesoro sobre lo que hace falta y, si quieres, te pongo en contacto con fotógrafos de confianza; si no, uso imágenes profesionales de calidad.\n"
+      },
+      {
+        "question": "¿La web será de verdad mía?",
+        "answer": "Sí: dominio, hosting, código y cuentas (Google, Analytics) están a tu nombre. Puedes cambiar de proveedor cuando quieras, sin ataduras.\n"
+      }
+    ],
+    "ctaLabel": "Pide tu presupuesto gratis",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "siti-web"
+    ],
+    "title": "Antes de hacer una web, lee esto",
+    "text": "Costes, accesibilidad, lo imprescindible: respuestas a las preguntas que más me hacen antes de empezar un proyecto.\n",
+    "buttonLabel": "Todos los artículos"
+  },
+  "contact": {
+    "title": "Hablemos de tu nueva web",
+    "formTitle": "Pide tu presupuesto gratis",
+    "topics": [
+      "nuovo-sito"
+    ]
+  },
+  "seo": {
+    "slug": "paginas-web",
+    "title": "Diseño y desarrollo de páginas web completas | bortolin.dev",
+    "description": "Webs corporativas, tiendas online y proyectos a medida: diseño, textos, SEO, velocidad Lighthouse, medición y formación incluidos. Precio cerrado, y es tuya.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

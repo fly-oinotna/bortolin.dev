@@ -1,0 +1,170 @@
+{
+  "title": "Proj.System",
+  "card": {
+    "domain": "projsystem.com",
+    "sectors": [
+      "aziende",
+      "servizi"
+    ],
+    "tags": [
+      "Ingeniería y seguridad",
+      "Web corporativa",
+      "WordPress"
+    ],
+    "summary": "Un estudio técnico de Porcia (Pordenone, Italia) que desde 2001 trabaja en proyectos, seguridad en obra y en el trabajo, análisis instrumentales y formación.",
+    "features": [
+      "Presentación clara de una oferta amplia: ingeniería, seguridad, análisis, formación",
+      "Páginas dedicadas al estudio y a su equipo de profesionales",
+      "Blog, e-learning y solicitud de consultas siempre a un clic"
+    ],
+    "dark": false,
+    "desktopImage": "@it",
+    "desktopAlt": "Página de inicio de la web de Proj.System, estudio de ingeniería y arquitectura",
+    "mobileImage": "@it",
+    "mobileAlt": "Web de Proj.System en el móvil",
+    "longImage": "@it",
+    "longAlt": "Página de inicio completa de la web de Proj.System"
+  },
+  "hero": {
+    "eyebrow": "Caso de éxito",
+    "intro": "La web de un estudio técnico con una oferta muy amplia, organizada para que cada cliente encuentre enseguida el servicio que necesita.",
+    "tags": [
+      "Web corporativa",
+      "Ingeniería y seguridad",
+      "WordPress"
+    ],
+    "ctaLabel": "Quiero un proyecto parecido",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "details": [
+      {
+        "label": "Cliente",
+        "value": "Proj.System"
+      },
+      {
+        "label": "Sector",
+        "value": "Ingeniería, seguridad y formación"
+      },
+      {
+        "label": "Ubicación",
+        "value": "Porcia (Pordenone), Friuli Venezia Giulia, Italia"
+      },
+      {
+        "label": "Tipo de proyecto",
+        "value": "Web corporativa"
+      },
+      {
+        "label": "Tecnología",
+        "value": "WordPress"
+      }
+    ]
+  },
+  "client": {
+    "eyebrow": "El cliente",
+    "title": "Quién es Proj.System",
+    "text": "Proj.System es un estudio técnico fundado en Porcia (Italia) en 2001. Ingenieros, arquitectos, aparejadores, peritos industriales y técnicos de prevención se ocupan de proyectos, seguridad en obra y en el trabajo, análisis instrumentales, consultoría técnica y formación.\n",
+    "challengeLabel": "El reto",
+    "challengeText": "Una oferta muy amplia, dirigida a públicos distintos: empresas, administraciones, particulares y alumnos de cursos. El riesgo era una web confusa, donde quien busca un solo servicio se pierde entre las páginas.",
+    "challengePoints": [
+      "Cuatro áreas de servicio muy distintas",
+      "Un equipo de profesionales numeroso que dar a conocer",
+      "Cursos y formación que promocionar y actualizar a menudo"
+    ]
+  },
+  "solution": {
+    "eyebrow": "La solución",
+    "title": "Qué he hecho",
+    "text": "Primero la estructura, luego el diseño: cada decisión parte de quién usará la web y qué necesita encontrar.\n",
+    "items": [
+      {
+        "icon": "grid",
+        "title": "Servicios en cuatro áreas",
+        "text": "Ingeniería y arquitectura, Seguridad, Análisis instrumentales, Formación: cada visitante va directo al área que le interesa."
+      },
+      {
+        "icon": "users",
+        "title": "El equipo en primer plano",
+        "text": "Una página dedicada a los profesionales, con funciones y especialidades: la confianza empieza por las personas."
+      },
+      {
+        "icon": "chat",
+        "title": "Consultas siempre a la vista",
+        "text": "El botón para contactar con el estudio está en todas las páginas, también en el móvil."
+      },
+      {
+        "icon": "book-open",
+        "title": "Blog y e-learning",
+        "text": "Noticias, artículos y una sección de formación online, todo fácil de actualizar internamente."
+      }
+    ]
+  },
+  "showcase": {
+    "eyebrow": "La web",
+    "title": "El resultado, en cualquier pantalla",
+    "text": "Pasa el ratón por la página para desplazarla.\n",
+    "scrollLabel": "Vista previa desplazable de la página de inicio de Proj.System",
+    "mobileCaption": "Versión móvil"
+  },
+  "results": {
+    "eyebrow": "Antes y después",
+    "title": "Qué ha cambiado",
+    "beforeLabel": "Antes",
+    "before": [
+      "Por completar: cómo era la web o el punto de partida",
+      "Por completar: el problema principal"
+    ],
+    "afterLabel": "Después",
+    "after": [
+      "Servicios en cuatro áreas",
+      "El equipo en primer plano",
+      "Consultas siempre a la vista",
+      "Blog y e-learning"
+    ],
+    "kpis": [
+      {
+        "label": "Resultado 1",
+        "value": "—",
+        "note": "p. ej. solicitudes al mes"
+      },
+      {
+        "label": "Resultado 2",
+        "value": "—",
+        "note": "p. ej. visitas desde Google"
+      },
+      {
+        "label": "Resultado 3",
+        "value": "—",
+        "note": "p. ej. nota de Lighthouse"
+      }
+    ]
+  },
+  "cta": {
+    "title": "El próximo caso de éxito puede ser el tuyo",
+    "text": "Cuéntame tu negocio en la llamada gratuita de 25 minutos: te diré cómo lo haría, cuánto tardaría y con qué precio cerrado.",
+    "ctaLabel": "Reserva tu llamada gratis",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "contact": {
+    "title": "¿Quieres una web así?",
+    "formTitle": "Pide tu presupuesto gratis",
+    "topics": [
+      "nuovo-sito"
+    ]
+  },
+  "seo": {
+    "title": "Proj.System: web para un estudio de ingeniería | bortolin.dev",
+    "description": "Cómo creé la web de Proj.System, estudio de ingeniería, arquitectura y seguridad laboral en Porcia (Italia): el reto, la solución y los resultados.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "projsystem"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "Tu web nueva, con {% verde %}3 meses de SEO incluidos{% /verde %}",
+  "offer": {
+    "eyebrow": "Oferta de lanzamiento",
+    "deadlineLabel": "Válida hasta el 31 de enero de 2027",
+    "title": "Tu web nueva, con {% verde %}3 meses de SEO incluidos{% /verde %}",
+    "text": "Confirma tu web nueva antes del 31 de enero de 2027: después de publicarla sigo trabajando en tu visibilidad en Google, sin coste extra.",
+    "items": [
+      {
+        "title": "3 meses de SEO",
+        "text": "de optimización tras la publicación"
+      },
+      {
+        "title": "Migración segura",
+        "text": "sin perder posiciones"
+      },
+      {
+        "title": "Garantía Lighthouse",
+        "text": "mínimo 90, o lo corrijo gratis"
+      }
+    ],
+    "ctaLabel": "Pide tu presupuesto",
+    "ctaLink": {
+      "discriminant": "#contatti",
+      "value": null
+    },
+    "note": "Llamada inicial gratuita de 25 minutos",
+    "image": "@it",
+    "boxEyebrow": "Incluido en la oferta",
+    "boxValue": "3 meses",
+    "boxOldValue": "",
+    "boxText": "de optimización SEO tras la publicación",
+    "stamp": "hasta el\n31 ene"
+  },
+  "menu": {
+    "megaTitle": "Web nueva + 3 meses de SEO incluidos",
+    "megaText": "Si confirmas tu web antes del 31 de enero de 2027:",
+    "megaItems": [
+      "3 meses de optimización SEO tras la publicación",
+      "Migración sin perder posiciones en Google",
+      "Garantía Lighthouse: mínimo 90 en las 4 notas, o lo corrijo gratis"
+    ],
+    "mobileText": "si confirmas antes del 31 de enero de 2027",
+    "cardText": "Si confirmas antes de febrero, con migración SEO y garantía Lighthouse."
+  },
+  "original": "nuovo-sito-3-mesi-seo"
+}

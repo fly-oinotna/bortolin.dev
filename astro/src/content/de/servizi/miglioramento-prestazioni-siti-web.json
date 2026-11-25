@@ -1,0 +1,321 @@
+{
+  "hero": {
+    "breadcrumb": "Performance-Optimierung",
+    "eyebrow": "Für bestehende Websites",
+    "title": "Ihre Website ist langsam? Ich mache sie schnell, ohne Neubau",
+    "text": "Ich analysiere Ihre bestehende Website, finde, was sie ausbremst, und behebe es: **Core Web Vitals innerhalb der Google-Grenzwerte**, grüne Lighthouse-Werte und Besucher, die nicht mehr abspringen. Alles ohne Fachchinesisch erklärt.\n",
+    "ctaLabel": "",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "",
+    "linkLink": {
+      "discriminant": "#contatti"
+    },
+    "highlights": [],
+    "formPlaceholder": "www.ihre-website.de",
+    "formButton": "Jetzt analysieren",
+    "formNote": "Es öffnet sich PageSpeed Insights, das offizielle Tool von Google. Danach [schicken Sie mir das Ergebnis](#contatti).\n",
+    "reportDevice": "ihre-website.de · mobil",
+    "reportBadge": "Beispiel",
+    "beforeTitle": "Vorher",
+    "beforeLabel": "Beispielwerte vor der Optimierung",
+    "before": [
+      {
+        "label": "Leistung",
+        "value": 38
+      },
+      {
+        "label": "Barrierefreiheit",
+        "value": 81
+      },
+      {
+        "label": "Best Practices",
+        "value": 74
+      },
+      {
+        "label": "SEO",
+        "value": 85
+      }
+    ],
+    "afterTitle": "Nach der Optimierung",
+    "afterLabel": "Ziel nach der Optimierung: 100 in allen Kategorien",
+    "after": [
+      {
+        "label": "Leistung",
+        "value": 100
+      },
+      {
+        "label": "Barrierefreiheit",
+        "value": 100
+      },
+      {
+        "label": "Best Practices",
+        "value": 100
+      },
+      {
+        "label": "SEO",
+        "value": 100
+      }
+    ],
+    "reportCaption": "Beispielhafte Lighthouse-Werte vor und nach einer Optimierung."
+  },
+  "costs": {
+    "eyebrow": "Warum das wichtig ist",
+    "title": "Eine langsame Website kostet Sie Geld, jeden Tag",
+    "text": "Es steht auf keiner Rechnung, aber Sie merken es an den Ergebnissen. Hier verlieren Sie, ohne es zu bemerken.\n",
+    "items": [
+      {
+        "value": ">50 %",
+        "title": "Besucher, die abspringen",
+        "text": "Laut Google wird mehr als die Hälfte der mobilen Besuche abgebrochen, wenn eine Seite länger als 3 Sekunden lädt."
+      },
+      {
+        "value": "SEO",
+        "title": "Verlorene Positionen bei Google",
+        "text": "Die Core Web Vitals gehören zu den Signalen, mit denen Google das Nutzererlebnis einer Seite bewertet. Bei gleichem Inhalt ist die schnellere Website im Vorteil."
+      },
+      {
+        "value": "€€€",
+        "title": "Teurere Anzeigen",
+        "text": "Jeder bezahlte Klick, der auf einer langsamen Seite landet, kann verpuffen. Und auch Google Ads berücksichtigt die Nutzererfahrung auf der Zielseite."
+      }
+    ]
+  },
+  "selfcheck": {
+    "eyebrow": "Selbsttest",
+    "title": "Braucht Ihre Website ein Tuning?",
+    "text": "Kreuzen Sie die Symptome an, die Sie kennen. Dauert 30 Sekunden, und es werden keine Daten gesendet: Alles bleibt in Ihrem Browser.\n",
+    "image": "@it",
+    "imageAlt": "Illustration einer Website mit Lighthouse-Werten von 100 und grünen Core Web Vitals",
+    "question": "Was kommt Ihnen bekannt vor?",
+    "symptoms": [
+      "Auf dem Smartphone braucht die Website länger als 3 Sekunden",
+      "Beim Laden „springen“ Texte und Buttons",
+      "Lighthouse oder PageSpeed zeigen rote oder orange Werte",
+      "Die Search Console meldet URLs als „schlecht“ oder „Optimierung erforderlich“",
+      "Die Website nutzt einen Page Builder oder viele Plugins",
+      "Werbekampagnen kosten mehr als geplant"
+    ],
+    "msg0": "Kreuzen Sie die Symptome an, die Sie kennen, und ich sage Ihnen meine Einschätzung.",
+    "msg1": "{n} von {tot} Symptomen: Da ist Luft nach oben. Ein Check zeigt, wie viel und wo.",
+    "msg2": "{n} von {tot} Symptomen: Ihre Website verliert Kunden. Zeit zu handeln.",
+    "ctaLabel": "Speed-Check buchen",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "vitals": {
+    "eyebrow": "Core Web Vitals",
+    "title": "Was passiert, wenn jemand Ihre Website öffnet",
+    "text": "Google misst drei Momente im Erlebnis Ihrer echten Besucher. Hier sind sie, Bild für Bild.\n",
+    "lcpTitle": "LCP · wann der Hauptinhalt erscheint",
+    "lcpGood": "Gut: unter 2,5 s",
+    "lcpFramesLabel": "Ladebeispiel einer schnellen Seite",
+    "lcpFrames": [
+      {
+        "time": "0,0 s",
+        "label": ""
+      },
+      {
+        "time": "0,4 s",
+        "label": "Erster Inhalt"
+      },
+      {
+        "time": "0,8 s",
+        "label": ""
+      },
+      {
+        "time": "1,4 s",
+        "label": "LCP"
+      },
+      {
+        "time": "1,8 s",
+        "label": "Fertig"
+      }
+    ],
+    "lcpCaption": "Beispiel einer schnellen Seite: Der Hauptinhalt (das grüne Bild) erscheint nach 1,4 Sekunden.",
+    "inpTitle": "INP · Reaktionsfähigkeit",
+    "inpGood": "Gut: unter 200 ms",
+    "inpText": "Die Zeit zwischen einem Tippen und der Reaktion der Seite. Ist sie lang, tippt der Besucher doppelt, wird ungeduldig und hält die Website für kaputt.",
+    "inpValue": "80 ms",
+    "clsTitle": "CLS · Stabilität",
+    "clsGood": "Gut: unter 0,1",
+    "clsText": "Wie sehr sich die Seite beim Laden „bewegt“. Sie wollen gerade auf einen Link tippen, und plötzlich schiebt ein Banner ihn nach unten? Genau das.",
+    "clsBad": "Instabil",
+    "clsOk": "Stabil"
+  },
+  "optimize": {
+    "eyebrow": "Was ich optimiere",
+    "title": "Wo sich die Langsamkeit versteckt (und wie ich sie beseitige)",
+    "text": "Jede Website ist anders: Ich setze nur dort an, wo es nötig ist, und beginne mit dem, was am meisten bremst.\n",
+    "platformsLabel": "Plattformen, mit denen ich arbeite",
+    "platforms": [
+      "WordPress",
+      "WooCommerce",
+      "Shopify",
+      "Next.js · React",
+      "Individuelle Websites"
+    ],
+    "items": [
+      {
+        "icon": "image",
+        "title": "Bilder und Video",
+        "text": "Moderne Formate (WebP, AVIF), die richtige Größe für jeden Bildschirm, erst geladen, wenn sie gebraucht werden."
+      },
+      {
+        "icon": "code",
+        "title": "CSS- und JavaScript-Code",
+        "text": "Ich entferne Überflüssiges, verschiebe, was warten kann, und verschlanke den Rest."
+      },
+      {
+        "icon": "font",
+        "title": "Schriften",
+        "text": "Auf Ihrem eigenen Server und ohne Texte, die beim Öffnen der Seite „springen“."
+      },
+      {
+        "icon": "server",
+        "title": "Server, Cache und CDN",
+        "text": "Passendes Hosting, sauber konfigurierter Cache, Komprimierung und Inhalte nah bei Ihren Besuchern."
+      },
+      {
+        "icon": "globe",
+        "title": "Drittanbieter-Skripte",
+        "text": "Chats, Karten, Videos, Pixel und Cookie-Banner: Ich lade sie so, dass sie die Seite nicht blockieren."
+      },
+      {
+        "icon": "wordpress",
+        "title": "WordPress und Plugins",
+        "text": "Schwere Page Builder, unnötige Plugins, überladene Datenbank: Ich räume auf, ohne etwas kaputt zu machen."
+      }
+    ]
+  },
+  "proof": {
+    "eyebrow": "Der Beweis",
+    "title": "Glauben Sie mir nicht: Testen Sie diese Website",
+    "text": "Die Website, die Sie gerade sehen, ist mit derselben Methode gebaut, die ich bei Ihrer anwende. Öffnen Sie sie in PageSpeed Insights und sehen Sie sich die Zahlen selbst an.\n",
+    "ctaLabel": "bortolin.dev analysieren",
+    "ctaLink": {
+      "discriminant": "custom",
+      "value": "https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fbortolin.dev%2F"
+    },
+    "ctaNewTab": true,
+    "boxTitle": "bortolin.dev · Ziel auf jeder Seite",
+    "scoresLabel": "Ziel: 100 von 100 in allen Kategorien",
+    "scores": [
+      {
+        "label": "Leistung",
+        "value": 100
+      },
+      {
+        "label": "Barrierefreiheit",
+        "value": 100
+      },
+      {
+        "label": "Best Practices",
+        "value": 100
+      },
+      {
+        "label": "SEO",
+        "value": 100
+      }
+    ]
+  },
+  "steps": {
+    "eyebrow": "So arbeite ich",
+    "title": "Messen, beheben, belegen",
+    "text": "Jede Verbesserung wird vorher und nachher gemessen: Am Ende wissen Sie genau, wofür Sie bezahlt und was Sie bekommen haben.\n",
+    "items": [
+      {
+        "title": "Messung",
+        "text": "Lighthouse, echte Nutzerdaten von Google (Search Console und CrUX) und Analyse Seite für Seite."
+      },
+      {
+        "title": "Diagnose",
+        "text": "Sie bekommen die Liste der Probleme mit Wirkung und geschätzten Kosten, sortiert nach Nutzen."
+      },
+      {
+        "title": "Korrekturen",
+        "text": "Ich arbeite an einer Kopie der Website und spiele die Änderungen danach ohne Ausfall ein."
+      },
+      {
+        "title": "Kontrolle",
+        "text": "Vorher-nachher-Vergleich und auf Wunsch ein monatliches Monitoring, damit die Website schnell bleibt."
+      }
+    ],
+    "boxTitle": "Sie wissen nicht, wo Sie anfangen sollen?",
+    "boxText": "Starten Sie mit dem Check: In wenigen Tagen wissen Sie, was Ihre Website ausbremst und was die Behebung kostet.",
+    "boxCtaLabel": "Speed-Check buchen",
+    "boxCtaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "offer": {
+    "show": true,
+    "item": "check-up-velocita"
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "title": "Fragen zur Performance",
+    "text": "Ihre Frage ist nicht dabei? [Schreiben Sie mir](#contatti), ich antworte innerhalb eines Werktags.\n",
+    "items": [
+      {
+        "question": "Muss ich die Website neu bauen, damit sie schnell wird?",
+        "answer": "Fast nie. In den allermeisten Fällen kommen die großen Verbesserungen durch Arbeit an der bestehenden Website: Bilder, Skripte, Cache, Plugins. Hat die Website strukturelle Grenzen, sage ich es Ihnen sofort, mit den Alternativen.\n"
+      },
+      {
+        "question": "Erreiche ich 100 in Lighthouse?",
+        "answer": "Das hängt von der Website ab: Theme, Plugins und externe Dienste setzen manchmal Grenzen. Im Check sage ich Ihnen realistisch, wie weit wir kommen, bevor Sie irgendetwas entscheiden.\n"
+      },
+      {
+        "question": "Können die Änderungen etwas kaputt machen?",
+        "answer": "Ich arbeite an einer Kopie der Website und prüfe jede Seite vor der Veröffentlichung. Ich erstelle immer ein vollständiges Backup, sodass wir jederzeit zurückkönnen.\n"
+      },
+      {
+        "question": "Wie lange dauert es?",
+        "answer": "Der Check dauert wenige Werktage. Die Korrekturen hängen davon ab, was er ergibt: Im Angebot stehen Zeitrahmen und Kosten, zum Festpreis.\n"
+      },
+      {
+        "question": "Wann sehe ich Ergebnisse bei Google?",
+        "answer": "Lighthouse verbessert sich sofort. Die Daten echter Besucher, die Google für die Core Web Vitals nutzt, aktualisieren sich in etwa 28 Tagen.\n"
+      },
+      {
+        "question": "Bleibt die Website auf Dauer schnell?",
+        "answer": "Neue Plugins, unoptimiert hochgeladene Bilder und nachträglich eingebaute Skripte können sie wieder bremsen. Deshalb biete ich auch ein monatliches Monitoring an und gebe Ihnen ein paar einfache Regeln mit.\n"
+      }
+    ],
+    "ctaLabel": "Speed-Check buchen",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "performance"
+    ],
+    "title": "Die Ladezeit Ihrer Website verstehen",
+    "text": "Core Web Vitals, Lighthouse und die häufigsten Ursachen einer langsamen Website, einfach erklärt.\n",
+    "buttonLabel": "Alle Artikel"
+  },
+  "contact": {
+    "title": "Machen wir Ihre Website schnell",
+    "formTitle": "Speed-Check oder Angebot anfordern",
+    "topics": [
+      "performance"
+    ]
+  },
+  "seo": {
+    "slug": "website-performance-optimierung",
+    "title": "Website-Performance und Core Web Vitals optimieren | bortolin.dev",
+    "description": "Ich mache Ihre bestehende Website schnell: Core Web Vitals in den Google-Grenzwerten und grüne Lighthouse-Werte, ohne Neubau. Check und Vorher/nachher.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

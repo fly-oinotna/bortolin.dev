@@ -1,0 +1,13 @@
+# Netlify: il sito Astro sta nella cartella "astro".
+# I redirect NON vanno scritti qui: si gestiscono da Keystatic → Redirect e finiscono nel file _redirects generato a ogni build.
+[build]
+  base = "astro"
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# cache delle recensioni Google tra un deploy e l'altro (aggiornamento al massimo settimanale)
+[[plugins]]
+  package = "./netlify/plugins/places-cache"

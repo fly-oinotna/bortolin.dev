@@ -1,0 +1,13 @@
+---
+// Telefono, WhatsApp, e-mail: stesse card nel blocco contatti e nel footer
+import Icon from '../ui/Icon.astro';
+import type { Globals } from '../../lib/content';
+interface Props { settings: Globals['settings']; tone?: 'white' | 'gray'; class?: string }
+const { settings: s, tone = 'white', class: cls = 'space-y-3' } = Astro.props;
+const card = ['flex items-center gap-3 rounded-2xl p-4 font-semibold text-black transition-colors hover:bg-bd-green', tone === 'white' ? 'bg-white' : 'bg-gray-100'];
+---
+<ul class={cls}>
+  <li><a class:list={card} href={`tel:${s.contacts.phoneHref}`}><Icon name="phone" size={22} />{s.contacts.phone}</a></li>
+  <li><a class:list={card} href={s.contacts.whatsapp} target="_blank" rel="noopener"><Icon name="whatsapp" size={22} viewBox="-1.5 -1.5 27 27" />{s.contacts.whatsappLabel}</a></li>
+  <li><a class:list={card} href={`mailto:${s.contacts.email}`}><Icon name="mail" size={22} />{s.contacts.email}</a></li>
+</ul>

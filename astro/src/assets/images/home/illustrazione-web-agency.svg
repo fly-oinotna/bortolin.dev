@@ -1,0 +1,41 @@
+<svg width="600" height="420" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 420" fill="none" font-family="ui-monospace, Menlo, Consolas, monospace">
+  <circle cx="300" cy="210" r="150" fill="#99EA48" opacity=".18"/>
+
+  <!-- design frame -->
+  <rect x="30" y="60" width="230" height="280" rx="22" fill="#fff" stroke="#000" stroke-width="3"/>
+  <rect x="54" y="84" width="182" height="90" rx="14" fill="#e5e7eb"/>
+  <circle cx="92" cy="122" r="18" fill="#99EA48" stroke="#000" stroke-width="2.5"/>
+  <path d="M118 160l34-38 26 26 18-16 30 28" stroke="#000" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"/>
+  <rect x="54" y="194" width="140" height="14" rx="7" fill="#000"/>
+  <rect x="54" y="218" width="182" height="8" rx="4" fill="#d1d5db"/>
+  <rect x="54" y="234" width="160" height="8" rx="4" fill="#d1d5db"/>
+  <rect x="54" y="270" width="96" height="36" rx="18" fill="#99EA48" stroke="#000" stroke-width="2.5"/>
+  <!-- selection handles -->
+  <rect x="48" y="188" width="152" height="26" stroke="#3b82f6" stroke-width="2" stroke-dasharray="4 4"/>
+  <rect x="44" y="184" width="8" height="8" fill="#fff" stroke="#3b82f6" stroke-width="2"/>
+  <rect x="196" y="210" width="8" height="8" fill="#fff" stroke="#3b82f6" stroke-width="2"/>
+
+  <!-- arrow -->
+  <circle cx="300" cy="200" r="34" fill="#000"/>
+  <path d="M284 200h30m-11-12l12 12-12 12" stroke="#99EA48" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- code window -->
+  <rect x="340" y="60" width="230" height="280" rx="22" fill="#000"/>
+  <circle cx="366" cy="84" r="6" fill="#ff5f57"/>
+  <circle cx="384" cy="84" r="6" fill="#febc2e"/>
+  <circle cx="402" cy="84" r="6" fill="#28c840"/>
+  <g font-size="15" font-weight="700">
+    <text x="362" y="130" fill="#99EA48">&lt;/&gt;</text>
+  </g>
+  <rect x="362" y="148" width="90" height="9" rx="4.5" fill="#99EA48"/>
+  <rect x="460" y="148" width="60" height="9" rx="4.5" fill="#525252"/>
+  <rect x="380" y="170" width="120" height="9" rx="4.5" fill="#d4d4d4"/>
+  <rect x="380" y="192" width="80" height="9" rx="4.5" fill="#99EA48"/>
+  <rect x="468" y="192" width="70" height="9" rx="4.5" fill="#525252"/>
+  <rect x="398" y="214" width="110" height="9" rx="4.5" fill="#d4d4d4"/>
+  <rect x="380" y="236" width="70" height="9" rx="4.5" fill="#525252"/>
+  <rect x="362" y="258" width="50" height="9" rx="4.5" fill="#99EA48"/>
+  <!-- check badge -->
+  <circle cx="540" cy="316" r="36" fill="#99EA48" stroke="#000" stroke-width="3"/>
+  <path d="M524 316l11 11 21-22" stroke="#000" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

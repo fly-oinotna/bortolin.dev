@@ -1,0 +1,185 @@
+{
+  "hero": {
+    "breadcrumb": "Blog",
+    "eyebrow": "El blog de bortolin.dev",
+    "title": "Ideas claras sobre la {% verde %}web{% /verde %}, explicadas fácil\n",
+    "text": "SEO, velocidad, inteligencia artificial, campañas y digitalización: guías prácticas para quien tiene un negocio y quiere entender, no solo delegar.\n",
+    "searchLabel": "Buscar en los artículos",
+    "searchPlaceholder": "Busca un tema, p. ej. «Google»",
+    "featuredLabel": "Destacado",
+    "featured": null,
+    "readingLabel": "de lectura"
+  },
+  "list": {
+    "filterLabel": "Filtrar por categoría",
+    "allLabel": "Todos",
+    "countOne": "1 artículo",
+    "countMany": "{n} artículos",
+    "emptyTitle": "No hay artículos",
+    "emptyText": "Prueba con otra palabra o mira todas las categorías.",
+    "emptyButton": "Ver todos los artículos",
+    "extraAfter": 6,
+    "extraEyebrow": "¿Tienes una pregunta?",
+    "extraTitle": "Si un artículo no basta, pregúntame.",
+    "extraText": "Llamada gratuita de 25 minutos: te respondo sin tecnicismos y sin compromiso.",
+    "extraCtaLabel": "Reserva la llamada",
+    "extraCtaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "help": {
+    "eyebrow": "¿No encuentras lo que buscas?",
+    "title": "Cada negocio tiene sus propias preguntas. Escríbeme la tuya",
+    "text": "Si hay un tema que te interesa, escríbeme: puede convertirse en el próximo artículo. O reserva una llamada gratuita de 25 minutos y lo hablamos directamente.",
+    "ctaLabel": "Reserva la llamada",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Ver los servicios",
+    "linkLink": {
+      "discriminant": "/servizi/"
+    },
+    "topicsTitle": "Temas"
+  },
+  "post": {
+    "tocTitle": "En este artículo",
+    "sideText": "Llamada gratuita de 25 minutos, sin compromiso.",
+    "sideButton": "Reserva la llamada",
+    "ctaButton": "Hablemos",
+    "ctaLabel": "Llamada a la acción",
+    "authorLabel": "Escrito por",
+    "authorName": "Antonio Bortolin",
+    "authorRole": "Diseñador web y consultor SEO",
+    "authorBio": "Diseñador web, desarrollador y consultor SEO con más de 15 años de experiencia. Ayudo a empresas y profesionales a crecer en internet, en Italia y en el extranjero, explicándolo todo de forma sencilla.",
+    "authorImage": "@it",
+    "authorAlt": "Antonio Bortolin",
+    "authorPageLabel": "Sobre mí",
+    "authorPageLink": {
+      "discriminant": "custom",
+      "value": "/#chi-sono"
+    },
+    "bannerLabel": "El servicio relacionado",
+    "bannerSuffix": " Precio cerrado, un único interlocutor y todo explicado de forma sencilla.",
+    "bannerButton": "Ver el servicio",
+    "bannerCallLabel": "Reserva la llamada",
+    "bannerCallLink": {
+      "discriminant": "#contatti"
+    },
+    "relatedTitle": "Sigue leyendo",
+    "relatedAll": "Todos los artículos",
+    "contactTitle": "¿Tienes dudas sobre este tema?"
+  },
+  "categories": {
+    "items": [
+      {
+        "category": "seo",
+        "service": "Consultoría SEO",
+        "link": {
+          "discriminant": "/servizi/consulenza-seo/"
+        },
+        "text": "Analizo tu web y tu presencia en Google y te digo qué hacer primero.",
+        "offer": "audit-seo",
+        "cta1Title": "¿Quieres más clientes desde Google?",
+        "cta1Text": "Analizo tu web y te digo, sin tecnicismos, qué hacer primero.",
+        "cta2Title": "¿No sabes por dónde empezar con el SEO?",
+        "cta2Text": "En 25 minutos de llamada gratuita te marco las prioridades para tu negocio."
+      },
+      {
+        "category": "performance",
+        "service": "Optimización de velocidad",
+        "link": {
+          "discriminant": "/servizi/miglioramento-prestazioni-siti-web/"
+        },
+        "text": "La mido con Lighthouse y la hago rápida, sin rehacerla.",
+        "offer": "check-up-velocita",
+        "cta1Title": "¿Tu web va lenta?",
+        "cta1Text": "La mido con Lighthouse y la hago rápida, sin rehacerla.",
+        "cta2Title": "¿Core Web Vitals en rojo?",
+        "cta2Text": "Te digo qué las frena y cuánto cuesta arreglarlas, con precio cerrado."
+      },
+      {
+        "category": "ai",
+        "service": "Integración de IA",
+        "link": {
+          "discriminant": "/servizi/integrazione-ai/"
+        },
+        "text": "Partimos de un caso concreto y medimos el tiempo ahorrado.",
+        "offer": "seo-con-ai",
+        "cta1Title": "¿Quieres usar la IA en tu negocio?",
+        "cta1Text": "Partimos de un caso concreto y medimos el tiempo ahorrado.",
+        "cta2Title": "La IA en tu web, también en la que ya tienes",
+        "cta2Text": "Meta etiquetas, textos y respuestas a clientes con un clic: veamos qué se puede hacer."
+      },
+      {
+        "category": "siti-web",
+        "service": "Páginas web completas",
+        "link": {
+          "discriminant": "/servizi/siti-web/"
+        },
+        "text": "Diseño, textos, SEO y velocidad incluidos, con precio cerrado.",
+        "offer": "nuovo-sito-3-mesi-seo",
+        "cta1Title": "¿Estás pensando en una web nueva?",
+        "cta1Text": "Diseño, textos, SEO y velocidad incluidos, con precio cerrado.",
+        "cta2Title": "¿Quieres un presupuesto claro, sin sorpresas?",
+        "cta2Text": "Te digo qué necesitas de verdad y cuánto cuesta, antes de empezar."
+      },
+      {
+        "category": "advertising",
+        "service": "Google Ads y Meta Ads",
+        "link": {
+          "discriminant": "/servizi/google-ads/"
+        },
+        "text": "Campañas con tarifa cerrada, optimizadas para solicitudes y ventas.",
+        "offer": null,
+        "cta1Title": "¿Quieres más contactos, ya?",
+        "cta1Text": "Campañas con tarifa cerrada, optimizadas para solicitudes y ventas.",
+        "cta2Title": "¿Tus campañas rinden de verdad?",
+        "cta2Text": "Analizo la cuenta y la medición y te digo dónde estás malgastando presupuesto."
+      },
+      {
+        "category": "digitalizzazione",
+        "service": "Consultoría digital",
+        "link": {
+          "discriminant": "/servizi/consulenza-digitale/"
+        },
+        "text": "Vemos juntos qué se puede automatizar en tu empresa.",
+        "offer": null,
+        "cta1Title": "¿Pierdes demasiado tiempo en la oficina?",
+        "cta1Text": "Vemos juntos qué se puede automatizar en tu empresa.",
+        "cta2Title": "¿Por dónde empezar a digitalizarte?",
+        "cta2Text": "Partimos de los objetivos y de un proceso cada vez, midiendo el tiempo ahorrado."
+      },
+      {
+        "category": "dati",
+        "service": "Consultoría digital",
+        "link": {
+          "discriminant": "/servizi/consulenza-digitale/"
+        },
+        "text": "Reviso la medición, Analytics y el consentimiento de cookies.",
+        "offer": null,
+        "cta1Title": "¿Sabes de verdad de dónde vienen tus clientes?",
+        "cta1Text": "Reviso la medición, Analytics y el consentimiento de cookies.",
+        "cta2Title": "¿Los datos de Analytics no cuadran?",
+        "cta2Text": "Reviso la configuración y te explico qué merece la pena medir."
+      }
+    ]
+  },
+  "contact": {
+    "title": "¿Ya has leído bastante? Hablemos",
+    "formTitle": "Pide tu presupuesto gratis",
+    "topics": []
+  },
+  "seo": {
+    "slug": "blog",
+    "title": "Blog sobre SEO, páginas web, IA y marketing | bortolin.dev",
+    "description": "Guías prácticas sobre SEO, velocidad web, inteligencia artificial, Google Ads, Meta Ads y digitalización de pymes, explicadas de forma sencilla.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

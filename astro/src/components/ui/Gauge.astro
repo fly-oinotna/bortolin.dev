@@ -1,0 +1,11 @@
+---
+// Anello Lighthouse animato da main.js (data-gauge) da rosso → arancio → verde
+interface Props { value?: number; dark?: boolean; class?: string }
+const { value = 100, dark = false, class: cls } = Astro.props;
+---
+<span class:list={['gauge relative grid h-14 w-14 shrink-0 place-items-center', cls]} data-gauge={value}><svg
+    aria-hidden="true" class="absolute inset-0 -rotate-90" viewBox="0 0 36 36">
+    <circle cx="18" cy="18" r="15.5" fill="none" stroke-width="3.5" class={dark ? 'stroke-white/15' : 'stroke-gray-200'} />
+    <circle data-gauge-arc cx="18" cy="18" r="15.5" fill="none" stroke="#99EA48" stroke-width="3.5"
+      stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset={100 - value} />
+  </svg><span data-gauge-value class:list={['relative text-[15px] font-bold tabular-nums tracking-tight', dark ? 'text-white' : 'text-black']}>{value}</span></span>

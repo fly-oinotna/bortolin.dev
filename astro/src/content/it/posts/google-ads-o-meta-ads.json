@@ -1,0 +1,25 @@
+{
+  "title": "Google Ads o Meta Ads: quale scegliere per la tua attività",
+  "content": {
+    "date": "2026-10-23",
+    "category": "advertising",
+    "image": "/src/assets/images/blog/google-ads-o-meta-ads.webp",
+    "imageAlt": "Smartphone che mostra un feed di post sui social media",
+    "excerpt": "Uno intercetta chi ti sta già cercando, l’altro ti fa scoprire da chi ancora non ti conosce. Come capire da dove partire, con esempi da Veneto e Friuli.",
+    "lead": "Google Ads e Meta Ads (Facebook e Instagram) sono i due canali pubblicitari più usati dalle piccole e medie imprese. Non sono in concorrenza: fanno cose diverse. Capire la differenza ti evita di spendere nel posto sbagliato.",
+    "text": "## La differenza in una frase\n\n**Google Ads intercetta chi ti sta già cercando.** **Meta Ads ti fa scoprire da chi ancora non ti conosce.** Sul primo rispondi a una domanda; sul secondo crei un interesse mentre le persone scorrono il feed.\n\n## Quando conviene Google Ads\n\nGoogle Ads funziona bene quando le persone cercano attivamente ciò che offri: “elettricista urgente Udine”, “noleggio furgoni Treviso”, “scarpe da trekking impermeabili”. In questi casi la domanda c’è già, devi solo farti trovare nel momento giusto.\n\n- servizi con urgenza o bisogno chiaro;\n- attività locali con ricerche “vicino a me”;\n- e-commerce con prodotti cercati per nome o caratteristica.\n\n## Quando conviene Meta Ads\n\nMeta Ads è più adatto quando il bisogno non è ancora espresso, ma il prodotto si presta a essere “visto”: ristoranti, palestre, eventi, prodotti con un forte impatto visivo, offerte stagionali.\n\n- prodotti o servizi che si vendono con immagini e video;\n- promozioni a tempo e lanci;\n- raccolta di contatti con moduli direttamente su Facebook e Instagram.\n\n## Qualche esempio dal Nord-Est\n\nUn **idraulico di Pordenone** otterrà quasi sempre di più da Google Ads: chi ha una perdita in casa cerca, non scorre Instagram. Una **cantina dei Colli Euganei** può invece usare Meta Ads per far conoscere i suoi vini a chi ama il vino e vive in zona. Un **negozio di bici a Udine** può usarli entrambi: Google per chi cerca “bici elettrica Udine”, Meta per mostrare i nuovi modelli in primavera.\n\n## Quanto budget serve\n\nDipende dal settore, dalla concorrenza e dalla zona. Con Google Ads il costo per clic varia molto tra un settore e l’altro; con Meta Ads si parte spesso con budget più contenuti. In entrambi i casi conviene iniziare con un test, misurare il **costo per contatto** e investire di più solo su ciò che funziona.\n\n## Il punto che nessuno ti dice: il tracciamento\n\nSenza un tracciamento corretto non sai quali annunci portano richieste e vendite, e le piattaforme non possono ottimizzare. Prima di spendere un euro servono: conversioni configurate, Pixel e Conversions API per Meta, consenso cookie gestito correttamente. È la differenza tra fare pubblicità e sperare.\n\n## Come scegliere, in pratica\n\n1. Le persone cercano su Google ciò che offri? Parti da Google Ads.\n2. Il tuo prodotto si vende bene con le immagini? Valuta Meta Ads.\n3. Hai budget per entrambi? Usali insieme: Meta per farti conoscere, Google per farti scegliere.\n4. In ogni caso: tracciamento prima, campagne dopo."
+  },
+  "seo": {
+    "title": "Google Ads o Meta Ads: quale scegliere | bortolin.dev",
+    "description": "Uno intercetta chi ti sta già cercando, l’altro ti fa scoprire da chi ancora non ti conosce. Come capire da dove partire, con esempi da Veneto e Friuli.",
+    "ogImage": "/src/assets/images/social/og-blog-google-ads-o-meta-ads.png",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "markdown": null,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

@@ -1,0 +1,263 @@
+---
+// SERVIZI › PERFORMANCE — contenuti in Keystatic → "Performance" (un gruppo per sezione, SEO in fondo).
+// Sezioni proprie della pagina qui sotto; quelle comuni (recensioni, offerta, FAQ, blog, contatti) da src/components/sections/.
+import Base from '../layouts/Base.astro';
+import Icon from '../components/ui/Icon.astro';
+import Img from '../components/ui/Img.astro';
+import Rich from '../components/ui/Rich.astro';
+import GaugeRow from '../components/ui/GaugeRow.astro';
+import Breadcrumb from '../components/ui/Breadcrumb.astro';
+import SectionHeading from '../components/ui/SectionHeading.astro';
+import Reviews from '../components/sections/Reviews.astro';
+import OfferBand from '../components/sections/OfferBand.astro';
+import Faq from '../components/sections/Faq.astro';
+import BlogTeaser from '../components/sections/BlogTeaser.astro';
+import Contact from '../components/sections/Contact.astro';
+import { read, readGlobals, pageOffer } from '../lib/content';
+import { rich } from '../lib/rich';
+import { href } from '../lib/links';
+import { serviceTrail } from '../lib/pages';
+import { faqSchema } from '../lib/schema';
+import { t } from '../i18n/ui';
+import type { IconName } from '../lib/icons';
+
+interface Props { lang?: string }
+const { lang = 'it' } = Astro.props;
+const g = await readGlobals(lang);
+const p = await read('performance', lang);
+const s = g.settings;
+const ui = t(g.lang);
+const trail = serviceTrail(g, p.hero.breadcrumb || p.hero.title, '/servizi/miglioramento-prestazioni-siti-web/');
+const offer = await pageOffer(g, p.offer);
+
+// numeri delle etichette (01, 02…) in ordine di pagina: spostando una sezione, aggiornare anche qui
+const ORDER = ['costs', 'selfcheck', 'vitals', 'optimize', 'proof', 'steps', 'reviews', 'faq'];
+const n = (key: string) => ORDER.indexOf(key) + 1;
+
+const { hero: h, costs, selfcheck: sc, vitals: v, optimize: op, proof: pr, steps } = p;
+const lastStep = steps.items.length - 1;
+// contenuto disegnato dei 5 fotogrammi dell'LCP (la pagina che si costruisce)
+const FRAME = [
+  '',
+  '<span class="block h-3 rounded bg-black"></span>',
+  '<span class="block h-3 rounded bg-black"></span><span class="mt-2 block h-1.5 w-4/5 rounded bg-gray-300"></span><span class="mt-1 block h-1.5 w-3/5 rounded bg-gray-300"></span>',
+  '<span class="block h-3 rounded bg-black"></span><span class="mt-2 block h-1.5 w-4/5 rounded bg-gray-300"></span><span class="mt-1 block h-1.5 w-3/5 rounded bg-gray-300"></span><span class="mt-2 block h-12 rounded-md bg-bd-green ring-2 ring-black"></span>',
+  '<span class="block h-3 rounded bg-black"></span><span class="mt-2 block h-1.5 w-4/5 rounded bg-gray-300"></span><span class="mt-1 block h-1.5 w-3/5 rounded bg-gray-300"></span><span class="mt-2 block h-12 rounded-md bg-bd-green"></span><span class="mt-2 block h-3 w-1/2 rounded-full bg-black"></span>',
+];
+---
+<Base g={g} seo={p.seo} breadcrumb={trail} schema={{ service: { name: trail[trail.length - 1].name }, faq: faqSchema(p.faq.items) }}>
+
+  <!-- ================================================= HERO (report prima / dopo) -->
+  <section class="overflow-hidden pt-8 pb-20 md:pt-12 md:pb-28">
+    <div class="container">
+      <Breadcrumb items={trail} />
+      <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div>
+          {h.eyebrow && <span class="mb-5 inline-flex rounded-full bg-black px-3 py-1 text-xs font-bold text-bd-green uppercase">{h.eyebrow}</span>}
+          <h1 class="text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">{h.title}</h1>
+          <div class="my-6"><Rich value={h.text} class="text-lg" /></div>
+          <form data-psi-form class="flex max-w-lg flex-col gap-3 sm:flex-row" role="search" aria-label={s.a11y.psiForm}>
+            <label for="psi-hero" class="sr-only">{s.a11y.psiField}</label>
+            <input id="psi-hero" name="url" type="text" inputmode="url" autocomplete="url" placeholder={h.formPlaceholder} required class="w-full rounded-full border-2 border-black bg-white px-5 py-3 text-black placeholder:text-gray-500">
+            <button type="submit" class="btn-secondary shrink-0">{h.formButton}</button>
+          </form>
+          <Rich value={h.formNote} class="mt-3 text-sm text-gray-600" />
+          {(h.ctaLabel || h.linkLabel) && (
+            <div class="mt-6 flex flex-wrap items-center gap-4">
+              {h.ctaLabel && <a href={href(h.ctaLink)} class="btn-secondary">{h.ctaLabel} <Icon name="arrow" size={20} /></a>}
+              {h.linkLabel && <a href={href(h.linkLink)} class="font-medium text-black underline underline-offset-4 hover:no-underline">{h.linkLabel}</a>}
+            </div>
+          )}
+          {h.highlights.length > 0 && (
+            <ul class="mt-8 flex flex-wrap gap-2" aria-label={s.a11y.highlights}>
+              {h.highlights.map((c) => <li class="chip"><Icon name="check" size={16} stroke={3} />{c}</li>)}
+            </ul>
+          )}
+        </div>
+        <figure class="relative mx-auto w-full max-w-xl">
+          <div aria-hidden="true" class="absolute -top-10 -right-14 h-64 w-64 rounded-full bg-bd-green/30"></div>
+          <div class="relative rounded-3xl bg-black p-6 text-white shadow-2xl md:p-8">
+            <div class="flex items-center justify-between gap-4">
+              <span class="flex items-center gap-2 text-sm text-gray-300"><Icon name="smartphone" size={18} />{h.reportDevice}</span>
+              {h.reportBadge && <span class="rounded-full bg-white/10 px-3 py-1 text-xs text-gray-300">{h.reportBadge}</span>}
+            </div>
+            <p class="mt-6 text-xs font-bold text-gray-400 uppercase">{h.beforeTitle}</p>
+            <div class="mt-3"><GaugeRow items={h.before} label={h.beforeLabel} /></div>
+            <div class="my-6 flex items-center gap-3 text-bd-green" aria-hidden="true">
+              <span class="h-px flex-1 bg-white/15"></span><Icon name="arrow-down" size={22} stroke={2.2} /><span class="h-px flex-1 bg-white/15"></span>
+            </div>
+            <p class="text-xs font-bold text-bd-green uppercase">{h.afterTitle}</p>
+            <div class="mt-3"><GaugeRow items={h.after} label={h.afterLabel} /></div>
+          </div>
+          {h.reportCaption && <figcaption class="sr-only">{h.reportCaption}</figcaption>}
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= COSA TI COSTA UN SITO LENTO -->
+  <section class="bg-black py-16 text-white md:py-24">
+    <div class="container">
+      <SectionHeading n={n('costs')} eyebrow={costs.eyebrow} title={costs.title} text={costs.text} dark />
+      <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-6">
+        {costs.items.map((it) => (
+          <article class="rounded-3xl bg-white/10 p-6 md:p-8">
+            <p class="text-5xl font-extrabold text-bd-green">{it.value}</p>
+            <h3 class="mt-4 text-white">{it.title}</h3>
+            <p class="text-sm text-gray-300">{it.text}</p>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= AUTODIAGNOSI -->
+  <section class="py-16 md:py-24">
+    <div class="container grid grid-cols-1 items-start gap-10 lg:grid-cols-2 lg:gap-16">
+      <div>
+        <SectionHeading n={n('selfcheck')} eyebrow={sc.eyebrow} title={sc.title} text={sc.text} class="" />
+        <Img src={sc.image} alt={sc.imageAlt} class="float-soft mx-auto mt-8 hidden w-full max-w-md lg:block" />
+      </div>
+      <div class="rounded-3xl bg-black p-6 text-white md:p-8" data-selfcheck>
+        <fieldset>
+          <legend class="text-lg font-semibold text-white">{sc.question}</legend>
+          <ul class="mt-5 space-y-2">
+            {sc.symptoms.map((sy) => (
+              <li><label class="flex cursor-pointer items-start gap-3 rounded-2xl bg-white/10 p-4 transition-colors hover:bg-white/15 has-[:checked]:bg-white has-[:checked]:text-black"><input type="checkbox" class="mt-0.5 h-5 w-5 shrink-0 accent-black"><span>{sy}</span></label></li>
+            ))}
+          </ul>
+        </fieldset>
+        <div class="mt-6 rounded-2xl bg-white/10 p-5">
+          <div class="h-2 overflow-hidden rounded-full bg-white/15" aria-hidden="true"><span data-selfcheck-bar class="block h-full w-0 rounded-full bg-bd-green transition-all duration-500"></span></div>
+          <p class="mt-4 font-semibold text-white" aria-live="polite" data-selfcheck-result data-msg0={sc.msg0} data-msg1={sc.msg1} data-msg2={sc.msg2}>{sc.msg0}</p>
+          {sc.ctaLabel && <a href={href(sc.ctaLink)} class="btn-primary mt-4">{sc.ctaLabel} <Icon name="arrow" size={20} /></a>}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= COME SI CARICA UNA PAGINA (Core Web Vitals) -->
+  <section class="bg-gray-100 py-16 md:py-24">
+    <div class="container">
+      <SectionHeading n={n('vitals')} eyebrow={v.eyebrow} title={v.title} text={v.text} />
+      <div class="mt-10 rounded-3xl bg-white p-6 md:p-10">
+        <div class="flex flex-wrap items-baseline justify-between gap-2">
+          <h3 class="mb-0">{v.lcpTitle}</h3>
+          <span class="rounded-full bg-bd-green px-3 py-1 text-sm font-bold text-black">{v.lcpGood}</span>
+        </div>
+        <ol class="mt-8 grid grid-cols-5 gap-2 sm:gap-4" aria-label={v.lcpFramesLabel}>
+          {v.lcpFrames.slice(0, 5).map((f, i) => (
+            <li class="text-center">
+              <span class="block aspect-[3/4] overflow-hidden rounded-xl border-2 border-black bg-white p-1.5 text-left sm:aspect-[4/3] sm:p-3" set:html={FRAME[i]} />
+              <span class="mt-2 block text-sm font-semibold text-black tabular-nums">{f.time}</span>
+              {f.label && (i === 3
+                ? <span class="mt-2 inline-block rounded-full bg-black px-2 py-0.5 text-xs font-bold text-bd-green">{f.label}</span>
+                : <span class="mt-2 block text-xs font-bold text-black">{f.label}</span>)}
+            </li>
+          ))}
+        </ol>
+        {v.lcpCaption && <p class="mt-6 text-sm text-gray-600">{v.lcpCaption}</p>}
+      </div>
+      <div class="mt-4 grid grid-cols-1 gap-4 md:grid-cols-2 lg:mt-6 lg:gap-6">
+        <article class="rounded-3xl bg-white p-6 md:p-8">
+          <div class="flex flex-wrap items-baseline justify-between gap-2">
+            <h3 class="mb-0">{v.inpTitle}</h3>
+            <span class="rounded-full bg-bd-green px-3 py-1 text-sm font-bold text-black">{v.inpGood}</span>
+          </div>
+          <p class="mt-3">{v.inpText}</p>
+          <div class="mt-6 flex items-center gap-4" aria-hidden="true">
+            <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-black text-bd-green"><Icon name="tap" size={22} /></span>
+            <span class="h-3 flex-1 overflow-hidden rounded-full bg-gray-100"><span class="block h-full w-1/4 rounded-full bg-bd-green"></span></span>
+            <span class="shrink-0 text-sm font-bold text-black tabular-nums">{v.inpValue}</span>
+          </div>
+        </article>
+        <article class="rounded-3xl bg-white p-6 md:p-8">
+          <div class="flex flex-wrap items-baseline justify-between gap-2">
+            <h3 class="mb-0">{v.clsTitle}</h3>
+            <span class="rounded-full bg-bd-green px-3 py-1 text-sm font-bold text-black">{v.clsGood}</span>
+          </div>
+          <p class="mt-3">{v.clsText}</p>
+          <div class="mt-6 grid grid-cols-2 gap-3 text-xs" aria-hidden="true">
+            <span class="rounded-2xl border-2 border-dashed border-gray-300 p-3"><span class="block font-bold text-[#c2410c]">{v.clsBad}</span><span class="mt-2 block h-2 w-3/4 rounded bg-gray-300"></span><span class="mt-2 block h-6 rounded bg-gray-200"></span><span class="mt-2 block h-4 w-1/2 translate-y-2 rotate-2 rounded-full bg-black"></span></span>
+            <span class="rounded-2xl border-2 border-black p-3"><span class="block font-bold text-black">{v.clsOk}</span><span class="mt-2 block h-2 w-3/4 rounded bg-gray-300"></span><span class="mt-2 block h-6 rounded bg-bd-green"></span><span class="mt-2 block h-4 w-1/2 rounded-full bg-black"></span></span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= COSA OTTIMIZZO -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid grid-cols-1 items-end gap-6 lg:grid-cols-3">
+        <SectionHeading n={n('optimize')} eyebrow={op.eyebrow} title={op.title} text={op.text} class="lg:col-span-2" />
+        {op.platforms.length > 0 && (
+          <ul class="flex flex-wrap gap-2 lg:justify-end" aria-label={op.platformsLabel}>
+            {op.platforms.map((pl) => <li class="chip">{pl}</li>)}
+          </ul>
+        )}
+      </div>
+      <ul class="mt-10 grid grid-cols-1 gap-4 rounded-3xl bg-gray-100 p-4 sm:grid-cols-2 md:p-6 lg:grid-cols-3 lg:gap-6" data-draw>
+        {op.items.map((it, i) => (
+          <li class="group rounded-3xl bg-white p-6 transition-colors duration-300 hover:bg-bd-green" style={`--d:${i * 120}ms`}>
+            <span class="draw-badge grid h-14 w-14 place-items-center rounded-2xl bg-black text-bd-green"><Icon name={it.icon as IconName} size={28} stroke={1.8} draw /></span>
+            <h3 class="mt-5 text-lg">{it.title}</h3>
+            <p class="text-sm group-hover:text-black">{it.text}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================================================= LA PROVA -->
+  <section class="pb-16 md:pb-24">
+    <div class="container">
+      <div class="grid grid-cols-1 items-center gap-10 rounded-3xl bg-bd-green p-6 md:p-10 lg:grid-cols-2 lg:gap-16 lg:p-14">
+        <div>
+          <SectionHeading n={n('proof')} eyebrow={pr.eyebrow} title={pr.title} class="" />
+          <Rich value={pr.text} class="text-black" />
+          {pr.ctaLabel && <a href={href(pr.ctaLink)} {...(pr.ctaNewTab ? { target: '_blank', rel: 'noopener' } : {})} class="btn-secondary mt-6">{pr.ctaLabel} <Icon name="external" size={18} />{pr.ctaNewTab && <span class="sr-only">{ui.newTab}</span>}</a>}
+        </div>
+        <div class="rounded-3xl bg-black p-6 md:p-8">
+          <p class="text-sm font-semibold text-bd-green">{pr.boxTitle}</p>
+          <div class="mt-5"><GaugeRow items={pr.scores} label={pr.scoresLabel} /></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= COME LAVORO -->
+  <section class="bg-gray-100 py-16 md:py-24">
+    <div class="container">
+      <SectionHeading n={n('steps')} eyebrow={steps.eyebrow} title={steps.title} text={steps.text} />
+      <ol class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+        {steps.items.map((st, i) => {
+          const dark = i === lastStep && lastStep > 0;
+          return (
+            <li class:list={['relative rounded-3xl p-6', dark ? 'bg-black text-white' : 'bg-white']}>
+              <span class="grid h-14 w-14 place-items-center rounded-2xl bg-bd-green text-2xl font-extrabold text-black" aria-hidden="true">{i + 1}</span>
+              <h3 class:list={['mt-3', dark && 'text-white']}>{st.title}</h3>
+              <p class:list={['text-sm', dark && 'text-gray-300']}>{st.text}</p>
+            </li>
+          );
+        })}
+      </ol>
+      {steps.boxTitle && (
+        <div class="mt-10 flex flex-col items-start gap-4 rounded-3xl bg-bd-green p-6 sm:flex-row sm:items-center sm:justify-between md:p-8">
+          <div>
+            <p class="text-lg font-semibold text-black">{steps.boxTitle}</p>
+            {steps.boxText && <p class="text-sm text-black">{steps.boxText}</p>}
+          </div>
+          {steps.boxCtaLabel && <a href={href(steps.boxCtaLink)} class="btn-secondary shrink-0">{steps.boxCtaLabel} <Icon name="arrow" size={20} /></a>}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- ================================================= SEZIONI COMUNI -->
+  <Reviews g={g} n={n('reviews')} />
+  <OfferBand g={g} offer={offer} class="container" />
+  <Faq {...p.faq} n={n('faq')} class={offer ? 'py-16 md:py-24' : 'pb-16 md:pb-24'} />
+  {p.blog.enabled && <BlogTeaser categories={p.blog.categories} title={p.blog.title} text={p.blog.text} buttonLabel={p.blog.buttonLabel} />}
+  <Contact g={g} page={p.contact} />
+</Base>

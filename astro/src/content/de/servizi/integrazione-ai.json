@@ -1,0 +1,353 @@
+{
+  "hero": {
+    "breadcrumb": "KI-Integration",
+    "eyebrow": "Künstliche Intelligenz",
+    "title": "KI in Ihrer Website: mehr Sichtbarkeit, weniger Arbeit",
+    "text": "Ich integriere künstliche Intelligenz in Ihre Website, **auch in Ihre bestehende**: im Backend, um Meta-Tags, Texte und Übersetzungen mit einem Klick zu schreiben, und auf der Website, um Ihren Kunden zu antworten. Mit **Gemini, Claude oder ChatGPT**, und das letzte Wort haben immer Sie.\n",
+    "ctaLabel": "Erzählen Sie mir von Ihrem Projekt",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Was sich integrieren lässt",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#dentro-il-sito"
+    },
+    "highlights": [],
+    "demoBar": "Seite bearbeiten",
+    "demoPanel": "Website-Backend",
+    "demoPageLabel": "Seitentitel",
+    "demoSeo": "SEO",
+    "demoButton": "Mit KI erstellen",
+    "demoTitleLabel": "Meta-Titel",
+    "demoDescLabel": "Meta-Beschreibung",
+    "demoReady": "Der Seiteninhalt ist fertig",
+    "demoWorking": "Inhalt wird analysiert …",
+    "demoDone": "Fertig in 2 Sekunden. Prüfen und speichern.",
+    "demoDoneShort": "Fertig. Prüfen und speichern.",
+    "demoWorks": "Funktioniert mit",
+    "demoCaption": "Probieren Sie es aus: Klicken Sie auf „Mit KI erstellen“, um einen anderen Betrieb zu sehen. Zehn Beispiele: Handwerk, Fachgeschäfte, Onlineshops, Blogs und mehr.",
+    "examples": [
+      {
+        "type": "Handwerk",
+        "page": "Badsanierung komplett",
+        "title": "Badsanierung in Berlin | Festpreisangebot in 48 Stunden",
+        "desc": "Wir sanieren Ihr Bad schlüsselfertig in Berlin und Umgebung: Planung, Material und Ausführung zum Festpreis. Besichtigung und Angebot gratis in 48 Stunden."
+      },
+      {
+        "type": "Onlineshop",
+        "page": "Wasserdichter Wanderschuh",
+        "title": "Wasserdichte Wanderschuhe für Herren | Versand in 24 h",
+        "desc": "Wasserdichter, atmungsaktiver Wanderschuh mit rutschfester Sohle für jeden Weg. Versand in 24 Stunden und kostenlose Rücksendung innerhalb von 30 Tagen."
+      },
+      {
+        "type": "Blog",
+        "page": "So sparen Sie bei der Stromrechnung",
+        "title": "Stromkosten sparen: 10 Tipps für zu Hause",
+        "desc": "Zehn praktische Tipps, um zu Hause weniger Energie zu verbrauchen, ohne auf Komfort zu verzichten: Haushaltsgeräte, Beleuchtung, Uhrzeiten und kleine Gewohnheiten."
+      },
+      {
+        "type": "Fachgeschäft",
+        "page": "Blumenladen in der Hamburger Innenstadt",
+        "title": "Blumenladen in Hamburg | Frische Sträuße, Lieferung am selben Tag",
+        "desc": "Frische Sträuße, Pflanzen und Gestecke für jeden Anlass, mitten in Hamburg. Online bestellen oder im Laden vorbeikommen: Lieferung am selben Tag im ganzen Stadtgebiet."
+      },
+      {
+        "type": "Restaurant",
+        "page": "Fischmenü an der Ostsee",
+        "title": "Fischrestaurant in Rostock | Degustationsmenü am Meer",
+        "desc": "Fangfrischer Fisch, Degustationsmenüs und Terrasse mit Meerblick in Warnemünde. Wählen Sie Ihren Abend und reservieren Sie Ihren Tisch in wenigen Sekunden online."
+      },
+      {
+        "type": "Kanzlei",
+        "page": "Steuerberatung für Selbstständige",
+        "title": "Steuerberater in Leipzig für Selbstständige und KMU",
+        "desc": "Existenzgründung, Umsatzsteuer- und Einkommensteuererklärung, Buchhaltung und Steuerberatung in Leipzig. Erstberatung kostenlos und klare Honorare von Anfang an."
+      },
+      {
+        "type": "Hotels und Ferienwohnungen",
+        "page": "Zimmer mit Blick auf die Alpen",
+        "title": "Landhotel im Allgäu mit Blick auf die Berge",
+        "desc": "Gemütliche Zimmer mit Alpenblick, Frühstück mit regionalen Produkten und kostenlosem Parkplatz. Direkt auf unserer Website zum besten Preis buchen."
+      },
+      {
+        "type": "Fitnessstudio",
+        "page": "Pilates für Einsteiger",
+        "title": "Pilates für Einsteiger in München | Erste Stunde gratis",
+        "desc": "Pilates-Kurse für Einsteiger in kleinen Gruppen in München, mit zertifizierten Trainerinnen und flexiblen Zeiten. Testen Sie Ihre erste Stunde kostenlos."
+      },
+      {
+        "type": "Schreinerei",
+        "page": "Küchen aus Massivholz nach Maß",
+        "title": "Massivholzküchen nach Maß in Stuttgart | Schreinerei",
+        "desc": "Wir planen und fertigen Küchen aus Massivholz nach Maß, vom Entwurf bis zur Montage, mit ausgewählten Materialien. Kostenlose Beratung in Stuttgart und Umgebung."
+      },
+      {
+        "type": "Zahnarztpraxis",
+        "page": "Professionelle Zahnreinigung und Bleaching",
+        "title": "Zahnarzt in Düsseldorf | Zahnreinigung und Bleaching",
+        "desc": "Professionelle Zahnreinigung, Bleaching und Kontrolluntersuchungen in Düsseldorf, in einer modernen, freundlichen Praxis. Buchen Sie Ihren ersten Termin online."
+      }
+    ]
+  },
+  "uses": {
+    "eyebrow": "Was sie für Sie tun kann",
+    "title": "Künstliche Intelligenz, die wirklich funktioniert, kein Hype",
+    "text": "Über KI wird viel geredet, aber für ein KMU zählen nur zwei Dinge: **gesparte Zeit und mehr Kunden**. Hier setze ich sie mit konkreten Ergebnissen ein.\n",
+    "items": [
+      {
+        "icon": "chat",
+        "title": "Assistent auf der Website",
+        "text": "Beantwortet Kundenfragen rund um die Uhr mit Ihren Informationen (Öffnungszeiten, Leistungen, Preise) und gibt Ihnen bereits qualifizierte Kontakte weiter.",
+        "wide": true,
+        "dark": true
+      },
+      {
+        "icon": "flow",
+        "title": "Automatisierungen",
+        "text": "Angebote, E-Mail-Antworten, Sortierung von Anfragen, CRM-Pflege: Die Routinearbeit erledigt die Maschine.",
+        "wide": false,
+        "dark": false
+      },
+      {
+        "icon": "file",
+        "title": "Inhalte und Kataloge",
+        "text": "Produktseiten, Beschreibungen und Übersetzungen mit KI erstellt und immer von einem Menschen geprüft.",
+        "wide": false,
+        "dark": false
+      },
+      {
+        "icon": "search-text",
+        "title": "Interner Assistent",
+        "text": "Ihr Team befragt Handbücher, Preislisten und Abläufe des Unternehmens und bekommt in Sekunden Antworten.",
+        "wide": false,
+        "dark": false
+      },
+      {
+        "icon": "spark",
+        "title": "Sichtbarkeit in der KI",
+        "text": "Strukturierte Daten und klare Inhalte, damit ChatGPT, Gemini und Perplexity Sie kennen und empfehlen.",
+        "wide": false,
+        "dark": false
+      },
+      {
+        "icon": "graduation",
+        "title": "Schulung",
+        "text": "Praxisnahe Workshops, um KI täglich sicher zu nutzen, ohne die Daten Ihrer Kunden zu gefährden.",
+        "wide": true,
+        "dark": false
+      }
+    ]
+  },
+  "inside": {
+    "eyebrow": "KI in der Website",
+    "title": "Im Backend und auf der Website. Auch wenn Sie schon eine haben",
+    "text": "Sie müssen nicht bei null anfangen: Ich ergänze KI in Ihrer bestehenden Website, ob **WordPress, WooCommerce, Shopify** oder individuell entwickelt. Sie funktioniert dort, wo Sie sie brauchen, mit Ihren Inhalten.\n",
+    "backBadge": "Backend · für alle, die die Website pflegen",
+    "backTitle": "Stunden an Arbeit, mit einem Klick",
+    "backText": "Ein Button „Mit KI erstellen“ genau dort, wo Sie Seiten und Produkte bearbeiten. Die KI schlägt vor, Sie prüfen und speichern.",
+    "backItems": [
+      {
+        "title": "Meta-Titel und Beschreibungen",
+        "text": "für jede Seite, auf Basis ihres echten Inhalts"
+      },
+      {
+        "title": "Alt-Texte für Bilder",
+        "text": "mehr Barrierefreiheit und mehr Sichtbarkeit in der Google-Bildersuche"
+      },
+      {
+        "title": "Übersetzungen",
+        "text": "in die Sprachen der Website, mit einem Klick geprüft"
+      },
+      {
+        "title": "Strukturierte Daten",
+        "text": "FAQ, Produkte, Events: erstellt und geprüft"
+      },
+      {
+        "title": "Vorgeschlagene interne Links",
+        "text": "zwischen verwandten Artikeln und Seiten"
+      },
+      {
+        "title": "Textkorrektur",
+        "text": "Tippfehler, Tonalität und Lesbarkeit"
+      }
+    ],
+    "frontBadge": "Frontend · für Ihre Besucher",
+    "frontTitle": "Eine Website, die antwortet",
+    "frontText": "Besucher finden sofort, was sie suchen, auch sonntags um 23 Uhr.",
+    "frontItems": [
+      {
+        "title": "Ein Assistent, der die Website kennt",
+        "text": "antwortet mit Verweis auf Ihre Seiten"
+      },
+      {
+        "title": "Intelligente Suche",
+        "text": "versteht, was gemeint ist, auch mit anderen Worten"
+      },
+      {
+        "title": "Produktempfehlungen",
+        "text": "passende Vorschläge in Ihrem Onlineshop"
+      },
+      {
+        "title": "Formulare, die verstehen",
+        "text": "Anfragen kommen bereits sortiert bei der richtigen Person an"
+      }
+    ]
+  },
+  "seoWork": {
+    "eyebrow": "Mehr SEO, weniger Arbeit",
+    "title": "Jede Seite optimiert, ohne Nachtschichten",
+    "text": "SEO besteht auch aus mühsamen Details: Meta-Tags, Alt-Texte, Übersetzungen, strukturierte Daten. Auf einer Website mit Dutzenden oder Hunderten Seiten bleiben sie oft halb fertig. Mit integrierter KI werden sie Teil der täglichen Arbeit.\n",
+    "image": "@it",
+    "imageAlt": "Illustration eines KI-Assistenten, verbunden mit Website, E-Mail, Dokumenten und Statistiken",
+    "items": [
+      {
+        "title": "Schluss mit „halb fertigen“ Seiten",
+        "text": "Jede Seite und jedes Bild mit Meta-Tags und Alt-Text."
+      },
+      {
+        "title": "Einheitlichkeit",
+        "text": "Dieselbe Tonalität und dieselben SEO-Regeln auf der ganzen Website."
+      },
+      {
+        "title": "Mehrsprachigkeit leicht gemacht",
+        "text": "Übersetzungen, die nur noch geprüft werden müssen, statt bei null zu beginnen."
+      },
+      {
+        "title": "Sie behalten die Kontrolle",
+        "text": "Die KI schlägt vor, Sie geben frei. Nichts wird ohne Ihr Okay veröffentlicht."
+      }
+    ]
+  },
+  "models": {
+    "eyebrow": "Die Modelle",
+    "title": "Gemini, Claude oder ChatGPT: Ich wähle das passende für Sie",
+    "text": "Jedes Modell hat seine Stärken bei Textqualität, Geschwindigkeit, Kosten und Datenverarbeitung. Ich wähle das, was am besten zu Ihrem Fall passt, und die Integration ist so gebaut, dass **Sie das Modell wechseln können, ohne alles neu zu machen**.\n",
+    "items": [
+      {
+        "logo": "@it",
+        "title": "Gemini",
+        "company": "von Google",
+        "text": "Fügt sich gut ins Google-Ökosystem ein und eignet sich sehr für große Mengen an Inhalten."
+      },
+      {
+        "logo": "@it",
+        "title": "Claude",
+        "company": "von Anthropic",
+        "text": "Geschätzt für die Qualität seiner Texte und dafür, Anweisungen und Tonalität präzise einzuhalten."
+      },
+      {
+        "logo": "",
+        "title": "ChatGPT",
+        "company": "von OpenAI",
+        "text": "Das bekannteste, vielseitig, mit einem großen Ökosystem an Tools und Integrationen."
+      }
+    ],
+    "privacyTitle": "Datenschutz und Regeln zuerst",
+    "privacyItems": [
+      "Ich nutze die Business-Versionen dieser Dienste, so eingerichtet, dass Ihre Daten nicht zum Training der Modelle verwendet werden, sofern der Anbieter das erlaubt.",
+      "Die KI bekommt nur die nötigen Daten, nie mehr.",
+      "Projekte im Einklang mit der DSGVO und den Transparenzpflichten der europäischen KI-Verordnung."
+    ],
+    "costsTitle": "Und die Nutzungskosten?",
+    "costsText": "Die Modelle werden nach Verbrauch bezahlt. Für die meisten Websites sind die Kosten überschaubar: Vor dem Start bekommen Sie eine realistische Schätzung, ohne Überraschungen.",
+    "disclaimer": "Gemini ist eine Marke von Google LLC, Claude ist eine Marke von Anthropic PBC und ChatGPT ist eine Marke von OpenAI. Die Marken werden nur zur Angabe der Kompatibilität genannt; es besteht keine Verbindung zu diesen Unternehmen."
+  },
+  "steps": {
+    "eyebrow": "So arbeite ich",
+    "title": "Von der Idee zum Werkzeug, das Sie täglich nutzen",
+    "text": "",
+    "items": [
+      {
+        "title": "Anwendungsfall",
+        "text": "Wir starten bei einem konkreten Problem: Wo verlieren Sie Zeit oder Kunden? Ist KI nicht die Antwort, sage ich es Ihnen."
+      },
+      {
+        "title": "Prototyp",
+        "text": "Eine erste Version, die mit Ihren Daten funktioniert, damit Sie Ergebnisse sehen, bevor Sie investieren."
+      },
+      {
+        "title": "Integration",
+        "text": "In Ihre Website, Ihr Backend oder die Tools, die Sie schon nutzen, auch bestehende."
+      },
+      {
+        "title": "Schulung und Messung",
+        "text": "Ich zeige Ihnen die Nutzung, und wir messen die gesparte Zeit und die Ergebnisse."
+      }
+    ],
+    "boxTitle": "Sie haben eine Idee, wissen aber nicht, ob sie umsetzbar ist?",
+    "boxText": "Erzählen Sie mir davon im kostenlosen 25-Minuten-Gespräch: Ich sage Ihnen sofort, ob und wie es geht.",
+    "boxCtaLabel": "Kostenloses Gespräch buchen",
+    "boxCtaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "offer": {
+    "show": true,
+    "item": "seo-con-ai"
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "title": "Fragen zur KI",
+    "text": "Ihre Frage ist nicht dabei? [Schreiben Sie mir](#contatti), ich antworte innerhalb eines Werktags.\n",
+    "items": [
+      {
+        "question": "Kann ich KI in meine bestehende Website einbauen?",
+        "answer": "Ja. Ich arbeite mit WordPress, WooCommerce, Shopify und individuellen Websites: Ich ergänze KI-Funktionen im Backend, das Sie schon nutzen, oder auf der öffentlichen Website, ohne Neubau.\n"
+      },
+      {
+        "question": "Kann sich die KI irren?",
+        "answer": "Ja, manchmal. Deshalb schlägt in meinen Projekten die KI vor und ein Mensch gibt frei: Nichts wird ohne Prüfung veröffentlicht oder an Kunden geschickt, außer Sie entscheiden es anders.\n"
+      },
+      {
+        "question": "Straft Google KI-Texte ab?",
+        "answer": "Google belohnt nützliche Inhalte, egal wie sie entstanden sind. Das echte Risiko sind generische Massentexte: Deshalb arbeitet die KI mit Ihren echten Inhalten und ein Mensch prüft sie.\n"
+      },
+      {
+        "question": "Welches Modell ist besser: Gemini, Claude oder ChatGPT?",
+        "answer": "Das hängt von der Aufgabe, den Kosten und davon ab, wie Sie mit Ihren Daten umgehen möchten. Ich kenne alle drei und wähle das passende; die Integration ist so gebaut, dass es sich später wechseln lässt.\n"
+      },
+      {
+        "question": "Sind meine Daten sicher?",
+        "answer": "Ich nutze die Business-Versionen der Dienste, sende nur die nötigen Daten und richte alles DSGVO-konform ein. Bei besonders sensiblen Daten wählen wir gemeinsam die vorsichtigsten Lösungen.\n"
+      },
+      {
+        "question": "Was kostet es?",
+        "answer": "Das Projekt hat einen Festpreis, der nach dem kostenlosen Gespräch festgelegt wird. Die Nutzungskosten der Modelle kommen separat hinzu und werden nach Verbrauch bezahlt: Ich schätze sie vor dem Start für Sie ab.\n"
+      }
+    ],
+    "ctaLabel": "Erzählen Sie mir von Ihrem Projekt",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "ai"
+    ],
+    "title": "Künstliche Intelligenz, ganz praktisch",
+    "text": "Konkrete Beispiele, wie KI Ihnen Zeit spart und hilft, gefunden zu werden.\n",
+    "buttonLabel": "Alle Artikel"
+  },
+  "contact": {
+    "title": "Lassen wir die KI für Sie arbeiten",
+    "formTitle": "Erzählen Sie mir Ihre Idee",
+    "topics": [
+      "ai"
+    ]
+  },
+  "seo": {
+    "slug": "ki-integration",
+    "title": "KI-Integration: Gemini, Claude, ChatGPT | bortolin.dev",
+    "description": "Ich integriere KI in Ihre Website, auch in die bestehende: Meta-Tags, Texte und Übersetzungen per Klick und ein Kundenassistent. Gemini, Claude oder ChatGPT.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Audit SEO a 290 €",
+  "offer": {
+    "title": "Audit SEO completo a {% verde %}290 € invece di 490 €{% /verde %}",
+    "deadline": "2027-01-31",
+    "eyebrow": "Offerta di lancio",
+    "deadlineLabel": "Valida fino al 31/01/2027",
+    "text": "Scopri in 5 giorni lavorativi cosa frena il tuo sito su Google e cosa fare per primo. E se poi mi affidi la consulenza, il costo dell’audit viene scalato dal primo mese.\n",
+    "items": [
+      {
+        "title": "Audit tecnico",
+        "text": "indicizzazione, velocità, errori"
+      },
+      {
+        "title": "Parole chiave",
+        "text": "e analisi dei concorrenti"
+      },
+      {
+        "title": "Video e piano d’azione",
+        "text": "priorità chiare, spiegate"
+      }
+    ],
+    "ctaLabel": "Prenota l’audit",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "note": "Prezzi + IVA · consegna in 5 giorni lavorativi",
+    "image": "/src/assets/images/offerte/illustrazione-offerta.svg",
+    "boxEyebrow": "Audit SEO completo",
+    "boxValue": "290 €",
+    "boxText": "scalato dal primo mese di consulenza",
+    "stamp": "−40%",
+    "boxOldValue": "490 €"
+  },
+  "menu": {
+    "megaTitle": "Audit SEO completo a 290 € invece di 490 €",
+    "megaText": "Per chi prenota entro il 31/01/2027:",
+    "megaItems": [
+      "Audit tecnico: indicizzazione, velocità, errori",
+      "Parole chiave e analisi dei concorrenti",
+      "Video e piano d’azione, scalato dal primo mese di consulenza"
+    ],
+    "mobileText": "per chi prenota entro il 31/01/2027",
+    "cardText": "Consegna in 5 giorni lavorativi, scalato dal primo mese di consulenza."
+  }
+}

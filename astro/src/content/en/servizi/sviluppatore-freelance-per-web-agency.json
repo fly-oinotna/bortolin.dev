@@ -1,0 +1,501 @@
+{
+  "hero": {
+    "breadcrumb": "For web agencies",
+    "eyebrow": "For web agencies",
+    "title": "Your agency’s tech team, at a fixed price",
+    "text": "Development, SEO, speed, AI, tracking and maintenance for your agency’s clients, **fully white label**. Every job comes with a **fixed price agreed up front**, so you can quote your client with your own margin and no surprises.\n",
+    "ctaLabel": "Tell me about a project",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "All services",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#servizi-agency"
+    },
+    "highlights": [
+      "Fixed price per project",
+      "Under your brand",
+      "NDA as standard"
+    ],
+    "boardLogo": "YOUR\nLOGO",
+    "boardLabel": "Projects for",
+    "boardTitle": "your agency",
+    "boardBadge": "White label",
+    "priceLabel": "fixed price",
+    "statusTodo": "To do",
+    "statusDoing": "In progress",
+    "statusDone": "Delivered",
+    "tasks": [
+      {
+        "title": "Business website from a Figma design",
+        "client": "Client: architecture firm",
+        "price": "€2,400"
+      },
+      {
+        "title": "Technical SEO audit",
+        "client": "Client: furniture store online",
+        "price": "€490"
+      },
+      {
+        "title": "AI on product pages",
+        "client": "Client: online shop",
+        "price": "€790"
+      },
+      {
+        "title": "Core Web Vitals from red to green",
+        "client": "Client: existing WordPress website",
+        "price": "€650"
+      }
+    ],
+    "summaryLabel": "Surprises on the invoice",
+    "summaryValue": "€0",
+    "caption": "Illustrative example: made-up guide prices, every project is quoted individually."
+  },
+  "collab": {
+    "eyebrow": "How we work together",
+    "title": "A tech partner, not a competitor",
+    "text": "I’ve been working with agencies since 2016, after years as lead developer at web agencies abroad. I know all about tight deadlines, demanding clients and margins that need protecting.\n",
+    "items": [
+      {
+        "title": "Your brand, always",
+        "text": "I work behind the scenes: the client only sees your agency. If you like, I join calls as part of your team."
+      },
+      {
+        "title": "No direct contact, ever",
+        "text": "I never contact your clients or pitch to them. We put it in writing, in an NDA."
+      },
+      {
+        "title": "Your tools",
+        "text": "ClickUp, Trello, Asana, GitHub, Google Meet: I slot into the way you work."
+      },
+      {
+        "title": "International experience",
+        "text": "15+ years, more than 400 projects, working in English, Italian, German and Spanish."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Fixed price",
+    "title": "Your margin stays protected",
+    "text": "Overrunning hours are what eat agency margins. That’s why every job has a **fixed quote**, with timeline and scope in writing. If the client changes their mind, we talk first and you decide: it never turns up later on the invoice.\n",
+    "points": [
+      {
+        "text": "**Projects**: a fixed price for every website, audit or integration.\n"
+      },
+      {
+        "text": "**Maintenance**: a fixed monthly fee, no surprise bills.\n"
+      },
+      {
+        "text": "**Changes**: scoped and approved by you before any work starts.\n"
+      }
+    ],
+    "exampleLabel": "How it works, in numbers",
+    "example": [
+      {
+        "title": "My quote to you",
+        "text": "fixed, in writing, with timeline",
+        "value": "A"
+      },
+      {
+        "title": "Your quote to the client",
+        "text": "with your margin and your services",
+        "value": "A + margin"
+      },
+      {
+        "title": "The final invoice you get",
+        "text": "exactly as quoted",
+        "value": "A"
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "What I can do for you",
+    "title": "Every web service, from one partner",
+    "text": "Hand me a whole project or just a piece of it: development, SEO audits, optimization or maintenance. Every service at a fixed price.\n",
+    "navLabel": "Jump to a service",
+    "items": [
+      {
+        "anchor": "white-label",
+        "short": "White-label development",
+        "icon": "code",
+        "label": "The heart of our partnership",
+        "badge": "",
+        "title": "White-label websites and online stores",
+        "text": "I turn your designs into fast, accessible websites that are easy for the end client to run. I work under your brand: as far as the client knows, I’m part of your team.",
+        "points": [
+          "From Figma, PDF or a design system",
+          "WordPress with custom themes and plugins, WooCommerce",
+          "Static and headless builds when top speed is a must",
+          "Landing pages for your campaigns"
+        ],
+        "footer": ""
+      },
+      {
+        "anchor": "analisi-seo",
+        "short": "SEO audits and technical SEO",
+        "icon": "search",
+        "label": "",
+        "badge": "",
+        "title": "SEO audits and technical SEO",
+        "text": "SEO audits of your clients’ websites, with reports you can present under your own name, plus implementation of the fixes.",
+        "points": [
+          "Technical audit and action plan",
+          "Migrations without losing rankings",
+          "Structured data and multilingual SEO"
+        ],
+        "footer": "Fixed price"
+      },
+      {
+        "anchor": "performance",
+        "short": "Speed and Core Web Vitals",
+        "icon": "bolt",
+        "label": "",
+        "badge": "",
+        "title": "Speed and Core Web Vitals",
+        "text": "I speed up live websites, including ones built by others, and get them within Google’s recommended thresholds.",
+        "points": [
+          "Lighthouse audit and real-user data",
+          "Image, code and caching optimization",
+          "Before-and-after report to pass on to the client"
+        ],
+        "footer": "Fixed price"
+      },
+      {
+        "anchor": "integrazione-ai",
+        "short": "AI integration",
+        "icon": "sparkles",
+        "label": "",
+        "badge": "A new service to resell",
+        "title": "AI integration",
+        "text": "Add AI to your offering: I build it into your clients’ websites, with Gemini, Claude or ChatGPT.",
+        "points": [
+          "Meta tags, copy and translations in one click",
+          "On-site assistants and smart search",
+          "Automations for your clients’ workflows"
+        ],
+        "footer": "Fixed price"
+      },
+      {
+        "anchor": "tracciamento",
+        "short": "Tracking and analytics",
+        "icon": "chart",
+        "label": "",
+        "badge": "",
+        "title": "Tracking and analytics",
+        "text": "Setup from scratch, audits and fixes, including on websites built by others.",
+        "points": [
+          "Google Tag Manager and GA4",
+          "Google Ads, Meta Pixel and Conversions API",
+          "Consent Mode and cookie banners"
+        ],
+        "footer": "Fixed price"
+      },
+      {
+        "anchor": "accessibilita",
+        "short": "Accessibility",
+        "icon": "accessibility",
+        "label": "",
+        "badge": "",
+        "title": "Accessibility",
+        "text": "Audits and fixes for the European Accessibility Act: a topic many of your clients will soon need answers on.",
+        "points": [
+          "Compliance audit",
+          "Code and content fixes",
+          "Keyboard and screen reader navigation"
+        ],
+        "footer": "Fixed price"
+      },
+      {
+        "anchor": "manutenzione",
+        "short": "Maintenance and support",
+        "icon": "wrench",
+        "label": "",
+        "badge": "",
+        "title": "Maintenance and support",
+        "text": "Updates, security, backups and ongoing small changes, fully white label too.",
+        "points": [
+          "Fixed monthly fee",
+          "Urgent fixes and call-outs",
+          "Regular report to pass on to the client"
+        ],
+        "footer": "Fixed price"
+      },
+      {
+        "anchor": "project-management",
+        "short": "Project management",
+        "icon": "calendar",
+        "label": "",
+        "badge": "",
+        "title": "Project management",
+        "text": "I run digital projects between client and team: I turn requirements into clear tasks, keep an eye on time and resources and spot problems before they happen.",
+        "points": [
+          "Requirements and estimates",
+          "Team planning and coordination",
+          "Client communication, if you want it"
+        ],
+        "footer": "Fixed price"
+      },
+      {
+        "anchor": "consulenza-tecnica",
+        "short": "Technical consulting",
+        "icon": "bulb",
+        "label": "",
+        "badge": "",
+        "title": "Technical consulting",
+        "text": "An expert view when you need one: to quote a complex project, choose the right technology or train your team.",
+        "points": [
+          "Help with technical quotes",
+          "Second opinion on live projects",
+          "Training for developers and designers"
+        ],
+        "footer": "Fixed price"
+      }
+    ]
+  },
+  "tech": {
+    "eyebrow": "Tech stack",
+    "title": "The tools I work with",
+    "text": "I choose the technology to suit the project and the end client: WordPress when content is managed in-house, Next.js or Astro when speed and scalability come first. And I’m happy to fit in with your agency’s stack.\n",
+    "groups": [
+      {
+        "title": "Design",
+        "items": [
+          {
+            "logo": "@it",
+            "name": "Figma"
+          },
+          {
+            "logo": "@it",
+            "name": "Sketch"
+          },
+          {
+            "logo": "@it",
+            "name": "Penpot"
+          },
+          {
+            "logo": "@it",
+            "name": "Framer"
+          }
+        ]
+      },
+      {
+        "title": "Front end",
+        "items": [
+          {
+            "logo": "@it",
+            "name": "Tailwind CSS"
+          },
+          {
+            "logo": "@it",
+            "name": "JavaScript"
+          },
+          {
+            "logo": "@it",
+            "name": "TypeScript"
+          },
+          {
+            "logo": "@it",
+            "name": "React"
+          },
+          {
+            "logo": "@it",
+            "name": "Next.js"
+          },
+          {
+            "logo": "@it",
+            "name": "Astro"
+          },
+          {
+            "logo": "@it",
+            "name": "Vite"
+          }
+        ]
+      },
+      {
+        "title": "Back end and CMS",
+        "items": [
+          {
+            "logo": "@it",
+            "name": "PHP"
+          },
+          {
+            "logo": "@it",
+            "name": "Laravel"
+          },
+          {
+            "logo": "@it",
+            "name": "Node.js"
+          },
+          {
+            "logo": "@it",
+            "name": "WordPress"
+          },
+          {
+            "logo": "@it",
+            "name": "WooCommerce"
+          },
+          {
+            "logo": "@it",
+            "name": "Shopify"
+          }
+        ]
+      },
+      {
+        "title": "Collaboration",
+        "items": [
+          {
+            "logo": "@it",
+            "name": "ClickUp"
+          },
+          {
+            "logo": "@it",
+            "name": "Trello"
+          },
+          {
+            "logo": "@it",
+            "name": "Asana"
+          },
+          {
+            "logo": "@it",
+            "name": "Miro"
+          },
+          {
+            "logo": "@it",
+            "name": "Git"
+          },
+          {
+            "logo": "@it",
+            "name": "GitHub"
+          },
+          {
+            "logo": "@it",
+            "name": "Google Meet"
+          },
+          {
+            "logo": "@it",
+            "name": "Zoom"
+          }
+        ]
+      },
+      {
+        "title": "Analytics and tracking",
+        "items": [
+          {
+            "logo": "@it",
+            "name": "Google Tag Manager"
+          },
+          {
+            "logo": "@it",
+            "name": "Google Analytics"
+          }
+        ]
+      }
+    ],
+    "note": "The logos and names shown are trademarks of their respective owners, used only to indicate the technologies involved; there is no affiliation."
+  },
+  "method": {
+    "eyebrow": "How it works",
+    "title": "From brief to delivery, with no surprises",
+    "text": "",
+    "items": [
+      {
+        "title": "Brief",
+        "text": "Send me designs, requirements and deadlines, even a rough draft will do.",
+        "highlight": false
+      },
+      {
+        "title": "Fixed quote",
+        "text": "You get a fixed price with timeline and scope, ready to resell with your margin.",
+        "highlight": true
+      },
+      {
+        "title": "Development",
+        "text": "I work in your tools and keep you posted at every stage.",
+        "highlight": false
+      },
+      {
+        "title": "Quality check",
+        "text": "Device testing, Lighthouse and accessibility checks before every delivery.",
+        "highlight": false
+      },
+      {
+        "title": "Delivery",
+        "text": "Documentation, logins and, if needed, training for the end client.",
+        "highlight": false
+      }
+    ],
+    "boxTitle": "Got a project to quote?",
+    "boxText": "Send me the brief and I’ll come back with a fixed price and a delivery date.",
+    "boxCtaLabel": "Send me the brief",
+    "boxCtaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "offer": {
+    "show": false,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions agencies ask",
+    "text": "Can’t see yours? [Drop me a line](#contatti) and I’ll reply by the next business day.\n",
+    "items": [
+      {
+        "question": "Do you really work under our brand?",
+        "answer": "Yes. The end client only ever sees your agency: emails, documents and deliverables go out in your name. If you like, I join meetings as part of your team.\n"
+      },
+      {
+        "question": "Will you sign an NDA?",
+        "answer": "Of course, and I commit in writing never to contact or poach your clients.\n"
+      },
+      {
+        "question": "How does the fixed price work?",
+        "answer": "Every job gets a fixed quote with scope and timeline. Any changes the client asks for are scoped and approved by you before work starts.\n"
+      },
+      {
+        "question": "What turnaround times can you guarantee?",
+        "answer": "We agree them in the quote, based on complexity and my workload, and I stick to them. If a project is urgent, tell me straight away: I’ll give you an honest answer on whether it’s doable.\n"
+      },
+      {
+        "question": "Do you work on websites built by others?",
+        "answer": "Yes: speed, technical SEO, tracking, accessibility and maintenance can all be done on existing websites, after an initial review.\n"
+      },
+      {
+        "question": "How do you invoice?",
+        "answer": "I invoice your agency for the amount in the quote. You invoice the end client with your margin on top.\n"
+      }
+    ],
+    "ctaLabel": "Tell me about a project",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": false,
+    "categories": [
+      "siti-web"
+    ],
+    "title": "",
+    "text": "",
+    "buttonLabel": "All articles"
+  },
+  "contact": {
+    "title": "Let’s talk about your agency",
+    "formTitle": "Send me a brief or a question",
+    "topics": []
+  },
+  "seo": {
+    "slug": "freelance-developer-for-web-agencies",
+    "title": "Freelance developer for web agencies | bortolin.dev",
+    "description": "White-label development, SEO, speed, AI and maintenance for web agencies. A fixed price for every project, so you quote clients with your margin.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

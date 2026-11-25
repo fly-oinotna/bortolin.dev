@@ -1,0 +1,166 @@
+---
+// SERVIZI — contenuti in Keystatic → "Servizi" (un gruppo per sezione, SEO in fondo).
+// Gruppi e schede dei servizi sono ripetibili; ogni scheda può mostrare l'offerta del servizio (Sito → Offerte).
+import { t } from '../i18n/ui';
+import Base from '../layouts/Base.astro';
+import Icon from '../components/ui/Icon.astro';
+import Img from '../components/ui/Img.astro';
+import Rich from '../components/ui/Rich.astro';
+import Breadcrumb from '../components/ui/Breadcrumb.astro';
+import SectionHeading from '../components/ui/SectionHeading.astro';
+import Reviews from '../components/sections/Reviews.astro';
+import Faq from '../components/sections/Faq.astro';
+import Contact from '../components/sections/Contact.astro';
+import { read, readGlobals, readOffer, offerIsActive } from '../lib/content';
+import { rich } from '../lib/rich';
+import { href } from '../lib/links';
+import { faqSchema } from '../lib/schema';
+import type { IconName } from '../lib/icons';
+
+interface Props { lang?: string }
+const { lang = 'it' } = Astro.props;
+const g = await readGlobals(lang);
+const p = await read('servizi', lang);
+const trail = [{ name: p.hero.breadcrumb || p.hero.title, url: g.url('/servizi/') }];
+const { hero: h, start, groups: gr, agency: ag, rules } = p;
+
+// numeri delle etichette: i gruppi in ordine, poi web agency, regole, recensioni e FAQ
+const nGroups = gr.items.length;
+const n = { agency: nGroups + 1, rules: nGroups + 2, reviews: nGroups + 3, faq: nGroups + 4 };
+// offerte delle schede (solo se valide)
+const offers = new Map<string, any>();
+for (const gi of gr.items) for (const c of gi.cards) if (c.offer && !offers.has(c.offer)) {
+  const o = await readOffer(c.offer, lang);
+  if (offerIsActive(o)) offers.set(c.offer, o);
+}
+const LAYER = [
+  ['bg-bd-green text-black ml-[18%]', 'bg-black text-bd-green'],
+  ['bg-black text-white ml-[12%]', 'bg-bd-green text-black'],
+  ['bg-white text-black border-2 border-black ml-[6%]', 'bg-bd-green text-black'],
+  ['bg-gray-200 text-black', 'bg-bd-green text-black'],
+];
+const anchor = (i: number) => `gruppo-${String(i + 1).padStart(2, '0')}`;
+---
+<Base g={g} seo={p.seo} breadcrumb={trail} schema={{ collection: { items: gr.items.flatMap((gi) => gi.cards.map((c) => ({ name: c.title, url: href(c.link) }))) }, faq: faqSchema(p.faq.items) }}>
+
+  <!-- ================================================= HERO -->
+  <section class="overflow-hidden pt-8 pb-16 md:pt-12 md:pb-24">
+    <div class="container">
+      <Breadcrumb items={trail} />
+      <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div>
+          {h.eyebrow && <span class="mb-5 inline-flex rounded-full bg-black px-3 py-1 text-xs font-bold text-bd-green uppercase">{h.eyebrow}</span>}
+          <h1 class="text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">{h.title}</h1>
+          <div class="my-6"><Rich value={h.text} class="text-lg" /></div>
+          <ul class="flex flex-wrap gap-2" aria-label={h.navLabel}>
+            {gr.items.map((gi, i) => <li><a class="chip hover:bg-bd-green" href={`#${anchor(i)}`}>{gi.short || gi.eyebrow}</a></li>)}
+            {ag.title && <li><a class="chip hover:bg-bd-green" href="#web-agency">{ag.short || ag.eyebrow}</a></li>}
+          </ul>
+        </div>
+        <figure class="mx-auto w-full max-w-lg">
+          <ol class="space-y-3" aria-label={h.layersLabel}>
+            {h.layers.map((l, i) => {
+              const [box, num] = LAYER[i % 4];
+              return (
+                <li class:list={['flex items-center gap-4 rounded-2xl p-4 shadow-lg md:p-5', box]}>
+                  <span class:list={['grid h-11 w-11 shrink-0 place-items-center rounded-full text-lg font-extrabold', num]}>{h.layers.length - i}</span>
+                  <span><strong class="block text-lg">{l.title}</strong><span class="text-sm opacity-80">{l.text}</span></span>
+                </li>
+              );
+            })}
+          </ol>
+          {h.caption && <figcaption class="mt-4 text-center text-sm text-gray-600">{h.caption}</figcaption>}
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= DA DOVE PARTO? -->
+  <section class="pb-16 md:pb-24">
+    <div class="container">
+      <div class="rounded-3xl bg-black p-6 text-white md:p-10 lg:p-14">
+        <SectionHeading title={start.title} text={start.text} dark />
+        <ul class="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {start.items.map((it) => (
+            <li><a href={href(it.link)} class="group flex h-full items-center justify-between gap-4 rounded-2xl bg-white/10 p-5 transition-colors hover:bg-bd-green hover:text-black">
+              <span><span class="block text-lg font-semibold text-white group-hover:text-black">{it.quote}</span><span class="text-sm text-gray-300 group-hover:text-black">→ {it.service}</span></span>
+              <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-bd-green text-black group-hover:bg-black group-hover:text-bd-green"><Icon name="arrow" size={20} /></span>
+            </a></li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= GRUPPI DI SERVIZI -->
+  {gr.items.map((gi, i) => {
+    const gray = i % 2 === 0;
+    const cols = gi.cards.some((c) => c.wide) ? 'lg:grid-cols-2' : 'lg:grid-cols-3';
+    return (
+      <section id={anchor(i)} class:list={['py-16 md:py-24', gray && 'bg-gray-100']}>
+        <div class="container">
+          <SectionHeading n={i + 1} eyebrow={gi.eyebrow} title={gi.title} text={gi.text} />
+          <div class:list={['mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-6', cols]}>
+            {gi.cards.map((c) => {
+              const o = c.offer ? offers.get(c.offer) : null;
+              return (
+                <article class:list={['flex flex-col rounded-3xl p-6 md:p-8', gray ? 'bg-white' : 'bg-gray-100', c.wide && 'lg:col-span-2']}>
+                  <div class="flex items-start justify-between gap-4">
+                    <span class="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-black text-bd-green"><Icon name={c.icon as IconName} size={26} /></span>
+                    {c.badge && <span class:list={['rounded-full px-3 py-1 text-xs font-bold text-black', gray ? 'bg-gray-100' : 'bg-white']}>{c.badge}</span>}
+                  </div>
+                  <h3 class="mt-5 text-2xl"><a href={href(c.link)} class="hover:underline">{c.title}</a></h3>
+                  <p>{c.text}</p>
+                  {c.points.length > 0 && <ul class:list={['mt-4 grid grid-cols-1 gap-2 text-sm text-black', c.wide && 'sm:grid-cols-2']}>{c.points.map((pt) => <li class="flex gap-2"><Icon name="check" size={16} stroke={3} class="mt-0.5 shrink-0" /><span>{pt}</span></li>)}</ul>}
+                  {c.ideal && <p class="mt-4 text-sm"><strong class="text-black">{gr.idealLabel}</strong> {c.ideal}</p>}
+                  {o && (
+                    <div data-countdown-scope class="mt-5 rounded-2xl bg-black p-4 text-white">
+                      <p class="flex flex-wrap items-center gap-2"><span class="rounded-full bg-bd-green px-2.5 py-0.5 text-[11px] font-bold text-black uppercase">{o.eyebrow}</span><span class="inline-flex items-center gap-1 text-xs text-gray-300"><Icon name="clock" size={12} stroke={2.5} /><span data-countdown={o.deadline ? `${o.deadline}T23:59:59` : undefined} data-days={t(g.lang).countdown.days} data-last={t(g.lang).countdown.last}>{o.deadlineLabel}</span></span></p>
+                      <p class="mt-2 font-semibold text-bd-green">{o.megaTitle}</p>
+                      {o.cardText && <p class="text-sm text-gray-300">{o.cardText}</p>}
+                    </div>
+                  )}
+                  <div class="mt-auto pt-6"><a href={href(c.link)} class="btn-empty-primary">{gr.moreLabel}<span class="sr-only"> su {c.title}</span></a></div>
+                </article>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+    );
+  })}
+
+  <!-- ================================================= PER LE WEB AGENCY -->
+  {ag.title && (
+    <section id="web-agency" class:list={['py-16 md:py-24', nGroups % 2 === 0 && 'bg-gray-100']}>
+      <div class="container grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        <SectionHeading n={n.agency} eyebrow={ag.eyebrow} title={ag.title} text={ag.text} class="">
+          <div class="mt-6 flex flex-wrap gap-3">
+            {ag.ctaLabel && <a href={href(ag.ctaLink)} class="btn-secondary">{ag.ctaLabel}</a>}
+            {ag.linkLabel && <a href={href(ag.linkLink)} class="btn-empty-primary">{ag.linkLabel}</a>}
+          </div>
+        </SectionHeading>
+        <Img src={ag.image} alt={ag.imageAlt} class="float-soft mx-auto w-full max-w-lg" />
+      </div>
+    </section>
+  )}
+
+  <!-- ================================================= REGOLE COMUNI -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <SectionHeading n={n.rules} eyebrow={rules.eyebrow} title={rules.title} />
+      <ul class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+        {rules.items.map((it, i) => (
+          <li class:list={['rounded-3xl p-6', i === 0 ? 'bg-bd-green' : 'bg-gray-100']}>
+            <h3 class="text-lg">{it.title}</h3>
+            <p class:list={['text-sm', i === 0 && 'text-black']}>{it.text}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <Reviews g={g} n={n.reviews} class="pb-16 md:pb-24" />
+  <Faq {...p.faq} n={n.faq} class="pb-16 md:pb-24" />
+  <Contact g={g} page={p.contact} />
+</Base>

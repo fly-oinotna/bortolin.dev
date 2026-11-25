@@ -1,0 +1,27 @@
+---
+// Google Tag Manager (Impostazioni → Google), come AM Tools 3 ma senza banner cookie per ora:
+// - Consent Mode v2: tutto "denied" di default, finché il futuro banner cookie non invia il consenso
+// - caricamento differito al primo scroll/click/tasto/tocco o dopo 5 s dal load, per non pesare su Lighthouse
+interface Props { id: string }
+const { id } = Astro.props;
+---
+<script is:inline define:vars={{ id }}>
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () { window.dataLayer.push(arguments); };
+  window.gtag('consent', 'default', {
+    ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied',
+    functionality_storage: 'denied', personalization_storage: 'denied', security_storage: 'granted', wait_for_update: 500,
+  });
+  var loaded = false;
+  function loadGtm() {
+    if (loaded) return;
+    loaded = true;
+    window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtm.js?id=' + id;
+    document.head.appendChild(s);
+  }
+  ['scroll', 'pointerdown', 'keydown', 'touchstart'].forEach(function (e) { addEventListener(e, loadGtm, { once: true, passive: true }); });
+  addEventListener('load', function () { setTimeout(loadGtm, 5000); });
+</script>

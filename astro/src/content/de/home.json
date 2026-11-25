@@ -1,0 +1,483 @@
+{
+  "hero": {
+    "eyebrow": "Webdesign - Webentwicklung - SEO-Beratung",
+    "title": "Websites, die schnell laden, bei Google ranken und KI verstehen",
+    "text": "Ich baue Ihre Website **von A bis Z**: Design, Texte, SEO, Performance, Tracking und künstliche Intelligenz sind **serienmäßig** dabei, nicht als Extras. Eine Website, die Ihnen Kunden bringt, zum **Festpreis** und ohne Fachchinesisch erklärt.\n",
+    "ctaLabel": "Kostenloses Angebot anfordern",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Was alles drin ist",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#servizi"
+    },
+    "highlights": [
+      "Festpreis statt Stunden",
+      "Website gehört Ihnen",
+      "Direkt mit mir",
+      "DE · EN · IT · ES"
+    ],
+    "projectsValue": 400,
+    "yearsValue": 15,
+    "scoresTitle": "Jede Website, die ich übergebe, zielt auf",
+    "scores": [
+      {
+        "label": "Leistung",
+        "value": 100
+      },
+      {
+        "label": "Barrierefreiheit",
+        "value": 100
+      },
+      {
+        "label": "Best Practices",
+        "value": 100
+      },
+      {
+        "label": "SEO",
+        "value": 100
+      }
+    ],
+    "boxTitle": "Keine Überraschungen",
+    "boxText": "Ein detailliertes Angebot mit Funktionen, Zeitplan und **Festpreis**. Was im Angebot steht, ist genau das, was Sie zahlen.\n"
+  },
+  "manifesto": {
+    "line1": "Ich baue keine schöneren Websites.",
+    "line2": "Ich baue Websites, die für Sie arbeiten.",
+    "text": "Eine schöne, aber langsame Website, unsichtbar bei Google oder nicht messbar, ist eine Ausgabe. Eine schnelle, gut platzierte Website mit den richtigen Tools ist ein Vertriebler, der rund um die Uhr arbeitet.\n"
+  },
+  "services": {
+    "eyebrow": "Leistungen",
+    "title": "Eine Website mit SEO, Performance und KI inklusive",
+    "text": "Keine Website, zu der Sie danach jedes „Extra“ einzeln dazukaufen. **Jede Website, die ich baue, ist vom ersten Tag an schnell, für Google optimiert und bereit für KI**, mit allem, was Sie brauchen, um Ergebnisse zu messen. Ein Angebot, ein Festpreis.\n",
+    "mainEyebrow": "Wo alles beginnt",
+    "mainTitle": "Ihre komplette Website",
+    "mainText": "Firmenwebsites, Onlineshops und individuelle Projekte. Sie bekommen eine Website, die **fertig ist, funktioniert und die Sie bedienen können**: vom ersten Entwurf bis zum Launch und zur Schulung.\n\nDer Preis steht im Angebot und **bleibt, wie er ist**.\n",
+    "mainCtaLabel": "Kostenloses Angebot anfordern",
+    "mainCtaLink": {
+      "discriminant": "#contatti"
+    },
+    "mainLinkLabel": "Wie ich Websites baue",
+    "mainLinkLink": {
+      "discriminant": "/servizi/siti-web/"
+    },
+    "includedTitle": "Immer inklusive",
+    "included": [
+      {
+        "title": "Individuelles Design",
+        "text": "Keine Templates: gestaltet für Ihre Kunden, auf jedem Bildschirm."
+      },
+      {
+        "title": "Texte, die verkaufen",
+        "text": "Geschrieben mit den Worten, die Ihre Kunden bei Google suchen."
+      },
+      {
+        "title": "SEO ab dem ersten Tag",
+        "text": "Struktur, strukturierte Daten, Local SEO und Google-Unternehmensprofil."
+      },
+      {
+        "title": "Performance von 100",
+        "text": "Leistung, Barrierefreiheit und Best Practices mit Lighthouse geprüft."
+      },
+      {
+        "title": "Bereit für KI",
+        "text": "Leicht lesbar für ChatGPT und Gemini, mit KI-Assistent, wenn Sie ihn brauchen."
+      },
+      {
+        "title": "Messbar von Anfang an",
+        "text": "Google Analytics 4, Tag Manager und Consent Mode eingerichtet."
+      },
+      {
+        "title": "Barrierefrei und rechtskonform",
+        "text": "Konform mit dem Barrierefreiheitsstärkungsgesetz, Datenschutz und Cookies nach DSGVO."
+      },
+      {
+        "title": "100 % Ihre, und Sie können sie bedienen",
+        "text": "Konten auf Ihren Namen und eine Schulung, damit Sie selbst aktualisieren."
+      }
+    ],
+    "othersTitle": "Sie haben schon eine Website? Holen wir mehr heraus",
+    "othersText": "Ist Ihre Website in Ordnung, bringt aber keine Ergebnisse, setze ich nur dort an, wo es nötig ist. Oft muss sie nicht neu gebaut werden, sondern repariert.\n",
+    "othersMore": "Meine Website verbessern",
+    "others": [
+      {
+        "icon": "search",
+        "title": "SEO-Beratung",
+        "text": "Technische Audits, Keywords, Local SEO, Migrationen und Sichtbarkeit in ChatGPT. Mein Spezialgebiet.",
+        "link": {
+          "discriminant": "/servizi/consulenza-seo/"
+        },
+        "highlight": true
+      },
+      {
+        "icon": "bolt",
+        "title": "Performance und Lighthouse",
+        "text": "Ich mache Ihre bestehende Website schnell und bringe sie durch die Core Web Vitals von Google.",
+        "link": {
+          "discriminant": "/servizi/miglioramento-prestazioni-siti-web/"
+        },
+        "highlight": false
+      },
+      {
+        "icon": "sparkles",
+        "title": "KI-Integration",
+        "text": "Assistenten für Ihre Kunden, Automatisierungen, die Stunden sparen, und Schulungen für Ihr Team.",
+        "link": {
+          "discriminant": "/servizi/integrazione-ai/"
+        },
+        "highlight": false
+      },
+      {
+        "icon": "bulb",
+        "title": "Digitalberatung",
+        "text": "Analysen, priorisierter Maßnahmenplan, Workshops und eine Zweitmeinung zu Ihrer Agentur.",
+        "link": {
+          "discriminant": "/servizi/consulenza-digitale/"
+        },
+        "highlight": false
+      }
+    ],
+    "adsTitle": "Die Website steht? Jetzt kommen die Kunden",
+    "adsText": "Kampagnen zum Festpreis, nicht zum Prozentsatz Ihres Budgets. Ich optimiere auf Anfragen und Verkäufe, nicht auf Klicks oder Likes.\n",
+    "ads": [
+      {
+        "title": "Google Ads",
+        "text": "Search, Performance Max und YouTube. Erscheinen Sie genau dann, wenn man Sie sucht.",
+        "link": {
+          "discriminant": "/servizi/google-ads/"
+        }
+      },
+      {
+        "title": "KI-Werbung",
+        "badge": "Neu",
+        "text": "Anzeigen in ChatGPT und KI-Assistenten: der neue Kanal, vor Ihrer Konkurrenz.",
+        "link": {
+          "discriminant": "/servizi/ai-ads/"
+        }
+      },
+      {
+        "title": "Meta Ads",
+        "text": "Facebook und Instagram für neue Anfragen, mit sauber eingerichtetem Pixel und Conversions API.",
+        "link": {
+          "discriminant": "/servizi/meta-ads/"
+        }
+      }
+    ]
+  },
+  "lighthouse": {
+    "eyebrow": "Performance und Best Practices",
+    "title": "Lighthouse, einfach erklärt",
+    "text": "**Lighthouse ist das kostenlose Google-Tool, das Ihre Website zum TÜV schickt.** Es prüft sie von oben bis unten und vergibt vier Noten von 0 bis 100: dieselbe Art von Kontrolle, mit der Google erkennt, ob Ihre Website ein gutes Nutzererlebnis bietet.\n\nJede Website, die ich baue, wird **mit Lighthouse geprüft** übergeben. Die 100 ist keine Angeberei: Sie ist der einfachste Beweis, mit einer Zahl, die Sie selbst prüfen können, dass gute Arbeit geleistet wurde.\n",
+    "image": "@it",
+    "imageAlt": "Illustration einer Website mit vier Lighthouse-Werten von 100 und grünen Core Web Vitals",
+    "scores": [
+      {
+        "title": "Leistung",
+        "value": 100,
+        "text": "**Wie schnell Ihre Website ist.** Wie ein Laden, dessen Tür sofort aufgeht: Muss der Kunde warten, geht er wieder. Laut Google wird mehr als die Hälfte der mobilen Besuche abgebrochen, wenn eine Seite länger als 3 Sekunden lädt.\n"
+      },
+      {
+        "title": "Barrierefreiheit",
+        "value": 100,
+        "text": "**Alle können sie nutzen**, auch Menschen mit Sehschwäche oder wer nur mit Tastatur oder Screenreader surft. Das ist richtig, vergrößert Ihre Zielgruppe und ist seit dem 28. Juni 2025 mit dem Barrierefreiheitsstärkungsgesetz für viele Unternehmen, die online verkaufen, Pflicht.\n"
+      },
+      {
+        "title": "Best Practices",
+        "value": 100,
+        "text": "**Gebaut nach allen Regeln der Kunst.** Sichere Verbindung (HTTPS), keine versteckten Fehler, aktuelle Komponenten, Bilder im richtigen Format. Wie eine Elektroinstallation nach Norm: Man sieht sie nicht, aber sie macht den Unterschied.\n"
+      },
+      {
+        "title": "SEO",
+        "value": 100,
+        "text": "**Google versteht, was Sie tun.** Titel, Beschreibungen, Seitenstruktur und Links in Ordnung. Das ist das technische Fundament: Ohne es bleiben selbst die besten Inhalte unbemerkt.\n"
+      }
+    ],
+    "cwvTitle": "Core Web Vitals",
+    "cwvText": "Drei Messwerte, die Google bei den **echten Besuchern** Ihrer Website erhebt und auch fürs Ranking nutzt. Kurz gesagt: Geschwindigkeit, Reaktion und Stabilität.\n",
+    "cwv": [
+      {
+        "title": "LCP · Geschwindigkeit",
+        "text": "Wann der Hauptinhalt erscheint",
+        "good": "Gut: unter 2,5 s"
+      },
+      {
+        "title": "INP · Reaktion",
+        "text": "Wie schnell die Seite auf Tippen oder Klicken reagiert",
+        "good": "Gut: unter 200 ms"
+      },
+      {
+        "title": "CLS · Stabilität",
+        "text": "Wie sehr die Seite beim Laden „springt“ (der Button, der Ihnen davonläuft)",
+        "good": "Gut: unter 0,1"
+      }
+    ],
+    "testTitle": "Welche Note bekommt Ihre Website?",
+    "testText": "Geben Sie die Adresse ein, und PageSpeed Insights öffnet sich, das offizielle Google-Tool auf Basis von Lighthouse. Sie sehen rote oder orange Werte? **Sprechen wir darüber**.\n",
+    "testPlaceholder": "www.ihre-website.de",
+    "testButton": "Meine Website analysieren"
+  },
+  "seoSection": {
+    "eyebrow": "SEO-Beratung",
+    "title": "SEO: Gefunden werden von denen, die Sie schon suchen",
+    "text": "Jeden Tag sucht jemand bei Google genau nach dem, was Sie anbieten. SEO sorgt dafür, dass er **Sie** findet, nicht die Konkurrenz. Und anders als bei Werbung bleiben die Ergebnisse, auch wenn Sie nicht mehr zahlen. **Bei den Websites, die ich baue, gehört SEO zum Fundament**; haben Sie schon eine Website, setzt die SEO-Beratung dort an.\n",
+    "image": "@it",
+    "imageAlt": "Illustration einer Ergebnisseite mit Ihrer Website auf Platz eins",
+    "pillars": [
+      {
+        "title": "Technik",
+        "text": "Ladezeit, Struktur, strukturierte Daten, Indexierung. Das Fundament."
+      },
+      {
+        "title": "Inhalte",
+        "text": "Seiten, die die echten Fragen Ihrer Kunden beantworten."
+      },
+      {
+        "title": "Autorität",
+        "text": "Bewertungen, Erwähnungen, Links und Ihr Google-Unternehmensprofil."
+      }
+    ],
+    "boxTitle": "Und jetzt auch die KI",
+    "boxText": "Immer mehr Menschen fragen ChatGPT, Gemini oder Perplexity um Rat statt Google. Ich bereite Ihre Website so vor, dass diese KIs sie verstehen und in ihren Antworten zitieren (das nennt sich GEO).\n",
+    "note": "**Ganz offen:** Niemand kann Ihnen Platz eins bei Google garantieren, und wer es tut, lügt Sie an. Was ich Ihnen garantiere: eine bewährte Methode, klare Prioritäten und Berichte, die man versteht.\n"
+  },
+  "ai": {
+    "eyebrow": "KI-Integration",
+    "title": "Künstliche Intelligenz, die wirklich für Ihr Unternehmen arbeitet",
+    "text": "Über KI wird viel geredet, aber was kann sie für ein KMU wirklich tun? Einiges, wenn man sie mit Verstand einsetzt. **Zuerst klären wir gemeinsam, ob Sie sie brauchen, dann integrieren wir sie in Ihre neue Website oder in die Tools, die Sie schon nutzen**, im Einklang mit DSGVO und europäischer KI-Verordnung.\n",
+    "image": "@it",
+    "imageAlt": "Illustration eines KI-Assistenten, verbunden mit Website, E-Mail, Dokumenten und Statistiken",
+    "cards": [
+      {
+        "title": "Assistent auf der Website",
+        "text": "Beantwortet Kundenfragen rund um die Uhr mit **Ihren** Informationen (Öffnungszeiten, Produkte, Preise) und gibt Ihnen Kontakte weiter, die Sie direkt anrufen können.\n"
+      },
+      {
+        "title": "Automatisierungen",
+        "text": "Angebote, E-Mail-Antworten, Sortierung von Anfragen, CRM-Pflege: Die Routinearbeit erledigt die Maschine.\n"
+      },
+      {
+        "title": "Inhalte und Kataloge",
+        "text": "Beschreibungen, Produktseiten und Übersetzungen mit KI erstellt und **immer von einem Menschen geprüft**.\n"
+      },
+      {
+        "title": "Interner Assistent",
+        "text": "Ihr Team befragt die Unternehmensdokumente (Handbücher, Preislisten, Abläufe) und bekommt in Sekunden Antworten.\n"
+      },
+      {
+        "title": "Sichtbarkeit in der KI",
+        "text": "Strukturierte Daten und klare Inhalte, damit ChatGPT, Gemini und Perplexity Sie kennen und empfehlen.\n"
+      },
+      {
+        "title": "Schulung",
+        "text": "Praxisnahe Workshops, um KI täglich sicher zu nutzen, ohne die Daten Ihrer Kunden zu gefährden.\n"
+      }
+    ]
+  },
+  "benefits": {
+    "eyebrow": "Wie ich arbeite",
+    "title": "Die Vorteile eines Freelancers (des richtigen)",
+    "text": "Sie bekommen die Erfahrung von jemandem, der Entwicklungsteams in internationalen Agenturen geleitet hat, aber mit **einem einzigen Ansprechpartner: mir**.\n",
+    "items": [
+      {
+        "icon": "tag",
+        "title": "Festpreis statt Stundensatz",
+        "text": "Nach der Analyse erhalten Sie ein klares Angebot. Dieser Preis ändert sich nicht: keine überraschenden Zusatzstunden."
+      },
+      {
+        "icon": "key",
+        "title": "Die Website gehört Ihnen",
+        "text": "Konten, Domain, Code und Daten laufen auf Ihren Namen. Wollen Sie eines Tages den Dienstleister wechseln, sind Sie frei."
+      },
+      {
+        "icon": "chat",
+        "title": "Sie sprechen immer mit mir",
+        "text": "Keine Vertriebler oder „Account Manager“ dazwischen. Wer Ihnen zuhört, macht auch die Arbeit."
+      },
+      {
+        "icon": "idea",
+        "title": "Alles verständlich erklärt",
+        "text": "Ich mache aus Technik Entscheidungen: was zu tun ist, warum, was es kostet und was es Ihnen bringt."
+      },
+      {
+        "icon": "video",
+        "title": "Berichte, die man versteht",
+        "text": "Jeden Monat ein kurzes Video, in dem ich Ihnen die Zahlen und ihre Bedeutung zeige. Ansehen, wann Sie wollen."
+      },
+      {
+        "icon": "shield",
+        "title": "Ehrlich, auch wenn es mich etwas kostet",
+        "text": "Brauchen Sie etwas nicht, sage ich es Ihnen. Oft muss die Website nicht neu gebaut werden, sondern repariert."
+      }
+    ]
+  },
+  "problems": {
+    "eyebrow": "Kommt Ihnen das bekannt vor?",
+    "title": "Wenn Sie sich auch nur in einem dieser Sätze wiederfinden, können wir viel bewegen",
+    "items": [
+      "„Die Website ist schön, aber es kommen keine Anfragen.“",
+      "„Bei Google tauchen nur meine Konkurrenten auf.“",
+      "„Die Website ist langsam, vor allem auf dem Handy.“",
+      "„Ich zahle für Anzeigen, weiß aber nicht, was sie bringen.“",
+      "„Ich bekomme Berichte voller Grafiken, die niemand versteht.“",
+      "„Alle reden von KI, aber ich weiß nicht, wo ich anfangen soll.“"
+    ]
+  },
+  "method": {
+    "eyebrow": "Methode",
+    "title": "Vom ersten Gespräch zur fertigen Website, in 6 klaren Schritten",
+    "text": "",
+    "steps": [
+      {
+        "title": "Erstgespräch",
+        "text": "25 Minuten, kostenlos und unverbindlich. Erzählen Sie mir von Ihrem Unternehmen, Ihren Kunden und Ihren Zielen."
+      },
+      {
+        "title": "Analyse",
+        "text": "Ich untersuche Ihre Konkurrenz, was Ihre Kunden bei Google suchen, und Ihre aktuelle Website, falls vorhanden. Ich gehe von Daten aus, nicht von Meinungen."
+      },
+      {
+        "title": "Festpreisangebot",
+        "text": "Seiten, Funktionen, Zeitplan und Preis, alles schriftlich. SEO, Performance und Tracking bereits inklusive."
+      },
+      {
+        "title": "Design, Texte und Entwicklung",
+        "text": "Zuerst geben Sie Struktur, Texte und Design frei, dann entwickle ich die Website. In jeder Phase halte ich Sie auf dem Laufenden."
+      },
+      {
+        "title": "Launch und Schulung",
+        "text": "Prüfung mit Lighthouse, SEO-Migration ohne Ranking-Verluste, laufendes Tracking und Schulung für die Pflege der Website."
+      },
+      {
+        "title": "Wachstum",
+        "text": "Wenn Sie möchten, machen wir gemeinsam weiter: SEO, Kampagnen, neue KI-Funktionen und ein monatlicher Video-Bericht."
+      }
+    ]
+  },
+  "fit": {
+    "eyebrow": "Für wen",
+    "title": "Wir arbeiten gut zusammen, wenn …",
+    "yesTitle": "Wir passen zusammen, wenn Sie",
+    "yes": [
+      "ein KMU führen, selbstständig sind oder einen Onlineshop haben",
+      "jemanden suchen, der berät, nicht nur ausführt",
+      "messbare Ergebnisse wollen und wissen, dass Qualität eine Investition ist",
+      "eine ehrliche Meinung schätzen, auch wenn sie anders ausfällt als erwartet"
+    ],
+    "noTitle": "Wir passen nicht zusammen, wenn Sie",
+    "no": [
+      "nur den niedrigsten Preis suchen",
+      "das Versprechen „in einem Monat auf Platz eins bei Google“ wollen",
+      "nicht einmal eine halbe Stunde im Monat Zeit für ein Gespräch haben",
+      "eine „schöne“ Website einer funktionierenden vorziehen"
+    ]
+  },
+  "about": {
+    "eyebrow": "Über mich",
+    "title": "Mit wem Sie arbeiten",
+    "text": "Ich heiße Antonio und baue und optimiere seit über 15 Jahren Websites. Ich habe in Webagenturen im Ausland gearbeitet, zuerst als *Junior Developer*, dann als *Senior* und schließlich als *Lead Developer* an der Spitze des Entwicklungsteams. Seit 2016 bin ich Freelancer und arbeite sowohl für Unternehmen als auch für Agenturen.\n\n**Performance, SEO und Codequalität** waren für mich immer Teil des Projekts, kein Zusatz. Heute stelle ich diese Erfahrung allen zur Verfügung, die online messbar wachsen wollen, und setze künstliche Intelligenz dort ein, wo sie wirklich hilft.\n\nIch stamme aus dem Friaul und lebe in Venetien, in Norditalien. In 11 Jahren im Ausland habe ich fließend **Deutsch, Englisch und Spanisch** sprechen gelernt: Ich kann Ihr Projekt also auch auf internationalen Märkten begleiten.\n",
+    "image": "@it",
+    "imageAlt": "Antonio Bortolin, Berater für SEO, Performance und KI",
+    "stats": [
+      {
+        "value": 15,
+        "suffix": "+",
+        "text": "Jahre Erfahrung",
+        "animate": true
+      },
+      {
+        "value": 400,
+        "suffix": "+",
+        "text": "Projekte",
+        "animate": true
+      },
+      {
+        "value": 4,
+        "text": "Sprachen",
+        "animate": false
+      },
+      {
+        "value": 1,
+        "text": "Ansprechpartner",
+        "animate": false
+      }
+    ]
+  },
+  "agency": {
+    "eyebrow": "Für Webagenturen",
+    "title": "Ihr Tech-Team, wann immer Sie es brauchen",
+    "text": "Ich arbeite hinter den Kulissen für Kommunikationsagenturen, Designstudios und freie Designer, auch unter **Ihrer Marke** (White Label). Ich kontaktiere Ihre Kunden nie und biete mich ihnen nicht an: Das ist eine Regel, kein Versprechen.\n",
+    "image": "@it",
+    "imageAlt": "Illustration: ein Design, umgesetzt in funktionierenden Code",
+    "cards": [
+      {
+        "title": "Entwicklung und externe Unterstützung",
+        "text": "Ich setze Ihre Designs (Figma, PDF oder Designsystem) in schnelle, barrierefreie Websites um. Ich repariere bestehende Websites, optimiere die Ladezeit, richte das Tracking ein und kümmere mich um die Wartung.",
+        "ctaLabel": "Entwicklung für Agenturen",
+        "ctaLink": {
+          "discriminant": "custom",
+          "value": "/servizi/sviluppatore-freelance-per-web-agency/#white-label"
+        }
+      },
+      {
+        "title": "Projektmanager",
+        "text": "Ich koordiniere digitale Projekte zwischen Kunde und Team: Ich übersetze Anforderungen in klare Aufgaben, behalte Zeit und Ressourcen im Blick und erkenne Probleme, bevor sie entstehen.",
+        "ctaLabel": "Projektmanagement für Agenturen",
+        "ctaLink": {
+          "discriminant": "custom",
+          "value": "/servizi/sviluppatore-freelance-per-web-agency/#project-management"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "title": "Die Fragen, die ich am häufigsten höre",
+    "text": "Ihre Frage ist nicht dabei? [Schreiben Sie mir](#contatti), ich antworte innerhalb eines Werktags.\n",
+    "items": [
+      {
+        "question": "Was kostet eine Website?",
+        "answer": "Das hängt davon ab, wie viele Seiten und Funktionen Sie brauchen. Nach dem kostenlosen Gespräch und einer ersten Analyse schicke ich Ihnen ein Angebot zum **Festpreis**, das SEO, Performance, Barrierefreiheit, Tracking und Schulung bereits enthält: ohne versteckte Kosten. Auch Beratung und Kampagnenbetreuung haben einen Festpreis, nie einen Prozentsatz Ihres Werbebudgets.\n"
+      },
+      {
+        "question": "Was ist in der Website enthalten?",
+        "answer": "Alles, was eine funktionierende Website braucht: individuelles Design, Texte, Entwicklung, technisches und lokales SEO, Lighthouse-Optimierung, Barrierefreiheit, Google Analytics und Tag Manager mit Consent Mode, Datenschutz und Cookies nach DSGVO, Launch und Schulung. KI-Funktionen wie ein Kundenassistent kommen dazu, wenn Sie sie brauchen.\n"
+      },
+      {
+        "question": "Wann sieht man Ergebnisse?",
+        "answer": "Verbesserungen der Ladezeit sieht man in Lighthouse sofort, in den Google-Daten echter Besucher nach etwa einem Monat. Google-Ads-Kampagnen liefern erste Daten nach wenigen Tagen. SEO ist eine Investition: Solide Ergebnisse kommen meist nach 3 bis 6 Monaten und bleiben dann bestehen.\n"
+      },
+      {
+        "question": "Muss ich meine Website komplett neu bauen?",
+        "answer": "Nicht unbedingt. Sehr oft lässt sich eine bestehende Website für viel weniger, als ein Neubau kostet, beschleunigen und im SEO korrigieren. Ist ein Neubau die beste Option, sage ich es Ihnen und erkläre, warum.\n"
+      },
+      {
+        "question": "Warum sollte mich der Lighthouse-Wert interessieren?",
+        "answer": "Weil er Dinge misst, die Ihren Umsatz beeinflussen: Eine langsame Website verliert Besucher, eine wenig barrierefreie schließt Kunden aus (und ist heute womöglich nicht gesetzeskonform), eine Website mit technischen Problemen hat es bei Google schwer. Außerdem ist er ein objektiver Weg, die Arbeit jedes Anbieters zu prüfen, auch meine.\n"
+      },
+      {
+        "question": "Kann KI einem kleinen Unternehmen wirklich helfen?",
+        "answer": "Ja, wenn sie ein konkretes Problem löst: Kunden schneller antworten, Ihnen Routinearbeit abnehmen, in ChatGPT erscheinen. Wir starten immer bei einem echten Fall und messen die gesparte Zeit oder das gesparte Geld. Lohnt es sich nicht, lassen wir es.\n"
+      },
+      {
+        "question": "Gehören Website und Konten mir?",
+        "answer": "Immer. Domain, Hosting, Code, Google- und Werbekonten laufen auf Ihren Namen. Sie können jederzeit den Dienstleister wechseln, ohne Bindung.\n"
+      },
+      {
+        "question": "Arbeiten Sie remote und mit Kunden aus Deutschland?",
+        "answer": "Ja. Ich lebe in Venetien (Italien) und treffe Kunden aus Venetien und Friaul persönlich, arbeite aber problemlos remote für ganz Italien und das Ausland, auch für Deutschland, auf Deutsch, Englisch, Italienisch und Spanisch.\n"
+      }
+    ]
+  },
+  "seo": {
+    "title": "Schnelle Websites mit SEO und KI inklusive | bortolin.dev",
+    "description": "Schnelle Websites zum Festpreis, bereit für Google und KI. Freelance-Webdesigner, Entwickler und SEO-Berater, auch für Kunden in Deutschland.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false
+  }
+}

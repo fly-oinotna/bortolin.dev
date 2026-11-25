@@ -1,0 +1,6 @@
+---
+import { prefix } from '../../i18n/langs';
+interface Props { label: string; class?: string }
+const { label, class: cls = 'flex items-center text-2xl font-bold text-black lg:text-3xl' } = Astro.props;
+---
+<a href={`${prefix(Astro.currentLocale ?? 'it')}/`} class={cls} aria-label={label}>bortolin<span class="grid h-14 w-14 place-items-center rounded-full bg-bd-green text-xl">.dev</span></a>

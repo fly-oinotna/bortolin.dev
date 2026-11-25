@@ -1,0 +1,225 @@
+{
+  "general": {
+    "ogImage": "@it",
+    "headerCtaLabel": "Angebot anfordern",
+    "headerCtaLink": {
+      "discriminant": "#contatti",
+      "value": null
+    }
+  },
+  "contacts": {
+    "whatsappLabel": "Schreiben Sie mir auf WhatsApp"
+  },
+  "reviews": {
+    "eyebrow": "Bewertungen",
+    "title": "Was meine Kunden sagen",
+    "text": "Die Bewertungen kommen direkt von Google, ungefiltert, und werden automatisch in Ihre Sprache übersetzt.",
+    "ratingLabel": "Durchschnittliche Bewertung bei Google",
+    "ratingShort": "bei Google",
+    "countLabel": "{n} Bewertungen",
+    "translated": "Von Google übersetzt · Original ansehen",
+    "all": "Alle Bewertungen bei Google lesen",
+    "leave": "Schon mit mir gearbeitet? Bewertung schreiben"
+  },
+  "contact": {
+    "title": "Sprechen wir über Ihre neue Website",
+    "text": "Erzählen Sie mir von Ihrem Projekt. **Das erste 25-minütige Gespräch ist kostenlos** und unverbindlich.",
+    "bullets": [
+      "Kostenlos und unverbindlich",
+      "Antwort innerhalb eines Werktags",
+      "Sie sprechen direkt mit mir"
+    ],
+    "formTitle": "Kostenloses Angebot anfordern",
+    "name": "Vor- und Nachname",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "website": "Aktuelle Website",
+    "websitePlaceholder": "www.ihre-website.de",
+    "topicsLabel": "Was brauchen Sie?",
+    "topics": [
+      {
+        "label": "Neue Website"
+      },
+      {
+        "label": "Website-Relaunch"
+      },
+      {
+        "label": "SEO"
+      },
+      {
+        "label": "Ladezeit"
+      },
+      {
+        "label": "KI"
+      },
+      {
+        "label": "Werbung"
+      }
+    ],
+    "message": "Erzählen Sie mir von Ihrem Projekt",
+    "privacy": "Ich habe die [Datenschutzerklärung](/informativa-sulla-privacy/) gelesen und bin mit der Verarbeitung meiner Daten zur Kontaktaufnahme einverstanden.",
+    "submit": "Anfrage senden"
+  },
+  "caseStudies": {
+    "featuresTitle": "Was die Website bietet",
+    "readLabel": "Zur Fallstudie",
+    "visitLabel": "Website besuchen"
+  },
+  "footer": {
+    "text": "Ich baue komplette, schnelle Websites, die bei Google ranken und in KI-Antworten auftauchen. Ich arbeite für Unternehmen, Selbstständige und Webagenturen, zum Festpreis und ohne Fachchinesisch.",
+    "column1": [
+      {
+        "title": "Für Unternehmen und Selbstständige",
+        "links": [
+          {
+            "label": "Alle Leistungen",
+            "link": {
+              "discriminant": "/servizi/",
+              "value": null
+            },
+            "bold": true
+          },
+          {
+            "label": "Komplette Websites",
+            "link": {
+              "discriminant": "/servizi/siti-web/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "SEO-Beratung",
+            "link": {
+              "discriminant": "/servizi/consulenza-seo/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "Performance und Lighthouse",
+            "link": {
+              "discriminant": "/servizi/miglioramento-prestazioni-siti-web/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "KI-Integration",
+            "link": {
+              "discriminant": "/servizi/integrazione-ai/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "Digitalberatung",
+            "link": {
+              "discriminant": "/servizi/consulenza-digitale/",
+              "value": null
+            },
+            "bold": false
+          }
+        ]
+      },
+      {
+        "title": "Werbung",
+        "links": [
+          {
+            "label": "Google Ads",
+            "link": {
+              "discriminant": "/servizi/google-ads/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "KI-Werbung",
+            "link": {
+              "discriminant": "/servizi/ai-ads/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "Meta Ads",
+            "link": {
+              "discriminant": "/servizi/meta-ads/",
+              "value": null
+            },
+            "bold": false
+          }
+        ]
+      }
+    ],
+    "column2": [
+      {
+        "title": "Für Webagenturen",
+        "links": [
+          {
+            "label": "Freelance-Entwickler (White Label)",
+            "link": {
+              "discriminant": "custom",
+              "value": "/servizi/sviluppatore-freelance-per-web-agency/#white-label"
+            },
+            "bold": false
+          },
+          {
+            "label": "Freelance-Projektmanager",
+            "link": {
+              "discriminant": "custom",
+              "value": "/servizi/sviluppatore-freelance-per-web-agency/#project-management"
+            },
+            "bold": false
+          }
+        ]
+      }
+    ],
+    "boxTitle": "Sprechen wir über Ihr Projekt",
+    "boxText": "Das erste 25-minütige Gespräch ist kostenlos und unverbindlich.",
+    "boxCtaLabel": "Kostenloses Gespräch buchen",
+    "boxCtaLink": {
+      "discriminant": "#contatti",
+      "value": null
+    },
+    "vatLabel": "USt-IdNr.:",
+    "legal": [
+      {
+        "label": "Datenschutzerklärung",
+        "link": {
+          "discriminant": "/informativa-sulla-privacy/",
+          "value": null
+        }
+      },
+      {
+        "label": "Cookie-Richtlinie",
+        "link": {
+          "discriminant": "/informativa-sulla-gestione-dei-cookie/",
+          "value": null
+        }
+      }
+    ]
+  },
+  "a11y": {
+    "skip": "Zum Inhalt springen",
+    "home": "bortolin.dev – Startseite",
+    "mainNav": "Hauptmenü",
+    "mobileNav": "Mobiles Menü",
+    "openMenu": "Menü öffnen",
+    "closeMenu": "Menü schließen",
+    "toggleServices": "Leistungsmenü anzeigen",
+    "offer": "Empfohlen",
+    "toContacts": "Zum Kontakt",
+    "contacts": "So erreichen Sie mich",
+    "language": "Sprache",
+    "social": "Soziale Netzwerke",
+    "follow": "Folgen Sie mir auf",
+    "highlights": "Warum mit mir arbeiten",
+    "projectTags": "Die wichtigsten Punkte des Projekts",
+    "scores": "Lighthouse-Ziel: 100 von 100 in allen vier Kategorien",
+    "stars": "{n} von 5 Sternen",
+    "reviewer": "Google-Profil von",
+    "psiField": "Die Adresse Ihrer Website",
+    "psiForm": "Website mit PageSpeed Insights analysieren",
+    "honeypot": "Leer lassen"
+  }
+}

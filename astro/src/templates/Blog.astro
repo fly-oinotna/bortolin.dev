@@ -1,0 +1,159 @@
+---
+// BLOG (indice) — testi in Keystatic → "Blog"; gli articoli sono la collection "Post".
+// Ricerca e filtri per categoria sono gestiti da main.js ([data-blog]).
+import Base from '../layouts/Base.astro';
+import Icon from '../components/ui/Icon.astro';
+import Img from '../components/ui/Img.astro';
+import Breadcrumb from '../components/ui/Breadcrumb.astro';
+import Reviews from '../components/sections/Reviews.astro';
+import Contact from '../components/sections/Contact.astro';
+import { read, readGlobals, entries, entry } from '../lib/content';
+import { rich } from '../lib/rich';
+import { href } from '../lib/links';
+import { postUrl } from '../lib/pages';
+import { categoryLabel, readingTime } from '../lib/blog';
+import { t } from '../i18n/ui';
+
+interface Props { lang?: string }
+const { lang = 'it' } = Astro.props;
+const g = await readGlobals(lang);
+const p = await read('blog', lang);
+const { hero: h, list: l, help } = p;
+const trail = [{ name: h.breadcrumb || 'Blog', url: g.url('/blog/') }];
+const posts = (await entries('posts', lang)).sort((a, b) => String(b.entry.content.date).localeCompare(String(a.entry.content.date)));
+const featured = posts.find((x) => x.itSlug === h.featured) ?? posts[0];
+// in elenco l'articolo in evidenza è primo (visibile solo filtrando), gli altri seguono per data
+const list = featured ? [featured, ...posts.filter((x) => x !== featured)] : posts;
+const cats = [...new Set(list.map((x) => x.entry.content.category))];
+const count = (c: string) => posts.filter((x) => x.entry.content.category === c).length;
+const fmt = new Intl.DateTimeFormat(lang, { day: 'numeric', month: 'long', year: 'numeric' });
+const date = (d: string) => fmt.format(new Date(`${d}T12:00:00`));
+const many = (n: number) => (n === 1 ? l.countOne : (l.countMany ?? '').replace('{n}', String(n)));
+---
+<Base g={g} seo={p.seo} breadcrumb={trail} schema={{ blog: { posts: posts.map((x) => ({ headline: x.entry.title, url: g.url(postUrl(x.itSlug)), date: x.entry.content.date })) } }}>
+  <div data-blog>
+  <!-- ================================================= HERO -->
+  <section class="overflow-hidden bg-black pt-8 pb-16 text-white md:pt-12 md:pb-24">
+    <div class="container">
+      <nav aria-label={t(g.lang).breadcrumb} class="mb-8 text-sm">
+        <ol class="flex flex-wrap items-center gap-1.5 text-gray-400">
+          <li><a href={g.url('/')} class="hover:text-white hover:underline">{t(g.lang).home}</a></li><li aria-hidden="true">/</li>
+          <li><span aria-current="page" class="font-semibold text-white">{trail[0].name}</span></li>
+        </ol>
+      </nav>
+      <div class="grid grid-cols-1 items-end gap-10 lg:grid-cols-12 lg:gap-12">
+        <div class="lg:col-span-5">
+          {h.eyebrow && <p class="mb-4 inline-flex items-center gap-2 text-sm font-bold text-bd-green uppercase"><span class="h-2 w-2 animate-pulse rounded-full bg-bd-green"></span>{h.eyebrow}</p>}
+          <h1 class="text-5xl leading-[1.02] font-extrabold text-white md:text-6xl lg:text-7xl" set:html={rich(h.title, { mark: 'text-bd-green', strong: 'text-white' })} />
+          <p class="mt-6 text-lg text-gray-300" set:html={rich(h.text, { strong: 'text-white' })} />
+          <form class="relative mt-8" role="search" onsubmit="return false">
+            <label for="blog-search" class="sr-only">{h.searchLabel}</label>
+            <svg aria-hidden="true" class="pointer-events-none absolute top-1/2 left-5 -translate-y-1/2 text-gray-500" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+            <input id="blog-search" data-blog-search type="search" placeholder={h.searchPlaceholder} class="w-full rounded-full border-2 border-white/15 bg-white/10 py-4 pr-5 pl-13 text-white placeholder:text-gray-400 focus:border-bd-green focus:outline-none">
+          </form>
+        </div>
+        {featured && (
+          <article class="group relative overflow-hidden rounded-3xl lg:col-span-7">
+            <div class="relative aspect-[16/10] overflow-hidden">
+              <Img src={featured.entry.content.image} alt="" widths={[640, 960, 1200]} sizes="(min-width: 1024px) 700px, 100vw" loading="eager" fetchpriority="high" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+              <div aria-hidden="true" class="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent"></div>
+            </div>
+            <div class="absolute inset-x-0 bottom-0 p-6 md:p-8">
+              <p class="flex flex-wrap items-center gap-2"><span class="rounded-full bg-bd-green px-3 py-1 text-xs font-bold text-black uppercase">{h.featuredLabel}</span><span class="rounded-full bg-white/15 px-3 py-1 text-xs font-bold text-white backdrop-blur">{categoryLabel(featured.entry.content.category, lang)}</span></p>
+              <h2 class="mt-4 mb-2 text-2xl leading-tight text-white md:text-4xl"><a href={g.url(postUrl(featured.itSlug))} class="after:absolute after:inset-0 group-hover:underline">{featured.entry.title}</a></h2>
+              <p class="hidden max-w-2xl text-gray-200 md:block">{featured.entry.content.excerpt}</p>
+              <p class="mt-4 flex items-center gap-3 text-xs text-gray-300"><time datetime={featured.entry.content.date}>{date(featured.entry.content.date)}</time><span class="flex items-center gap-1"><Icon name="clock" size={14} stroke={2.2} />{readingTime(featured.entry.content)} min {h.readingLabel}</span></p>
+            </div>
+          </article>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= FILTRI -->
+  <div data-blog-bar class="sticky top-20 z-30 border-b border-gray-200 bg-white/90 backdrop-blur">
+    <div class="container flex items-center gap-4 py-3">
+      <div class="-mx-1 flex flex-1 gap-2 overflow-x-auto px-1 py-1 [scrollbar-width:none]" role="group" aria-label={l.filterLabel}>
+        {[['tutti', l.allLabel, posts.length], ...cats.map((c) => [c, categoryLabel(c, lang), count(c)])].map(([v, label, num], i) => (
+          <button type="button" data-cat-filter={v} aria-pressed={i === 0 ? 'true' : 'false'} class="inline-flex items-center gap-2 rounded-full bg-gray-100 py-2 pr-2 pl-4 text-sm font-semibold whitespace-nowrap text-black transition-colors hover:bg-gray-200">{label}<span data-cat-count class="grid h-6 min-w-6 place-items-center rounded-full bg-white px-1.5 text-xs">{num}</span></button>
+        ))}
+      </div>
+      <p class="hidden shrink-0 text-sm font-semibold text-gray-600 md:block" aria-live="polite" data-blog-count data-one={l.countOne} data-many={l.countMany}>{many(posts.length)}</p>
+    </div>
+  </div>
+
+  <!-- ================================================= ELENCO -->
+  <section data-blog-list class="scroll-mt-12 py-12 md:py-16">
+    <div class="container">
+      <div class="grid grid-flow-dense grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {list.map((x, i) => {
+          const c = x.entry.content;
+          const extra = l.extraTitle && i === (l.extraAfter ?? 6) ? (
+            <aside data-blog-extra class="relative flex flex-col justify-between overflow-hidden rounded-3xl bg-bd-green p-6 md:p-8">
+              <div aria-hidden="true" class="absolute -right-10 -bottom-10 h-40 w-40 rounded-full bg-black/10"></div>
+              <div class="relative">
+                {l.extraEyebrow && <p class="text-sm font-bold uppercase">{l.extraEyebrow}</p>}
+                <p class="mt-3 text-2xl leading-snug font-bold text-black">{l.extraTitle}</p>
+                {l.extraText && <p class="mt-2 text-sm text-black">{l.extraText}</p>}
+              </div>
+              {l.extraCtaLabel && <a href={href(l.extraCtaLink)} class="btn-secondary relative mt-6 w-fit">{l.extraCtaLabel} <Icon name="arrow" size={20} /></a>}
+            </aside>
+          ) : null;
+          const text = `${x.entry.title} ${c.excerpt} ${categoryLabel(c.category, lang)}`;
+          const wide = i >= 4 && i % 3 === 1;
+          const card = wide ? (
+            <article data-post data-cat={c.category} data-text={text} class="group relative grid grid-cols-1 overflow-hidden rounded-3xl bg-black text-white sm:col-span-2 sm:grid-cols-2">
+              <div class="relative aspect-[16/10] overflow-hidden sm:aspect-auto"><Img src={c.image} alt="" widths={[480, 640, 960]} sizes="(min-width: 1024px) 420px, (min-width: 640px) 50vw, 100vw" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" /></div>
+              <div class="flex flex-col p-6 md:p-8">
+                <span class="w-fit rounded-full bg-bd-green px-3 py-1 text-xs font-bold text-black">{categoryLabel(c.category, lang)}</span>
+                <h3 class="mt-4 text-2xl leading-snug text-white"><a href={g.url(postUrl(x.itSlug))} class="after:absolute after:inset-0 group-hover:underline">{x.entry.title}</a></h3>
+                <p class="text-sm text-gray-300">{c.excerpt}</p>
+                <p class="mt-auto flex items-center gap-3 pt-5 text-xs text-gray-400"><time datetime={c.date}>{date(c.date)}</time><span class="flex items-center gap-1"><Icon name="clock" size={14} stroke={2.2} />{readingTime(c)} min</span></p>
+              </div>
+            </article>
+          ) : (
+            <article data-post data-only-filtered={i === 0 ? '' : undefined} hidden={i === 0} data-cat={c.category} data-text={text} class="group relative flex flex-col overflow-hidden rounded-3xl bg-gray-100 transition-shadow duration-300 hover:shadow-xl">
+              <div class="relative aspect-[16/10] overflow-hidden"><Img src={c.image} alt="" widths={[480, 640, 960]} sizes="(min-width: 1024px) 400px, (min-width: 640px) 50vw, 100vw" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                <span class="absolute top-4 left-4 rounded-full bg-white/95 px-3 py-1 text-xs font-bold text-black shadow">{categoryLabel(c.category, lang)}</span></div>
+              <div class="flex flex-1 flex-col p-6">
+                <h3 class="mb-2 text-xl leading-snug"><a href={g.url(postUrl(x.itSlug))} class="after:absolute after:inset-0 group-hover:underline">{x.entry.title}</a></h3>
+                <p class="text-sm">{c.excerpt}</p>
+                <p class="mt-auto flex items-center justify-between gap-3 pt-5 text-xs text-gray-600"><span class="flex items-center gap-3"><time datetime={c.date}>{date(c.date)}</time><span class="flex items-center gap-1"><Icon name="clock" size={14} stroke={2.2} />{readingTime(c)} min</span></span>
+                  <span class="grid h-9 w-9 place-items-center rounded-full bg-black text-bd-green transition-transform group-hover:translate-x-1"><Icon name="arrow" size={20} /></span></p>
+              </div>
+            </article>
+          );
+          return <>{extra}{card}</>;
+        })}
+      </div>
+      <div data-blog-empty hidden class="rounded-3xl border-2 border-dashed border-gray-300 p-10 text-center">
+        <p class="text-2xl font-bold text-black">{l.emptyTitle}</p>
+        <p class="mt-2">{l.emptyText}</p>
+        <button type="button" data-blog-reset class="btn-secondary mt-6">{l.emptyButton}</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= BOX FINALE -->
+  <section class="pb-16 md:pb-24">
+    <div class="container">
+      <div class="grid grid-cols-1 gap-10 rounded-3xl bg-black p-6 text-white md:p-10 lg:grid-cols-3 lg:p-14">
+        <div class="lg:col-span-2">
+          {help.eyebrow && <p class="text-sm font-bold text-bd-green uppercase">{help.eyebrow}</p>}
+          <h2 class="mt-2 text-white">{help.title}</h2>
+          {help.text && <p class="text-gray-300">{help.text}</p>}
+          <div class="mt-6 flex flex-wrap gap-3">
+            {help.ctaLabel && <a href={href(help.ctaLink)} class="btn-primary">{help.ctaLabel} <Icon name="arrow" size={20} /></a>}
+            {help.linkLabel && <a href={href(help.linkLink)} class="btn-empty-secondary">{help.linkLabel}</a>}
+          </div>
+        </div>
+        <div>
+          <p class="text-sm font-bold text-gray-400 uppercase">{help.topicsTitle}</p>
+          <ul class="mt-4 space-y-2">{cats.map((c) => <li><button type="button" data-cat-filter={c} class="text-left text-lg font-semibold text-white hover:text-bd-green">{categoryLabel(c, lang)}</button></li>)}</ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  </div>
+  <Contact g={g} page={p.contact} />
+</Base>

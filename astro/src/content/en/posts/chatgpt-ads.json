@@ -1,0 +1,23 @@
+{
+  "title": "ChatGPT ads: what we know and how to get ready",
+  "content": {
+    "image": "@it",
+    "imageAlt": "Hand holding a smartphone showing a conversation in a chat app",
+    "excerpt": "Advertising is coming to AI assistants. How it differs from Google Ads, what’s already available and what to do about it today.",
+    "lead": "Advertising is coming to AI assistants. Sponsored ads are starting to appear next to answers from ChatGPT, Google’s AI Overviews and Microsoft Copilot. Here’s what we know, how it differs from traditional advertising and what’s worth doing right now.",
+    "text": "## What’s happening\n\nPeople increasingly turn to AI assistants to research and make decisions, so the platforms are rolling out ad formats built for that setting. Things are moving fast: **availability, formats and rules vary by platform and by country**, and many features are still being tested.\n\n## Where the ads appear\n\n- **Google**: with the right campaigns, ads can also show up in AI Overviews and AI-generated answers.\n- **Microsoft Copilot**: through Microsoft Advertising, ads can appear in the assistant’s answers and in Bing search.\n- **ChatGPT**: OpenAI is introducing ads in conversations, with access opening up gradually.\n\n## How it differs from classic Google Ads\n\nIn a classic search, people type a few words (“e-bike Denver”). In a conversation with an assistant they share far more: budget, needs, doubts. So ads tend to be driven by the **context of the conversation** rather than individual keywords, and they need to fit usefully into the answer.\n\n## Who it makes sense for today\n\nMostly businesses that sell products or services people ask for advice about: trades, local shops, online stores, travel and hospitality, professional services. For other sectors it may still be early days. Either way, start with a **small-budget test** and measure the results before you invest more.\n\n## How to get ready\n\n1. Make sure your website’s **conversion tracking** is set up properly: without it, you won’t know what works.\n2. Build clear, fast **landing pages**: people arriving from a conversation want answers straight away.\n3. Work on your **organic visibility** in AI tools (GEO): ads and unprompted mentions reinforce each other.\n4. Keep up with platform updates, or work with someone who does it for you.\n\n## Pitfalls to avoid\n\nAs with any new channel, the risk is spending without measuring and getting carried away by the hype. Avoid long commitments, insist on clear reporting and judge results on **cost per lead or per sale**, not on impressions.\n\n## The bottom line\n\nAdvertising in AI assistants is a new and promising channel, especially if you get there before your competitors. But it’s still advertising: it works when tracking is right, your website converts and you start with a measured test. The data will tell you the rest."
+  },
+  "seo": {
+    "title": "ChatGPT ads: what we know and how to prepare | bortolin.dev",
+    "description": "Advertising is coming to AI assistants. How it differs from Google Ads, what’s already available and what to do about it today.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "annunci-su-chatgpt"
+}

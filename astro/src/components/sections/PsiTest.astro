@@ -1,0 +1,18 @@
+---
+// Riquadro verde "Quanto prende il tuo sito?" → apre PageSpeed Insights (main.js: data-psi-form)
+import Rich from '../ui/Rich.astro';
+interface Props { title: string; text: any; placeholder: string; button: string; a11y: { psiField: string; psiForm: string }; class?: string; id?: string }
+const { title, text, placeholder, button, a11y, class: cls = 'mt-6', id = 'psi-url' } = Astro.props;
+---
+<div class:list={['grid grid-cols-1 items-center gap-6 rounded-3xl bg-bd-green p-6 md:p-10 lg:grid-cols-2', cls]}>
+  <div>
+    <h3 class="text-2xl">{title}</h3>
+    <Rich value={text} class="text-black" strong="" />
+  </div>
+  <form data-psi-form class="flex flex-col gap-3 sm:flex-row" role="search" aria-label={a11y.psiForm}>
+    <label for={id} class="sr-only">{a11y.psiField}</label>
+    <input id={id} name="url" type="text" inputmode="url" autocomplete="url" placeholder={placeholder} required
+      class="w-full rounded-full border border-black bg-white px-5 py-3 text-black placeholder:text-gray-500">
+    <button type="submit" class="btn-secondary shrink-0">{button}</button>
+  </form>
+</div>

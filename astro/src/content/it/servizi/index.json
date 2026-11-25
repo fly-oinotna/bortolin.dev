@@ -1,0 +1,343 @@
+{
+  "hero": {
+    "breadcrumb": "Servizi",
+    "eyebrow": "Tutti i servizi",
+    "title": "Servizi per crescere online, un tassello alla volta",
+    "text": "Siti web, SEO, performance, intelligenza artificiale, campagne e consulenza. Ogni servizio funziona da solo, ma insieme danno il meglio: **un sito veloce rende di più su Google, e una buona visibilità rende più economiche le campagne**. Tutto a prezzo fisso, con un solo interlocutore.\n",
+    "navLabel": "Vai al gruppo",
+    "layersLabel": "Come si combinano i servizi",
+    "layers": [
+      {
+        "title": "Clienti",
+        "text": "Google Ads, Meta Ads, AI Ads"
+      },
+      {
+        "title": "Visibilità",
+        "text": "SEO e presenza nelle AI"
+      },
+      {
+        "title": "Sito",
+        "text": "Veloce, chiaro, misurabile"
+      },
+      {
+        "title": "Strategia",
+        "text": "Obiettivi e processi"
+      }
+    ],
+    "caption": "Ogni livello poggia su quello sotto: per questo parto sempre dalle basi."
+  },
+  "start": {
+    "title": "Non sai da dove partire? Parti dal tuo obiettivo",
+    "text": "Scegli la frase che ti somiglia di più: ti porto al servizio giusto. E se sono più di una, ne parliamo nella call gratuita di 25 minuti.\n",
+    "items": [
+      {
+        "quote": "“Mi serve un sito nuovo”",
+        "service": "Siti web chiavi in mano",
+        "link": {
+          "discriminant": "/servizi/siti-web/"
+        }
+      },
+      {
+        "quote": "“Il mio sito non lo trova nessuno”",
+        "service": "Consulenza SEO",
+        "link": {
+          "discriminant": "/servizi/consulenza-seo/"
+        }
+      },
+      {
+        "quote": "“Il mio sito è lento”",
+        "service": "Performance",
+        "link": {
+          "discriminant": "/servizi/miglioramento-prestazioni-siti-web/"
+        }
+      },
+      {
+        "quote": "“Voglio più contatti, subito”",
+        "service": "Google Ads e Meta Ads",
+        "link": {
+          "discriminant": "/servizi/google-ads/"
+        }
+      },
+      {
+        "quote": "“Voglio usare l’AI nel sito”",
+        "service": "Integrazione AI",
+        "link": {
+          "discriminant": "/servizi/integrazione-ai/"
+        }
+      },
+      {
+        "quote": "“Perdo troppo tempo in ufficio”",
+        "service": "Consulenza digitale",
+        "link": {
+          "discriminant": "/servizi/consulenza-digitale/"
+        }
+      }
+    ]
+  },
+  "groups": {
+    "idealLabel": "Ideale per:",
+    "moreLabel": "Scopri di più",
+    "items": [
+      {
+        "short": "Il tuo sito",
+        "eyebrow": "Il tuo sito",
+        "title": "Un sito che lavora per te",
+        "text": "Le fondamenta: un sito veloce, chiaro e pronto per l’intelligenza artificiale. Tutto il resto funziona meglio se qui è fatto bene.\n",
+        "cards": [
+          {
+            "icon": "monitor",
+            "badge": "Servizio principale",
+            "title": "Siti web chiavi in mano",
+            "link": {
+              "discriminant": "/servizi/siti-web/"
+            },
+            "text": "Siti vetrina, e-commerce e progetti su misura con design, testi, SEO, performance e tracciamento già inclusi, a prezzo fisso.",
+            "points": [
+              "Design su misura e testi che vendono",
+              "SEO e velocità da 100 su Lighthouse",
+              "Pronto per l’AI e misurabile da subito",
+              "Il sito è tuo, con formazione inclusa"
+            ],
+            "ideal": "chi ha bisogno di un sito nuovo o vuole rifare quello che ha",
+            "offer": "nuovo-sito-3-mesi-seo",
+            "wide": true
+          },
+          {
+            "icon": "bolt",
+            "badge": "Siti esistenti",
+            "title": "Performance",
+            "link": {
+              "discriminant": "/servizi/miglioramento-prestazioni-siti-web/"
+            },
+            "text": "Rendo velocissimo il sito che hai già: Core Web Vitals nei valori di Google, senza rifarlo.",
+            "points": [
+              "Analisi Lighthouse e dati reali di Google",
+              "Immagini, codice, cache e script esterni",
+              "Confronto prima e dopo"
+            ],
+            "ideal": "siti lenti, soprattutto da smartphone",
+            "offer": "check-up-velocita",
+            "wide": false
+          },
+          {
+            "icon": "sparkles",
+            "badge": "Anche su siti esistenti",
+            "title": "Integrazione AI",
+            "link": {
+              "discriminant": "/servizi/integrazione-ai/"
+            },
+            "text": "Gemini, Claude o ChatGPT dentro il tuo sito: meta tag e testi con un clic, traduzioni, assistente per i clienti.",
+            "points": [
+              "Pulsante “Genera con AI” nel pannello",
+              "Assistente sul sito che conosce i tuoi contenuti",
+              "Automazioni e formazione"
+            ],
+            "ideal": "chi vuole più visibilità con meno lavoro",
+            "offer": "seo-con-ai",
+            "wide": false
+          }
+        ]
+      },
+      {
+        "short": "Visibilità",
+        "eyebrow": "Visibilità",
+        "title": "Farsi trovare su Google e nelle AI",
+        "text": "Farsi trovare da chi ti sta già cercando, su Google e nelle risposte delle intelligenze artificiali.\n",
+        "cards": [
+          {
+            "icon": "search",
+            "badge": "La mia specialità",
+            "title": "Consulenza SEO",
+            "link": {
+              "discriminant": "/servizi/consulenza-seo/"
+            },
+            "text": "Audit tecnico, parole chiave, SEO locale, migrazioni e visibilità su ChatGPT, Gemini e Perplexity. Spiegato in modo semplice.",
+            "points": [
+              "Audit SEO tecnico e piano d’azione",
+              "SEO locale e profilo aziendale Google",
+              "Visibilità nelle AI (GEO)",
+              "Report video mensile"
+            ],
+            "ideal": "chi ha un sito ma non arrivano visite da Google",
+            "offer": "audit-seo",
+            "wide": true
+          }
+        ]
+      },
+      {
+        "short": "Advertising",
+        "eyebrow": "Advertising",
+        "title": "Contatti e vendite, subito",
+        "text": "Contatti e vendite subito, con campagne a prezzo fisso: mai una percentuale sul budget.\n",
+        "cards": [
+          {
+            "icon": "target",
+            "badge": "",
+            "title": "Google Ads",
+            "link": {
+              "discriminant": "/servizi/google-ads/"
+            },
+            "text": "Compari in cima a Google quando un cliente ti cerca. Ricerca, Performance Max, Shopping e annunci locali.",
+            "points": [
+              "Tracciamento delle conversioni incluso",
+              "Parole chiave negative contro gli sprechi",
+              "Account intestato a te"
+            ],
+            "ideal": "servizi locali, negozi ed e-commerce",
+            "offer": null,
+            "wide": false
+          },
+          {
+            "icon": "megaphone",
+            "badge": "",
+            "title": "Meta Ads",
+            "link": {
+              "discriminant": "/servizi/meta-ads/"
+            },
+            "text": "Annunci su Facebook e Instagram per farti scoprire nella tua zona e generare richieste, non solo “mi piace”.",
+            "points": [
+              "Pixel e Conversions API",
+              "Moduli contatto e remarketing",
+              "Creatività per feed, storie e Reels"
+            ],
+            "ideal": "farsi conoscere e raccogliere contatti",
+            "offer": null,
+            "wide": false
+          },
+          {
+            "icon": "chat-ad",
+            "badge": "Nuovo",
+            "title": "AI Ads",
+            "link": {
+              "discriminant": "/servizi/ai-ads/"
+            },
+            "text": "Annunci accanto alle risposte di ChatGPT, Google e Copilot: il nuovo canale, prima dei concorrenti.",
+            "points": [
+              "Verifica del potenziale per il tuo settore",
+              "Test con budget contenuto",
+              "Integrazione con gli altri canali"
+            ],
+            "ideal": "chi vuole arrivare prima su un canale nuovo",
+            "offer": null,
+            "wide": false
+          }
+        ]
+      },
+      {
+        "short": "Strategia",
+        "eyebrow": "Strategia e digitalizzazione",
+        "title": "Uno sguardo d’insieme sulla tua azienda",
+        "text": "Uno sguardo d’insieme su marketing e processi aziendali, con l’AI dove fa risparmiare tempo davvero.\n",
+        "cards": [
+          {
+            "icon": "bulb",
+            "badge": "Per PMI",
+            "title": "Consulenza digitale",
+            "link": {
+              "discriminant": "/servizi/consulenza-digitale/"
+            },
+            "text": "Marketing digitale e digitalizzazione dell’azienda: preventivi e consuntivi con l’AI, documenti, CRM, automazioni e obiettivi misurabili.",
+            "points": [
+              "Check-up di marketing e processi",
+              "Preventivi e documenti con l’AI",
+              "Roadmap a 90 giorni",
+              "Affiancamento e workshop"
+            ],
+            "ideal": "PMI che vogliono crescere e lavorare meglio",
+            "offer": null,
+            "wide": true
+          }
+        ]
+      }
+    ]
+  },
+  "agency": {
+    "short": "Per le web agency",
+    "eyebrow": "Per le web agency",
+    "title": "Il reparto tecnico della tua agenzia, quando ti serve",
+    "text": "Sviluppo in white label, project management, tracciamento, ottimizzazione e manutenzione dei siti dei tuoi clienti. Con discrezione: non contatto mai i tuoi clienti.\n",
+    "ctaLabel": "Sviluppo white label",
+    "ctaLink": {
+      "discriminant": "custom",
+      "value": "/servizi/sviluppatore-freelance-per-web-agency/#white-label"
+    },
+    "linkLabel": "Project manager",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "/servizi/sviluppatore-freelance-per-web-agency/#project-management"
+    },
+    "image": "/src/assets/images/home/illustrazione-web-agency.svg",
+    "imageAlt": "Illustrazione: un design trasformato in codice funzionante"
+  },
+  "rules": {
+    "eyebrow": "Qualunque servizio scegli",
+    "title": "Le regole che valgono sempre",
+    "items": [
+      {
+        "title": "Prezzo fisso",
+        "text": "Sai prima quanto spendi. Mai ore extra, mai percentuali sul budget pubblicitario."
+      },
+      {
+        "title": "Tutto è tuo",
+        "text": "Siti, account, dati e accessi restano intestati a te, sempre."
+      },
+      {
+        "title": "Un solo interlocutore",
+        "text": "Parli con chi fa il lavoro, senza passaggi intermedi."
+      },
+      {
+        "title": "Spiegato semplice",
+        "text": "Report che capisci e risposte chiare, anche alle domande “banali”."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Domande frequenti",
+    "title": "Domande sui servizi",
+    "text": "Non trovi la tua? [Scrivimi](#contatti), rispondo entro il giorno lavorativo successivo.\n",
+    "items": [
+      {
+        "question": "Posso scegliere un solo servizio?",
+        "answer": "Certo. Ogni servizio funziona anche da solo. Se vedo che un altro ti darebbe risultati migliori te lo dico, ma la scelta resta tua.\n"
+      },
+      {
+        "question": "Se prendo più servizi, conviene?",
+        "answer": "Sì: lavorando su sito, SEO e campagne insieme si evitano doppioni e i risultati si sommano. Nel preventivo trovi un prezzo complessivo, sempre fisso.\n"
+      },
+      {
+        "question": "Le offerte di lancio si possono combinare?",
+        "answer": "Ogni offerta vale per il suo servizio. Se ti interessano più servizi, nella call gratuita costruiamo insieme la soluzione più conveniente.\n"
+      },
+      {
+        "question": "Lavori solo in Veneto e Friuli?",
+        "answer": "No. Incontro volentieri di persona i clienti di Veneto e Friuli Venezia Giulia, ma lavoro da remoto in tutta Italia e all’estero, in italiano, inglese, tedesco e spagnolo.\n"
+      },
+      {
+        "question": "Come si inizia?",
+        "answer": "Con una call gratuita di 25 minuti: mi racconti obiettivi e situazione, io ti dico cosa farei e quanto costa. Senza impegno.\n"
+      }
+    ],
+    "ctaLabel": "Prenota la call gratuita",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "contact": {
+    "title": "Parliamo del tuo progetto",
+    "formTitle": "Richiedi un preventivo gratuito",
+    "topics": []
+  },
+  "seo": {
+    "title": "Servizi: siti web, SEO, AI e campagne | bortolin.dev",
+    "description": "Siti web, consulenza SEO, performance, integrazione AI, Google Ads e Meta Ads per PMI di Friuli e Veneto. Tutto a prezzo fisso, un solo interlocutore.",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "ogImage": "/src/assets/images/social/og-servizi.png",
+    "markdown": null,
+    "customMarkupCode": ""
+  }
+}

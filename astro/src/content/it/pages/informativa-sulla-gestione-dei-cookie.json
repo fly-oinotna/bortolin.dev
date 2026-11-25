@@ -1,0 +1,17 @@
+{
+  "title": "Cookie Policy",
+  "content": {
+    "text": "**Ultimo aggiornamento:** 3 giugno 2025\n\nQuesta è la Cookie Policy per il sito web di **Antonio Bortolin**. Utilizziamo i cookie per migliorare l'esperienza utente, analizzare il traffico e facilitare l'interazione con le funzionalità del sito, inclusi i moduli di contatto.\n\n## **1. Cosa sono i cookie?**\n\nI cookie sono piccoli file di testo memorizzati sul tuo dispositivo quando visiti un sito web. Consentono al sito di ricordare le tue azioni e preferenze per un periodo di tempo.\n\n## **2. Tipi di cookie utilizzati**\n\n- **Cookie tecnici:** Necessari per il funzionamento del sito e per l'utilizzo delle sue funzionalità, ad esempio per l'invio dei moduli di contatto (richiesta gratuita o messaggio).\n- **Cookie analitici:** Utilizzati per raccogliere informazioni anonime sull'utilizzo del sito e migliorarne le prestazioni.\n- **Cookie di preferenza:** Utilizzati per memorizzare le scelte dell'utente, come la lingua o il consenso ai cookie.\n\n## **3. Cookie di terze parti**\n\nIl sito utilizza i seguenti servizi esterni che possono impostare cookie nel tuo browser:\n\n- **Google Tag Manager:** Permette la gestione di script e tag di terze parti in modo efficiente.\n- **Google Analytics:** Raccoglie dati aggregati e anonimi sull'uso del sito per analisi statistiche e miglioramenti.\n\n## **4. Gestione dei cookie**\n\nPuoi gestire le tue preferenze sui cookie direttamente tramite le impostazioni del browser, scegliendo di accettarli, bloccarli o ricevere un avviso prima dell'installazione. Disattivare i cookie tecnici potrebbe compromettere alcune funzionalità del sito.\n\n## **5. Consenso**\n\nAl primo accesso viene mostrato un banner per la gestione del consenso. Puoi modificarlo in qualsiasi momento cliccando sul link dedicato nel footer del sito.\n\n## **6. Modifiche alla Cookie Policy**\n\nCi riserviamo il diritto di aggiornare questa Cookie Policy. Eventuali modifiche saranno pubblicate su questa pagina con la data di revisione aggiornata.\n"
+  },
+  "seo": {
+    "title": "Informativa sulla gestione dei cookie | bortolin.dev",
+    "description": "Scopri quali cookie utilizza bortolin.dev, a cosa servono e come gestire o revocare le tue preferenze di navigazione in qualsiasi momento.",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "ogImage": "/src/assets/images/social/og-cookie.png"
+  }
+}

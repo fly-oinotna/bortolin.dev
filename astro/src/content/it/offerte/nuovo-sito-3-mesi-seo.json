@@ -1,0 +1,47 @@
+{
+  "name": "Il tuo nuovo sito, con {% verde %}3 mesi di SEO inclusi{% /verde %}",
+  "offer": {
+    "title": "Il tuo nuovo sito, con {% verde %}3 mesi di SEO inclusi{% /verde %}",
+    "deadline": "2027-01-31",
+    "eyebrow": "Offerta di lancio",
+    "deadlineLabel": "Valida fino al 31/01/2027",
+    "text": "Conferma il tuo nuovo sito entro il 31 gennaio 2027: dopo il lancio continuo a lavorare sulla tua visibilità su Google, senza costi aggiuntivi.",
+    "items": [
+      {
+        "title": "3 mesi di SEO",
+        "text": "ottimizzazione dopo il lancio"
+      },
+      {
+        "title": "Migrazione sicura",
+        "text": "senza perdere le posizioni"
+      },
+      {
+        "title": "Garanzia Lighthouse",
+        "text": "almeno 90, o sistemo gratis"
+      }
+    ],
+    "ctaLabel": "Richiedi il preventivo",
+    "ctaLink": {
+      "discriminant": "#contatti",
+      "value": null
+    },
+    "note": "Call conoscitiva di 25 minuti gratuita",
+    "image": "/src/assets/images/offerte/illustrazione-offerta.svg",
+    "boxEyebrow": "Incluso nell’offerta",
+    "boxValue": "3 mesi",
+    "boxText": "di ottimizzazione SEO dopo il lancio",
+    "stamp": "fino al\n31/01",
+    "boxOldValue": ""
+  },
+  "menu": {
+    "megaTitle": "Nuovo sito + 3 mesi di SEO inclusi",
+    "megaText": "Per chi conferma il sito entro il 31/01/2027:",
+    "megaItems": [
+      "3 mesi di ottimizzazione SEO dopo il lancio",
+      "Migrazione senza perdere le posizioni su Google",
+      "Garanzia Lighthouse: almeno 90 su tutti e 4 i punteggi, o lo sistemo gratis"
+    ],
+    "mobileText": "per chi conferma entro il 31/01/2027",
+    "cardText": "Per chi conferma entro gennaio, con migrazione SEO e garanzia Lighthouse."
+  }
+}

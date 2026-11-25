@@ -1,0 +1,23 @@
+{
+  "title": "Von ChatGPT zitiert werden: Was GEO ist und wie Sie anfangen",
+  "content": {
+    "image": "@it",
+    "imageAlt": "Hände, die auf einem Laptop tippen",
+    "excerpt": "Immer mehr Menschen lassen sich von einer KI beraten. Wie auch Ihr Unternehmen in der Antwort auftaucht, ohne unmögliche Versprechen.",
+    "lead": "Statt bei Google zu suchen, fragen immer mehr Menschen ChatGPT, Gemini oder Perplexity: „Kannst du mir einen Steuerberater in Hannover empfehlen?“, „Welche Software ist die beste für eine Kfz-Werkstatt?“. Die Antworten nennen nur wenige Quellen und wenige Namen. **GEO** ist die Arbeit, mit der Sie die Chancen erhöhen, dass Ihr Name dabei ist.",
+    "text": "## Was GEO ist\n\nGEO steht für *Generative Engine Optimization*: Optimierung für „generative“ Suchmaschinen, also Assistenten, die mit einem geschriebenen Text antworten statt mit einer Linkliste. Das Ziel ist dasselbe wie bei SEO, gefunden zu werden, nur der Weg dorthin ist etwas anders.\n\nVorab ganz ehrlich: **Niemand kann Ihnen garantieren, dass Sie zitiert werden.** KI-Antworten ändern sich von Person zu Person und von Tag zu Tag. Sie können aber daran arbeiten, eine verlässliche und leicht zitierbare Quelle zu werden.\n\n## Wie KI-Assistenten ihre Quellen wählen\n\nStark vereinfacht kombinieren Assistenten zwei Dinge: was sie im Training „gelernt“ haben und, immer häufiger, was sie bei einer Websuche in Echtzeit finden. Microsoft Copilot stützt sich zum Beispiel auf Bing, die KI-Übersichten von Google auf den Google-Index.\n\nDas heißt: **Die SEO-Grundlagen bleiben entscheidend.** Wird Ihre Website von Suchmaschinen nicht gefunden und verstanden, wird ein Assistent sie kaum als Quelle nutzen.\n\n## Inhalte, die sich leicht zitieren lassen\n\nEin Assistent sucht klare Antworten auf konkrete Fragen. Helfen Sie ihm:\n\n- schreiben Sie Seiten, die **echte Fragen** Ihrer Kunden beantworten, mit der Antwort in den ersten Zeilen;\n- nutzen Sie **klare Überschriften**, Listen und kurze Absätze;\n- nennen Sie **konkrete Fakten**: Einzugsgebiet, Zeiten, Richtpreise, Eigenschaften;\n- halten Sie Informationen **aktuell** und auf allen Seiten einheitlich.\n\n## Strukturierte Daten: wer Sie sind, was Sie tun, wo\n\nStrukturierte Daten sind ein kleiner, für Besucher unsichtbarer Code, der Ihr Unternehmen genau beschreibt: Name, Adresse, Öffnungszeiten, Leistungen, Bewertungen, häufige Fragen. Für eine Suchmaschine oder einen Assistenten sind sie wie ein sauber ausgefüllter Ausweis.\n\nAllein bewirken sie keine Wunder, verringern aber das Risiko, dass wichtige Informationen falsch verstanden werden, etwa Ihr Einzugsgebiet oder die Art Ihrer Leistung.\n\n## Ihr Ruf außerhalb der Website\n\nAssistenten vertrauen dem, was sie an mehreren Stellen bestätigt finden. Deshalb zählen besonders:\n\n- **Bewertungen** bei Google und auf den Portalen Ihrer Branche;\n- **Erwähnungen** in der Lokalpresse, bei Verbänden und auf Partner-Websites;\n- **einheitliche** Angaben zu Name, Adresse und Beschreibung im ganzen Netz.\n\n## So prüfen Sie, ob Sie zitiert werden\n\nDie einfachste Methode ist auch die wirksamste: **Stellen Sie die Fragen, die Ihre Kunden stellen würden.** Bitten Sie ChatGPT, Gemini, Copilot und Perplexity, Ihnen einen Betrieb wie Ihren in Ihrer Region zu empfehlen, und notieren Sie, wer genannt wird und welche Quellen zitiert werden.\n\nWiederholen Sie den Check jeden Monat: So sehen Sie, wo Sie stehen, und vor allem, welche Websites die Assistenten in Ihrer Branche für maßgeblich halten.\n\n## Wo Sie praktisch anfangen\n\n1. Bringen Sie die SEO-Grundlagen in Ordnung: schnelle, klare Website mit den richtigen Seiten.\n2. Erstellen Sie eine FAQ-Seite mit echten, vollständigen Antworten.\n3. Ergänzen Sie strukturierte Daten zu Ihrem Unternehmen.\n4. Pflegen Sie Ihr Google-Unternehmensprofil und Ihre Bewertungen.\n5. Prüfen Sie jeden Monat, was die Assistenten antworten."
+  },
+  "seo": {
+    "title": "GEO: So werden Sie von ChatGPT zitiert | bortolin.dev",
+    "description": "Was GEO ist und wie Sie die Chancen erhöhen, dass ChatGPT, Gemini und Perplexity Ihre Website zitieren: klare Inhalte, strukturierte Daten, Autorität.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "geo-farsi-citare-da-chatgpt"
+}

@@ -1,0 +1,13 @@
+---
+// Icona SVG inline. `draw` = versione animata "disegnata" (aggiunge pathLength per main.js)
+import { ICONS, type IconName } from '../../lib/icons';
+interface Props { name: IconName; size?: number; class?: string; stroke?: number; viewBox?: string; draw?: boolean }
+const { name, size = 24, class: cls, stroke = 2, viewBox, draw = false } = Astro.props;
+const def: { body: string; fill?: boolean } = ICONS[name] ?? ICONS.monitor;
+let body = def.body;
+if (draw) body = body.replace(/<(path|circle|rect)(?![^>]*pathLength)/g, '<$1 pathLength="1"');
+const paint: Record<string, string | number> = def.fill
+  ? { fill: 'currentColor' }
+  : { fill: 'none', stroke: 'currentColor', 'stroke-width': stroke, 'stroke-linecap': 'round', 'stroke-linejoin': 'round' };
+---
+<svg aria-hidden="true" class:list={[cls, draw && 'draw-icon']} width={size} height={size} viewBox={viewBox ?? '0 0 24 24'} {...paint} set:html={body} />

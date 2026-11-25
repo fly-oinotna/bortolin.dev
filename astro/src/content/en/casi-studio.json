@@ -1,0 +1,93 @@
+{
+  "hero": {
+    "breadcrumb": "Case studies",
+    "eyebrow": "Case studies",
+    "title": "Websites that deliver, up close",
+    "text": "Every project starts with a real problem. Here are some of the websites I’ve built: the challenge, the decisions behind them and the result, on every screen.\n",
+    "ctaLabel": "Tell me about your project",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Browse the projects",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#elenco"
+    },
+    "projectsLabel": "Projects delivered",
+    "projectsValue": 400,
+    "yearsLabel": "Years of experience",
+    "yearsValue": 15,
+    "suffix": "+",
+    "languagesLabel": "Working languages",
+    "languagesValue": "EN · IT · DE · ES"
+  },
+  "list": {
+    "eyebrow": "The projects",
+    "title": "Pick an industry",
+    "filterLabel": "Filter case studies",
+    "allLabel": "All",
+    "filters": [
+      {
+        "value": "aziende",
+        "label": "Companies"
+      },
+      {
+        "value": "servizi",
+        "label": "Professional services"
+      },
+      {
+        "value": "formazione",
+        "label": "Education"
+      },
+      {
+        "value": "multilingua",
+        "label": "Multilingual"
+      }
+    ],
+    "items": [
+      "projsystem",
+      "european-forensic-institute"
+    ],
+    "tagsLabel": "Highlights",
+    "nextTitle": "The next one could be yours",
+    "nextText": "New website, redesign, SEO or AI integration: tell me about your project and get a fixed-price quote.",
+    "nextLabel": "Get a free quote",
+    "nextLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "banner": {
+    "title": "Seen enough? Let’s talk",
+    "text": "A free 25-minute discovery call: goals, timeline and a clear fixed price.",
+    "ctaLabel": "Book a call",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Explore my services",
+    "linkLink": {
+      "discriminant": "/servizi/"
+    }
+  },
+  "related": {
+    "title": "More case studies",
+    "allLabel": "All case studies"
+  },
+  "contact": {
+    "title": "Be my next case study",
+    "formTitle": "Get a free quote",
+    "topics": []
+  },
+  "seo": {
+    "slug": "case-studies",
+    "title": "Case studies: websites I’ve built | bortolin.dev",
+    "description": "Websites I’ve built, up close: the challenge, the decisions and the result on every screen. Company websites, multilingual websites, WordPress.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

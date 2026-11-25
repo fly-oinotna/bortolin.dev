@@ -1,0 +1,9 @@
+# Solo il sito Astro (cartella astro) e netlify.toml vanno su GitHub
+amtools3/
+html/
+.claude/
+.DS_Store
+node_modules/
+.env
+.env.*
+!.env.example

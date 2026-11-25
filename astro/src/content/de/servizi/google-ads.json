@@ -1,0 +1,300 @@
+{
+  "hero": {
+    "breadcrumb": "Google Ads",
+    "eyebrow": "Werbung",
+    "title": "Google Ads, die Anfragen bringen, nicht nur Klicks",
+    "text": "Erscheinen Sie ganz oben bei Google, **genau dann, wenn ein Kunde Sie sucht**. Ich richte Ihre Kampagnen ein und betreue sie so, dass jeder investierte Euro Anrufe, Anfragen und Verkäufe bringt, und belege es mit Zahlen.\n",
+    "ctaLabel": "Kostenlose Analyse anfordern",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "So funktioniert’s",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#come-funziona"
+    },
+    "highlights": [
+      "Betreuung zum Festpreis",
+      "Konto auf Ihren Namen",
+      "Monatlicher Video-Bericht"
+    ],
+    "demoLabel": "Beispiel wählen",
+    "demoCaption": "Beispiele für gesponserte Anzeigen in den Google-Suchergebnissen.",
+    "s1Tab": "Elektriker",
+    "s1Query": "elektriker berlin",
+    "s1Ad": "Gesponsert",
+    "s1Letter": "E",
+    "s1Name": "Ihr Elektriker",
+    "s1Url": "www.ihre-website.de › notdienst",
+    "s1Title": "Elektriker in Berlin | Notdienst am selben Tag",
+    "s1Text": "Elektroinstallation für Wohnungen und Gewerbe, Störungen und E-Check. Kostenloses Angebot, faire Festpreise.",
+    "s1Call": "Anrufen",
+    "s1Chips": [
+      "Kostenloses Angebot",
+      "Notdienst 24 h"
+    ],
+    "s2Tab": "Fachgeschäft",
+    "s2Query": "fahrradladen hamburg",
+    "s2Ad": "Gesponsert",
+    "s2Letter": "F",
+    "s2Name": "Ihr Fahrradladen",
+    "s2Url": "www.ihr-shop.de",
+    "s2Title": "Fahrradladen in Hamburg | E-Bikes und Mountainbikes",
+    "s2Text": "Testen Sie die neuen E-Bikes direkt im Laden. Eigene Werkstatt und Inspektion.",
+    "s2Place": "Hamburg-Eimsbüttel",
+    "s2Hours": "Geöffnet bis 19:30 Uhr",
+    "s2Tiles": [
+      "E-Bikes",
+      "Mountainbikes",
+      "Werkstatt"
+    ],
+    "s3Tab": "Onlineshop",
+    "s3Query": "wanderschuhe herren",
+    "s3Ad": "Gesponsert · Produkte",
+    "s3Products": [
+      {
+        "name": "Wasserdichter Wanderschuh",
+        "price": "89,90 €",
+        "shop": "ihr-shop.de",
+        "rating": "4,8"
+      },
+      {
+        "name": "Leichter Trailschuh",
+        "price": "74,00 €",
+        "shop": "ihr-shop.de",
+        "rating": "4,6"
+      },
+      {
+        "name": "Bergstiefel",
+        "price": "139,00 €",
+        "shop": "ihr-shop.de",
+        "rating": "4,9"
+      }
+    ],
+    "s3Note": "Kostenlose Rücksendung · Lieferung in 1–2 Werktagen"
+  },
+  "how": {
+    "eyebrow": "So funktioniert’s",
+    "title": "Google Ads, einfach erklärt",
+    "text": "Sie wählen die Suchanfragen, bei denen Sie erscheinen möchten, schreiben eine Anzeige und **zahlen nur, wenn jemand klickt**. Es gewinnt aber nicht immer, wer am meisten bietet: Google belohnt auch Qualität. Das sind die drei Zutaten.\n",
+    "items": [
+      {
+        "icon": "lens",
+        "title": "1. Die richtigen Suchanfragen",
+        "text": "„Elektriker Notdienst Köln“ ist viel mehr wert als „wie funktioniert ein FI-Schalter“. Ich wähle die Suchanfragen von Menschen, die bereit sind, Sie zu kontaktieren."
+      },
+      {
+        "icon": "ad",
+        "title": "2. Eine Anzeige, die überzeugt",
+        "text": "Wenige Zeichen, um zu sagen, warum gerade Sie: klare Vorteile, konkrete Belege und eine Handlungsaufforderung."
+      },
+      {
+        "icon": "bolt",
+        "title": "3. Eine Seite, die konvertiert",
+        "text": "Wohin die Leute nach dem Klick kommen, zählt genauso viel wie die Anzeige. Eine schnelle, klare Seite bringt mehr Anfragen, und Google belohnt sie mit niedrigeren Klickpreisen."
+      }
+    ]
+  },
+  "types": {
+    "eyebrow": "Kampagnentypen",
+    "title": "Die richtige Kampagne für Ihr Unternehmen",
+    "text": "Sie müssen nicht überall sein, sondern dort, wo Ihre Kunden sind. Gemeinsam wählen wir die Kampagnen, die zu Ihrem Budget passen.\n",
+    "items": [
+      {
+        "title": "Suchnetzwerk",
+        "text": "Erscheinen, wenn jemand genau das sucht, was Sie anbieten.",
+        "ideal": "Ideal für Dienstleister und Selbstständige",
+        "highlight": true
+      },
+      {
+        "title": "Performance Max",
+        "text": "Eine einzige Kampagne in Suche, YouTube, Gmail, Maps und Display.",
+        "ideal": "Ideal mit sauberem Tracking",
+        "highlight": false
+      },
+      {
+        "title": "Shopping",
+        "text": "Ihre Produkte mit Foto und Preis, direkt in den Suchergebnissen.",
+        "ideal": "Ideal für Onlineshops",
+        "highlight": false
+      },
+      {
+        "title": "Lokale Anzeigen und Maps",
+        "text": "Mehr Anrufe und Besuche im Geschäft von Menschen in der Nähe.",
+        "ideal": "Ideal für lokale Unternehmen",
+        "highlight": false
+      },
+      {
+        "title": "YouTube und Display",
+        "text": "Bekannt werden und bei früheren Besuchern im Gedächtnis bleiben.",
+        "ideal": "Ideal für Remarketing",
+        "highlight": false
+      }
+    ]
+  },
+  "included": {
+    "eyebrow": "Leistungsumfang",
+    "title": "Komplette Betreuung, nicht nur Kampagnen „einschalten“",
+    "text": "Conversion-Tracking ist immer inklusive: Ohne es investieren Sie im Blindflug.\n",
+    "ctaLabel": "Kostenlose Analyse anfordern",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "items": [
+      {
+        "title": "Keywords und Strategie",
+        "text": "Die Suchanfragen kaufbereiter Kunden, nicht neugieriger Stöberer."
+      },
+      {
+        "title": "Kampagnenstruktur",
+        "text": "Nach Leistung und Region gegliedert: Sie sehen, wohin jeder Euro fließt."
+      },
+      {
+        "title": "Anzeigentexte",
+        "text": "Geschrieben, damit man Sie wählt, mit den passenden Erweiterungen."
+      },
+      {
+        "title": "Conversion-Tracking",
+        "text": "Tag Manager, GA4, erweiterte Conversions und Consent Mode."
+      },
+      {
+        "title": "Auszuschließende Keywords",
+        "text": "Ich schließe nutzlose Suchanfragen aus: weniger Streuverlust ab Tag eins."
+      },
+      {
+        "title": "Gebotsmanagement",
+        "text": "Ich optimiere auf Anfragen und Verkäufe, nicht auf Klicks."
+      },
+      {
+        "title": "A/B-Tests",
+        "text": "Anzeigen und Seiten im Vergleich, die besten bleiben."
+      },
+      {
+        "title": "Landingpage-Beratung",
+        "text": "Eine schnelle, klare Seite konvertiert besser und kostet weniger."
+      },
+      {
+        "title": "Monatlicher Video-Bericht",
+        "text": "Die Zahlen, die zählen, in wenigen Minuten erklärt."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Transparenz",
+    "title": "Ein Festpreis, kein Prozentsatz Ihres Werbebudgets",
+    "text": "Viele Agenturen berechnen einen Prozentsatz Ihrer Werbeausgaben: Je mehr Sie ausgeben, desto mehr verdienen sie. Ich nicht. **Die Betreuung kostet einen Festpreis**, mein einziges Interesse ist also, dass jeder Euro für Sie das Maximum bringt.\n",
+    "points": [
+      {
+        "text": "**Das Konto gehört Ihnen**: Kampagnen, Daten und Verlauf bleiben immer bei Ihnen.\n"
+      },
+      {
+        "text": "**Das Werbebudget zahlen Sie direkt an Google**: ohne versteckte Aufschläge.\n"
+      },
+      {
+        "text": "**Keine langen Vertragslaufzeiten**: Wenn Sie nicht zufrieden sind, können Sie jederzeit gehen.\n"
+      }
+    ],
+    "otherLabel": "Prozentual",
+    "otherValue": "15–20 %",
+    "otherText": "des Werbebudgets: Wer mehr ausgibt, lässt den Betreuer mehr verdienen, auch wenn es Ihnen nichts bringt.",
+    "mineLabel": "Bei mir",
+    "mineValue": "Fest",
+    "mineText": "Ein klarer Preis, im Angebot festgelegt. Ihr Werbebudget bestimmen Sie selbst.",
+    "note": "Die genannten Prozentsätze sind ein Beispiel für marktübliche Vergütungsmodelle."
+  },
+  "method": {
+    "eyebrow": "Die Methode",
+    "title": "Erst messen, dann investieren",
+    "text": "",
+    "items": [
+      {
+        "title": "Analyse",
+        "text": "Ich untersuche Markt, Wettbewerb, Suchanfragen und Ihre Website."
+      },
+      {
+        "title": "Tracking",
+        "text": "Bevor ein einziger Euro fließt, wird jede Anfrage und jeder Verkauf gemessen."
+      },
+      {
+        "title": "Start",
+        "text": "Kampagnen, Anzeigen und Ausschlüsse fertig und geprüft."
+      },
+      {
+        "title": "Optimierung",
+        "text": "Jede Woche streiche ich, was nicht läuft, und verstärke, was funktioniert."
+      },
+      {
+        "title": "Bericht",
+        "text": "Jeden Monat ein Video: was passiert ist und was als Nächstes kommt."
+      }
+    ]
+  },
+  "offer": {
+    "show": false,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "title": "Fragen zu Google Ads",
+    "text": "Ihre Frage ist nicht dabei? [Schreiben Sie mir](#contatti), ich antworte innerhalb eines Werktags.\n",
+    "items": [
+      {
+        "question": "Wie viel Budget brauche ich für den Start?",
+        "answer": "Das hängt von Branche und Region ab: In manchen Märkten reichen wenige Euro am Tag, in anderen braucht es mehr, um aussagekräftige Daten zu bekommen. In der kostenlosen Analyse bekommen Sie eine realistische Einschätzung, bevor Sie etwas ausgeben.\n"
+      },
+      {
+        "question": "Was kostet die Betreuung?",
+        "answer": "Eine feste Monatspauschale, im Angebot festgelegt nach Anzahl und Komplexität der Kampagnen. Niemals ein Prozentsatz des Werbebudgets.\n"
+      },
+      {
+        "question": "Wann sehe ich erste Ergebnisse?",
+        "answer": "Erste Daten kommen nach wenigen Tagen. Die eigentliche Optimierung dauert meist einige Wochen, so lange, bis genügend Klicks und Conversions zusammenkommen.\n"
+      },
+      {
+        "question": "Gehört das Google-Ads-Konto mir?",
+        "answer": "Ja. Das Konto läuft auf Ihren Namen, Sie zahlen direkt an Google und ich arbeite mit Administratorzugriff. Wechseln Sie eines Tages den Dienstleister, bleibt alles bei Ihnen.\n"
+      },
+      {
+        "question": "Google Ads oder SEO: Was ist besser?",
+        "answer": "Beides ergänzt sich: Google Ads bringt sofort Ergebnisse und stoppt, sobald Sie nicht mehr zahlen; SEO braucht länger, wirkt aber nachhaltig. Oft ist die Kombination die beste Strategie.\n"
+      },
+      {
+        "question": "Kann ich die Kampagnen jederzeit pausieren?",
+        "answer": "Ja, die Kampagnen lassen sich jederzeit pausieren, zum Beispiel im Urlaub oder wenn Sie ausgelastet sind.\n"
+      }
+    ],
+    "ctaLabel": "Kostenlose Analyse anfordern",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "advertising"
+    ],
+    "title": "Mehr zum Thema Online-Werbung",
+    "text": "Wie Sie den richtigen Kanal wählen und was sich durch KI-Assistenten gerade verändert.\n",
+    "buttonLabel": "Alle Artikel"
+  },
+  "contact": {
+    "title": "Gewinnen wir Kunden mit Google Ads",
+    "formTitle": "Kostenlose Analyse anfordern",
+    "topics": [
+      "ads"
+    ]
+  },
+  "seo": {
+    "slug": "google-ads",
+    "title": "Google-Ads-Betreuung zum Festpreis | bortolin.dev",
+    "description": "Google-Ads-Betreuung zum Festpreis statt Prozent vom Werbebudget: Such-, Shopping- und lokale Kampagnen, Tracking inklusive und monatlicher Bericht.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

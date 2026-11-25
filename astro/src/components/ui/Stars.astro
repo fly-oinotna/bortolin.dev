@@ -1,0 +1,7 @@
+---
+// Fila di stelle (decorativa: il valore va dato a parole con sr-only accanto)
+import Icon from './Icon.astro';
+interface Props { count?: number; size?: number; class?: string }
+const { count = 5, size = 20, class: cls } = Astro.props;
+---
+<span class:list={['flex gap-0.5', cls]} aria-hidden="true">{Array.from({ length: count }, () => <Icon name="star" size={size} />)}</span>

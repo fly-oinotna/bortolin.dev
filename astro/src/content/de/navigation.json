@@ -1,0 +1,129 @@
+{
+  "main": {
+    "servicesLabel": "Leistungen",
+    "servicesLink": {
+      "discriminant": "/servizi/"
+    },
+    "items": [
+      {
+        "label": "Über mich",
+        "link": {
+          "discriminant": "custom",
+          "value": "/#chi-sono"
+        }
+      },
+      {
+        "label": "Referenzen",
+        "link": {
+          "discriminant": "/casi-studio/"
+        }
+      },
+      {
+        "label": "Blog",
+        "link": {
+          "discriminant": "/blog/"
+        }
+      }
+    ]
+  },
+  "mega": {
+    "groups": [
+      {
+        "title": "Ihre Website",
+        "dark": false,
+        "items": [
+          {
+            "label": "Komplette Websites",
+            "badge": "Alles inklusive",
+            "text": "Design, Texte, SEO, Performance und KI",
+            "link": {
+              "discriminant": "/servizi/siti-web/"
+            },
+            "icon": "monitor",
+            "bold": true
+          },
+          {
+            "label": "SEO-Beratung",
+            "text": "Bei Google gefunden werden, auch mit Ihrer bestehenden Website",
+            "link": {
+              "discriminant": "/servizi/consulenza-seo/"
+            },
+            "icon": "search",
+            "bold": false
+          },
+          {
+            "label": "Performance und Lighthouse",
+            "text": "Core Web Vitals, Ladezeit, Best Practices",
+            "link": {
+              "discriminant": "/servizi/miglioramento-prestazioni-siti-web/"
+            },
+            "icon": "bolt",
+            "bold": false
+          },
+          {
+            "label": "KI-Integration",
+            "text": "Assistenten, Automatisierungen, Sichtbarkeit in ChatGPT",
+            "link": {
+              "discriminant": "/servizi/integrazione-ai/"
+            },
+            "icon": "sparkles",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "title": "Wachstum und Strategie",
+        "dark": true,
+        "items": [
+          {
+            "label": "Digitalberatung",
+            "text": "Analysen, Strategie, Workshops, Zweitmeinungen",
+            "link": {
+              "discriminant": "/servizi/consulenza-digitale/"
+            },
+            "icon": "bulb",
+            "bold": false
+          },
+          {
+            "label": "Google Ads",
+            "text": "Anfragen statt nur Klicks",
+            "link": {
+              "discriminant": "/servizi/google-ads/"
+            },
+            "icon": "target",
+            "bold": false
+          },
+          {
+            "label": "KI-Werbung",
+            "text": "Anzeigen in ChatGPT und KI-Assistenten",
+            "link": {
+              "discriminant": "/servizi/ai-ads/"
+            },
+            "icon": "chat-ad",
+            "bold": false
+          },
+          {
+            "label": "Meta Ads",
+            "text": "Facebook- und Instagram-Anzeigen, die Kunden bringen",
+            "link": {
+              "discriminant": "/servizi/meta-ads/"
+            },
+            "icon": "megaphone",
+            "bold": false
+          }
+        ]
+      }
+    ],
+    "agencyStrong": "Für Webagenturen:",
+    "agencyText": "White-Label-Entwicklung, Projektmanagement, Tracking und Wartung",
+    "agencyMobile": "Für Webagenturen",
+    "agencyLink": {
+      "discriminant": "/servizi/sviluppatore-freelance-per-web-agency/"
+    },
+    "allLabel": "Alle Leistungen und Angebote ansehen",
+    "allMobile": "Alle Leistungen und Angebote",
+    "allLink": {
+      "discriminant": "/servizi/"
+    }
+  }
+}

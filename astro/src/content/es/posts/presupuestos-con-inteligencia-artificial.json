@@ -1,0 +1,23 @@
+{
+  "title": "Presupuestos con inteligencia artificial: un ejemplo práctico",
+  "content": {
+    "image": "@it",
+    "imageAlt": "Calculadora y bolígrafo sobre hojas de cálculo",
+    "excerpt": "De la solicitud del cliente al borrador de presupuesto en pocos minutos, con tus tarifas. Cómo funciona, qué hace falta y dónde sigue siendo necesaria una persona.",
+    "lead": "Para muchos autónomos y pequeñas empresas, hacer presupuestos significa pasar la tarde entre tarifas, hojas de cálculo y documentos que hay que volver a teclear. Hoy la inteligencia artificial puede preparar un **borrador** en pocos minutos. Te enseño cómo funciona con un ejemplo concreto, qué hace falta y dónde sigue siendo imprescindible una persona.",
+    "text": "## El ejemplo: una carpintería de PVC en Sevilla\n\nLlega un email: «Quería un presupuesto para cambiar 6 ventanas de PVC en una casa en Dos Hermanas, incluida la retirada de las antiguas». Hoy el dueño abre la tarifa, calcula medidas y cantidades, añade instalación y retirada, lo maqueta todo y lo envía. Media hora, con suerte.\n\nCon un sistema basado en IA, la solicitud se lee automáticamente, las partidas se reconocen y se asocian a la tarifa, y en unos instantes está listo un borrador con líneas, cantidades y total. El dueño lo revisa, corrige un detalle y lo envía.\n\n## Cómo funciona por dentro\n\n1. **Lectura**: la IA lee la solicitud (email, formulario de la web, nota de voz transcrita) y extrae lo necesario.\n2. **Asociación**: relaciona cada partida con tus productos, servicios y precios.\n3. **Reglas**: aplica tus condiciones, como pedidos mínimos, desplazamientos o descuentos.\n4. **Borrador**: prepara el documento en tu formato, listo para revisar.\n\n## Qué hace falta para empezar\n\n- una **tarifa** actualizada y en formato digital (una hoja de cálculo vale);\n- tus **reglas** de cálculo escritas con claridad;\n- algunos **presupuestos anteriores** como ejemplo;\n- la conexión con las herramientas que ya usas: email, programa de gestión, archivo de documentos.\n\n## Dónde sigue haciendo falta una persona\n\nLa IA es buenísima con el trabajo repetitivo, pero no conoce al cliente como tú. Siguen siendo humanos:\n\n- las **visitas** y las mediciones reales;\n- la valoración de los **casos especiales**;\n- la **decisión final** sobre el precio y el envío.\n\n> La regla de oro: la IA prepara, una persona revisa y decide.\n\n## De los presupuestos a las liquidaciones\n\nEl mismo principio vale al terminar el trabajo. Partes rellenados desde el móvil, horas y materiales registrados en la obra: la **liquidación** y el borrador de factura se preparan solos, sin reconstruirlo todo a final de mes.\n\n## ¿Y los datos de los clientes?\n\nLos presupuestos contienen datos personales y comerciales. Por eso es importante usar servicios profesionales, enviar a la IA solo la información necesaria y configurarlo todo conforme al RGPD. Antes de empezar conviene aclarar siempre dónde se procesan los datos y cuánto tiempo se conservan.\n\n## Cuánto tiempo se ahorra\n\nDepende de cuántos presupuestos hagas y de lo parecidos que sean. La mejor forma de saberlo es medir: cuánto tardas hoy en un presupuesto tipo y cuánto tardas tras un mes de uso. Si hay ahorro, se amplía a otros procesos; si no, se cambia de camino."
+  },
+  "seo": {
+    "title": "Presupuestos con IA: un ejemplo práctico | bortolin.dev",
+    "description": "De la solicitud del cliente al borrador de presupuesto en minutos, con tus tarifas. Cómo funciona, qué hace falta y dónde sigue haciendo falta una persona.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "preventivi-con-intelligenza-artificiale"
+}

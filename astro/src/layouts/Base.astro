@@ -1,0 +1,126 @@
+---
+// Layout comune a tutte le pagine: head SEO, topbar, header + mega menu, menu mobile, footer.
+import '../styles/global.css';
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import Topbar from '../components/layout/Topbar.astro';
+import Header from '../components/layout/Header.astro';
+import MobileMenu from '../components/layout/MobileMenu.astro';
+import Footer from '../components/layout/Footer.astro';
+import type { Globals } from '../lib/content';
+import { ROBOTS_DEFAULT, type PageSeo } from '../lib/seo';
+import { buildSchema, type SchemaExtra } from '../lib/schema';
+import { allPages } from '../lib/pages';
+import { routeOf } from '../lib/i18n';
+import { DEFAULT_LANG, LOCALES } from '../i18n/langs';
+import { gscCode, gtmId } from '../lib/google';
+import GoogleTagManager from '../components/layout/GoogleTagManager.astro';
+import CookieBanner from '../components/cookies/CookieBanner.astro';
+
+interface Props {
+  g: Globals;
+  /** gruppo SEO della pagina (Meta Title/Description, OG Image, Robots, Markdown, Schema Markup) */
+  seo: PageSeo;
+/** percorso per il BreadcrumbList (senza la Home); se assente: Home → pagina */
+  breadcrumb?: { name: string; url: string }[];
+  /** dati strutturati propri della pagina (Service, BlogPosting, FAQPage…) */
+  schema?: SchemaExtra;
+}
+const { g, seo, breadcrumb, schema } = Astro.props;
+const lang = g.lang;
+const title = seo.title ?? '';
+const description = seo.description ?? '';
+const ogImage = seo.ogImage;
+const s = g.settings;
+const site = Astro.site ?? new URL('https://bortolin.dev');
+const canonical = new URL(Astro.url.pathname, site).href;
+
+// immagine per i social: generata in jpg 1200px per la massima compatibilità
+const files = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/**/*.{png,jpg,jpeg,webp,avif,svg}', { eager: true });
+// immagine della pagina se presente, altrimenti quella predefinita delle Impostazioni
+const ogPath = ogImage || s.general.ogImage;
+const ogMeta = ogPath ? files[ogPath]?.default : undefined;
+// senza immagine personalizzata, la pagina usa quella generata in automatico (/og/<id>.jpg, vedi lib/og.ts)
+const autoOg = !ogImage ? (await allPages()).find((p) => p.url === Astro.url.pathname) : undefined;
+const og = autoOg
+  ? new URL(`/og/${autoOg.id}.jpg`, site).href
+  : ogMeta ? new URL((await getImage({ src: ogMeta, width: Math.min(1200, ogMeta.width), format: 'jpg' })).src, site).href : undefined;
+
+const base = site.href.replace(/\/$/, '');
+const absolute = (path: string) => new URL(path, site).href;
+
+// ---- dati strutturati (Keystatic → Schema Markup + switch del gruppo SEO della pagina)
+const toUrl = async (path?: string | null) => {
+  const meta = path ? files[path]?.default : undefined;
+  if (!meta) return undefined;
+  if (meta.format === 'svg') return absolute(meta.src); // il logo SVG resta SVG
+  return absolute((await getImage({ src: meta, width: Math.min(1200, meta.width), format: 'jpg' })).src);
+};
+const sm = g.schemaMarkup;
+const schemaScripts = buildSchema(g, { canonical, seo, image: og, breadcrumb: breadcrumb?.map((b) => ({ name: b.name, url: new URL(b.url, site).href })), extra: schema }, base, {
+  logo: await toUrl(sm.general.logo),
+  business: await toUrl(sm.localBusiness.image),
+}, absolute);
+const robots = seo.robots || ROBOTS_DEFAULT;
+// favicon SVG: lo stesso file caricato in Keystatic, servito da Astro
+const iconSvg = s.general.icon?.toLowerCase().endsWith('.svg') ? files[s.general.icon]?.default.src : undefined;
+// Impostazioni → Google
+const gsc = gscCode(g.google.searchConsole.gscCode);
+const gtm = gtmId(g.google.tagManager.gtmId);
+const markdownUrl = g.llms.markdownEnabled && seo.markdown ? new URL(seo.markdown, site).href : undefined;
+// hreflang: la stessa pagina nelle lingue in cui esiste (x-default = italiano)
+const alternates = Object.entries(routeOf(Astro.url.pathname)?.urls ?? { [lang]: Astro.url.pathname });
+const xDefault = alternates.find(([l]) => l === DEFAULT_LANG)?.[1];
+---
+<!doctype html>
+<html lang={lang}>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <meta name="robots" content={robots}>
+  {gsc && <meta name="google-site-verification" content={gsc}>}
+  <link rel="canonical" href={canonical}>
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  {markdownUrl && <link rel="alternate" type="text/markdown" href={markdownUrl}>}
+  {alternates.length > 1 && alternates.map(([l, u]) => <link rel="alternate" hreflang={l} href={absolute(u)}>)}
+  {alternates.length > 1 && xDefault && <link rel="alternate" hreflang="x-default" href={absolute(xDefault)}>}
+
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content={LOCALES[lang] ?? lang}>
+  {alternates.filter(([l]) => l !== lang).map(([l]) => <meta property="og:locale:alternate" content={LOCALES[l] ?? l}>)}
+  <meta property="og:site_name" content={s.general.siteName}>
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <meta property="og:url" content={canonical}>
+  {og && <meta property="og:image" content={og}>}
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#000000">
+
+  <!-- icona del sito (Impostazioni → Generale): favicon.ico per tutti, SVG per i browser che lo supportano, PNG 96 px per Google -->
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  {iconSvg && <link rel="icon" href={iconSvg} type="image/svg+xml">}
+  <link rel="icon" href="/icons/96.png" sizes="96x96" type="image/png">
+  <link rel="apple-touch-icon" href="/icons/180.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="preload" href="/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <script is:inline>document.documentElement.classList.add('js')</script>
+  {/* GTM: con il banner cookie attivo parte solo dopo il consenso (CookieBanner); senza banner, caricamento differito con tutto negato */}
+  {gtm && !g.cookies.general.enabled && <GoogleTagManager id={gtm} />}
+  <script src="../scripts/main.js"></script>
+  {schemaScripts.map((json) => <script type="application/ld+json" set:html={json} />)}
+</head>
+<body>
+  {gtm && !g.cookies.general.enabled && <noscript><iframe src={`https://www.googletagmanager.com/ns.html?id=${gtm}`} height="0" width="0" style="display:none;visibility:hidden" title="Google Tag Manager"></iframe></noscript>}
+  <a href="#contenuto" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-50 focus:rounded-full focus:bg-bd-green focus:px-4 focus:py-2 focus:font-semibold focus:text-black">{s.a11y.skip}</a>
+  <Topbar settings={s} />
+  <Header g={g} />
+  <MobileMenu g={g} />
+  <main id="contenuto">
+    <slot />
+  </main>
+  <Footer g={g} />
+  {g.cookies.general.enabled && <CookieBanner g={g} gtm={gtm} />}
+</body>
+</html>

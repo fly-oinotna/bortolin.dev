@@ -1,0 +1,23 @@
+{
+  "title": "Getting cited by ChatGPT: what GEO is and how to start",
+  "content": {
+    "image": "@it",
+    "imageAlt": "Hands typing on a laptop",
+    "excerpt": "More and more people ask AI for recommendations. How to give your business a better chance of making it into the answer, without impossible promises.",
+    "lead": "Instead of searching Google, more and more people ask ChatGPT, Gemini or Perplexity: “Can you recommend an accountant in Leeds?”, “What’s the best job management software for an auto repair shop?”. The answers cite only a few sources and a few names. **GEO** is the work that raises the odds of yours being one of them.",
+    "text": "## What GEO is\n\nGEO stands for *Generative Engine Optimization*: optimizing for “generative” engines, meaning assistants that reply with written text rather than a list of links. The goal is the same as SEO, getting found, but the route there is a little different.\n\nAn honest caveat first: **nobody can guarantee you’ll be cited**. AI answers vary from person to person and from day to day. What you can do is work on becoming a reliable source that’s easy to cite.\n\n## How AI assistants pick their sources\n\nTo simplify a lot, assistants combine two things: what they “learned” during training and, more and more often, what they find by searching the web in real time. Microsoft Copilot, for example, relies on Bing; Google’s AI Overviews use Google’s index.\n\nThat means **SEO fundamentals still matter**: if search engines can’t find and understand your website, an assistant is unlikely to use it as a source.\n\n## Content that’s easy to cite\n\nAn assistant is looking for clear answers to specific questions. Help it:\n\n- write pages that answer your customers’ **real questions**, with the answer in the first few lines;\n- use **clear headings**, lists and short paragraphs;\n- include **concrete facts**: areas served, turnaround times, ballpark prices, features;\n- keep information **up to date** and consistent across every page.\n\n## Structured data: who you are, what you do, where\n\nStructured data is a small piece of code, invisible to visitors, that describes your business precisely: name, address, opening hours, services, reviews, FAQs. To a search engine or an assistant it’s like a neatly filled-in ID card.\n\nIt won’t work miracles on its own, but it reduces the risk of key information being misunderstood, such as the area you cover or the kind of service you offer.\n\n## Your reputation beyond your website\n\nAssistants trust what they find confirmed in several places. That’s why these matter so much:\n\n- **reviews** on Google and on the platforms in your industry;\n- **mentions** in local press, trade associations and partner websites;\n- **consistency** of your name, address and description across the web.\n\n## How to check whether you’re being cited\n\nThe simplest method is also the most effective: **ask the questions your customers would ask**. Ask ChatGPT, Gemini, Copilot and Perplexity to recommend a business like yours in your area, and note who comes up and which sources are cited.\n\nRepeat the check every month: it shows you how you’re doing and, above all, which websites the assistants see as authoritative in your field.\n\n## Where to start, in practice\n\n1. Get the SEO basics right: a fast, clear website with the right pages.\n2. Create an FAQ page with real, complete answers.\n3. Add structured data for your business.\n4. Look after your Google Business Profile and reviews.\n5. Check what the assistants say every month."
+  },
+  "seo": {
+    "title": "GEO: how to get cited by ChatGPT | bortolin.dev",
+    "description": "What GEO is and how to improve the odds that ChatGPT, Gemini and Perplexity cite your website: clear content, structured data and authority.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "geo-farsi-citare-da-chatgpt"
+}

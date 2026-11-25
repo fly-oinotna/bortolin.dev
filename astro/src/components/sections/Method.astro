@@ -1,0 +1,28 @@
+---
+// Passi del metodo: il primo verde, l'ultimo nero, gli altri bianchi
+import SectionHeading from '../ui/SectionHeading.astro';
+import { rich, pad } from '../../lib/rich';
+interface Props {
+  n?: number; eyebrow?: string | null; title?: string | null; text?: any;
+  steps: readonly { title: string; text: any }[]; id?: string; class?: string;
+}
+const { n, eyebrow, title, text, steps, id = 'metodo', class: cls = 'bg-gray-100 py-16 md:py-24' } = Astro.props;
+const last = steps.length - 1;
+---
+<section id={id} class={cls}>
+  <div class="container">
+    <SectionHeading n={n} eyebrow={eyebrow} title={title} text={text} />
+    <ol class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+      {steps.map((st, i) => {
+        const tone = i === 0 ? 'green' : i === last && last > 0 ? 'black' : 'white';
+        return (
+          <li class:list={['rounded-3xl p-6', { green: 'bg-bd-green', black: 'bg-black', white: 'bg-white' }[tone]]}>
+            <span class:list={['text-sm font-bold', tone === 'black' ? 'text-bd-green' : 'text-black']}>{pad(i + 1)}</span>
+            <h3 class:list={['mt-2', tone === 'black' && 'text-white']}>{st.title}</h3>
+            <p class:list={[tone === 'green' && 'text-black', tone === 'black' && 'text-gray-300']} set:html={rich(st.text, { strong: tone === 'black' ? 'text-white' : 'text-black' })} />
+          </li>
+        );
+      })}
+    </ol>
+  </div>
+</section>

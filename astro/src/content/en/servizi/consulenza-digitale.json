@@ -1,0 +1,344 @@
+{
+  "hero": {
+    "breadcrumb": "Digital consulting",
+    "eyebrow": "Marketing and going digital",
+    "title": "Digital consulting: less time wasted, more customers won",
+    "text": "I help you use digital tools where they really count: **in your marketing**, to win customers, and **behind the scenes**, so you stop losing hours to quotes, paperwork and email. With AI where it helps, and only where it helps.\n",
+    "ctaLabel": "Book a free call",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Digital for small businesses",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#digitalizzazione"
+    },
+    "highlights": [
+      "Your goals come first",
+      "No vendor ties",
+      "Fixed price"
+    ],
+    "requestLabel": "New enquiry",
+    "requestTime": "today, 8:42 am",
+    "requestText": "“Hi, could I get a quote to replace **6 windows** with uPVC frames in a house in **Dublin**, including removing the old ones? Thanks!”\n",
+    "statusStart": "Waiting…",
+    "statusReading": "AI is reading the enquiry…",
+    "statusWriting": "Filling in the quote from your price list…",
+    "statusDone": "Done: ready to check and send",
+    "quoteLabel": "Draft quote",
+    "quoteTitle": "No. 2026/128 · Dublin",
+    "quoteBadge": "Drafted with AI",
+    "quoteItems": [
+      {
+        "text": "Double-glazed uPVC windows",
+        "detail": "6 pcs",
+        "amount": 3900
+      },
+      {
+        "text": "Removal and disposal of old frames",
+        "detail": "6 pcs",
+        "amount": 480
+      },
+      {
+        "text": "Fitting and sealing",
+        "detail": "flat rate",
+        "amount": 960
+      }
+    ],
+    "totalLabel": "Total (excl. VAT)",
+    "tags": [
+      "Saved in your business software",
+      "Ready to send to the customer"
+    ],
+    "caption": "Illustrative example: the AI drafts, a person checks before anything is sent."
+  },
+  "areas": {
+    "eyebrow": "What I do",
+    "title": "A digital consultant for both sides of your business",
+    "text": "Plenty of small businesses have a website, social media and maybe a few ad campaigns, yet behind the scenes still run on paper, spreadsheets and copy-paste. I look at both, because they’re connected: the time you save inside can be reinvested in growing outside.\n",
+    "items": [
+      {
+        "label": "Customer-facing",
+        "title": "Digital marketing",
+        "text": "Website, SEO, ads, social media and data: we work out what’s working, what isn’t and where your money goes furthest.",
+        "linkLabel": "Explore digital marketing",
+        "link": {
+          "discriminant": "custom",
+          "value": "#marketing"
+        }
+      },
+      {
+        "label": "Behind the scenes",
+        "title": "Going digital with AI",
+        "text": "Quotes, invoices, paperwork, customers and processes: less repetitive work, fewer mistakes, more time for what matters.",
+        "linkLabel": "Explore AI for your business",
+        "link": {
+          "discriminant": "custom",
+          "value": "#digitalizzazione"
+        }
+      }
+    ]
+  },
+  "digital": {
+    "eyebrow": "Going digital",
+    "title": "AI in your everyday work",
+    "text": "No need to overhaul everything or buy pricey software. We start from how you work today and bring in tools and AI **where they genuinely save time**, connected to what you already use.\n",
+    "items": [
+      {
+        "icon": "file",
+        "title": "Quotes and invoices with AI",
+        "text": "From a customer enquiry or job notes to a ready-made draft, using your price lists and your rules. You check it and send it."
+      },
+      {
+        "icon": "card-text",
+        "title": "No more retyping",
+        "text": "Invoices, delivery notes, orders and forms: the AI reads the details and puts them where they belong. No more copy-paste."
+      },
+      {
+        "icon": "users",
+        "title": "Customers and deals, organized",
+        "text": "A simple CRM, built around you: enquiries, quotes, deadlines and follow-ups in one place."
+      },
+      {
+        "icon": "flow",
+        "title": "Automations between tools",
+        "text": "Email, business software, calendar and spreadsheets that talk to each other: the repetitive jobs take care of themselves."
+      },
+      {
+        "icon": "chat",
+        "title": "In-house AI assistant",
+        "text": "Your team asks about company procedures, price lists and manuals and gets answers in seconds."
+      },
+      {
+        "icon": "chart",
+        "title": "Numbers at a glance",
+        "text": "A dashboard with the metrics that matter: enquiries, quotes won, margins, turnaround times."
+      }
+    ],
+    "casesTitle": "Before and after, in practice",
+    "casesText": "Three typical examples of what can change in just a few weeks.",
+    "beforeLabel": "Before",
+    "afterLabel": "After",
+    "cases": [
+      {
+        "name": "Builder in Austin",
+        "tag": "Quotes",
+        "before": "Hours lost to price lists, spreadsheets and documents retyped by hand.",
+        "after": "A draft quote ready in minutes, with up-to-date prices: check it, send it."
+      },
+      {
+        "name": "Auto repair shop in Leeds",
+        "tag": "Invoicing",
+        "before": "Paper job cards, hours and parts pieced together at the end of the month.",
+        "after": "Job notes logged from a phone, invoice drafted automatically."
+      },
+      {
+        "name": "Law firm in Toronto",
+        "tag": "Client enquiries",
+        "before": "Emails piling up and the same replies, written from scratch every time.",
+        "after": "Enquiries sorted automatically and draft replies, approved in one click."
+      }
+    ],
+    "casesNote": "Illustrative examples of typical cases; results depend on the business and the tools it uses."
+  },
+  "marketing": {
+    "eyebrow": "Digital marketing",
+    "title": "An outside view, honest and complete",
+    "text": "I look at your website, ads and social media together, because problems rarely live in just one place. You get a prioritized plan you can carry out with me, with your agency or on your own.\n",
+    "linksLabel": "Related services",
+    "links": [
+      {
+        "label": "SEO",
+        "link": {
+          "discriminant": "/servizi/consulenza-seo/"
+        }
+      },
+      {
+        "label": "Google Ads",
+        "link": {
+          "discriminant": "/servizi/google-ads/"
+        }
+      },
+      {
+        "label": "Meta Ads",
+        "link": {
+          "discriminant": "/servizi/meta-ads/"
+        }
+      },
+      {
+        "label": "Speed",
+        "link": {
+          "discriminant": "/servizi/miglioramento-prestazioni-siti-web/"
+        }
+      }
+    ],
+    "items": [
+      {
+        "title": "Website review",
+        "text": "Speed, SEO, clarity and how well it turns visitors into leads."
+      },
+      {
+        "title": "Marketing audit",
+        "text": "Google Ads, Meta Ads, SEO, social media and content, assessed together."
+      },
+      {
+        "title": "Tracking and data",
+        "text": "Do you really know where your customers come from? Let’s find out."
+      },
+      {
+        "title": "Digital strategy",
+        "text": "A plan with priorities, costs and expected results."
+      },
+      {
+        "title": "Second opinion",
+        "text": "An independent take on your agency’s work."
+      },
+      {
+        "title": "Team workshops",
+        "text": "SEO, ads and digital tools, explained in practical terms."
+      }
+    ]
+  },
+  "roadmap": {
+    "eyebrow": "How we start",
+    "title": "Goals first, tools second",
+    "text": "Digital isn’t the goal, it’s the vehicle. That’s why we always start from where you want to be and map out a step-by-step route with measurable results.\n",
+    "steps": [
+      {
+        "when": "Week 1",
+        "title": "Goals",
+        "text": "Where you want to be, in numbers, and by when."
+      },
+      {
+        "when": "Weeks 2–3",
+        "title": "Analysis",
+        "text": "How you work today: processes, tools, bottlenecks."
+      },
+      {
+        "when": "First 30 days",
+        "title": "Quick wins",
+        "text": "Simple changes that save time straight away."
+      },
+      {
+        "when": "60–90 days",
+        "title": "Key projects",
+        "text": "The big changes, one at a time, with results measured."
+      }
+    ],
+    "boxTitle": "No vendor ties",
+    "boxText": "I don’t sell software or take commissions: I recommend the tools that suit you best, free ones included.",
+    "ctaLabel": "Book a free call",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "formats": {
+    "eyebrow": "How we can work together",
+    "title": "From one-off check-up to ongoing support",
+    "text": "Every option has a fixed price, set after the free call.\n",
+    "items": [
+      {
+        "label": "One-off",
+        "title": "Digital check-up",
+        "text": "A review of your marketing and processes, with a written action plan walked through together.",
+        "ctaLabel": "Let’s talk",
+        "ctaLink": {
+          "discriminant": "#contatti"
+        },
+        "highlight": false,
+        "badge": ""
+      },
+      {
+        "label": "Monthly",
+        "title": "Ongoing support",
+        "text": "I work alongside you as an outside advisor: decisions, suppliers, projects and results.",
+        "ctaLabel": "Let’s talk",
+        "ctaLink": {
+          "discriminant": "#contatti"
+        },
+        "highlight": true,
+        "badge": "Most popular"
+      },
+      {
+        "label": "Tailored",
+        "title": "Workshops and projects",
+        "text": "Team training, bringing AI into the business, second opinions.",
+        "ctaLabel": "Let’s talk",
+        "ctaLink": {
+          "discriminant": "#contatti"
+        },
+        "highlight": false,
+        "badge": ""
+      }
+    ]
+  },
+  "offer": {
+    "show": false,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions about consulting",
+    "text": "Can’t see yours? [Drop me a line](#contatti) and I’ll reply by the next business day.\n",
+    "items": [
+      {
+        "question": "My business is small: is going digital worth it?",
+        "answer": "Yes, all the more so: in a small business every hour saved counts for more. We start with the one or two processes that waste the most time, such as quotes or paperwork, and only expand if it works.\n"
+      },
+      {
+        "question": "Will I have to change my business software or buy new programs?",
+        "answer": "Not necessarily. Often you can achieve a lot just by connecting the tools you already use. If something new is needed, I’ll suggest options with clear costs, free ones included.\n"
+      },
+      {
+        "question": "Can AI really prepare quotes?",
+        "answer": "It can draft one from the customer’s enquiry, your price lists and your rules. The final call is always yours: you check it, tweak it if needed and send it.\n"
+      },
+      {
+        "question": "How do you handle company data?",
+        "answer": "Carefully: I use business-grade services, give the AI only the data it needs and set everything up in line with the GDPR. For the most sensitive data, we weigh up the most cautious options together.\n"
+      },
+      {
+        "question": "Do you work with our agency or IT provider too?",
+        "answer": "Yes. I can support them, coordinate projects or give an independent opinion: what matters is the result for your business.\n"
+      },
+      {
+        "question": "Do you work on-site?",
+        "answer": "Yes, for businesses in Veneto and Friuli Venezia Giulia I’m happy to meet the team in person, especially during the analysis. Everything else works perfectly well remotely, wherever you are.\n"
+      }
+    ],
+    "ctaLabel": "Book a free call",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "digitalizzazione",
+      "dati"
+    ],
+    "title": "Going digital, in practice",
+    "text": "Where to start automating office work, and how to really measure the results.\n",
+    "buttonLabel": "All articles"
+  },
+  "contact": {
+    "title": "Let’s talk about your business",
+    "formTitle": "Book a free call",
+    "topics": [
+      "ai"
+    ]
+  },
+  "seo": {
+    "slug": "digital-consulting",
+    "title": "Digital and AI consulting for small businesses | bortolin.dev",
+    "description": "Digital consulting for small businesses: marketing, AI-drafted quotes and paperwork, automations and CRM. Measurable goals, fixed price, no jargon.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

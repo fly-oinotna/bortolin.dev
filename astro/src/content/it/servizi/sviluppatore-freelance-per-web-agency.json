@@ -1,0 +1,501 @@
+{
+  "hero": {
+    "breadcrumb": "Per le web agency",
+    "eyebrow": "Per le web agency",
+    "title": "Il reparto tecnico della tua agenzia, a prezzo fisso",
+    "text": "Sviluppo, SEO, performance, intelligenza artificiale, tracciamento e manutenzione per i clienti della tua agenzia, **in white label**. Ogni lavoro ha un **prezzo fisso concordato prima**: puoi preventivare al tuo cliente con il tuo margine, senza sorprese.\n",
+    "ctaLabel": "Parliamo di un progetto",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Tutti i servizi",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#servizi-agency"
+    },
+    "highlights": [
+      "Prezzo fisso per progetto",
+      "Sotto il tuo marchio",
+      "Accordo di riservatezza"
+    ],
+    "boardLogo": "IL TUO\nLOGO",
+    "boardLabel": "Progetti per",
+    "boardTitle": "la tua agenzia",
+    "boardBadge": "White label",
+    "priceLabel": "prezzo fisso",
+    "statusTodo": "Da fare",
+    "statusDoing": "In corso",
+    "statusDone": "Consegnato",
+    "tasks": [
+      {
+        "title": "Sito vetrina da design Figma",
+        "client": "Cliente: studio di architettura",
+        "price": "2.400 €"
+      },
+      {
+        "title": "Audit SEO tecnico",
+        "client": "Cliente: e-commerce di arredamento",
+        "price": "490 €"
+      },
+      {
+        "title": "Integrazione AI nelle schede prodotto",
+        "client": "Cliente: negozio online",
+        "price": "790 €"
+      },
+      {
+        "title": "Core Web Vitals da rosso a verde",
+        "client": "Cliente: sito WordPress esistente",
+        "price": "650 €"
+      }
+    ],
+    "summaryLabel": "Sorprese in fattura",
+    "summaryValue": "0 €",
+    "caption": "Esempio illustrativo: prezzi indicativi di fantasia, ogni progetto ha il suo preventivo."
+  },
+  "collab": {
+    "eyebrow": "Come collaboriamo",
+    "title": "Un partner tecnico, non un concorrente",
+    "text": "Lavoro per le agenzie dal 2016, dopo anni come lead developer in web agency all’estero. So cosa significa avere scadenze strette, clienti esigenti e margini da proteggere.\n",
+    "items": [
+      {
+        "title": "Il tuo marchio, sempre",
+        "text": "Lavoro dietro le quinte: il cliente vede la tua agenzia. Se preferisci, partecipo alle call come membro del tuo team."
+      },
+      {
+        "title": "Mai contatti diretti",
+        "text": "Non contatto i tuoi clienti e non mi propongo a loro. Lo mettiamo per iscritto in un accordo di riservatezza."
+      },
+      {
+        "title": "I tuoi strumenti",
+        "text": "ClickUp, Trello, Asana, GitHub, Google Meet: mi adatto al vostro modo di lavorare."
+      },
+      {
+        "title": "Esperienza internazionale",
+        "text": "Oltre 15 anni, più di 400 progetti, e lavoro in italiano, inglese, tedesco e spagnolo."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Prezzo fisso",
+    "title": "Il tuo margine è protetto, sempre",
+    "text": "Le ore extra sono il nemico dei margini di un’agenzia. Per questo ogni lavoro ha un **preventivo fisso**, con tempi e contenuti scritti. Se il cliente cambia idea, ne parliamo prima e decidi tu, mai dopo in fattura.\n",
+    "points": [
+      {
+        "text": "**Progetti**: prezzo chiuso per ogni sito, audit o integrazione.\n"
+      },
+      {
+        "text": "**Manutenzione**: canone mensile fisso, senza conteggi a sorpresa.\n"
+      },
+      {
+        "text": "**Variazioni**: valutate e approvate da te prima di essere fatte.\n"
+      }
+    ],
+    "exampleLabel": "Esempio di come funziona",
+    "example": [
+      {
+        "title": "Il mio preventivo a te",
+        "text": "fisso, scritto, con i tempi",
+        "value": "A"
+      },
+      {
+        "title": "Il tuo preventivo al cliente",
+        "text": "con il tuo margine e i tuoi servizi",
+        "value": "A + margine"
+      },
+      {
+        "title": "La fattura finale che ricevi",
+        "text": "identica al preventivo",
+        "value": "A"
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Cosa posso fare per voi",
+    "title": "Tutti i servizi web, in un unico partner",
+    "text": "Potete affidarmi un progetto intero o solo una parte: lo sviluppo, l’analisi SEO, l’ottimizzazione o la manutenzione. Ogni servizio, a prezzo fisso.\n",
+    "navLabel": "Vai al servizio",
+    "items": [
+      {
+        "anchor": "white-label",
+        "short": "Sviluppo white label",
+        "icon": "code",
+        "label": "Il cuore della collaborazione",
+        "badge": "",
+        "title": "Sviluppo siti ed e-commerce in white label",
+        "text": "Trasformo i vostri design in siti veloci, accessibili e facili da gestire per il cliente finale. Lavoro sotto il vostro marchio: per il cliente, sono parte del vostro team.",
+        "points": [
+          "Da Figma, PDF o design system",
+          "WordPress con temi e plugin su misura, WooCommerce",
+          "Siti statici e soluzioni headless quando serve la massima velocità",
+          "Landing page per le vostre campagne"
+        ],
+        "footer": ""
+      },
+      {
+        "anchor": "analisi-seo",
+        "short": "Analisi e SEO tecnica",
+        "icon": "search",
+        "label": "",
+        "badge": "",
+        "title": "Analisi e SEO tecnica",
+        "text": "Audit SEO dei siti dei vostri clienti, con report che potete presentare a vostro nome, e implementazione degli interventi.",
+        "points": [
+          "Audit tecnico e piano d’azione",
+          "Migrazioni senza perdere posizioni",
+          "Dati strutturati e SEO multilingua"
+        ],
+        "footer": "Prezzo fisso"
+      },
+      {
+        "anchor": "performance",
+        "short": "Performance e Core Web Vitals",
+        "icon": "bolt",
+        "label": "",
+        "badge": "",
+        "title": "Performance e Core Web Vitals",
+        "text": "Rendo veloci i siti già online, anche quelli costruiti da altri, e li porto nei valori consigliati da Google.",
+        "points": [
+          "Analisi Lighthouse e dati reali",
+          "Ottimizzazione di immagini, codice e cache",
+          "Confronto prima e dopo da girare al cliente"
+        ],
+        "footer": "Prezzo fisso"
+      },
+      {
+        "anchor": "integrazione-ai",
+        "short": "Integrazione AI",
+        "icon": "sparkles",
+        "label": "",
+        "badge": "Nuovo servizio da rivendere",
+        "title": "Integrazione AI",
+        "text": "Aggiungete l’intelligenza artificiale alla vostra offerta: la integro io nei siti dei vostri clienti, con Gemini, Claude o ChatGPT.",
+        "points": [
+          "Meta tag, testi e traduzioni con un clic",
+          "Assistenti e ricerca intelligente sul sito",
+          "Automazioni per i flussi dei clienti"
+        ],
+        "footer": "Prezzo fisso"
+      },
+      {
+        "anchor": "tracciamento",
+        "short": "Tracciamento e analytics",
+        "icon": "chart",
+        "label": "",
+        "badge": "",
+        "title": "Tracciamento e analytics",
+        "text": "Configurazione da zero, controllo e riparazione dei tracciamenti, anche su siti realizzati da altri.",
+        "points": [
+          "Google Tag Manager e GA4",
+          "Google Ads, Meta Pixel e Conversions API",
+          "Consent Mode e banner cookie"
+        ],
+        "footer": "Prezzo fisso"
+      },
+      {
+        "anchor": "accessibilita",
+        "short": "Accessibilità",
+        "icon": "accessibility",
+        "label": "",
+        "badge": "",
+        "title": "Accessibilità",
+        "text": "Verifica e adeguamento dei siti all’European Accessibility Act: un tema su cui molti vostri clienti avranno bisogno di risposte.",
+        "points": [
+          "Analisi di conformità",
+          "Correzioni su codice e contenuti",
+          "Navigazione da tastiera e screen reader"
+        ],
+        "footer": "Prezzo fisso"
+      },
+      {
+        "anchor": "manutenzione",
+        "short": "Manutenzione e assistenza",
+        "icon": "wrench",
+        "label": "",
+        "badge": "",
+        "title": "Manutenzione e assistenza",
+        "text": "Aggiornamenti, sicurezza, backup e piccole modifiche continuative, anche completamente in white label.",
+        "points": [
+          "Canone mensile fisso",
+          "Interventi e correzioni urgenti",
+          "Report periodico da girare al cliente"
+        ],
+        "footer": "Prezzo fisso"
+      },
+      {
+        "anchor": "project-management",
+        "short": "Project management",
+        "icon": "calendar",
+        "label": "",
+        "badge": "",
+        "title": "Project management",
+        "text": "Coordino i progetti digitali tra cliente e team: traduco le esigenze in attività chiare, controllo tempi e risorse e anticipo i problemi.",
+        "points": [
+          "Analisi dei requisiti e stime",
+          "Pianificazione e coordinamento del team",
+          "Comunicazione con il cliente, se lo desiderate"
+        ],
+        "footer": "Prezzo fisso"
+      },
+      {
+        "anchor": "consulenza-tecnica",
+        "short": "Consulenza tecnica",
+        "icon": "bulb",
+        "label": "",
+        "badge": "",
+        "title": "Consulenza tecnica",
+        "text": "Un parere esperto quando serve: per preventivare un progetto complesso, scegliere la tecnologia giusta o formare il vostro team.",
+        "points": [
+          "Supporto ai preventivi tecnici",
+          "Second opinion su progetti in corso",
+          "Formazione per sviluppatori e designer"
+        ],
+        "footer": "Prezzo fisso"
+      }
+    ]
+  },
+  "tech": {
+    "eyebrow": "Tecnologie",
+    "title": "Gli strumenti con cui lavoro",
+    "text": "Scelgo la tecnologia in base al progetto e al cliente finale: WordPress quando serve gestire i contenuti in autonomia, Next.js o Astro quando contano soprattutto velocità e scalabilità. E mi adatto volentieri allo stack della vostra agenzia.\n",
+    "groups": [
+      {
+        "title": "Design",
+        "items": [
+          {
+            "logo": "/src/assets/images/tecnologie/figma.svg",
+            "name": "Figma"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/sketch.svg",
+            "name": "Sketch"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/penpot.svg",
+            "name": "Penpot"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/framer.svg",
+            "name": "Framer"
+          }
+        ]
+      },
+      {
+        "title": "Front-end",
+        "items": [
+          {
+            "logo": "/src/assets/images/tecnologie/tailwind.svg",
+            "name": "Tailwind CSS"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/javascript.svg",
+            "name": "JavaScript"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/typescript.svg",
+            "name": "TypeScript"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/react.svg",
+            "name": "React"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/nextjs.svg",
+            "name": "Next.js"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/astro.svg",
+            "name": "Astro"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/vite.svg",
+            "name": "Vite"
+          }
+        ]
+      },
+      {
+        "title": "Back-end e CMS",
+        "items": [
+          {
+            "logo": "/src/assets/images/tecnologie/php.svg",
+            "name": "PHP"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/laravel.svg",
+            "name": "Laravel"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/nodejs.svg",
+            "name": "Node.js"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/wordpress.svg",
+            "name": "WordPress"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/woocommerce.svg",
+            "name": "WooCommerce"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/shopify.svg",
+            "name": "Shopify"
+          }
+        ]
+      },
+      {
+        "title": "Collaborazione",
+        "items": [
+          {
+            "logo": "/src/assets/images/tecnologie/clickup.svg",
+            "name": "ClickUp"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/trello.svg",
+            "name": "Trello"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/asana.svg",
+            "name": "Asana"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/miro.svg",
+            "name": "Miro"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/git.svg",
+            "name": "Git"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/github.svg",
+            "name": "GitHub"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/googlemeet.svg",
+            "name": "Google Meet"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/zoom.svg",
+            "name": "Zoom"
+          }
+        ]
+      },
+      {
+        "title": "Analytics e tracciamento",
+        "items": [
+          {
+            "logo": "/src/assets/images/tecnologie/gtm.svg",
+            "name": "Google Tag Manager"
+          },
+          {
+            "logo": "/src/assets/images/tecnologie/ga4.svg",
+            "name": "Google Analytics"
+          }
+        ]
+      }
+    ],
+    "note": "I loghi e i nomi citati sono marchi dei rispettivi proprietari, usati solo per indicare le tecnologie impiegate; non c’è alcuna affiliazione."
+  },
+  "method": {
+    "eyebrow": "Come funziona",
+    "title": "Dal brief alla consegna, senza sorprese",
+    "text": "",
+    "items": [
+      {
+        "title": "Brief",
+        "text": "Mi mandate design, requisiti e scadenze, anche solo una bozza.",
+        "highlight": false
+      },
+      {
+        "title": "Preventivo fisso",
+        "text": "Ricevete un prezzo chiuso con tempi e cosa è incluso: lo potete rivendere con il vostro margine.",
+        "highlight": true
+      },
+      {
+        "title": "Sviluppo",
+        "text": "Lavoro con i vostri strumenti e vi aggiorno a ogni tappa.",
+        "highlight": false
+      },
+      {
+        "title": "Controllo qualità",
+        "text": "Test su dispositivi, Lighthouse e accessibilità prima di ogni consegna.",
+        "highlight": false
+      },
+      {
+        "title": "Consegna",
+        "text": "Documentazione, accessi e, se serve, formazione per il cliente finale.",
+        "highlight": false
+      }
+    ],
+    "boxTitle": "Avete un progetto da preventivare?",
+    "boxText": "Mandatemi il brief: vi rispondo con un prezzo fisso e una data di consegna.",
+    "boxCtaLabel": "Inviami il brief",
+    "boxCtaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "offer": {
+    "show": false,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "Domande frequenti",
+    "title": "Domande delle agenzie",
+    "text": "Non trovi la tua? [Scrivimi](#contatti), rispondo entro il giorno lavorativo successivo.\n",
+    "items": [
+      {
+        "question": "Lavori davvero sotto il nostro marchio?",
+        "answer": "Sì. Il cliente finale vede solo la vostra agenzia: email, documenti e consegne sono a vostro nome. Se volete, partecipo alle riunioni come membro del vostro team.\n"
+      },
+      {
+        "question": "Firmi un accordo di riservatezza?",
+        "answer": "Certo, e mi impegno per iscritto a non contattare né acquisire i vostri clienti.\n"
+      },
+      {
+        "question": "Come funziona il prezzo fisso?",
+        "answer": "Per ogni lavoro ricevete un preventivo chiuso con contenuti e tempi. Le eventuali variazioni richieste dal cliente vengono valutate e approvate da voi prima di essere fatte.\n"
+      },
+      {
+        "question": "Quali tempi di consegna garantisci?",
+        "answer": "Li concordiamo nel preventivo, in base alla complessità e al mio carico di lavoro, e li rispetto. Se un progetto è urgente, ditemelo subito: vi dico con onestà se è fattibile.\n"
+      },
+      {
+        "question": "Lavori su siti fatti da altri?",
+        "answer": "Sì: performance, SEO tecnica, tracciamento, accessibilità e manutenzione si possono fare anche su siti esistenti, dopo una prima analisi.\n"
+      },
+      {
+        "question": "Come fatturi?",
+        "answer": "Fatturo alla vostra agenzia, con l’importo del preventivo. Voi fatturate al cliente finale con il vostro margine.\n"
+      }
+    ],
+    "ctaLabel": "Parliamo di un progetto",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": false,
+    "categories": [
+      "siti-web"
+    ],
+    "title": "",
+    "text": "",
+    "buttonLabel": "Tutti gli articoli"
+  },
+  "contact": {
+    "title": "Parliamo della tua agenzia",
+    "formTitle": "Inviami il brief o una domanda",
+    "topics": []
+  },
+  "seo": {
+    "title": "Sviluppatore freelance per web agency | bortolin.dev",
+    "description": "Sviluppo, SEO, performance, AI e manutenzione in white label per web agency. Prezzo fisso per ogni progetto: preventivi al cliente con il tuo margine.",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "ogImage": "/src/assets/images/social/og-web-agency.png",
+    "markdown": null,
+    "customMarkupCode": ""
+  }
+}

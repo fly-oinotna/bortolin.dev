@@ -1,0 +1,93 @@
+{
+  "hero": {
+    "breadcrumb": "Casos de éxito",
+    "eyebrow": "Casos de éxito",
+    "title": "Webs que funcionan de verdad, vistas de cerca",
+    "text": "Cada proyecto parte de un problema concreto. Aquí tienes algunas de las webs que he creado: el reto, las decisiones tomadas y el resultado, en cualquier pantalla.\n",
+    "ctaLabel": "Hablemos de tu proyecto",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Ver los proyectos",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#elenco"
+    },
+    "projectsLabel": "Proyectos entregados",
+    "projectsValue": 400,
+    "yearsLabel": "Años de experiencia",
+    "yearsValue": 15,
+    "suffix": "+",
+    "languagesLabel": "Idiomas de trabajo",
+    "languagesValue": "ES · EN · IT · DE"
+  },
+  "list": {
+    "eyebrow": "Los proyectos",
+    "title": "Elige un sector",
+    "filterLabel": "Filtrar los casos de éxito",
+    "allLabel": "Todos",
+    "filters": [
+      {
+        "value": "aziende",
+        "label": "Empresas"
+      },
+      {
+        "value": "servizi",
+        "label": "Servicios profesionales"
+      },
+      {
+        "value": "formazione",
+        "label": "Formación"
+      },
+      {
+        "value": "multilingua",
+        "label": "Multiidioma"
+      }
+    ],
+    "items": [
+      "projsystem",
+      "european-forensic-institute"
+    ],
+    "tagsLabel": "Puntos clave",
+    "nextTitle": "El próximo puede ser el tuyo",
+    "nextText": "Web nueva, rediseño, SEO o integración de IA: cuéntame el proyecto y recibe un presupuesto con precio cerrado.",
+    "nextLabel": "Pide tu presupuesto",
+    "nextLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "banner": {
+    "title": "¿Te convence? Hablemos",
+    "text": "Una llamada inicial gratuita de 25 minutos: objetivos, plazos y una idea clara del coste, con precio cerrado.",
+    "ctaLabel": "Reserva una llamada",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Ver los servicios",
+    "linkLink": {
+      "discriminant": "/servizi/"
+    }
+  },
+  "related": {
+    "title": "Más casos de éxito",
+    "allLabel": "Todos los casos de éxito"
+  },
+  "contact": {
+    "title": "Sé el próximo caso de éxito",
+    "formTitle": "Pide tu presupuesto gratis",
+    "topics": []
+  },
+  "seo": {
+    "slug": "casos-de-exito",
+    "title": "Casos de éxito: webs que he creado | bortolin.dev",
+    "description": "Casos de éxito de webs que he creado: el reto, las decisiones y el resultado en cualquier pantalla. Webs corporativas, multiidioma y WordPress.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

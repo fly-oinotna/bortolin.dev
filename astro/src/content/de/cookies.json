@@ -1,0 +1,47 @@
+{
+  "banner": {
+    "title": "Wir verwenden Cookies",
+    "text": "Sie helfen uns zu verstehen, wie die Website genutzt wird, sie zu verbessern, Ihnen passendere Inhalte zu zeigen und das Surfen angenehmer zu machen. Welche Sie aktivieren, entscheiden Sie in den Einstellungen.",
+    "privacyText": "Mehr dazu in unserer",
+    "privacyLinkText": "Datenschutzerklärung",
+    "privacyLink": {
+      "discriminant": "/informativa-sulla-privacy/",
+      "value": null
+    },
+    "accept": "Akzeptieren",
+    "acceptAll": "Alle akzeptieren",
+    "deny": "Ablehnen",
+    "settings": "Einstellungen",
+    "save": "Auswahl speichern",
+    "close": "Schließen",
+    "preferences": "Cookie-Einstellungen ändern"
+  },
+  "preferences": {
+    "title": "Datenschutz-Einstellungen",
+    "text": "Für diese Zwecke würden wir Ihre Daten gerne nutzen. Ihre Entscheidung können Sie jederzeit über den Button unten links ändern."
+  },
+  "types": {
+    "items": [
+      {
+        "title": "Technisch notwendige Cookies",
+        "description": "Erforderlich, damit die Website funktioniert und Ihre Cookie-Einstellungen gespeichert bleiben. Immer aktiv."
+      },
+      {
+        "title": "Statistik",
+        "description": "Erlaubt das Speichern von Informationen wie Cookies, um Besuche auszuwerten (aufgerufene Seiten, Verweildauer) und die Website zu verbessern."
+      },
+      {
+        "title": "Werbung",
+        "description": "Erlaubt das Speichern werbebezogener Informationen wie Cookies."
+      },
+      {
+        "title": "Werbedaten",
+        "description": "Erlaubt die Übermittlung von Nutzerdaten an Google zu Werbezwecken."
+      },
+      {
+        "title": "Personalisierte Werbung",
+        "description": "Erlaubt die Anzeige personalisierter Werbung."
+      }
+    ]
+  }
+}

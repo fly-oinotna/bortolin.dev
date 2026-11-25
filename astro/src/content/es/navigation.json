@@ -1,0 +1,129 @@
+{
+  "main": {
+    "servicesLabel": "Servicios",
+    "servicesLink": {
+      "discriminant": "/servizi/"
+    },
+    "items": [
+      {
+        "label": "Sobre mí",
+        "link": {
+          "discriminant": "custom",
+          "value": "/#chi-sono"
+        }
+      },
+      {
+        "label": "Casos de éxito",
+        "link": {
+          "discriminant": "/casi-studio/"
+        }
+      },
+      {
+        "label": "Blog",
+        "link": {
+          "discriminant": "/blog/"
+        }
+      }
+    ]
+  },
+  "mega": {
+    "groups": [
+      {
+        "title": "Tu web",
+        "dark": false,
+        "items": [
+          {
+            "label": "Páginas web completas",
+            "badge": "Todo incluido",
+            "text": "Diseño, textos, SEO, velocidad e IA",
+            "link": {
+              "discriminant": "/servizi/siti-web/"
+            },
+            "icon": "monitor",
+            "bold": true
+          },
+          {
+            "label": "Consultoría SEO",
+            "text": "Aparece en Google, también con la web que ya tienes",
+            "link": {
+              "discriminant": "/servizi/consulenza-seo/"
+            },
+            "icon": "search",
+            "bold": false
+          },
+          {
+            "label": "Rendimiento y Lighthouse",
+            "text": "Core Web Vitals, velocidad, buenas prácticas",
+            "link": {
+              "discriminant": "/servizi/miglioramento-prestazioni-siti-web/"
+            },
+            "icon": "bolt",
+            "bold": false
+          },
+          {
+            "label": "Integración de IA",
+            "text": "Asistentes, automatizaciones, visibilidad en ChatGPT",
+            "link": {
+              "discriminant": "/servizi/integrazione-ai/"
+            },
+            "icon": "sparkles",
+            "bold": false
+          }
+        ]
+      },
+      {
+        "title": "Crecimiento y estrategia",
+        "dark": true,
+        "items": [
+          {
+            "label": "Consultoría digital",
+            "text": "Análisis, estrategia, talleres, segundas opiniones",
+            "link": {
+              "discriminant": "/servizi/consulenza-digitale/"
+            },
+            "icon": "bulb",
+            "bold": false
+          },
+          {
+            "label": "Google Ads",
+            "text": "Contactos, no solo clics",
+            "link": {
+              "discriminant": "/servizi/google-ads/"
+            },
+            "icon": "target",
+            "bold": false
+          },
+          {
+            "label": "Publicidad en IA",
+            "text": "Anuncios dentro de ChatGPT y los asistentes de IA",
+            "link": {
+              "discriminant": "/servizi/ai-ads/"
+            },
+            "icon": "chat-ad",
+            "bold": false
+          },
+          {
+            "label": "Meta Ads",
+            "text": "Anuncios en Facebook e Instagram que traen clientes",
+            "link": {
+              "discriminant": "/servizi/meta-ads/"
+            },
+            "icon": "megaphone",
+            "bold": false
+          }
+        ]
+      }
+    ],
+    "agencyStrong": "Para agencias web:",
+    "agencyText": "desarrollo marca blanca, gestión de proyectos, medición y mantenimiento",
+    "agencyMobile": "Para agencias web",
+    "agencyLink": {
+      "discriminant": "/servizi/sviluppatore-freelance-per-web-agency/"
+    },
+    "allLabel": "Ver todos los servicios y ofertas",
+    "allMobile": "Todos los servicios y ofertas",
+    "allLink": {
+      "discriminant": "/servizi/"
+    }
+  }
+}

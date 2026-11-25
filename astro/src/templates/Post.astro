@@ -1,0 +1,199 @@
+---
+// TEMPLATE POST (Keystatic → Post): /blog/<indirizzo>/ e /<lingua>/<blog>/<indirizzo>/.
+// Indice automatico dai titoli H2, un invito all'azione ogni 3 sezioni, box autore, offerta (o banner) del servizio
+// collegato alla categoria e articoli correlati. Testi comuni e servizi per categoria: Keystatic → "Blog".
+import Markdoc, { type RenderableTreeNode } from '@markdoc/markdoc';
+const { Tag } = Markdoc;
+import { statSync } from 'node:fs';
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import Base from '../layouts/Base.astro';
+import Icon from '../components/ui/Icon.astro';
+import Img from '../components/ui/Img.astro';
+import OfferBand from '../components/sections/OfferBand.astro';
+import Contact from '../components/sections/Contact.astro';
+import { read, readGlobals, readOffer, offerIsActive, entry, entries } from '../lib/content';
+import { markdocConfig, decorate, rich } from '../lib/rich';
+import { href } from '../lib/links';
+import { postUrl } from '../lib/pages';
+import { categoryLabel, readingTime } from '../lib/blog';
+import { t } from '../i18n/ui';
+
+interface Props { lang?: string; /** slug della versione italiana */ slug: string }
+const { lang = 'it', slug: itSlug } = Astro.props;
+const g = await readGlobals(lang);
+const b = await read('blog', lang);
+const post = (await entry('posts', itSlug, lang))!;
+const { slug } = post;
+const e = post.entry as any;
+const ui = t(g.lang);
+const c = e.content;
+const pt = b.post;
+const svc = b.categories.items.find((x) => x.category === c.category);
+const offerRaw = svc?.offer ? await readOffer(svc.offer, lang) : null;
+const offer = offerIsActive(offerRaw) ? offerRaw : null;
+const catUrl = g.url(`/blog/?categoria=${c.category}`);
+const trail = [{ name: b.hero.breadcrumb || 'Blog', url: g.url('/blog/') }, { name: categoryLabel(c.category, lang), url: catUrl }, { name: e.title, url: g.url(postUrl(itSlug)) }];
+
+const fmt = new Intl.DateTimeFormat(lang, { day: 'numeric', month: 'long', year: 'numeric' });
+const date = (d: string) => fmt.format(new Date(`${d}T12:00:00`));
+
+// ---- testo: id ai titoli H2 (per l'indice) e inviti all'azione prima del 4°, 7°… H2
+const slugify = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+const textOf = (n: RenderableTreeNode): string => (typeof n === 'string' ? n : Tag.isTag(n) ? n.children.map(textOf).join('') : '');
+const opts = { strong: '', link: 'font-semibold text-black underline underline-offset-4 hover:no-underline', mark: 'text-bd-green' };
+const tree = Markdoc.transform(c.text?.node ?? Markdoc.parse(String(c.text ?? '')), markdocConfig);
+const nodes = (Tag.isTag(tree) ? tree.children : [tree]).map((n) => decorate(n, opts));
+const ctas = svc ? [[svc.cta1Title, svc.cta1Text], [svc.cta2Title, svc.cta2Text]].filter(([a]) => a) : [];
+const toc: { id: string; text: string }[] = [];
+const used = new Set<string>();
+let h2 = 0;
+const parts: string[] = [];
+for (const n of nodes) {
+  if (Tag.isTag(n) && n.name === 'h2') {
+    h2++;
+    if (h2 > 1 && (h2 - 1) % 3 === 0 && ctas.length) {
+      const [ct, tx] = ctas[((h2 - 1) / 3 - 1) % ctas.length];
+      parts.push(`<aside class="not-prose my-10 flex flex-col items-start gap-4 rounded-3xl bg-black p-6 text-white sm:flex-row sm:items-center sm:justify-between" aria-label="${pt.ctaLabel ?? ''}"><div><p class="text-lg font-bold text-bd-green">${ct}</p><p class="mt-1 text-sm text-gray-300">${tx ?? ''}</p></div><a href="#contatti" class="btn-primary shrink-0">${pt.ctaButton} <svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a></aside>`);
+    }
+    const text = textOf(n);
+    let id = slugify(text) || `sezione-${h2}`;
+    while (used.has(id)) id += '-2';
+    used.add(id);
+    toc.push({ id, text });
+    parts.push(Markdoc.renderers.html(new Tag('h2', { ...n.attributes, id }, n.children)));
+  } else parts.push(Markdoc.renderers.html(n));
+}
+const lead = c.lead ? rich({ node: Markdoc.parse(c.lead) }, { strong: '' }) : '';
+
+// ---- dati strutturati: immagine (jpg 1200 px), parole, ultima modifica del file
+const shots = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/**/*.{webp,png,jpg,jpeg}', { eager: true });
+const postImage = c.image && shots[c.image] ? (await getImage({ src: shots[c.image].default, width: 1200, format: 'jpg' })).src : undefined;
+const words = `${c.lead ?? ''} ${parts.join(' ')}`.replace(/<[^>]+>/g, ' ').split(/\s+/).filter(Boolean).length;
+const modified = (() => { try { return statSync(`src/content/${lang}/posts/${slug}.json`).mtime.toISOString().slice(0, 10); } catch { return c.date; } })();
+
+// ---- correlati: prima la stessa categoria, poi i più recenti
+const all = (await entries('posts', lang)).filter((x) => x.itSlug !== itSlug).sort((a, z) => String(z.entry.content.date).localeCompare(String(a.entry.content.date)));
+const related = [...all.filter((x) => x.entry.content.category === c.category), ...all.filter((x) => x.entry.content.category !== c.category)].slice(0, 3);
+---
+<Base g={g} seo={e.seo} breadcrumb={trail} schema={{ post: { headline: e.title, date: c.date, modified: modified, image: postImage, section: categoryLabel(c.category, lang), words } }}>
+  <div aria-hidden="true" class="fixed inset-x-0 top-0 z-50 h-1 origin-left scale-x-0 bg-bd-green" data-read-progress></div>
+
+  <!-- ================================================= INTESTAZIONE -->
+  <section class="pt-8 md:pt-12">
+    <div class="container">
+      <nav aria-label={ui.breadcrumb} class="mb-8 text-sm">
+        <ol class="flex items-center gap-1.5 text-gray-600">
+          <li class="shrink-0"><a href={g.url('/')} class="hover:text-black hover:underline">{ui.home}</a></li><li aria-hidden="true">/</li>
+          <li class="shrink-0"><a href={g.url('/blog/')} class="hover:text-black hover:underline">{trail[0].name}</a></li><li aria-hidden="true">/</li>
+          <li class="shrink-0"><a href={catUrl} class="hover:text-black hover:underline">{trail[1].name}</a></li><li aria-hidden="true">/</li>
+          <li class="min-w-0 truncate"><span aria-current="page" class="font-semibold text-black" title={e.title}>{e.title}</span></li>
+        </ol>
+      </nav>
+      <div class="max-w-4xl">
+        <a href={catUrl} class="inline-flex rounded-full bg-black px-3 py-1 text-xs font-bold text-bd-green uppercase hover:bg-bd-green hover:text-black">{categoryLabel(c.category, lang)}</a>
+        <h1 class="mt-5 text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">{e.title}</h1>
+        <p class="mt-5 text-lg md:text-xl">{c.excerpt}</p>
+        <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3 text-sm">
+          <span class="flex items-center gap-3"><Img src={pt.authorImage} alt="" widths={[96]} sizes="44px" class="h-11 w-11 rounded-full object-cover" /><span><span class="block font-semibold text-black">{pt.authorName}</span><span class="text-gray-600">{pt.authorRole}</span></span></span>
+          <span class="flex items-center gap-4 text-gray-600"><time datetime={c.date}>{date(c.date)}</time><span class="flex items-center gap-1"><Icon name="clock" size={16} stroke={2.2} />{readingTime(c)} min {b.hero.readingLabel}</span></span>
+        </div>
+      </div>
+      {c.image && (
+        <figure class="mt-10">
+          <Img src={c.image} alt={c.imageAlt} widths={[640, 960, 1232]} sizes="(min-width: 1280px) 1232px, 100vw" loading="eager" fetchpriority="high" class="aspect-[16/8] w-full rounded-3xl object-cover" />
+        </figure>
+      )}
+    </div>
+  </section>
+
+  <!-- ================================================= TESTO + INDICE -->
+  <section class="py-12 md:py-16">
+    <div class="container grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-16">
+      <aside class="lg:order-2 lg:col-span-4">
+        <div class="lg:sticky lg:top-28">
+          {toc.length > 0 && (
+            <details class="group rounded-3xl bg-gray-100 p-6 lg:open:bg-gray-100" open data-toc>
+              <summary class="flex cursor-pointer list-none items-center justify-between text-sm font-bold text-black uppercase lg:pointer-events-none">{pt.tocTitle}
+                <svg aria-hidden="true" class="transition-transform group-open:rotate-180 lg:hidden" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg></summary>
+              <ol class="mt-4 space-y-1">
+                {toc.map((it) => <li><a href={`#${it.id}`} class="relative flex gap-3 rounded-lg py-1.5 pl-4 text-sm text-gray-600 transition-colors before:absolute before:top-2.5 before:left-0 before:h-2 before:w-2 before:rounded-full before:bg-gray-300 hover:text-black">{it.text}</a></li>)}
+              </ol>
+            </details>
+          )}
+          {ctas[0] && (
+            <div class="mt-4 hidden rounded-3xl bg-black p-6 text-white lg:block">
+              <p class="font-bold text-bd-green">{ctas[0][0]}</p>
+              <p class="mt-1 text-sm text-gray-300">{pt.sideText}</p>
+              <a href="#contatti" class="btn-primary mt-4 w-full">{pt.sideButton}</a>
+            </div>
+          )}
+        </div>
+      </aside>
+      <article class="prose-bd max-w-none lg:order-1 lg:col-span-8 [&_.lead]:text-xl [&_.lead]:leading-relaxed [&_.lead]:text-black" data-article>
+        {lead && <p class="lead" set:html={lead} />}
+        <Fragment set:html={parts.join('\n')} />
+      </article>
+    </div>
+  </section>
+
+  <!-- ================================================= AUTORE -->
+  {pt.authorName && (
+    <section class="pb-12 md:pb-16">
+      <div class="container">
+        <div class="flex flex-col gap-6 rounded-3xl bg-gray-100 p-6 sm:flex-row sm:items-center md:p-8 lg:max-w-[66%]">
+          <Img src={pt.authorImage} alt={pt.authorAlt} widths={[192]} sizes="96px" class="h-24 w-24 shrink-0 rounded-2xl object-cover" />
+          <div>
+            <p class="text-xs font-bold text-gray-600 uppercase">{pt.authorLabel}</p>
+            <p class="text-xl font-bold text-black">{pt.authorName}</p>
+            <p class="mt-1 text-sm">{pt.authorBio}</p>
+            {pt.authorPageLabel && <a href={href(pt.authorPageLink)} class="mt-3 inline-block text-sm font-semibold text-black underline underline-offset-4 hover:no-underline">{pt.authorPageLabel}</a>}
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ================================================= OFFERTA O SERVIZIO COLLEGATO -->
+  {offer ? <OfferBand g={g} offer={offer} class="container" /> : svc && (
+    <section class="container">
+      <div class="grid grid-cols-1 items-center gap-6 rounded-3xl bg-bd-green p-6 md:p-10 lg:grid-cols-3 lg:p-12">
+        <div class="lg:col-span-2">
+          <p class="text-sm font-bold uppercase">{pt.bannerLabel}</p>
+          <h2 class="mt-2">{svc.service}</h2>
+          <p class="text-black">{svc.text}{pt.bannerSuffix}</p>
+        </div>
+        <div class="flex flex-wrap gap-3 lg:justify-end">
+          <a href={href(svc.link)} class="btn-secondary">{pt.bannerButton} <Icon name="arrow" size={20} /></a>
+          {pt.bannerCallLabel && <a href={href(pt.bannerCallLink)} class="btn-empty-primary">{pt.bannerCallLabel}</a>}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <!-- ================================================= CORRELATI -->
+  {related.length > 0 && (
+    <section class="py-16 md:py-24">
+      <div class="container">
+        <div class="flex flex-wrap items-end justify-between gap-4">
+          <h2 class="mb-0">{pt.relatedTitle}</h2>
+          <a href={g.url('/blog/')} class="font-semibold text-black underline underline-offset-4 hover:no-underline">{pt.relatedAll}</a>
+        </div>
+        <div class="mt-8 grid grid-cols-1 gap-6 md:grid-cols-3">
+          {related.map((x) => (
+            <article class="group relative flex flex-col overflow-hidden rounded-3xl bg-gray-100">
+              <div class="aspect-[16/10] overflow-hidden"><Img src={x.entry.content.image} alt="" widths={[480, 640]} sizes="(min-width: 768px) 400px, 100vw" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" /></div>
+              <div class="flex flex-1 flex-col p-6">
+                <span class="w-fit rounded-full bg-white px-3 py-1 text-xs font-bold text-black">{categoryLabel(x.entry.content.category, lang)}</span>
+                <h3 class="mt-3 text-lg leading-snug"><a href={g.url(postUrl(x.itSlug))} class="after:absolute after:inset-0 group-hover:underline">{x.entry.title}</a></h3>
+                <p class="mt-auto flex items-center gap-3 pt-4 text-xs text-gray-600"><time datetime={x.entry.content.date}>{date(x.entry.content.date)}</time><span class="flex items-center gap-1"><Icon name="clock" size={14} stroke={2.2} />{readingTime(x.entry.content)} min</span></p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
+  <Contact g={g} page={{ title: pt.contactTitle }} />
+</Base>

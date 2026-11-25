@@ -1,0 +1,23 @@
+{
+  "title": "Website-Relaunch ohne Ranking-Verluste bei Google",
+  "content": {
+    "image": "@it",
+    "imageAlt": "Holzplättchen, die auf einem Tisch das Wort „migration“ bilden",
+    "excerpt": "Eine schlecht gemachte Migration kann die Besucherzahlen über Nacht halbieren. Die 10 Prüfpunkte vor, während und nach dem Launch der neuen Website.",
+    "lead": "Eine neue Website ist eine gute Nachricht, aber eine schlecht gemachte Migration kann die Besucher über Google von heute auf morgen einbrechen lassen. Das passiert öfter, als man denkt. Hier sind die Prüfpunkte vor, während und nach dem Launch, damit Sie nicht verlieren, was Sie aufgebaut haben.",
+    "text": "## Warum Rankings verloren gehen\n\nGoogle kennt die Seiten Ihrer alten Website und zeigt sie in den Ergebnissen. Ändern diese Seiten mit der neuen Website ihre Adresse oder verschwinden ohne Hinweis, stößt Google auf Fehler, und wer klickt, landet auf einer Seite, die es nicht mehr gibt. Der über Jahre aufgebaute Wert ist weg.\n\n## Vorher: Bestandsaufnahme der Seiten\n\n1. Exportieren Sie eine Liste **aller Seiten** der aktuellen Website (aus der Sitemap und mit einem Crawling-Tool).\n2. Ermitteln Sie mit Search Console und Analytics die Seiten, die die meisten **Besuche und Anfragen** bringen.\n3. Notieren Sie auch die Seiten, auf die andere Websites **verlinken**.\n\n## Die Weiterleitungs-Map\n\nLegen Sie für jede alte Adresse fest, wohin sie auf der neuen Website führen soll, und richten Sie eine **permanente Weiterleitung (301)** ein. Einfache Regeln:\n\n- jede Seite auf die **inhaltlich passendste** neue Seite weiterleiten, nicht alle auf die Startseite;\n- Weiterleitungsketten vermeiden (A → B → C);\n- wirklich gelöschte Seiten ohne Entsprechung dürfen einen 410- oder 404-Fehler liefern.\n\n## Inhalte und Struktur\n\nWerden auf der neuen Website die Texte geändert, achten Sie darauf, nicht zu verlieren, was heute bei Google funktioniert: Themen, Keywords, Fragen, die Sie beantworten. Behalten Sie Titel und Beschreibungen der wichtigen Seiten bei oder verbessern Sie sie ganz bewusst.\n\n## Am Tag des Launchs\n\n- prüfen Sie, dass die Website **nicht für Suchmaschinen gesperrt** ist (passiert oft: In der Entwicklung war sie gesperrt, und niemand hebt die Sperre auf);\n- testen Sie stichprobenartig die Weiterleitungen der wichtigsten Seiten;\n- reichen Sie die neue **Sitemap** in der Search Console ein;\n- wechseln Sie auch die Domain, nutzen Sie das Tool zur Adressänderung in der Search Console;\n- prüfen Sie, ob Analytics und Conversion-Tracking funktionieren.\n\n## In den Wochen danach\n\nSchwankungen in den ersten Tagen sind normal. Prüfen Sie jede Woche in der Search Console die **Crawling-Fehler** und nicht gefundenen Seiten und ergänzen Sie fehlende Weiterleitungen. Vergleichen Sie Besuche und Rankings mit dem Vorzeitraum, um Probleme früh zu erkennen.\n\n## Die Checkliste in 10 Punkten\n\n1. Vollständige Liste der aktuellen Seiten.\n2. Wichtigste Seiten nach Besuchen, Anfragen und Links.\n3. Zuordnung alte Adresse → neue Adresse.\n4. 301-Weiterleitungen, ohne Ketten.\n5. Wichtige Titel und Inhalte erhalten.\n6. Website für Suchmaschinen freigegeben.\n7. Neue Sitemap eingereicht.\n8. Tracking geprüft.\n9. Wöchentliche Fehlerkontrolle.\n10. Datenvergleich nach einem und nach drei Monaten."
+  },
+  "seo": {
+    "title": "Website-Relaunch ohne Ranking-Verluste | bortolin.dev",
+    "description": "Eine schlecht gemachte Migration kann die Besucher über Nacht halbieren. Die 10 Prüfpunkte vor, während und nach dem Launch der neuen Website.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "cambiare-sito-senza-perdere-posizioni"
+}

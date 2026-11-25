@@ -1,0 +1,46 @@
+{
+  "name": "SEO-Paket mit KI",
+  "offer": {
+    "eyebrow": "Einführungsangebot",
+    "deadlineLabel": "Gültig bis 31. Januar 2027",
+    "title": "Das Paket {% verde %}„SEO mit KI“{% /verde %} für Ihre Website",
+    "text": "Der Button „Mit KI erstellen“, den Sie oben gesehen haben, direkt im Backend Ihrer Website: Meta-Titel, Beschreibungen und Alt-Texte für Bilder mit einem Klick, auf allen Seiten.\n",
+    "items": [
+      {
+        "title": "Meta-Titel und Beschreibungen",
+        "text": "für jede Seite und jedes Produkt"
+      },
+      {
+        "title": "Alt-Texte",
+        "text": "für alle Bilder"
+      },
+      {
+        "title": "Schulung inklusive",
+        "text": "plus ein Monat Support"
+      }
+    ],
+    "ctaLabel": "Paket anfragen",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "note": "Für WordPress und WooCommerce · Preise zzgl. MwSt.",
+    "image": "@it",
+    "boxEyebrow": "SEO-Paket mit KI",
+    "boxValue": "490 €",
+    "boxOldValue": "790 €",
+    "boxText": "KI-Nutzungskosten nicht enthalten",
+    "stamp": "−38 %"
+  },
+  "menu": {
+    "megaTitle": "Paket „SEO mit KI“ für 490 € statt 790 €",
+    "megaText": "Bei Bestellung bis 31. Januar 2027:",
+    "megaItems": [
+      "Meta-Titel und Beschreibungen mit einem Klick, für jede Seite",
+      "Alt-Texte für alle Bilder",
+      "Schulung und ein Monat Support inklusive"
+    ],
+    "mobileText": "bei Bestellung bis 31. Januar 2027",
+    "cardText": "Meta-Titel, Beschreibungen und Alt-Texte mit einem Klick, in WordPress."
+  },
+  "original": "seo-con-ai"
+}

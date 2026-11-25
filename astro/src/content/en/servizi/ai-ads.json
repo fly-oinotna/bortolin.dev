@@ -1,0 +1,306 @@
+{
+  "hero": {
+    "breadcrumb": "AI Ads",
+    "eyebrow": "The new channel",
+    "title": "AI Ads: put your business inside the answers AI gives",
+    "text": "More and more people ask ChatGPT, Gemini or Copilot for recommendations instead of searching Google. And AI assistants are now starting to show **ads alongside their answers**. Getting in there before your competitors is a real edge.\n",
+    "ctaLabel": "See if it’s right for you",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Where the ads appear",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#dove"
+    },
+    "highlights": [
+      "Fixed management fee",
+      "We start with a test",
+      "Tracking included"
+    ],
+    "chatTitle": "AI assistant",
+    "chatPlaceholder": "Ask me anything…",
+    "demoLabel": "Pick an example",
+    "demoCaption": "Illustrative examples with made-up businesses: how ads look varies from platform to platform.",
+    "examples": [
+      {
+        "tab": "Electrician",
+        "question": "Can you recommend a reliable electrician in Phoenix?",
+        "answer": "When choosing an electrician in Phoenix, check their license, recent reviews and response times. Always get a written quote before work starts.",
+        "letter": "E",
+        "name": "Phoenix electrician",
+        "place": "Phoenix and nearby",
+        "title": "Emergency electrical service in Phoenix",
+        "text": "Wiring, repairs and inspections. Free quote within 24 hours.",
+        "button": "Get a quote",
+        "products": []
+      },
+      {
+        "tab": "Shop",
+        "question": "Where can I test-ride an e-bike in Vancouver?",
+        "answer": "Plenty of specialist shops offer free test rides. Ask about battery range, how long the warranty lasts and how servicing works.",
+        "letter": "B",
+        "name": "Vancouver bike shop",
+        "place": "Downtown Vancouver · open Saturdays",
+        "title": "Test-ride e-bikes for free at our Vancouver store",
+        "text": "Over 40 models to try, in-house workshop and home delivery.",
+        "button": "Book a test ride",
+        "products": []
+      },
+      {
+        "tab": "Online store",
+        "question": "What’s a good Irish food gift to send for Christmas?",
+        "answer": "A hamper of Irish favorites always goes down well: smoked salmon, a mature farmhouse cheddar and a bottle of Irish cream, in a gift box.",
+        "letter": "P",
+        "name": "Irish food hampers",
+        "place": "Online store · delivery across Ireland",
+        "title": "",
+        "text": "",
+        "button": "",
+        "products": [
+          {
+            "name": "“Taste of Ireland” hamper",
+            "price": "€49.00"
+          },
+          {
+            "name": "Mature farmhouse cheddar 1 kg",
+            "price": "€22.90"
+          },
+          {
+            "name": "Irish cream liqueur",
+            "price": "€14.90"
+          }
+        ]
+      },
+      {
+        "tab": "Farm restaurant",
+        "question": "Any farm restaurants for Sunday lunch in Napa Valley?",
+        "answer": "Around Napa and St. Helena you’ll find several farm restaurants with seasonal menus and their own wines. On Sundays, it’s best to book a few days ahead.",
+        "letter": "A",
+        "name": "Napa Valley farm restaurant",
+        "place": "Napa Valley wine country (CA)",
+        "title": "Sunday lunch among the vines",
+        "text": "Seasonal dishes made with produce from our farm, paired with our own wines. Limited seating.",
+        "button": "Book a table",
+        "products": []
+      }
+    ],
+    "adLabel": "Sponsored"
+  },
+  "why": {
+    "eyebrow": "Why now",
+    "title": "People don’t just search anymore: they ask",
+    "text": "Someone chatting with an AI assistant usually knows what they want and describes it in detail. An ad that meets exactly that need, at exactly the right moment, is far more likely to get picked.\n",
+    "items": [
+      {
+        "value": "“…in Vancouver?”",
+        "title": "Specific questions",
+        "text": "In a conversation people say where, when and how much they want to spend, so you know exactly what they’re after."
+      },
+      {
+        "value": "Context",
+        "title": "The right ad at the right moment",
+        "text": "You appear when the conversation is about what you offer, not just when someone types a keyword."
+      },
+      {
+        "value": "First",
+        "title": "Beat your competitors to it",
+        "text": "It’s a brand-new channel, and in many industries competition is still thin. Early movers get a head start."
+      }
+    ]
+  },
+  "where": {
+    "eyebrow": "Where they appear",
+    "title": "The AI assistants you can advertise on",
+    "text": "This space changes month by month. I keep track of the news for you and only suggest channels that are actually available and worthwhile for your business.\n",
+    "items": [
+      {
+        "title": "Google",
+        "subtitle": "Ads in AI-generated answers",
+        "text": "With the right Google Ads campaigns, your ads can also appear in AI Overviews and in Google’s conversational answers.",
+        "highlight": false
+      },
+      {
+        "title": "ChatGPT",
+        "subtitle": "Ads in conversations",
+        "text": "OpenAI is bringing ads to ChatGPT. Availability, formats and access vary by country: I’ll check when and how you can get started.",
+        "highlight": true
+      },
+      {
+        "title": "Microsoft Copilot",
+        "subtitle": "Ads in Microsoft’s assistant",
+        "text": "Through Microsoft Advertising, ads can appear in Copilot’s answers and in Bing search.",
+        "highlight": false
+      }
+    ],
+    "note": "Google, ChatGPT and Microsoft Copilot are trademarks of their respective owners, mentioned for information only. Ad availability and formats depend on each platform and may change."
+  },
+  "compare": {
+    "eyebrow": "What’s different",
+    "title": "AI Ads and Google Ads: cousins, not twins",
+    "text": "The basics are the same, but the way people find you is different. That’s why you need a strategy and ads built specifically for it.\n",
+    "colA": "Google Ads",
+    "colB": "AI Ads",
+    "rows": [
+      {
+        "label": "How people are targeted",
+        "a": "Keywords searched on Google",
+        "b": "The context of the conversation"
+      },
+      {
+        "label": "What people type",
+        "a": "Short searches: “e-bike vancouver”",
+        "b": "Full questions, with specific needs"
+      },
+      {
+        "label": "Where the ad appears",
+        "a": "Above and below the search results",
+        "b": "Next to or below the assistant’s answer"
+      },
+      {
+        "label": "Maturity",
+        "a": "Tried and tested for years",
+        "b": "New formats, evolving fast"
+      }
+    ],
+    "note": "Already running Google Ads? [See how I manage Google campaigns](/servizi/google-ads/).\n"
+  },
+  "included": {
+    "eyebrow": "What’s included",
+    "title": "From first check to results, all in one plan",
+    "text": "A fixed fee, never a percentage of your budget. The account and the data stay yours.\n",
+    "ctaLabel": "See if it’s right for you",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "items": [
+      {
+        "title": "Opportunity check",
+        "text": "I’ll tell you honestly whether it makes sense for your business today, or whether it’s worth waiting."
+      },
+      {
+        "title": "Campaign setup",
+        "text": "Account, budget, goals and rules: all in order from day one."
+      },
+      {
+        "title": "Contexts and topics",
+        "text": "The conversations worth appearing in, not just keywords."
+      },
+      {
+        "title": "Ads and creatives",
+        "text": "Copy and images designed to slot helpfully into an answer."
+      },
+      {
+        "title": "Landing pages",
+        "text": "People coming from a conversation want quick answers, and the page has to deliver them."
+      },
+      {
+        "title": "Conversion tracking",
+        "text": "Enquiries and sales tracked, so you know what every cent brings back."
+      },
+      {
+        "title": "Ongoing optimization",
+        "text": "I cut what doesn’t pay and invest in what works."
+      },
+      {
+        "title": "Monthly video report",
+        "text": "What happened, what it means and what’s next."
+      },
+      {
+        "title": "Joined-up strategy",
+        "text": "AI Ads working with Google Ads, Meta Ads and your website, with no overlap."
+      }
+    ]
+  },
+  "method": {
+    "eyebrow": "The method",
+    "title": "Start small, grow with the data",
+    "text": "No gambling on a new channel: you test, measure and only invest where it works.\n",
+    "items": [
+      {
+        "title": "Check",
+        "text": "I check availability, formats and potential for your industry and area."
+      },
+      {
+        "title": "Test",
+        "text": "We start with a small budget and clear goals, measuring everything."
+      },
+      {
+        "title": "Scale",
+        "text": "More budget goes only to what brings real enquiries and sales."
+      },
+      {
+        "title": "Integrate",
+        "text": "I coordinate AI Ads with Google, Meta and your website, so you never pay twice for the same customer."
+      }
+    ]
+  },
+  "offer": {
+    "show": false,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions about AI Ads",
+    "text": "Can’t see yours? [Drop me a line](#contatti) and I’ll reply by the next business day.\n",
+    "items": [
+      {
+        "question": "Are AI Ads available in my country yet?",
+        "answer": "It depends on the platform: some formats are already live, others are in testing or rolling out country by country. In the initial check I’ll tell you what you can use today and what’s worth preparing for.\n"
+      },
+      {
+        "question": "Which businesses is it right for?",
+        "answer": "Mostly businesses selling services or products people ask for advice about: tradespeople, shops, online stores, tourism, professionals. If it isn’t worth it for your industry yet, I’ll say so.\n"
+      },
+      {
+        "question": "How much budget do I need?",
+        "answer": "We start with a small test budget, to gather real data before investing more. You get an estimate before we begin.\n"
+      },
+      {
+        "question": "Does it replace Google Ads?",
+        "answer": "No, it works alongside it. Google Ads is still essential for people who search the classic way; AI Ads reaches people asking an assistant for advice. Together they cover more of the buying journey.\n"
+      },
+      {
+        "question": "How do you measure results?",
+        "answer": "Just like any other campaign: by tracking enquiries and sales on your website, so you know what every cent you invest brings back.\n"
+      },
+      {
+        "question": "How much does management cost?",
+        "answer": "A fixed fee, set out in the quote. Never a percentage of your ad budget.\n"
+      }
+    ],
+    "ctaLabel": "See if it’s right for you",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "advertising"
+    ],
+    "title": "More on ads in AI",
+    "text": "What we know about ads in AI assistants and how to get ready, without chasing every trend.\n",
+    "buttonLabel": "All articles"
+  },
+  "contact": {
+    "title": "Get ahead in AI answers",
+    "formTitle": "Get a free opportunity check",
+    "topics": [
+      "ads"
+    ]
+  },
+  "seo": {
+    "slug": "ai-ads",
+    "title": "AI Ads: advertising on ChatGPT and AI assistants | bortolin.dev",
+    "description": "Ads alongside ChatGPT, Google and Copilot answers: I assess the opportunity for your business, run tests and measure results. Fixed fee.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

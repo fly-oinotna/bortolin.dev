@@ -1,0 +1,60 @@
+---
+// "Per chi è": colonna verde (sì) e colonna bordata (no)
+import Icon from "../ui/Icon.astro";
+import SectionHeading from "../ui/SectionHeading.astro";
+interface Props {
+  n?: number;
+  eyebrow?: string | null;
+  title?: string | null;
+  yesTitle: string;
+  yes: readonly string[];
+  noTitle: string;
+  no: readonly string[];
+  class?: string;
+}
+const {
+  n,
+  eyebrow,
+  title,
+  yesTitle,
+  yes,
+  noTitle,
+  no,
+  class: cls = "pb-16 md:pb-24",
+} = Astro.props;
+---
+
+<section class={cls}>
+  <div class="container">
+    <SectionHeading n={n} eyebrow={eyebrow} title={title} />
+    <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-6">
+      <div class="rounded-3xl bg-bd-green p-6 md:p-8">
+        <h3>{yesTitle}</h3>
+        <ul class="space-y-3 text-black">
+          {yes.map((x) => (
+            <li class="flex gap-3">
+              <Icon name="check" size={18} stroke={3} class="mt-1 shrink-0" />
+              {x}
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div class="rounded-3xl border-2 border-red-400 p-6 md:p-8">
+        <h3>{noTitle}</h3>
+        <ul class="space-y-3">
+          {no.map((x) => (
+            <li class="flex gap-3">
+              <Icon
+                name="x"
+                size={18}
+                stroke={3}
+                class="mt-1 shrink-0 text-red-400"
+              />
+              {x}
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

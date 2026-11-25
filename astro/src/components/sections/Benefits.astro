@@ -1,0 +1,29 @@
+---
+// Card con icona che si "disegna" una volta (data-draw) e numero decorativo
+import Icon from '../ui/Icon.astro';
+import SectionHeading from '../ui/SectionHeading.astro';
+import { rich, pad } from '../../lib/rich';
+import type { IconName } from '../../lib/icons';
+interface Props {
+  n?: number; eyebrow?: string | null; title?: string | null; text?: any; id?: string;
+  items: readonly { icon: string; title: string; text: any }[]; class?: string;
+}
+const { n, eyebrow, title, text, id, items, class: cls = 'py-16 md:py-24' } = Astro.props;
+---
+<section id={id} class={cls}>
+  <div class="container">
+    <SectionHeading n={n} eyebrow={eyebrow} title={title} text={text} />
+    <ul class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6" data-draw>
+      {items.map((it, i) => (
+        <li class="group relative overflow-hidden rounded-3xl bg-gray-100 p-6 transition-colors duration-300 hover:bg-bd-green md:p-8" style={`--d:${i * 150}ms`}>
+          <span aria-hidden="true" data-n={pad(i + 1)} class="absolute top-5 right-6 text-5xl font-extrabold text-gray-200 transition-colors group-hover:text-black/10 before:content-[attr(data-n)]"></span>
+          <span class="draw-badge grid h-16 w-16 place-items-center rounded-2xl bg-black text-bd-green">
+            <Icon name={it.icon as IconName} size={32} stroke={1.8} draw />
+          </span>
+          <h3 class="mt-6">{it.title}</h3>
+          <p class="group-hover:text-black" set:html={rich(it.text)} />
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>

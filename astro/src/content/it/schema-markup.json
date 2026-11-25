@@ -1,0 +1,72 @@
+{
+  "general": {
+    "name": "bortolin.dev",
+    "logo": "/src/assets/images/schema/logo.png",
+    "description": "Realizzazione di siti web veloci con SEO, performance e intelligenza artificiale inclusi; consulenza SEO, integrazione AI e advertising.",
+    "address": "Via Giuseppe Garibaldi 149",
+    "zip": "31046",
+    "city": "Oderzo (TV)",
+    "country": "IT",
+    "priceRange": "€€"
+  },
+  "localBusiness": {
+    "enabled": true,
+    "type": "ProfessionalService",
+    "areaServed": [
+      "IT",
+      "AT",
+      "DE",
+      "CH",
+      "ES"
+    ],
+    "reviews": true,
+    "reservation": false,
+    "reservationLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "organization": {
+    "enabled": true,
+    "sameAs": [
+      "https://www.linkedin.com/in/antonio-bortolin/",
+      "https://www.facebook.com/bortolin.dev",
+      "https://www.instagram.com/bortolin.dev/"
+    ]
+  },
+  "person": {
+    "enabled": true,
+    "name": "Antonio Bortolin",
+    "jobTitle": "Web designer, sviluppatore e consulente SEO",
+    "knowsAbout": [
+      "SEO",
+      "Core Web Vitals",
+      "Lighthouse",
+      "Web Performance",
+      "Intelligenza artificiale",
+      "Google Ads",
+      "Meta Ads",
+      "WordPress"
+    ]
+  },
+  "website": {
+    "enabled": true
+  },
+  "webpage": {
+    "enabled": true
+  },
+  "breadcrumb": {
+    "enabled": true
+  },
+  "aboutPage": {
+    "enabled": true
+  },
+  "contactPage": {
+    "enabled": true
+  },
+  "article": {
+    "enabled": true
+  },
+  "custom": {
+    "enabled": false
+  }
+}

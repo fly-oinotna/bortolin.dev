@@ -1,0 +1,41 @@
+---
+import Icon from '../ui/Icon.astro';
+import Logo from '../ui/Logo.astro';
+import type { Globals } from '../../lib/content';
+import { href } from '../../lib/links';
+interface Props { g: Globals }
+const { navigation: nav, settings: s, offer, offerActive } = Astro.props.g;
+const services = nav.mega.groups.flatMap((g) => g.items);
+---
+<div id="mobile-menu" hidden class="fixed inset-0 z-50 overflow-y-auto bg-white lg:hidden">
+  <div class="container flex h-20 items-center justify-between border-b border-gray-100">
+    <Logo label={s.a11y.home} class="flex items-center text-2xl font-bold text-black" />
+    <button type="button" data-mobile-toggle aria-controls="mobile-menu" class="grid h-12 w-12 place-items-center rounded-full bg-black text-white">
+      <span class="sr-only">{s.a11y.closeMenu}</span><Icon name="x" size={22} />
+    </button>
+  </div>
+  <nav aria-label={s.a11y.mobileNav} class="container py-6">
+    <details class="group rounded-2xl bg-gray-100" open>
+      <summary class="flex cursor-pointer list-none items-center justify-between px-5 py-4 text-lg font-semibold text-black">
+        <a href={href(nav.main.servicesLink)} class="underline-offset-4 hover:underline">{nav.main.servicesLabel}</a>
+        <span class="grid h-9 w-9 place-items-center rounded-full bg-white"><span class="sr-only">{s.a11y.toggleServices}</span><Icon name="chevron" size={20} stroke={2.5} class="transition-transform group-open:rotate-180" /></span>
+      </summary>
+      <ul class="grid gap-1 px-3 pb-4">
+        {services.map((it) => <li><a class:list={['block rounded-xl px-3 py-2 hover:bg-white', it.bold && 'font-semibold']} href={href(it.link)}>{it.label}</a></li>)}
+        <li><a class="block rounded-xl px-3 py-2 font-semibold hover:bg-white" href={href(nav.mega.agencyLink)}>{nav.mega.agencyMobile}</a></li>
+        <li><a class="block rounded-xl px-3 py-2 underline underline-offset-4 hover:bg-white" href={href(nav.mega.allLink)}>{nav.mega.allMobile}</a></li>
+      </ul>
+    </details>
+    {offerActive && (
+      <a href={href(offer.ctaLink)} class="mt-3 block rounded-2xl bg-black p-5 text-white">
+        <span class="text-xs font-bold text-bd-green uppercase">{offer.eyebrow}</span>
+        <span class="mt-1 block text-lg font-semibold">{offer.megaTitle}</span>
+        <span class="block text-sm text-gray-400">{offer.mobileText}</span>
+      </a>
+    )}
+    <ul class="mt-4 grid gap-1 text-lg font-semibold text-black">
+      {nav.main.items.map((it) => <li><a class="block rounded-xl px-5 py-3 hover:bg-gray-100" href={href(it.link)}>{it.label}</a></li>)}
+    </ul>
+    <a href={href(s.general.headerCtaLink)} class="btn-primary mt-6 w-full">{s.general.headerCtaLabel}</a>
+  </nav>
+</div>

@@ -1,0 +1,18 @@
+{
+  "general": {
+    "description": "Fast websites with SEO, speed and AI built in, plus SEO consulting, AI integration and online advertising."
+  },
+  "person": {
+    "jobTitle": "Web designer, developer and SEO consultant",
+    "knowsAbout": [
+      "SEO",
+      "Core Web Vitals",
+      "Lighthouse",
+      "Web performance",
+      "Artificial intelligence",
+      "Google Ads",
+      "Meta Ads",
+      "WordPress"
+    ]
+  }
+}

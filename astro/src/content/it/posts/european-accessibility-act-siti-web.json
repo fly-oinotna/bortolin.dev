@@ -1,0 +1,25 @@
+{
+  "title": "European Accessibility Act: cosa cambia per il tuo sito",
+  "content": {
+    "date": "2026-10-02",
+    "category": "siti-web",
+    "image": "/src/assets/images/blog/european-accessibility-act-siti-web.webp",
+    "imageAlt": "Mani che scrivono su una tastiera di computer",
+    "excerpt": "Dal 28 giugno 2025 molti siti che vendono online devono essere accessibili. Chi è coinvolto, cosa controllare e da dove iniziare.",
+    "lead": "Dal **28 giugno 2025** è in vigore in tutta l’Unione Europea l’European Accessibility Act, la normativa che chiede a molti prodotti e servizi digitali di essere utilizzabili anche da persone con disabilità. Riguarda anche molti siti e negozi online. Vediamo chi è coinvolto e da dove iniziare.",
+    "text": "## Cos’è l’European Accessibility Act\n\nÈ una direttiva europea (la 2019/882), recepita in Italia con il decreto legislativo 82 del 2022. Stabilisce requisiti di accessibilità comuni per una serie di prodotti e servizi, con l’obiettivo di permettere a tutti di usarli: anche a chi vede poco, chi non vede, chi usa solo la tastiera o un lettore vocale.\n\n## Chi è coinvolto\n\nTra i servizi interessati ci sono il **commercio elettronico** rivolto ai consumatori, i servizi bancari, i trasporti, gli e-book e alcune comunicazioni elettroniche. In pratica, se vendi prodotti o servizi online ai privati, è molto probabile che la norma ti riguardi.\n\nSono previste esenzioni per le **microimprese** che forniscono servizi (meno di 10 dipendenti e fatturato o bilancio annuo fino a 2 milioni di euro). Ogni caso va però verificato: in caso di dubbio conviene confrontarsi con un consulente legale.\n\n## Cosa significa “accessibile”, in pratica\n\nIl riferimento tecnico è lo standard europeo EN 301 549, che si basa sulle linee guida internazionali WCAG. Tradotto in esempi concreti, un sito accessibile:\n\n- si può usare **solo con la tastiera**, vedendo sempre dove ci si trova;\n- ha testi con un **contrasto** sufficiente rispetto allo sfondo;\n- descrive le immagini importanti con un **testo alternativo**;\n- ha moduli con etichette chiare e messaggi di errore comprensibili;\n- funziona con i **lettori di schermo** usati da chi non vede.\n\n## Non solo un obbligo: i vantaggi\n\nUn sito accessibile è più facile da usare per tutti: per chi lo apre al sole dal telefono, per chi ha fretta, per le persone anziane. E molte buone pratiche di accessibilità coincidono con quelle che aiutano la SEO, come una struttura chiara dei titoli e testi alternativi descrittivi.\n\n## Come fare un primo controllo\n\n1. Prova a navigare il sito **solo con il tasto Tab**: riesci a raggiungere tutto e a capire dove sei?\n2. Analizza le pagine principali con **Lighthouse**, nella sezione Accessibilità.\n3. Controlla che ogni immagine importante abbia un testo alternativo sensato.\n4. Compila i moduli di contatto e di acquisto senza mouse.\n\nQuesti controlli automatici e manuali non sostituiscono una verifica completa, ma ti danno un’idea chiara di quanto lavoro c’è da fare.\n\n## La dichiarazione di accessibilità\n\nChi rientra nella norma deve anche fornire informazioni su come il servizio soddisfa i requisiti di accessibilità, di solito in una pagina dedicata del sito. È un documento da preparare con cura, aggiornare nel tempo e collegare in modo visibile.\n\n## Da dove iniziare\n\nParti dalle pagine che contano di più: home, schede prodotto, carrello, pagamento, contatti. Correggi prima i problemi che bloccano l’uso (navigazione da tastiera, moduli, contrasti), poi passa ai dettagli. E inserisci l’accessibilità nelle regole di lavoro: ogni nuova pagina deve nascere già accessibile."
+  },
+  "seo": {
+    "title": "European Accessibility Act: cosa cambia sul sito | bortolin.dev",
+    "description": "Dal 28 giugno 2025 molti siti che vendono online devono essere accessibili. Chi è coinvolto, cosa controllare e da dove iniziare.",
+    "ogImage": "/src/assets/images/social/og-blog-european-accessibility-act-siti-web.png",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "markdown": null,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

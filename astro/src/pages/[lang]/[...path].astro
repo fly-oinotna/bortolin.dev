@@ -1,0 +1,42 @@
+---
+// TRADUZIONI: tutte le pagine delle altre lingue (/en/…), con gli stessi template della versione italiana.
+// Una pagina esiste nella lingua solo se è stata tradotta in Keystatic (file in src/content/<lingua>/).
+// Gli indirizzi tradotti vengono da src/lib/i18n.ts (SEO → Indirizzo per le pagine fisse, slug per Pagine/Post/Casi studio).
+import Home from '../../templates/Home.astro';
+import Servizi from '../../templates/Servizi.astro';
+import SitiWeb from '../../templates/SitiWeb.astro';
+import ConsulenzaSeo from '../../templates/ConsulenzaSeo.astro';
+import Performance from '../../templates/Performance.astro';
+import IntegrazioneAi from '../../templates/IntegrazioneAi.astro';
+import GoogleAds from '../../templates/GoogleAds.astro';
+import AiAds from '../../templates/AiAds.astro';
+import MetaAds from '../../templates/MetaAds.astro';
+import ConsulenzaDigitale from '../../templates/ConsulenzaDigitale.astro';
+import WebAgency from '../../templates/WebAgency.astro';
+import CasiStudio from '../../templates/CasiStudio.astro';
+import Blog from '../../templates/Blog.astro';
+import Post from '../../templates/Post.astro';
+import CaseStudy from '../../templates/CaseStudy.astro';
+import Page from '../../templates/Page.astro';
+import { routes, type Route } from '../../lib/i18n';
+import { TRANSLATIONS, prefix } from '../../i18n/langs';
+
+export async function getStaticPaths() {
+  return TRANSLATIONS.flatMap((lang) =>
+    routes()
+      .filter((r) => r.urls[lang])
+      .map((r) => ({
+        params: { lang, path: r.urls[lang].slice(prefix(lang).length).replace(/^\/|\/$/g, '') || undefined },
+        props: { route: r },
+      })),
+  );
+}
+
+const FIXED = { home: Home, servizi: Servizi, sitiWeb: SitiWeb, consulenzaSeo: ConsulenzaSeo, performance: Performance, integrazioneAi: IntegrazioneAi, googleAds: GoogleAds, aiAds: AiAds, metaAds: MetaAds, consulenzaDigitale: ConsulenzaDigitale, webAgency: WebAgency, casiStudio: CasiStudio, blog: Blog } as Record<string, any>;
+const ENTRIES = { posts: Post, caseStudies: CaseStudy, pages: Page } as Record<string, any>;
+
+const { route } = Astro.props as { route: Route };
+const lang = Astro.params.lang!;
+const T = route.kind === 'fixed' ? FIXED[route.key] : ENTRIES[route.kind];
+---
+<T lang={lang} slug={route.key} />

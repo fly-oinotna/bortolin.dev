@@ -1,0 +1,148 @@
+---
+// TEMPLATE RECENSIONI — personalizzabile per ogni sito (griglia, slider, …).
+// I dati arrivano già pronti in `g.reviews` (src/lib/reviews.ts), uguali sia da Google sia manuali:
+//   reviews.source   'google' | 'custom'
+//   reviews.rating   voto medio · reviews.count numero totale
+//   reviews.reviews  array di { author, authorUrl?, photo?, rating, text, original?, when, date? }
+//   reviews.mapsUrl / writeReviewUrl   solo Google
+// Se le recensioni sono disattivate (Keystatic → Reviews) la sezione non compare.
+// Titoli ed etichette: Keystatic → Impostazioni → Recensioni Google.
+import Icon from "../ui/Icon.astro";
+import Stars from "../ui/Stars.astro";
+import SectionHeading from "../ui/SectionHeading.astro";
+import type { Globals } from "../../lib/content";
+interface Props {
+  g: Globals;
+  n?: number;
+  class?: string;
+}
+const { g, n, class: cls = "py-16 md:py-24" } = Astro.props;
+const { settings: s, reviews: data, rating } = g;
+const r = s.reviews;
+const isGoogle = data?.source === "google";
+const items = data ? data.reviews.slice(0, r.count ?? 3) : [];
+const stars = (v: number | string) => s.a11y.stars.replace("{n}", String(v));
+---
+
+{data && (
+  <section id="recensioni" class={cls}>
+    <div class="container">
+      <div class="grid grid-cols-1 items-end gap-8 lg:grid-cols-3">
+        <SectionHeading
+          n={n}
+          eyebrow={r.eyebrow}
+          title={r.title}
+          text={r.text}
+          class="lg:col-span-2"
+        />
+        {rating && (
+          <div class="flex items-center gap-5 rounded-3xl bg-black p-6 text-white">
+            <span class="text-5xl font-extrabold">{rating.value}</span>
+            <span>
+              <Stars count={rating.stars} size={22} class="text-amber-400" />
+              <span class="sr-only">{stars(rating.value)}</span>
+              <span class="mt-1 flex items-center gap-1.5 text-sm text-gray-300">
+                {isGoogle && <Icon name="google" size={16} />}
+                {r.ratingLabel}
+              </span>
+              <span class="block text-sm text-gray-300">
+                {r.countLabel.replace("{n}", String(rating.count))}
+              </span>
+            </span>
+          </div>
+        )}
+      </div>
+
+      {items.length > 0 && (
+        <div
+          class:list={[
+            "mt-10 grid grid-cols-1 gap-4 rounded-3xl bg-gray-100 p-4 md:p-6 lg:gap-6",
+            items.length >= 3 ? "md:grid-cols-3" : "md:grid-cols-2",
+          ]}
+        >
+          {items.map((it) => (
+            <article class="flex flex-col rounded-3xl bg-white p-6">
+              <div class="flex items-center justify-between">
+                <Stars count={it.rating} class="text-amber-500" />
+                <span class="sr-only">{stars(it.rating)}</span>
+                {isGoogle && <Icon name="google" size={20} />}
+              </div>
+              <p class="mt-4 text-black">{it.text}</p>
+              {it.original && (
+                <details class="mt-3 text-sm">
+                  <summary class="cursor-pointer text-gray-600 hover:text-black">
+                    {r.translated}
+                  </summary>
+                  <p class="mt-2 text-gray-600 italic">{it.original}</p>
+                </details>
+              )}
+              <div class="mt-auto flex items-center gap-3 pt-6">
+                {it.photo ? (
+                  <img
+                    src={it.photo}
+                    alt=""
+                    width="40"
+                    height="40"
+                    loading="lazy"
+                    decoding="async"
+                    class="h-10 w-10 object-cover"
+                  />
+                ) : (
+                  <span
+                    class="grid h-10 w-10 place-items-center rounded-full bg-bd-green font-bold text-black"
+                    aria-hidden="true"
+                  >
+                    {it.author.trim().charAt(0).toUpperCase()}
+                  </span>
+                )}
+                <span>
+                  {it.authorUrl ? (
+                    <a
+                      href={it.authorUrl}
+                      target="_blank"
+                      rel="noopener"
+                      class="block font-semibold text-black hover:underline"
+                    >
+                      <span class="sr-only">{s.a11y.reviewer} </span>
+                      {it.author}
+                    </a>
+                  ) : (
+                    <span class="block font-semibold text-black">
+                      {it.author}
+                    </span>
+                  )}
+                  <span class="block text-xs text-gray-600">{it.when}</span>
+                </span>
+              </div>
+            </article>
+          ))}
+        </div>
+      )}
+
+      {isGoogle && (data.mapsUrl || data.writeReviewUrl) && (
+        <div class="mt-6 flex flex-wrap items-center gap-4">
+          {data.mapsUrl && (
+            <a
+              href={data.mapsUrl}
+              target="_blank"
+              rel="noopener"
+              class="btn-empty-primary"
+            >
+              {r.all}
+            </a>
+          )}
+          {data.writeReviewUrl && (
+            <a
+              href={data.writeReviewUrl}
+              target="_blank"
+              rel="noopener"
+              class="font-medium text-black underline underline-offset-4 hover:no-underline"
+            >
+              {r.leave}
+            </a>
+          )}
+        </div>
+      )}
+    </div>
+  </section>
+)}

@@ -1,0 +1,23 @@
+{
+  "title": "5 Büroaufgaben, die jedes KMU jetzt automatisieren sollte",
+  "content": {
+    "image": "@it",
+    "imageAlt": "Mitarbeiterin am Schreibtisch, die zwischen Unterlagen und Telefon am Computer arbeitet",
+    "excerpt": "Angebote, Dokumente, wiederkehrende E-Mails, Erinnerungen und Berichte: Was Sie schon heute an Tools und KI abgeben können und wie viel Zeit Sie wirklich sparen.",
+    "lead": "In vielen kleinen und mittleren Unternehmen geht ein großer Teil des Tages für Routinearbeit drauf: Daten abtippen, immer wieder dieselben E-Mails beantworten, fast gleiche Dokumente erstellen. Vieles davon lässt sich heute mit erschwinglichen Tools und, wo es sinnvoll ist, mit künstlicher Intelligenz automatisieren. Hier sind die fünf Bereiche, mit denen Sie anfangen sollten.",
+    "text": "## Vorab: Wählen Sie klug, was Sie automatisieren\n\nNicht alles sollte automatisiert werden. Die besten Kandidaten haben drei Merkmale: Sie wiederholen sich oft, folgen klaren Regeln und erfordern heute, Informationen von A nach B zu kopieren. Listen Sie die Aufgaben Ihrer Woche auf und markieren Sie die, auf die alle drei Kriterien zutreffen.\n\n## 1. Angebote\n\nAus der Kundenanfrage und Ihrer Preisliste kann ein System in wenigen Minuten einen **Angebotsentwurf** erstellen. Sie prüfen ihn, korrigieren bei Bedarf und schicken ihn ab. Die Zeitersparnis ist enorm, vor allem bei vielen ähnlichen Angeboten: Installateure, Fensterbauer, Bauunternehmen, Kfz-Werkstätten.\n\n## 2. Dokumente zum Abtippen\n\nLieferantenrechnungen, Lieferscheine, Bestellungen, Kundenstammblätter: KI kann heute sehr gut **Daten aus einem PDF oder Foto auslesen** und dort eintragen, wo sie hingehören, in die Unternehmenssoftware oder eine Tabelle. Weniger Copy-and-paste heißt auch weniger Fehler.\n\n## 3. Wiederkehrende E-Mails\n\nInfoanfragen, Terminbestätigungen, Zahlungserinnerungen: Viele E-Mails folgen immer demselben Muster. Sie lassen sich **automatisch nach Art sortieren**, mit Antwortentwürfen, die mit den Kundendaten personalisiert sind und mit einem Klick geprüft und gesendet werden.\n\n## 4. Erinnerungen und Fristen\n\nVertragsfristen, regelmäßige Wartungen, Kundenrückrufe, Nachfassen bei noch offenen Angeboten: Ein System **automatischer Erinnerungen** sorgt dafür, dass nichts untergeht, und holt Aufträge zurück, die sonst verloren wären.\n\n## 5. Berichte und Zahlen\n\nWie viele Angebote haben wir diesen Monat geschrieben? Wie viele wurden angenommen? Wie lange dauert es von der Anfrage bis zur Antwort? Statt das mühsam von Hand zusammenzusuchen, zeigt Ihnen ein **Dashboard**, das sich selbst aktualisiert, jederzeit die Zahlen, die zählen.\n\n## So starten Sie, ohne alles umzukrempeln\n\n1. Wählen Sie **einen einzigen Prozess**, den, der am meisten Zeit kostet.\n2. Messen Sie, wie lange er heute dauert.\n3. Testen Sie eine einfache Lösung, verbunden mit den Tools, die Sie schon nutzen.\n4. Messen Sie nach einem Monat erneut.\n5. Funktioniert es, nehmen Sie sich den nächsten Prozess vor.\n\nUnd bei Kundendaten ist Vorsicht geboten: Nutzen Sie professionelle Dienste und richten Sie alles DSGVO-konform ein."
+  },
+  "seo": {
+    "title": "5 Büroaufgaben, die KMU automatisieren sollten | bortolin.dev",
+    "description": "Angebote, Dokumente, wiederkehrende E-Mails, Erinnerungen und Berichte: Was Sie heute an Tools und KI abgeben können und wie viel Zeit Sie sparen.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "automatizzare-attivita-ufficio-pmi"
+}

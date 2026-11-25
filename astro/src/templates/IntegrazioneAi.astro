@@ -1,0 +1,226 @@
+---
+// SERVIZI › INTEGRAZIONE AI — contenuti in Keystatic → "Integrazione AI" (un gruppo per sezione, SEO in fondo).
+// Sezioni proprie della pagina qui sotto; quelle comuni (recensioni, offerta, FAQ, blog, contatti) da src/components/sections/.
+// La demo dell'hero è animata da main.js ([data-ai-demo]): esempi e messaggi arrivano dal pannello.
+import Base from '../layouts/Base.astro';
+import Icon from '../components/ui/Icon.astro';
+import Img from '../components/ui/Img.astro';
+import Rich from '../components/ui/Rich.astro';
+import Breadcrumb from '../components/ui/Breadcrumb.astro';
+import SectionHeading from '../components/ui/SectionHeading.astro';
+import Reviews from '../components/sections/Reviews.astro';
+import OfferBand from '../components/sections/OfferBand.astro';
+import Faq from '../components/sections/Faq.astro';
+import BlogTeaser from '../components/sections/BlogTeaser.astro';
+import Contact from '../components/sections/Contact.astro';
+import { read, readGlobals, pageOffer } from '../lib/content';
+import { href } from '../lib/links';
+import { serviceTrail } from '../lib/pages';
+import { faqSchema } from '../lib/schema';
+import { safeJson } from '../lib/schema';
+import type { IconName } from '../lib/icons';
+
+interface Props { lang?: string }
+const { lang = 'it' } = Astro.props;
+const g = await readGlobals(lang);
+const p = await read('integrazioneAi', lang);
+const trail = serviceTrail(g, p.hero.breadcrumb || p.hero.title, '/servizi/integrazione-ai/');
+const offer = await pageOffer(g, p.offer);
+
+// numeri delle etichette (01, 02…) in ordine di pagina: spostando una sezione, aggiornare anche qui
+const ORDER = ['uses', 'inside', 'seoWork', 'models', 'steps', 'reviews', 'faq'];
+const n = (key: string) => ORDER.indexOf(key) + 1;
+
+const { hero: h, uses, inside: ins, seoWork: sw, models: mo, steps } = p;
+const ex0 = h.examples[0] ?? { type: '', page: '', title: '', desc: '' };
+const lastSw = sw.items.length - 1;
+const lastStep = steps.items.length - 1;
+const logos = mo.items.filter((m) => m.logo);
+---
+<Base g={g} seo={p.seo} breadcrumb={trail} schema={{ service: { name: trail[trail.length - 1].name }, faq: faqSchema(p.faq.items) }}>
+
+  <!-- ================================================= HERO (demo: l'AI scrive i meta tag) -->
+  <section class="overflow-hidden bg-gray-100 pt-8 pb-20 md:pt-12 md:pb-28">
+    <div class="container">
+      <Breadcrumb items={trail} />
+      <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div>
+          {h.eyebrow && <span class="mb-5 inline-flex items-center gap-1.5 rounded-full bg-black px-3 py-1 text-xs font-bold text-bd-green uppercase"><Icon name="sparkles-fill" size={14} />{h.eyebrow}</span>}
+          <h1 class="text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">{h.title}</h1>
+          <div class="my-6"><Rich value={h.text} class="text-lg" /></div>
+          <div class="flex flex-wrap items-center gap-4">
+            {h.ctaLabel && <a href={href(h.ctaLink)} class="btn-secondary">{h.ctaLabel} <Icon name="arrow" size={20} /></a>}
+            {h.linkLabel && <a href={href(h.linkLink)} class="font-medium text-black underline underline-offset-4 hover:no-underline">{h.linkLabel}</a>}
+          </div>
+          {h.highlights.length > 0 && (
+            <ul class="mt-8 flex flex-wrap gap-2" aria-label={g.settings.a11y.highlights}>
+              {h.highlights.map((c) => <li class="chip bg-white"><Icon name="check" size={16} stroke={3} />{c}</li>)}
+            </ul>
+          )}
+        </div>
+
+        <figure class="relative mx-auto w-full max-w-xl">
+          <div aria-hidden="true" class="absolute -top-12 -right-12 h-64 w-64 rounded-full bg-bd-green/40"></div>
+          <div class="relative overflow-hidden rounded-3xl mac-window-dark shadow-2xl" data-ai-demo data-msg-ready={h.demoReady} data-msg-working={h.demoWorking} data-msg-done={h.demoDone} data-msg-done-short={h.demoDoneShort}>
+            <script type="application/json" data-ai-examples set:html={safeJson(h.examples)} />
+            <div class="mac-bar-dark justify-between text-xs">
+              <span class="flex items-center gap-3"><span class="mac-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>{h.demoBar}</span></span>
+              <span>{h.demoPanel}</span>
+            </div>
+            <div class="p-5 md:p-6">
+              <p class="flex items-center justify-between gap-3 text-xs font-semibold text-gray-600 uppercase"><span>{h.demoPageLabel}</span><span data-ai-type class="rounded-full bg-black px-2.5 py-0.5 text-[11px] font-bold tracking-normal text-bd-green normal-case">{ex0.type}</span></p>
+              <p class="mt-1 text-lg font-bold text-black" data-ai-page>{ex0.page}</p>
+              <div class="mt-3 space-y-1.5" aria-hidden="true">
+                <span class="block h-2 w-full rounded-full bg-gray-200"></span>
+                <span class="block h-2 w-11/12 rounded-full bg-gray-200"></span>
+                <span class="block h-2 w-3/4 rounded-full bg-gray-200"></span>
+              </div>
+              <div id="ai-demo-seo" class="mt-5 rounded-2xl bg-white p-4">
+                <div class="flex items-center justify-between gap-3">
+                  <p class="text-sm font-bold text-black">{h.demoSeo}</p>
+                  <button type="button" data-ai-btn aria-controls="ai-demo-seo" class="inline-flex items-center gap-1.5 rounded-full bg-bd-green px-4 py-2 text-sm font-semibold text-black transition-transform duration-150 hover:bg-black hover:text-bd-green"><Icon name="sparkles-fill" size={18} />{h.demoButton}</button>
+                </div>
+                <p class="mt-3 flex items-center justify-between text-xs text-gray-600"><span>{h.demoTitleLabel}</span><span data-ai-count="title" data-max="60" class="font-semibold tabular-nums text-bd-green-dark">{ex0.title.length}/60</span></p>
+                <div class="mt-1 min-h-[2.75rem] rounded-xl border border-gray-300 bg-white p-2.5 text-sm font-medium text-black transition-shadow"><span data-ai-field="title">{ex0.title}</span></div>
+                <p class="mt-3 flex items-center justify-between text-xs text-gray-600"><span>{h.demoDescLabel}</span><span data-ai-count="desc" data-max="160" class="font-semibold tabular-nums text-bd-green-dark">{ex0.desc.length}/160</span></p>
+                <div class="mt-1 min-h-[5.5rem] rounded-xl border border-gray-300 bg-white p-2.5 text-sm text-black transition-shadow"><span data-ai-field="desc">{ex0.desc}</span></div>
+                <p class="mt-3 flex items-center gap-1.5 text-xs font-semibold text-black" aria-live="polite"><Icon name="check" size={18} stroke={3} class="mt-0.5 shrink-0 text-bd-green-dark" /><span data-ai-status>{h.demoDone}</span></p>
+              </div>
+              <div class="mt-4 flex flex-wrap items-center justify-between gap-3">
+                <span class="flex items-center gap-2 text-xs text-gray-600">{h.demoWorks}
+                  {logos.map((m) => <Img src={m.logo} alt={m.title} class="h-[18px] w-[18px]" />)}
+                  {mo.items.filter((m) => !m.logo).map((m) => <span class="font-semibold text-black">{m.title}</span>)}
+                </span>
+              </div>
+            </div>
+            <svg aria-hidden="true" data-ai-cursor class="pointer-events-none absolute top-0 left-0 opacity-0 drop-shadow-md transition-opacity" width="26" height="26" viewBox="0 0 24 24"><path d="M4 2.5 19 12l-6.6 1.4L16 20.5l-2.6 1.3-3.6-7.2L5 19z" fill="#fff" stroke="#000" stroke-width="1.6" stroke-linejoin="round"/></svg>
+          </div>
+          {h.demoCaption && <figcaption class="mt-4 text-center text-sm text-gray-600">{h.demoCaption}</figcaption>}
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= COSA PUÒ FARE L'AI -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <SectionHeading n={n('uses')} eyebrow={uses.eyebrow} title={uses.title} text={uses.text} />
+      <ul class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-6" data-draw>
+        {uses.items.map((it, i) => (
+          <li class:list={['group flex flex-col rounded-3xl p-6 transition-colors duration-300 md:p-8', it.dark ? 'bg-black text-white' : 'bg-gray-100 hover:bg-bd-green', it.wide && 'lg:col-span-2']} style={`--d:${i * 120}ms`}>
+            <span class:list={['draw-badge grid h-14 w-14 place-items-center rounded-2xl', it.dark ? 'bg-bd-green text-black' : 'bg-black text-bd-green']}><Icon name={it.icon as IconName} size={28} stroke={1.8} draw /></span>
+            <h3 class:list={['mt-5', it.dark && 'text-bd-green']}>{it.title}</h3>
+            <p class:list={['text-sm', it.dark ? 'text-gray-300' : 'group-hover:text-black']}>{it.text}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================================================= AI DENTRO IL SITO (backend + frontend) -->
+  <section id="dentro-il-sito" class="bg-black py-16 text-white md:py-24">
+    <div class="container">
+      <SectionHeading n={n('inside')} eyebrow={ins.eyebrow} title={ins.title} text={ins.text} dark />
+      <div class="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-5 lg:gap-6">
+        <article class="rounded-3xl bg-white/10 p-6 md:p-10 lg:col-span-3">
+          {ins.backBadge && <span class="inline-flex rounded-full bg-bd-green px-3 py-1 text-xs font-bold text-black uppercase">{ins.backBadge}</span>}
+          <h3 class="mt-4 text-2xl text-white">{ins.backTitle}</h3>
+          <p class="text-gray-300">{ins.backText}</p>
+          <ul class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {ins.backItems.map((it) => <li class="flex gap-3"><Icon name="check" size={18} stroke={3} class="mt-0.5 shrink-0 text-bd-green" /><span><strong class="block text-white">{it.title}</strong><span class="text-sm text-gray-300">{it.text}</span></span></li>)}
+          </ul>
+        </article>
+        <article class="rounded-3xl bg-bd-green p-6 text-black md:p-10 lg:col-span-2">
+          {ins.frontBadge && <span class="inline-flex rounded-full bg-black px-3 py-1 text-xs font-bold text-bd-green uppercase">{ins.frontBadge}</span>}
+          <h3 class="mt-4 text-2xl">{ins.frontTitle}</h3>
+          <p class="text-black">{ins.frontText}</p>
+          <ul class="mt-6 space-y-4">
+            {ins.frontItems.map((it) => <li class="flex gap-3"><Icon name="check" size={18} stroke={3} class="mt-0.5 shrink-0" /><span><strong class="block text-black">{it.title}</strong><span class="text-sm text-black">{it.text}</span></span></li>)}
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= PIÙ SEO, MENO LAVORO -->
+  <section class="py-16 md:py-24">
+    <div class="container grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+      <Img src={sw.image} alt={sw.imageAlt} class="float-soft mx-auto w-full max-w-lg" />
+      <div>
+        <SectionHeading n={n('seoWork')} eyebrow={sw.eyebrow} title={sw.title} text={sw.text} class="" />
+        <div class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+          {sw.items.map((it, i) => {
+            const dark = i === lastSw && lastSw > 0;
+            return <div class:list={['rounded-2xl p-5', dark ? 'bg-black text-white' : 'bg-gray-100']}><p class:list={['font-semibold', dark ? 'text-bd-green' : 'text-black']}>{it.title}</p><p class:list={['mt-1 text-sm', dark && 'text-gray-300']}>{it.text}</p></div>;
+          })}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= I MODELLI -->
+  <section id="modelli" class="bg-gray-100 py-16 md:py-24">
+    <div class="container">
+      <SectionHeading n={n('models')} eyebrow={mo.eyebrow} title={mo.title} text={mo.text} />
+      <ul class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-6">
+        {mo.items.map((m) => (
+          <li class="flex flex-col rounded-3xl bg-white p-6 md:p-8">
+            <span class="grid h-16 w-16 place-items-center rounded-2xl bg-gray-100">{m.logo ? <Img src={m.logo} alt="" class="h-9 w-9" /> : <span class="text-black"><Icon name="chat" size={40} stroke={1.8} /></span>}</span>
+            <h3 class="mt-5 mb-0">{m.title}</h3>
+            <p class="text-sm font-semibold text-gray-600">{m.company}</p>
+            <p class="mt-3 text-sm">{m.text}</p>
+          </li>
+        ))}
+      </ul>
+      <div class="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3 lg:gap-6">
+        <div class="rounded-3xl bg-black p-6 text-white md:col-span-2 md:p-8">
+          <h3 class="text-bd-green">{mo.privacyTitle}</h3>
+          <ul class="mt-3 space-y-2 text-sm text-gray-200">
+            {mo.privacyItems.map((it) => <li class="flex gap-2"><Icon name="check" size={18} stroke={3} class="mt-0.5 shrink-0 text-bd-green" />{it}</li>)}
+          </ul>
+        </div>
+        <div class="rounded-3xl bg-white p-6 md:p-8">
+          <h3>{mo.costsTitle}</h3>
+          <p class="text-sm">{mo.costsText}</p>
+        </div>
+      </div>
+      {mo.disclaimer && <p class="mt-6 text-xs text-gray-600">{mo.disclaimer}</p>}
+    </div>
+  </section>
+
+  <!-- ================================================= COME LAVORO -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <SectionHeading n={n('steps')} eyebrow={steps.eyebrow} title={steps.title} text={steps.text} />
+      <ol class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+        {steps.items.map((st, i) => {
+          const dark = i === lastStep && lastStep > 0;
+          return (
+            <li class:list={['relative rounded-3xl p-6', dark ? 'bg-black text-white' : 'bg-gray-100']}>
+              <span class="grid h-14 w-14 place-items-center rounded-2xl bg-bd-green text-2xl font-extrabold text-black" aria-hidden="true">{i + 1}</span>
+              <h3 class:list={['mt-5', dark && 'text-white']}>{st.title}</h3>
+              <p class:list={['text-sm', dark && 'text-gray-300']}>{st.text}</p>
+              {i < lastStep && <span aria-hidden="true" class="absolute top-1/2 -right-4 z-10 hidden h-8 w-8 -translate-y-1/2 place-items-center rounded-full bg-black text-bd-green lg:grid"><Icon name="arrow" size={16} stroke={2.5} /></span>}
+            </li>
+          );
+        })}
+      </ol>
+      {steps.boxTitle && (
+        <div class="mt-10 flex flex-col items-start gap-4 rounded-3xl bg-bd-green p-6 sm:flex-row sm:items-center sm:justify-between md:p-8">
+          <div>
+            <p class="text-lg font-semibold text-black">{steps.boxTitle}</p>
+            {steps.boxText && <p class="text-sm text-black">{steps.boxText}</p>}
+          </div>
+          {steps.boxCtaLabel && <a href={href(steps.boxCtaLink)} class="btn-secondary shrink-0">{steps.boxCtaLabel} <Icon name="arrow" size={20} /></a>}
+        </div>
+      )}
+    </div>
+  </section>
+
+  <!-- ================================================= SEZIONI COMUNI -->
+  <Reviews g={g} n={n('reviews')} class="pb-16 md:pb-24" />
+  <OfferBand g={g} offer={offer} class="container" />
+  <Faq {...p.faq} n={n('faq')} class={offer ? 'py-16 md:py-24' : 'pb-16 md:pb-24'} />
+  {p.blog.enabled && <BlogTeaser categories={p.blog.categories} title={p.blog.title} text={p.blog.text} buttonLabel={p.blog.buttonLabel} />}
+  <Contact g={g} page={p.contact} />
+</Base>

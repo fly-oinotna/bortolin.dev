@@ -1,0 +1,25 @@
+---
+// Riquadro nero con i 3 Core Web Vitals (riusabile nella pagina performance)
+import Rich from '../ui/Rich.astro';
+interface Props { title: string; text: any; items: readonly { title: string; text: string; good: string }[]; class?: string }
+const { title, text, items, class: cls = 'mt-6' } = Astro.props;
+---
+<div class:list={['rounded-3xl bg-black p-6 text-white md:p-10', cls]}>
+  <div class="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-10">
+    <div>
+      <h3 class="text-2xl text-bd-green">{title}</h3>
+      <Rich value={text} class="text-gray-300" strong="text-white" />
+    </div>
+    <dl class="grid grid-cols-1 gap-4 sm:grid-cols-3 lg:col-span-2">
+      {items.map((it) => (
+        <div class="flex flex-col rounded-2xl border border-white/15 p-5">
+          <dt class="text-sm text-gray-400">{it.title}</dt>
+          <dd class="flex flex-1 flex-col items-start">
+            <span class="mt-1 mb-3 block font-semibold text-white">{it.text}</span>
+            <span class="mt-auto inline-block rounded-full bg-bd-green px-3 py-1 text-sm font-bold text-black">{it.good}</span>
+          </dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+</div>

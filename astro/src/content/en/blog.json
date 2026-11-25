@@ -1,0 +1,185 @@
+{
+  "hero": {
+    "breadcrumb": "Blog",
+    "eyebrow": "The bortolin.dev blog",
+    "title": "Straight talk about the {% verde %}web{% /verde %}, in plain English\n",
+    "text": "SEO, speed, artificial intelligence, ads and going digital: practical guides for business owners who want to understand, not just hand things off.\n",
+    "searchLabel": "Search the articles",
+    "searchPlaceholder": "Search a topic, e.g. “Google”",
+    "featuredLabel": "Featured",
+    "featured": null,
+    "readingLabel": "read"
+  },
+  "list": {
+    "filterLabel": "Filter by category",
+    "allLabel": "All",
+    "countOne": "1 article",
+    "countMany": "{n} articles",
+    "emptyTitle": "No articles found",
+    "emptyText": "Try another word or browse all categories.",
+    "emptyButton": "Show all articles",
+    "extraAfter": 6,
+    "extraEyebrow": "Got a question?",
+    "extraTitle": "If an article isn’t enough, ask me.",
+    "extraText": "A free 25-minute call: straight answers in plain English, no strings attached.",
+    "extraCtaLabel": "Book a call",
+    "extraCtaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "help": {
+    "eyebrow": "Can’t find what you’re looking for?",
+    "title": "Every business has different questions. Send me yours",
+    "text": "If there’s a topic you care about, drop me a line: it could become the next article. Or book a free 25-minute call and we’ll talk it through.",
+    "ctaLabel": "Book a call",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Explore my services",
+    "linkLink": {
+      "discriminant": "/servizi/"
+    },
+    "topicsTitle": "Topics"
+  },
+  "post": {
+    "tocTitle": "In this article",
+    "sideText": "Free 25-minute call, no strings attached.",
+    "sideButton": "Book a call",
+    "ctaButton": "Let’s talk",
+    "ctaLabel": "Call to action",
+    "authorLabel": "Written by",
+    "authorName": "Antonio Bortolin",
+    "authorRole": "Web designer and SEO consultant",
+    "authorBio": "Web designer, developer and SEO consultant with over 15 years’ experience. I help businesses and professionals grow online, in Italy and abroad, and explain everything in plain English.",
+    "authorImage": "@it",
+    "authorAlt": "Antonio Bortolin",
+    "authorPageLabel": "About me",
+    "authorPageLink": {
+      "discriminant": "custom",
+      "value": "/#chi-sono"
+    },
+    "bannerLabel": "Related service",
+    "bannerSuffix": " Fixed price, one point of contact and everything explained in plain English.",
+    "bannerButton": "See the service",
+    "bannerCallLabel": "Book a call",
+    "bannerCallLink": {
+      "discriminant": "#contatti"
+    },
+    "relatedTitle": "Keep reading",
+    "relatedAll": "All articles",
+    "contactTitle": "Questions about this topic?"
+  },
+  "categories": {
+    "items": [
+      {
+        "category": "seo",
+        "service": "SEO consulting",
+        "link": {
+          "discriminant": "/servizi/consulenza-seo/"
+        },
+        "text": "I review your website and your presence on Google, and tell you what to fix first.",
+        "offer": "audit-seo",
+        "cta1Title": "Want more customers from Google?",
+        "cta1Text": "I review your website and tell you, in plain English, what to fix first.",
+        "cta2Title": "Not sure where to start with SEO?",
+        "cta2Text": "In a free 25-minute call I’ll set out the priorities for your business."
+      },
+      {
+        "category": "performance",
+        "service": "Speed optimization",
+        "link": {
+          "discriminant": "/servizi/miglioramento-prestazioni-siti-web/"
+        },
+        "text": "I measure it with Lighthouse and make it fast, without a rebuild.",
+        "offer": "check-up-velocita",
+        "cta1Title": "Is your website slow?",
+        "cta1Text": "I measure it with Lighthouse and make it fast, without a rebuild.",
+        "cta2Title": "Core Web Vitals in the red?",
+        "cta2Text": "I’ll tell you what’s slowing them down and what it costs to fix, at a fixed price."
+      },
+      {
+        "category": "ai",
+        "service": "AI integration",
+        "link": {
+          "discriminant": "/servizi/integrazione-ai/"
+        },
+        "text": "We start from a real use case and measure the time saved.",
+        "offer": "seo-con-ai",
+        "cta1Title": "Want to put AI to work in your business?",
+        "cta1Text": "We start from a real use case and measure the time saved.",
+        "cta2Title": "AI in your website, even an existing one",
+        "cta2Text": "Meta tags, copy and customer replies in one click: let’s see what’s possible."
+      },
+      {
+        "category": "siti-web",
+        "service": "Complete websites",
+        "link": {
+          "discriminant": "/servizi/siti-web/"
+        },
+        "text": "Design, copy, SEO and speed included, at a fixed price.",
+        "offer": "nuovo-sito-3-mesi-seo",
+        "cta1Title": "Thinking about a new website?",
+        "cta1Text": "Design, copy, SEO and speed included, at a fixed price.",
+        "cta2Title": "Want a clear quote with no surprises?",
+        "cta2Text": "I’ll tell you what you really need and what it costs, before we start."
+      },
+      {
+        "category": "advertising",
+        "service": "Google Ads and Meta Ads",
+        "link": {
+          "discriminant": "/servizi/google-ads/"
+        },
+        "text": "Fixed-price campaigns, optimized for leads and sales.",
+        "offer": null,
+        "cta1Title": "Want more leads, fast?",
+        "cta1Text": "Fixed-price campaigns, optimized for leads and sales.",
+        "cta2Title": "Are your campaigns really paying off?",
+        "cta2Text": "I review your account and tracking and show you where budget is being wasted."
+      },
+      {
+        "category": "digitalizzazione",
+        "service": "Digital consulting",
+        "link": {
+          "discriminant": "/servizi/consulenza-digitale/"
+        },
+        "text": "Let’s see together what can be automated in your business.",
+        "offer": null,
+        "cta1Title": "Losing too much time on admin?",
+        "cta1Text": "Let’s see together what can be automated in your business.",
+        "cta2Title": "Where should you start going digital?",
+        "cta2Text": "We start from your goals and one process at a time, measuring the time saved."
+      },
+      {
+        "category": "dati",
+        "service": "Digital consulting",
+        "link": {
+          "discriminant": "/servizi/consulenza-digitale/"
+        },
+        "text": "I check your tracking, Analytics and cookie consent.",
+        "offer": null,
+        "cta1Title": "Do you really know where your customers come from?",
+        "cta1Text": "I check your tracking, Analytics and cookie consent.",
+        "cta2Title": "Analytics numbers that don’t add up?",
+        "cta2Text": "I check your setup and explain what’s actually worth measuring."
+      }
+    ]
+  },
+  "contact": {
+    "title": "Read enough? Let’s talk",
+    "formTitle": "Get a free quote",
+    "topics": []
+  },
+  "seo": {
+    "slug": "blog",
+    "title": "Blog on SEO, websites, AI and marketing | bortolin.dev",
+    "description": "Practical guides to SEO, site speed, artificial intelligence, Google Ads, Meta Ads and going digital for small businesses, in plain English.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

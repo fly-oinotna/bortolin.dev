@@ -1,0 +1,170 @@
+{
+  "title": "European Forensic Institute",
+  "card": {
+    "domain": "eufor.eu",
+    "sectors": [
+      "formazione",
+      "multilingua"
+    ],
+    "tags": [
+      "Hochschulbildung",
+      "Mehrsprachig EN · ES · IT",
+      "WordPress"
+    ],
+    "summary": "Eine Hochschule mit Sitz auf Malta: akkreditierte Bachelor- und Masterstudiengänge in Forensik, Kriminologie und Ermittlung von Cyberkriminalität.",
+    "features": [
+      "Eine dreisprachige Website für internationale Studierende",
+      "Seiten für Bachelor- und Masterstudiengänge, Events und News",
+      "Ein klarer Bewerbungsprozess, von den Voraussetzungen bis zur Bewerbung"
+    ],
+    "dark": true,
+    "desktopImage": "@it",
+    "desktopAlt": "Startseite der Website des European Forensic Institute",
+    "mobileImage": "@it",
+    "mobileAlt": "Website des European Forensic Institute auf dem Smartphone",
+    "longImage": "@it",
+    "longAlt": "Vollständige Startseite der Website des European Forensic Institute"
+  },
+  "hero": {
+    "eyebrow": "Fallstudie",
+    "intro": "Die dreisprachige Website einer Hochschule, die Studierende aus aller Welt von der ersten Kursrecherche bis zur Einschreibung begleitet.",
+    "tags": [
+      "Hochschulbildung",
+      "Mehrsprachig EN · ES · IT",
+      "WordPress"
+    ],
+    "ctaLabel": "Ich möchte ein ähnliches Projekt",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "details": [
+      {
+        "label": "Kunde",
+        "value": "European Forensic Institute"
+      },
+      {
+        "label": "Branche",
+        "value": "Hochschulbildung"
+      },
+      {
+        "label": "Standort",
+        "value": "Malta, mit internationalen Studierenden"
+      },
+      {
+        "label": "Projektart",
+        "value": "Mehrsprachige Website"
+      },
+      {
+        "label": "Technologie",
+        "value": "WordPress"
+      }
+    ]
+  },
+  "client": {
+    "eyebrow": "Der Kunde",
+    "title": "Wer ist das European Forensic Institute",
+    "text": "Das European Forensic Institute ist eine Hochschule mit akkreditierten Bachelor- und Masterstudiengängen in Forensik, Kriminologie und Ermittlung von Cyberkriminalität, für Studierende aus ganz Europa und darüber hinaus.\n",
+    "challengeLabel": "Die Herausforderung",
+    "challengeText": "Ein internationales Publikum, viele Studiengänge und ein Bewerbungsprozess mit konkreten Voraussetzungen. Die Website musste Studierende aus verschiedenen Ländern in ihrer Sprache ansprechen und sie ohne Unklarheiten bis zur Bewerbung führen.",
+    "challengePoints": [
+      "Drei Sprachen, sauber organisiert",
+      "Bachelor- und Masterstudiengänge, klar präsentiert",
+      "Events, Infotage und News immer aktuell"
+    ]
+  },
+  "solution": {
+    "eyebrow": "Die Lösung",
+    "title": "Was ich umgesetzt habe",
+    "text": "Erst die Struktur, dann das Design: Jede Entscheidung geht davon aus, wer die Website nutzt und was er dort finden muss.\n",
+    "items": [
+      {
+        "icon": "globe",
+        "title": "Eine Website in drei Sprachen",
+        "text": "Englisch, Spanisch und Italienisch, mit stets sichtbarem Sprachwähler und miteinander verknüpften Versionen, auch für Google."
+      },
+      {
+        "icon": "graduation",
+        "title": "Studiengangsseiten",
+        "text": "Bachelor- und Masterstudiengänge einheitlich präsentiert, leicht zu vergleichen und auszuwählen."
+      },
+      {
+        "icon": "route",
+        "title": "Bewerbungsprozess",
+        "text": "Voraussetzungen und Bewerbungsschritte der Reihe nach erklärt, vom ersten Kontakt bis zur Einschreibung."
+      },
+      {
+        "icon": "event",
+        "title": "Events und News",
+        "text": "Infotage, Webinare und News prominent platziert, damit aus Interesse ein erster Kontakt wird."
+      }
+    ]
+  },
+  "showcase": {
+    "eyebrow": "Die Website",
+    "title": "Das Ergebnis, auf jedem Bildschirm",
+    "text": "Fahren Sie mit der Maus über die Seite, um sie zu scrollen.\n",
+    "scrollLabel": "Scrollbare Vorschau der Startseite des European Forensic Institute",
+    "mobileCaption": "Mobile Version"
+  },
+  "results": {
+    "eyebrow": "Vorher und nachher",
+    "title": "Was sich verändert hat",
+    "beforeLabel": "Vorher",
+    "before": [
+      "Noch zu ergänzen: wie die Website vorher aussah oder der Ausgangspunkt",
+      "Noch zu ergänzen: das Hauptproblem"
+    ],
+    "afterLabel": "Nachher",
+    "after": [
+      "Eine Website in drei Sprachen",
+      "Studiengangsseiten",
+      "Bewerbungsprozess",
+      "Events und News"
+    ],
+    "kpis": [
+      {
+        "label": "Ergebnis 1",
+        "value": "—",
+        "note": "z. B. Anfragen pro Monat"
+      },
+      {
+        "label": "Ergebnis 2",
+        "value": "—",
+        "note": "z. B. Besuche über Google"
+      },
+      {
+        "label": "Ergebnis 3",
+        "value": "—",
+        "note": "z. B. Lighthouse-Wert"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Die nächste Erfolgsgeschichte könnte Ihre sein",
+    "text": "Erzählen Sie mir im kostenlosen 25-Minuten-Gespräch von Ihrem Unternehmen: Ich sage Ihnen, wie ich vorgehen würde, wie lange es dauert und zu welchem Festpreis.",
+    "ctaLabel": "Kostenloses Gespräch buchen",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "contact": {
+    "title": "Sie möchten so eine Website?",
+    "formTitle": "Kostenloses Angebot anfordern",
+    "topics": [
+      "nuovo-sito"
+    ]
+  },
+  "seo": {
+    "title": "European Forensic Institute: mehrsprachige Website | bortolin.dev",
+    "description": "Wie ich die mehrsprachige Website des European Forensic Institute gebaut habe, einer Hochschule für Forensik: Aufgabe, Lösung und Ergebnis.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "european-forensic-institute"
+}

@@ -1,0 +1,17 @@
+---
+import Icon from '../ui/Icon.astro';
+import LangSwitch from './LangSwitch.astro';
+import type { Globals } from '../../lib/content';
+interface Props { settings: Globals['settings'] }
+const { settings: s } = Astro.props;
+---
+<div class="bg-black py-2 text-xs">
+  <div class="container flex items-center justify-between gap-3">
+    <div class="flex items-center gap-3 sm:gap-4">
+      <a class="flex items-center gap-1.5 whitespace-nowrap text-bd-green hover:underline" href={`tel:${s.contacts.phoneHref}`}><Icon name="phone" size={16} />{s.contacts.phone}</a>
+      <a class="flex items-center gap-1.5 text-bd-green hover:underline" href={s.contacts.whatsapp} target="_blank" rel="noopener"><Icon name="whatsapp" size={16} />WhatsApp</a>
+      <a class="hidden items-center gap-1.5 text-bd-green hover:underline sm:flex" href={`mailto:${s.contacts.email}`}><Icon name="mail" size={16} />{s.contacts.email}</a>
+    </div>
+    <LangSwitch label={s.a11y.language} />
+  </div>
+</div>

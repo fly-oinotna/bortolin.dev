@@ -1,0 +1,14 @@
+---
+// Intestazione standard di sezione: Etichetta (numerata), Titolo (H2), Testo
+import Eyebrow from './Eyebrow.astro';
+import Rich from './Rich.astro';
+import type { RichValue } from '../../lib/rich';
+interface Props { n?: number; eyebrow?: string | null; title?: string | null; text?: RichValue; id?: string; class?: string; dark?: boolean }
+const { n, eyebrow, title, text, id, class: cls = 'max-w-3xl', dark = false } = Astro.props;
+---
+<div class={cls}>
+  <Eyebrow n={n} label={eyebrow} dark={dark} />
+  {title && <h2 id={id} class:list={[dark && 'text-white']}>{title}</h2>}
+  <Rich value={text} class={dark ? 'text-gray-300' : undefined} strong={dark ? 'text-white' : 'text-black'} />
+  <slot />
+</div>

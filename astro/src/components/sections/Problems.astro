@@ -1,0 +1,33 @@
+---
+// "Ti riconosci?": riquadro nero con le frasi tipiche dei clienti
+import SectionHeading from "../ui/SectionHeading.astro";
+interface Props {
+  n?: number;
+  eyebrow?: string | null;
+  title?: string | null;
+  items: readonly string[];
+  class?: string;
+}
+const { n, eyebrow, title, items, class: cls = "pb-16 md:pb-24" } = Astro.props;
+---
+
+<section class={cls}>
+  <div class="container">
+    <div class="rounded-3xl bg-black p-6 md:p-10 lg:p-14">
+      <SectionHeading n={n} eyebrow={eyebrow} title={title} dark class="" />
+      <ul class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+        {items.map((x) => (
+          <li class="flex items-center gap-4 rounded-2xl bg-white/5 p-5 text-gray-200">
+            <span
+              aria-hidden="true"
+              class="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-red-200 text-red-900"
+            >
+              ✕
+            </span>
+            {x}
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

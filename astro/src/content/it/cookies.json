@@ -1,0 +1,61 @@
+{
+  "general": {
+    "enabled": true,
+    "delay": 5
+  },
+  "banner": {
+    "title": "Usiamo i cookie",
+    "text": "Possiamo usarli per analizzare le visite e migliorare il sito, mostrarti contenuti più utili e offrirti una navigazione migliore. Puoi scegliere quali attivare aprendo le impostazioni.",
+    "privacyText": "Leggi la nostra",
+    "privacyLinkText": "informativa sulla privacy",
+    "privacyLink": {
+      "discriminant": "/informativa-sulla-privacy/",
+      "value": null
+    },
+    "accept": "Accetta",
+    "acceptAll": "Accetta tutti",
+    "deny": "Rifiuta",
+    "settings": "Impostazioni",
+    "save": "Salva le scelte",
+    "close": "Chiudi",
+    "preferences": "Modifica le preferenze sui cookie"
+  },
+  "preferences": {
+    "title": "Impostazioni privacy",
+    "text": "Vorremmo usare i tuoi dati per questi scopi. Puoi cambiare idea quando vuoi dal pulsante in basso a sinistra."
+  },
+  "types": {
+    "items": [
+      {
+        "type": "security_storage",
+        "default": "required",
+        "title": "Cookie tecnici",
+        "description": "Necessari al funzionamento del sito e a ricordare le tue preferenze sui cookie. Sono sempre attivi."
+      },
+      {
+        "type": "analytics_storage",
+        "default": "denied",
+        "title": "Statistiche",
+        "description": "Consente di salvare informazioni, ad esempio cookie, per analizzare le visite (pagine viste, durata della visita) e migliorare il sito."
+      },
+      {
+        "type": "ad_storage",
+        "default": "denied",
+        "title": "Pubblicità",
+        "description": "Consente di salvare informazioni, ad esempio cookie, legate alla pubblicità."
+      },
+      {
+        "type": "ad_user_data",
+        "default": "denied",
+        "title": "Dati per la pubblicità",
+        "description": "Consente di inviare a Google dati sull’utente a fini pubblicitari."
+      },
+      {
+        "type": "ad_personalization",
+        "default": "denied",
+        "title": "Pubblicità personalizzata",
+        "description": "Consente di mostrarti annunci personalizzati."
+      }
+    ]
+  }
+}

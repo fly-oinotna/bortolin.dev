@@ -1,0 +1,18 @@
+{
+  "title": "Datenschutzerklärung",
+  "content": {
+    "text": "**Stand:** 3. Juni 2025\n\nVerantwortlich für die Datenverarbeitung ist:\n\n**Antonio Bortolin**\\\nE-Mail: [antonio@bortolin.dev](mailto:antonio@bortolin.dev)\\\nUSt-IdNr.: IT05504860262\n\n## **Erhobene Daten**\n\nBei der Nutzung dieser Website können folgende personenbezogene Daten erhoben werden:\n\n- **Freiwillig angegebene Daten:** Name, E-Mail-Adresse und weitere Angaben, die Sie in die Kontaktformulare eintragen.\n- **Nutzungsdaten:** IP-Adresse, Browsertyp, Gerät, Betriebssystem, aufgerufene Seiten und Dauer des Besuchs.\n- **Cookies:** Dateien, die das Surfen auf der Website verbessern. Mehr dazu in der [Cookie-Richtlinie](/informativa-sulla-gestione-dei-cookie).\n\n## **Zwecke und Rechtsgrundlage**\n\nDie Daten werden verarbeitet, um:\n\n1. Anfragen zu beantworten, die per Formular oder E-Mail eingehen.\n1. Die Nutzung der Website auszuwerten und ihre Funktion zu verbessern.\n1. Gesetzliche und steuerliche Pflichten zu erfüllen.\n\nRechtsgrundlage der Verarbeitung ist Ihre Einwilligung, die Erfüllung eines Vertrags oder eine gesetzliche Verpflichtung.\n\n## **Empfänger der Daten**\n\nIhre Daten werden niemals verkauft. Sie können weitergegeben werden an:\n\n- **Technische Dienstleister** (z. B. Hosting, Webanalyse).\n- **Zuständige Behörden**, auf Anfrage oder wenn das Gesetz es vorschreibt.\n\n## **Speicherdauer**\n\nPersonenbezogene Daten werden so lange gespeichert, wie es für die genannten Zwecke oder zur Erfüllung gesetzlicher Pflichten erforderlich ist.\n\n## **Ihre Rechte**\n\nSie können jederzeit die Rechte wahrnehmen, die Ihnen die DSGVO einräumt, darunter:\n\n- Das Recht auf Auskunft, Berichtigung und Löschung Ihrer Daten.\n- Die Einschränkung der Verarbeitung und den Widerspruch dagegen.\n- Die Datenübertragbarkeit.\n- Den Widerruf einer erteilten Einwilligung.\n- Die Beschwerde bei der zuständigen Aufsichtsbehörde.\n\nUm Ihre Rechte wahrzunehmen, schreiben Sie mir an: [antonio@bortolin.dev](mailto:antonio@bortolin.dev)\n"
+  },
+  "seo": {
+    "title": "Datenschutz: So gehen wir mit Ihren Daten um | bortolin.dev",
+    "description": "Wie bortolin.dev Ihre personenbezogenen Daten gemäß DSGVO erhebt, nutzt und schützt, und wie Sie Ihre Rechte jederzeit wahrnehmen.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false
+  },
+  "original": "informativa-sulla-privacy"
+}

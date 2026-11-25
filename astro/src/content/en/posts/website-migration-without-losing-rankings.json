@@ -1,0 +1,23 @@
+{
+  "title": "How to switch websites without losing your Google rankings",
+  "content": {
+    "image": "@it",
+    "imageAlt": "Wooden tiles spelling the word “migration” on a table",
+    "excerpt": "A botched migration can halve your traffic overnight. The 10 checks to run before, during and after your new website goes live.",
+    "lead": "A new website is great news, but a botched migration can make your Google traffic crash overnight. It happens far more often than you’d think. Here are the checks to run before, during and after launch so you don’t lose what you’ve built.",
+    "text": "## Why rankings get lost\n\nGoogle knows the pages on your old website and shows them in its results. If those pages change address or vanish on the new site with no forwarding, Google runs into errors and people who click land on a page that no longer exists. Years of accumulated value go out of the window.\n\n## Before: take stock of your pages\n\n1. Export a list of **every page** on your current website (from the sitemap and with a crawling tool).\n2. Use Search Console and Analytics to find the ones that bring in the most **visits and leads**.\n3. Note the pages that receive **links** from other websites too.\n\n## The redirect map\n\nFor every old address, decide where it should lead on the new website and set up a **permanent redirect (301)**. Simple rules:\n\n- redirect each page to the **closest matching** new page, not everything to the homepage;\n- avoid redirect chains (A → B → C);\n- pages that are genuinely gone, with no equivalent, can return a 410 or 404 error.\n\n## Content and structure\n\nIf the new website rewrites the copy, be careful not to lose what’s working on Google today: topics, keywords, the questions you answer. Keep the titles and descriptions of your key pages, or improve them deliberately.\n\n## Launch day\n\n- check the website **isn’t blocked** from search engines (it happens a lot: it was blocked during development and nobody unblocks it);\n- spot-check the redirects of your most important pages;\n- submit the new **sitemap** in Search Console;\n- if you’re also changing domain, use Search Console’s Change of Address tool;\n- check that Analytics and conversion tracking are working.\n\n## In the weeks that follow\n\nSome ups and downs in the first few days are normal. Check Search Console every week for **crawl errors** and pages not found, and fix any missing redirects. Compare visits and rankings with the previous period to spot problems early.\n\n## The 10-point checklist\n\n1. Full list of current pages.\n2. Most important pages by visits, leads and links.\n3. Old address → new address map.\n4. 301 redirects, no chains.\n5. Key titles and content preserved.\n6. Website open to search engines.\n7. New sitemap submitted.\n8. Tracking checked.\n9. Weekly error check.\n10. Data compared after one and three months."
+  },
+  "seo": {
+    "title": "Switch websites without losing Google rankings | bortolin.dev",
+    "description": "A botched migration can halve your traffic overnight. The 10 checks to run before, during and after your new website goes live.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "cambiare-sito-senza-perdere-posizioni"
+}

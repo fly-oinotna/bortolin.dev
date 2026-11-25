@@ -1,0 +1,23 @@
+{
+  "title": "5 office tasks every small business should automate now",
+  "content": {
+    "image": "@it",
+    "imageAlt": "Office worker at a desk working on a computer surrounded by paperwork and a phone",
+    "excerpt": "Quotes, paperwork, repetitive emails, reminders and reports: what you can hand over to software and AI today, and how much time you really save.",
+    "lead": "In many small businesses, a big chunk of the day disappears into repetitive work: copying data, answering the same emails over and over, preparing near-identical documents. Today much of it can be automated with affordable tools and, where it helps, artificial intelligence. Here are the five places to start.",
+    "text": "## Before you start: choose what to automate\n\nNot everything should be automated. The best candidates share three traits: they happen often, they follow clear rules and right now they involve copying information from one place to another. List the tasks in your week and mark the ones that tick all three boxes.\n\n## 1. Quotes\n\nStarting from the customer’s request and your price list, a system can prepare a **draft quote** in minutes. You check it, tweak it if needed and send it. The time saved is huge, especially if you write lots of similar quotes: electricians and plumbers, window fitters, builders, auto repair shops.\n\n## 2. Documents you retype\n\nSupplier invoices, delivery notes, orders, customer records: AI is now very good at **reading the data** from a PDF or a photo and entering it where it belongs, in your business software or a spreadsheet. Less copy and paste also means fewer mistakes.\n\n## 3. Repetitive emails\n\nInformation requests, appointment confirmations, payment reminders: lots of emails always follow the same pattern. They can be **sorted automatically** by type, with draft replies personalized with the customer’s details, ready to review and send in one click.\n\n## 4. Reminders and deadlines\n\nContract renewals, routine maintenance, customer follow-up calls, chasing quotes that haven’t been accepted yet: a system of **automatic reminders** stops things slipping through the cracks and wins back work you’d otherwise lose.\n\n## 5. Reports and numbers\n\nHow many quotes did we send this month? How many were accepted? How long between request and reply? Instead of piecing it together by hand, a **dashboard** that updates itself shows you the numbers that matter, all the time.\n\n## How to start without turning everything upside down\n\n1. Pick **just one process**, the one that wastes the most time.\n2. Measure how long it takes today.\n3. Try a simple solution that connects to the tools you already use.\n4. Measure again after a month.\n5. If it works, move on to the next process.\n\nAnd be careful with customer data: use professional services and set everything up in line with GDPR."
+  },
+  "seo": {
+    "title": "5 office tasks to automate in a small business | bortolin.dev",
+    "description": "Quotes, paperwork, repetitive emails, reminders and reports: what you can hand over to software and AI today, and how much time you really save.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "automatizzare-attivita-ufficio-pmi"
+}

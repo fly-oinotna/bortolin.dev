@@ -1,0 +1,25 @@
+{
+  "title": "5 attività d’ufficio da automatizzare subito in una PMI",
+  "content": {
+    "date": "2026-10-16",
+    "category": "digitalizzazione",
+    "image": "/src/assets/images/blog/automatizzare-attivita-ufficio-pmi.webp",
+    "imageAlt": "Impiegata alla scrivania che lavora al computer tra documenti e telefono",
+    "excerpt": "Preventivi, documenti, email ripetitive, promemoria e report: cosa si può affidare a strumenti e AI già oggi, e quanto tempo si risparmia davvero.",
+    "lead": "In molte piccole e medie imprese una parte importante della giornata se ne va in attività ripetitive: copiare dati, rispondere sempre alle stesse email, preparare documenti simili tra loro. Oggi molte di queste cose si possono automatizzare con strumenti accessibili e, dove serve, con l’intelligenza artificiale. Ecco le cinque da cui partire.",
+    "text": "## Prima di iniziare: scegli bene cosa automatizzare\n\nNon tutto va automatizzato. I candidati migliori hanno tre caratteristiche: si ripetono spesso, seguono regole chiare e oggi richiedono di copiare informazioni da un posto all’altro. Fai una lista delle attività della settimana e segna quelle che rispondono a tutti e tre i criteri.\n\n## 1. Preventivi\n\nPartendo dalla richiesta del cliente e dai tuoi listini, un sistema può preparare una **bozza di preventivo** in pochi minuti. Tu la controlli, correggi se serve e la invii. Il tempo risparmiato è enorme soprattutto per chi fa molti preventivi simili: impiantisti, serramentisti, imprese edili, officine.\n\n## 2. Documenti da ricopiare\n\nFatture fornitori, DDT, ordini, schede clienti: l’AI oggi è molto brava a **leggere i dati** da un PDF o da una foto e a inserirli dove servono, nel gestionale o in un foglio di calcolo. Meno copia e incolla significa anche meno errori.\n\n## 3. Email ripetitive\n\nRichieste di informazioni, conferme di appuntamento, solleciti: molte email hanno sempre la stessa struttura. Si possono **smistare in automatico** per tipo e preparare risposte in bozza, personalizzate con i dati del cliente, da rivedere e inviare con un clic.\n\n## 4. Promemoria e scadenze\n\nScadenze di contratti, manutenzioni periodiche, richiami dei clienti, follow-up dei preventivi non ancora accettati: un sistema di **promemoria automatici** evita che qualcosa cada nel dimenticatoio e fa recuperare lavoro che altrimenti andrebbe perso.\n\n## 5. Report e numeri\n\nQuanti preventivi abbiamo fatto questo mese? Quanti sono stati accettati? Quanto tempo passa tra richiesta e risposta? Invece di ricostruirlo a mano, un **cruscotto** che si aggiorna da solo ti mostra i numeri che contano, sempre.\n\n## Come iniziare senza stravolgere tutto\n\n1. Scegli **un solo processo**, quello che fa perdere più tempo.\n2. Misura quanto tempo richiede oggi.\n3. Prova una soluzione semplice, collegata agli strumenti che usi già.\n4. Misura di nuovo dopo un mese.\n5. Se funziona, passa al processo successivo.\n\nE sui dati dei clienti, prudenza: usa servizi professionali e configura tutto nel rispetto del GDPR."
+  },
+  "seo": {
+    "title": "5 attività d’ufficio da automatizzare in una PMI | bortolin.dev",
+    "description": "Preventivi, documenti, email ripetitive, promemoria e report: cosa si può affidare a strumenti e AI già oggi, e quanto tempo si risparmia davvero.",
+    "ogImage": "/src/assets/images/social/og-blog-automatizzare-attivita-ufficio-pmi.png",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "markdown": null,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

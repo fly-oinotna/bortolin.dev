@@ -1,0 +1,23 @@
+{
+  "title": "Que ChatGPT te cite: qué es el GEO y cómo empezar",
+  "content": {
+    "image": "@it",
+    "imageAlt": "Manos escribiendo en un portátil",
+    "excerpt": "Cada vez más gente pide consejo a una inteligencia artificial. Cómo hacer que en la respuesta aparezca también tu negocio, sin promesas imposibles.",
+    "lead": "Cada vez más gente, en lugar de buscar en Google, pregunta a ChatGPT, Gemini o Perplexity: «¿Me recomiendas una gestoría en Zaragoza?», «¿Cuál es el mejor programa de gestión para un taller?». Las respuestas citan pocas fuentes y pocos nombres. El **GEO** es el trabajo necesario para aumentar las posibilidades de que entre esos nombres esté también el tuyo.",
+    "text": "## Qué es el GEO\n\nGEO significa *Generative Engine Optimization*: optimización para los motores «generativos», es decir, los asistentes que responden con un texto escrito en lugar de con una lista de enlaces. El objetivo es el mismo que el del SEO, que te encuentren, pero el camino cambia un poco.\n\nUna advertencia sincera: **nadie puede garantizarte que te citen**. Las respuestas de la IA cambian de una persona a otra y de un día a otro. Lo que sí se puede es trabajar para convertirse en una fuente fiable y fácil de citar.\n\n## Cómo eligen sus fuentes los asistentes de IA\n\nSimplificando mucho, los asistentes combinan dos cosas: lo que «aprendieron» durante el entrenamiento y, cada vez más, lo que encuentran buscando en la web en tiempo real. Microsoft Copilot, por ejemplo, se apoya en Bing; los resúmenes de IA de Google usan el índice de Google.\n\nEsto significa que **las bases del SEO siguen siendo fundamentales**: si los buscadores no encuentran ni entienden tu web, es difícil que un asistente la use como fuente.\n\n## Contenidos fáciles de citar\n\nUn asistente busca respuestas claras a preguntas concretas. Ayúdale:\n\n- escribe páginas que respondan a **preguntas reales** de tus clientes, con la respuesta en las primeras líneas;\n- usa **títulos claros**, listas y párrafos cortos;\n- incluye **datos concretos**: zonas en las que trabajas, plazos, precios orientativos, características;\n- mantén la información **actualizada** y coherente en todas las páginas.\n\n## Datos estructurados: quién eres, qué haces, dónde\n\nLos datos estructurados son un pequeño código, invisible para los visitantes, que describe con precisión tu negocio: nombre, dirección, horarios, servicios, opiniones, preguntas frecuentes. Para un buscador o un asistente son como un DNI bien rellenado.\n\nNo hacen milagros por sí solos, pero reducen el riesgo de que se entienda mal información importante, como la zona en la que trabajas o el tipo de servicio que ofreces.\n\n## Tu reputación fuera de la web\n\nLos asistentes se fían de lo que encuentran confirmado en varios sitios. Por eso importan mucho:\n\n- las **opiniones** en Google y en los portales de tu sector;\n- las **menciones** en prensa local, asociaciones del sector y webs de socios;\n- la **coherencia** del nombre, la dirección y la descripción en toda la red.\n\n## Cómo comprobar si te citan\n\nEl método más sencillo es también el más eficaz: **haz las preguntas que harían tus clientes**. Pide a ChatGPT, Gemini, Copilot y Perplexity que te recomienden un negocio como el tuyo en tu zona y apunta quién aparece y qué fuentes se citan.\n\nRepite la prueba cada mes: te da una idea de cómo vas y, sobre todo, te muestra qué webs consideran fiables los asistentes en tu sector.\n\n## Por dónde empezar, en la práctica\n\n1. Pon en orden las bases del SEO: web rápida, clara y con las páginas adecuadas.\n2. Crea una página de preguntas frecuentes con respuestas reales y completas.\n3. Añade los datos estructurados de tu negocio.\n4. Cuida tu Perfil de Empresa en Google y las opiniones.\n5. Revisa cada mes qué responden los asistentes."
+  },
+  "seo": {
+    "title": "GEO: cómo conseguir que ChatGPT te cite | bortolin.dev",
+    "description": "Qué es el GEO y cómo aumentar las posibilidades de que ChatGPT, Gemini y Perplexity citen tu web: contenidos claros, datos estructurados, autoridad.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "geo-farsi-citare-da-chatgpt"
+}

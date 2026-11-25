@@ -1,0 +1,46 @@
+{
+  "name": "SEO audit for €290",
+  "offer": {
+    "eyebrow": "Launch offer",
+    "deadlineLabel": "Ends 31 January 2027",
+    "title": "Full SEO audit for {% verde %}€290 instead of €490{% /verde %}",
+    "text": "In 5 business days, find out what’s holding your website back on Google and what to fix first. And if you then hire me for ongoing SEO, the cost of the audit comes off your first month.\n",
+    "items": [
+      {
+        "title": "Technical audit",
+        "text": "indexing, speed, errors"
+      },
+      {
+        "title": "Keywords",
+        "text": "and competitor analysis"
+      },
+      {
+        "title": "Video and action plan",
+        "text": "clear priorities, explained"
+      }
+    ],
+    "ctaLabel": "Book your audit",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "note": "Prices excl. VAT · delivered in 5 business days",
+    "image": "@it",
+    "boxEyebrow": "Full SEO audit",
+    "boxValue": "€290",
+    "boxOldValue": "€490",
+    "boxText": "deducted from your first month of SEO",
+    "stamp": "−40%"
+  },
+  "menu": {
+    "megaTitle": "Full SEO audit for €290 instead of €490",
+    "megaText": "Book by 31 January 2027:",
+    "megaItems": [
+      "Technical audit: indexing, speed, errors",
+      "Keyword and competitor analysis",
+      "Video and action plan, deducted from your first month of SEO"
+    ],
+    "mobileText": "when you book by 31 January 2027",
+    "cardText": "Delivered in 5 business days, deducted from your first month of SEO."
+  },
+  "original": "audit-seo"
+}

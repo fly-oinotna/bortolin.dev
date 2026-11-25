@@ -1,0 +1,22 @@
+---
+// TEMPLATE "PAGINA STANDARD" (come page.php): Keystatic → Pagine standard. Titolo, testo libero, SEO.
+import Markdoc from '@markdoc/markdoc';
+import Base from '../layouts/Base.astro';
+import Contact from '../components/sections/Contact.astro';
+import { entry, readGlobals } from '../lib/content';
+
+interface Props { lang?: string; /** slug della versione italiana */ slug: string }
+const { lang = 'it', slug } = Astro.props;
+const g = await readGlobals(lang);
+const e = (await entry('pages', slug, lang))!.entry as any;
+const html = Markdoc.renderers.html(Markdoc.transform(e.content.text.node)).replace(/^<article>|<\/article>$/g, '');
+---
+<Base g={g} seo={e.seo}>
+  <section class="pt-10 pb-16 md:pt-16 md:pb-24">
+    <div class="container max-w-3xl">
+      <h1 class="text-4xl leading-tight font-bold md:text-5xl">{e.title}</h1>
+      <div class="prose-bd mt-8" set:html={html} />
+    </div>
+  </section>
+  <Contact g={g} />
+</Base>

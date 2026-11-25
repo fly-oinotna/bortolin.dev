@@ -1,0 +1,370 @@
+{
+  "hero": {
+    "breadcrumb": "Meta Ads",
+    "eyebrow": "Meta · Facebook · Instagram",
+    "title": "Meta Ads: leads from Facebook and Instagram, not just likes",
+    "text": "Your customers are on Facebook and Instagram every day. With well-crafted ads you reach them **locally, with the right message**, and turn them into quote requests, bookings and sales.\n",
+    "ctaLabel": "Get a free account review",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "See the ad formats",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#formati"
+    },
+    "highlights": [
+      "Fixed management fee",
+      "Pixel and Conversions API included",
+      "Monthly video report"
+    ],
+    "floatFacebook": "Facebook",
+    "floatInstagram": "Instagram",
+    "floatLead": "New lead from your form",
+    "feedHome": "Home",
+    "storyMine": "Your story",
+    "stories": [
+      "austin",
+      "boston",
+      "leeds",
+      "toronto"
+    ],
+    "likes": "Liked by {n} people",
+    "posts": [
+      {
+        "tab": "Gym",
+        "kind": "image",
+        "style": "dark",
+        "letter": "G",
+        "name": "Leeds gym",
+        "place": "Sponsored · Leeds",
+        "icon": "dumbbell",
+        "visual": "7-DAY\nFREE TRIAL",
+        "badge": "",
+        "barText": "7-day free trial",
+        "button": "Sign up",
+        "likes": 127,
+        "caption": "New group classes and a revamped weights room: grab your free trial week 💪",
+        "products": [],
+        "formTitle": "",
+        "f1Label": "",
+        "f1Value": "",
+        "f2Label": "",
+        "f2Value": "",
+        "submit": "",
+        "sent": ""
+      },
+      {
+        "tab": "Winery",
+        "kind": "carousel",
+        "style": "light",
+        "letter": "W",
+        "name": "Sonoma Valley winery",
+        "place": "Sponsored · Sonoma Valley (CA)",
+        "icon": "monitor",
+        "visual": "",
+        "badge": "",
+        "barText": "Free shipping on 6+ bottles",
+        "button": "Shop now",
+        "likes": 342,
+        "caption": "Our wines, from the vineyard to your table. Swipe and pick your favorite 🍷",
+        "products": [
+          {
+            "name": "Sonoma Valley Red",
+            "price": "$24.00"
+          },
+          {
+            "name": "Late Harvest Muscat",
+            "price": "$28.00"
+          },
+          {
+            "name": "Sparkling White",
+            "price": "$19.00"
+          }
+        ],
+        "formTitle": "",
+        "f1Label": "",
+        "f1Value": "",
+        "f2Label": "",
+        "f2Value": "",
+        "submit": "",
+        "sent": ""
+      },
+      {
+        "tab": "Windows",
+        "kind": "form",
+        "style": "light",
+        "letter": "W",
+        "name": "Columbus window installer",
+        "place": "Sponsored · Columbus and nearby",
+        "icon": "window",
+        "visual": "New windows?\nReply in 48 hours",
+        "badge": "Free quote",
+        "barText": "Leave your details",
+        "button": "Request",
+        "likes": 58,
+        "caption": "Warmer rooms, lower energy bills: we’ll call you back to book a free home visit.",
+        "products": [],
+        "formTitle": "Get a quote",
+        "f1Label": "Full name",
+        "f1Value": "Emily R.",
+        "f2Label": "Phone",
+        "f2Value": "(614) ••• •• 18",
+        "submit": "Send",
+        "sent": "Request sent"
+      },
+      {
+        "tab": "Restaurant",
+        "kind": "image",
+        "style": "green",
+        "letter": "R",
+        "name": "Restaurant in Cornwall",
+        "place": "Sponsored · St Ives, Cornwall",
+        "icon": "fish",
+        "visual": "Friday night\nseafood menu",
+        "badge": "",
+        "barText": "Limited seating",
+        "button": "Book",
+        "likes": 215,
+        "caption": "Every Friday, the catch of the day, a stone’s throw from the sea. Book your table 🐟",
+        "products": [],
+        "formTitle": "",
+        "f1Label": "",
+        "f1Value": "",
+        "f2Label": "",
+        "f2Value": "",
+        "submit": "",
+        "sent": ""
+      }
+    ],
+    "demoLabel": "Pick an example",
+    "demoCaption": "Illustrative examples of ads on Facebook and Instagram."
+  },
+  "platforms": {
+    "eyebrow": "Two platforms, one campaign",
+    "title": "Facebook and Instagram, managed together",
+    "text": "With Meta Ads, one campaign can run on both platforms, and Meta shows each ad where it performs best. I pick the right audience, formats and messages for each.\n",
+    "toolTitle": "One tool: Meta Ads Manager",
+    "toolText": "That’s where I set up, measure and optimize your Facebook and Instagram campaigns, with one budget and one report.",
+    "items": [
+      {
+        "platform": "facebook",
+        "title": "Facebook",
+        "text": "Great for reaching adults and families nearby, local groups and events. Perfect for services, local businesses and lead forms.",
+        "chips": [
+          "Local audience",
+          "Lead forms",
+          "Events"
+        ]
+      },
+      {
+        "platform": "instagram",
+        "title": "Instagram",
+        "text": "Home of images and vertical video: Stories and Reels to get discovered, carousels to show off products and results.",
+        "chips": [
+          "Stories and Reels",
+          "Carousels",
+          "Shopping"
+        ]
+      }
+    ],
+    "note": "Facebook, Instagram and Meta are trademarks of Meta Platforms, Inc., mentioned only to identify the platforms; there is no affiliation."
+  },
+  "formats": {
+    "eyebrow": "Ad formats",
+    "title": "The right format for every goal",
+    "text": "People on Facebook and Instagram aren’t looking for you, so your ad has a split second to stop the scroll. I choose the format based on what you want to achieve.\n",
+    "items": [
+      {
+        "title": "Image and video",
+        "text": "The classic feed ad: a clear message and a button.",
+        "ideal": "For awareness",
+        "highlight": false
+      },
+      {
+        "title": "Carousel",
+        "text": "Several products or benefits to swipe through in one ad.",
+        "ideal": "For shops and online stores",
+        "highlight": false
+      },
+      {
+        "title": "Stories and Reels",
+        "text": "Full-screen and vertical, in the most-watched format.",
+        "ideal": "To grab attention",
+        "highlight": false
+      },
+      {
+        "title": "Lead forms",
+        "text": "People send an enquiry without ever leaving Facebook or Instagram.",
+        "ideal": "For services and quotes",
+        "highlight": true
+      },
+      {
+        "title": "Retargeting and catalog",
+        "text": "Shows viewed products again to people who haven’t bought yet.",
+        "ideal": "To sell more",
+        "highlight": false
+      }
+    ]
+  },
+  "results": {
+    "eyebrow": "What really matters",
+    "title": "Leads, not likes",
+    "text": "Followers and likes feel nice, but they don’t pay the bills. I build campaigns to win **enquiries, bookings and sales**, and track what each one costs you.\n",
+    "noLabel": "Not good enough",
+    "noItems": [
+      "Likes",
+      "Followers",
+      "Views"
+    ],
+    "yesLabel": "What I track",
+    "yesItems": [
+      "Enquiries",
+      "Bookings",
+      "Sales"
+    ],
+    "banner": "And your cost per lead, month after month."
+  },
+  "included": {
+    "eyebrow": "What’s included",
+    "title": "Everything you need, from pixel to report",
+    "text": "A fixed fee, never a percentage of your budget. The ad account and the data stay yours.\n",
+    "ctaLabel": "Get a free account review",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "items": [
+      {
+        "title": "Audience research and strategy",
+        "text": "Who your customers are, where they live, what they’re into."
+      },
+      {
+        "title": "Pixel and Conversions API",
+        "text": "Reliable tracking, even with cookie blockers and iOS."
+      },
+      {
+        "title": "Creatives",
+        "text": "Ideas for images, videos, carousels, Stories and Reels."
+      },
+      {
+        "title": "Structure and funnel",
+        "text": "Campaigns that get you noticed, remembered and chosen."
+      },
+      {
+        "title": "Lead generation",
+        "text": "Instant forms, landing pages and direct messages."
+      },
+      {
+        "title": "Retargeting",
+        "text": "Reach people again who’ve already visited your website or engaged with you."
+      },
+      {
+        "title": "A/B testing",
+        "text": "Creatives and audiences tested head to head: we keep what works."
+      },
+      {
+        "title": "Monthly video report",
+        "text": "Leads, costs and next steps, in plain English."
+      },
+      {
+        "title": "Consent and privacy",
+        "text": "Pixel and tracking in line with the GDPR and your cookie banner."
+      }
+    ]
+  },
+  "method": {
+    "eyebrow": "The method",
+    "title": "From first ad to the right cost per lead",
+    "text": "",
+    "items": [
+      {
+        "title": "Research",
+        "text": "Audience, competitors, offer and goals."
+      },
+      {
+        "title": "Tracking",
+        "text": "Pixel, Conversions API and consent, before a cent is spent."
+      },
+      {
+        "title": "Creatives",
+        "text": "Copy, images and videos built to stop the scroll."
+      },
+      {
+        "title": "Launch and testing",
+        "text": "Several versions head to head, budget under control."
+      },
+      {
+        "title": "Optimization",
+        "text": "Every week, on cost per lead, not likes."
+      }
+    ]
+  },
+  "offer": {
+    "show": false,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions about Meta Ads",
+    "text": "Can’t see yours? [Drop me a line](#contatti) and I’ll reply by the next business day.\n",
+    "items": [
+      {
+        "question": "Meta Ads or Google Ads: which is better?",
+        "answer": "They do different jobs: Google Ads reaches people already searching for you, Meta Ads puts you in front of people who don’t know you yet. For many businesses, the two together beat either one alone.\n"
+      },
+      {
+        "question": "How much budget do I need?",
+        "answer": "You can start small, especially with a local audience. The free review gives you a realistic estimate based on your area and goal.\n"
+      },
+      {
+        "question": "Do I need professional photos and videos?",
+        "answer": "They help, but they’re not always necessary: authentic content shot on a phone often performs better. I’ll tell you what to prepare and how.\n"
+      },
+      {
+        "question": "What are the Pixel and Conversions API?",
+        "answer": "They’re the tools that tell Meta which ads bring in enquiries and sales. Set up properly, they make campaigns more efficient and tracking more reliable, while respecting cookie consent.\n"
+      },
+      {
+        "question": "Do I have to post every day?",
+        "answer": "No. Ads and organic posts are two different things: campaigns work even if your page isn’t updated often. A well-kept page does help build trust, though.\n"
+      },
+      {
+        "question": "Do I own the ad account?",
+        "answer": "Yes. The account, the page and the data stay yours; I work with partner access. You pay Meta directly, with no markup.\n"
+      }
+    ],
+    "ctaLabel": "Get a free account review",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "advertising"
+    ],
+    "title": "More on online advertising",
+    "text": "Facebook, Instagram or Google? How to pick the right channel and spend your budget wisely.\n",
+    "buttonLabel": "All articles"
+  },
+  "contact": {
+    "title": "Let’s turn social media into leads",
+    "formTitle": "Get a free account review",
+    "topics": [
+      "ads"
+    ]
+  },
+  "seo": {
+    "slug": "meta-ads",
+    "title": "Meta Ads management: Facebook and Instagram | bortolin.dev",
+    "description": "Meta Ads campaigns on Facebook and Instagram that bring in leads, not just likes: local targeting, Pixel and Conversions API, fixed fee, monthly report.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

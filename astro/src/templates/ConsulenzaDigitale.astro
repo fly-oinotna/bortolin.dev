@@ -1,0 +1,220 @@
+---
+// SERVIZI › CONSULENZA DIGITALE — contenuti in Keystatic → "Consulenza digitale" (un gruppo per sezione, SEO in fondo).
+// Sezioni proprie della pagina qui sotto; quelle comuni (recensioni, offerta, FAQ, blog, contatti) da src/components/sections/.
+// La demo dell'hero (richiesta → preventivo) è animata da main.js ([data-flow-demo]).
+import Base from '../layouts/Base.astro';
+import Icon from '../components/ui/Icon.astro';
+import Rich from '../components/ui/Rich.astro';
+import Breadcrumb from '../components/ui/Breadcrumb.astro';
+import SectionHeading from '../components/ui/SectionHeading.astro';
+import Reviews from '../components/sections/Reviews.astro';
+import OfferBand from '../components/sections/OfferBand.astro';
+import Faq from '../components/sections/Faq.astro';
+import BlogTeaser from '../components/sections/BlogTeaser.astro';
+import Contact from '../components/sections/Contact.astro';
+import { read, readGlobals, pageOffer } from '../lib/content';
+import { rich, pad } from '../lib/rich';
+import { href } from '../lib/links';
+import { serviceTrail } from '../lib/pages';
+import { faqSchema } from '../lib/schema';
+import type { IconName } from '../lib/icons';
+
+interface Props { lang?: string }
+const { lang = 'it' } = Astro.props;
+const g = await readGlobals(lang);
+const p = await read('consulenzaDigitale', lang);
+const trail = serviceTrail(g, p.hero.breadcrumb || p.hero.title, '/servizi/consulenza-digitale/');
+const offer = await pageOffer(g, p.offer);
+
+// numeri delle etichette (01, 02…) in ordine di pagina: spostando una sezione, aggiornare anche qui
+const ORDER = ['areas', 'digital', 'marketing', 'roadmap', 'formats', 'reviews', 'faq'];
+const n = (key: string) => ORDER.indexOf(key) + 1;
+
+const { hero: h, areas, digital: dg, marketing: mk, roadmap: rm, formats: fo } = p;
+// importi: in italiano "1.234,00 €", nelle altre lingue il formato locale (es. "€1,234.00")
+const eur = (v: number) => lang === 'it'
+  ? new Intl.NumberFormat('it-IT', { minimumFractionDigits: 2, maximumFractionDigits: 2, useGrouping: 'always' } as Intl.NumberFormatOptions).format(v) + ' €'
+  : new Intl.NumberFormat(lang, { style: 'currency', currency: 'EUR' }).format(v);
+const total = h.quoteItems.reduce((a, it) => a + (it.amount ?? 0), 0);
+---
+<Base g={g} seo={p.seo} breadcrumb={trail} schema={{ service: { name: trail[trail.length - 1].name }, faq: faqSchema(p.faq.items) }}>
+
+  <!-- ================================================= HERO (dalla richiesta al preventivo, con l'AI) -->
+  <section class="overflow-hidden bg-gray-100 pt-8 pb-20 md:pt-12 md:pb-28">
+    <div class="container">
+      <Breadcrumb items={trail} />
+      <div class="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
+        <div>
+          {h.eyebrow && <span class="mb-5 inline-flex rounded-full bg-black px-3 py-1 text-xs font-bold text-bd-green uppercase">{h.eyebrow}</span>}
+          <h1 class="text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">{h.title}</h1>
+          <div class="my-6"><Rich value={h.text} class="text-lg" /></div>
+          <div class="flex flex-wrap items-center gap-4">
+            {h.ctaLabel && <a href={href(h.ctaLink)} class="btn-secondary">{h.ctaLabel} <Icon name="arrow" size={20} /></a>}
+            {h.linkLabel && <a href={href(h.linkLink)} class="font-medium text-black underline underline-offset-4 hover:no-underline">{h.linkLabel}</a>}
+          </div>
+          {h.highlights.length > 0 && (
+            <ul class="mt-8 flex flex-wrap gap-2" aria-label={g.settings.a11y.highlights}>
+              {h.highlights.map((c) => <li class="chip bg-white"><Icon name="check" size={16} stroke={3} />{c}</li>)}
+            </ul>
+          )}
+        </div>
+        <figure class="relative mx-auto w-full max-w-xl" data-flow-demo>
+          <div aria-hidden="true" class="absolute -top-12 -right-12 h-64 w-64 rounded-full bg-bd-green/40"></div>
+          <div class="relative space-y-3">
+            <div data-show-at="1" data-on class="rounded-2xl border-2 border-black bg-white p-4 shadow-lg">
+              <p class="flex items-center justify-between gap-3 text-xs text-gray-600"><span class="flex items-center gap-2 font-semibold text-black"><Icon name="mail" size={18} />{h.requestLabel}</span><span>{h.requestTime}</span></p>
+              <p class="mt-2 text-sm text-black" set:html={rich(h.requestText, { strong: '' })} />
+            </div>
+            <div class="flex justify-center" aria-hidden="true">
+              <span data-show-at="2" data-on data-pulse class="inline-flex items-center gap-2 rounded-full bg-black px-4 py-2 text-sm font-semibold text-bd-green"><Icon name="sparkles-fill" size={16} /><span data-flow-status data-start={h.statusStart} data-reading={h.statusReading} data-writing={h.statusWriting} data-done={h.statusDone}>{h.statusDone}</span></span>
+            </div>
+            <div data-show-at="3" data-on class="rounded-2xl border-[3px] border-black bg-white p-5 shadow-2xl">
+              <div class="flex items-start justify-between gap-3">
+                <p><span class="block text-xs font-bold text-gray-600 uppercase">{h.quoteLabel}</span><span class="block text-lg font-bold text-black">{h.quoteTitle}</span></p>
+                {h.quoteBadge && <span class="rounded-full bg-bd-green px-2.5 py-1 text-xs font-bold text-black">{h.quoteBadge}</span>}
+              </div>
+              <ul class="mt-3">
+                {h.quoteItems.map((it) => <li data-flow-item={it.amount ?? 0} data-on class="flex items-start justify-between gap-3 border-b border-gray-200 py-2 text-sm"><span class="text-black">{it.text}{it.detail && <> <span class="text-gray-600">· {it.detail}</span></>}</span><span class="shrink-0 font-semibold text-black tabular-nums">{eur(it.amount ?? 0)}</span></li>)}
+              </ul>
+              <p class="mt-3 flex items-baseline justify-between"><span class="text-sm font-semibold text-black">{h.totalLabel}</span><span class="text-2xl font-extrabold text-black tabular-nums" data-flow-total>{eur(total)}</span></p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-2">
+              {h.tags.map((tg) => <span data-show-at="4" data-on class="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-xs font-semibold text-black shadow"><Icon name="check" size={18} stroke={3} class="mt-0.5 shrink-0 text-bd-green-dark" />{tg}</span>)}
+            </div>
+          </div>
+          {h.caption && <figcaption class="mt-4 text-center text-sm text-gray-600">{h.caption}</figcaption>}
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= DUE ANIME -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <SectionHeading n={n('areas')} eyebrow={areas.eyebrow} title={areas.title} text={areas.text} />
+      <div class="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-6">
+        {areas.items.map((it, i) => {
+          const dark = i % 2 === 0;
+          return (
+            <a href={href(it.link)} class:list={['group rounded-3xl p-6 transition-transform hover:-translate-y-1 md:p-10', dark ? 'bg-black text-white' : 'bg-bd-green text-black']}>
+              <span class:list={['text-sm font-bold uppercase', dark && 'text-bd-green']}>{it.label}</span>
+              <h3 class:list={['mt-2 text-3xl', dark && 'text-white']}>{it.title}</h3>
+              <p class={dark ? 'text-gray-300' : 'text-black'}>{it.text}</p>
+              {it.linkLabel && <span class:list={['mt-6 inline-flex items-center gap-1.5 font-semibold', dark && 'text-bd-green']}>{it.linkLabel} <Icon name="arrow" size={20} /></span>}
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= DIGITALIZZAZIONE PMI -->
+  <section id="digitalizzazione" class="bg-gray-100 py-16 md:py-24">
+    <div class="container">
+      <SectionHeading n={n('digital')} eyebrow={dg.eyebrow} title={dg.title} text={dg.text} />
+      <ul class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6" data-draw>
+        {dg.items.map((it, i) => {
+          const dark = i === 0;
+          return (
+            <li class:list={['group flex flex-col rounded-3xl p-6 transition-colors duration-300', dark ? 'bg-black text-white' : 'bg-white hover:bg-bd-green']} style={`--d:${i * 110}ms`}>
+              <span class:list={['draw-badge grid h-14 w-14 place-items-center rounded-2xl', dark ? 'bg-bd-green text-black' : 'bg-black text-bd-green']}><Icon name={it.icon as IconName} size={28} stroke={1.8} draw /></span>
+              <h3 class:list={['mt-5 text-lg', dark && 'text-bd-green']}>{it.title}</h3>
+              <p class:list={['text-sm', dark ? 'text-gray-300' : 'group-hover:text-black']}>{it.text}</p>
+            </li>
+          );
+        })}
+      </ul>
+      {dg.cases.length > 0 && (
+        <>
+          <h3 class="mt-16 text-2xl">{dg.casesTitle}</h3>
+          {dg.casesText && <p class="max-w-3xl">{dg.casesText}</p>}
+          <div class="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-6">
+            {dg.cases.map((c) => (
+              <article class="flex flex-col overflow-hidden rounded-3xl bg-white">
+                <p class="flex items-center justify-between gap-3 bg-black px-6 py-3 text-sm"><span class="font-semibold text-white">{c.name}</span><span class="rounded-full bg-bd-green px-2.5 py-0.5 text-xs font-bold text-black">{c.tag}</span></p>
+                <div class="flex flex-1 flex-col gap-3 p-6">
+                  <p class="rounded-2xl border-2 border-dashed border-gray-300 p-4 text-sm"><strong class="block text-xs font-bold text-gray-600 uppercase">{dg.beforeLabel}</strong>{c.before}</p>
+                  <p class="rounded-2xl bg-bd-green/30 p-4 text-sm text-black"><strong class="block text-xs font-bold uppercase">{dg.afterLabel}</strong>{c.after}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+          {dg.casesNote && <p class="mt-4 text-xs text-gray-600">{dg.casesNote}</p>}
+        </>
+      )}
+    </div>
+  </section>
+
+  <!-- ================================================= MARKETING DIGITALE -->
+  <section id="marketing" class="py-16 md:py-24">
+    <div class="container grid grid-cols-1 items-start gap-10 lg:grid-cols-3 lg:gap-16">
+      <SectionHeading n={n('marketing')} eyebrow={mk.eyebrow} title={mk.title} text={mk.text} class="">
+        {mk.links.length > 0 && (
+          <ul class="mt-6 flex flex-wrap gap-2" aria-label={mk.linksLabel}>
+            {mk.links.map((l) => <li><a class="chip hover:bg-bd-green" href={href(l.link)}>{l.label}</a></li>)}
+          </ul>
+        )}
+      </SectionHeading>
+      <ol class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:col-span-2">
+        {mk.items.map((it, i) => (
+          <li class="flex gap-4 rounded-2xl bg-gray-100 p-5">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-black text-sm font-bold text-bd-green">{pad(i + 1)}</span>
+            <span><strong class="block text-black">{it.title}</strong><span class="text-sm">{it.text}</span></span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================================================= OBIETTIVI E ROADMAP -->
+  <section class="pb-16 md:pb-24">
+    <div class="container">
+      <div class="rounded-3xl bg-black p-6 text-white md:p-10 lg:p-14">
+        <SectionHeading n={n('roadmap')} eyebrow={rm.eyebrow} title={rm.title} text={rm.text} dark />
+        <ol class="relative mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
+          {rm.steps.map((st, i) => {
+            const green = i === 0;
+            return (
+              <li class:list={['relative rounded-2xl p-5', green ? 'bg-bd-green text-black' : 'bg-white/10']}>
+                <span class:list={['text-xs font-bold uppercase', green ? 'text-black' : 'text-bd-green']}>{st.when}</span>
+                <h3 class:list={['mt-2 text-lg', !green && 'text-white']}>{st.title}</h3>
+                <p class:list={['text-sm', green ? 'text-black' : 'text-gray-300']}>{st.text}</p>
+              </li>
+            );
+          })}
+        </ol>
+        {(rm.boxTitle || rm.ctaLabel) && (
+          <div class="mt-8 flex flex-col items-start gap-4 rounded-2xl bg-white/10 p-6 sm:flex-row sm:items-center sm:justify-between">
+            <p class="text-gray-200"><strong class="block text-white">{rm.boxTitle}</strong>{rm.boxText}</p>
+            {rm.ctaLabel && <a href={href(rm.ctaLink)} class="btn-primary shrink-0">{rm.ctaLabel}</a>}
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= FORMATI -->
+  <section class="bg-gray-100 py-16 md:py-24">
+    <div class="container">
+      <SectionHeading n={n('formats')} eyebrow={fo.eyebrow} title={fo.title} text={fo.text} />
+      <div class="mt-10 grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-6">
+        {fo.items.map((f) => (
+          <article class:list={['relative flex flex-col rounded-3xl p-6 md:p-8', f.highlight ? 'bg-black text-white' : 'bg-white']}>
+            {f.highlight && f.badge && <span class="absolute -top-3 right-6 rounded-full bg-bd-green px-3 py-1 text-xs font-bold text-black uppercase">{f.badge}</span>}
+            <p class:list={['text-sm font-bold uppercase', f.highlight ? 'text-gray-400' : 'text-gray-600']}>{f.label}</p>
+            <h3 class:list={['mt-2 text-2xl', f.highlight && 'text-bd-green']}>{f.title}</h3>
+            <p class:list={[f.highlight && 'text-gray-300']}>{f.text}</p>
+            {f.ctaLabel && <div class="mt-auto pt-6"><a href={href(f.ctaLink)} class={f.highlight ? 'btn-primary' : 'btn-empty-primary'}>{f.ctaLabel}</a></div>}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= SEZIONI COMUNI -->
+  <Reviews g={g} n={n('reviews')} />
+  <OfferBand g={g} offer={offer} class="container" />
+  <Faq {...p.faq} n={n('faq')} class={offer ? 'py-16 md:py-24' : 'pb-16 md:pb-24'} />
+  {p.blog.enabled && <BlogTeaser categories={p.blog.categories} title={p.blog.title} text={p.blog.text} buttonLabel={p.blog.buttonLabel} />}
+  <Contact g={g} page={p.contact} />
+</Base>

@@ -1,0 +1,47 @@
+{
+  "name": "Ihre neue Website, mit {% verde %}3 Monaten SEO inklusive{% /verde %}",
+  "offer": {
+    "eyebrow": "Einführungsangebot",
+    "deadlineLabel": "Gültig bis 31. Januar 2027",
+    "title": "Ihre neue Website, mit {% verde %}3 Monaten SEO inklusive{% /verde %}",
+    "text": "Beauftragen Sie Ihre neue Website bis 31. Januar 2027: Nach dem Launch arbeite ich weiter an Ihrer Sichtbarkeit bei Google, ohne Aufpreis.",
+    "items": [
+      {
+        "title": "3 Monate SEO",
+        "text": "Optimierung nach dem Launch"
+      },
+      {
+        "title": "Sichere Migration",
+        "text": "ohne Ranking-Verluste"
+      },
+      {
+        "title": "Lighthouse-Garantie",
+        "text": "mindestens 90, sonst bessere ich kostenlos nach"
+      }
+    ],
+    "ctaLabel": "Angebot anfordern",
+    "ctaLink": {
+      "discriminant": "#contatti",
+      "value": null
+    },
+    "note": "Kostenloses Erstgespräch, 25 Minuten",
+    "image": "@it",
+    "boxEyebrow": "Im Angebot enthalten",
+    "boxValue": "3 Monate",
+    "boxOldValue": "",
+    "boxText": "SEO-Optimierung nach dem Launch",
+    "stamp": "bis\n31. Jan."
+  },
+  "menu": {
+    "megaTitle": "Neue Website + 3 Monate SEO inklusive",
+    "megaText": "Bei Beauftragung bis 31. Januar 2027:",
+    "megaItems": [
+      "3 Monate SEO-Optimierung nach dem Launch",
+      "Migration ohne Ranking-Verluste bei Google",
+      "Lighthouse-Garantie: mindestens 90 in allen 4 Kategorien, sonst bessere ich kostenlos nach"
+    ],
+    "mobileText": "bei Beauftragung bis 31. Januar 2027",
+    "cardText": "Bei Beauftragung bis Februar, mit SEO-Migration und Lighthouse-Garantie."
+  },
+  "original": "nuovo-sito-3-mesi-seo"
+}

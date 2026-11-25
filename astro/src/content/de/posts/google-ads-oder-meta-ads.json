@@ -1,0 +1,23 @@
+{
+  "title": "Google Ads oder Meta Ads: Was passt zu Ihrem Unternehmen?",
+  "content": {
+    "image": "@it",
+    "imageAlt": "Smartphone mit einem Feed aus Social-Media-Beiträgen",
+    "excerpt": "Das eine erreicht Menschen, die Sie schon suchen, das andere macht Sie bei denen bekannt, die Sie noch nicht kennen. Wo Sie anfangen sollten, mit Beispielen aus ganz Deutschland.",
+    "lead": "Google Ads und Meta Ads (Facebook und Instagram) sind die beiden Werbekanäle, die kleine und mittlere Unternehmen am häufigsten nutzen. Sie konkurrieren nicht miteinander, sondern erfüllen unterschiedliche Aufgaben. Wer den Unterschied kennt, gibt sein Geld nicht an der falschen Stelle aus.",
+    "text": "## Der Unterschied in einem Satz\n\n**Google Ads erreicht Menschen, die Sie bereits suchen.** **Meta Ads macht Sie bei denen bekannt, die Sie noch nicht kennen.** Beim einen beantworten Sie eine Frage, beim anderen wecken Sie Interesse, während die Leute durch ihren Feed scrollen.\n\n## Wann sich Google Ads lohnt\n\nGoogle Ads funktioniert gut, wenn Menschen aktiv nach Ihrem Angebot suchen: „Elektriker Notdienst Bremen“, „Transporter mieten Dortmund“, „wasserdichte Wanderschuhe“. Die Nachfrage ist schon da, Sie müssen nur im richtigen Moment auftauchen.\n\n- Dienstleistungen mit Dringlichkeit oder klarem Bedarf;\n- lokale Betriebe mit „in meiner Nähe“-Suchen;\n- Onlineshops mit Produkten, die nach Name oder Eigenschaft gesucht werden.\n\n## Wann sich Meta Ads lohnt\n\nMeta Ads passt besser, wenn der Bedarf noch nicht geäußert ist, das Produkt sich aber gut „zeigen“ lässt: Restaurants, Fitnessstudios, Events, Produkte mit starker Optik, saisonale Angebote.\n\n- Produkte oder Leistungen, die sich über Bilder und Videos verkaufen;\n- befristete Aktionen und Produktstarts;\n- Leadgenerierung mit Formularen direkt in Facebook und Instagram.\n\n## Ein paar Beispiele\n\nEin **Sanitärbetrieb in Bremen** holt fast immer mehr aus Google Ads heraus: Wer zu Hause einen Rohrbruch hat, sucht, statt durch Instagram zu scrollen. Ein **Weingut in Franken** kann dagegen mit Meta Ads Weinliebhaber aus der Region auf seine Weine aufmerksam machen. Ein **Fahrradladen in Münster** kann beides nutzen: Google für alle, die „E-Bike Münster“ suchen, Meta, um im Frühling die neuen Modelle zu zeigen.\n\n## Wie viel Budget Sie brauchen\n\nDas hängt von Branche, Wettbewerb und Region ab. Bei Google Ads schwanken die Klickpreise stark von Branche zu Branche, bei Meta Ads kann man oft mit kleineren Budgets starten. In beiden Fällen gilt: mit einem Test beginnen, die **Kosten pro Kontakt** messen und nur in das investieren, was funktioniert.\n\n## Was Ihnen niemand sagt: das Tracking\n\nOhne sauberes Tracking wissen Sie nicht, welche Anzeigen Anfragen und Verkäufe bringen, und die Plattformen können nicht optimieren. Bevor Sie einen Euro ausgeben, brauchen Sie: eingerichtete Conversions, Pixel und Conversions API für Meta, korrekt verwaltete Cookie-Einwilligung. Das ist der Unterschied zwischen Werbung und Hoffnung.\n\n## So entscheiden Sie in der Praxis\n\n1. Suchen Menschen bei Google nach Ihrem Angebot? Starten Sie mit Google Ads.\n2. Verkauft sich Ihr Produkt gut über Bilder? Prüfen Sie Meta Ads.\n3. Budget für beides? Nutzen Sie beide zusammen: Meta, um bekannt zu werden, Google, um gewählt zu werden.\n4. In jedem Fall: erst das Tracking, dann die Kampagnen."
+  },
+  "seo": {
+    "title": "Google Ads oder Meta Ads: Was passt zu Ihnen? | bortolin.dev",
+    "description": "Das eine erreicht Menschen, die Sie schon suchen, das andere macht Sie bei Neukunden bekannt. Wo Sie anfangen sollten, mit Praxisbeispielen.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "google-ads-o-meta-ads"
+}

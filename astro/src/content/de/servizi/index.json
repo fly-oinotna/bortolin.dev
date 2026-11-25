@@ -1,0 +1,343 @@
+{
+  "hero": {
+    "breadcrumb": "Leistungen",
+    "eyebrow": "Alle Leistungen",
+    "title": "Alles, was Sie brauchen, um online zu wachsen, Schritt für Schritt",
+    "text": "Websites, SEO, Performance, künstliche Intelligenz, Kampagnen und Beratung. Jede Leistung funktioniert für sich, aber zusammen bringen sie mehr: **Eine schnelle Website rankt besser bei Google, und gute Sichtbarkeit macht Kampagnen günstiger**. Alles zum Festpreis und mit einem einzigen Ansprechpartner.\n",
+    "navLabel": "Zu einem Bereich springen",
+    "layersLabel": "Wie die Leistungen zusammenspielen",
+    "layers": [
+      {
+        "title": "Kunden",
+        "text": "Google Ads, Meta Ads, KI-Werbung"
+      },
+      {
+        "title": "Sichtbarkeit",
+        "text": "SEO und Präsenz in der KI"
+      },
+      {
+        "title": "Website",
+        "text": "Schnell, klar, messbar"
+      },
+      {
+        "title": "Strategie",
+        "text": "Ziele und Prozesse"
+      }
+    ],
+    "caption": "Jede Ebene baut auf der darunter auf: Deshalb beginne ich immer beim Fundament."
+  },
+  "start": {
+    "title": "Sie wissen nicht, wo Sie anfangen sollen? Beginnen Sie mit Ihrem Ziel",
+    "text": "Wählen Sie den Satz, der am besten zu Ihnen passt, und ich bringe Sie zur passenden Leistung. Passen mehrere, klären wir das gemeinsam im kostenlosen 25-Minuten-Gespräch.\n",
+    "items": [
+      {
+        "quote": "„Ich brauche eine neue Website“",
+        "service": "Komplette Websites",
+        "link": {
+          "discriminant": "/servizi/siti-web/"
+        }
+      },
+      {
+        "quote": "„Niemand findet meine Website“",
+        "service": "SEO-Beratung",
+        "link": {
+          "discriminant": "/servizi/consulenza-seo/"
+        }
+      },
+      {
+        "quote": "„Meine Website ist langsam“",
+        "service": "Performance-Optimierung",
+        "link": {
+          "discriminant": "/servizi/miglioramento-prestazioni-siti-web/"
+        }
+      },
+      {
+        "quote": "„Ich will Anfragen, und zwar jetzt“",
+        "service": "Google Ads und Meta Ads",
+        "link": {
+          "discriminant": "/servizi/google-ads/"
+        }
+      },
+      {
+        "quote": "„Ich will KI auf meiner Website“",
+        "service": "KI-Integration",
+        "link": {
+          "discriminant": "/servizi/integrazione-ai/"
+        }
+      },
+      {
+        "quote": "„Der Papierkram frisst meinen Tag“",
+        "service": "Digitalberatung",
+        "link": {
+          "discriminant": "/servizi/consulenza-digitale/"
+        }
+      }
+    ]
+  },
+  "groups": {
+    "idealLabel": "Ideal für:",
+    "moreLabel": "Details ansehen",
+    "items": [
+      {
+        "short": "Ihre Website",
+        "eyebrow": "Ihre Website",
+        "title": "Eine Website, die für Sie arbeitet",
+        "text": "Das Fundament: eine schnelle, klare und KI-fähige Website. Stimmt dieser Teil, funktioniert alles andere besser.\n",
+        "cards": [
+          {
+            "icon": "monitor",
+            "badge": "Kernleistung",
+            "title": "Komplette Websites",
+            "link": {
+              "discriminant": "/servizi/siti-web/"
+            },
+            "text": "Firmenwebsites, Onlineshops und individuelle Projekte mit Design, Texten, SEO, Performance und Tracking inklusive, zum Festpreis.",
+            "points": [
+              "Individuelles Design und Texte, die verkaufen",
+              "SEO und Performance mit 100 in Lighthouse",
+              "KI-fähig und messbar ab dem ersten Tag",
+              "Die Website gehört Ihnen, Schulung inklusive"
+            ],
+            "ideal": "alle, die eine neue Website brauchen oder ihre bestehende neu aufsetzen wollen",
+            "offer": "nuovo-sito-3-mesi-seo",
+            "wide": true
+          },
+          {
+            "icon": "bolt",
+            "badge": "Bestehende Websites",
+            "title": "Performance-Optimierung",
+            "link": {
+              "discriminant": "/servizi/miglioramento-prestazioni-siti-web/"
+            },
+            "text": "Ich mache Ihre bestehende Website schnell: Core Web Vitals innerhalb der Google-Grenzwerte, ohne Neubau.",
+            "points": [
+              "Lighthouse-Analyse und echte Google-Daten",
+              "Bilder, Code, Cache und Drittanbieter-Skripte",
+              "Vorher-nachher-Vergleich"
+            ],
+            "ideal": "langsame Websites, vor allem auf dem Smartphone",
+            "offer": "check-up-velocita",
+            "wide": false
+          },
+          {
+            "icon": "sparkles",
+            "badge": "Auch für bestehende Websites",
+            "title": "KI-Integration",
+            "link": {
+              "discriminant": "/servizi/integrazione-ai/"
+            },
+            "text": "Gemini, Claude oder ChatGPT direkt in Ihrer Website: Meta-Tags und Texte per Klick, Übersetzungen, ein Assistent für Ihre Kunden.",
+            "points": [
+              "Button „Mit KI erstellen“ in Ihrem Backend",
+              "Ein Assistent, der Ihre Inhalte kennt",
+              "Automatisierungen und Schulung"
+            ],
+            "ideal": "alle, die mehr Sichtbarkeit mit weniger Aufwand wollen",
+            "offer": "seo-con-ai",
+            "wide": false
+          }
+        ]
+      },
+      {
+        "short": "Sichtbarkeit",
+        "eyebrow": "Sichtbarkeit",
+        "title": "Bei Google und in der KI gefunden werden",
+        "text": "Damit Sie gefunden werden, wenn man nach Ihnen sucht, bei Google und in den Antworten von KI-Assistenten.\n",
+        "cards": [
+          {
+            "icon": "search",
+            "badge": "Mein Spezialgebiet",
+            "title": "SEO-Beratung",
+            "link": {
+              "discriminant": "/servizi/consulenza-seo/"
+            },
+            "text": "Technische Audits, Keywords, Local SEO, Migrationen und Sichtbarkeit in ChatGPT, Gemini und Perplexity. Ohne Fachchinesisch.",
+            "points": [
+              "Technisches SEO-Audit und Maßnahmenplan",
+              "Local SEO und Google-Unternehmensprofil",
+              "Sichtbarkeit in der KI (GEO)",
+              "Monatlicher Video-Bericht"
+            ],
+            "ideal": "Websites, die kaum Besucher über Google bekommen",
+            "offer": "audit-seo",
+            "wide": true
+          }
+        ]
+      },
+      {
+        "short": "Werbung",
+        "eyebrow": "Werbung",
+        "title": "Anfragen und Verkäufe, ab sofort",
+        "text": "Anfragen und Verkäufe ab dem ersten Tag, mit Kampagnen zum Festpreis: nie ein Prozentsatz Ihres Werbebudgets.\n",
+        "cards": [
+          {
+            "icon": "target",
+            "badge": "",
+            "title": "Google Ads",
+            "link": {
+              "discriminant": "/servizi/google-ads/"
+            },
+            "text": "Ganz oben bei Google, genau wenn ein Kunde Sie sucht. Search, Performance Max, Shopping und lokale Anzeigen.",
+            "points": [
+              "Conversion-Tracking inklusive",
+              "Auszuschließende Keywords gegen Streuverluste",
+              "Konto auf Ihren Namen"
+            ],
+            "ideal": "lokale Dienstleister, Fachgeschäfte und Onlineshops",
+            "offer": null,
+            "wide": false
+          },
+          {
+            "icon": "megaphone",
+            "badge": "",
+            "title": "Meta Ads",
+            "link": {
+              "discriminant": "/servizi/meta-ads/"
+            },
+            "text": "Anzeigen auf Facebook und Instagram, um in Ihrer Region bekannt zu werden und Anfragen zu gewinnen, nicht nur Likes.",
+            "points": [
+              "Pixel und Conversions API",
+              "Kontaktformulare und Remarketing",
+              "Creatives für Feed, Stories und Reels"
+            ],
+            "ideal": "bekannter werden und Kontakte gewinnen",
+            "offer": null,
+            "wide": false
+          },
+          {
+            "icon": "chat-ad",
+            "badge": "Neu",
+            "title": "KI-Werbung",
+            "link": {
+              "discriminant": "/servizi/ai-ads/"
+            },
+            "text": "Anzeigen neben den Antworten von ChatGPT, Google und Copilot: der neue Kanal, vor Ihrer Konkurrenz.",
+            "points": [
+              "Potenzialanalyse für Ihre Branche",
+              "Test mit kleinem Budget",
+              "Verzahnung mit Ihren anderen Kanälen"
+            ],
+            "ideal": "alle, die einen neuen Kanal als Erste nutzen wollen",
+            "offer": null,
+            "wide": false
+          }
+        ]
+      },
+      {
+        "short": "Strategie",
+        "eyebrow": "Strategie und digitale Transformation",
+        "title": "Der Blick aufs Ganze",
+        "text": "Ein Gesamtblick auf Ihr Marketing und Ihre Abläufe, mit KI dort, wo sie wirklich Zeit spart.\n",
+        "cards": [
+          {
+            "icon": "bulb",
+            "badge": "Für KMU",
+            "title": "Digitalberatung",
+            "link": {
+              "discriminant": "/servizi/consulenza-digitale/"
+            },
+            "text": "Digitales Marketing und Digitalisierung im Betrieb: Angebote und Rechnungen mit KI, Dokumente, CRM, Automatisierungen und messbare Ziele.",
+            "points": [
+              "Check von Marketing und Abläufen",
+              "Angebote und Dokumente mit KI",
+              "90-Tage-Fahrplan",
+              "Begleitung und Workshops"
+            ],
+            "ideal": "KMU, die wachsen und effizienter arbeiten wollen",
+            "offer": null,
+            "wide": true
+          }
+        ]
+      }
+    ]
+  },
+  "agency": {
+    "short": "Für Webagenturen",
+    "eyebrow": "Für Webagenturen",
+    "title": "Das Tech-Team Ihrer Agentur, wann immer Sie es brauchen",
+    "text": "White-Label-Entwicklung, Projektmanagement, Tracking, Optimierung und Wartung der Websites Ihrer Kunden. Diskret: Ich kontaktiere Ihre Kunden nie.\n",
+    "ctaLabel": "White-Label-Entwicklung",
+    "ctaLink": {
+      "discriminant": "custom",
+      "value": "/servizi/sviluppatore-freelance-per-web-agency/#white-label"
+    },
+    "linkLabel": "Projektmanager",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "/servizi/sviluppatore-freelance-per-web-agency/#project-management"
+    },
+    "image": "@it",
+    "imageAlt": "Illustration: ein Design, umgesetzt in funktionierenden Code"
+  },
+  "rules": {
+    "eyebrow": "Egal, welche Leistung Sie wählen",
+    "title": "Diese Regeln gelten immer",
+    "items": [
+      {
+        "title": "Festpreis",
+        "text": "Sie wissen vorher, was es kostet. Nie Überstunden, nie ein Prozentsatz Ihres Werbebudgets."
+      },
+      {
+        "title": "Alles gehört Ihnen",
+        "text": "Websites, Konten, Daten und Zugänge immer auf Ihren Namen."
+      },
+      {
+        "title": "Ein Ansprechpartner",
+        "text": "Sie sprechen mit dem, der die Arbeit macht, ohne Zwischenstellen."
+      },
+      {
+        "title": "Verständlich erklärt",
+        "text": "Berichte, die man versteht, und klare Antworten, auch auf vermeintlich „dumme“ Fragen."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "title": "Fragen zu den Leistungen",
+    "text": "Ihre Frage ist nicht dabei? [Schreiben Sie mir](#contatti), ich antworte innerhalb eines Werktags.\n",
+    "items": [
+      {
+        "question": "Kann ich auch nur eine Leistung buchen?",
+        "answer": "Natürlich. Jede Leistung funktioniert auch für sich. Wenn ich sehe, dass Ihnen etwas anderes bessere Ergebnisse bringen würde, sage ich es Ihnen, aber die Entscheidung liegt bei Ihnen.\n"
+      },
+      {
+        "question": "Lohnt es sich, mehrere Leistungen zu kombinieren?",
+        "answer": "Ja: Wer Website, SEO und Kampagnen gleichzeitig angeht, vermeidet doppelte Arbeit, und die Ergebnisse addieren sich. Im Angebot steht ein Gesamtpreis, immer fest.\n"
+      },
+      {
+        "question": "Lassen sich die Einführungsangebote kombinieren?",
+        "answer": "Jedes Angebot gilt für seine Leistung. Interessieren Sie mehrere, finden wir im kostenlosen Gespräch die Lösung, die sich für Sie am meisten lohnt.\n"
+      },
+      {
+        "question": "Arbeiten Sie nur in Italien?",
+        "answer": "Nein. Kunden aus Venetien und Friaul treffe ich gern persönlich, aber ich arbeite remote für ganz Italien und das Ausland, auch für Deutschland, auf Deutsch, Englisch, Italienisch und Spanisch.\n"
+      },
+      {
+        "question": "Wie fangen wir an?",
+        "answer": "Mit einem kostenlosen 25-Minuten-Gespräch: Sie erzählen mir von Ihren Zielen und Ihrer Situation, ich sage Ihnen, was ich tun würde und was es kostet. Unverbindlich.\n"
+      }
+    ],
+    "ctaLabel": "Kostenloses Gespräch buchen",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "contact": {
+    "title": "Sprechen wir über Ihr Projekt",
+    "formTitle": "Kostenloses Angebot anfordern",
+    "topics": []
+  },
+  "seo": {
+    "slug": "leistungen",
+    "title": "Leistungen: Websites, SEO, KI und Werbung | bortolin.dev",
+    "description": "Websites, SEO-Beratung, Performance, KI-Integration, Google Ads und Meta Ads für KMU. Festpreis und ein einziger Ansprechpartner.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

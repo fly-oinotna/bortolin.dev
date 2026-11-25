@@ -1,0 +1,23 @@
+{
+  "title": "Ley Europea de Accesibilidad: qué cambia para tu web",
+  "content": {
+    "image": "@it",
+    "imageAlt": "Manos escribiendo en el teclado de un ordenador",
+    "excerpt": "Desde el 28 de junio de 2025 muchas webs que venden online tienen que ser accesibles. A quién afecta, qué revisar y por dónde empezar.",
+    "lead": "Desde el **28 de junio de 2025** se aplica en toda la Unión Europea la Ley Europea de Accesibilidad (European Accessibility Act), la normativa que exige que muchos productos y servicios digitales puedan usarlos también las personas con discapacidad. Afecta también a muchas webs y tiendas online. Veamos a quién afecta y por dónde empezar.",
+    "text": "## Qué es la Ley Europea de Accesibilidad\n\nEs una directiva europea (la 2019/882), incorporada al derecho español con la Ley 11/2023. Fija requisitos de accesibilidad comunes para una serie de productos y servicios, con el objetivo de que todo el mundo pueda usarlos: también quien ve poco, quien no ve y quien usa solo el teclado o un lector de pantalla.\n\n## A quién afecta\n\nEntre los servicios afectados están el **comercio electrónico** dirigido a consumidores, los servicios bancarios, el transporte, los libros electrónicos y algunas comunicaciones electrónicas. En la práctica, si vendes productos o servicios online a particulares, es muy probable que la norma te afecte.\n\nHay exenciones para las **microempresas** que prestan servicios (menos de 10 empleados y volumen de negocio o balance anual de hasta 2 millones de euros). Pero cada caso hay que revisarlo: si tienes dudas, conviene consultarlo con un asesor legal.\n\n## Qué significa «accesible», en la práctica\n\nLa referencia técnica es la norma europea EN 301 549, basada en las pautas internacionales WCAG. Traducido a ejemplos concretos, una web accesible:\n\n- se puede usar **solo con el teclado**, viendo siempre dónde estás;\n- tiene textos con suficiente **contraste** respecto al fondo;\n- describe las imágenes importantes con un **texto alternativo**;\n- tiene formularios con etiquetas claras y mensajes de error comprensibles;\n- funciona con los **lectores de pantalla** que usan las personas ciegas.\n\n## No solo una obligación: las ventajas\n\nUna web accesible es más fácil de usar para todos: para quien la abre con el móvil a pleno sol, para quien tiene prisa, para las personas mayores. Y muchas buenas prácticas de accesibilidad coinciden con las que ayudan al SEO, como una estructura clara de títulos y textos alternativos descriptivos.\n\n## Cómo hacer una primera revisión\n\n1. Intenta navegar por la web **solo con la tecla Tab**: ¿llegas a todo y sabes dónde estás?\n2. Analiza las páginas principales con **Lighthouse**, en la sección Accesibilidad.\n3. Comprueba que cada imagen importante tenga un texto alternativo con sentido.\n4. Rellena los formularios de contacto y de compra sin ratón.\n\nEstas comprobaciones automáticas y manuales no sustituyen una auditoría completa, pero te dan una idea clara del trabajo que hay por delante.\n\n## La declaración de accesibilidad\n\nQuien está dentro de la norma también debe informar de cómo cumple el servicio los requisitos de accesibilidad, normalmente en una página específica de la web. Es un documento que hay que preparar con cuidado, actualizar con el tiempo y enlazar de forma visible.\n\n## Por dónde empezar\n\nEmpieza por las páginas que más importan: portada, fichas de producto, carrito, pago, contacto. Corrige primero los problemas que impiden el uso (navegación con teclado, formularios, contrastes) y luego pasa a los detalles. E incorpora la accesibilidad a tu forma de trabajar: cada página nueva debe nacer ya accesible."
+  },
+  "seo": {
+    "title": "Ley Europea de Accesibilidad: qué cambia en tu web | bortolin.dev",
+    "description": "Desde el 28 de junio de 2025 muchas webs que venden online tienen que ser accesibles. A quién afecta, qué revisar y por dónde empezar.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "european-accessibility-act-siti-web"
+}

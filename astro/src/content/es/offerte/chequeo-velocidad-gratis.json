@@ -1,0 +1,46 @@
+{
+  "name": "Chequeo de velocidad gratis",
+  "offer": {
+    "eyebrow": "Oferta de lanzamiento",
+    "deadlineLabel": "Válida hasta el 31 de enero de 2027",
+    "title": "Chequeo de velocidad {% verde %}gratis{% /verde %} si optimizas antes de febrero",
+    "text": "Reserva la optimización de tu web antes del 31 de enero de 2027 y el chequeo inicial no te cuesta nada. Al terminar te envío la comparativa antes/después, con los números que lo demuestran.\n",
+    "items": [
+      {
+        "title": "Informe Lighthouse",
+        "text": "móvil y ordenador"
+      },
+      {
+        "title": "Datos reales de Google",
+        "text": "las Core Web Vitals de tus visitantes"
+      },
+      {
+        "title": "Antes/después",
+        "text": "al final del trabajo, en vídeo"
+      }
+    ],
+    "ctaLabel": "Reserva el chequeo",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "note": "Valor del chequeo: 190 € sin IVA",
+    "image": "@it",
+    "boxEyebrow": "Chequeo de velocidad",
+    "boxValue": "0 €",
+    "boxOldValue": "190 €",
+    "boxText": "con la optimización de la web",
+    "stamp": "Gratis"
+  },
+  "menu": {
+    "megaTitle": "Chequeo de velocidad gratis",
+    "megaText": "Si reservas la optimización antes del 31 de enero de 2027:",
+    "megaItems": [
+      "Informe Lighthouse para móvil y ordenador",
+      "Datos reales de Google sobre las Core Web Vitals",
+      "Comparativa antes/después al final del trabajo, en vídeo"
+    ],
+    "mobileText": "si optimizas antes del 31 de enero de 2027",
+    "cardText": "Si optimizas tu web antes de febrero (valor de 190 €)."
+  },
+  "original": "check-up-velocita"
+}

@@ -1,0 +1,47 @@
+{
+  "banner": {
+    "title": "Usamos cookies",
+    "text": "Nos ayudan a entender cómo se usa la web, mejorarla, mostrarte contenidos más útiles y hacer que navegar sea más cómodo. Tú eliges cuáles activar en la configuración.",
+    "privacyText": "Lee nuestra",
+    "privacyLinkText": "política de privacidad",
+    "privacyLink": {
+      "discriminant": "/informativa-sulla-privacy/",
+      "value": null
+    },
+    "accept": "Aceptar",
+    "acceptAll": "Aceptar todas",
+    "deny": "Rechazar",
+    "settings": "Configuración",
+    "save": "Guardar mis preferencias",
+    "close": "Cerrar",
+    "preferences": "Cambiar preferencias de cookies"
+  },
+  "preferences": {
+    "title": "Configuración de privacidad",
+    "text": "Estos son los fines para los que nos gustaría usar tus datos. Puedes cambiar de opinión cuando quieras con el botón de abajo a la izquierda."
+  },
+  "types": {
+    "items": [
+      {
+        "title": "Cookies técnicas",
+        "description": "Necesarias para que la web funcione y para recordar tus preferencias de cookies. Siempre están activas."
+      },
+      {
+        "title": "Estadísticas",
+        "description": "Permite guardar información, como cookies, para analizar las visitas (páginas vistas, tiempo en la web) y mejorar la web."
+      },
+      {
+        "title": "Publicidad",
+        "description": "Permite guardar información relacionada con la publicidad, como cookies."
+      },
+      {
+        "title": "Datos publicitarios",
+        "description": "Permite enviar datos de usuario a Google con fines publicitarios."
+      },
+      {
+        "title": "Publicidad personalizada",
+        "description": "Permite mostrarte anuncios personalizados."
+      }
+    ]
+  }
+}

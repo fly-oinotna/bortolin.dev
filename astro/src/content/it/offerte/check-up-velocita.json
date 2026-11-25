@@ -1,0 +1,46 @@
+{
+  "name": "Check-up velocità gratuito",
+  "offer": {
+    "deadline": "2027-01-31",
+    "eyebrow": "Offerta di lancio",
+    "deadlineLabel": "Valida fino al 31/01/2027",
+    "title": "Check-up velocità {% verde %}gratuito{% /verde %} se ottimizzi entro gennaio",
+    "text": "Prenota l’ottimizzazione del tuo sito entro il 31 gennaio 2027: il check-up iniziale non lo paghi. E dopo gli interventi ti mando il confronto prima/dopo, numeri alla mano.\n",
+    "items": [
+      {
+        "title": "Report Lighthouse",
+        "text": "smartphone e computer"
+      },
+      {
+        "title": "Dati reali di Google",
+        "text": "Core Web Vitals dei visitatori"
+      },
+      {
+        "title": "Confronto prima/dopo",
+        "text": "a fine lavori, in video"
+      }
+    ],
+    "ctaLabel": "Prenota il check-up",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "note": "Valore del check-up: 190 € + IVA",
+    "image": "/src/assets/images/offerte/illustrazione-offerta.svg",
+    "boxEyebrow": "Check-up velocità",
+    "boxValue": "0 €",
+    "boxOldValue": "190 €",
+    "boxText": "con l’ottimizzazione del sito",
+    "stamp": "Gratis"
+  },
+  "menu": {
+    "megaTitle": "Check-up velocità gratuito",
+    "megaText": "Per chi prenota l’ottimizzazione entro il 31/01/2027:",
+    "megaItems": [
+      "Report Lighthouse da smartphone e computer",
+      "Dati reali di Google sui Core Web Vitals",
+      "Confronto prima/dopo a fine lavori, in video"
+    ],
+    "mobileText": "per chi ottimizza entro il 31/01/2027",
+    "cardText": "Se ottimizzi il sito entro gennaio (valore 190 €)."
+  }
+}

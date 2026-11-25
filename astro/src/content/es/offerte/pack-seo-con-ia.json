@@ -1,0 +1,46 @@
+{
+  "name": "Pack SEO con IA",
+  "offer": {
+    "eyebrow": "Oferta de lanzamiento",
+    "deadlineLabel": "Válida hasta el 31 de enero de 2027",
+    "title": "El pack {% verde %}«SEO con IA»{% /verde %} para tu web",
+    "text": "El botón «Generar con IA» que has visto arriba, integrado en el panel de tu web: meta títulos, descripciones y textos alternativos de las imágenes en un clic, en todas las páginas.\n",
+    "items": [
+      {
+        "title": "Meta títulos y descripciones",
+        "text": "para cada página y producto"
+      },
+      {
+        "title": "Textos alternativos",
+        "text": "para todas las imágenes"
+      },
+      {
+        "title": "Formación incluida",
+        "text": "más un mes de soporte"
+      }
+    ],
+    "ctaLabel": "Pide el pack",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "note": "Para WordPress y WooCommerce · precios sin IVA",
+    "image": "@it",
+    "boxEyebrow": "Pack SEO con IA",
+    "boxValue": "490 €",
+    "boxOldValue": "790 €",
+    "boxText": "costes de uso de la IA no incluidos",
+    "stamp": "−38 %"
+  },
+  "menu": {
+    "megaTitle": "Pack «SEO con IA» por 490 € en lugar de 790 €",
+    "megaText": "Si lo pides antes del 31 de enero de 2027:",
+    "megaItems": [
+      "Meta títulos y descripciones en un clic, para cada página",
+      "Textos alternativos para todas las imágenes",
+      "Formación y un mes de soporte incluidos"
+    ],
+    "mobileText": "si lo pides antes del 31 de enero de 2027",
+    "cardText": "Meta títulos, descripciones y textos alternativos en un clic, en WordPress."
+  },
+  "original": "seo-con-ai"
+}

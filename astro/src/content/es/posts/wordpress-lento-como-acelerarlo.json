@@ -1,0 +1,23 @@
+{
+  "title": "Por qué tu web en WordPress va lenta (y cómo acelerarla)",
+  "content": {
+    "image": "@it",
+    "imageAlt": "Panel de WordPress con la lista de plugins instalados",
+    "excerpt": "Maquetadores, demasiados plugins, imágenes pesadas y el hosting equivocado: las causas más habituales, por orden de impacto, y qué hacer con cada una.",
+    "lead": "WordPress no es lento por naturaleza: se vuelve lento cuando se sobrecarga. La buena noticia es que las causas casi siempre son las mismas, y en la mayoría de los casos se puede mejorar mucho sin rehacer la web. Aquí las tienes, por orden de impacto.",
+    "text": "## Lo primero: mide\n\nAbre PageSpeed Insights, introduce la dirección de la portada y de una o dos páginas importantes y mira la versión **móvil**. Apunta las puntuaciones y las Core Web Vitals: te harán falta para saber si los cambios funcionan.\n\n## Maquetadores pesados\n\nLos maquetadores (page builders) permiten crear páginas arrastrando bloques, pero a menudo cargan mucho código incluso donde no hace falta. Si la web está hecha con un maquetador pesado, a veces la mejor solución es aligerar las páginas más importantes o rehacerlas con bloques nativos.\n\n## Demasiados plugins (o los equivocados)\n\nNo importa solo cuántos hay: importa lo que hacen. Un plugin que carga scripts y estilos en todas las páginas pesa más que diez plugins ligeros.\n\n- elimina los que ya no usas;\n- sustituye los que hacen lo mismo;\n- comprueba cuáles cargan archivos en todas las páginas aunque no hagan falta.\n\n## Imágenes pesadas\n\nEs la causa más habitual de una web lenta. Fotos de varios megas subidas tal cual salen de la cámara lo ralentizan todo.\n\n- usa formatos modernos como **WebP** o AVIF;\n- sube las imágenes al tamaño en que se muestran;\n- activa la carga diferida («lazy») para las que quedan fuera de la primera pantalla.\n\n## Hosting y caché\n\nUn hosting barato compartido con cientos de webs responde despacio, y ninguna optimización lo compensa del todo. Junto a un hosting adecuado hacen falta una **caché** bien configurada, compresión de archivos y, si el público es internacional, una CDN.\n\n## Scripts externos\n\nChats, mapas, vídeos, píxeles publicitarios, banners de cookies, opiniones: cada servicio externo añade código que descargar y ejecutar. No hace falta eliminarlos, sino cargarlos **cuando hacen falta**, por ejemplo el mapa solo cuando el usuario llega a él, o el vídeo solo cuando pulsa play.\n\n## Fuentes y base de datos\n\nDemasiadas fuentes, o cargadas desde servicios externos, retrasan la aparición del texto: mejor pocos pesos, alojados en tu propio servidor. Y una base de datos llena de revisiones, borradores y datos de plugins desinstalados ralentiza el panel y a veces la web: una limpieza periódica ayuda.\n\n## Después de los cambios\n\nRepite las mediciones en las mismas páginas. Lighthouse mostrará las mejoras al instante; los datos reales de los visitantes, que Google usa para las Core Web Vitals, se actualizarán en unas semanas. Y para que la web siga siendo rápida, una regla sencilla: **cada plugin o servicio nuevo se valora también por lo que pesa**."
+  },
+  "seo": {
+    "title": "¿WordPress lento? Cómo acelerarlo | bortolin.dev",
+    "description": "Maquetadores, demasiados plugins, imágenes pesadas y el hosting equivocado: las causas más habituales, por orden de impacto, y qué hacer con cada una.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "wordpress-lento-come-velocizzarlo"
+}

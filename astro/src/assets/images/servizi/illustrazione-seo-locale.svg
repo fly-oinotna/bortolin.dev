@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="480" viewBox="0 0 600 480" fill="none">
+  <circle cx="110" cy="390" r="100" fill="#99EA48" opacity=".22"/>
+  <circle cx="520" cy="70" r="50" fill="#e5e7eb"/>
+
+  <!-- mappa -->
+  <rect x="40" y="40" width="380" height="300" rx="26" fill="#f3f4f6" stroke="#000" stroke-width="3"/>
+  <g stroke="#fff" stroke-width="14" stroke-linecap="round">
+    <path d="M40 140c90 10 150-30 230-10s110 40 150 30"/>
+    <path d="M150 40c10 80-30 150 10 300"/>
+    <path d="M300 40c-20 90 40 160 0 300"/>
+  </g>
+  <g stroke="#d1d5db" stroke-width="5" stroke-linecap="round">
+    <path d="M40 250c70-20 140 10 200-10s120-30 180-20"/>
+    <path d="M220 40c-10 60 20 90 0 140"/>
+  </g>
+  <path d="M60 300c30-30 60-20 90-50" stroke="#99EA48" stroke-width="10" stroke-linecap="round" opacity=".6"/>
+
+  <!-- pin concorrenti -->
+  <g fill="#9ca3af">
+    <path d="M110 200c0-14 11-24 24-24s24 10 24 24c0 18-24 38-24 38s-24-20-24-38z"/>
+    <path d="M330 230c0-14 11-24 24-24s24 10 24 24c0 18-24 38-24 38s-24-20-24-38z"/>
+  </g>
+  <circle cx="134" cy="200" r="8" fill="#f3f4f6"/>
+  <circle cx="354" cy="230" r="8" fill="#f3f4f6"/>
+
+  <!-- pin principale -->
+  <ellipse cx="228" cy="232" rx="30" ry="9" fill="#000" opacity=".15"/>
+  <path d="M188 150c0-24 18-42 40-42s40 18 40 42c0 32-40 78-40 78s-40-46-40-78z" fill="#99EA48" stroke="#000" stroke-width="3.5"/>
+  <circle cx="228" cy="150" r="14" fill="#000"/>
+
+  <!-- scheda "local pack" -->
+  <rect x="300" y="250" width="270" height="190" rx="24" fill="#fff" stroke="#000" stroke-width="3"/>
+  <rect x="322" y="272" width="140" height="14" rx="7" fill="#000"/>
+  <g fill="#99EA48" stroke="#000" stroke-width="1.5" stroke-linejoin="round">
+    <path d="m330 300 3.5 7 7.5 1-5.5 5 1.5 7.5-7-3.8-7 3.8 1.5-7.5-5.5-5 7.5-1z"/>
+    <path d="m352 300 3.5 7 7.5 1-5.5 5 1.5 7.5-7-3.8-7 3.8 1.5-7.5-5.5-5 7.5-1z"/>
+    <path d="m374 300 3.5 7 7.5 1-5.5 5 1.5 7.5-7-3.8-7 3.8 1.5-7.5-5.5-5 7.5-1z"/>
+    <path d="m396 300 3.5 7 7.5 1-5.5 5 1.5 7.5-7-3.8-7 3.8 1.5-7.5-5.5-5 7.5-1z"/>
+    <path d="m418 300 3.5 7 7.5 1-5.5 5 1.5 7.5-7-3.8-7 3.8 1.5-7.5-5.5-5 7.5-1z"/>
+  </g>
+  <rect x="322" y="334" width="200" height="9" rx="4.5" fill="#9ca3af"/>
+  <rect x="322" y="351" width="160" height="9" rx="4.5" fill="#d1d5db"/>
+  <rect x="322" y="380" width="96" height="36" rx="18" fill="#000"/>
+  <path d="M352 398h36m-10-9 10 9-10 9" stroke="#99EA48" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="430" y="380" width="118" height="36" rx="18" fill="#fff" stroke="#000" stroke-width="2.5"/>
+  <circle cx="462" cy="398" r="9" fill="#99EA48" stroke="#000" stroke-width="2.5"/>
+  <rect x="480" y="394" width="52" height="8" rx="4" fill="#9ca3af"/>
+
+  <!-- badge #1 -->
+  <circle cx="545" cy="262" r="34" fill="#000"/>
+  <text x="545" y="271" text-anchor="middle" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="24" font-weight="800" fill="#99EA48">#1</text>
+
+  <path d="M36 380l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#99EA48" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+</svg>

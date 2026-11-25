@@ -1,0 +1,23 @@
+{
+  "title": "Writing quotes with AI: a practical example",
+  "content": {
+    "image": "@it",
+    "imageAlt": "Calculator and pen resting on spreadsheets",
+    "excerpt": "From customer request to draft quote in minutes, using your own price list. How it works, what you need and where a person is still essential.",
+    "lead": "For many tradespeople and small businesses, writing quotes means spending evenings buried in price lists, spreadsheets and documents to retype. Today artificial intelligence can prepare a **draft** in minutes. Here’s how it works with a real-world example, what you need and where a person is still essential.",
+    "text": "## The example: a window company in Leeds\n\nAn email comes in: “I’d like a quote to replace 6 uPVC windows in a house in Harrogate, including removal of the old ones.” Today the owner opens the price list, works out sizes and quantities, adds fitting and disposal, lays it all out and sends it. Half an hour, on a good day.\n\nWith an AI-based system, the request is read automatically, the items are recognized and matched to the price list, and within moments a draft is ready with line items, quantities and a total. The owner checks it, tweaks one detail and sends it.\n\n## How it works behind the scenes\n\n1. **Reading**: the AI reads the request (email, website form, transcribed voice note) and pulls out what’s needed.\n2. **Matching**: it links each item to your products, services and prices.\n3. **Rules**: it applies your terms, such as minimum orders, travel costs and discounts.\n4. **Draft**: it prepares the document in your format, ready to review.\n\n## What you need to get started\n\n- an up-to-date **price list** in digital form (a spreadsheet is fine);\n- your pricing **rules**, written down clearly;\n- a few **past quotes** as examples;\n- a connection to the tools you already use: email, business software, document storage.\n\n## Where a person is still needed\n\nAI is brilliant at repetitive work, but it doesn’t know the customer the way you do. These stay human:\n\n- **site visits** and real measurements;\n- judgment calls on **unusual jobs**;\n- the **final decision** on price and on sending.\n\n> The golden rule: AI prepares, a person checks and decides.\n\n## From quotes to final invoices\n\nThe same principle applies when the job is done. Job sheets filled in on a phone, hours and materials logged on site: the **final bill** and draft invoice prepare themselves, with no piecing everything together at the end of the month.\n\n## What about customer data?\n\nQuotes contain personal and commercial data. That’s why it’s important to use professional services, send the AI only the information it needs and set everything up in line with GDPR and local data protection rules. Before you start, always be clear about where the data is processed and how long it’s kept.\n\n## How much time you save\n\nIt depends on how many quotes you write and how similar they are. The best way to find out is to measure: how long a typical quote takes you today, and how long it takes after a month of use. If there’s a saving, roll it out to other processes; if not, try a different approach."
+  },
+  "seo": {
+    "title": "Writing quotes with AI: a practical example | bortolin.dev",
+    "description": "From customer request to draft quote in minutes, using your own price list. How it works, what you need and where a person is still essential.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "preventivi-con-intelligenza-artificiale"
+}

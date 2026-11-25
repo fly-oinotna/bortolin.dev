@@ -1,0 +1,344 @@
+{
+  "hero": {
+    "breadcrumb": "Consulenza digitale",
+    "eyebrow": "Marketing e digitalizzazione",
+    "title": "Consulenza digitale: meno tempo perso, più clienti",
+    "text": "Ti aiuto a usare il digitale dove conta davvero: **nel marketing**, per trovare clienti, e **dentro l’azienda**, per smettere di perdere ore tra preventivi, documenti ed email. Con l’intelligenza artificiale dove serve, e solo dove serve.\n",
+    "ctaLabel": "Prenota la call gratuita",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Digitalizzazione per PMI",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#digitalizzazione"
+    },
+    "highlights": [
+      "Partiamo dai tuoi obiettivi",
+      "Indipendente dai fornitori",
+      "Prezzo fisso"
+    ],
+    "requestLabel": "Nuova richiesta",
+    "requestTime": "oggi, 08:42",
+    "requestText": "“Buongiorno, vorrei un preventivo per sostituire **6 finestre** con infissi in PVC in una casa a **Pordenone**, compreso lo smaltimento delle vecchie. Grazie!”\n",
+    "statusStart": "In attesa…",
+    "statusReading": "L’AI legge la richiesta…",
+    "statusWriting": "Compila il preventivo con il tuo listino…",
+    "statusDone": "Fatto: da controllare e inviare",
+    "quoteLabel": "Bozza di preventivo",
+    "quoteTitle": "N. 2026/128 · Pordenone",
+    "quoteBadge": "Generato con AI",
+    "quoteItems": [
+      {
+        "text": "Finestre in PVC doppio vetro",
+        "detail": "6 pz",
+        "amount": 3900
+      },
+      {
+        "text": "Smontaggio e smaltimento vecchi infissi",
+        "detail": "6 pz",
+        "amount": 480
+      },
+      {
+        "text": "Posa in opera e sigillatura",
+        "detail": "a corpo",
+        "amount": 960
+      }
+    ],
+    "totalLabel": "Totale (IVA esclusa)",
+    "tags": [
+      "Salvato nel gestionale",
+      "Pronto da inviare al cliente"
+    ],
+    "caption": "Esempio illustrativo: l’AI prepara la bozza, una persona la controlla prima dell’invio."
+  },
+  "areas": {
+    "eyebrow": "Di cosa mi occupo",
+    "title": "Un consulente per il digitale, dentro e fuori l’azienda",
+    "text": "Molte PMI hanno un sito, i social e magari qualche campagna, ma dentro lavorano ancora con carta, fogli di calcolo e copia e incolla. Io guardo entrambe le cose, perché sono collegate: il tempo che risparmi dentro lo puoi investire per crescere fuori.\n",
+    "items": [
+      {
+        "label": "Fuori dall’azienda",
+        "title": "Marketing digitale",
+        "text": "Sito, SEO, campagne, social e dati: capiamo cosa funziona, cosa no e dove conviene investire.",
+        "linkLabel": "Scopri di più",
+        "link": {
+          "discriminant": "custom",
+          "value": "#marketing"
+        }
+      },
+      {
+        "label": "Dentro l’azienda",
+        "title": "Digitalizzazione e AI",
+        "text": "Preventivi, consuntivi, documenti, clienti e processi: meno lavoro ripetitivo, meno errori, più tempo per ciò che conta.",
+        "linkLabel": "Scopri di più",
+        "link": {
+          "discriminant": "custom",
+          "value": "#digitalizzazione"
+        }
+      }
+    ]
+  },
+  "digital": {
+    "eyebrow": "Digitalizzazione per PMI",
+    "title": "L’intelligenza artificiale nel lavoro di tutti i giorni",
+    "text": "Non serve rivoluzionare tutto né comprare software costosi. Partiamo da come lavorate oggi e introduciamo strumenti e AI **dove fanno risparmiare tempo davvero**, integrandoli con quello che usate già.\n",
+    "items": [
+      {
+        "icon": "file",
+        "title": "Preventivi e consuntivi con l’AI",
+        "text": "Dalla richiesta del cliente o dai rapportini di lavoro a una bozza pronta, con i tuoi listini e le tue regole. Tu controlli e invii."
+      },
+      {
+        "icon": "card-text",
+        "title": "Documenti senza ricopiare",
+        "text": "Fatture, DDT, ordini e schede: l’AI legge i dati e li inserisce dove servono, niente più copia e incolla."
+      },
+      {
+        "icon": "users",
+        "title": "Clienti e trattative in ordine",
+        "text": "Un CRM semplice, su misura per te: richieste, preventivi, scadenze e richiami in un unico posto."
+      },
+      {
+        "icon": "flow",
+        "title": "Automazioni tra gli strumenti",
+        "text": "Email, gestionale, calendario e fogli di calcolo che si parlano: le attività ripetitive si fanno da sole."
+      },
+      {
+        "icon": "chat",
+        "title": "Assistente AI interno",
+        "text": "Il tuo team chiede a procedure, listini e manuali aziendali e ottiene risposte in pochi secondi."
+      },
+      {
+        "icon": "chart",
+        "title": "Numeri sotto controllo",
+        "text": "Un cruscotto con gli indicatori che contano: richieste, preventivi accettati, margini, tempi."
+      }
+    ],
+    "casesTitle": "Prima e dopo, in pratica",
+    "casesText": "Tre esempi tipici di quello che si può cambiare in poche settimane.",
+    "beforeLabel": "Prima",
+    "afterLabel": "Dopo",
+    "cases": [
+      {
+        "name": "Impresa edile trevigiana",
+        "tag": "Preventivi",
+        "before": "Ore tra listini, fogli di calcolo e documenti da ricopiare a mano.",
+        "after": "Bozza del preventivo pronta in pochi minuti, con i prezzi aggiornati: si controlla e si invia."
+      },
+      {
+        "name": "Officina pordenonese",
+        "tag": "Consuntivi",
+        "before": "Rapportini su carta, ore e ricambi da ricostruire a fine mese.",
+        "after": "Rapportini dal telefono, consuntivo e fattura preparati in automatico."
+      },
+      {
+        "name": "Studio professionale udinese",
+        "tag": "Richieste dei clienti",
+        "before": "Email che si accumulano e risposte sempre uguali, scritte ogni volta da capo.",
+        "after": "Richieste smistate in automatico e risposte in bozza, da rivedere con un clic."
+      }
+    ],
+    "casesNote": "Esempi illustrativi di casi tipici; i risultati dipendono dall’azienda e dagli strumenti in uso."
+  },
+  "marketing": {
+    "eyebrow": "Marketing digitale",
+    "title": "Uno sguardo esterno, onesto e completo",
+    "text": "Analizzo sito, campagne e social insieme, perché i problemi raramente stanno in un solo posto. Ricevi un piano con le priorità, che puoi realizzare con me, con la tua agenzia o in autonomia.\n",
+    "linksLabel": "Approfondimenti",
+    "links": [
+      {
+        "label": "SEO",
+        "link": {
+          "discriminant": "/servizi/consulenza-seo/"
+        }
+      },
+      {
+        "label": "Google Ads",
+        "link": {
+          "discriminant": "/servizi/google-ads/"
+        }
+      },
+      {
+        "label": "Meta Ads",
+        "link": {
+          "discriminant": "/servizi/meta-ads/"
+        }
+      },
+      {
+        "label": "Performance",
+        "link": {
+          "discriminant": "/servizi/miglioramento-prestazioni-siti-web/"
+        }
+      }
+    ],
+    "items": [
+      {
+        "title": "Analisi del sito",
+        "text": "Velocità, SEO, chiarezza e capacità di trasformare le visite in contatti."
+      },
+      {
+        "title": "Audit del marketing",
+        "text": "Google Ads, Meta Ads, SEO, social e contenuti valutati insieme."
+      },
+      {
+        "title": "Tracciamento e dati",
+        "text": "Sai davvero da dove arrivano i clienti? Lo verifichiamo."
+      },
+      {
+        "title": "Strategia digitale",
+        "text": "Un piano con priorità, costi e risultati attesi."
+      },
+      {
+        "title": "Second opinion",
+        "text": "Un parere indipendente sul lavoro della tua agenzia."
+      },
+      {
+        "title": "Workshop per il team",
+        "text": "SEO, campagne e strumenti digitali spiegati in modo pratico."
+      }
+    ]
+  },
+  "roadmap": {
+    "eyebrow": "Come partiamo",
+    "title": "Prima gli obiettivi, poi gli strumenti",
+    "text": "Il digitale non è un fine: è un mezzo. Per questo si comincia sempre da dove vuoi arrivare, e si costruisce un percorso a tappe con risultati misurabili.\n",
+    "steps": [
+      {
+        "when": "Settimana 1",
+        "title": "Obiettivi",
+        "text": "Dove vuoi arrivare, con quali numeri e in quanto tempo."
+      },
+      {
+        "when": "Settimane 2–3",
+        "title": "Analisi",
+        "text": "Come lavorate oggi: processi, strumenti, colli di bottiglia."
+      },
+      {
+        "when": "Primi 30 giorni",
+        "title": "Vittorie rapide",
+        "text": "Gli interventi semplici che fanno risparmiare tempo subito."
+      },
+      {
+        "when": "60–90 giorni",
+        "title": "Progetti chiave",
+        "text": "I cambiamenti più importanti, uno alla volta e misurati."
+      }
+    ],
+    "boxTitle": "Indipendente dai fornitori",
+    "boxText": "Non vendo software né prendo commissioni: ti consiglio gli strumenti più adatti a te, anche gratuiti.",
+    "ctaLabel": "Prenota la call gratuita",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "formats": {
+    "eyebrow": "Come possiamo lavorare",
+    "title": "Dal check-up all’affiancamento",
+    "text": "Ogni formato ha un prezzo fisso, stabilito dopo la call gratuita.\n",
+    "items": [
+      {
+        "label": "Una tantum",
+        "title": "Check-up digitale",
+        "text": "Analisi di marketing e processi, con un piano d’azione scritto e spiegato a voce.",
+        "ctaLabel": "Parliamone",
+        "ctaLink": {
+          "discriminant": "#contatti"
+        },
+        "highlight": false,
+        "badge": ""
+      },
+      {
+        "label": "Mensile",
+        "title": "Affiancamento",
+        "text": "Ti seguo nel tempo come consulente esterno: decisioni, fornitori, progetti e risultati.",
+        "ctaLabel": "Parliamone",
+        "ctaLink": {
+          "discriminant": "#contatti"
+        },
+        "highlight": true,
+        "badge": "Il più scelto"
+      },
+      {
+        "label": "Su misura",
+        "title": "Workshop e progetti",
+        "text": "Formazione per il team, introduzione dell’AI in azienda, second opinion.",
+        "ctaLabel": "Parliamone",
+        "ctaLink": {
+          "discriminant": "#contatti"
+        },
+        "highlight": false,
+        "badge": ""
+      }
+    ]
+  },
+  "offer": {
+    "show": false,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "Domande frequenti",
+    "title": "Domande sulla consulenza",
+    "text": "Non trovi la tua? [Scrivimi](#contatti), rispondo entro il giorno lavorativo successivo.\n",
+    "items": [
+      {
+        "question": "La mia azienda è piccola: ha senso digitalizzarsi?",
+        "answer": "Sì, anzi: nelle piccole aziende ogni ora risparmiata pesa di più. Si parte da uno o due processi che fanno perdere più tempo, come preventivi o documenti, e si allarga solo se funziona.\n"
+      },
+      {
+        "question": "Devo cambiare gestionale o comprare nuovi programmi?",
+        "answer": "Non per forza. Spesso si ottiene molto collegando meglio gli strumenti che usate già. Se serve qualcosa di nuovo, ti propongo alternative con costi chiari, anche gratuite.\n"
+      },
+      {
+        "question": "L’AI può davvero fare preventivi?",
+        "answer": "Può preparare una bozza partendo dalla richiesta del cliente, dai tuoi listini e dalle tue regole. La decisione finale resta a te: controlli, correggi se serve e invii.\n"
+      },
+      {
+        "question": "Come trattate i dati dell’azienda?",
+        "answer": "Con attenzione: uso servizi professionali, invio all’AI solo i dati necessari e configuro tutto nel rispetto del GDPR. Per i dati più delicati valutiamo insieme le soluzioni più prudenti.\n"
+      },
+      {
+        "question": "Lavori anche con la nostra agenzia o il nostro fornitore IT?",
+        "answer": "Sì. Posso affiancarli, coordinare i progetti o dare un parere indipendente: l’obiettivo è il risultato per la tua azienda.\n"
+      },
+      {
+        "question": "Lavori anche in presenza?",
+        "answer": "Sì, nelle aziende di Veneto e Friuli Venezia Giulia incontro volentieri il team in sede, soprattutto nella fase di analisi. Il resto si fa tranquillamente anche da remoto.\n"
+      }
+    ],
+    "ctaLabel": "Prenota la call gratuita",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "digitalizzazione",
+      "dati"
+    ],
+    "title": "Digitalizzazione e dati, in pratica",
+    "text": "Da dove iniziare ad automatizzare il lavoro d’ufficio e come misurare davvero i risultati.\n",
+    "buttonLabel": "Tutti gli articoli"
+  },
+  "contact": {
+    "title": "Parliamo della tua azienda",
+    "formTitle": "Prenota la call gratuita",
+    "topics": [
+      "ai"
+    ]
+  },
+  "seo": {
+    "title": "Consulenza digitale e AI per PMI | bortolin.dev",
+    "description": "Consulenza digitale per PMI: marketing, preventivi e documenti con l’AI, automazioni e CRM. Obiettivi misurabili e prezzo fisso, in Friuli e Veneto.",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "ogImage": "/src/assets/images/social/og-consulenza-digitale.png",
+    "markdown": null,
+    "customMarkupCode": ""
+  }
+}

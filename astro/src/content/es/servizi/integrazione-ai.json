@@ -1,0 +1,353 @@
+{
+  "hero": {
+    "breadcrumb": "Integración de IA",
+    "eyebrow": "Inteligencia artificial",
+    "title": "IA dentro de tu web: más visibilidad, menos trabajo",
+    "text": "Integro la inteligencia artificial en tu web, **también en la que ya tienes**: en el panel de gestión, para escribir meta etiquetas, textos y traducciones con un clic, y en la web, para responder a tus clientes. Con **Gemini, Claude o ChatGPT**, y la última palabra siempre es tuya.\n",
+    "ctaLabel": "Cuéntame tu proyecto",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Qué se puede integrar",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#dentro-il-sito"
+    },
+    "highlights": [],
+    "demoBar": "Editar página",
+    "demoPanel": "Panel de la web",
+    "demoPageLabel": "Título de la página",
+    "demoSeo": "SEO",
+    "demoButton": "Generar con IA",
+    "demoTitleLabel": "Meta título",
+    "demoDescLabel": "Meta descripción",
+    "demoReady": "El contenido de la página está listo",
+    "demoWorking": "Analizando el contenido…",
+    "demoDone": "Listo en 2 segundos. Revisa y guarda.",
+    "demoDoneShort": "Listo. Revisa y guarda.",
+    "demoWorks": "Funciona con",
+    "demoCaption": "Pruébalo: pulsa «Generar con IA» para ver otro negocio. Diez ejemplos: reformas, tiendas, e-commerce, blogs y más.",
+    "examples": [
+      {
+        "type": "Reformas",
+        "page": "Reforma integral de baños",
+        "title": "Reforma de Baños en Madrid | Presupuesto en 48 Horas",
+        "desc": "Reformamos tu baño llave en mano en Madrid y alrededores: diseño, materiales y obra con precio cerrado. Visita y presupuesto gratis en 48 horas."
+      },
+      {
+        "type": "E-commerce",
+        "page": "Zapatilla de trekking impermeable",
+        "title": "Zapatillas de Trekking Impermeables para Hombre | Envío 24 h",
+        "desc": "Zapatilla de trekking impermeable y transpirable, con suela antideslizante para cualquier sendero. Envío en 24 horas y devolución gratis en 30 días."
+      },
+      {
+        "type": "Blog",
+        "page": "Cómo ahorrar en la factura de la luz",
+        "title": "Cómo Ahorrar en la Factura de la Luz: 10 Trucos",
+        "desc": "Diez consejos prácticos para gastar menos energía en casa sin renunciar al confort: electrodomésticos, iluminación, horarios y pequeños hábitos."
+      },
+      {
+        "type": "Tienda",
+        "page": "Floristería en el centro de Sevilla",
+        "title": "Floristería en Sevilla | Ramos Frescos y Entrega en el Día",
+        "desc": "Ramos frescos, plantas y centros para cualquier ocasión en pleno centro de Sevilla. Pide online o ven a la tienda: entrega en el día en toda la ciudad."
+      },
+      {
+        "type": "Restaurante",
+        "page": "Menú degustación de marisco",
+        "title": "Marisquería en A Coruña | Menú Degustación junto al Mar",
+        "desc": "Marisco fresco de la lonja, menús degustación y terraza frente al mar en A Coruña. Elige tu noche y reserva mesa online en unos segundos."
+      },
+      {
+        "type": "Profesional",
+        "page": "Asesoría fiscal para autónomos",
+        "title": "Gestoría en Valencia para Autónomos y Pymes",
+        "desc": "Alta de autónomo, declaraciones de IVA y renta, contabilidad y asesoría fiscal en Valencia. Primera consulta gratis y tarifas claras desde el inicio."
+      },
+      {
+        "type": "Hoteles y casas rurales",
+        "page": "Habitaciones con vistas al Pirineo",
+        "title": "Casa Rural en el Pirineo Aragonés con Vistas a la Montaña",
+        "desc": "Habitaciones acogedoras con vistas al Pirineo, desayuno con productos de la zona y aparcamiento gratis. Reserva directa en nuestra web al mejor precio."
+      },
+      {
+        "type": "Gimnasio",
+        "page": "Pilates para principiantes",
+        "title": "Pilates para Principiantes en Barcelona | Primera Clase Gratis",
+        "desc": "Clases de pilates para principiantes en grupos reducidos en Barcelona, con instructores titulados y horarios flexibles. Prueba gratis tu primera clase."
+      },
+      {
+        "type": "Carpintería",
+        "page": "Cocinas de madera a medida",
+        "title": "Cocinas de Madera a Medida en Bilbao | Carpintería Artesanal",
+        "desc": "Diseñamos y fabricamos cocinas de madera maciza a medida, del plano a la instalación, con materiales seleccionados. Visita gratis en Bilbao y alrededores."
+      },
+      {
+        "type": "Clínica dental",
+        "page": "Higiene y blanqueamiento dental",
+        "title": "Dentista en Málaga | Higiene y Blanqueamiento Dental",
+        "desc": "Limpieza profesional, blanqueamiento y revisiones en Málaga, en una clínica moderna y acogedora. Reserva tu primera cita online."
+      }
+    ]
+  },
+  "uses": {
+    "eyebrow": "Qué puede hacer por ti",
+    "title": "Inteligencia artificial que funciona de verdad, no humo",
+    "text": "Se habla mucho de IA, pero para una pyme solo importan dos cosas: **tiempo ahorrado y más clientes**. Aquí es donde la uso con resultados concretos.\n",
+    "items": [
+      {
+        "icon": "chat",
+        "title": "Asistente en la web",
+        "text": "Responde a tus clientes las 24 horas con tu información (horarios, servicios, precios) y te pasa contactos ya cualificados.",
+        "wide": true,
+        "dark": true
+      },
+      {
+        "icon": "flow",
+        "title": "Automatizaciones",
+        "text": "Presupuestos, respuestas a emails, clasificación de solicitudes, actualización del CRM: el trabajo repetitivo lo hace la máquina.",
+        "wide": false,
+        "dark": false
+      },
+      {
+        "icon": "file",
+        "title": "Contenidos y catálogos",
+        "text": "Fichas, descripciones y traducciones generadas con IA y siempre revisadas por una persona.",
+        "wide": false,
+        "dark": false
+      },
+      {
+        "icon": "search-text",
+        "title": "Asistente interno",
+        "text": "Tu equipo pregunta a los manuales, tarifas y procedimientos de la empresa y obtiene respuestas en segundos.",
+        "wide": false,
+        "dark": false
+      },
+      {
+        "icon": "spark",
+        "title": "Visibilidad en la IA",
+        "text": "Datos estructurados y contenidos claros para que ChatGPT, Gemini y Perplexity te conozcan y te recomienden.",
+        "wide": false,
+        "dark": false
+      },
+      {
+        "icon": "graduation",
+        "title": "Formación",
+        "text": "Talleres prácticos para usar la IA cada día con seguridad, sin poner en riesgo los datos de tus clientes.",
+        "wide": true,
+        "dark": false
+      }
+    ]
+  },
+  "inside": {
+    "eyebrow": "IA dentro de la web",
+    "title": "En el panel y en la web. También si ya tienes una",
+    "text": "No hace falta empezar de cero: añado la IA a la web que ya tienes, sea **WordPress, WooCommerce, Shopify** o a medida. Funciona donde la necesitas, con tus contenidos.\n",
+    "backBadge": "Back end · para quien gestiona la web",
+    "backTitle": "Horas de trabajo, en un clic",
+    "backText": "Un botón «Generar con IA» justo donde editas páginas y productos. La IA propone, tú revisas y guardas.",
+    "backItems": [
+      {
+        "title": "Meta títulos y descripciones",
+        "text": "para cada página, a partir de su contenido real"
+      },
+      {
+        "title": "Texto alternativo de las imágenes",
+        "text": "más accesibilidad y más visibilidad en Google Imágenes"
+      },
+      {
+        "title": "Traducciones",
+        "text": "a los idiomas de la web, revisadas en un clic"
+      },
+      {
+        "title": "Datos estructurados",
+        "text": "FAQ, productos, eventos: generados y comprobados"
+      },
+      {
+        "title": "Enlaces internos sugeridos",
+        "text": "entre artículos y páginas relacionadas"
+      },
+      {
+        "title": "Revisión de textos",
+        "text": "erratas, tono de voz y legibilidad"
+      }
+    ],
+    "frontBadge": "Front end · para tus visitantes",
+    "frontTitle": "Una web que responde",
+    "frontText": "Encuentran enseguida lo que buscan, incluso un domingo a las 23:00.",
+    "frontItems": [
+      {
+        "title": "Un asistente que conoce la web",
+        "text": "responde citando tus páginas"
+      },
+      {
+        "title": "Búsqueda inteligente",
+        "text": "entiende lo que quieren decir, aunque usen otras palabras"
+      },
+      {
+        "title": "Recomendaciones de producto",
+        "text": "sugerencias relevantes en tu tienda online"
+      },
+      {
+        "title": "Formularios que entienden",
+        "text": "las solicitudes llegan ya clasificadas, a la persona adecuada"
+      }
+    ]
+  },
+  "seoWork": {
+    "eyebrow": "Más SEO, menos trabajo",
+    "title": "Cada página optimizada, sin pasarte las noches con ello",
+    "text": "El SEO también está hecho de detalles tediosos: meta etiquetas, textos alternativos, traducciones, datos estructurados. En una web con decenas o cientos de páginas, a menudo se quedan a medias. Con la IA integrada pasan a formar parte del trabajo diario.\n",
+    "image": "@it",
+    "imageAlt": "Ilustración de un asistente de IA conectado a una web, el email, documentos y estadísticas",
+    "items": [
+      {
+        "title": "Se acabaron las páginas «a medias»",
+        "text": "Cada página e imagen con sus meta etiquetas y su texto alternativo."
+      },
+      {
+        "title": "Coherencia",
+        "text": "El mismo tono de voz y las mismas reglas SEO en toda la web."
+      },
+      {
+        "title": "Multiidioma más fácil",
+        "text": "Traducciones listas para revisar, no para escribir desde cero."
+      },
+      {
+        "title": "Tú tienes el control",
+        "text": "La IA propone, tú apruebas. No se publica nada sin tu visto bueno."
+      }
+    ]
+  },
+  "models": {
+    "eyebrow": "Los modelos",
+    "title": "Gemini, Claude o ChatGPT: elijo el adecuado para ti",
+    "text": "Cada modelo tiene sus puntos fuertes en calidad de redacción, velocidad, coste y gestión de datos. Elijo el que mejor encaja con tu caso, y la integración está pensada para que **puedas cambiar de modelo sin rehacerlo todo**.\n",
+    "items": [
+      {
+        "logo": "@it",
+        "title": "Gemini",
+        "company": "de Google",
+        "text": "Se integra bien con el ecosistema de Google y es muy adecuado para trabajar con grandes volúmenes de contenido."
+      },
+      {
+        "logo": "@it",
+        "title": "Claude",
+        "company": "de Anthropic",
+        "text": "Valorado por la calidad de su redacción y por seguir con precisión instrucciones y tono de voz."
+      },
+      {
+        "logo": "",
+        "title": "ChatGPT",
+        "company": "de OpenAI",
+        "text": "El más conocido, versátil, con un amplio ecosistema de herramientas e integraciones."
+      }
+    ],
+    "privacyTitle": "Privacidad y normas, lo primero",
+    "privacyItems": [
+      "Uso las versiones empresariales de estos servicios, configuradas para que tus datos no se usen para entrenar los modelos, cuando el proveedor lo permite.",
+      "A la IA solo le envío los datos necesarios, nunca más.",
+      "Proyectos alineados con el RGPD y las obligaciones de transparencia del Reglamento Europeo de IA."
+    ],
+    "costsTitle": "¿Y los costes de uso?",
+    "costsText": "Los modelos se pagan por uso. Para la mayoría de las webs el coste es contenido: antes de empezar te doy una estimación realista, sin sorpresas.",
+    "disclaimer": "Gemini es una marca de Google LLC, Claude es una marca de Anthropic PBC y ChatGPT es una marca de OpenAI. Las marcas se citan solo para indicar compatibilidad; no existe ninguna afiliación con estas empresas."
+  },
+  "steps": {
+    "eyebrow": "Cómo trabajo",
+    "title": "De una idea a una herramienta que usas cada día",
+    "text": "",
+    "items": [
+      {
+        "title": "Caso de uso",
+        "text": "Partimos de un problema concreto: ¿dónde pierdes tiempo o clientes? Si la IA no es la respuesta, te lo digo."
+      },
+      {
+        "title": "Prototipo",
+        "text": "Una primera versión que funciona con tus datos, para que veas los resultados antes de invertir."
+      },
+      {
+        "title": "Integración",
+        "text": "En tu web, tu panel o las herramientas que ya usas, también las existentes."
+      },
+      {
+        "title": "Formación y medición",
+        "text": "Te enseño a usarla y medimos el tiempo ahorrado y los resultados."
+      }
+    ],
+    "boxTitle": "¿Tienes una idea pero no sabes si es viable?",
+    "boxText": "Cuéntamela en la llamada gratuita de 25 minutos: te digo enseguida si se puede hacer y cómo.",
+    "boxCtaLabel": "Reserva tu llamada gratis",
+    "boxCtaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "offer": {
+    "show": true,
+    "item": "seo-con-ai"
+  },
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Preguntas sobre la IA",
+    "text": "¿No encuentras la tuya? [Escríbeme](#contatti) y te respondo en un día laborable.\n",
+    "items": [
+      {
+        "question": "¿Puedo añadir IA a la web que ya tengo?",
+        "answer": "Sí. Trabajo con WordPress, WooCommerce, Shopify y webs a medida: añado funciones de IA al panel que ya usas o a la web pública, sin rehacerla.\n"
+      },
+      {
+        "question": "¿La IA puede equivocarse?",
+        "answer": "Sí, a veces. Por eso en mis proyectos la IA propone y una persona aprueba: no se publica ni se envía nada a los clientes sin revisarlo, salvo que tú decidas otra cosa.\n"
+      },
+      {
+        "question": "¿Google penaliza los textos escritos con IA?",
+        "answer": "Google premia el contenido útil, se haya escrito como se haya escrito. El riesgo real son los textos genéricos y en serie: por eso la IA trabaja sobre tus contenidos reales y una persona los revisa.\n"
+      },
+      {
+        "question": "¿Qué modelo es mejor: Gemini, Claude o ChatGPT?",
+        "answer": "Depende de la tarea, de los costes y de cómo quieras gestionar tus datos. Conozco los tres y elijo el más adecuado; la integración está pensada para poder cambiarlo en el futuro.\n"
+      },
+      {
+        "question": "¿Mis datos están seguros?",
+        "answer": "Uso las versiones empresariales de los servicios, envío solo los datos necesarios y lo configuro todo conforme al RGPD. Si hay datos especialmente sensibles, valoramos juntos las soluciones más prudentes.\n"
+      },
+      {
+        "question": "¿Cuánto cuesta?",
+        "answer": "El proyecto tiene un precio cerrado, que se fija tras la llamada gratuita. Los costes de uso de los modelos van aparte y se pagan por uso: te los estimo antes de empezar.\n"
+      }
+    ],
+    "ctaLabel": "Cuéntame tu proyecto",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "ai"
+    ],
+    "title": "Inteligencia artificial, en la práctica",
+    "text": "Ejemplos concretos de cómo la IA puede ahorrarte tiempo y ayudar a que te encuentren.\n",
+    "buttonLabel": "Todos los artículos"
+  },
+  "contact": {
+    "title": "Pongamos la IA a trabajar para ti",
+    "formTitle": "Cuéntame tu idea",
+    "topics": [
+      "ai"
+    ]
+  },
+  "seo": {
+    "slug": "integracion-ia",
+    "title": "Integración de IA en webs: Gemini, Claude, ChatGPT | bortolin.dev",
+    "description": "Integro la IA en tu web, también en la que ya tienes: meta etiquetas, textos y traducciones con un clic y un asistente para clientes. Gemini, Claude o ChatGPT.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

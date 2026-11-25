@@ -1,0 +1,25 @@
+{
+  "title": "GA4 e Consent Mode: misurare il sito rispettando la privacy",
+  "content": {
+    "date": "2026-09-04",
+    "category": "dati",
+    "image": "/src/assets/images/blog/ga4-consent-mode-privacy.webp",
+    "imageAlt": "Grafico delle visualizzazioni di pagina in un pannello di analisi web",
+    "excerpt": "Banner cookie, consenso e dati che “spariscono” da Analytics: come configurare tutto correttamente e continuare a sapere cosa funziona.",
+    "lead": "Da quando ci sono i banner dei cookie, molti si lamentano che i dati in Google Analytics “non tornano”: visite che sembrano sparite, conversioni che calano. Spesso non è un problema del sito, ma della configurazione. Vediamo come misurare correttamente, rispettando la privacy.",
+    "text": "## Perché i dati “spariscono”\n\nSecondo le regole europee, gli strumenti di misurazione e pubblicità che usano cookie possono essere attivati solo dopo il **consenso** del visitatore. Chi rifiuta i cookie, quindi, non viene tracciato allo stesso modo. È giusto così, ma se la configurazione è sbagliata si rischia di perdere anche dati che si potrebbero misurare correttamente, o al contrario di raccogliere dati senza consenso.\n\n## Cos’è il Consent Mode\n\nIl **Consent Mode** di Google è il sistema che comunica a Google Analytics e Google Ads le scelte del visitatore sul banner dei cookie. In base al consenso, i servizi Google cambiano comportamento: con il consenso funzionano normalmente, senza consenso non usano cookie per misurare e profilare.\n\nDal marzo 2024 Google richiede il Consent Mode (nella versione 2) a chi usa i suoi servizi pubblicitari con utenti nello Spazio economico europeo, se vuole continuare a usare tutte le funzioni di misurazione e personalizzazione.\n\n## Base o avanzato?\n\n- **Base**: i tag di Google non si caricano finché il visitatore non dà il consenso. Massima prudenza, meno dati.\n- **Avanzato**: i tag si caricano subito ma, senza consenso, inviano solo segnali senza cookie. Google usa questi segnali per stimare con modelli statistici le conversioni mancanti.\n\nLa scelta va fatta insieme a chi cura gli aspetti legali e la privacy della tua azienda.\n\n## Una configurazione corretta\n\n1. Un **banner cookie** conforme, che permetta di accettare e rifiutare con la stessa facilità.\n2. Il **Consent Mode v2** collegato al banner.\n3. **Google Tag Manager** per gestire tutti i tag in un unico posto.\n4. Le **conversioni** importanti (contatti, preventivi, acquisti) configurate in GA4 e, se usi la pubblicità, in Google Ads.\n\n## Cosa misurare davvero\n\nPiù dei numeri di visite contano le azioni che portano lavoro: **moduli inviati, chiamate dal sito, clic su WhatsApp, acquisti**. Concentrati su pochi indicatori chiari e guardali sempre nello stesso modo, mese dopo mese.\n\n## Come verificare se è tutto a posto\n\n- Prova il banner: rifiutando i cookie, i tag di marketing non devono usare cookie.\n- Usa la modalità di anteprima di Tag Manager per vedere cosa parte e quando.\n- Controlla in GA4 che le conversioni di prova vengano registrate.\n- Confronta i contatti registrati in Analytics con quelli che ricevi davvero.\n\n## In sintesi\n\nPrivacy e misurazione possono convivere. Con un banner corretto, il Consent Mode e poche conversioni ben configurate, sai cosa funziona nel tuo marketing e rispetti le scelte dei tuoi visitatori."
+  },
+  "seo": {
+    "title": "GA4 e Consent Mode: misurare con la privacy | bortolin.dev",
+    "description": "Banner cookie, consenso e dati che “spariscono” da Analytics: come configurare tutto correttamente e continuare a sapere cosa funziona.",
+    "ogImage": "/src/assets/images/social/og-blog-ga4-consent-mode-privacy.png",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "markdown": null,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

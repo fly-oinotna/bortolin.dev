@@ -1,0 +1,10 @@
+---
+// Template e contenuti: src/templates/Post.astro (le traduzioni usano lo stesso template, vedi src/pages/[lang]/[...path].astro)
+import Post from '../../templates/Post.astro';
+import { reader } from '../../lib/content';
+
+export async function getStaticPaths() {
+  return (await reader.collections.posts.all()).map((p) => ({ params: { slug: p.slug } }));
+}
+---
+<Post slug={Astro.params.slug!} />

@@ -1,0 +1,11 @@
+---
+// Etichetta numerata sopra i titoli di sezione: "01 · Servizi"
+interface Props { n?: number | string; label?: string | null; dark?: boolean }
+const { n, label, dark = false } = Astro.props;
+const num = typeof n === 'number' ? String(n).padStart(2, '0') : n;
+---
+{label && (
+  <p class:list={['eyebrow', dark && 'text-white [&>span:first-child]:bg-bd-green [&>span:first-child]:text-black']}>
+    {num && <span>{num}</span>}<span>{label}</span>
+  </p>
+)}

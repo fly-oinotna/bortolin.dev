@@ -1,0 +1,14 @@
+---
+// Fila di punteggi Lighthouse su sfondo scuro (anelli animati da main.js)
+import Gauge from './Gauge.astro';
+interface Props { items: readonly { label: string; value: number | null }[]; label?: string | null; class?: string; boxed?: boolean }
+const { items, label, class: cls = 'grid grid-cols-4 gap-2', boxed = false } = Astro.props;
+---
+<ul class={cls} aria-label={label || undefined} data-gauge-group>
+  {items.map((sc) => (
+    <li class:list={['text-center', boxed && 'rounded-2xl bg-white/10 p-4']}>
+      <Gauge value={sc.value ?? 100} dark class="mx-auto h-16 w-16" />
+      <span class:list={['block text-gray-300', boxed ? 'mt-2 text-xs' : 'mt-1.5 text-[11px] leading-tight']}>{sc.label}</span>
+    </li>
+  ))}
+</ul>

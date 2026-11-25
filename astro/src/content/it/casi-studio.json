@@ -1,0 +1,93 @@
+{
+  "hero": {
+    "breadcrumb": "Casi studio",
+    "eyebrow": "Casi studio",
+    "title": "Siti che lavorano davvero, raccontati da vicino",
+    "text": "Ogni progetto parte da un problema concreto. Qui trovi alcuni dei siti che ho realizzato: la sfida, le scelte fatte e il risultato, su ogni schermo.\n",
+    "ctaLabel": "Parliamo del tuo progetto",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Guarda i progetti",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#elenco"
+    },
+    "projectsLabel": "Progetti realizzati",
+    "projectsValue": 400,
+    "yearsLabel": "Anni di esperienza",
+    "yearsValue": 15,
+    "suffix": "+",
+    "languagesLabel": "Lingue in cui lavoro",
+    "languagesValue": "IT · EN · DE · ES"
+  },
+  "list": {
+    "eyebrow": "I progetti",
+    "title": "Scegli un settore",
+    "filterLabel": "Filtra i casi studio",
+    "allLabel": "Tutti",
+    "filters": [
+      {
+        "value": "aziende",
+        "label": "Aziende"
+      },
+      {
+        "value": "servizi",
+        "label": "Servizi professionali"
+      },
+      {
+        "value": "formazione",
+        "label": "Formazione"
+      },
+      {
+        "value": "multilingua",
+        "label": "Multilingua"
+      }
+    ],
+    "items": [
+      "projsystem",
+      "european-forensic-institute"
+    ],
+    "tagsLabel": "Caratteristiche",
+    "nextTitle": "Il prossimo potrebbe essere il tuo",
+    "nextText": "Sito nuovo, restyling, SEO o integrazione AI: raccontami il progetto e ricevi un preventivo a prezzo fisso.",
+    "nextLabel": "Richiedi un preventivo",
+    "nextLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "banner": {
+    "title": "Hai visto abbastanza? Parliamone",
+    "text": "Call conoscitiva gratuita di 25 minuti: obiettivi, tempi e un’idea chiara di quanto costa, a prezzo fisso.",
+    "ctaLabel": "Prenota la call",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Vedi i servizi",
+    "linkLink": {
+      "discriminant": "/servizi/"
+    }
+  },
+  "related": {
+    "title": "Altri casi studio",
+    "allLabel": "Tutti i casi studio"
+  },
+  "contact": {
+    "title": "Diventa il prossimo caso studio",
+    "formTitle": "Richiedi un preventivo gratuito",
+    "topics": []
+  },
+  "seo": {
+    "title": "Casi studio: siti web realizzati | bortolin.dev",
+    "description": "Casi studio di siti web realizzati in Friuli e Veneto: la sfida, le scelte e il risultato su ogni schermo. Siti aziendali, multilingua, WordPress.",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "ogImage": "/src/assets/images/social/og-casi-studio.png",
+    "markdown": null,
+    "customMarkupCode": ""
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "Kostenloser Speed-Check",
+  "offer": {
+    "eyebrow": "Einführungsangebot",
+    "deadlineLabel": "Gültig bis 31. Januar 2027",
+    "title": "Speed-Check {% verde %}gratis{% /verde %}, wenn Sie bis Februar optimieren",
+    "text": "Beauftragen Sie die Optimierung Ihrer Website bis 31. Januar 2027 und der erste Check kostet Sie nichts. Zum Abschluss bekommen Sie den Vorher-nachher-Vergleich, mit Zahlen, die es belegen.\n",
+    "items": [
+      {
+        "title": "Lighthouse-Bericht",
+        "text": "Smartphone und Desktop"
+      },
+      {
+        "title": "Echte Google-Daten",
+        "text": "die Core Web Vitals Ihrer Besucher"
+      },
+      {
+        "title": "Vorher/nachher",
+        "text": "zum Abschluss, als Video"
+      }
+    ],
+    "ctaLabel": "Speed-Check sichern",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "note": "Wert des Checks: 190 € zzgl. MwSt.",
+    "image": "@it",
+    "boxEyebrow": "Speed-Check",
+    "boxValue": "0 €",
+    "boxOldValue": "190 €",
+    "boxText": "mit der Optimierung der Website",
+    "stamp": "Gratis"
+  },
+  "menu": {
+    "megaTitle": "Kostenloser Speed-Check",
+    "megaText": "Bei Beauftragung der Optimierung bis 31. Januar 2027:",
+    "megaItems": [
+      "Lighthouse-Bericht für Smartphone und Desktop",
+      "Echte Google-Daten zu den Core Web Vitals",
+      "Vorher-nachher-Vergleich zum Abschluss, als Video"
+    ],
+    "mobileText": "bei Optimierung bis 31. Januar 2027",
+    "cardText": "Wenn Sie Ihre Website bis Februar optimieren lassen (Wert: 190 €)."
+  },
+  "original": "check-up-velocita"
+}

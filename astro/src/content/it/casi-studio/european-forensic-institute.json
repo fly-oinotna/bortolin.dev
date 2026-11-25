@@ -1,0 +1,171 @@
+{
+  "title": "European Forensic Institute",
+  "card": {
+    "domain": "eufor.eu",
+    "siteUrl": "https://eufor.eu/",
+    "sectors": [
+      "formazione",
+      "multilingua"
+    ],
+    "tags": [
+      "Formazione universitaria",
+      "Multilingua EN · ES · IT",
+      "WordPress"
+    ],
+    "summary": "Istituto di alta formazione con sede a Malta: corsi di laurea triennale e magistrale accreditati in scienze forensi, criminologia e investigazione sui crimini informatici.",
+    "features": [
+      "Sito in tre lingue per un pubblico internazionale di studenti",
+      "Schede dei corsi Bachelor e Master, eventi e notizie",
+      "Percorso di ammissione chiaro, dai requisiti alla candidatura"
+    ],
+    "dark": true,
+    "desktopImage": "/src/assets/images/casi-studio/eufor-desktop.webp",
+    "desktopAlt": "Home page del sito European Forensic Institute",
+    "mobileImage": "/src/assets/images/casi-studio/eufor-mobile.webp",
+    "mobileAlt": "Sito European Forensic Institute su smartphone",
+    "longImage": "/src/assets/images/casi-studio/eufor-pagina-intera.webp",
+    "longAlt": "Home page completa del sito European Forensic Institute"
+  },
+  "hero": {
+    "eyebrow": "Caso studio",
+    "intro": "Il sito in tre lingue di un istituto di alta formazione, pensato per accompagnare gli studenti di tutto il mondo dalla scoperta dei corsi alla candidatura.",
+    "tags": [
+      "Formazione universitaria",
+      "Multilingua EN · ES · IT",
+      "WordPress"
+    ],
+    "ctaLabel": "Voglio un progetto simile",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "details": [
+      {
+        "label": "Cliente",
+        "value": "European Forensic Institute"
+      },
+      {
+        "label": "Settore",
+        "value": "Alta formazione universitaria"
+      },
+      {
+        "label": "Sede",
+        "value": "Malta, con studenti internazionali"
+      },
+      {
+        "label": "Tipo di progetto",
+        "value": "Sito multilingua"
+      },
+      {
+        "label": "Tecnologia",
+        "value": "WordPress"
+      }
+    ]
+  },
+  "client": {
+    "eyebrow": "Il cliente",
+    "title": "Chi è European Forensic Institute",
+    "text": "L’European Forensic Institute è un istituto di alta formazione con corsi di laurea triennale e magistrale accreditati in scienze forensi, criminologia e investigazione sui crimini informatici, rivolti a studenti di tutta Europa e non solo.\n",
+    "challengeLabel": "La sfida",
+    "challengeText": "Un pubblico internazionale, tanti corsi e un percorso di ammissione con requisiti precisi. Il sito doveva parlare a studenti di Paesi diversi, nella loro lingua, e guidarli fino alla candidatura senza dubbi.",
+    "challengePoints": [
+      "Tre lingue da gestire in modo ordinato",
+      "Corsi Bachelor e Master da presentare con chiarezza",
+      "Eventi, open day e notizie sempre aggiornati"
+    ]
+  },
+  "solution": {
+    "eyebrow": "La soluzione",
+    "title": "Cosa ho realizzato",
+    "text": "Prima la struttura, poi il design: ogni scelta parte da chi deve usare il sito e da cosa deve trovare.\n",
+    "items": [
+      {
+        "icon": "globe",
+        "title": "Sito in tre lingue",
+        "text": "Inglese, spagnolo e italiano, con un selettore sempre visibile e le versioni collegate tra loro anche per Google."
+      },
+      {
+        "icon": "graduation",
+        "title": "Schede dei corsi",
+        "text": "Bachelor e Master presentati in modo coerente, per confrontarli e scegliere con facilità."
+      },
+      {
+        "icon": "route",
+        "title": "Percorso di ammissione",
+        "text": "Requisiti e passaggi della candidatura spiegati in sequenza, dal primo contatto all’iscrizione."
+      },
+      {
+        "icon": "event",
+        "title": "Eventi e notizie",
+        "text": "Open day, webinar e novità in evidenza, per trasformare l’interesse in un primo contatto."
+      }
+    ]
+  },
+  "showcase": {
+    "eyebrow": "Il sito",
+    "title": "Il risultato, su ogni schermo",
+    "text": "Passa con il mouse sulla pagina per scorrerla.\n",
+    "scrollLabel": "Anteprima della home page di European Forensic Institute, scorrevole",
+    "mobileCaption": "Versione smartphone"
+  },
+  "results": {
+    "eyebrow": "Prima e dopo",
+    "title": "Cosa è cambiato",
+    "beforeLabel": "Prima",
+    "before": [
+      "Da completare: com’era il sito o la situazione di partenza",
+      "Da completare: il problema principale"
+    ],
+    "afterLabel": "Dopo",
+    "after": [
+      "Sito in tre lingue",
+      "Schede dei corsi",
+      "Percorso di ammissione",
+      "Eventi e notizie"
+    ],
+    "kpis": [
+      {
+        "label": "Risultato 1",
+        "value": "—",
+        "note": "es. richieste di contatto al mese"
+      },
+      {
+        "label": "Risultato 2",
+        "value": "—",
+        "note": "es. visite da Google"
+      },
+      {
+        "label": "Risultato 3",
+        "value": "—",
+        "note": "es. punteggio Lighthouse"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Il prossimo caso studio può essere il tuo",
+    "text": "Raccontami la tua attività nella call gratuita di 25 minuti: ti dico come lo farei, in quanto tempo e a quale prezzo fisso.",
+    "ctaLabel": "Prenota la call gratuita",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "contact": {
+    "title": "Vuoi un sito come questo?",
+    "formTitle": "Richiedi un preventivo gratuito",
+    "topics": [
+      "nuovo-sito"
+    ]
+  },
+  "seo": {
+    "title": "European Forensic Institute: sito multilingua | bortolin.dev",
+    "description": "Come ho realizzato il sito multilingua dell’European Forensic Institute, istituto di alta formazione in scienze forensi: sfida, soluzione e risultati.",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "ogImage": "/src/assets/images/social/og-caso-european-forensic-institute.png",
+    "markdown": null,
+    "customMarkupCode": ""
+  }
+}

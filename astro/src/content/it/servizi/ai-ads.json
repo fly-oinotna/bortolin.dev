@@ -1,0 +1,306 @@
+{
+  "hero": {
+    "breadcrumb": "AI Ads",
+    "eyebrow": "Il nuovo canale",
+    "title": "AI Ads: la tua pubblicità dentro le risposte dell’intelligenza artificiale",
+    "text": "Sempre più persone chiedono consigli a ChatGPT, Gemini o Copilot invece di cercare su Google. Ora gli assistenti AI iniziano a mostrare **annunci accanto alle risposte**: farti trovare lì, prima dei concorrenti, è un vantaggio concreto.\n",
+    "ctaLabel": "Verifica se fa per te",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Dove compaiono gli annunci",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#dove"
+    },
+    "highlights": [
+      "Gestione a prezzo fisso",
+      "Si parte con un test",
+      "Tracciamento incluso"
+    ],
+    "chatTitle": "Assistente AI",
+    "chatPlaceholder": "Chiedi qualcosa…",
+    "demoLabel": "Scegli un esempio",
+    "demoCaption": "Esempi illustrativi con aziende di fantasia: l’aspetto degli annunci varia da piattaforma a piattaforma.",
+    "examples": [
+      {
+        "tab": "Elettricista",
+        "question": "Mi consigli un elettricista affidabile a Pordenone?",
+        "answer": "Per scegliere un elettricista a Pordenone conviene controllare abilitazioni, recensioni recenti e tempi di intervento. Chiedi sempre un preventivo scritto prima di iniziare i lavori.",
+        "letter": "E",
+        "name": "Elettricista pordenonese",
+        "place": "Pordenone e provincia",
+        "title": "Pronto intervento elettrico a Pordenone",
+        "text": "Impianti, guasti e certificazioni. Preventivo gratuito entro 24 ore.",
+        "button": "Richiedi preventivo",
+        "products": []
+      },
+      {
+        "tab": "Negozio",
+        "question": "Dove posso provare una bici elettrica a Udine?",
+        "answer": "Molti negozi specializzati offrono un giro di prova gratuito. Chiedi quanta autonomia ha la batteria, quanto dura la garanzia e come funziona l’assistenza.",
+        "letter": "B",
+        "name": "Negozio di bici udinese",
+        "place": "In centro a Udine · aperto anche il sabato",
+        "title": "Prova gratis le e-bike in negozio a Udine",
+        "text": "Oltre 40 modelli da provare, officina interna e consegna a domicilio.",
+        "button": "Prenota la prova",
+        "products": []
+      },
+      {
+        "tab": "E-commerce",
+        "question": "Che regalo tipico del Nord-Est posso spedire a Natale?",
+        "answer": "Una cesta che unisce Friuli e Veneto piace sempre: prosciutto di San Daniele, formaggio Asiago e una bottiglia di Prosecco di Valdobbiadene, in una confezione regalo.",
+        "letter": "P",
+        "name": "Prodotti tipici del Nord-Est",
+        "place": "Negozio online · spedizioni in tutta Italia",
+        "title": "",
+        "text": "",
+        "button": "",
+        "products": [
+          {
+            "name": "Cesta “Friuli e Veneto”",
+            "price": "49,00 €"
+          },
+          {
+            "name": "Asiago stagionato 1 kg",
+            "price": "22,90 €"
+          },
+          {
+            "name": "Prosecco di Valdobbiadene",
+            "price": "14,90 €"
+          }
+        ]
+      },
+      {
+        "tab": "Agriturismo",
+        "question": "Un agriturismo per pranzo domenica tra le colline del Prosecco?",
+        "answer": "Tra Valdobbiadene e Conegliano ci sono diversi agriturismi con cucina tipica e vini della casa. La domenica conviene prenotare con qualche giorno di anticipo.",
+        "letter": "A",
+        "name": "Agriturismo di Valdobbiadene",
+        "place": "Colline del Prosecco (TV)",
+        "title": "Pranzo della domenica tra le vigne",
+        "text": "Cucina friulana con prodotti dell’azienda e vini della casa. Posti limitati.",
+        "button": "Prenota un tavolo",
+        "products": []
+      }
+    ],
+    "adLabel": "Sponsorizzato"
+  },
+  "why": {
+    "eyebrow": "Perché ora",
+    "title": "Le persone non cercano più soltanto: chiedono",
+    "text": "Chi scrive a un assistente AI di solito sa già cosa vuole e lo racconta nei dettagli. Un annuncio che risponde proprio a quella esigenza, nel momento giusto, ha molte più possibilità di essere scelto.\n",
+    "items": [
+      {
+        "value": "“…a Udine?”",
+        "title": "Domande precise",
+        "text": "Nelle conversazioni le persone dicono dove, quando e con quale budget: sai esattamente cosa cercano."
+      },
+      {
+        "value": "Contesto",
+        "title": "L’annuncio giusto al momento giusto",
+        "text": "Compari quando la conversazione riguarda ciò che offri, non solo quando qualcuno digita una parola chiave."
+      },
+      {
+        "value": "Prima",
+        "title": "Arrivare prima dei concorrenti",
+        "text": "È un canale nuovo: in molti settori la concorrenza è ancora bassa. Chi impara presto parte avvantaggiato."
+      }
+    ]
+  },
+  "where": {
+    "eyebrow": "Dove compaiono",
+    "title": "Gli assistenti AI su cui puoi fare pubblicità",
+    "text": "Il settore cambia di mese in mese. Seguo le novità per te e ti propongo solo i canali davvero disponibili e utili per la tua attività.\n",
+    "items": [
+      {
+        "title": "Google",
+        "subtitle": "Annunci nelle risposte generate dall’AI",
+        "text": "Con le campagne Google Ads giuste, gli annunci possono comparire anche nelle panoramiche AI e nelle risposte conversazionali di Google.",
+        "highlight": false
+      },
+      {
+        "title": "ChatGPT",
+        "subtitle": "Annunci nelle conversazioni",
+        "text": "OpenAI sta introducendo gli annunci in ChatGPT. Disponibilità, formati e accesso variano da Paese a Paese: verifico io quando e come puoi partire.",
+        "highlight": true
+      },
+      {
+        "title": "Microsoft Copilot",
+        "subtitle": "Annunci nell’assistente di Microsoft",
+        "text": "Tramite Microsoft Advertising gli annunci possono comparire nelle risposte di Copilot e nella ricerca Bing.",
+        "highlight": false
+      }
+    ],
+    "note": "Google, ChatGPT e Microsoft Copilot sono marchi dei rispettivi proprietari, citati solo a scopo informativo. Disponibilità e formati degli annunci dipendono dalle piattaforme e possono cambiare."
+  },
+  "compare": {
+    "eyebrow": "Cosa cambia",
+    "title": "AI Ads e Google Ads: cugini, non gemelli",
+    "text": "Le basi sono le stesse, ma il modo in cui le persone arrivano a te è diverso. Per questo servono strategia e annunci pensati apposta.\n",
+    "colA": "Google Ads",
+    "colB": "AI Ads",
+    "rows": [
+      {
+        "label": "Come si sceglie il pubblico",
+        "a": "Parole chiave cercate su Google",
+        "b": "Il contesto della conversazione"
+      },
+      {
+        "label": "Cosa scrive l’utente",
+        "a": "Ricerche brevi: “bici elettrica udine”",
+        "b": "Domande complete, con esigenze precise"
+      },
+      {
+        "label": "Dove compare l’annuncio",
+        "a": "Sopra e sotto i risultati di ricerca",
+        "b": "Accanto o sotto la risposta dell’assistente"
+      },
+      {
+        "label": "Maturità",
+        "a": "Strumenti consolidati da anni",
+        "b": "Formati nuovi, in rapida evoluzione"
+      }
+    ],
+    "note": "Gestisci già Google Ads? [Scopri come lavoro sulle campagne Google](/servizi/google-ads/).\n"
+  },
+  "included": {
+    "eyebrow": "Cosa è incluso",
+    "title": "Dalla verifica ai risultati, tutto in un’unica gestione",
+    "text": "Prezzo fisso, mai una percentuale sul budget. L’account e i dati restano tuoi.\n",
+    "ctaLabel": "Verifica se fa per te",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "items": [
+      {
+        "title": "Analisi del potenziale",
+        "text": "Ti dico onestamente se per la tua attività ha senso oggi, o se è meglio aspettare."
+      },
+      {
+        "title": "Impostazione delle campagne",
+        "text": "Account, budget, obiettivi e regole: tutto in ordine dal primo giorno."
+      },
+      {
+        "title": "Contesti e temi",
+        "text": "Le conversazioni in cui ha senso comparire, non semplici parole chiave."
+      },
+      {
+        "title": "Annunci e creatività",
+        "text": "Testi e immagini pensati per inserirsi in modo utile in una risposta."
+      },
+      {
+        "title": "Pagine di destinazione",
+        "text": "Chi arriva da una conversazione vuole risposte rapide: la pagina deve darle."
+      },
+      {
+        "title": "Misurazione delle conversioni",
+        "text": "Richieste e vendite tracciate, per sapere quanto rende ogni euro."
+      },
+      {
+        "title": "Ottimizzazione continua",
+        "text": "Taglio ciò che non rende e investo su ciò che funziona."
+      },
+      {
+        "title": "Report video mensile",
+        "text": "Cosa è successo, cosa significa e cosa facciamo dopo."
+      },
+      {
+        "title": "Strategia con gli altri canali",
+        "text": "AI Ads insieme a Google Ads, Meta Ads e al tuo sito, senza doppioni."
+      }
+    ]
+  },
+  "method": {
+    "eyebrow": "Il metodo",
+    "title": "Si parte piccoli, si cresce con i dati",
+    "text": "Su un canale nuovo non si scommette: si testa, si misura e si investe solo dove funziona.\n",
+    "items": [
+      {
+        "title": "Verifica",
+        "text": "Controllo disponibilità, formati e potenziale per il tuo settore e la tua zona."
+      },
+      {
+        "title": "Test",
+        "text": "Si parte con un budget contenuto e obiettivi chiari, misurando tutto."
+      },
+      {
+        "title": "Scala",
+        "text": "Investo di più solo su ciò che porta richieste e vendite reali."
+      },
+      {
+        "title": "Integra",
+        "text": "Coordino AI Ads con Google, Meta e il sito, per non pagare due volte lo stesso cliente."
+      }
+    ]
+  },
+  "offer": {
+    "show": false,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "Domande frequenti",
+    "title": "Domande sugli AI Ads",
+    "text": "Non trovi la tua? [Scrivimi](#contatti), rispondo entro il giorno lavorativo successivo.\n",
+    "items": [
+      {
+        "question": "Gli AI Ads sono già disponibili in Italia?",
+        "answer": "Dipende dalla piattaforma: alcune formule sono già attive, altre sono in fase di test o arrivano gradualmente nei diversi Paesi. Nella verifica iniziale ti dico cosa puoi usare oggi e cosa conviene preparare per domani.\n"
+      },
+      {
+        "question": "Per quali attività ha senso?",
+        "answer": "Soprattutto per chi vende servizi o prodotti su cui le persone chiedono consiglio: artigiani, negozi, e-commerce, turismo, professionisti. Se per il tuo settore oggi non conviene, te lo dico.\n"
+      },
+      {
+        "question": "Quanto budget serve?",
+        "answer": "Si parte con un test dal budget contenuto, per raccogliere dati reali prima di investire di più. Ti do una stima prima di iniziare.\n"
+      },
+      {
+        "question": "Sostituisce Google Ads?",
+        "answer": "No, lo affianca. Google Ads resta fondamentale per chi cerca in modo classico; AI Ads intercetta chi chiede consiglio a un assistente. Insieme coprono più momenti della decisione.\n"
+      },
+      {
+        "question": "Come si misurano i risultati?",
+        "answer": "Come per le altre campagne: tracciamento delle richieste e delle vendite sul tuo sito, così sai quanto rende ogni euro investito.\n"
+      },
+      {
+        "question": "Quanto costa la gestione?",
+        "answer": "Un canone fisso, stabilito nel preventivo. Mai una percentuale sul budget pubblicitario.\n"
+      }
+    ],
+    "ctaLabel": "Verifica se fa per te",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "advertising"
+    ],
+    "title": "Approfondimenti sugli annunci nelle AI",
+    "text": "Cosa sappiamo degli annunci negli assistenti AI e come prepararsi, senza inseguire le mode.\n",
+    "buttonLabel": "Tutti gli articoli"
+  },
+  "contact": {
+    "title": "Arriva prima nelle risposte dell’AI",
+    "formTitle": "Richiedi una verifica gratuita",
+    "topics": [
+      "ads"
+    ]
+  },
+  "seo": {
+    "title": "AI Ads: pubblicità su ChatGPT e assistenti AI | bortolin.dev",
+    "description": "Annunci accanto alle risposte di ChatGPT, Google e Copilot: verifico il potenziale per la tua attività, imposto i test e misuro i risultati. Prezzo fisso.",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "ogImage": "/src/assets/images/social/og-ai-ads.png",
+    "markdown": null,
+    "customMarkupCode": ""
+  }
+}

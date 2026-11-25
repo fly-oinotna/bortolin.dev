@@ -1,0 +1,32 @@
+---
+// Domande frequenti (fisarmonica nativa <details>, una aperta alla volta)
+import SectionHeading from '../ui/SectionHeading.astro';
+import Rich from '../ui/Rich.astro';
+import Icon from '../ui/Icon.astro';
+import { href, type Destination } from '../../lib/links';
+interface Props {
+  n?: number; eyebrow?: string | null; title?: string | null; text?: any;
+  items: readonly { question: string; answer: any }[]; class?: string;
+  /** pulsante facoltativo sotto il testo (pagine servizio) */
+  ctaLabel?: string | null; ctaLink?: Destination;
+}
+const { n, eyebrow, title, text, items, class: cls = 'pb-16 md:pb-24', ctaLabel, ctaLink } = Astro.props;
+---
+<section id="faq" class={cls}>
+  <div class="container grid grid-cols-1 gap-10 lg:grid-cols-3 lg:gap-16">
+    <SectionHeading n={n} eyebrow={eyebrow} title={title} text={text} class="">
+      {ctaLabel && <a href={href(ctaLink)} class="btn-secondary mt-6">{ctaLabel} <Icon name="arrow" size={20} /></a>}
+    </SectionHeading>
+    <div class="divide-y divide-gray-200 border-y border-gray-200 lg:col-span-2">
+      {items.map((it) => (
+        <details class="group py-5" name="faq">
+          <summary class="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-semibold text-black">
+            {it.question}
+            <span aria-hidden="true" class="grid h-8 w-8 shrink-0 place-items-center rounded-full bg-gray-100 transition-transform group-open:rotate-45">+</span>
+          </summary>
+          <Rich value={it.answer} class="mt-3" gap="mt-3" />
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

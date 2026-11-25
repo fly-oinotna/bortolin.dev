@@ -1,0 +1,28 @@
+---
+// "Cosa è incluso" in un riquadro nero: intestazione + pulsante a sinistra, voci numerate a destra (pagine Ads)
+import SectionHeading from '../ui/SectionHeading.astro';
+import { href, type Destination } from '../../lib/links';
+import { pad } from '../../lib/rich';
+interface Props {
+  n?: number; eyebrow?: string | null; title?: string | null; text?: any; ctaLabel?: string | null; ctaLink?: Destination;
+  items: readonly { title: string; text: string }[]; class?: string;
+}
+const { n, eyebrow, title, text, ctaLabel, ctaLink, items, class: cls = 'pb-16 md:pb-24' } = Astro.props;
+---
+<section class={cls}>
+  <div class="container">
+    <div class="grid grid-cols-1 gap-10 rounded-3xl bg-black p-6 text-white md:p-10 lg:grid-cols-3 lg:gap-12 lg:p-14">
+      <SectionHeading n={n} eyebrow={eyebrow} title={title} text={text} dark class="">
+        {ctaLabel && <a href={href(ctaLink)} class="btn-primary mt-6">{ctaLabel}</a>}
+      </SectionHeading>
+      <ol class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:col-span-2">
+        {items.map((it, i) => (
+          <li class="flex gap-4 rounded-2xl bg-white/10 p-5">
+            <span class="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-bd-green text-sm font-bold text-black">{pad(i + 1)}</span>
+            <span><strong class="block text-white">{it.title}</strong><span class="text-sm text-gray-300">{it.text}</span></span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </div>
+</section>

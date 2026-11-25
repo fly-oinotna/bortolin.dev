@@ -1,0 +1,533 @@
+---
+// HOME — contenuti in Keystatic → "Home" (un gruppo per sezione, SEO in fondo).
+// Le sezioni proprie della home sono scritte qui sotto; quelle riusate in altre pagine
+// (vantaggi, metodo, recensioni, offerta, FAQ, contatti…) sono componenti in src/components/sections/.
+import Base from "../layouts/Base.astro";
+import Icon from "../components/ui/Icon.astro";
+import Img from "../components/ui/Img.astro";
+import Rich from "../components/ui/Rich.astro";
+import Stars from "../components/ui/Stars.astro";
+import Gauge from "../components/ui/Gauge.astro";
+import SectionHeading from "../components/ui/SectionHeading.astro";
+import CoreWebVitals from "../components/sections/CoreWebVitals.astro";
+import PsiTest from "../components/sections/PsiTest.astro";
+import Benefits from "../components/sections/Benefits.astro";
+import Problems from "../components/sections/Problems.astro";
+import Method from "../components/sections/Method.astro";
+import Reviews from "../components/sections/Reviews.astro";
+import Fit from "../components/sections/Fit.astro";
+import OfferBand from "../components/sections/OfferBand.astro";
+import Faq from "../components/sections/Faq.astro";
+import Contact from "../components/sections/Contact.astro";
+import { read, readGlobals } from "../lib/content";
+import { rich, hasRich } from "../lib/rich";
+import { href } from "../lib/links";
+import { faqSchema } from "../lib/schema";
+import { t } from "../i18n/ui";
+import type { IconName } from "../lib/icons";
+
+interface Props { lang?: string }
+const { lang = 'it' } = Astro.props;
+const g = await readGlobals(lang);
+const p = await read('home', lang);
+const s = g.settings;
+const ui = t(g.lang);
+// "su Google" solo se le recensioni vengono da Google, altrimenti "N recensioni"
+const ratingLabel =
+  g.reviews?.source === "google"
+    ? s.reviews.ratingShort
+    : s.reviews.countLabel.replace("{n}", String(g.rating?.count ?? 0));
+
+// numeri delle etichette (01, 02…) in ordine di pagina: spostando una sezione, aggiornare anche qui
+const ORDER = [
+  "services",
+  "lighthouse",
+  "seo",
+  "ai",
+  "benefits",
+  "problems",
+  "method",
+  "reviews",
+  "fit",
+  "about",
+  "agency",
+  "faq",
+];
+const n = (key: string) => ORDER.indexOf(key) + 1;
+
+const {
+  hero: h,
+  manifesto: m,
+  services: sv,
+  lighthouse: lh,
+  seoSection: seo,
+  ai,
+  about,
+  agency,
+} = p;
+---
+
+<Base g={g} seo={p.seo} schema={{ faq: faqSchema(p.faq.items) }}>
+  <!-- ================================================= HERO -->
+  <section class="pt-10 pb-16 md:pt-16 md:pb-24 lg:pt-20">
+    <div class="container grid grid-cols-1 gap-10 lg:grid-cols-5 lg:gap-12">
+      <div class="lg:col-span-3">
+        <p class="mb-4 text-sm text-black">{h.eyebrow}</p>
+        <h1 class="text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">
+          {h.title}
+        </h1>
+        <div class="my-6">
+          <Rich value={h.text} class="text-lg" />
+        </div>
+        <div class="flex flex-wrap items-center gap-4">
+          {h.ctaLabel && (
+            <a href={href(h.ctaLink)} class="btn-primary">
+              {h.ctaLabel} <Icon name="arrow" size={20} />
+            </a>
+          )}
+          {h.linkLabel && (
+            <a
+              href={href(h.linkLink)}
+              class="font-medium text-black underline underline-offset-4 hover:no-underline"
+            >
+              {h.linkLabel}
+            </a>
+          )}
+        </div>
+        {g.rating && (
+          <a
+            href="#recensioni"
+            class="mt-6 inline-flex items-center gap-3 rounded-full bg-black py-2 pr-5 pl-2 text-white transition-opacity hover:opacity-80"
+          >
+            {g.reviews?.source === "google" && (
+              <span class="grid h-9 w-9 place-items-center rounded-full bg-white">
+                <Icon name="google" size={20} />
+              </span>
+            )}
+            <Stars
+              count={g.rating.stars}
+              class:list={[
+                "text-amber-400",
+                g.reviews?.source !== "google" && "pl-2",
+              ]}
+            />
+            <span class="text-sm">
+              <strong class="font-bold">{g.rating.value}</strong> {ratingLabel}
+              <span class="sr-only">
+                : {s.a11y.stars.replace("{n}", g.rating.value)}
+              </span>
+            </span>
+          </a>
+        )}
+        <ul class="mt-8 flex flex-wrap gap-2" aria-label={s.a11y.highlights}>
+          {h.highlights.map((c) => (
+            <li class="chip">
+              <Icon name="check" size={16} stroke={3} />
+              {c}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      <div class="grid grid-cols-2 grid-rows-[auto_auto_auto] gap-4 lg:col-span-2 lg:gap-6">
+        <div class="flex flex-col items-center justify-center rounded-3xl bg-gray-100 p-6 text-center">
+          <span>{ui.projectsBefore}</span>
+          <span
+            class="block text-4xl font-bold text-black tabular-nums lg:text-5xl"
+            data-count={h.projectsValue}
+          >
+            {h.projectsValue}
+          </span>
+          <span>{ui.projectsAfter}</span>
+        </div>
+        <div class="flex flex-col items-center justify-center rounded-3xl bg-bd-green p-6 text-center text-black">
+          <span
+            class="block text-4xl font-bold tabular-nums lg:text-5xl"
+            data-count={h.yearsValue}
+            data-suffix={ui.yearsSuffix}
+          >
+            {h.yearsValue}
+            {ui.yearsSuffix}
+          </span>
+          <span>{ui.yearsAfter}</span>
+        </div>
+        <div class="col-span-2 flex flex-col justify-center rounded-3xl bg-black p-5 md:p-6">
+          <p class="mb-3 text-sm font-semibold text-bd-green">
+            {h.scoresTitle}
+          </p>
+          <ul
+            class="grid grid-cols-4 gap-2 text-center"
+            aria-label={s.a11y.scores}
+            data-gauge-group
+          >
+            {h.scores.map((sc) => (
+              <li>
+                <Gauge value={sc.value ?? 100} dark class="mx-auto" />
+                <span class="mt-1.5 block text-[11px] leading-tight text-gray-300">
+                  {sc.label}
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div class="col-span-2 flex flex-col justify-center rounded-3xl border border-gray-200 p-5 md:p-6">
+          <p class="font-semibold text-black">{h.boxTitle}</p>
+          <p class="mt-1 text-sm" set:html={rich(h.boxText)} />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= MANIFESTO -->
+  <section class="bg-black py-14 md:py-20">
+    <div class="container text-center">
+      <p class="mx-auto max-w-4xl text-2xl leading-snug font-bold text-white md:text-4xl">
+        {m.line1}
+        <br />
+        <span class="text-bd-green">{m.line2}</span>
+      </p>
+      <p
+        class="mx-auto mt-5 max-w-2xl text-gray-300"
+        set:html={rich(m.text, { strong: "text-white" })}
+      />
+    </div>
+  </section>
+
+  <!-- ================================================= SERVIZI -->
+  <section id="servizi" class="py-16 md:py-24">
+    <div class="container">
+      <SectionHeading
+        n={n("services")}
+        eyebrow={sv.eyebrow}
+        title={sv.title}
+        text={sv.text}
+      />
+
+      <article class="mt-10 grid grid-cols-1 gap-8 rounded-3xl bg-black p-6 text-white md:p-10 lg:grid-cols-5 lg:gap-12">
+        <div class="flex flex-col lg:col-span-2">
+          <span class="mb-4 inline-flex w-fit rounded-full bg-bd-green px-3 py-1 text-xs font-bold text-black uppercase">
+            {sv.mainEyebrow}
+          </span>
+          <h3 class="text-3xl text-bd-green lg:text-4xl">{sv.mainTitle}</h3>
+          <Rich value={sv.mainText} class="text-gray-300" strong="text-white" />
+          <div class="mt-8 flex flex-wrap items-center gap-4 lg:mt-auto lg:pt-8">
+            {sv.mainCtaLabel && (
+              <a href={href(sv.mainCtaLink)} class="btn-primary">
+                {sv.mainCtaLabel} <Icon name="arrow" size={20} />
+              </a>
+            )}
+            {sv.mainLinkLabel && (
+              <a
+                href={href(sv.mainLinkLink)}
+                class="font-medium text-white underline underline-offset-4 hover:text-bd-green"
+              >
+                {sv.mainLinkLabel}
+              </a>
+            )}
+          </div>
+        </div>
+        <div class="lg:col-span-3">
+          <p class="mb-4 text-sm font-semibold text-gray-400 uppercase">
+            {sv.includedTitle}
+          </p>
+          <ul class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {sv.included.map((it) => (
+              <li class="flex gap-3 rounded-2xl bg-white/15 p-4">
+                <Icon
+                  name="check"
+                  size={20}
+                  stroke={3}
+                  class="mt-0.5 shrink-0 text-bd-green"
+                />
+                <span>
+                  <strong class="block text-white">{it.title}</strong>
+                  <span
+                    class="text-sm text-gray-300"
+                    set:html={rich(it.text)}
+                  />
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </article>
+
+      <div class="mt-16 max-w-3xl">
+        <h3 class="text-2xl">{sv.othersTitle}</h3>
+        <Rich value={sv.othersText} />
+      </div>
+      <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6">
+        {sv.others.map((it) => (
+          <article
+            class:list={[
+              "flex flex-col rounded-3xl p-6",
+              it.highlight ? "bg-bd-green" : "bg-gray-100",
+            ]}
+          >
+            <span
+              class:list={[
+                "mb-5 grid h-12 w-12 place-items-center rounded-full",
+                it.highlight
+                  ? "bg-black text-bd-green"
+                  : "bg-bd-green text-black",
+              ]}
+            >
+              <Icon name={it.icon as IconName} size={24} />
+            </span>
+            <h3>{it.title}</h3>
+            <p
+              class:list={["text-sm", it.highlight && "text-black"]}
+              set:html={rich(it.text)}
+            />
+            <a
+              href={href(it.link)}
+              class="mt-auto pt-4 font-semibold text-black underline underline-offset-4 hover:no-underline"
+            >
+              {sv.othersMore}
+              <span class="sr-only">: {it.title}</span>
+            </a>
+          </article>
+        ))}
+      </div>
+
+      <div class="mt-4 grid grid-cols-1 gap-4 rounded-3xl border-2 border-black p-6 md:p-8 lg:mt-6 lg:grid-cols-4 lg:gap-8">
+        <div>
+          <h3>{sv.adsTitle}</h3>
+          <Rich value={sv.adsText} class="text-sm" />
+        </div>
+        {sv.ads.map((it) => (
+          <a
+            href={href(it.link)}
+            class="group rounded-2xl bg-gray-100 p-5 transition-colors hover:bg-bd-green"
+          >
+            <span class="font-semibold text-black">
+              {it.title}
+              {it.badge ? (
+                <>
+                  {" "}
+                  <span class="ml-1 rounded-full bg-black px-2 py-0.5 text-[10px] font-bold text-bd-green uppercase">
+                    {it.badge}
+                  </span>
+                </>
+              ) : (
+                " →"
+              )}
+            </span>
+            <span class="mt-1 block text-sm" set:html={rich(it.text)} />
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= LIGHTHOUSE -->
+  <section id="lighthouse" class="bg-gray-100 py-16 md:py-24">
+    <div class="container">
+      <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        <SectionHeading
+          n={n("lighthouse")}
+          eyebrow={lh.eyebrow}
+          title={lh.title}
+          text={lh.text}
+          class=""
+        />
+        <Img
+          src={lh.image}
+          alt={lh.imageAlt}
+          class="float-soft mx-auto w-full max-w-lg"
+        />
+      </div>
+      <div
+        class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-6"
+        data-gauge-group
+      >
+        {lh.scores.map((sc) => (
+          <article class="rounded-3xl bg-white p-6">
+            <Gauge value={sc.value ?? 100} />
+            <h3 class="mt-4">{sc.title}</h3>
+            <p class="text-sm" set:html={rich(sc.text)} />
+          </article>
+        ))}
+      </div>
+      <CoreWebVitals title={lh.cwvTitle} text={lh.cwvText} items={lh.cwv} />
+      <PsiTest
+        title={lh.testTitle}
+        text={lh.testText}
+        placeholder={lh.testPlaceholder}
+        button={lh.testButton}
+        a11y={s.a11y}
+      />
+    </div>
+  </section>
+
+  <!-- ================================================= CONSULENZA SEO -->
+  <section id="seo" class="py-16 md:py-24">
+    <div class="container grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+      <Img
+        src={seo.image}
+        alt={seo.imageAlt}
+        class="float-soft float-soft-delay mx-auto w-full max-w-lg"
+      />
+      <div>
+        <SectionHeading
+          n={n("seo")}
+          eyebrow={seo.eyebrow}
+          title={seo.title}
+          text={seo.text}
+          class=""
+        />
+        {seo.pillars.length > 0 && (
+          <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {seo.pillars.map((pl, i) => (
+              <div class="rounded-2xl bg-gray-100 p-5">
+                <p class="font-semibold text-black">
+                  {i + 1}. {pl.title}
+                </p>
+                <p class="mt-1 text-sm" set:html={rich(pl.text)} />
+              </div>
+            ))}
+          </div>
+        )}
+        {(seo.boxTitle || hasRich(seo.boxText)) && (
+          <div class="mt-4 rounded-2xl border-2 border-black p-5">
+            {seo.boxTitle && (
+              <p class="font-semibold text-black">{seo.boxTitle}</p>
+            )}
+            <Rich value={seo.boxText} class="mt-1 text-sm" />
+          </div>
+        )}
+        {hasRich(seo.note) && (
+          <div class="mt-6">
+            <Rich value={seo.note} class="text-sm" />
+          </div>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= INTEGRAZIONE AI -->
+  <section id="ai" class="bg-gray-100 py-16 md:py-24">
+    <div class="container">
+      <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        <SectionHeading
+          n={n("ai")}
+          eyebrow={ai.eyebrow}
+          title={ai.title}
+          text={ai.text}
+          class=""
+        />
+        <Img
+          src={ai.image}
+          alt={ai.imageAlt}
+          class="float-soft mx-auto w-full max-w-lg"
+        />
+      </div>
+      <ul class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 lg:gap-6">
+        {ai.cards.map((c) => (
+          <li class="rounded-3xl bg-white p-6">
+            <h3>{c.title}</h3>
+            <Rich value={c.text} class="text-sm" />
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================================================= SEZIONI RIUSABILI -->
+  <Benefits {...p.benefits} n={n("benefits")} />
+  <Problems {...p.problems} n={n("problems")} />
+  <Method {...p.method} n={n("method")} />
+  <Reviews g={g} n={n("reviews")} />
+  <Fit {...p.fit} n={n("fit")} />
+  <OfferBand g={g} />
+
+  <!-- ================================================= CHI SONO -->
+  <section id="chi-sono" class="bg-gray-100 py-16 md:py-24">
+    <div class="container grid grid-cols-1 items-center gap-10 lg:grid-cols-5 lg:gap-12">
+      <div class="lg:order-2 lg:col-span-2">
+        <Img
+          src={about.image}
+          alt={about.imageAlt}
+          widths={[480, 800]}
+          sizes="(min-width: 1024px) 480px, 100vw"
+          class="aspect-square w-full rounded-3xl object-cover"
+        />
+      </div>
+      <div class="lg:order-1 lg:col-span-3">
+        <SectionHeading
+          n={n("about")}
+          eyebrow={about.eyebrow}
+          title={about.title}
+          text={about.text}
+          class=""
+        />
+        <ul class="mt-8 grid grid-cols-2 gap-4 lg:grid-cols-4">
+          {about.stats.map((st) => (
+            <li class="rounded-2xl bg-white p-4">
+              <span
+                class="block text-2xl font-bold text-black tabular-nums"
+                data-count={st.animate ? st.value : undefined}
+                data-suffix={st.animate && st.suffix ? st.suffix : undefined}
+              >
+                {st.value}
+                {st.suffix}
+              </span>
+              <span class="text-sm">{st.text}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= PER LE WEB AGENCY -->
+  <section id="web-agency" class="py-16 md:py-24">
+    <div class="container">
+      <div class="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        <SectionHeading
+          n={n("agency")}
+          eyebrow={agency.eyebrow}
+          title={agency.title}
+          text={agency.text}
+          class=""
+        />
+        <Img
+          src={agency.image}
+          alt={agency.imageAlt}
+          class="float-soft float-soft-delay mx-auto w-full max-w-lg"
+        />
+      </div>
+      <div class="mt-10 grid grid-cols-1 gap-4 md:grid-cols-2 lg:gap-6">
+        {agency.cards.map((c, i) => {
+          const dark = i % 2 === 1;
+          return (
+            <a
+              href={href(c.ctaLink)}
+              class:list={[
+                "rounded-3xl p-6 transition-opacity hover:opacity-75 md:p-8",
+                dark ? "bg-black text-white" : "bg-bd-green text-black",
+              ]}
+            >
+              <h3 class:list={[dark && "text-bd-green"]}>{c.title}</h3>
+              <p
+                class:list={[dark && "text-gray-300"]}
+                set:html={rich(c.text)}
+              />
+              <span
+                class:list={[
+                  "mt-4",
+                  dark ? "btn-empty-secondary" : "btn-empty-primary",
+                ]}
+              >
+                {c.ctaLabel}
+              </span>
+            </a>
+          );
+        })}
+      </div>
+    </div>
+  </section>
+
+  <Faq {...p.faq} n={n("faq")} />
+  <Contact g={g} />
+</Base>

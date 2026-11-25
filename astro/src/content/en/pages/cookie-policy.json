@@ -1,0 +1,18 @@
+{
+  "title": "Cookie Policy",
+  "content": {
+    "text": "**Last updated:** 3 June 2025\n\nThis is the Cookie Policy for the website of **Antonio Bortolin**. It explains how this website uses cookies to improve your experience, analyze traffic and make features such as the contact forms work smoothly.\n\n## **1. What are cookies?**\n\nCookies are small text files stored on your device when you visit a website. They let the website remember your actions and preferences for a set period of time.\n\n## **2. Types of cookies used**\n\n- **Technical cookies:** Needed for the website to work and to use its features, for example to send the contact forms (free request or message).\n- **Analytics cookies:** Used to collect anonymous information about how the website is used and to improve its performance.\n- **Preference cookies:** Used to store the user’s choices, such as language or cookie consent.\n\n## **3. Third-party cookies**\n\nThe website uses the following external services, which may set cookies in your browser:\n\n- **Google Tag Manager:** Lets third-party scripts and tags be managed efficiently.\n- **Google Analytics:** Collects aggregated, anonymous data about use of the website for statistical analysis and improvements.\n\n## **4. Managing cookies**\n\nYou can manage your cookie preferences directly in your browser settings, choosing to accept them, block them or be notified before they are set. Disabling technical cookies may affect some features of the website.\n\n## **5. Consent**\n\nOn your first visit, a banner is shown to manage your consent. You can change it at any time by clicking the dedicated link in the website footer.\n\n## **6. Changes to the Cookie Policy**\n\nWe reserve the right to update this Cookie Policy. Any changes will be published on this page with the updated revision date.\n"
+  },
+  "seo": {
+    "title": "Cookie policy: what we use and why | bortolin.dev",
+    "description": "Which cookies bortolin.dev uses, what they’re for, and how to change or withdraw your cookie preferences at any time.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false
+  },
+  "original": "informativa-sulla-gestione-dei-cookie"
+}

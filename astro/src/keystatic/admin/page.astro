@@ -1,0 +1,22 @@
+---
+// Pagina del pannello Keystatic + aggiunte: favicon del sito, badge SEO, tab a sinistra, switch che nascondono campi
+import { Keystatic } from "./keystatic-page";
+export const prerender = false;
+---
+
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin · bortolin.dev</title>
+    <link rel="icon" href="/api/site-icon" />
+  </head>
+  <body>
+    <Keystatic client:only="react" />
+    <script src="./seo-badges.ts"></script>
+    <script src="./tabs.ts"></script>
+    <script src="./toggles.ts"></script>
+    <script src="./media.ts"></script>
+    <script src="./i18n.ts"></script>
+  </body>
+</html>

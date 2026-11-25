@@ -1,0 +1,343 @@
+{
+  "hero": {
+    "breadcrumb": "Servicios",
+    "eyebrow": "Todos los servicios",
+    "title": "Todo lo que necesitas para crecer en internet, paso a paso",
+    "text": "Webs, SEO, velocidad, inteligencia artificial, campañas y consultoría. Cada servicio funciona por separado, pero juntos rinden más: **una web rápida posiciona mejor en Google, y una buena visibilidad abarata las campañas**. Todo con precio cerrado y un único interlocutor.\n",
+    "navLabel": "Ir a un grupo",
+    "layersLabel": "Cómo encajan los servicios",
+    "layers": [
+      {
+        "title": "Clientes",
+        "text": "Google Ads, Meta Ads, publicidad en IA"
+      },
+      {
+        "title": "Visibilidad",
+        "text": "SEO y presencia en la IA"
+      },
+      {
+        "title": "Web",
+        "text": "Rápida, clara, medible"
+      },
+      {
+        "title": "Estrategia",
+        "text": "Objetivos y procesos"
+      }
+    ],
+    "caption": "Cada nivel se apoya en el de abajo: por eso siempre empiezo por los cimientos."
+  },
+  "start": {
+    "title": "¿No sabes por dónde empezar? Empieza por tu objetivo",
+    "text": "Elige la frase que más se parezca a ti y te llevo al servicio adecuado. Si encajan varias, lo vemos juntos en la llamada gratuita de 25 minutos.\n",
+    "items": [
+      {
+        "quote": "«Necesito una web nueva»",
+        "service": "Páginas web completas",
+        "link": {
+          "discriminant": "/servizi/siti-web/"
+        }
+      },
+      {
+        "quote": "«Nadie encuentra mi web»",
+        "service": "Consultoría SEO",
+        "link": {
+          "discriminant": "/servizi/consulenza-seo/"
+        }
+      },
+      {
+        "quote": "«Mi web va lenta»",
+        "service": "Optimización de velocidad",
+        "link": {
+          "discriminant": "/servizi/miglioramento-prestazioni-siti-web/"
+        }
+      },
+      {
+        "quote": "«Quiero contactos, ya»",
+        "service": "Google Ads y Meta Ads",
+        "link": {
+          "discriminant": "/servizi/google-ads/"
+        }
+      },
+      {
+        "quote": "«Quiero IA en mi web»",
+        "service": "Integración de IA",
+        "link": {
+          "discriminant": "/servizi/integrazione-ai/"
+        }
+      },
+      {
+        "quote": "«El papeleo me come el día»",
+        "service": "Consultoría digital",
+        "link": {
+          "discriminant": "/servizi/consulenza-digitale/"
+        }
+      }
+    ]
+  },
+  "groups": {
+    "idealLabel": "Ideal para:",
+    "moreLabel": "Ver el detalle",
+    "items": [
+      {
+        "short": "Tu web",
+        "eyebrow": "Tu web",
+        "title": "Una web que trabaja para ti",
+        "text": "Los cimientos: una web rápida, clara y preparada para la inteligencia artificial. Si esta parte está bien hecha, todo lo demás funciona mejor.\n",
+        "cards": [
+          {
+            "icon": "monitor",
+            "badge": "Servicio principal",
+            "title": "Páginas web completas",
+            "link": {
+              "discriminant": "/servizi/siti-web/"
+            },
+            "text": "Webs corporativas, tiendas online y proyectos a medida con diseño, textos, SEO, velocidad y medición incluidos, con precio cerrado.",
+            "points": [
+              "Diseño a medida y textos que venden",
+              "SEO y velocidad de 100 en Lighthouse",
+              "Preparada para la IA y medible desde el primer día",
+              "La web es tuya, formación incluida"
+            ],
+            "ideal": "quien necesita una web nueva o quiere rehacer la que tiene",
+            "offer": "nuovo-sito-3-mesi-seo",
+            "wide": true
+          },
+          {
+            "icon": "bolt",
+            "badge": "Webs existentes",
+            "title": "Optimización de velocidad",
+            "link": {
+              "discriminant": "/servizi/miglioramento-prestazioni-siti-web/"
+            },
+            "text": "Hago que tu web actual vuele: Core Web Vitals dentro de los umbrales de Google, sin rehacerla.",
+            "points": [
+              "Análisis Lighthouse y datos reales de Google",
+              "Imágenes, código, caché y scripts de terceros",
+              "Comparativa antes y después"
+            ],
+            "ideal": "webs lentas, sobre todo en el móvil",
+            "offer": "check-up-velocita",
+            "wide": false
+          },
+          {
+            "icon": "sparkles",
+            "badge": "También webs existentes",
+            "title": "Integración de IA",
+            "link": {
+              "discriminant": "/servizi/integrazione-ai/"
+            },
+            "text": "Gemini, Claude o ChatGPT dentro de tu web: meta etiquetas y textos con un clic, traducciones, un asistente para clientes.",
+            "points": [
+              "Botón «Generar con IA» en tu panel de gestión",
+              "Un asistente que conoce tus contenidos",
+              "Automatizaciones y formación"
+            ],
+            "ideal": "quien quiere más visibilidad con menos trabajo",
+            "offer": "seo-con-ai",
+            "wide": false
+          }
+        ]
+      },
+      {
+        "short": "Visibilidad",
+        "eyebrow": "Visibilidad",
+        "title": "Aparece en Google y en la IA",
+        "text": "Que te encuentre quien ya te busca, en Google y en las respuestas de los asistentes de IA.\n",
+        "cards": [
+          {
+            "icon": "search",
+            "badge": "Mi especialidad",
+            "title": "Consultoría SEO",
+            "link": {
+              "discriminant": "/servizi/consulenza-seo/"
+            },
+            "text": "Auditorías técnicas, palabras clave, SEO local, migraciones y visibilidad en ChatGPT, Gemini y Perplexity. Sin tecnicismos.",
+            "points": [
+              "Auditoría SEO técnica y plan de acción",
+              "SEO local y Perfil de Empresa en Google",
+              "Visibilidad en la IA (GEO)",
+              "Vídeo-informe mensual"
+            ],
+            "ideal": "webs que no reciben visitas desde Google",
+            "offer": "audit-seo",
+            "wide": true
+          }
+        ]
+      },
+      {
+        "short": "Publicidad",
+        "eyebrow": "Publicidad",
+        "title": "Contactos y ventas, desde ya",
+        "text": "Contactos y ventas desde el primer día, con campañas de tarifa cerrada: nunca un porcentaje de tu inversión.\n",
+        "cards": [
+          {
+            "icon": "target",
+            "badge": "",
+            "title": "Google Ads",
+            "link": {
+              "discriminant": "/servizi/google-ads/"
+            },
+            "text": "Aparece arriba en Google justo cuando un cliente te busca. Search, Performance Max, Shopping y anuncios locales.",
+            "points": [
+              "Seguimiento de conversiones incluido",
+              "Palabras clave negativas contra el gasto inútil",
+              "Cuenta a tu nombre"
+            ],
+            "ideal": "servicios locales, tiendas y e-commerce",
+            "offer": null,
+            "wide": false
+          },
+          {
+            "icon": "megaphone",
+            "badge": "",
+            "title": "Meta Ads",
+            "link": {
+              "discriminant": "/servizi/meta-ads/"
+            },
+            "text": "Anuncios en Facebook e Instagram para darte a conocer en tu zona y conseguir solicitudes, no solo «me gusta».",
+            "points": [
+              "Píxel y API de Conversiones",
+              "Formularios de contacto y remarketing",
+              "Creatividades para feed, Stories y Reels"
+            ],
+            "ideal": "darte a conocer y captar contactos",
+            "offer": null,
+            "wide": false
+          },
+          {
+            "icon": "chat-ad",
+            "badge": "Nuevo",
+            "title": "Publicidad en IA",
+            "link": {
+              "discriminant": "/servizi/ai-ads/"
+            },
+            "text": "Anuncios junto a las respuestas de ChatGPT, Google y Copilot: el nuevo canal, antes que tu competencia.",
+            "points": [
+              "Análisis del potencial en tu sector",
+              "Prueba con poco presupuesto",
+              "Integración con tus otros canales"
+            ],
+            "ideal": "quien quiere llegar primero a un canal nuevo",
+            "offer": null,
+            "wide": false
+          }
+        ]
+      },
+      {
+        "short": "Estrategia",
+        "eyebrow": "Estrategia y transformación digital",
+        "title": "La visión de conjunto de tu negocio",
+        "text": "Una visión de conjunto de tu marketing y tus procesos, con IA donde de verdad ahorra tiempo.\n",
+        "cards": [
+          {
+            "icon": "bulb",
+            "badge": "Para pymes",
+            "title": "Consultoría digital",
+            "link": {
+              "discriminant": "/servizi/consulenza-digitale/"
+            },
+            "text": "Marketing digital y digitalización de la empresa: presupuestos y facturas con IA, documentos, CRM, automatizaciones y objetivos medibles.",
+            "points": [
+              "Revisión de marketing y procesos",
+              "Presupuestos y documentos con IA",
+              "Hoja de ruta a 90 días",
+              "Acompañamiento y talleres"
+            ],
+            "ideal": "pymes que quieren crecer y trabajar mejor",
+            "offer": null,
+            "wide": true
+          }
+        ]
+      }
+    ]
+  },
+  "agency": {
+    "short": "Para agencias web",
+    "eyebrow": "Para agencias web",
+    "title": "El equipo técnico de tu agencia, cuando lo necesites",
+    "text": "Desarrollo en marca blanca, gestión de proyectos, medición, optimización y mantenimiento de las webs de tus clientes. Con discreción: nunca contacto con tus clientes.\n",
+    "ctaLabel": "Desarrollo en marca blanca",
+    "ctaLink": {
+      "discriminant": "custom",
+      "value": "/servizi/sviluppatore-freelance-per-web-agency/#white-label"
+    },
+    "linkLabel": "Project manager",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "/servizi/sviluppatore-freelance-per-web-agency/#project-management"
+    },
+    "image": "@it",
+    "imageAlt": "Ilustración: un diseño convertido en código que funciona"
+  },
+  "rules": {
+    "eyebrow": "Elijas el servicio que elijas",
+    "title": "Las reglas que siempre se cumplen",
+    "items": [
+      {
+        "title": "Precio cerrado",
+        "text": "Sabes de antemano cuánto vas a gastar. Nunca horas extra, nunca un porcentaje de tu inversión publicitaria."
+      },
+      {
+        "title": "Todo es tuyo",
+        "text": "Webs, cuentas, datos y accesos siempre a tu nombre."
+      },
+      {
+        "title": "Un único interlocutor",
+        "text": "Hablas con quien hace el trabajo, sin intermediarios."
+      },
+      {
+        "title": "Explicado fácil",
+        "text": "Informes que se entienden y respuestas claras, incluso a las preguntas «tontas»."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Preguntas sobre los servicios",
+    "text": "¿No encuentras la tuya? [Escríbeme](#contatti) y te respondo en un día laborable.\n",
+    "items": [
+      {
+        "question": "¿Puedo contratar un solo servicio?",
+        "answer": "Claro. Cada servicio funciona también por separado. Si veo que otro te daría mejores resultados te lo diré, pero la decisión es tuya.\n"
+      },
+      {
+        "question": "¿Compensa contratar varios servicios?",
+        "answer": "Sí: trabajar a la vez en web, SEO y campañas evita duplicar trabajo y los resultados se suman. En el presupuesto tienes un precio global, siempre cerrado.\n"
+      },
+      {
+        "question": "¿Se pueden combinar las ofertas de lanzamiento?",
+        "answer": "Cada oferta se aplica a su servicio. Si te interesan varias, en la llamada gratuita preparamos la solución que más te conviene.\n"
+      },
+      {
+        "question": "¿Trabajas solo en Italia?",
+        "answer": "No. Me reúno en persona con clientes del Véneto y Friuli Venezia Giulia, pero trabajo a distancia con toda Italia y el extranjero, España incluida, en español, inglés, italiano y alemán.\n"
+      },
+      {
+        "question": "¿Cómo empezamos?",
+        "answer": "Con una llamada gratuita de 25 minutos: me cuentas tus objetivos y tu situación, y yo te digo qué haría y cuánto cuesta. Sin compromiso.\n"
+      }
+    ],
+    "ctaLabel": "Reserva tu llamada gratis",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "contact": {
+    "title": "Hablemos de tu proyecto",
+    "formTitle": "Pide tu presupuesto gratis",
+    "topics": []
+  },
+  "seo": {
+    "slug": "servicios",
+    "title": "Servicios: webs, SEO, IA y publicidad | bortolin.dev",
+    "description": "Páginas web, consultoría SEO, velocidad, integración de IA, Google Ads y Meta Ads para pymes. Precio cerrado y un único interlocutor.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

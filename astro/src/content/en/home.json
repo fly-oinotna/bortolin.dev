@@ -1,0 +1,483 @@
+{
+  "hero": {
+    "eyebrow": "Web design - web development - SEO consulting",
+    "title": "Websites that load fast, rank on Google and speak AI",
+    "text": "I build your website **from start to finish**: design, copy, SEO, speed, tracking and AI come **as standard**, not as extras. A website that wins you customers, for a **fixed price**, explained without the jargon.\n",
+    "ctaLabel": "Get a free quote",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "See what’s included",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#servizi"
+    },
+    "highlights": [
+      "Fixed price, not hourly",
+      "You own your website",
+      "You deal with me",
+      "IT · EN · DE · ES"
+    ],
+    "projectsValue": 400,
+    "yearsValue": 15,
+    "scoresTitle": "Every website I launch aims for",
+    "scores": [
+      {
+        "label": "Performance",
+        "value": 100
+      },
+      {
+        "label": "Accessibility",
+        "value": 100
+      },
+      {
+        "label": "Best practices",
+        "value": 100
+      },
+      {
+        "label": "SEO",
+        "value": 100
+      }
+    ],
+    "boxTitle": "No nasty surprises",
+    "boxText": "A detailed quote with features, timeline and a **fixed price**. What you see on the quote is exactly what you pay.\n"
+  },
+  "manifesto": {
+    "line1": "I don’t build prettier websites.",
+    "line2": "I build websites that pay their way.",
+    "text": "A good-looking website that’s slow, invisible on Google or impossible to measure is just a cost. A fast website that ranks and plugs into the right tools is a salesperson who never clocks off.\n"
+  },
+  "services": {
+    "eyebrow": "Services",
+    "title": "One website, with SEO, speed and AI built in",
+    "text": "No website now and “add-ons” later, sold one by one. **Every website I build is fast from day one, optimized for Google and ready for AI**, with everything you need to track results. One quote, one fixed price.\n",
+    "mainEyebrow": "Where it all starts",
+    "mainTitle": "Your complete website",
+    "mainText": "Business websites, online stores and custom builds. You get a website that’s **finished, working and easy for you to run**: from the first sketch to launch day and the training that follows.\n\nThe price is agreed in the quote and **it doesn’t move**.\n",
+    "mainCtaLabel": "Get a free quote",
+    "mainCtaLink": {
+      "discriminant": "#contatti"
+    },
+    "mainLinkLabel": "How I build websites",
+    "mainLinkLink": {
+      "discriminant": "/servizi/siti-web/"
+    },
+    "includedTitle": "Always included",
+    "included": [
+      {
+        "title": "Made-to-measure design",
+        "text": "No templates: designed around your customers, on every screen."
+      },
+      {
+        "title": "Copy that sells",
+        "text": "Written in the words your customers type into Google."
+      },
+      {
+        "title": "SEO from day one",
+        "text": "Site structure, structured data, local SEO and your Google Business Profile."
+      },
+      {
+        "title": "100/100 speed",
+        "text": "Performance, accessibility and best practices checked with Lighthouse."
+      },
+      {
+        "title": "AI-ready",
+        "text": "Easy for ChatGPT and Gemini to read, with an AI assistant on board if you want one."
+      },
+      {
+        "title": "Measurable from launch",
+        "text": "Google Analytics 4, Tag Manager and Consent Mode, all set up."
+      },
+      {
+        "title": "Accessible and compliant",
+        "text": "Meets the European Accessibility Act, with privacy and cookies sorted."
+      },
+      {
+        "title": "100% yours, and easy to run",
+        "text": "Accounts in your name, plus training so you can update it yourself."
+      }
+    ],
+    "othersTitle": "Already have a website? Let’s make it work harder",
+    "othersText": "If your website looks fine but isn’t pulling its weight, I fix only what needs fixing. Most websites don’t need a rebuild: they need a tune-up.\n",
+    "othersMore": "Improve my website",
+    "others": [
+      {
+        "icon": "search",
+        "title": "SEO consulting",
+        "text": "Technical audits, keyword research, local SEO, migrations and visibility on ChatGPT. My specialty.",
+        "link": {
+          "discriminant": "/servizi/consulenza-seo/"
+        },
+        "highlight": true
+      },
+      {
+        "icon": "bolt",
+        "title": "Performance & Lighthouse",
+        "text": "I make your current website lightning fast and get it through Google’s Core Web Vitals.",
+        "link": {
+          "discriminant": "/servizi/miglioramento-prestazioni-siti-web/"
+        },
+        "highlight": false
+      },
+      {
+        "icon": "sparkles",
+        "title": "AI integration",
+        "text": "Assistants for your customers, automations that save hours, training for your team.",
+        "link": {
+          "discriminant": "/servizi/integrazione-ai/"
+        },
+        "highlight": false
+      },
+      {
+        "icon": "bulb",
+        "title": "Digital consulting",
+        "text": "Audits, a prioritized action plan, workshops and a second opinion on your agency’s work.",
+        "link": {
+          "discriminant": "/servizi/consulenza-digitale/"
+        },
+        "highlight": false
+      }
+    ],
+    "adsTitle": "Website live? Now let’s fill your inbox",
+    "adsText": "Campaigns for a fixed fee, not a cut of your ad spend. I optimize for enquiries and sales, not clicks and likes.\n",
+    "ads": [
+      {
+        "title": "Google Ads",
+        "text": "Search, Performance Max and YouTube. Be there the moment customers search.",
+        "link": {
+          "discriminant": "/servizi/google-ads/"
+        }
+      },
+      {
+        "title": "AI Ads",
+        "badge": "New",
+        "text": "Ads inside ChatGPT and AI assistants: the new channel, before your competitors get there.",
+        "link": {
+          "discriminant": "/servizi/ai-ads/"
+        }
+      },
+      {
+        "title": "Meta Ads",
+        "text": "Facebook and Instagram ads that bring in leads, with Pixel and Conversions API set up properly.",
+        "link": {
+          "discriminant": "/servizi/meta-ads/"
+        }
+      }
+    ]
+  },
+  "lighthouse": {
+    "eyebrow": "Performance & best practices",
+    "title": "Lighthouse, in plain English",
+    "text": "**Lighthouse is Google’s free tool that gives your website a health check.** It goes over it from top to bottom and hands back four scores out of 100: the same kind of test Google uses to judge whether your website gives visitors a good experience.\n\nEvery website I build leaves my desk **tested with Lighthouse**. A perfect 100 isn’t about bragging rights: it’s the simplest way to prove the job was done right, with a number you can check for yourself.\n",
+    "image": "@it",
+    "imageAlt": "Illustration of a website with four Lighthouse scores of 100 and Core Web Vitals in the green",
+    "scores": [
+      {
+        "title": "Performance",
+        "value": 100,
+        "text": "**How fast your website is.** Think of a shop door that opens the moment you walk up: make customers wait and they walk away. According to Google, over half of mobile visitors leave if a page takes more than 3 seconds to load.\n"
+      },
+      {
+        "title": "Accessibility",
+        "value": 100,
+        "text": "**Everyone can use it**, including people with low vision or who browse with only a keyboard or a screen reader. It’s the right thing to do, it reaches more customers and, since 28 June 2025, the European Accessibility Act makes it a legal requirement for many businesses selling online in the EU.\n"
+      },
+      {
+        "title": "Best practices",
+        "value": 100,
+        "text": "**It’s built to professional standards.** A secure connection (HTTPS), no hidden errors, up-to-date components, images in the right format. Like wiring that’s up to code: you never see it, but it makes all the difference.\n"
+      },
+      {
+        "title": "SEO",
+        "value": 100,
+        "text": "**Google gets what you do.** Titles, descriptions, page structure and links, all in order. It’s the technical groundwork: without it, even great content goes unseen.\n"
+      }
+    ],
+    "cwvTitle": "Core Web Vitals",
+    "cwvText": "Three measurements Google takes from the **real people** visiting your website, and one of the signals it uses for rankings. In short: speed, responsiveness and stability.\n",
+    "cwv": [
+      {
+        "title": "LCP · speed",
+        "text": "How long the main content takes to show up",
+        "good": "Good: under 2.5 s"
+      },
+      {
+        "title": "INP · responsiveness",
+        "text": "How quickly the page reacts to a tap or click",
+        "good": "Good: under 200 ms"
+      },
+      {
+        "title": "CLS · stability",
+        "text": "How much the page “jumps” as it loads (that button you keep missing)",
+        "good": "Good: under 0.1"
+      }
+    ],
+    "testTitle": "How does your website score?",
+    "testText": "Type in your web address to open PageSpeed Insights, Google’s official Lighthouse-based tool. Seeing red or orange? **Let’s talk**.\n",
+    "testPlaceholder": "www.yourwebsite.com",
+    "testButton": "Test my site"
+  },
+  "seoSection": {
+    "eyebrow": "SEO consulting",
+    "title": "SEO: be found by the people already looking for you",
+    "text": "Every day, someone searches Google for exactly what you sell. SEO makes sure they find **you**, not a competitor. And unlike ads, the results keep coming after you stop paying. **On the websites I build, SEO is part of the foundations**; if you already have a website, SEO consulting picks up from there.\n",
+    "image": "@it",
+    "imageAlt": "Illustration of a Google results page with your website in first place",
+    "pillars": [
+      {
+        "title": "Technical",
+        "text": "Speed, structure, structured data, indexing. The groundwork."
+      },
+      {
+        "title": "Content",
+        "text": "Pages that answer the questions your customers actually ask."
+      },
+      {
+        "title": "Authority",
+        "text": "Reviews, mentions, links and your Google Business Profile."
+      }
+    ],
+    "boxTitle": "And now AI search too",
+    "boxText": "More and more people ask ChatGPT, Gemini or Perplexity for recommendations instead of Google. I make sure these AI tools understand your website and mention it in their answers (it’s called GEO).\n",
+    "note": "**Straight talk:** nobody can guarantee you the top spot on Google, and anyone who does isn’t being honest. What I do guarantee is a proven method, clear priorities and reports that make sense.\n"
+  },
+  "ai": {
+    "eyebrow": "AI integration",
+    "title": "AI that pulls its weight in your business",
+    "text": "Everyone’s talking about AI, but what can it really do for a small business? Plenty, used wisely. **First we work out together whether you need it, then we build it into your new website or the tools you already use**, in line with the GDPR and the EU AI Act.\n",
+    "image": "@it",
+    "imageAlt": "Illustration of an AI assistant connected to a website, email, documents and analytics",
+    "cards": [
+      {
+        "title": "Website assistant",
+        "text": "Answers customers 24/7 using **your** information (opening hours, products, prices) and passes you leads ready to call.\n"
+      },
+      {
+        "title": "Automations",
+        "text": "Quotes, email replies, sorting requests, updating your CRM: let the machine do the busywork.\n"
+      },
+      {
+        "title": "Content and catalogs",
+        "text": "Product descriptions, spec sheets and translations written with AI and **always checked by a human**.\n"
+      },
+      {
+        "title": "In-house assistant",
+        "text": "Your team asks questions of company documents (manuals, price lists, procedures) and gets answers in seconds.\n"
+      },
+      {
+        "title": "Visibility in AI search",
+        "text": "Structured data and clear content, so ChatGPT, Gemini and Perplexity know who you are and recommend you.\n"
+      },
+      {
+        "title": "Training",
+        "text": "Hands-on workshops to use AI every day, safely and without putting customer data at risk.\n"
+      }
+    ]
+  },
+  "benefits": {
+    "eyebrow": "How I work",
+    "title": "Why hire a freelancer (the right one)",
+    "text": "You get the experience of someone who has led development teams at international agencies, with **just one person to deal with: me**.\n",
+    "items": [
+      {
+        "icon": "tag",
+        "title": "Fixed price, not hourly rates",
+        "text": "After the analysis you get a clear quote, and that price sticks: no surprise extra hours."
+      },
+      {
+        "icon": "key",
+        "title": "You own your website",
+        "text": "Accounts, domain, code and data are all in your name. Want to switch providers one day? You’re free to go."
+      },
+      {
+        "icon": "chat",
+        "title": "You deal with me, always",
+        "text": "No salespeople, no account managers playing telephone. The person you brief is the person doing the work."
+      },
+      {
+        "icon": "idea",
+        "title": "No jargon, ever",
+        "text": "I turn the techy stuff into clear choices: what to do, why, what it costs and what you get back."
+      },
+      {
+        "icon": "video",
+        "title": "Reports that make sense",
+        "text": "Every month, a short video walking you through the numbers and what they mean. Watch it whenever suits you."
+      },
+      {
+        "icon": "shield",
+        "title": "Honest, even when it costs me",
+        "text": "If you don’t need something, I’ll say so. Most websites don’t need a rebuild: they need a tune-up."
+      }
+    ]
+  },
+  "problems": {
+    "eyebrow": "Sound familiar?",
+    "title": "If any of these ring a bell, there’s plenty we can do",
+    "items": [
+      "“The website looks great, but the phone never rings.”",
+      "“Google only ever shows my competitors.”",
+      "“The website is slow, especially on phones.”",
+      "“I pay for ads but have no idea what they bring in.”",
+      "“I get reports full of charts nobody understands.”",
+      "“Everyone’s talking about AI, but where do I even start?”"
+    ]
+  },
+  "method": {
+    "eyebrow": "The process",
+    "title": "From first call to launch day, in 6 clear steps",
+    "text": "",
+    "steps": [
+      {
+        "title": "Discovery call",
+        "text": "25 minutes, free and with no strings attached. Tell me about your business, your customers and your goals."
+      },
+      {
+        "title": "Research",
+        "text": "I look at your competitors, what your customers search for on Google and your current website, if you have one. Data first, opinions second."
+      },
+      {
+        "title": "Fixed-price quote",
+        "text": "Pages, features, timeline and price, all in writing. SEO, speed and tracking are already included."
+      },
+      {
+        "title": "Design, copy and build",
+        "text": "You sign off the structure, copy and design first; then I build. You’ll know where things stand at every step."
+      },
+      {
+        "title": "Launch and training",
+        "text": "Lighthouse check, an SEO-safe migration that keeps your rankings, tracking up and running, and training to run the website."
+      },
+      {
+        "title": "Growth",
+        "text": "If you like, we keep going together: SEO, ad campaigns, new AI features and a monthly video report."
+      }
+    ]
+  },
+  "fit": {
+    "eyebrow": "Who it’s for",
+    "title": "We’ll get on well if…",
+    "yesTitle": "A great fit if",
+    "yes": [
+      "you run a small business, an online store or a professional practice",
+      "you want a partner who advises you, not just someone who takes orders",
+      "you want measurable results and see quality as an investment",
+      "you value an honest opinion, even when it’s not what you wanted to hear"
+    ],
+    "noTitle": "Not a fit if",
+    "no": [
+      "you’re only after the cheapest price",
+      "you want a promise of “page one on Google in a month”",
+      "you can’t spare even half an hour a month to catch up",
+      "you’d rather have a pretty website than one that works"
+    ]
+  },
+  "about": {
+    "eyebrow": "About me",
+    "title": "The person behind your website",
+    "text": "I’m Antonio, and I’ve been building and fine-tuning websites for over 15 years. I worked my way up at web agencies abroad, from *junior developer* to *senior* to *lead developer*, running the development team. I went freelance in 2016 and now work with businesses and agencies alike.\n\nI’ve always treated **speed, SEO and clean code** as part of the job, not an optional extra. Today I put that experience to work for people who want to grow online and see the results in numbers, bringing in AI where it genuinely helps.\n\nI grew up in Friuli and live in Veneto, in northeast Italy. Eleven years abroad left me fluent in **English, German and Spanish**, so I can support your project in international markets too.\n",
+    "image": "@it",
+    "imageAlt": "Antonio Bortolin, SEO, performance and AI consultant",
+    "stats": [
+      {
+        "value": 15,
+        "suffix": "+",
+        "text": "years of experience",
+        "animate": true
+      },
+      {
+        "value": 400,
+        "suffix": "+",
+        "text": "projects",
+        "animate": true
+      },
+      {
+        "value": 4,
+        "text": "languages spoken",
+        "animate": false
+      },
+      {
+        "value": 1,
+        "text": "person to deal with",
+        "animate": false
+      }
+    ]
+  },
+  "agency": {
+    "eyebrow": "For web agencies",
+    "title": "Your tech team, on tap",
+    "text": "I work behind the scenes for creative agencies, design studios and freelance designers, under **your brand** if you like (white label). I never contact your clients or pitch myself to them: that’s a rule, not a promise.\n",
+    "image": "@it",
+    "imageAlt": "Illustration: a design turned into working code",
+    "cards": [
+      {
+        "title": "Development and extra hands",
+        "text": "I turn your designs (Figma, PDF or design system) into fast, accessible websites. I also fix existing websites, speed them up, set up tracking and handle maintenance.",
+        "ctaLabel": "Development for agencies",
+        "ctaLink": {
+          "discriminant": "custom",
+          "value": "/servizi/sviluppatore-freelance-per-web-agency/#white-label"
+        }
+      },
+      {
+        "title": "Project manager",
+        "text": "I run digital projects between client and team: I turn requirements into clear tasks, keep an eye on time and budget and spot problems before they happen.",
+        "ctaLabel": "Project management for agencies",
+        "ctaLink": {
+          "discriminant": "custom",
+          "value": "/servizi/sviluppatore-freelance-per-web-agency/#project-management"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions I get asked a lot",
+    "text": "Can’t see yours? [Drop me a line](#contatti) and I’ll reply by the next business day.\n",
+    "items": [
+      {
+        "question": "How much does a website cost?",
+        "answer": "It depends on how many pages and features you need. After a free call and an initial review I send you a **fixed-price** quote that already covers SEO, speed, accessibility, tracking and training: no hidden costs. Consulting and ad management are fixed-price too, never a percentage of your ad spend.\n"
+      },
+      {
+        "question": "What’s included in the website?",
+        "answer": "Everything a website needs to work: custom design, copy, development, technical and local SEO, Lighthouse optimization, accessibility, Google Analytics and Tag Manager with Consent Mode, privacy and cookies sorted, launch and training. AI features such as a customer assistant can be added whenever you need them.\n"
+      },
+      {
+        "question": "How soon will I see results?",
+        "answer": "Speed gains show up in Lighthouse straight away, and in Google’s real-visitor data within about a month. Google Ads campaigns start giving you data within days. SEO is an investment: solid results usually take 3 to 6 months, and then they last.\n"
+      },
+      {
+        "question": "Do I need a brand-new website?",
+        "answer": "Not necessarily. An existing website can very often be sped up and fixed for SEO for far less than a rebuild. If starting over really is the better option, I’ll tell you and explain why.\n"
+      },
+      {
+        "question": "Why should I care about my Lighthouse score?",
+        "answer": "Because it measures things that hit your revenue: a slow website loses visitors, a website with poor accessibility shuts out customers (and may no longer be compliant), a website with technical issues struggles on Google. It’s also an objective way to check anyone’s work, mine included.\n"
+      },
+      {
+        "question": "Can AI really help a small business?",
+        "answer": "Yes, when it solves a specific problem: answering customers faster, cutting repetitive work, getting found on ChatGPT. We always start from a real use case and measure the time or money saved. If it isn’t worth it, we don’t do it.\n"
+      },
+      {
+        "question": "Do I keep the website and the accounts?",
+        "answer": "Always. Domain, hosting, code, Google and ad accounts are in your name. You can switch providers whenever you like, no strings attached.\n"
+      },
+      {
+        "question": "Do you work remotely and with clients abroad?",
+        "answer": "Yes. I’m based in Veneto, Italy, and happy to meet clients in Veneto and Friuli in person, but I work remotely with clients across Italy and abroad, in English, Italian, German and Spanish.\n"
+      }
+    ]
+  },
+  "seo": {
+    "title": "Fast websites with SEO and AI built in | bortolin.dev",
+    "description": "Fast, fixed-price websites built to rank on Google and get cited by AI. Freelance web designer, developer and SEO consultant.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false
+  }
+}

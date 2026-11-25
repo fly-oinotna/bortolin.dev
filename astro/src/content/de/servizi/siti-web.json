@@ -1,0 +1,285 @@
+{
+  "hero": {
+    "breadcrumb": "Websites",
+    "eyebrow": "Komplette Websites",
+    "title": "Websites, die Ihnen Kunden bringen",
+    "text": "Firmenwebsites, Onlineshops und individuelle Projekte: **schnell, sichtbar bei Google und bereit für künstliche Intelligenz**. Design, Texte, SEO, Tracking und Schulung schon inklusive. Ein einziges Angebot, zum **Festpreis**.\n",
+    "ctaLabel": "Kostenloses Angebot anfordern",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Meine Arbeiten ansehen",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#casi-studio"
+    },
+    "highlights": [
+      "Festpreis",
+      "Die Website gehört Ihnen",
+      "Texte inklusive",
+      "Auch mehrsprachig"
+    ],
+    "demoUrl": "ihr-betrieb.de",
+    "demoBrand": "Ihr Betrieb",
+    "demoTitle": "Ihre Website,\nschnell und sichtbar",
+    "demoCta": "Kontakt",
+    "demoSteps": [
+      "Struktur",
+      "Design",
+      "Texte",
+      "Online"
+    ],
+    "demoStepsLabel": "Die Phasen der Website-Erstellung",
+    "demoToast": "Die Website ist online",
+    "demoCaption": "Von der Struktur bis zur fertigen Website: Alle Phasen sind im Preis enthalten.",
+    "badgeTitle": "Schnell von Anfang an",
+    "badgeText": "geprüft mit Lighthouse",
+    "badgeLink": {
+      "discriminant": "custom",
+      "value": "#qualita"
+    }
+  },
+  "manifesto": {
+    "line1": "Eine schöne Website, die niemand findet, ist eine Ausgabe.",
+    "line2": "Eine schnelle Website, die Google zeigt, ist eine Investition.",
+    "text": "Ich beginne nicht mit dem Design, sondern damit, wer Ihre Kunden sind, was sie bei Google suchen und was sie überzeugt, Sie zu kontaktieren. Die Optik kommt danach, und sie steht im Dienst der Ergebnisse.\n"
+  },
+  "types": {
+    "eyebrow": "Welche Art von Website brauchen Sie?",
+    "title": "Jedes Unternehmen braucht seine eigene Website, kein Template",
+    "text": "Ich helfe Ihnen, die passende Lösung für Ihre Ziele und Ihr Budget zu wählen. Egal welche Art von Website: Die Grundqualität ist immer dieselbe.\n",
+    "items": [
+      {
+        "icon": "monitor",
+        "title": "Firmenwebsite",
+        "text": "Stellt Ihr Unternehmen, Ihre Leistungen und Ihr Team vor und macht aus Besuchen Anfragen.",
+        "audience": "Für Unternehmen, Kanzleien und Selbstständige"
+      },
+      {
+        "icon": "cart",
+        "title": "Onlineshop",
+        "text": "Ein schneller, leicht zu pflegender Shop, mit für Google optimierten Produktseiten und sicheren Zahlungen.",
+        "audience": "Für alle, die online verkaufen"
+      },
+      {
+        "icon": "target",
+        "title": "Landingpage",
+        "text": "Eine Seite, ein Ziel: perfekt für Google- und Meta-Ads-Kampagnen, bis ins Detail messbar.",
+        "audience": "Für Kampagnen und Produktstarts"
+      },
+      {
+        "icon": "stack",
+        "title": "Individuelle Projekte",
+        "text": "Mehrsprachige Websites, Kundenbereiche, E-Learning, Konfiguratoren und Anbindungen an Ihre Unternehmenssoftware.",
+        "audience": "Für besondere Anforderungen"
+      }
+    ]
+  },
+  "included": {
+    "eyebrow": "Leistungsumfang",
+    "title": "Alles, was Sie brauchen, zu einem Preis",
+    "text": "Keine „Extras“, die mitten im Projekt auftauchen. Das Angebot deckt alle Phasen ab, von der ersten Analyse bis zur abschließenden Schulung.\n",
+    "image": "@it",
+    "imageAlt": "Illustration: von der Sitemap über das Wireframe zur fertigen Website",
+    "ctaLabel": "Kostenloses Angebot anfordern",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "items": [
+      {
+        "title": "Analyse und Ziele",
+        "text": "Ich sammle Material, Zugänge, Ziele und Wettbewerber. Ich prüfe, was Ihre Kunden bei Google suchen, bevor irgendetwas entschieden wird."
+      },
+      {
+        "title": "Struktur der Website",
+        "text": "Seiten, Wege und Inhalte werden vor dem Design geordnet, damit Besucher sofort finden, was sie suchen."
+      },
+      {
+        "title": "Texte, die verkaufen",
+        "text": "Ich schreibe die Texte mit den Worten, die Ihre Kunden verwenden und die Google belohnt. Sie geben sie vor der Veröffentlichung frei."
+      },
+      {
+        "title": "Individuelles Design",
+        "text": "Gestaltet für Desktop, Tablet und Smartphone. Keine Templates: Die Website erzählt von Ihrem Unternehmen, nicht von einem anderen."
+      },
+      {
+        "title": "Saubere Entwicklung",
+        "text": "WordPress, wenn Sie selbst pflegen möchten, individuelle Lösungen, wenn maximale Geschwindigkeit gefragt ist. Nie schwere Page Builder."
+      },
+      {
+        "title": "Technisches SEO und Sichtbarkeit in der KI",
+        "text": "Titel, Beschreibungen, strukturierte Daten, Sitemap und Local SEO. Klare Inhalte, die auch ChatGPT, Gemini und Perplexity lesen und zitieren können."
+      },
+      {
+        "title": "Performance und Core Web Vitals",
+        "text": "Optimierte Bilder, schlanker Code, richtig geladene Schriften. Jede Seite wird vor der Übergabe mit Lighthouse geprüft."
+      },
+      {
+        "title": "Tracking ab dem ersten Tag",
+        "text": "Google Analytics 4, Tag Manager, Search Console und Consent Mode eingerichtet: Sie wissen, wie viele Anfragen kommen und woher."
+      },
+      {
+        "title": "Barrierefrei, sicher und rechtskonform",
+        "text": "Konform mit dem Barrierefreiheitsstärkungsgesetz, mit sicherer Verbindung (HTTPS), Security-Headern sowie Datenschutz und Cookies nach DSGVO."
+      },
+      {
+        "title": "Schulung, Übergabe und … sie gehört Ihnen",
+        "text": "Ich zeige Ihnen, wie Sie die Website selbst aktualisieren. Domain, Zugänge und Code laufen auf Ihren Namen: keine Abhängigkeit, niemals."
+      }
+    ]
+  },
+  "quality": {
+    "eyebrow": "Überprüfbare Qualität",
+    "title": "Sie müssen mir nicht glauben: Sie können es prüfen",
+    "text": "Jede Website wird nach einer Prüfung mit **Google Lighthouse** übergeben, dem kostenlosen Tool, mit dem jeder Geschwindigkeit, Barrierefreiheit, technische Qualität und SEO einer Seite messen kann. Mein Ziel ist 100 in allen vier Kategorien.\n",
+    "linkLabel": "Was Lighthouse ist, einfach erklärt",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "/#lighthouse"
+    },
+    "linkNewTab": true,
+    "scoresLabel": "Lighthouse-Ziel: 100 von 100 in allen vier Kategorien",
+    "scores": [
+      {
+        "label": "Leistung",
+        "value": 100
+      },
+      {
+        "label": "Barrierefreiheit",
+        "value": 100
+      },
+      {
+        "label": "Best Practices",
+        "value": 100
+      },
+      {
+        "label": "SEO",
+        "value": 100
+      }
+    ],
+    "checks": [
+      "Core Web Vitals innerhalb der Google-Grenzwerte",
+      "HTTPS und Security-Header",
+      "Strukturierte Daten für Google und KI",
+      "Komplett per Tastatur bedienbar"
+    ]
+  },
+  "cases": {
+    "eyebrow": "Referenzen",
+    "title": "Einige Websites, die ich gebaut habe",
+    "text": "Verschiedene Branchen, eine Methode: verstehen, wer die Website nutzt, und sie genau dafür bauen.\n",
+    "items": [
+      "projsystem",
+      "european-forensic-institute"
+    ]
+  },
+  "steps": {
+    "eyebrow": "So läuft es ab",
+    "title": "Vom Gespräch bis zur fertigen Website, ohne Überraschungen",
+    "text": "Sie wissen immer, wo wir stehen, was ich von Ihnen brauche und wann der nächste Schritt kommt.\n",
+    "items": [
+      {
+        "title": "Kostenloses Gespräch",
+        "text": "25 Minuten zum Kennenlernen: Ziele, Zeitrahmen und Budget."
+      },
+      {
+        "title": "Analyse und Angebot",
+        "text": "Ich untersuche Ihr Unternehmen und Ihre Konkurrenz, und Sie erhalten ein Festpreisangebot mit Terminen."
+      },
+      {
+        "title": "Struktur und Texte",
+        "text": "Wir legen Seiten und Inhalte fest. Ich schreibe die Texte, Sie geben sie frei."
+      },
+      {
+        "title": "Design",
+        "text": "Sie sehen die Website vor der Entwicklung und wünschen sich alle Änderungen, die Sie möchten."
+      },
+      {
+        "title": "Entwicklung und Tests",
+        "text": "Ich entwickle die Website und teste sie auf allen Geräten und mit Lighthouse."
+      },
+      {
+        "title": "Launch und Schulung",
+        "text": "Livegang, SEO-Weiterleitungen von der alten Website und Schulung für die Pflege."
+      }
+    ],
+    "boxTitle": "Der erste Schritt ist der einfachste",
+    "boxText": "Ein 25-minütiges Gespräch, kostenlos und unverbindlich. Danach wissen Sie, was Sie brauchen und was es kostet.",
+    "boxCtaLabel": "Kostenloses Gespräch buchen",
+    "boxCtaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "offer": {
+    "show": true,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "title": "Fragen zu Websites",
+    "text": "Ihre Frage ist nicht dabei? [Schreiben Sie mir](#contatti), ich antworte innerhalb eines Werktags.\n",
+    "items": [
+      {
+        "question": "Was kostet eine Website?",
+        "answer": "Das hängt von Seitenzahl, Funktionen, Sprachen und Inhalten ab. Nach dem kostenlosen Gespräch erhalten Sie ein Angebot zum **Festpreis**, das alles enthält, was Sie auf dieser Seite sehen: ohne versteckte Kosten oder Zusatzstunden.\n"
+      },
+      {
+        "question": "Wie lange dauert die Umsetzung?",
+        "answer": "Das hängt vor allem von der Größe der Website und davon ab, wie schnell Freigaben kommen. Im Angebot stehen die Termine jeder Phase und der Übergabe, und ich halte sie ein.\n"
+      },
+      {
+        "question": "Kann ich die Website selbst aktualisieren?",
+        "answer": "Ja. Die Schulung ist inklusive: Ich zeige Ihnen, wie Sie Texte, Bilder und Seiten ändern. Wenn Sie sich nicht darum kümmern möchten, übernehme ich das mit einem Wartungsvertrag.\n"
+      },
+      {
+        "question": "Ich habe schon eine Website: Verliere ich meine Google-Rankings?",
+        "answer": "Nicht, wenn die Migration sauber läuft. Vor dem Launch erfasse ich alle bestehenden Seiten und richte die Weiterleitungen ein, damit Google und Besucher die neuen Adressen sofort finden.\n"
+      },
+      {
+        "question": "Welche Technologie verwenden Sie?",
+        "answer": "Die, die zu Ihnen passt. WordPress, wenn Sie Inhalte selbst pflegen wollen, individuelle Lösungen, wenn Geschwindigkeit und Sicherheit an erster Stelle stehen. In beiden Fällen ohne schwere Page Builder, die die Website ausbremsen.\n"
+      },
+      {
+        "question": "Helfen Sie auch bei Texten und Fotos?",
+        "answer": "Die Texte schreibe ich, auf Basis eines Gesprächs mit Ihnen. Bei Fotos berate ich Sie, was gebraucht wird, und vermittle auf Wunsch Fotografen meines Vertrauens; andernfalls nutze ich hochwertige professionelle Bilder.\n"
+      },
+      {
+        "question": "Gehört die Website wirklich mir?",
+        "answer": "Ja: Domain, Hosting, Code und Konten (Google, Analytics) laufen auf Ihren Namen. Sie können jederzeit den Dienstleister wechseln, ohne Bindung.\n"
+      }
+    ],
+    "ctaLabel": "Kostenloses Angebot anfordern",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "siti-web"
+    ],
+    "title": "Bevor Sie eine Website machen lassen, lesen Sie das",
+    "text": "Kosten, Barrierefreiheit, das Unverzichtbare: Antworten auf die Fragen, die ich vor einem Projekt am häufigsten höre.\n",
+    "buttonLabel": "Alle Artikel"
+  },
+  "contact": {
+    "title": "Sprechen wir über Ihre neue Website",
+    "formTitle": "Kostenloses Angebot anfordern",
+    "topics": [
+      "nuovo-sito"
+    ]
+  },
+  "seo": {
+    "slug": "websites",
+    "title": "Webdesign und Entwicklung kompletter Websites | bortolin.dev",
+    "description": "Firmenwebsites, Onlineshops und individuelle Projekte: Design, Texte, SEO, Lighthouse-Speed, Tracking und Schulung inklusive. Festpreis, und sie gehört Ihnen.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

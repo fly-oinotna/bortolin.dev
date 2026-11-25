@@ -1,0 +1,46 @@
+{
+  "name": "Pacchetto SEO con l’AI",
+  "offer": {
+    "deadline": "2027-01-31",
+    "eyebrow": "Offerta di lancio",
+    "deadlineLabel": "Valida fino al 31/01/2027",
+    "title": "Pacchetto {% verde %}“SEO con l’AI”{% /verde %} per il tuo sito",
+    "text": "Il pulsante “Genera con AI” che hai visto qui sopra, integrato nel pannello del tuo sito: meta title, description e testi alternativi delle immagini con un clic, su tutte le pagine.\n",
+    "items": [
+      {
+        "title": "Meta title e description",
+        "text": "per ogni pagina e prodotto"
+      },
+      {
+        "title": "Testi alternativi",
+        "text": "per tutte le immagini"
+      },
+      {
+        "title": "Formazione inclusa",
+        "text": "e un mese di assistenza"
+      }
+    ],
+    "ctaLabel": "Richiedi il pacchetto",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "note": "Per WordPress e WooCommerce · prezzi + IVA",
+    "image": "/src/assets/images/offerte/illustrazione-offerta.svg",
+    "boxEyebrow": "Pacchetto SEO con l’AI",
+    "boxValue": "490 €",
+    "boxOldValue": "790 €",
+    "boxText": "costi d’uso dell’AI esclusi",
+    "stamp": "−38%"
+  },
+  "menu": {
+    "megaTitle": "Pacchetto “SEO con l’AI” a 490 € invece di 790 €",
+    "megaText": "Per chi lo richiede entro il 31/01/2027:",
+    "megaItems": [
+      "Meta title e description con un clic, per ogni pagina",
+      "Testi alternativi per tutte le immagini",
+      "Formazione e un mese di assistenza inclusi"
+    ],
+    "mobileText": "per chi lo richiede entro il 31/01/2027",
+    "cardText": "Meta title, description e testi alternativi con un clic, su WordPress."
+  }
+}

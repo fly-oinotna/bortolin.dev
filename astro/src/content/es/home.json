@@ -1,0 +1,483 @@
+{
+  "hero": {
+    "eyebrow": "Diseño web - desarrollo web - consultoría SEO",
+    "title": "Webs que cargan rápido, posicionan en Google y hablan con la IA",
+    "text": "Creo tu web **de principio a fin**: diseño, textos, SEO, velocidad, medición e inteligencia artificial vienen **de serie**, no como extras. Una web que te trae clientes, con **precio cerrado** y explicada sin tecnicismos.\n",
+    "ctaLabel": "Pide tu presupuesto gratis",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Mira qué incluye",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#servizi"
+    },
+    "highlights": [
+      "Precio cerrado, no por horas",
+      "La web es tuya",
+      "Hablas conmigo",
+      "ES · EN · IT · DE"
+    ],
+    "projectsValue": 400,
+    "yearsValue": 15,
+    "scoresTitle": "Cada web que entrego apunta a",
+    "scores": [
+      {
+        "label": "Rendimiento",
+        "value": 100
+      },
+      {
+        "label": "Accesibilidad",
+        "value": 100
+      },
+      {
+        "label": "Buenas prácticas",
+        "value": 100
+      },
+      {
+        "label": "SEO",
+        "value": 100
+      }
+    ],
+    "boxTitle": "Sin sorpresas",
+    "boxText": "Un presupuesto detallado con funciones, plazos y **precio cerrado**. Lo que ves en el presupuesto es exactamente lo que pagas.\n"
+  },
+  "manifesto": {
+    "line1": "No hago webs más bonitas.",
+    "line2": "Hago webs que trabajan para ti.",
+    "text": "Una web bonita pero lenta, invisible en Google o imposible de medir es un gasto. Una web rápida, bien posicionada y conectada a las herramientas adecuadas es un comercial que trabaja las 24 horas.\n"
+  },
+  "services": {
+    "eyebrow": "Servicios",
+    "title": "Una web con SEO, velocidad e IA incluidos",
+    "text": "Nada de venderte la web y luego los «extras», uno a uno. **Cada web que creo es rápida desde el primer día, está optimizada para Google y preparada para la IA**, con todo lo necesario para medir resultados. Un presupuesto, un precio cerrado.\n",
+    "mainEyebrow": "Donde empieza todo",
+    "mainTitle": "Tu web completa",
+    "mainText": "Webs corporativas, tiendas online y proyectos a medida. Te entrego una web **terminada, que funciona y que sabes manejar**: desde el primer boceto hasta la publicación y la formación.\n\nEl precio se fija en el presupuesto y **no se mueve**.\n",
+    "mainCtaLabel": "Pide tu presupuesto gratis",
+    "mainCtaLink": {
+      "discriminant": "#contatti"
+    },
+    "mainLinkLabel": "Cómo creo las webs",
+    "mainLinkLink": {
+      "discriminant": "/servizi/siti-web/"
+    },
+    "includedTitle": "Siempre incluido",
+    "included": [
+      {
+        "title": "Diseño a medida",
+        "text": "Sin plantillas: pensado para tus clientes, en cualquier pantalla."
+      },
+      {
+        "title": "Textos que venden",
+        "text": "Escritos con las palabras que tus clientes buscan en Google."
+      },
+      {
+        "title": "SEO desde el primer día",
+        "text": "Estructura, datos estructurados, SEO local y Perfil de Empresa en Google."
+      },
+      {
+        "title": "Velocidad de 100",
+        "text": "Rendimiento, accesibilidad y buenas prácticas comprobados con Lighthouse."
+      },
+      {
+        "title": "Preparada para la IA",
+        "text": "Fácil de leer para ChatGPT y Gemini, con un asistente de IA si lo necesitas."
+      },
+      {
+        "title": "Medible desde el inicio",
+        "text": "Google Analytics 4, Tag Manager y Consent Mode configurados."
+      },
+      {
+        "title": "Accesible y conforme",
+        "text": "Cumple la Ley Europea de Accesibilidad, con privacidad y cookies en regla."
+      },
+      {
+        "title": "100 % tuya, y sabes usarla",
+        "text": "Cuentas a tu nombre y formación para que la actualices tú."
+      }
+    ],
+    "othersTitle": "¿Ya tienes web? Hagamos que rinda más",
+    "othersText": "Si tu web está bien pero no da resultados, intervengo solo donde hace falta. Muchas veces no hay que rehacerla: hay que arreglarla.\n",
+    "othersMore": "Mejorar mi web",
+    "others": [
+      {
+        "icon": "search",
+        "title": "Consultoría SEO",
+        "text": "Auditorías técnicas, palabras clave, SEO local, migraciones y visibilidad en ChatGPT. Mi especialidad.",
+        "link": {
+          "discriminant": "/servizi/consulenza-seo/"
+        },
+        "highlight": true
+      },
+      {
+        "icon": "bolt",
+        "title": "Rendimiento y Lighthouse",
+        "text": "Hago que tu web actual vuele y supere las Core Web Vitals de Google.",
+        "link": {
+          "discriminant": "/servizi/miglioramento-prestazioni-siti-web/"
+        },
+        "highlight": false
+      },
+      {
+        "icon": "sparkles",
+        "title": "Integración de IA",
+        "text": "Asistentes para tus clientes, automatizaciones que ahorran horas y formación para tu equipo.",
+        "link": {
+          "discriminant": "/servizi/integrazione-ai/"
+        },
+        "highlight": false
+      },
+      {
+        "icon": "bulb",
+        "title": "Consultoría digital",
+        "text": "Análisis, plan de acción por prioridades, talleres y una segunda opinión sobre tu agencia.",
+        "link": {
+          "discriminant": "/servizi/consulenza-digitale/"
+        },
+        "highlight": false
+      }
+    ],
+    "adsTitle": "¿Ya tienes la web? Ahora, a por los clientes",
+    "adsText": "Campañas con tarifa cerrada, no con un porcentaje de tu inversión. Optimizo para conseguir contactos y ventas, no clics ni «me gusta».\n",
+    "ads": [
+      {
+        "title": "Google Ads",
+        "text": "Search, Performance Max y YouTube. Aparece justo cuando te buscan.",
+        "link": {
+          "discriminant": "/servizi/google-ads/"
+        }
+      },
+      {
+        "title": "Publicidad en IA",
+        "badge": "Nuevo",
+        "text": "Anuncios dentro de ChatGPT y los asistentes de IA: el nuevo canal, antes que tu competencia.",
+        "link": {
+          "discriminant": "/servizi/ai-ads/"
+        }
+      },
+      {
+        "title": "Meta Ads",
+        "text": "Facebook e Instagram para conseguir contactos, con Píxel y API de Conversiones bien configurados.",
+        "link": {
+          "discriminant": "/servizi/meta-ads/"
+        }
+      }
+    ]
+  },
+  "lighthouse": {
+    "eyebrow": "Rendimiento y buenas prácticas",
+    "title": "Lighthouse, explicado fácil",
+    "text": "**Lighthouse es la herramienta gratuita de Google que le pasa la ITV a tu web.** La revisa de arriba abajo y le pone cuatro notas, de 0 a 100: el mismo tipo de control que usa Google para saber si tu web ofrece una buena experiencia.\n\nCada web que creo se entrega **comprobada con Lighthouse**. El 100 no es por presumir: es la forma más sencilla de demostrar, con un número que puedes comprobar tú mismo, que el trabajo está bien hecho.\n",
+    "image": "@it",
+    "imageAlt": "Ilustración de una web con cuatro puntuaciones de Lighthouse en 100 y las Core Web Vitals en verde",
+    "scores": [
+      {
+        "title": "Rendimiento",
+        "value": 100,
+        "text": "**Lo rápida que es tu web.** Como una tienda cuya puerta se abre al instante: si el cliente tiene que esperar, se va. Según Google, más de la mitad de las visitas desde el móvil se abandonan si la página tarda más de 3 segundos en cargar.\n"
+      },
+      {
+        "title": "Accesibilidad",
+        "value": 100,
+        "text": "**Todo el mundo puede usarla**, también quien ve poco o navega solo con el teclado o un lector de pantalla. Es lo correcto, amplía tu público y, desde el 28 de junio de 2025, con la Ley Europea de Accesibilidad, es obligatorio para muchas empresas que venden online.\n"
+      },
+      {
+        "title": "Buenas prácticas",
+        "value": 100,
+        "text": "**Está hecha como manda la profesión.** Conexión segura (HTTPS), sin errores ocultos, componentes actualizados, imágenes en el formato adecuado. Como una instalación eléctrica en regla: no se ve, pero marca la diferencia.\n"
+      },
+      {
+        "title": "SEO",
+        "value": 100,
+        "text": "**Google entiende a qué te dedicas.** Títulos, descripciones, estructura de las páginas y enlaces en orden. Es la base técnica: sin ella, hasta el mejor contenido pasa desapercibido.\n"
+      }
+    ],
+    "cwvTitle": "Core Web Vitals",
+    "cwvText": "Tres mediciones que Google toma de los **visitantes reales** de tu web y que también usa para decidir el posicionamiento. En resumen: velocidad, respuesta y estabilidad.\n",
+    "cwv": [
+      {
+        "title": "LCP · velocidad",
+        "text": "Lo que tarda en aparecer el contenido principal",
+        "good": "Bien: menos de 2,5 s"
+      },
+      {
+        "title": "INP · respuesta",
+        "text": "Lo rápido que reacciona al tocar o hacer clic",
+        "good": "Bien: menos de 200 ms"
+      },
+      {
+        "title": "CLS · estabilidad",
+        "text": "Cuánto «salta» la página al cargar (ese botón que se escapa)",
+        "good": "Bien: menos de 0,1"
+      }
+    ],
+    "testTitle": "¿Qué nota saca tu web?",
+    "testText": "Escribe la dirección y se abrirá PageSpeed Insights, la herramienta oficial de Google basada en Lighthouse. ¿Ves números en rojo o naranja? **Hablemos**.\n",
+    "testPlaceholder": "www.tuweb.es",
+    "testButton": "Analizar mi web"
+  },
+  "seoSection": {
+    "eyebrow": "Consultoría SEO",
+    "title": "SEO: que te encuentre quien ya te está buscando",
+    "text": "Cada día alguien busca en Google justo lo que ofreces. El SEO es el trabajo para que te encuentre **a ti**, no a la competencia. Y, a diferencia de la publicidad, los resultados siguen cuando dejas de pagar. **En las webs que creo, el SEO forma parte de los cimientos**; si ya tienes web, la consultoría SEO parte de ahí.\n",
+    "image": "@it",
+    "imageAlt": "Ilustración de una página de resultados con tu web en primera posición",
+    "pillars": [
+      {
+        "title": "Técnico",
+        "text": "Velocidad, estructura, datos estructurados, indexación. Los cimientos."
+      },
+      {
+        "title": "Contenido",
+        "text": "Páginas que responden a las preguntas reales de tus clientes."
+      },
+      {
+        "title": "Autoridad",
+        "text": "Opiniones, menciones, enlaces y tu Perfil de Empresa en Google."
+      }
+    ],
+    "boxTitle": "Y ahora también la IA",
+    "boxText": "Cada vez más gente pide consejo a ChatGPT, Gemini o Perplexity en lugar de a Google. Preparo tu web para que estas IA la entiendan y la citen en sus respuestas (se llama GEO).\n",
+    "note": "**Hablando claro:** nadie puede garantizarte el primer puesto en Google, y quien lo hace te está mintiendo. Lo que sí te garantizo es un método probado, prioridades claras e informes que se entienden.\n"
+  },
+  "ai": {
+    "eyebrow": "Integración de IA",
+    "title": "Inteligencia artificial que de verdad trabaja para tu negocio",
+    "text": "Se habla mucho de IA, pero ¿qué puede hacer de verdad por una pyme? Bastante, si se usa con cabeza. **Primero vemos juntos si la necesitas y luego la integramos en tu nueva web o en las herramientas que ya usas**, cumpliendo el RGPD y el Reglamento Europeo de IA.\n",
+    "image": "@it",
+    "imageAlt": "Ilustración de un asistente de IA conectado a una web, el email, documentos y estadísticas",
+    "cards": [
+      {
+        "title": "Asistente en la web",
+        "text": "Responde a tus clientes las 24 horas con **tu** información (horarios, productos, precios) y te pasa contactos listos para llamar.\n"
+      },
+      {
+        "title": "Automatizaciones",
+        "text": "Presupuestos, respuestas a emails, clasificación de solicitudes, actualización del CRM: el trabajo repetitivo lo hace la máquina.\n"
+      },
+      {
+        "title": "Contenidos y catálogos",
+        "text": "Descripciones, fichas de producto y traducciones generadas con IA y **siempre revisadas por una persona**.\n"
+      },
+      {
+        "title": "Asistente interno",
+        "text": "Tu equipo pregunta a los documentos de la empresa (manuales, tarifas, procedimientos) y obtiene respuestas en segundos.\n"
+      },
+      {
+        "title": "Visibilidad en la IA",
+        "text": "Datos estructurados y contenidos claros para que ChatGPT, Gemini y Perplexity te conozcan y te recomienden.\n"
+      },
+      {
+        "title": "Formación",
+        "text": "Talleres prácticos para usar la IA cada día con seguridad, sin poner en riesgo los datos de tus clientes.\n"
+      }
+    ]
+  },
+  "benefits": {
+    "eyebrow": "Cómo trabajo",
+    "title": "Las ventajas de trabajar con un freelance (el adecuado)",
+    "text": "Tienes la experiencia de alguien que ha dirigido equipos de desarrollo en agencias internacionales, pero con **un único interlocutor: yo**.\n",
+    "items": [
+      {
+        "icon": "tag",
+        "title": "Precio cerrado, no por horas",
+        "text": "Tras el análisis recibes un presupuesto claro. Ese precio no cambia: nada de horas extra por sorpresa."
+      },
+      {
+        "icon": "key",
+        "title": "La web es tuya",
+        "text": "Cuentas, dominio, código y datos están a tu nombre. Si un día quieres cambiar de proveedor, eres libre."
+      },
+      {
+        "icon": "chat",
+        "title": "Hablas siempre conmigo",
+        "text": "Sin comerciales ni «account managers» que hagan de intermediarios. Quien te escucha es quien hace el trabajo."
+      },
+      {
+        "icon": "idea",
+        "title": "Todo explicado fácil",
+        "text": "Convierto lo técnico en decisiones: qué hacer, por qué, cuánto cuesta y qué te aporta."
+      },
+      {
+        "icon": "video",
+        "title": "Informes que se entienden",
+        "text": "Cada mes, un vídeo corto donde te enseño los números y lo que significan. Lo ves cuando quieras."
+      },
+      {
+        "icon": "shield",
+        "title": "Sincero aunque me cueste",
+        "text": "Si algo no te hace falta, te lo digo. Muchas veces no hay que rehacer la web: hay que arreglarla."
+      }
+    ]
+  },
+  "problems": {
+    "eyebrow": "¿Te suena?",
+    "title": "Si te suena aunque sea una de estas frases, podemos hacer mucho",
+    "items": [
+      "«La web es bonita, pero no entran solicitudes.»",
+      "«En Google solo salen mis competidores.»",
+      "«La web va lenta, sobre todo en el móvil.»",
+      "«Pago anuncios pero no sé qué me aportan.»",
+      "«Recibo informes llenos de gráficos que nadie entiende.»",
+      "«Todo el mundo habla de IA, pero no sé por dónde empezar.»"
+    ]
+  },
+  "method": {
+    "eyebrow": "Método",
+    "title": "De la primera llamada a la web publicada, en 6 pasos claros",
+    "text": "",
+    "steps": [
+      {
+        "title": "Llamada inicial",
+        "text": "25 minutos, gratis y sin compromiso. Cuéntame tu negocio, tus clientes y tus objetivos."
+      },
+      {
+        "title": "Análisis",
+        "text": "Estudio a tu competencia, lo que tus clientes buscan en Google y tu web actual, si la tienes. Parto de datos, no de opiniones."
+      },
+      {
+        "title": "Presupuesto cerrado",
+        "text": "Páginas, funciones, plazos y precio, todo por escrito. SEO, velocidad y medición ya incluidos."
+      },
+      {
+        "title": "Diseño, textos y desarrollo",
+        "text": "Primero apruebas estructura, textos y diseño; luego desarrollo la web. Te mantengo al día en cada fase."
+      },
+      {
+        "title": "Publicación y formación",
+        "text": "Revisión con Lighthouse, migración SEO sin perder posiciones, medición en marcha y formación para gestionar la web."
+      },
+      {
+        "title": "Crecimiento",
+        "text": "Si quieres, seguimos juntos: SEO, campañas, nuevas funciones de IA y un vídeo-informe mensual."
+      }
+    ]
+  },
+  "fit": {
+    "eyebrow": "Para quién es",
+    "title": "Trabajaremos bien juntos si…",
+    "yesTitle": "Encajamos si",
+    "yes": [
+      "tienes una pyme, eres profesional o tienes una tienda online",
+      "buscas a alguien que te asesore, no solo que ejecute",
+      "quieres resultados medibles y sabes que la calidad es una inversión",
+      "valoras una opinión sincera, aunque no sea la que esperabas"
+    ],
+    "noTitle": "No encajamos si",
+    "no": [
+      "solo buscas el precio más bajo",
+      "quieres la promesa de «primero en Google en un mes»",
+      "no tienes tiempo para vernos ni media hora al mes",
+      "prefieres una web «bonita» a una que funcione"
+    ]
+  },
+  "about": {
+    "eyebrow": "Sobre mí",
+    "title": "Con quién vas a trabajar",
+    "text": "Me llamo Antonio y llevo más de 15 años creando y optimizando páginas web. Trabajé en agencias web en el extranjero, primero como *junior developer*, luego como *senior* y por último como *lead developer*, al frente del equipo de desarrollo. Desde 2016 soy freelance y trabajo tanto con empresas como con agencias.\n\nSiempre he considerado **la velocidad, el SEO y la calidad del código** parte del proyecto, no un añadido. Hoy pongo esa experiencia al servicio de quien quiere crecer en internet de forma medible, incorporando la inteligencia artificial donde de verdad ayuda.\n\nSoy de origen friulano y vivo en el Véneto, en el norte de Italia. En 11 años en el extranjero aprendí a hablar con fluidez **español, inglés y alemán**: también puedo acompañar tu proyecto en mercados internacionales.\n",
+    "image": "@it",
+    "imageAlt": "Antonio Bortolin, consultor de SEO, rendimiento e IA",
+    "stats": [
+      {
+        "value": 15,
+        "suffix": "+",
+        "text": "años de experiencia",
+        "animate": true
+      },
+      {
+        "value": 400,
+        "suffix": "+",
+        "text": "proyectos",
+        "animate": true
+      },
+      {
+        "value": 4,
+        "text": "idiomas",
+        "animate": false
+      },
+      {
+        "value": 1,
+        "text": "único interlocutor",
+        "animate": false
+      }
+    ]
+  },
+  "agency": {
+    "eyebrow": "Para agencias web",
+    "title": "Tu equipo técnico, cuando lo necesites",
+    "text": "Trabajo entre bastidores para agencias de comunicación, estudios de diseño y diseñadores freelance, también con **tu marca** (marca blanca). Nunca contacto con tus clientes ni me promociono ante ellos: es una regla, no una promesa.\n",
+    "image": "@it",
+    "imageAlt": "Ilustración: un diseño convertido en código que funciona",
+    "cards": [
+      {
+        "title": "Desarrollo y apoyo externo",
+        "text": "Convierto tus diseños (Figma, PDF o design system) en webs rápidas y accesibles. Arreglo webs existentes, optimizo la velocidad, configuro la medición y me ocupo del mantenimiento.",
+        "ctaLabel": "Desarrollo para agencias",
+        "ctaLink": {
+          "discriminant": "custom",
+          "value": "/servizi/sviluppatore-freelance-per-web-agency/#white-label"
+        }
+      },
+      {
+        "title": "Project manager",
+        "text": "Coordino proyectos digitales entre cliente y equipo: convierto necesidades en tareas claras, controlo tiempos y recursos y detecto los problemas antes de que aparezcan.",
+        "ctaLabel": "Gestión de proyectos para agencias",
+        "ctaLink": {
+          "discriminant": "custom",
+          "value": "/servizi/sviluppatore-freelance-per-web-agency/#project-management"
+        }
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Las preguntas que más me hacen",
+    "text": "¿No encuentras la tuya? [Escríbeme](#contatti) y te respondo en un día laborable.\n",
+    "items": [
+      {
+        "question": "¿Cuánto cuesta una página web?",
+        "answer": "Depende de cuántas páginas y funciones necesites. Tras la llamada gratuita y un primer análisis te envío un presupuesto con **precio cerrado** que ya incluye SEO, velocidad, accesibilidad, medición y formación: sin costes ocultos. La consultoría y la gestión de campañas también tienen precio cerrado, nunca un porcentaje de tu inversión.\n"
+      },
+      {
+        "question": "¿Qué incluye la web?",
+        "answer": "Todo lo necesario para una web que funcione: diseño a medida, textos, desarrollo, SEO técnico y local, optimización Lighthouse, accesibilidad, Google Analytics y Tag Manager con Consent Mode, privacidad y cookies en regla, publicación y formación. Las funciones de IA, como un asistente para clientes, se añaden cuando las necesites.\n"
+      },
+      {
+        "question": "¿Cuándo se ven los resultados?",
+        "answer": "Las mejoras de velocidad se ven al momento en Lighthouse, y en los datos de visitantes reales de Google en aproximadamente un mes. Las campañas de Google Ads dan los primeros datos en pocos días. El SEO es una inversión: los resultados sólidos suelen llegar entre 3 y 6 meses, y luego se mantienen.\n"
+      },
+      {
+        "question": "¿Tengo que rehacer mi web desde cero?",
+        "answer": "No necesariamente. Muy a menudo una web existente se puede acelerar y corregir en SEO por mucho menos de lo que cuesta rehacerla. Si rehacerla es la mejor opción, te lo diré y te explicaré por qué.\n"
+      },
+      {
+        "question": "¿Por qué debería importarme la nota de Lighthouse?",
+        "answer": "Porque mide cosas que afectan a tu facturación: una web lenta pierde visitas, una web poco accesible excluye clientes (y hoy puede no cumplir la ley), una web con problemas técnicos lo tiene difícil en Google. Además, es una forma objetiva de comprobar el trabajo de cualquiera, incluido el mío.\n"
+      },
+      {
+        "question": "¿La IA puede ayudar de verdad a un pequeño negocio?",
+        "answer": "Sí, si resuelve un problema concreto: responder antes a los clientes, quitarte trabajo repetitivo, aparecer en ChatGPT. Siempre partimos de un caso real y medimos el tiempo o el dinero ahorrado. Si no compensa, no se hace.\n"
+      },
+      {
+        "question": "¿La web y las cuentas son mías?",
+        "answer": "Siempre. Dominio, hosting, código, cuentas de Google y de publicidad están a tu nombre. Puedes cambiar de proveedor cuando quieras, sin ataduras.\n"
+      },
+      {
+        "question": "¿Trabajas a distancia y con clientes de España?",
+        "answer": "Sí. Vivo en el Véneto (Italia) y me reúno en persona con clientes del Véneto y Friuli, pero trabajo a distancia sin ningún problema con toda Italia y el extranjero, España incluida, en español, inglés, italiano y alemán.\n"
+      }
+    ]
+  },
+  "seo": {
+    "title": "Webs rápidas con SEO e IA incluidos | bortolin.dev",
+    "description": "Páginas web rápidas, con precio cerrado y preparadas para Google y la IA. Diseñador web, desarrollador y consultor SEO freelance.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false
+  }
+}

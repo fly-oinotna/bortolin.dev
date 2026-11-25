@@ -1,0 +1,46 @@
+{
+  "name": "Auditoría SEO por 290 €",
+  "offer": {
+    "eyebrow": "Oferta de lanzamiento",
+    "deadlineLabel": "Válida hasta el 31 de enero de 2027",
+    "title": "Auditoría SEO completa por {% verde %}290 € en lugar de 490 €{% /verde %}",
+    "text": "Descubre en 5 días laborables qué frena tu web en Google y qué hacer primero. Y si después contratas la consultoría SEO, el coste de la auditoría se descuenta del primer mes.\n",
+    "items": [
+      {
+        "title": "Análisis técnico",
+        "text": "indexación, velocidad, errores"
+      },
+      {
+        "title": "Palabras clave",
+        "text": "y análisis de la competencia"
+      },
+      {
+        "title": "Vídeo y plan de acción",
+        "text": "prioridades claras, explicadas"
+      }
+    ],
+    "ctaLabel": "Reserva la auditoría",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "note": "Precios sin IVA · entrega en 5 días laborables",
+    "image": "@it",
+    "boxEyebrow": "Auditoría SEO completa",
+    "boxValue": "290 €",
+    "boxOldValue": "490 €",
+    "boxText": "descontable del primer mes de consultoría",
+    "stamp": "−40 %"
+  },
+  "menu": {
+    "megaTitle": "Auditoría SEO completa por 290 € en lugar de 490 €",
+    "megaText": "Si reservas antes del 31 de enero de 2027:",
+    "megaItems": [
+      "Análisis técnico: indexación, velocidad, errores",
+      "Palabras clave y análisis de la competencia",
+      "Vídeo y plan de acción, descontable del primer mes de consultoría"
+    ],
+    "mobileText": "si reservas antes del 31 de enero de 2027",
+    "cardText": "Entrega en 5 días laborables, descontable del primer mes de consultoría."
+  },
+  "original": "audit-seo"
+}

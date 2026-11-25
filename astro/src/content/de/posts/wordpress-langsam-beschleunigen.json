@@ -1,0 +1,23 @@
+{
+  "title": "Warum Ihre WordPress-Website langsam ist (und wie Sie sie beschleunigen)",
+  "content": {
+    "image": "@it",
+    "imageAlt": "WordPress-Backend mit der Liste der installierten Plugins",
+    "excerpt": "Page Builder, zu viele Plugins, schwere Bilder und das falsche Hosting: die häufigsten Ursachen, nach Wirkung sortiert, und was jeweils zu tun ist.",
+    "lead": "WordPress ist nicht von Natur aus langsam: Es wird langsam, wenn man es überlädt. Die gute Nachricht: Die Ursachen sind fast immer dieselben, und meist lässt sich viel verbessern, ohne die Website neu zu bauen. Hier sind sie, nach Wirkung sortiert.",
+    "text": "## Zuerst: messen\n\nÖffnen Sie PageSpeed Insights, geben Sie die Adresse der Startseite und ein, zwei wichtiger Seiten ein und sehen Sie sich die **mobile** Version an. Notieren Sie Werte und Core Web Vitals: Sie brauchen sie, um zu sehen, ob die Maßnahmen wirken.\n\n## Schwere Page Builder\n\nPage Builder erlauben es, Seiten per Drag-and-drop aus Blöcken zu bauen, laden aber oft viel Code, auch wo er nicht gebraucht wird. Ist die Website mit einem schweren Builder gebaut, ist es manchmal am besten, die wichtigsten Seiten zu entschlacken oder mit nativen Blöcken neu aufzubauen.\n\n## Zu viele Plugins (oder die falschen)\n\nEs zählt nicht nur die Anzahl, sondern was sie tun. Ein Plugin, das Skripte und Styles auf jeder Seite lädt, wiegt schwerer als zehn schlanke Plugins.\n\n- entfernen Sie die, die Sie nicht mehr nutzen;\n- ersetzen Sie Plugins, die dasselbe tun;\n- prüfen Sie, welche auf jeder Seite Dateien laden, auch wenn sie dort nicht gebraucht werden.\n\n## Schwere Bilder\n\nDas ist die häufigste Ursache einer langsamen Website. Fotos mit mehreren Megabyte, direkt aus der Kamera hochgeladen, bremsen alles aus.\n\n- nutzen Sie moderne Formate wie **WebP** oder AVIF;\n- laden Sie Bilder in der Größe hoch, in der sie angezeigt werden;\n- aktivieren Sie Lazy Loading für Bilder außerhalb des ersten Bildschirms.\n\n## Hosting und Cache\n\nGünstiges Shared Hosting mit Hunderten anderen Websites antwortet langsam, und keine Optimierung gleicht das ganz aus. Neben einem passenden Hosting braucht es einen gut konfigurierten **Cache**, Dateikomprimierung und, bei internationalem Publikum, ein CDN.\n\n## Externe Skripte\n\nChats, Karten, Videos, Werbepixel, Cookie-Banner, Bewertungs-Widgets: Jeder externe Dienst bringt Code mit, der geladen und ausgeführt werden muss. Sie müssen sie nicht entfernen, sondern **erst bei Bedarf** laden, etwa die Karte erst, wenn der Besucher zu ihr scrollt, oder das Video erst, wenn er auf Play drückt.\n\n## Schriften und Datenbank\n\nZu viele Schriften, oder Schriften von externen Diensten, verzögern die Anzeige des Textes: besser wenige Schnitte, auf dem eigenen Server gehostet. Und eine Datenbank voller Revisionen, Entwürfe und Daten deinstallierter Plugins bremst das Backend und manchmal die Website: Eine regelmäßige Bereinigung hilft.\n\n## Nach den Maßnahmen\n\nWiederholen Sie die Messungen auf denselben Seiten. Lighthouse zeigt die Verbesserungen sofort; die echten Besucherdaten, die Google für die Core Web Vitals nutzt, aktualisieren sich innerhalb einiger Wochen. Und damit die Website auf Dauer schnell bleibt, gilt eine einfache Regel: **Jedes neue Plugin und jeder neue Dienst wird auch nach seinem Gewicht bewertet.**"
+  },
+  "seo": {
+    "title": "WordPress langsam? So beschleunigen Sie es | bortolin.dev",
+    "description": "Page Builder, zu viele Plugins, schwere Bilder und das falsche Hosting: die häufigsten Ursachen, nach Wirkung sortiert, und was jeweils zu tun ist.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "wordpress-lento-come-velocizzarlo"
+}

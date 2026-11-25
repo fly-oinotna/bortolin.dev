@@ -1,0 +1,125 @@
+---
+import Icon from "../ui/Icon.astro";
+import Logo from "../ui/Logo.astro";
+import Stars from "../ui/Stars.astro";
+import ContactCards from "./ContactCards.astro";
+import LangSwitch from "./LangSwitch.astro";
+import type { Globals } from "../../lib/content";
+import { rich } from "../../lib/rich";
+import { href } from "../../lib/links";
+interface Props {
+  g: Globals;
+}
+const { g } = Astro.props;
+const s = g.settings;
+const f = s.footer;
+const social = [
+  { href: s.social.facebook, name: "Facebook", icon: "facebook" as const },
+  { href: s.social.instagram, name: "Instagram", icon: "instagram" as const },
+  { href: s.social.linkedin, name: "LinkedIn", icon: "linkedin" as const },
+].filter((x) => x.href);
+---
+
+<footer class="container grid grid-cols-1 gap-8 pb-6 md:grid-cols-2 md:gap-12 md:pb-8 lg:grid-cols-4 lg:pb-10">
+  <div class="lg:col-span-2">
+    <Logo
+      label={s.a11y.home}
+      class="flex w-fit items-center text-2xl font-bold text-black lg:text-3xl"
+    />
+    <p class="my-4 text-sm lg:mr-24" set:html={rich(f.text)} />
+    <h2 class="sr-only">{s.a11y.contacts}</h2>
+    <ContactCards settings={s} tone="gray" class="space-y-3 lg:mr-24" />
+    <ul class="mt-5 flex items-center gap-2" aria-label={s.a11y.social}>
+      {social.map((x) => (
+        <li>
+          <a
+            href={x.href}
+            target="_blank"
+            rel="noopener"
+            class="grid h-11 w-11 place-items-center rounded-full bg-black text-white transition-colors hover:bg-bd-green hover:text-black"
+          >
+            <span class="sr-only">
+              {s.a11y.follow} {x.name}
+            </span>
+            <Icon name={x.icon} size={18} />
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  {[f.column1, f.column2].map((col, ci) => (
+    <div class="pt-1.5">
+      {col.map((group, gi) => (
+        <nav aria-label={group.title}>
+          <h2 class:list={["mb-2.5 text-base font-semibold", gi > 0 && "mt-4"]}>
+            {group.title}
+          </h2>
+          <ul class="text-sm">
+            {group.links.map((l) => (
+              <li class="mb-1.5">
+                <a
+                  class:list={[
+                    "hover:underline",
+                    l.bold && "font-semibold text-black",
+                  ]}
+                  href={href(l.link)}
+                >
+                  {l.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      ))}
+      {ci === 0 && <LangSwitch label={s.a11y.language} variant="footer" />}
+      {ci === 1 && (
+        <div class="mt-6 rounded-2xl bg-gray-100 p-5">
+          <h2 class="mb-1 text-base font-semibold">{f.boxTitle}</h2>
+          <p class="text-sm" set:html={rich(f.boxText)} />
+          <a
+            href={href(f.boxCtaLink)}
+            class="btn-primary mt-4 px-5 py-2 text-sm"
+          >
+            {f.boxCtaLabel}
+          </a>
+          {g.rating && (
+            <a
+              href={g.url('/#recensioni')}
+              class="mt-4 flex w-fit items-center gap-2 text-sm hover:underline"
+            >
+              <Stars count={g.rating.stars} size={16} class="text-amber-500" />
+              <span>
+                <strong class="text-black">{g.rating.value}</strong>{" "}
+                {g.reviews?.source === "google"
+                  ? s.reviews.ratingShort
+                  : s.reviews.countLabel.replace("{n}", String(g.rating.count))}
+                <span class="sr-only">
+                  : {s.a11y.stars.replace("{n}", g.rating.value)}
+                </span>
+              </span>
+            </a>
+          )}
+        </div>
+      )}
+    </div>
+  ))}
+
+  <div class="border-t border-gray-200 pt-6 text-center text-xs md:col-span-2 lg:col-span-4">
+    <p>
+      © <span data-year>{new Date().getFullYear()}</span>{" "}
+      <span class="font-semibold">{s.general.siteName}</span> - {f.vatLabel}{" "}
+      {s.contacts.vat}
+    </p>
+    <p>
+      {f.legal.map((l, i) => (
+        <>
+          {i > 0 && " - "}
+          <a class="font-semibold hover:underline" href={href(l.link)}>
+            {l.label}
+          </a>
+        </>
+      ))}
+    </p>
+  </div>
+</footer>

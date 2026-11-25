@@ -1,0 +1,501 @@
+{
+  "hero": {
+    "breadcrumb": "Para agencias web",
+    "eyebrow": "Para agencias web",
+    "title": "El equipo técnico de tu agencia, con precio cerrado",
+    "text": "Desarrollo, SEO, velocidad, inteligencia artificial, medición y mantenimiento para los clientes de tu agencia, **en marca blanca**. Cada trabajo tiene un **precio cerrado acordado de antemano**: puedes presupuestar a tu cliente con tu margen, sin sorpresas.\n",
+    "ctaLabel": "Hablemos de un proyecto",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Todos los servicios",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#servizi-agency"
+    },
+    "highlights": [
+      "Precio cerrado por proyecto",
+      "Con tu marca",
+      "Acuerdo de confidencialidad"
+    ],
+    "boardLogo": "TU\nLOGO",
+    "boardLabel": "Proyectos para",
+    "boardTitle": "tu agencia",
+    "boardBadge": "Marca blanca",
+    "priceLabel": "precio cerrado",
+    "statusTodo": "Por hacer",
+    "statusDoing": "En curso",
+    "statusDone": "Entregado",
+    "tasks": [
+      {
+        "title": "Web corporativa desde diseño en Figma",
+        "client": "Cliente: estudio de arquitectura",
+        "price": "2.400 €"
+      },
+      {
+        "title": "Auditoría SEO técnica",
+        "client": "Cliente: tienda online de muebles",
+        "price": "490 €"
+      },
+      {
+        "title": "IA en las fichas de producto",
+        "client": "Cliente: tienda online",
+        "price": "790 €"
+      },
+      {
+        "title": "Core Web Vitals de rojo a verde",
+        "client": "Cliente: web WordPress existente",
+        "price": "650 €"
+      }
+    ],
+    "summaryLabel": "Sorpresas en la factura",
+    "summaryValue": "0 €",
+    "caption": "Ejemplo ilustrativo: precios orientativos inventados, cada proyecto tiene su presupuesto."
+  },
+  "collab": {
+    "eyebrow": "Cómo colaboramos",
+    "title": "Un socio técnico, no un competidor",
+    "text": "Trabajo para agencias desde 2016, tras años como lead developer en agencias web en el extranjero. Sé lo que significan los plazos ajustados, los clientes exigentes y los márgenes que hay que proteger.\n",
+    "items": [
+      {
+        "title": "Tu marca, siempre",
+        "text": "Trabajo entre bastidores: el cliente ve a tu agencia. Si quieres, participo en las reuniones como parte de tu equipo."
+      },
+      {
+        "title": "Nunca contacto directo",
+        "text": "No contacto con tus clientes ni me ofrezco a ellos. Lo ponemos por escrito en un acuerdo de confidencialidad."
+      },
+      {
+        "title": "Tus herramientas",
+        "text": "ClickUp, Trello, Asana, GitHub, Google Meet: me adapto a tu forma de trabajar."
+      },
+      {
+        "title": "Experiencia internacional",
+        "text": "Más de 15 años, más de 400 proyectos, y trabajo en español, inglés, italiano y alemán."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Precio cerrado",
+    "title": "Tu margen, siempre protegido",
+    "text": "Las horas extra son el enemigo de los márgenes de una agencia. Por eso cada trabajo tiene un **presupuesto cerrado**, con plazos y alcance por escrito. Si el cliente cambia de idea, lo hablamos antes y decides tú, nunca después en la factura.\n",
+    "points": [
+      {
+        "text": "**Proyectos**: precio cerrado para cada web, auditoría o integración.\n"
+      },
+      {
+        "text": "**Mantenimiento**: cuota mensual fija, sin facturación sorpresa.\n"
+      },
+      {
+        "text": "**Cambios**: valorados y aprobados por ti antes de hacerlos.\n"
+      }
+    ],
+    "exampleLabel": "Un ejemplo de cómo funciona",
+    "example": [
+      {
+        "title": "Mi presupuesto para ti",
+        "text": "cerrado, por escrito, con plazos",
+        "value": "A"
+      },
+      {
+        "title": "Tu presupuesto al cliente",
+        "text": "con tu margen y tus servicios",
+        "value": "A + margen"
+      },
+      {
+        "title": "La factura final que recibes",
+        "text": "idéntica al presupuesto",
+        "value": "A"
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Qué puedo hacer por ti",
+    "title": "Todos los servicios web, con un único socio",
+    "text": "Puedes encargarme un proyecto completo o solo una parte: desarrollo, análisis SEO, optimización o mantenimiento. Cada servicio con precio cerrado.\n",
+    "navLabel": "Ir al servicio",
+    "items": [
+      {
+        "anchor": "white-label",
+        "short": "Desarrollo en marca blanca",
+        "icon": "code",
+        "label": "El corazón de la colaboración",
+        "badge": "",
+        "title": "Desarrollo de webs y tiendas online en marca blanca",
+        "text": "Convierto tus diseños en webs rápidas, accesibles y fáciles de gestionar para el cliente final. Trabajo con tu marca: para el cliente, soy parte de tu equipo.",
+        "points": [
+          "Desde Figma, PDF o design system",
+          "WordPress con temas y plugins a medida, WooCommerce",
+          "Webs estáticas y headless cuando hace falta la máxima velocidad",
+          "Landing pages para tus campañas"
+        ],
+        "footer": ""
+      },
+      {
+        "anchor": "analisi-seo",
+        "short": "Análisis y SEO técnico",
+        "icon": "search",
+        "label": "",
+        "badge": "",
+        "title": "Análisis y SEO técnico",
+        "text": "Auditorías SEO de las webs de tus clientes, con informes que puedes presentar con tu nombre, y aplicación de las correcciones.",
+        "points": [
+          "Auditoría técnica y plan de acción",
+          "Migraciones sin perder posiciones",
+          "Datos estructurados y SEO multiidioma"
+        ],
+        "footer": "Precio cerrado"
+      },
+      {
+        "anchor": "performance",
+        "short": "Velocidad y Core Web Vitals",
+        "icon": "bolt",
+        "label": "",
+        "badge": "",
+        "title": "Velocidad y Core Web Vitals",
+        "text": "Acelero webs ya publicadas, también hechas por otros, y las llevo dentro de los umbrales recomendados por Google.",
+        "points": [
+          "Análisis Lighthouse y datos de usuarios reales",
+          "Optimización de imágenes, código y caché",
+          "Comparativa antes y después para enviar al cliente"
+        ],
+        "footer": "Precio cerrado"
+      },
+      {
+        "anchor": "integrazione-ai",
+        "short": "Integración de IA",
+        "icon": "sparkles",
+        "label": "",
+        "badge": "Un nuevo servicio para revender",
+        "title": "Integración de IA",
+        "text": "Añade la inteligencia artificial a tu oferta: la integro en las webs de tus clientes, con Gemini, Claude o ChatGPT.",
+        "points": [
+          "Meta etiquetas, textos y traducciones en un clic",
+          "Asistentes y búsqueda inteligente en la web",
+          "Automatizaciones para los procesos de tus clientes"
+        ],
+        "footer": "Precio cerrado"
+      },
+      {
+        "anchor": "tracciamento",
+        "short": "Medición y analítica",
+        "icon": "chart",
+        "label": "",
+        "badge": "",
+        "title": "Medición y analítica",
+        "text": "Configuración desde cero, revisión y corrección de la medición, también en webs hechas por otros.",
+        "points": [
+          "Google Tag Manager y GA4",
+          "Google Ads, Píxel de Meta y API de Conversiones",
+          "Consent Mode y banners de cookies"
+        ],
+        "footer": "Precio cerrado"
+      },
+      {
+        "anchor": "accessibilita",
+        "short": "Accesibilidad",
+        "icon": "accessibility",
+        "label": "",
+        "badge": "",
+        "title": "Accesibilidad",
+        "text": "Revisión y adaptación a la Ley Europea de Accesibilidad: un tema sobre el que muchos de tus clientes van a necesitar respuestas.",
+        "points": [
+          "Análisis de cumplimiento",
+          "Correcciones de código y contenidos",
+          "Navegación con teclado y lector de pantalla"
+        ],
+        "footer": "Precio cerrado"
+      },
+      {
+        "anchor": "manutenzione",
+        "short": "Mantenimiento y soporte",
+        "icon": "wrench",
+        "label": "",
+        "badge": "",
+        "title": "Mantenimiento y soporte",
+        "text": "Actualizaciones, seguridad, copias de seguridad y pequeños cambios continuos, también en marca blanca.",
+        "points": [
+          "Cuota mensual fija",
+          "Correcciones e intervenciones urgentes",
+          "Informe periódico para enviar al cliente"
+        ],
+        "footer": "Precio cerrado"
+      },
+      {
+        "anchor": "project-management",
+        "short": "Gestión de proyectos",
+        "icon": "calendar",
+        "label": "",
+        "badge": "",
+        "title": "Gestión de proyectos",
+        "text": "Coordino proyectos digitales entre cliente y equipo: convierto necesidades en tareas claras, controlo tiempos y recursos y detecto los problemas antes de que aparezcan.",
+        "points": [
+          "Análisis de requisitos y estimaciones",
+          "Planificación y coordinación del equipo",
+          "Comunicación con el cliente, si quieres"
+        ],
+        "footer": "Precio cerrado"
+      },
+      {
+        "anchor": "consulenza-tecnica",
+        "short": "Consultoría técnica",
+        "icon": "bulb",
+        "label": "",
+        "badge": "",
+        "title": "Consultoría técnica",
+        "text": "Una opinión experta cuando la necesitas: para presupuestar un proyecto complejo, elegir la tecnología adecuada o formar a tu equipo.",
+        "points": [
+          "Apoyo en presupuestos técnicos",
+          "Segunda opinión sobre proyectos en curso",
+          "Formación para desarrolladores y diseñadores"
+        ],
+        "footer": "Precio cerrado"
+      }
+    ]
+  },
+  "tech": {
+    "eyebrow": "Tecnologías",
+    "title": "Las herramientas con las que trabajo",
+    "text": "Elijo la tecnología según el proyecto y el cliente final: WordPress cuando los contenidos se gestionan internamente, Next.js o Astro cuando lo que más cuenta es la velocidad y la escalabilidad. Y me adapto encantado al stack de tu agencia.\n",
+    "groups": [
+      {
+        "title": "Diseño",
+        "items": [
+          {
+            "logo": "@it",
+            "name": "Figma"
+          },
+          {
+            "logo": "@it",
+            "name": "Sketch"
+          },
+          {
+            "logo": "@it",
+            "name": "Penpot"
+          },
+          {
+            "logo": "@it",
+            "name": "Framer"
+          }
+        ]
+      },
+      {
+        "title": "Front end",
+        "items": [
+          {
+            "logo": "@it",
+            "name": "Tailwind CSS"
+          },
+          {
+            "logo": "@it",
+            "name": "JavaScript"
+          },
+          {
+            "logo": "@it",
+            "name": "TypeScript"
+          },
+          {
+            "logo": "@it",
+            "name": "React"
+          },
+          {
+            "logo": "@it",
+            "name": "Next.js"
+          },
+          {
+            "logo": "@it",
+            "name": "Astro"
+          },
+          {
+            "logo": "@it",
+            "name": "Vite"
+          }
+        ]
+      },
+      {
+        "title": "Back end y CMS",
+        "items": [
+          {
+            "logo": "@it",
+            "name": "PHP"
+          },
+          {
+            "logo": "@it",
+            "name": "Laravel"
+          },
+          {
+            "logo": "@it",
+            "name": "Node.js"
+          },
+          {
+            "logo": "@it",
+            "name": "WordPress"
+          },
+          {
+            "logo": "@it",
+            "name": "WooCommerce"
+          },
+          {
+            "logo": "@it",
+            "name": "Shopify"
+          }
+        ]
+      },
+      {
+        "title": "Colaboración",
+        "items": [
+          {
+            "logo": "@it",
+            "name": "ClickUp"
+          },
+          {
+            "logo": "@it",
+            "name": "Trello"
+          },
+          {
+            "logo": "@it",
+            "name": "Asana"
+          },
+          {
+            "logo": "@it",
+            "name": "Miro"
+          },
+          {
+            "logo": "@it",
+            "name": "Git"
+          },
+          {
+            "logo": "@it",
+            "name": "GitHub"
+          },
+          {
+            "logo": "@it",
+            "name": "Google Meet"
+          },
+          {
+            "logo": "@it",
+            "name": "Zoom"
+          }
+        ]
+      },
+      {
+        "title": "Analítica y medición",
+        "items": [
+          {
+            "logo": "@it",
+            "name": "Google Tag Manager"
+          },
+          {
+            "logo": "@it",
+            "name": "Google Analytics"
+          }
+        ]
+      }
+    ],
+    "note": "Los logotipos y nombres citados son marcas de sus respectivos propietarios, usados solo para indicar las tecnologías empleadas; no existe ninguna afiliación."
+  },
+  "method": {
+    "eyebrow": "Cómo funciona",
+    "title": "Del briefing a la entrega, sin sorpresas",
+    "text": "",
+    "items": [
+      {
+        "title": "Briefing",
+        "text": "Me envías diseños, requisitos y plazos, aunque sea un borrador.",
+        "highlight": false
+      },
+      {
+        "title": "Presupuesto cerrado",
+        "text": "Recibes un precio cerrado con plazos y alcance: lo puedes revender con tu margen.",
+        "highlight": true
+      },
+      {
+        "title": "Desarrollo",
+        "text": "Trabajo con tus herramientas y te mantengo al día en cada fase.",
+        "highlight": false
+      },
+      {
+        "title": "Control de calidad",
+        "text": "Pruebas en dispositivos, Lighthouse y accesibilidad antes de cada entrega.",
+        "highlight": false
+      },
+      {
+        "title": "Entrega",
+        "text": "Documentación, accesos y, si hace falta, formación para el cliente final.",
+        "highlight": false
+      }
+    ],
+    "boxTitle": "¿Tienes un proyecto que presupuestar?",
+    "boxText": "Envíame el briefing: te respondo con un precio cerrado y una fecha de entrega.",
+    "boxCtaLabel": "Envíame el briefing",
+    "boxCtaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "offer": {
+    "show": false,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Preguntas de las agencias",
+    "text": "¿No encuentras la tuya? [Escríbeme](#contatti) y te respondo en un día laborable.\n",
+    "items": [
+      {
+        "question": "¿De verdad trabajas con nuestra marca?",
+        "answer": "Sí. El cliente final solo ve a tu agencia: emails, documentos y entregables van a tu nombre. Si quieres, participo en las reuniones como parte de tu equipo.\n"
+      },
+      {
+        "question": "¿Firmas un acuerdo de confidencialidad?",
+        "answer": "Por supuesto, y me comprometo por escrito a no contactar ni captar a tus clientes.\n"
+      },
+      {
+        "question": "¿Cómo funciona el precio cerrado?",
+        "answer": "Para cada trabajo recibes un presupuesto cerrado con alcance y plazos. Los cambios que pida el cliente se valoran y los apruebas tú antes de hacerlos.\n"
+      },
+      {
+        "question": "¿Qué plazos de entrega garantizas?",
+        "answer": "Los acordamos en el presupuesto, según la complejidad y mi carga de trabajo, y los cumplo. Si un proyecto es urgente, dímelo enseguida: te diré con sinceridad si es viable.\n"
+      },
+      {
+        "question": "¿Trabajas en webs hechas por otros?",
+        "answer": "Sí: velocidad, SEO técnico, medición, accesibilidad y mantenimiento se pueden hacer también en webs existentes, tras un análisis inicial.\n"
+      },
+      {
+        "question": "¿Cómo facturas?",
+        "answer": "Facturo a tu agencia el importe del presupuesto. Tú facturas al cliente final con tu margen.\n"
+      }
+    ],
+    "ctaLabel": "Hablemos de un proyecto",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": false,
+    "categories": [
+      "siti-web"
+    ],
+    "title": "",
+    "text": "",
+    "buttonLabel": "Todos los artículos"
+  },
+  "contact": {
+    "title": "Hablemos de tu agencia",
+    "formTitle": "Envíame un briefing o una pregunta",
+    "topics": []
+  },
+  "seo": {
+    "slug": "desarrollador-freelance-para-agencias",
+    "title": "Desarrollador web freelance para agencias | bortolin.dev",
+    "description": "Desarrollo en marca blanca, SEO, velocidad, IA y mantenimiento para agencias web. Precio cerrado por proyecto: presupuesta a tus clientes con tu margen.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

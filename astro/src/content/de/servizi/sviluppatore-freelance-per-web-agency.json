@@ -1,0 +1,501 @@
+{
+  "hero": {
+    "breadcrumb": "Für Webagenturen",
+    "eyebrow": "Für Webagenturen",
+    "title": "Das Tech-Team Ihrer Agentur, zum Festpreis",
+    "text": "Entwicklung, SEO, Performance, künstliche Intelligenz, Tracking und Wartung für die Kunden Ihrer Agentur, **als White Label**. Jeder Auftrag hat einen **vorab vereinbarten Festpreis**: So kalkulieren Sie Ihr Angebot an den Kunden mit Ihrer Marge, ohne Überraschungen.\n",
+    "ctaLabel": "Projekt besprechen",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Alle Leistungen",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#servizi-agency"
+    },
+    "highlights": [
+      "Festpreis pro Projekt",
+      "Unter Ihrer Marke",
+      "Geheimhaltungsvereinbarung"
+    ],
+    "boardLogo": "IHR\nLOGO",
+    "boardLabel": "Projekte für",
+    "boardTitle": "Ihre Agentur",
+    "boardBadge": "White Label",
+    "priceLabel": "Festpreis",
+    "statusTodo": "Offen",
+    "statusDoing": "In Arbeit",
+    "statusDone": "Geliefert",
+    "tasks": [
+      {
+        "title": "Firmenwebsite nach Figma-Design",
+        "client": "Kunde: Architekturbüro",
+        "price": "2.400 €"
+      },
+      {
+        "title": "Technisches SEO-Audit",
+        "client": "Kunde: Möbel-Onlineshop",
+        "price": "490 €"
+      },
+      {
+        "title": "KI für Produkttexte",
+        "client": "Kunde: Onlineshop",
+        "price": "790 €"
+      },
+      {
+        "title": "Core Web Vitals von Rot auf Grün",
+        "client": "Kunde: bestehende WordPress-Website",
+        "price": "650 €"
+      }
+    ],
+    "summaryLabel": "Überraschungen auf der Rechnung",
+    "summaryValue": "0 €",
+    "caption": "Beispiel zur Veranschaulichung: erfundene Richtpreise, jedes Projekt bekommt sein eigenes Angebot."
+  },
+  "collab": {
+    "eyebrow": "Wie wir zusammenarbeiten",
+    "title": "Ein technischer Partner, kein Konkurrent",
+    "text": "Ich arbeite seit 2016 für Agenturen, nach Jahren als Lead Developer in Webagenturen im Ausland. Ich weiß, was enge Deadlines, anspruchsvolle Kunden und zu schützende Margen bedeuten.\n",
+    "items": [
+      {
+        "title": "Immer Ihre Marke",
+        "text": "Ich arbeite hinter den Kulissen: Der Kunde sieht Ihre Agentur. Auf Wunsch nehme ich als Teil Ihres Teams an Meetings teil."
+      },
+      {
+        "title": "Nie Direktkontakt",
+        "text": "Ich kontaktiere Ihre Kunden nicht und biete mich ihnen nicht an. Das halten wir schriftlich in einer Geheimhaltungsvereinbarung fest."
+      },
+      {
+        "title": "Ihre Tools",
+        "text": "ClickUp, Trello, Asana, GitHub, Google Meet: Ich passe mich Ihrer Arbeitsweise an."
+      },
+      {
+        "title": "Internationale Erfahrung",
+        "text": "Über 15 Jahre, mehr als 400 Projekte, und ich arbeite auf Deutsch, Englisch, Italienisch und Spanisch."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Festpreis",
+    "title": "Ihre Marge, immer geschützt",
+    "text": "Überstunden sind der Feind jeder Agenturmarge. Deshalb hat jeder Auftrag ein **verbindliches Festpreisangebot**, mit Zeitrahmen und Umfang schriftlich festgehalten. Ändert der Kunde seine Meinung, besprechen wir das vorher und Sie entscheiden, nie erst hinterher auf der Rechnung.\n",
+    "points": [
+      {
+        "text": "**Projekte**: Festpreis für jede Website, jedes Audit, jede Integration.\n"
+      },
+      {
+        "text": "**Wartung**: feste Monatspauschale, keine Überraschungsrechnungen.\n"
+      },
+      {
+        "text": "**Änderungen**: vorab bewertet und von Ihnen freigegeben.\n"
+      }
+    ],
+    "exampleLabel": "Ein Beispiel, wie es funktioniert",
+    "example": [
+      {
+        "title": "Mein Angebot an Sie",
+        "text": "fest, schriftlich, mit Zeitplan",
+        "value": "A"
+      },
+      {
+        "title": "Ihr Angebot an den Kunden",
+        "text": "mit Ihrer Marge und Ihren Leistungen",
+        "value": "A + Marge"
+      },
+      {
+        "title": "Die Rechnung, die Sie erhalten",
+        "text": "identisch mit dem Angebot",
+        "value": "A"
+      }
+    ]
+  },
+  "services": {
+    "eyebrow": "Was ich für Sie tun kann",
+    "title": "Alle Webleistungen, aus einer Hand",
+    "text": "Sie können mir ein komplettes Projekt übergeben oder nur einen Teil: Entwicklung, SEO-Analyse, Optimierung oder Wartung. Jede Leistung zum Festpreis.\n",
+    "navLabel": "Zur Leistung",
+    "items": [
+      {
+        "anchor": "white-label",
+        "short": "White-Label-Entwicklung",
+        "icon": "code",
+        "label": "Das Herzstück der Zusammenarbeit",
+        "badge": "",
+        "title": "White-Label-Entwicklung von Websites und Onlineshops",
+        "text": "Ich setze Ihre Designs in schnelle, barrierefreie Websites um, die der Endkunde leicht pflegen kann. Ich arbeite unter Ihrer Marke: Für den Kunden gehöre ich zu Ihrem Team.",
+        "points": [
+          "Aus Figma, PDF oder Designsystem",
+          "WordPress mit individuellen Themes und Plugins, WooCommerce",
+          "Statische und Headless-Websites, wenn maximale Geschwindigkeit gefragt ist",
+          "Landingpages für Ihre Kampagnen"
+        ],
+        "footer": ""
+      },
+      {
+        "anchor": "analisi-seo",
+        "short": "Analyse und technisches SEO",
+        "icon": "search",
+        "label": "",
+        "badge": "",
+        "title": "Analyse und technisches SEO",
+        "text": "SEO-Audits der Websites Ihrer Kunden, mit Berichten, die Sie unter Ihrem Namen präsentieren können, und Umsetzung der Korrekturen.",
+        "points": [
+          "Technisches Audit und Maßnahmenplan",
+          "Migrationen ohne Ranking-Verluste",
+          "Strukturierte Daten und mehrsprachiges SEO"
+        ],
+        "footer": "Festpreis"
+      },
+      {
+        "anchor": "performance",
+        "short": "Performance und Core Web Vitals",
+        "icon": "bolt",
+        "label": "",
+        "badge": "",
+        "title": "Performance und Core Web Vitals",
+        "text": "Ich beschleunige bestehende Websites, auch fremde, und bringe sie in die von Google empfohlenen Grenzwerte.",
+        "points": [
+          "Lighthouse-Analyse und echte Nutzerdaten",
+          "Optimierung von Bildern, Code und Cache",
+          "Vorher-nachher-Vergleich zum Weitergeben an den Kunden"
+        ],
+        "footer": "Festpreis"
+      },
+      {
+        "anchor": "integrazione-ai",
+        "short": "KI-Integration",
+        "icon": "sparkles",
+        "label": "",
+        "badge": "Eine neue Leistung zum Weiterverkaufen",
+        "title": "KI-Integration",
+        "text": "Erweitern Sie Ihr Angebot um künstliche Intelligenz: Ich integriere sie in die Websites Ihrer Kunden, mit Gemini, Claude oder ChatGPT.",
+        "points": [
+          "Meta-Tags, Texte und Übersetzungen mit einem Klick",
+          "Assistenten und intelligente Suche auf der Website",
+          "Automatisierungen für die Abläufe Ihrer Kunden"
+        ],
+        "footer": "Festpreis"
+      },
+      {
+        "anchor": "tracciamento",
+        "short": "Tracking und Analytics",
+        "icon": "chart",
+        "label": "",
+        "badge": "",
+        "title": "Tracking und Analytics",
+        "text": "Einrichtung von Grund auf, Prüfung und Korrektur des Trackings, auch auf fremden Websites.",
+        "points": [
+          "Google Tag Manager und GA4",
+          "Google Ads, Meta-Pixel und Conversions API",
+          "Consent Mode und Cookie-Banner"
+        ],
+        "footer": "Festpreis"
+      },
+      {
+        "anchor": "accessibilita",
+        "short": "Barrierefreiheit",
+        "icon": "accessibility",
+        "label": "",
+        "badge": "",
+        "title": "Barrierefreiheit",
+        "text": "Prüfung und Anpassung an das Barrierefreiheitsstärkungsgesetz (BFSG): ein Thema, bei dem viele Ihrer Kunden Antworten brauchen werden.",
+        "points": [
+          "Konformitätsanalyse",
+          "Korrekturen an Code und Inhalten",
+          "Bedienung per Tastatur und Screenreader"
+        ],
+        "footer": "Festpreis"
+      },
+      {
+        "anchor": "manutenzione",
+        "short": "Wartung und Support",
+        "icon": "wrench",
+        "label": "",
+        "badge": "",
+        "title": "Wartung und Support",
+        "text": "Updates, Sicherheit, Backups und laufende kleine Änderungen, auch als White Label.",
+        "points": [
+          "Feste Monatspauschale",
+          "Fehlerbehebung und Notfalleinsätze",
+          "Regelmäßiger Bericht zum Weitergeben an den Kunden"
+        ],
+        "footer": "Festpreis"
+      },
+      {
+        "anchor": "project-management",
+        "short": "Projektmanagement",
+        "icon": "calendar",
+        "label": "",
+        "badge": "",
+        "title": "Projektmanagement",
+        "text": "Ich koordiniere digitale Projekte zwischen Kunde und Team: Ich übersetze Anforderungen in klare Aufgaben, behalte Zeit und Ressourcen im Blick und erkenne Probleme, bevor sie entstehen.",
+        "points": [
+          "Anforderungsanalyse und Aufwandsschätzung",
+          "Planung und Teamkoordination",
+          "Kundenkommunikation, wenn gewünscht"
+        ],
+        "footer": "Festpreis"
+      },
+      {
+        "anchor": "consulenza-tecnica",
+        "short": "Technische Beratung",
+        "icon": "bulb",
+        "label": "",
+        "badge": "",
+        "title": "Technische Beratung",
+        "text": "Eine Expertenmeinung, wenn Sie sie brauchen: um ein komplexes Projekt zu kalkulieren, die richtige Technologie zu wählen oder Ihr Team zu schulen.",
+        "points": [
+          "Unterstützung bei technischen Angeboten",
+          "Zweitmeinung zu laufenden Projekten",
+          "Schulungen für Entwickler und Designer"
+        ],
+        "footer": "Festpreis"
+      }
+    ]
+  },
+  "tech": {
+    "eyebrow": "Technologien",
+    "title": "Die Werkzeuge, mit denen ich arbeite",
+    "text": "Ich wähle die Technologie passend zu Projekt und Endkunde: WordPress, wenn Inhalte intern gepflegt werden, Next.js oder Astro, wenn Geschwindigkeit und Skalierbarkeit am meisten zählen. Und ich passe mich gern dem Stack Ihrer Agentur an.\n",
+    "groups": [
+      {
+        "title": "Design",
+        "items": [
+          {
+            "logo": "@it",
+            "name": "Figma"
+          },
+          {
+            "logo": "@it",
+            "name": "Sketch"
+          },
+          {
+            "logo": "@it",
+            "name": "Penpot"
+          },
+          {
+            "logo": "@it",
+            "name": "Framer"
+          }
+        ]
+      },
+      {
+        "title": "Frontend",
+        "items": [
+          {
+            "logo": "@it",
+            "name": "Tailwind CSS"
+          },
+          {
+            "logo": "@it",
+            "name": "JavaScript"
+          },
+          {
+            "logo": "@it",
+            "name": "TypeScript"
+          },
+          {
+            "logo": "@it",
+            "name": "React"
+          },
+          {
+            "logo": "@it",
+            "name": "Next.js"
+          },
+          {
+            "logo": "@it",
+            "name": "Astro"
+          },
+          {
+            "logo": "@it",
+            "name": "Vite"
+          }
+        ]
+      },
+      {
+        "title": "Backend und CMS",
+        "items": [
+          {
+            "logo": "@it",
+            "name": "PHP"
+          },
+          {
+            "logo": "@it",
+            "name": "Laravel"
+          },
+          {
+            "logo": "@it",
+            "name": "Node.js"
+          },
+          {
+            "logo": "@it",
+            "name": "WordPress"
+          },
+          {
+            "logo": "@it",
+            "name": "WooCommerce"
+          },
+          {
+            "logo": "@it",
+            "name": "Shopify"
+          }
+        ]
+      },
+      {
+        "title": "Zusammenarbeit",
+        "items": [
+          {
+            "logo": "@it",
+            "name": "ClickUp"
+          },
+          {
+            "logo": "@it",
+            "name": "Trello"
+          },
+          {
+            "logo": "@it",
+            "name": "Asana"
+          },
+          {
+            "logo": "@it",
+            "name": "Miro"
+          },
+          {
+            "logo": "@it",
+            "name": "Git"
+          },
+          {
+            "logo": "@it",
+            "name": "GitHub"
+          },
+          {
+            "logo": "@it",
+            "name": "Google Meet"
+          },
+          {
+            "logo": "@it",
+            "name": "Zoom"
+          }
+        ]
+      },
+      {
+        "title": "Analytics und Tracking",
+        "items": [
+          {
+            "logo": "@it",
+            "name": "Google Tag Manager"
+          },
+          {
+            "logo": "@it",
+            "name": "Google Analytics"
+          }
+        ]
+      }
+    ],
+    "note": "Die genannten Logos und Namen sind Marken ihrer jeweiligen Inhaber und dienen nur zur Kennzeichnung der eingesetzten Technologien; es besteht keine Verbindung."
+  },
+  "method": {
+    "eyebrow": "So läuft es ab",
+    "title": "Vom Briefing bis zur Übergabe, ohne Überraschungen",
+    "text": "",
+    "items": [
+      {
+        "title": "Briefing",
+        "text": "Sie schicken mir Designs, Anforderungen und Termine, auch als grobe Skizze.",
+        "highlight": false
+      },
+      {
+        "title": "Festpreisangebot",
+        "text": "Sie erhalten einen Festpreis mit Zeitrahmen und Umfang: weiterverkaufbar mit Ihrer Marge.",
+        "highlight": true
+      },
+      {
+        "title": "Entwicklung",
+        "text": "Ich arbeite mit Ihren Tools und halte Sie in jeder Phase auf dem Laufenden.",
+        "highlight": false
+      },
+      {
+        "title": "Qualitätskontrolle",
+        "text": "Tests auf verschiedenen Geräten, Lighthouse und Barrierefreiheit vor jeder Übergabe.",
+        "highlight": false
+      },
+      {
+        "title": "Übergabe",
+        "text": "Dokumentation, Zugänge und bei Bedarf eine Schulung für den Endkunden.",
+        "highlight": false
+      }
+    ],
+    "boxTitle": "Sie haben ein Projekt zu kalkulieren?",
+    "boxText": "Schicken Sie mir das Briefing: Sie bekommen einen Festpreis und einen Liefertermin.",
+    "boxCtaLabel": "Briefing senden",
+    "boxCtaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "offer": {
+    "show": false,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "title": "Fragen von Agenturen",
+    "text": "Ihre Frage ist nicht dabei? [Schreiben Sie mir](#contatti), ich antworte innerhalb eines Werktags.\n",
+    "items": [
+      {
+        "question": "Arbeiten Sie wirklich unter unserer Marke?",
+        "answer": "Ja. Der Endkunde sieht nur Ihre Agentur: E-Mails, Dokumente und Lieferungen laufen unter Ihrem Namen. Auf Wunsch nehme ich als Teil Ihres Teams an Meetings teil.\n"
+      },
+      {
+        "question": "Unterschreiben Sie eine Geheimhaltungsvereinbarung?",
+        "answer": "Selbstverständlich, und ich verpflichte mich schriftlich, Ihre Kunden weder zu kontaktieren noch abzuwerben.\n"
+      },
+      {
+        "question": "Wie funktioniert der Festpreis?",
+        "answer": "Für jeden Auftrag erhalten Sie ein verbindliches Angebot mit Umfang und Zeitrahmen. Änderungswünsche des Kunden werden bewertet und von Ihnen freigegeben, bevor ich sie umsetze.\n"
+      },
+      {
+        "question": "Welche Lieferzeiten garantieren Sie?",
+        "answer": "Wir legen sie im Angebot fest, je nach Komplexität und meiner Auslastung, und ich halte sie ein. Ist ein Projekt dringend, sagen Sie es mir gleich: Ich sage Ihnen ehrlich, ob es machbar ist.\n"
+      },
+      {
+        "question": "Arbeiten Sie auch an Websites anderer Entwickler?",
+        "answer": "Ja: Performance, technisches SEO, Tracking, Barrierefreiheit und Wartung sind nach einer ersten Analyse auch bei bestehenden Websites möglich.\n"
+      },
+      {
+        "question": "Wie rechnen Sie ab?",
+        "answer": "Ich stelle Ihrer Agentur den Angebotsbetrag in Rechnung. Sie rechnen mit dem Endkunden inklusive Ihrer Marge ab.\n"
+      }
+    ],
+    "ctaLabel": "Projekt besprechen",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": false,
+    "categories": [
+      "siti-web"
+    ],
+    "title": "",
+    "text": "",
+    "buttonLabel": "Alle Artikel"
+  },
+  "contact": {
+    "title": "Sprechen wir über Ihre Agentur",
+    "formTitle": "Schicken Sie mir ein Briefing oder eine Frage",
+    "topics": []
+  },
+  "seo": {
+    "slug": "freelance-entwickler-fuer-agenturen",
+    "title": "Freelance-Webentwickler für Agenturen | bortolin.dev",
+    "description": "White-Label-Entwicklung, SEO, Performance, KI und Wartung für Webagenturen. Festpreis pro Projekt: Kalkulieren Sie Ihre Kunden mit Ihrer Marge.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

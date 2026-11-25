@@ -1,0 +1,55 @@
+---
+// Banda dell'offerta in evidenza (contenuti in Keystatic → "Offerta in evidenza")
+import { t } from '../../i18n/ui';
+import Icon from '../ui/Icon.astro';
+import Img from '../ui/Img.astro';
+import Rich from '../ui/Rich.astro';
+import { rich } from '../../lib/rich';
+import { href } from '../../lib/links';
+import type { Globals, Offer } from '../../lib/content';
+// `offer` = offerta scelta dalla pagina (pageOffer); se assente, quella in evidenza
+interface Props { g: Globals; offer?: Offer | null; class?: string }
+const { g, class: cls = 'container mb-16 md:mb-24' } = Astro.props;
+const o = 'offer' in Astro.props ? Astro.props.offer : g.offerActive ? g.offer : null;
+// timbro breve su una riga (es. −40%, Gratis) → carattere più grande
+const stampLen = o?.stamp && !o.stamp.includes('\n') ? o.stamp.trim().length : 99;
+const stampSize = stampLen <= 5 ? 'text-lg font-extrabold' : stampLen <= 8 ? 'text-base font-extrabold' : 'text-xs font-bold';
+---
+{o && (
+  <section class={cls} aria-labelledby="offerta-titolo">
+    <div class="relative grid grid-cols-1 items-center gap-8 overflow-hidden rounded-3xl bg-black p-6 text-white md:p-10 lg:grid-cols-5 lg:gap-12 lg:p-12">
+      <div aria-hidden="true" class="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-bd-green/20 blur-2xl"></div>
+      <div class="relative lg:col-span-3">
+        <div class="flex flex-wrap items-center gap-3">
+          <span class="inline-flex items-center rounded-full bg-bd-green px-3 py-1 text-xs font-bold text-black uppercase">{o.eyebrow}</span>
+          <span class="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1 text-xs text-gray-200">
+            <Icon name="clock" size={14} stroke={2.5} />
+            <span data-countdown={o.deadline ? `${o.deadline}T23:59:59` : undefined} data-days={t(g.lang).countdown.days} data-last={t(g.lang).countdown.last}>{o.deadlineLabel}</span>
+          </span>
+        </div>
+        <h2 id="offerta-titolo" class="mt-5 text-white" set:html={rich(o.title, { paragraph: '<br>' })} />
+        <Rich value={o.text} class="text-gray-300" strong="text-white" />
+        <ul class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
+          {o.items.map((it) => (
+            <li class="flex items-start gap-2.5 rounded-2xl bg-white/10 p-4 text-sm"><Icon name="check" size={22} stroke={3} class="shrink-0 text-bd-green" /><span><strong class="block text-white">{it.title}</strong><span class="text-gray-300">{it.text}</span></span></li>
+          ))}
+        </ul>
+        <div class="mt-8 flex flex-wrap items-center gap-4">
+          <a href={href(o.ctaLink)} class="btn-primary">{o.ctaLabel} <Icon name="arrow" size={20} /></a>
+          {o.note && <span class="text-sm text-gray-400">{o.note}</span>}
+        </div>
+      </div>
+      <div class="relative lg:col-span-2">
+        <div class="relative rounded-3xl bg-bd-green p-6 text-black md:p-8">
+          <Img src={o.image} class="float-soft mx-auto w-full max-w-xs" />
+          <p class="mt-4 text-center text-sm font-semibold uppercase">{o.boxEyebrow}</p>
+          {o.boxOldValue
+            ? <p class="text-center"><span class="text-5xl font-extrabold">{o.boxValue}</span> <span class="text-lg font-semibold line-through opacity-60">{o.boxOldValue}</span></p>
+            : <p class="text-center text-4xl font-extrabold">{o.boxValue}</p>}
+          <p class="text-center text-sm">{o.boxText}</p>
+          {o.stamp && <span aria-hidden="true" class:list={['absolute -top-4 -right-3 grid h-20 w-20 rotate-12 place-items-center rounded-full bg-black text-center leading-tight text-bd-green ring-4 ring-bd-green', stampSize]} set:html={rich(o.stamp)} />}
+        </div>
+      </div>
+    </div>
+  </section>
+)}

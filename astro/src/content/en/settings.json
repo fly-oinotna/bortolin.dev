@@ -1,0 +1,225 @@
+{
+  "general": {
+    "ogImage": "@it",
+    "headerCtaLabel": "Get a free quote",
+    "headerCtaLink": {
+      "discriminant": "#contatti",
+      "value": null
+    }
+  },
+  "contacts": {
+    "whatsappLabel": "Message me on WhatsApp"
+  },
+  "reviews": {
+    "eyebrow": "Reviews",
+    "title": "What my clients say",
+    "text": "Reviews come straight from Google, unfiltered, and are automatically translated into your language.",
+    "ratingLabel": "Average rating on Google",
+    "ratingShort": "on Google",
+    "countLabel": "{n} reviews",
+    "translated": "Translated by Google · See original",
+    "all": "Read all the reviews on Google",
+    "leave": "Worked with me? Leave a review"
+  },
+  "contact": {
+    "title": "Let’s talk about your new website",
+    "text": "Tell me about your project. **The 25-minute discovery call is free**, with no strings attached.",
+    "bullets": [
+      "Free, no obligation",
+      "Reply by the next business day",
+      "You deal with me directly"
+    ],
+    "formTitle": "Get a free quote",
+    "name": "Full name",
+    "email": "Email",
+    "phone": "Phone",
+    "website": "Current website",
+    "websitePlaceholder": "www.yourwebsite.com",
+    "topicsLabel": "What do you need?",
+    "topics": [
+      {
+        "label": "New website"
+      },
+      {
+        "label": "Website redesign"
+      },
+      {
+        "label": "SEO"
+      },
+      {
+        "label": "Speed"
+      },
+      {
+        "label": "AI"
+      },
+      {
+        "label": "Advertising"
+      }
+    ],
+    "message": "Tell me about your project",
+    "privacy": "I have read the [privacy policy](/informativa-sulla-privacy/) and agree to my data being used so I can be contacted.",
+    "submit": "Send my request"
+  },
+  "caseStudies": {
+    "featuresTitle": "See what’s included",
+    "readLabel": "Read the case study",
+    "visitLabel": "Visit the website"
+  },
+  "footer": {
+    "text": "I build complete websites that load fast and are built to rank on Google and get cited by AI. I work with businesses, professionals and web agencies, at a fixed price and with everything explained in plain English.",
+    "column1": [
+      {
+        "title": "For businesses and individuals",
+        "links": [
+          {
+            "label": "All services",
+            "link": {
+              "discriminant": "/servizi/",
+              "value": null
+            },
+            "bold": true
+          },
+          {
+            "label": "Complete websites",
+            "link": {
+              "discriminant": "/servizi/siti-web/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "SEO consulting",
+            "link": {
+              "discriminant": "/servizi/consulenza-seo/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "Performance & Lighthouse",
+            "link": {
+              "discriminant": "/servizi/miglioramento-prestazioni-siti-web/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "AI integration",
+            "link": {
+              "discriminant": "/servizi/integrazione-ai/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "Digital consulting",
+            "link": {
+              "discriminant": "/servizi/consulenza-digitale/",
+              "value": null
+            },
+            "bold": false
+          }
+        ]
+      },
+      {
+        "title": "Advertising",
+        "links": [
+          {
+            "label": "Google Ads",
+            "link": {
+              "discriminant": "/servizi/google-ads/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "AI Ads",
+            "link": {
+              "discriminant": "/servizi/ai-ads/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "Meta Ads",
+            "link": {
+              "discriminant": "/servizi/meta-ads/",
+              "value": null
+            },
+            "bold": false
+          }
+        ]
+      }
+    ],
+    "column2": [
+      {
+        "title": "For web agencies",
+        "links": [
+          {
+            "label": "Freelance developer (white label)",
+            "link": {
+              "discriminant": "custom",
+              "value": "/servizi/sviluppatore-freelance-per-web-agency/#white-label"
+            },
+            "bold": false
+          },
+          {
+            "label": "Freelance project manager",
+            "link": {
+              "discriminant": "custom",
+              "value": "/servizi/sviluppatore-freelance-per-web-agency/#project-management"
+            },
+            "bold": false
+          }
+        ]
+      }
+    ],
+    "boxTitle": "Let’s talk about your project",
+    "boxText": "The 25-minute discovery call is free, with no strings attached.",
+    "boxCtaLabel": "Book a free call",
+    "boxCtaLink": {
+      "discriminant": "#contatti",
+      "value": null
+    },
+    "vatLabel": "VAT No.:",
+    "legal": [
+      {
+        "label": "Privacy policy",
+        "link": {
+          "discriminant": "/informativa-sulla-privacy/",
+          "value": null
+        }
+      },
+      {
+        "label": "Cookie policy",
+        "link": {
+          "discriminant": "/informativa-sulla-gestione-dei-cookie/",
+          "value": null
+        }
+      }
+    ]
+  },
+  "a11y": {
+    "skip": "Skip to content",
+    "home": "bortolin.dev – home page",
+    "mainNav": "Main",
+    "mobileNav": "Mobile menu",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "toggleServices": "Show the services menu",
+    "offer": "Featured",
+    "toContacts": "Go to contact details",
+    "contacts": "How to reach me",
+    "language": "Language",
+    "social": "Social",
+    "follow": "Follow me on",
+    "highlights": "Why work with me",
+    "projectTags": "Project highlights",
+    "scores": "Target Lighthouse scores: 100 out of 100 in all four categories",
+    "stars": "{n} out of 5 stars",
+    "reviewer": "Google profile of",
+    "psiField": "Your website address",
+    "psiForm": "Test your website with PageSpeed Insights",
+    "honeypot": "Leave blank"
+  }
+}

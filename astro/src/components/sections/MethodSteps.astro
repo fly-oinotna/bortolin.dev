@@ -1,0 +1,39 @@
+---
+// Metodo in passi brevi (5 colonne): il passo "in evidenza" è verde (se nessuno lo è, il primo), box finale facoltativo
+import SectionHeading from '../ui/SectionHeading.astro';
+import Icon from '../ui/Icon.astro';
+import { href, type Destination } from '../../lib/links';
+interface Props {
+  n?: number; eyebrow?: string | null; title?: string | null; text?: any;
+  items: readonly { title: string; text: string; highlight?: boolean }[]; id?: string; class?: string;
+  boxTitle?: string | null; boxText?: string | null; boxCtaLabel?: string | null; boxCtaLink?: Destination;
+  /** gray = sezione grigia con riquadri bianchi */
+  tone?: 'light' | 'gray';
+}
+const { n, eyebrow, title, text, items, id, tone = 'light', boxTitle, boxText, boxCtaLabel, boxCtaLink } = Astro.props;
+const hi = Math.max(0, items.findIndex((it) => it.highlight));
+const cls = Astro.props.class ?? (tone === 'gray' ? 'bg-gray-100 py-16 md:py-24' : 'py-16 md:py-24');
+---
+<section id={id} class={cls}>
+  <div class="container">
+    <SectionHeading n={n} eyebrow={eyebrow} title={title} text={text} />
+    <ol class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-5">
+      {items.map((st, i) => (
+        <li class:list={['rounded-3xl p-6', i === hi ? 'bg-bd-green' : tone === 'gray' ? 'bg-white' : 'bg-gray-100']}>
+          <span class="grid h-12 w-12 place-items-center rounded-2xl bg-black text-lg font-extrabold text-bd-green" aria-hidden="true">{i + 1}</span>
+          <h3 class="mt-4 text-lg">{st.title}</h3>
+          <p class:list={['text-sm', i === hi && 'text-black']}>{st.text}</p>
+        </li>
+      ))}
+    </ol>
+    {boxTitle && (
+      <div class="mt-10 flex flex-col items-start gap-4 rounded-3xl bg-black p-6 text-white sm:flex-row sm:items-center sm:justify-between md:p-8">
+        <div>
+          <p class="text-lg font-semibold text-white">{boxTitle}</p>
+          {boxText && <p class="text-sm text-gray-300">{boxText}</p>}
+        </div>
+        {boxCtaLabel && <a href={href(boxCtaLink)} class="btn-primary shrink-0">{boxCtaLabel} <Icon name="arrow" size={20} /></a>}
+      </div>
+    )}
+  </div>
+</section>

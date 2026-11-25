@@ -1,0 +1,23 @@
+{
+  "title": "5 tareas de oficina que una pyme debería automatizar ya",
+  "content": {
+    "image": "@it",
+    "imageAlt": "Empleada en su escritorio trabajando con el ordenador entre papeles y el teléfono",
+    "excerpt": "Presupuestos, documentos, emails repetitivos, recordatorios e informes: qué puedes dejar ya en manos de herramientas e IA, y cuánto tiempo ahorras de verdad.",
+    "lead": "En muchas pymes, buena parte del día se va en tareas repetitivas: copiar datos, contestar siempre los mismos emails, preparar documentos casi iguales. Hoy muchas de estas cosas se pueden automatizar con herramientas asequibles y, donde hace falta, con inteligencia artificial. Estas son las cinco por las que empezar.",
+    "text": "## Antes de empezar: elige bien qué automatizar\n\nNo todo se debe automatizar. Las mejores candidatas tienen tres rasgos: se repiten a menudo, siguen reglas claras y hoy obligan a copiar información de un sitio a otro. Haz una lista de las tareas de tu semana y marca las que cumplen los tres criterios.\n\n## 1. Presupuestos\n\nA partir de la solicitud del cliente y de tus tarifas, un sistema puede preparar un **borrador de presupuesto** en pocos minutos. Tú lo revisas, lo corriges si hace falta y lo envías. El ahorro de tiempo es enorme, sobre todo si haces muchos presupuestos parecidos: instaladores, carpintería metálica y de PVC, constructoras, talleres.\n\n## 2. Documentos que hay que volver a teclear\n\nFacturas de proveedores, albaranes, pedidos, fichas de clientes: la IA ya es muy buena **leyendo los datos** de un PDF o una foto y metiéndolos donde hacen falta, en el programa de gestión o en una hoja de cálculo. Menos copiar y pegar también significa menos errores.\n\n## 3. Emails repetitivos\n\nPeticiones de información, confirmaciones de cita, reclamaciones de pago: muchos emails tienen siempre la misma estructura. Se pueden **clasificar automáticamente** por tipo y preparar respuestas en borrador, personalizadas con los datos del cliente, para revisar y enviar con un clic.\n\n## 4. Recordatorios y plazos\n\nVencimientos de contratos, mantenimientos periódicos, llamadas de seguimiento, presupuestos todavía sin aceptar: un sistema de **recordatorios automáticos** evita que algo se quede en el olvido y recupera trabajo que si no se perdería.\n\n## 5. Informes y números\n\n¿Cuántos presupuestos hemos hecho este mes? ¿Cuántos se han aceptado? ¿Cuánto pasa entre la solicitud y la respuesta? En lugar de reconstruirlo a mano, un **panel** que se actualiza solo te muestra siempre los números que importan.\n\n## Cómo empezar sin ponerlo todo patas arriba\n\n1. Elige **un solo proceso**, el que más tiempo te hace perder.\n2. Mide cuánto tiempo te lleva hoy.\n3. Prueba una solución sencilla, conectada a las herramientas que ya usas.\n4. Vuelve a medir al cabo de un mes.\n5. Si funciona, pasa al siguiente proceso.\n\nY con los datos de los clientes, prudencia: usa servicios profesionales y configúralo todo conforme al RGPD."
+  },
+  "seo": {
+    "title": "5 tareas de oficina que automatizar en una pyme | bortolin.dev",
+    "description": "Presupuestos, documentos, emails repetitivos, recordatorios e informes: qué puedes dejar ya en manos de herramientas e IA, y cuánto tiempo ahorras.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "automatizzare-attivita-ufficio-pmi"
+}

@@ -1,0 +1,56 @@
+---
+// Blocco contatti + modulo: testi in Impostazioni → "Modulo contatti", uguali in tutte le pagine.
+import Icon from '../ui/Icon.astro';
+import Rich from '../ui/Rich.astro';
+import ContactCards from '../layout/ContactCards.astro';
+import { rich } from '../../lib/rich';
+import type { Globals } from '../../lib/content';
+// `page` = gruppo "Contatti" della pagina: titolo, titolo del modulo e argomenti già spuntati (vuoti = Impostazioni)
+interface Props { g: Globals; page?: { title?: string | null; formTitle?: string | null; topics?: readonly string[] } | null }
+const { settings } = Astro.props.g;
+const pg = Astro.props.page;
+const c = settings.contact;
+const checked = new Set(pg?.topics ?? []);
+const input = 'block w-full rounded-xl border border-gray-300 p-3';
+const lbl = 'block pb-1 text-sm text-gray-700';
+---
+<section id="contatti" class="container pb-16 md:pb-24">
+  <div class="grid grid-cols-1 gap-8 rounded-3xl bg-gray-100 p-6 md:p-10 lg:grid-cols-5 lg:gap-12">
+    <div class="lg:col-span-2">
+      <h2>{pg?.title || c.title}</h2>
+      <Rich value={c.text} />
+      <ul class="mt-6 space-y-2 text-black">
+        {c.bullets.map((b) => <li class="flex gap-2"><Icon name="check" size={16} stroke={3} class="mt-1 shrink-0" />{b}</li>)}
+      </ul>
+      <ContactCards settings={settings} class="mt-8 space-y-3" />
+    </div>
+
+    <!-- Il modulo verrà collegato a un servizio di invio (es. funzione serverless) -->
+    <form class="rounded-3xl bg-white p-6 md:p-8 lg:col-span-3" action="#" method="post">
+      <fieldset>
+        <legend class="mb-6 text-xl font-semibold text-black">{pg?.formTitle || c.formTitle}</legend>
+        <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <div><label for="f-name" class={lbl}>{c.name} *</label><input id="f-name" name="name" type="text" autocomplete="name" required class={input}></div>
+          <div><label for="f-email" class={lbl}>{c.email} *</label><input id="f-email" name="email" type="email" autocomplete="email" required class={input}></div>
+          <div><label for="f-phone" class={lbl}>{c.phone} *</label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required class={input}></div>
+          <div><label for="f-site" class={lbl}>{c.website}</label><input id="f-site" name="website" type="text" inputmode="url" placeholder={c.websitePlaceholder} class={input}></div>
+        </div>
+        <fieldset class="mt-5">
+          <legend class="pb-2 text-sm text-gray-700">{c.topicsLabel}</legend>
+          <div class="flex flex-wrap gap-2">
+            {c.topics.map((tp) => (
+              <label class="cursor-pointer"><input type="checkbox" name="topics[]" value={tp.value} checked={checked.has(tp.value)} class="peer sr-only"><span class="chip border border-transparent peer-checked:bg-bd-green peer-focus-visible:border-black">{tp.label}</span></label>
+            ))}
+          </div>
+        </fieldset>
+        <div class="mt-5"><label for="f-msg" class={lbl}>{c.message}</label><textarea id="f-msg" name="message" rows="4" class={input}></textarea></div>
+        <div class="hidden" aria-hidden="true"><label>{settings.a11y.honeypot} <input type="text" name="company_url" tabindex="-1" autocomplete="off"></label></div>
+        <label class="mt-5 flex items-start gap-3 text-sm">
+          <input type="checkbox" name="privacy" required class="mt-0.5 h-5 w-5 shrink-0 accent-black">
+          <span set:html={rich(c.privacy, { link: 'underline' }) + ' *'} />
+        </label>
+        <button type="submit" class="btn-secondary mt-6 w-full sm:w-auto">{c.submit} <Icon name="arrow" size={20} /></button>
+      </fieldset>
+    </form>
+  </div>
+</section>

@@ -1,0 +1,343 @@
+{
+  "hero": {
+    "breadcrumb": "Services",
+    "eyebrow": "All services",
+    "title": "Everything you need to grow online, one step at a time",
+    "text": "Websites, SEO, speed, AI, ad campaigns and consulting. Each service stands on its own, but they’re stronger together: **a fast website ranks better on Google, and better rankings make ads cheaper**. All at a fixed price, with one person to deal with.\n",
+    "navLabel": "Jump to a group",
+    "layersLabel": "How the services build on each other",
+    "layers": [
+      {
+        "title": "Customers",
+        "text": "Google Ads, Meta Ads, AI Ads"
+      },
+      {
+        "title": "Visibility",
+        "text": "SEO and AI search"
+      },
+      {
+        "title": "Website",
+        "text": "Fast, clear, measurable"
+      },
+      {
+        "title": "Strategy",
+        "text": "Goals and processes"
+      }
+    ],
+    "caption": "Each layer sits on the one below, which is why I always start with the foundations."
+  },
+  "start": {
+    "title": "Not sure where to start? Start with your goal",
+    "text": "Pick the line that sounds most like you and I’ll point you to the right service. If more than one fits, we’ll work it out together on a free 25-minute call.\n",
+    "items": [
+      {
+        "quote": "“I need a new website”",
+        "service": "Complete websites",
+        "link": {
+          "discriminant": "/servizi/siti-web/"
+        }
+      },
+      {
+        "quote": "“Nobody can find my website”",
+        "service": "SEO consulting",
+        "link": {
+          "discriminant": "/servizi/consulenza-seo/"
+        }
+      },
+      {
+        "quote": "“My website is slow”",
+        "service": "Speed optimization",
+        "link": {
+          "discriminant": "/servizi/miglioramento-prestazioni-siti-web/"
+        }
+      },
+      {
+        "quote": "“I want more leads, fast”",
+        "service": "Google Ads and Meta Ads",
+        "link": {
+          "discriminant": "/servizi/google-ads/"
+        }
+      },
+      {
+        "quote": "“I want AI on my website”",
+        "service": "AI integration",
+        "link": {
+          "discriminant": "/servizi/integrazione-ai/"
+        }
+      },
+      {
+        "quote": "“Admin eats up my day”",
+        "service": "Digital consulting",
+        "link": {
+          "discriminant": "/servizi/consulenza-digitale/"
+        }
+      }
+    ]
+  },
+  "groups": {
+    "idealLabel": "Best for:",
+    "moreLabel": "See the details",
+    "items": [
+      {
+        "short": "Your website",
+        "eyebrow": "Your website",
+        "title": "A website that works as hard as you do",
+        "text": "The foundations: a fast, clear website, ready for AI. Get this right and everything else works better.\n",
+        "cards": [
+          {
+            "icon": "monitor",
+            "badge": "Flagship service",
+            "title": "Complete websites",
+            "link": {
+              "discriminant": "/servizi/siti-web/"
+            },
+            "text": "Business websites, online stores and custom builds with design, copy, SEO, speed and tracking included, at a fixed price.",
+            "points": [
+              "Custom design and copy that sells",
+              "SEO and 100/100 Lighthouse speed",
+              "AI-ready and measurable from day one",
+              "You own it, training included"
+            ],
+            "ideal": "anyone who needs a new website or a fresh start",
+            "offer": "nuovo-sito-3-mesi-seo",
+            "wide": true
+          },
+          {
+            "icon": "bolt",
+            "badge": "Existing websites",
+            "title": "Speed optimization",
+            "link": {
+              "discriminant": "/servizi/miglioramento-prestazioni-siti-web/"
+            },
+            "text": "I make your current website lightning fast and get its Core Web Vitals into Google’s green zone, no rebuild needed.",
+            "points": [
+              "Lighthouse audit and Google’s real-user data",
+              "Images, code, caching and third-party scripts",
+              "Before-and-after comparison"
+            ],
+            "ideal": "slow websites, especially on phones",
+            "offer": "check-up-velocita",
+            "wide": false
+          },
+          {
+            "icon": "sparkles",
+            "badge": "Existing websites too",
+            "title": "AI integration",
+            "link": {
+              "discriminant": "/servizi/integrazione-ai/"
+            },
+            "text": "Gemini, Claude or ChatGPT built into your website: meta tags and copy in one click, translations, a customer assistant.",
+            "points": [
+              "“Generate with AI” button in your dashboard",
+              "A website assistant that knows your content",
+              "Automations and training"
+            ],
+            "ideal": "anyone who wants more reach for less effort",
+            "offer": "seo-con-ai",
+            "wide": false
+          }
+        ]
+      },
+      {
+        "short": "Visibility",
+        "eyebrow": "Visibility",
+        "title": "Get found on Google and in AI answers",
+        "text": "Show up for the people already looking for you, on Google and in the answers of AI assistants.\n",
+        "cards": [
+          {
+            "icon": "search",
+            "badge": "My specialty",
+            "title": "SEO consulting",
+            "link": {
+              "discriminant": "/servizi/consulenza-seo/"
+            },
+            "text": "Technical audits, keyword research, local SEO, migrations and visibility on ChatGPT, Gemini and Perplexity. All in plain English.",
+            "points": [
+              "Technical SEO audit and action plan",
+              "Local SEO and Google Business Profile",
+              "Visibility in AI search (GEO)",
+              "Monthly video report"
+            ],
+            "ideal": "websites that get no traffic from Google",
+            "offer": "audit-seo",
+            "wide": true
+          }
+        ]
+      },
+      {
+        "short": "Advertising",
+        "eyebrow": "Advertising",
+        "title": "Leads and sales, starting now",
+        "text": "Leads and sales from day one, with fixed-fee campaigns: never a cut of your ad spend.\n",
+        "cards": [
+          {
+            "icon": "target",
+            "badge": "",
+            "title": "Google Ads",
+            "link": {
+              "discriminant": "/servizi/google-ads/"
+            },
+            "text": "Appear at the top of Google the moment a customer searches. Search, Performance Max, Shopping and local ads.",
+            "points": [
+              "Conversion tracking included",
+              "Negative keywords to stop wasted spend",
+              "Ad account in your name"
+            ],
+            "ideal": "local services, shops and online stores",
+            "offer": null,
+            "wide": false
+          },
+          {
+            "icon": "megaphone",
+            "badge": "",
+            "title": "Meta Ads",
+            "link": {
+              "discriminant": "/servizi/meta-ads/"
+            },
+            "text": "Facebook and Instagram ads that get you noticed locally and bring in enquiries, not just likes.",
+            "points": [
+              "Pixel and Conversions API",
+              "Lead forms and retargeting",
+              "Creatives for feed, Stories and Reels"
+            ],
+            "ideal": "building awareness and capturing leads",
+            "offer": null,
+            "wide": false
+          },
+          {
+            "icon": "chat-ad",
+            "badge": "New",
+            "title": "AI Ads",
+            "link": {
+              "discriminant": "/servizi/ai-ads/"
+            },
+            "text": "Ads alongside the answers in ChatGPT, Google and Copilot: the new channel, before your competitors move in.",
+            "points": [
+              "Opportunity check for your industry",
+              "Small-budget test",
+              "Joined up with your other channels"
+            ],
+            "ideal": "anyone who wants to be first on a new channel",
+            "offer": null,
+            "wide": false
+          }
+        ]
+      },
+      {
+        "short": "Strategy",
+        "eyebrow": "Strategy and digital transformation",
+        "title": "The big picture of your business",
+        "text": "A clear view of your marketing and business processes, with AI wherever it genuinely saves time.\n",
+        "cards": [
+          {
+            "icon": "bulb",
+            "badge": "For small businesses",
+            "title": "Digital consulting",
+            "link": {
+              "discriminant": "/servizi/consulenza-digitale/"
+            },
+            "text": "Digital marketing and going digital inside the business: AI-drafted quotes and invoices, paperwork, CRM, automations and measurable goals.",
+            "points": [
+              "Marketing and workflow check-up",
+              "Quotes and paperwork with AI",
+              "90-day roadmap",
+              "Coaching and workshops"
+            ],
+            "ideal": "small businesses that want to grow and work smarter",
+            "offer": null,
+            "wide": true
+          }
+        ]
+      }
+    ]
+  },
+  "agency": {
+    "short": "For web agencies",
+    "eyebrow": "For web agencies",
+    "title": "Your agency’s tech team, on tap",
+    "text": "White-label development, project management, tracking, optimization and maintenance for your clients’ websites. Discreet by design: I never contact your clients.\n",
+    "ctaLabel": "White-label development",
+    "ctaLink": {
+      "discriminant": "custom",
+      "value": "/servizi/sviluppatore-freelance-per-web-agency/#white-label"
+    },
+    "linkLabel": "Project manager",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "/servizi/sviluppatore-freelance-per-web-agency/#project-management"
+    },
+    "image": "@it",
+    "imageAlt": "Illustration: a design turned into working code"
+  },
+  "rules": {
+    "eyebrow": "Whichever service you pick",
+    "title": "Rules I never bend",
+    "items": [
+      {
+        "title": "Fixed price",
+        "text": "You know the cost up front. No extra hours, never a percentage of your ad budget."
+      },
+      {
+        "title": "It’s all yours",
+        "text": "Websites, accounts, data and logins stay in your name. Always."
+      },
+      {
+        "title": "One person to deal with",
+        "text": "You talk directly to the person doing the work. No middlemen."
+      },
+      {
+        "title": "No jargon",
+        "text": "Reports that make sense and straight answers, even to the “silly” questions."
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions about my services",
+    "text": "Can’t see yours? [Drop me a line](#contatti) and I’ll reply by the next business day.\n",
+    "items": [
+      {
+        "question": "Can I pick just one service?",
+        "answer": "Of course. Every service works on its own. If I think another one would get you better results I’ll say so, but it’s your call.\n"
+      },
+      {
+        "question": "Is it worth combining services?",
+        "answer": "Yes: working on your website, SEO and ads together avoids doing things twice, and the results compound. You get one overall price, always fixed.\n"
+      },
+      {
+        "question": "Can I combine the launch offers?",
+        "answer": "Each offer applies to its own service. If several catch your eye, we’ll put together the best-value package on the free call.\n"
+      },
+      {
+        "question": "Do you only work in Veneto and Friuli?",
+        "answer": "Not at all. I’m happy to meet clients in Veneto and Friuli Venezia Giulia in person, but I work remotely with clients across Italy and abroad, in English, Italian, German and Spanish.\n"
+      },
+      {
+        "question": "How do we get started?",
+        "answer": "With a free 25-minute call: you tell me where you are and where you want to be, I tell you what I’d do and what it costs. No obligation.\n"
+      }
+    ],
+    "ctaLabel": "Book a free call",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "contact": {
+    "title": "Let’s talk about your project",
+    "formTitle": "Get a free quote",
+    "topics": []
+  },
+  "seo": {
+    "slug": "services",
+    "title": "Services: websites, SEO, AI and ads | bortolin.dev",
+    "description": "Websites, SEO, speed optimization, AI integration, Google Ads and Meta Ads for small businesses. Fixed prices, one person to deal with.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

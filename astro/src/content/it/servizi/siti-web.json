@@ -1,0 +1,285 @@
+{
+  "hero": {
+    "breadcrumb": "Siti web",
+    "eyebrow": "Siti web chiavi in mano",
+    "title": "Realizzazione siti web che portano clienti",
+    "text": "Siti vetrina, e-commerce e progetti su misura: **veloci, trovati su Google e pronti per l’intelligenza artificiale**. Design, testi, SEO, tracciamento e formazione sono già inclusi. Un solo preventivo, a **prezzo fisso**.\n",
+    "ctaLabel": "Richiedi un preventivo",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Guarda i lavori",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#casi-studio"
+    },
+    "highlights": [
+      "Prezzo fisso",
+      "Il sito è tuo",
+      "Testi inclusi",
+      "Anche multilingua"
+    ],
+    "demoUrl": "iltuosito.it",
+    "demoBrand": "La tua attività",
+    "demoTitle": "Il tuo sito,\nveloce e trovato",
+    "demoCta": "Contattaci",
+    "demoSteps": [
+      "Struttura",
+      "Design",
+      "Testi",
+      "Online"
+    ],
+    "demoStepsLabel": "Le fasi di realizzazione del sito",
+    "demoToast": "Il sito è online",
+    "demoCaption": "Dalla struttura al sito online: ogni fase è inclusa nel prezzo.",
+    "badgeTitle": "Veloce per scelta",
+    "badgeText": "verificato con Lighthouse",
+    "badgeLink": {
+      "discriminant": "custom",
+      "value": "#qualita"
+    }
+  },
+  "manifesto": {
+    "line1": "Un sito bello che nessuno trova è un costo.",
+    "line2": "Un sito veloce che Google mostra è un investimento.",
+    "text": "Non parto dalla grafica, ma da chi sono i tuoi clienti, cosa cercano su Google e cosa li convince a contattarti. La bellezza arriva dopo, ed è al servizio dei risultati.\n"
+  },
+  "types": {
+    "eyebrow": "Che sito ti serve?",
+    "title": "Ogni attività ha bisogno del suo sito, non di un template",
+    "text": "Ti aiuto a scegliere la soluzione giusta per i tuoi obiettivi e il tuo budget. Qualunque sia il tipo di sito, la qualità di base è la stessa.\n",
+    "items": [
+      {
+        "icon": "monitor",
+        "title": "Sito vetrina e aziendale",
+        "text": "Presenta la tua attività, i servizi e il tuo team, e trasforma le visite in richieste di contatto.",
+        "audience": "Per aziende, studi, professionisti"
+      },
+      {
+        "icon": "cart",
+        "title": "E-commerce",
+        "text": "Un negozio online veloce e facile da gestire, con schede prodotto ottimizzate per Google e pagamenti sicuri.",
+        "audience": "Per chi vende online"
+      },
+      {
+        "icon": "target",
+        "title": "Landing page",
+        "text": "Una pagina, un obiettivo: perfetta per le campagne Google e Meta Ads, misurata in ogni dettaglio.",
+        "audience": "Per campagne e lanci"
+      },
+      {
+        "icon": "stack",
+        "title": "Progetti su misura",
+        "text": "Siti multilingua, aree riservate, e-learning, configuratori e integrazioni con i tuoi gestionali.",
+        "audience": "Per esigenze particolari"
+      }
+    ]
+  },
+  "included": {
+    "eyebrow": "Cosa è incluso",
+    "title": "Tutto quello che serve, in un unico prezzo",
+    "text": "Niente “extra” scoperti a metà strada. Il preventivo comprende ogni fase, dalla prima analisi alla formazione finale.\n",
+    "image": "/src/assets/images/servizi/illustrazione-siti-web.svg",
+    "imageAlt": "Illustrazione: dalla mappa del sito al wireframe, fino al sito finito",
+    "ctaLabel": "Richiedi un preventivo",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "items": [
+      {
+        "title": "Analisi e obiettivi",
+        "text": "Raccolgo materiali, accessi, obiettivi e concorrenti. Studio cosa cercano i tuoi clienti su Google prima di decidere qualsiasi cosa."
+      },
+      {
+        "title": "Struttura del sito",
+        "text": "Pagine, percorsi e contenuti organizzati prima del design, perché chi arriva trovi subito quello che cerca."
+      },
+      {
+        "title": "Testi che vendono",
+        "text": "Scrivo io i testi, con le parole che usano i tuoi clienti e che Google premia. Tu li approvi prima della pubblicazione."
+      },
+      {
+        "title": "Design su misura",
+        "text": "Progettato per computer, tablet e smartphone. Nessun template: il sito racconta la tua attività, non quella di altri."
+      },
+      {
+        "title": "Sviluppo pulito",
+        "text": "WordPress quando vuoi gestirlo in autonomia, soluzioni su misura quando serve il massimo della velocità. Mai page builder pesanti."
+      },
+      {
+        "title": "SEO tecnica e visibilità nelle AI",
+        "text": "Titoli, descrizioni, dati strutturati, sitemap e SEO locale. Contenuti chiari che anche ChatGPT, Gemini e Perplexity sanno leggere e citare."
+      },
+      {
+        "title": "Velocità e Core Web Vitals",
+        "text": "Immagini ottimizzate, codice leggero, font caricati bene. Ogni pagina viene verificata con Lighthouse prima della consegna."
+      },
+      {
+        "title": "Tracciamento dal primo giorno",
+        "text": "Google Analytics 4, Tag Manager, Search Console e Consent Mode configurati: sai quante richieste arrivano e da dove."
+      },
+      {
+        "title": "Accessibile, sicuro e a norma",
+        "text": "Conforme all’European Accessibility Act, connessione sicura (HTTPS) con header di sicurezza, privacy e cookie in regola."
+      },
+      {
+        "title": "Formazione, consegna e… è tuo",
+        "text": "Ti insegno ad aggiornare il sito da solo. Dominio, accessi e codice sono intestati a te: nessun vincolo, mai."
+      }
+    ]
+  },
+  "quality": {
+    "eyebrow": "Qualità verificabile",
+    "title": "Non devi fidarti di me: puoi controllarlo",
+    "text": "Ogni sito viene consegnato dopo un controllo con **Google Lighthouse**, lo strumento gratuito con cui chiunque può misurare velocità, accessibilità, qualità tecnica e SEO di una pagina. Il mio obiettivo è 100 in tutte e quattro le categorie.\n",
+    "linkLabel": "Cos’è Lighthouse, spiegato semplice",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "/#lighthouse"
+    },
+    "linkNewTab": true,
+    "scoresLabel": "Obiettivo Lighthouse: 100 su 100 in tutte e quattro le categorie",
+    "scores": [
+      {
+        "label": "Performance",
+        "value": 100
+      },
+      {
+        "label": "Accessibilità",
+        "value": 100
+      },
+      {
+        "label": "Best practice",
+        "value": 100
+      },
+      {
+        "label": "SEO",
+        "value": 100
+      }
+    ],
+    "checks": [
+      "Core Web Vitals nei valori di Google",
+      "HTTPS e header di sicurezza",
+      "Dati strutturati per Google e le AI",
+      "Navigabile anche solo da tastiera"
+    ]
+  },
+  "cases": {
+    "eyebrow": "Casi studio",
+    "title": "Alcuni siti che ho realizzato",
+    "text": "Settori diversi, stesso metodo: capire chi deve usare il sito e costruirlo intorno a quelle persone.\n",
+    "items": [
+      "projsystem",
+      "european-forensic-institute"
+    ]
+  },
+  "steps": {
+    "eyebrow": "Come funziona",
+    "title": "Dalla call al sito online, senza sorprese",
+    "text": "Sai sempre a che punto siamo, cosa serve da te e quando arriva il passo successivo.\n",
+    "items": [
+      {
+        "title": "Call gratuita",
+        "text": "25 minuti per conoscerci e capire obiettivi, tempi e budget."
+      },
+      {
+        "title": "Analisi e preventivo",
+        "text": "Studio te e i concorrenti, poi ricevi un preventivo a prezzo fisso con le date."
+      },
+      {
+        "title": "Struttura e testi",
+        "text": "Definiamo pagine e contenuti. Scrivo i testi, tu li approvi."
+      },
+      {
+        "title": "Design",
+        "text": "Vedi il sito prima che sia sviluppato e chiedi le modifiche che vuoi."
+      },
+      {
+        "title": "Sviluppo e test",
+        "text": "Costruisco il sito e lo verifico su ogni dispositivo e con Lighthouse."
+      },
+      {
+        "title": "Lancio e formazione",
+        "text": "Messa online, redirect SEO dal vecchio sito e formazione per gestirlo."
+      }
+    ],
+    "boxTitle": "Il primo passo è il più semplice",
+    "boxText": "25 minuti di call, gratis e senza impegno. Alla fine sai cosa ti serve e quanto costa.",
+    "boxCtaLabel": "Prenota la call gratuita",
+    "boxCtaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "offer": {
+    "show": true,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "Domande frequenti",
+    "title": "Domande sui siti web",
+    "text": "Non trovi la tua? [Scrivimi](#contatti), rispondo entro il giorno lavorativo successivo.\n",
+    "items": [
+      {
+        "question": "Quanto costa un sito web?",
+        "answer": "Dipende da numero di pagine, funzionalità, lingue e contenuti. Dopo la call gratuita ricevi un preventivo a **prezzo fisso** che comprende tutto ciò che trovi in questa pagina: niente costi nascosti e niente ore extra.\n"
+      },
+      {
+        "question": "Quanto tempo serve per realizzarlo?",
+        "answer": "Dipende soprattutto dalla dimensione del sito e dalla rapidità nelle approvazioni. Nel preventivo trovi le date di ogni fase e la data di consegna, che rispetto.\n"
+      },
+      {
+        "question": "Potrò aggiornare il sito da solo?",
+        "answer": "Sì. La formazione è inclusa: ti mostro come modificare testi, immagini e pagine. Se preferisci non pensarci, posso occuparmene io con un servizio di assistenza.\n"
+      },
+      {
+        "question": "Ho già un sito: perderò le posizioni su Google?",
+        "answer": "No, se la migrazione è fatta bene. Prima del lancio mappo tutte le pagine esistenti e imposto i reindirizzamenti, così Google e i visitatori trovano subito i nuovi indirizzi.\n"
+      },
+      {
+        "question": "Che tecnologia usi?",
+        "answer": "Quella giusta per te. WordPress se vuoi gestire i contenuti in autonomia, soluzioni su misura quando contano soprattutto velocità e sicurezza. In ogni caso niente page builder pesanti, che rallentano il sito.\n"
+      },
+      {
+        "question": "Mi aiuti anche con testi e fotografie?",
+        "answer": "I testi li scrivo io, partendo da una chiacchierata con te. Per le foto ti consiglio cosa serve e, se vuoi, ti metto in contatto con fotografi di fiducia; in alternativa uso immagini professionali di qualità.\n"
+      },
+      {
+        "question": "Il sito sarà davvero mio?",
+        "answer": "Sì: dominio, hosting, codice e account (Google, Analytics) sono intestati a te. Puoi cambiare fornitore quando vuoi, senza vincoli.\n"
+      }
+    ],
+    "ctaLabel": "Richiedi un preventivo",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "siti-web"
+    ],
+    "title": "Prima di fare un sito, leggi qui",
+    "text": "Costi, accessibilità, cosa non deve mancare: le risposte alle domande che mi fanno più spesso prima di iniziare un progetto.\n",
+    "buttonLabel": "Tutti gli articoli"
+  },
+  "contact": {
+    "title": "Parliamo del tuo nuovo sito",
+    "formTitle": "Richiedi un preventivo gratuito",
+    "topics": [
+      "nuovo-sito"
+    ]
+  },
+  "seo": {
+    "title": "Realizzazione siti web chiavi in mano | bortolin.dev",
+    "description": "Siti vetrina, e-commerce e su misura: design, testi, SEO, velocità Lighthouse, tracciamento e formazione inclusi. Prezzo fisso, e il sito è tuo.",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "ogImage": "/src/assets/images/social/og-siti-web.png",
+    "markdown": null,
+    "customMarkupCode": ""
+  }
+}

@@ -1,0 +1,10 @@
+---
+// Template e contenuti: src/templates/Page.astro (le traduzioni usano lo stesso template, vedi src/pages/[lang]/[...path].astro)
+import Page from '../templates/Page.astro';
+import { reader } from '../lib/content';
+
+export async function getStaticPaths() {
+  return (await reader.collections.pages.all()).map((p) => ({ params: { slug: p.slug } }));
+}
+---
+<Page slug={Astro.params.slug!} />

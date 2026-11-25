@@ -1,0 +1,344 @@
+{
+  "hero": {
+    "breadcrumb": "Digitalberatung",
+    "eyebrow": "Marketing und Digitalisierung",
+    "title": "Digitalberatung: weniger Zeitverlust, mehr Kunden",
+    "text": "Ich helfe Ihnen, Digitales dort einzusetzen, wo es wirklich zählt: **im Marketing**, um Kunden zu gewinnen, und **im Betrieb**, damit Sie keine Stunden mehr mit Angeboten, Papierkram und E-Mails verlieren. Mit künstlicher Intelligenz, wo sie hilft, und nur dort.\n",
+    "ctaLabel": "Kostenloses Gespräch buchen",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Digitalisierung für KMU",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#digitalizzazione"
+    },
+    "highlights": [
+      "Wir starten bei Ihren Zielen",
+      "Keine Bindung an Anbieter",
+      "Festpreis"
+    ],
+    "requestLabel": "Neue Anfrage",
+    "requestTime": "heute, 8:42 Uhr",
+    "requestText": "„Guten Tag, ich hätte gern ein Angebot für den Austausch von **6 Fenstern** gegen Kunststofffenster in einem Haus in **Köln**, inklusive Ausbau der alten. Danke!“\n",
+    "statusStart": "Wartet …",
+    "statusReading": "Die KI liest die Anfrage …",
+    "statusWriting": "Angebot wird mit Ihrer Preisliste ausgefüllt …",
+    "statusDone": "Fertig: prüfen und senden",
+    "quoteLabel": "Angebotsentwurf",
+    "quoteTitle": "Nr. 2026/128 · Köln",
+    "quoteBadge": "Mit KI erstellt",
+    "quoteItems": [
+      {
+        "text": "Kunststofffenster mit Zweifachverglasung",
+        "detail": "6 Stk.",
+        "amount": 3900
+      },
+      {
+        "text": "Ausbau und Entsorgung der alten Rahmen",
+        "detail": "6 Stk.",
+        "amount": 480
+      },
+      {
+        "text": "Montage und Abdichtung",
+        "detail": "pauschal",
+        "amount": 960
+      }
+    ],
+    "totalLabel": "Summe (netto)",
+    "tags": [
+      "In Ihrer Unternehmenssoftware gespeichert",
+      "Bereit zum Versand an den Kunden"
+    ],
+    "caption": "Beispiel zur Veranschaulichung: Die KI bereitet den Entwurf vor, ein Mensch prüft ihn vor dem Versand."
+  },
+  "areas": {
+    "eyebrow": "Was ich mache",
+    "title": "Ein Digitalberater, für innen und außen",
+    "text": "Viele KMU haben eine Website, Social Media und vielleicht ein paar Kampagnen, arbeiten intern aber noch mit Papier, Tabellen und Copy-and-paste. Ich schaue auf beides, denn beides hängt zusammen: Die Zeit, die Sie intern sparen, können Sie in Wachstum nach außen stecken.\n",
+    "items": [
+      {
+        "label": "Nach außen",
+        "title": "Digitales Marketing",
+        "text": "Website, SEO, Kampagnen, Social Media und Daten: Wir sehen uns an, was funktioniert, was nicht und wo sich Investitionen lohnen.",
+        "linkLabel": "Zum digitalen Marketing",
+        "link": {
+          "discriminant": "custom",
+          "value": "#marketing"
+        }
+      },
+      {
+        "label": "Im Betrieb",
+        "title": "Digitalisierung und KI",
+        "text": "Angebote, Rechnungen, Dokumente, Kunden und Abläufe: weniger Routinearbeit, weniger Fehler, mehr Zeit für das Wesentliche.",
+        "linkLabel": "Zur Digitalisierung mit KI",
+        "link": {
+          "discriminant": "custom",
+          "value": "#digitalizzazione"
+        }
+      }
+    ]
+  },
+  "digital": {
+    "eyebrow": "Digitalisierung für KMU",
+    "title": "Künstliche Intelligenz im Arbeitsalltag",
+    "text": "Sie müssen nicht alles umkrempeln oder teure Software kaufen. Wir starten bei Ihrer heutigen Arbeitsweise und setzen Tools und KI **dort ein, wo sie wirklich Zeit sparen**, verbunden mit dem, was Sie schon nutzen.\n",
+    "items": [
+      {
+        "icon": "file",
+        "title": "Angebote und Rechnungen mit KI",
+        "text": "Von der Kundenanfrage oder dem Arbeitsbericht zum fertigen Entwurf, mit Ihren Preisen und Regeln. Sie prüfen und senden."
+      },
+      {
+        "icon": "card-text",
+        "title": "Dokumente ohne Abtippen",
+        "text": "Rechnungen, Lieferscheine, Bestellungen und Formulare: Die KI liest die Daten aus und trägt sie dort ein, wo sie gebraucht werden, ohne Copy-and-paste."
+      },
+      {
+        "icon": "users",
+        "title": "Kunden und Chancen im Griff",
+        "text": "Ein einfaches CRM, auf Sie zugeschnitten: Anfragen, Angebote, Fristen und Nachfassen an einem Ort."
+      },
+      {
+        "icon": "flow",
+        "title": "Automatisierungen zwischen Tools",
+        "text": "E-Mail, Unternehmenssoftware, Kalender und Tabellen, die miteinander sprechen: Wiederkehrende Aufgaben erledigen sich von selbst."
+      },
+      {
+        "icon": "chat",
+        "title": "Interner KI-Assistent",
+        "text": "Ihr Team fragt nach Abläufen, Preisen und Handbüchern des Unternehmens und bekommt in Sekunden Antworten."
+      },
+      {
+        "icon": "chart",
+        "title": "Zahlen im Blick",
+        "text": "Ein Dashboard mit den Kennzahlen, die zählen: Anfragen, angenommene Angebote, Margen, Termine."
+      }
+    ],
+    "casesTitle": "Vorher und nachher, ganz praktisch",
+    "casesText": "Drei typische Beispiele dafür, was sich in wenigen Wochen ändern kann.",
+    "beforeLabel": "Vorher",
+    "afterLabel": "Nachher",
+    "cases": [
+      {
+        "name": "Bauunternehmen in München",
+        "tag": "Angebote",
+        "before": "Stunden zwischen Preislisten, Tabellen und Dokumenten, die neu abgetippt werden müssen.",
+        "after": "Ein Angebotsentwurf in Minuten, mit aktuellen Preisen: Sie prüfen und senden."
+      },
+      {
+        "name": "Kfz-Werkstatt in Dortmund",
+        "tag": "Abrechnung",
+        "before": "Arbeitsberichte auf Papier, Stunden und Ersatzteile, die am Monatsende abgeglichen werden müssen.",
+        "after": "Arbeitsberichte per Smartphone und automatisch vorbereitete Rechnung."
+      },
+      {
+        "name": "Anwaltskanzlei in Frankfurt",
+        "tag": "Mandantenanfragen",
+        "before": "E-Mails, die sich stapeln, und dieselben Antworten, jedes Mal neu geschrieben.",
+        "after": "Anfragen automatisch sortiert und Antwortentwürfe, mit einem Klick geprüft."
+      }
+    ],
+    "casesNote": "Beispiele typischer Fälle zur Veranschaulichung; die Ergebnisse hängen vom jeweiligen Unternehmen und seinen Tools ab."
+  },
+  "marketing": {
+    "eyebrow": "Digitales Marketing",
+    "title": "Ein Blick von außen, ehrlich und umfassend",
+    "text": "Ich analysiere Website, Kampagnen und Social Media gemeinsam, denn Probleme liegen selten nur an einer Stelle. Sie erhalten einen priorisierten Plan, den Sie mit mir, mit Ihrer Agentur oder selbst umsetzen können.\n",
+    "linksLabel": "Verwandte Leistungen",
+    "links": [
+      {
+        "label": "SEO",
+        "link": {
+          "discriminant": "/servizi/consulenza-seo/"
+        }
+      },
+      {
+        "label": "Google Ads",
+        "link": {
+          "discriminant": "/servizi/google-ads/"
+        }
+      },
+      {
+        "label": "Meta Ads",
+        "link": {
+          "discriminant": "/servizi/meta-ads/"
+        }
+      },
+      {
+        "label": "Performance",
+        "link": {
+          "discriminant": "/servizi/miglioramento-prestazioni-siti-web/"
+        }
+      }
+    ],
+    "items": [
+      {
+        "title": "Website-Analyse",
+        "text": "Ladezeit, SEO, Klarheit und die Fähigkeit, Besuche in Kontakte zu verwandeln."
+      },
+      {
+        "title": "Marketing-Audit",
+        "text": "Google Ads, Meta Ads, SEO, Social Media und Inhalte, gemeinsam bewertet."
+      },
+      {
+        "title": "Tracking und Daten",
+        "text": "Wissen Sie wirklich, woher Ihre Kunden kommen? Wir prüfen es."
+      },
+      {
+        "title": "Digitalstrategie",
+        "text": "Ein Plan mit Prioritäten, Kosten und erwarteten Ergebnissen."
+      },
+      {
+        "title": "Zweitmeinung",
+        "text": "Ein unabhängiger Blick auf die Arbeit Ihrer Agentur."
+      },
+      {
+        "title": "Workshops fürs Team",
+        "text": "SEO, Kampagnen und digitale Tools praxisnah erklärt."
+      }
+    ]
+  },
+  "roadmap": {
+    "eyebrow": "Wie wir starten",
+    "title": "Erst die Ziele, dann die Tools",
+    "text": "Digitales ist nicht das Ziel, sondern das Mittel. Deshalb starten wir immer bei dem, wo Sie hinwollen, und bauen Schritt für Schritt einen Weg mit messbaren Ergebnissen.\n",
+    "steps": [
+      {
+        "when": "Woche 1",
+        "title": "Ziele",
+        "text": "Wo Sie hinwollen, mit welchen Zahlen und bis wann."
+      },
+      {
+        "when": "Wochen 2–3",
+        "title": "Analyse",
+        "text": "Wie Sie heute arbeiten: Abläufe, Tools, Engpässe."
+      },
+      {
+        "when": "Erste 30 Tage",
+        "title": "Schnelle Erfolge",
+        "text": "Die einfachen Änderungen, die sofort Zeit sparen."
+      },
+      {
+        "when": "60–90 Tage",
+        "title": "Kernprojekte",
+        "text": "Die wichtigsten Veränderungen, eine nach der anderen und gemessen."
+      }
+    ],
+    "boxTitle": "Keine Bindung an Anbieter",
+    "boxText": "Ich verkaufe keine Software und nehme keine Provisionen: Ich empfehle die Tools, die am besten zu Ihnen passen, auch kostenlose.",
+    "ctaLabel": "Kostenloses Gespräch buchen",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "formats": {
+    "eyebrow": "Wie wir zusammenarbeiten können",
+    "title": "Vom Check bis zur laufenden Begleitung",
+    "text": "Jedes Modell hat einen Festpreis, der nach dem kostenlosen Gespräch festgelegt wird.\n",
+    "items": [
+      {
+        "label": "Einmalig",
+        "title": "Digital-Check",
+        "text": "Analyse von Marketing und Abläufen, mit einem schriftlichen Maßnahmenplan, den ich Ihnen persönlich erkläre.",
+        "ctaLabel": "Sprechen wir darüber",
+        "ctaLink": {
+          "discriminant": "#contatti"
+        },
+        "highlight": false,
+        "badge": ""
+      },
+      {
+        "label": "Monatlich",
+        "title": "Laufende Begleitung",
+        "text": "Ich begleite Sie dauerhaft als externer Berater: Entscheidungen, Dienstleister, Projekte und Ergebnisse.",
+        "ctaLabel": "Sprechen wir darüber",
+        "ctaLink": {
+          "discriminant": "#contatti"
+        },
+        "highlight": true,
+        "badge": "Am beliebtesten"
+      },
+      {
+        "label": "Individuell",
+        "title": "Workshops und Projekte",
+        "text": "Schulung des Teams, Einführung von KI im Unternehmen, Zweitmeinungen.",
+        "ctaLabel": "Sprechen wir darüber",
+        "ctaLink": {
+          "discriminant": "#contatti"
+        },
+        "highlight": false,
+        "badge": ""
+      }
+    ]
+  },
+  "offer": {
+    "show": false,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "title": "Fragen zur Beratung",
+    "text": "Ihre Frage ist nicht dabei? [Schreiben Sie mir](#contatti), ich antworte innerhalb eines Werktags.\n",
+    "items": [
+      {
+        "question": "Mein Unternehmen ist klein: Lohnt sich Digitalisierung überhaupt?",
+        "answer": "Ja, sogar besonders: In einem kleinen Betrieb zählt jede gesparte Stunde mehr. Wir starten mit ein oder zwei Abläufen, die am meisten Zeit kosten, etwa Angebote oder Papierkram, und weiten nur aus, wenn es funktioniert.\n"
+      },
+      {
+        "question": "Muss ich meine Software wechseln oder neue kaufen?",
+        "answer": "Nicht unbedingt. Oft erreicht man viel, indem man die vorhandenen Tools besser verbindet. Braucht es etwas Neues, schlage ich Alternativen mit klaren Kosten vor, auch kostenlose.\n"
+      },
+      {
+        "question": "Kann die KI wirklich Angebote erstellen?",
+        "answer": "Sie kann einen Entwurf vorbereiten, auf Basis der Kundenanfrage, Ihrer Preise und Ihrer Regeln. Die letzte Entscheidung liegt bei Ihnen: Sie prüfen, korrigieren bei Bedarf und senden.\n"
+      },
+      {
+        "question": "Wie gehen Sie mit Unternehmensdaten um?",
+        "answer": "Sorgfältig: Ich nutze professionelle Dienste, gebe der KI nur die nötigen Daten und richte alles DSGVO-konform ein. Für besonders sensible Daten wählen wir gemeinsam die vorsichtigsten Lösungen.\n"
+      },
+      {
+        "question": "Arbeiten Sie auch mit unserer Agentur oder unserem IT-Dienstleister zusammen?",
+        "answer": "Ja. Ich kann sie unterstützen, Projekte koordinieren oder eine unabhängige Meinung geben: Entscheidend ist das Ergebnis für Ihr Unternehmen.\n"
+      },
+      {
+        "question": "Arbeiten Sie auch vor Ort?",
+        "answer": "Ja, Unternehmen in Venetien und Friaul treffe ich persönlich mit dem Team, vor allem in der Analysephase. Alles andere funktioniert problemlos remote, egal wo Sie sind.\n"
+      }
+    ],
+    "ctaLabel": "Kostenloses Gespräch buchen",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "digitalizzazione",
+      "dati"
+    ],
+    "title": "Digitalisierung und Daten, ganz praktisch",
+    "text": "Wo Sie mit der Automatisierung der Büroarbeit anfangen und wie Sie Ergebnisse wirklich messen.\n",
+    "buttonLabel": "Alle Artikel"
+  },
+  "contact": {
+    "title": "Sprechen wir über Ihr Unternehmen",
+    "formTitle": "Kostenloses Gespräch buchen",
+    "topics": [
+      "ai"
+    ]
+  },
+  "seo": {
+    "slug": "digitalberatung",
+    "title": "Digitalberatung und KI für KMU | bortolin.dev",
+    "description": "Digitalberatung für KMU: Marketing, Angebote und Dokumente mit KI, Automatisierungen und CRM. Messbare Ziele und Festpreis, ohne Fachchinesisch.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

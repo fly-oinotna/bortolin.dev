@@ -1,0 +1,10 @@
+---
+// Template e contenuti: src/templates/CaseStudy.astro (le traduzioni usano lo stesso template, vedi src/pages/[lang]/[...path].astro)
+import CaseStudy from '../../templates/CaseStudy.astro';
+import { reader } from '../../lib/content';
+
+export async function getStaticPaths() {
+  return (await reader.collections.caseStudies.all()).map((e) => ({ params: { slug: e.slug } }));
+}
+---
+<CaseStudy slug={Astro.params.slug!} />

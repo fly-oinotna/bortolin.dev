@@ -1,0 +1,225 @@
+{
+  "general": {
+    "ogImage": "@it",
+    "headerCtaLabel": "Pide presupuesto",
+    "headerCtaLink": {
+      "discriminant": "#contatti",
+      "value": null
+    }
+  },
+  "contacts": {
+    "whatsappLabel": "Escríbeme por WhatsApp"
+  },
+  "reviews": {
+    "eyebrow": "Opiniones",
+    "title": "Lo que dicen mis clientes",
+    "text": "Las opiniones llegan directamente de Google, sin filtros, y se traducen automáticamente a tu idioma.",
+    "ratingLabel": "Valoración media en Google",
+    "ratingShort": "en Google",
+    "countLabel": "{n} opiniones",
+    "translated": "Traducido por Google · Ver original",
+    "all": "Leer todas las opiniones en Google",
+    "leave": "¿Has trabajado conmigo? Deja tu opinión"
+  },
+  "contact": {
+    "title": "Hablemos de tu nueva web",
+    "text": "Cuéntame tu proyecto. **La primera llamada de 25 minutos es gratis** y sin compromiso.",
+    "bullets": [
+      "Gratis y sin compromiso",
+      "Respuesta en un día laborable",
+      "Hablas directamente conmigo"
+    ],
+    "formTitle": "Pide tu presupuesto gratis",
+    "name": "Nombre y apellidos",
+    "email": "Email",
+    "phone": "Teléfono",
+    "website": "Web actual",
+    "websitePlaceholder": "www.tuweb.es",
+    "topicsLabel": "¿Qué necesitas?",
+    "topics": [
+      {
+        "label": "Web nueva"
+      },
+      {
+        "label": "Rediseñar mi web"
+      },
+      {
+        "label": "SEO"
+      },
+      {
+        "label": "Velocidad"
+      },
+      {
+        "label": "IA"
+      },
+      {
+        "label": "Publicidad"
+      }
+    ],
+    "message": "Cuéntame tu proyecto",
+    "privacy": "He leído la [política de privacidad](/informativa-sulla-privacy/) y acepto el tratamiento de mis datos para que me contactes.",
+    "submit": "Enviar solicitud"
+  },
+  "caseStudies": {
+    "featuresTitle": "Qué incluye la web",
+    "readLabel": "Leer el caso de éxito",
+    "visitLabel": "Visitar la web"
+  },
+  "footer": {
+    "text": "Creo páginas web completas, rápidas y preparadas para posicionar en Google y aparecer en las respuestas de la IA. Trabajo con empresas, profesionales y agencias web, con precio cerrado y explicándolo todo sin tecnicismos.",
+    "column1": [
+      {
+        "title": "Para empresas y profesionales",
+        "links": [
+          {
+            "label": "Todos los servicios",
+            "link": {
+              "discriminant": "/servizi/",
+              "value": null
+            },
+            "bold": true
+          },
+          {
+            "label": "Páginas web completas",
+            "link": {
+              "discriminant": "/servizi/siti-web/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "Consultoría SEO",
+            "link": {
+              "discriminant": "/servizi/consulenza-seo/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "Rendimiento y Lighthouse",
+            "link": {
+              "discriminant": "/servizi/miglioramento-prestazioni-siti-web/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "Integración de IA",
+            "link": {
+              "discriminant": "/servizi/integrazione-ai/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "Consultoría digital",
+            "link": {
+              "discriminant": "/servizi/consulenza-digitale/",
+              "value": null
+            },
+            "bold": false
+          }
+        ]
+      },
+      {
+        "title": "Publicidad",
+        "links": [
+          {
+            "label": "Google Ads",
+            "link": {
+              "discriminant": "/servizi/google-ads/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "Publicidad en IA",
+            "link": {
+              "discriminant": "/servizi/ai-ads/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "Meta Ads",
+            "link": {
+              "discriminant": "/servizi/meta-ads/",
+              "value": null
+            },
+            "bold": false
+          }
+        ]
+      }
+    ],
+    "column2": [
+      {
+        "title": "Para agencias web",
+        "links": [
+          {
+            "label": "Desarrollador freelance (marca blanca)",
+            "link": {
+              "discriminant": "custom",
+              "value": "/servizi/sviluppatore-freelance-per-web-agency/#white-label"
+            },
+            "bold": false
+          },
+          {
+            "label": "Project manager freelance",
+            "link": {
+              "discriminant": "custom",
+              "value": "/servizi/sviluppatore-freelance-per-web-agency/#project-management"
+            },
+            "bold": false
+          }
+        ]
+      }
+    ],
+    "boxTitle": "Hablemos de tu proyecto",
+    "boxText": "La primera llamada de 25 minutos es gratis y sin compromiso.",
+    "boxCtaLabel": "Reserva tu llamada gratis",
+    "boxCtaLink": {
+      "discriminant": "#contatti",
+      "value": null
+    },
+    "vatLabel": "NIF-IVA:",
+    "legal": [
+      {
+        "label": "Política de privacidad",
+        "link": {
+          "discriminant": "/informativa-sulla-privacy/",
+          "value": null
+        }
+      },
+      {
+        "label": "Política de cookies",
+        "link": {
+          "discriminant": "/informativa-sulla-gestione-dei-cookie/",
+          "value": null
+        }
+      }
+    ]
+  },
+  "a11y": {
+    "skip": "Saltar al contenido",
+    "home": "bortolin.dev – página de inicio",
+    "mainNav": "Principal",
+    "mobileNav": "Menú móvil",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "toggleServices": "Mostrar el menú de servicios",
+    "offer": "Destacado",
+    "toContacts": "Ir a contacto",
+    "contacts": "Cómo contactar conmigo",
+    "language": "Idioma",
+    "social": "Redes sociales",
+    "follow": "Sígueme en",
+    "highlights": "Por qué trabajar conmigo",
+    "projectTags": "Puntos clave del proyecto",
+    "scores": "Objetivo Lighthouse: 100 sobre 100 en las cuatro categorías",
+    "stars": "{n} de 5 estrellas",
+    "reviewer": "Perfil de Google de",
+    "psiField": "La dirección de tu web",
+    "psiForm": "Analiza tu web con PageSpeed Insights",
+    "honeypot": "Dejar en blanco"
+  }
+}

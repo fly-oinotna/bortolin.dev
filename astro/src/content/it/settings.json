@@ -1,0 +1,249 @@
+{
+  "general": {
+    "siteName": "bortolin.dev",
+    "icon": "/src/assets/images/site/icon.svg",
+    "ogImage": "/src/assets/images/site/og-default.png",
+    "headerCtaLabel": "Richiedi un preventivo",
+    "headerCtaLink": {
+      "discriminant": "#contatti",
+      "value": null
+    }
+  },
+  "contacts": {
+    "phone": "+39 371 596 2874",
+    "phoneHref": "+393715962874",
+    "email": "antonio@bortolin.dev",
+    "vat": "IT05504860262",
+    "whatsapp": "https://wa.me/message/YPJNFZYIJD6WK1",
+    "whatsappLabel": "Scrivimi su WhatsApp"
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/bortolin.dev",
+    "instagram": "https://www.instagram.com/bortolin.dev/",
+    "linkedin": "https://www.linkedin.com/in/antonio-bortolin/"
+  },
+  "reviews": {
+    "eyebrow": "Recensioni",
+    "title": "Cosa dicono i miei clienti",
+    "text": "Le recensioni arrivano direttamente da Google, senza filtri, e sono tradotte automaticamente nella tua lingua.",
+    "count": 3,
+    "ratingLabel": "Valutazione media su Google",
+    "ratingShort": "su Google",
+    "countLabel": "{n} recensioni",
+    "translated": "Tradotta da Google · Mostra originale",
+    "all": "Leggi tutte le recensioni su Google",
+    "leave": "Sei un cliente? Lascia una recensione"
+  },
+  "contact": {
+    "title": "Parliamo del tuo nuovo sito",
+    "text": "Raccontami il tuo progetto. **La call conoscitiva di 25 minuti è gratuita** e senza impegno.",
+    "bullets": [
+      "Gratuita e senza impegno",
+      "Risposta entro il giorno lavorativo successivo",
+      "Parli direttamente con me"
+    ],
+    "formTitle": "Richiedi un preventivo gratuito",
+    "name": "Nome e cognome",
+    "email": "E-mail",
+    "phone": "Telefono",
+    "website": "Sito attuale",
+    "websitePlaceholder": "www.iltuosito.it",
+    "topicsLabel": "Di cosa hai bisogno?",
+    "topics": [
+      {
+        "label": "Nuovo sito web",
+        "value": "nuovo-sito"
+      },
+      {
+        "label": "Rifare il sito attuale",
+        "value": "restyling"
+      },
+      {
+        "label": "SEO",
+        "value": "seo"
+      },
+      {
+        "label": "Performance",
+        "value": "performance"
+      },
+      {
+        "label": "AI",
+        "value": "ai"
+      },
+      {
+        "label": "Advertising",
+        "value": "ads"
+      }
+    ],
+    "message": "Raccontami il tuo progetto",
+    "privacy": "Ho letto l’[informativa sulla privacy](/informativa-sulla-privacy/) e acconsento al trattamento dei dati per essere ricontattato.",
+    "submit": "Invia richiesta"
+  },
+  "caseStudies": {
+    "featuresTitle": "Cosa contiene il sito",
+    "readLabel": "Leggi il caso studio",
+    "visitLabel": "Visita il sito"
+  },
+  "footer": {
+    "text": "Realizzo siti web completi, veloci e ottimizzati per Google e per l’intelligenza artificiale. Lavoro con aziende, professionisti e web agency, a prezzo fisso e spiegando tutto in modo semplice.",
+    "column1": [
+      {
+        "title": "Per aziende e privati",
+        "links": [
+          {
+            "label": "Tutti i servizi",
+            "link": {
+              "discriminant": "/servizi/",
+              "value": null
+            },
+            "bold": true
+          },
+          {
+            "label": "Siti web chiavi in mano",
+            "link": {
+              "discriminant": "/servizi/siti-web/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "Consulenza SEO",
+            "link": {
+              "discriminant": "/servizi/consulenza-seo/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "Performance & Lighthouse",
+            "link": {
+              "discriminant": "/servizi/miglioramento-prestazioni-siti-web/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "Integrazione AI",
+            "link": {
+              "discriminant": "/servizi/integrazione-ai/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "Consulenza digitale",
+            "link": {
+              "discriminant": "/servizi/consulenza-digitale/",
+              "value": null
+            },
+            "bold": false
+          }
+        ]
+      },
+      {
+        "title": "Advertising",
+        "links": [
+          {
+            "label": "Google Ads",
+            "link": {
+              "discriminant": "/servizi/google-ads/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "AI Ads",
+            "link": {
+              "discriminant": "/servizi/ai-ads/",
+              "value": null
+            },
+            "bold": false
+          },
+          {
+            "label": "Meta Ads",
+            "link": {
+              "discriminant": "/servizi/meta-ads/",
+              "value": null
+            },
+            "bold": false
+          }
+        ]
+      }
+    ],
+    "column2": [
+      {
+        "title": "Per le web agency",
+        "links": [
+          {
+            "label": "Sviluppatore freelance (white label)",
+            "link": {
+              "discriminant": "custom",
+              "value": "/servizi/sviluppatore-freelance-per-web-agency/#white-label"
+            },
+            "bold": false
+          },
+          {
+            "label": "Project manager freelance",
+            "link": {
+              "discriminant": "custom",
+              "value": "/servizi/sviluppatore-freelance-per-web-agency/#project-management"
+            },
+            "bold": false
+          }
+        ]
+      }
+    ],
+    "boxTitle": "Parliamo del tuo progetto",
+    "boxText": "La call conoscitiva di 25 minuti è gratuita e senza impegno.",
+    "boxCtaLabel": "Prenota la call gratuita",
+    "boxCtaLink": {
+      "discriminant": "#contatti",
+      "value": null
+    },
+    "vatLabel": "P.IVA:",
+    "legal": [
+      {
+        "label": "Privacy policy",
+        "link": {
+          "discriminant": "/informativa-sulla-privacy/",
+          "value": null
+        }
+      },
+      {
+        "label": "Cookies policy",
+        "link": {
+          "discriminant": "/informativa-sulla-gestione-dei-cookie/",
+          "value": null
+        }
+      }
+    ]
+  },
+  "a11y": {
+    "skip": "Vai al contenuto",
+    "home": "bortolin.dev – pagina iniziale",
+    "mainNav": "Principale",
+    "mobileNav": "Menu mobile",
+    "openMenu": "Apri il menu",
+    "closeMenu": "Chiudi il menu",
+    "toggleServices": "Mostra il menu dei servizi",
+    "offer": "In evidenza",
+    "toContacts": "Vai ai contatti",
+    "contacts": "Come contattarmi",
+    "language": "Lingua",
+    "social": "Social",
+    "follow": "Seguimi su",
+    "highlights": "Perché scegliermi",
+    "projectTags": "Caratteristiche del progetto",
+    "scores": "Punteggi Lighthouse obiettivo: 100 su 100 in tutte e quattro le categorie",
+    "stars": "{n} stelle su 5",
+    "reviewer": "Profilo Google di",
+    "psiField": "Indirizzo del tuo sito",
+    "psiForm": "Analizza il tuo sito con PageSpeed Insights",
+    "honeypot": "Lascia vuoto"
+  },
+  "llms": {
+    "enabled": true,
+    "markdownEnabled": true,
+    "extra": ""
+  }
+}

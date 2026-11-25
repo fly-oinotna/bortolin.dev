@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="480" viewBox="0 0 600 480" fill="none" font-family="Plus Jakarta Sans, Arial, Helvetica, sans-serif">
+  <!-- soft background shapes -->
+  <circle cx="470" cy="380" r="110" fill="#99EA48" opacity=".25"/>
+  <circle cx="90" cy="90" r="60" fill="#e5e7eb"/>
+
+  <!-- browser window -->
+  <rect x="60" y="50" width="480" height="350" rx="24" fill="#fff" stroke="#000" stroke-width="3"/>
+  <path d="M84 50h432a24 24 0 0 1 24 24v22H60V74a24 24 0 0 1 24-24z" fill="#2c2c2e"/>
+  <circle cx="90" cy="73" r="6" fill="#ff5f57"/>
+  <circle cx="110" cy="73" r="6" fill="#febc2e"/>
+  <circle cx="130" cy="73" r="6" fill="#28c840"/>
+  <rect x="170" y="63" width="260" height="20" rx="10" fill="#1c1c1e"/>
+  <path d="M184 73l4 4 7-8" stroke="#99EA48" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="204" y="70" width="120" height="6" rx="3" fill="#525252"/>
+
+  <!-- four gauges -->
+  <g font-size="20" font-weight="800" text-anchor="middle" fill="#000">
+    <g transform="translate(132 165)">
+      <circle r="38" fill="none" stroke="#e5e7eb" stroke-width="9"/>
+      <circle r="38" fill="#fff" stroke="#99EA48" stroke-width="9"/>
+      <text y="7">100</text>
+      <rect x="-30" y="56" width="60" height="8" rx="4" fill="#d1d5db"/>
+    </g>
+    <g transform="translate(244 165)">
+      <circle r="38" fill="none" stroke="#e5e7eb" stroke-width="9"/>
+      <circle r="38" fill="#fff" stroke="#99EA48" stroke-width="9"/>
+      <text y="7">100</text>
+      <rect x="-30" y="56" width="60" height="8" rx="4" fill="#d1d5db"/>
+    </g>
+    <g transform="translate(356 165)">
+      <circle r="38" fill="none" stroke="#e5e7eb" stroke-width="9"/>
+      <circle r="38" fill="#fff" stroke="#99EA48" stroke-width="9"/>
+      <text y="7">100</text>
+      <rect x="-30" y="56" width="60" height="8" rx="4" fill="#d1d5db"/>
+    </g>
+    <g transform="translate(468 165)">
+      <circle r="38" fill="none" stroke="#e5e7eb" stroke-width="9"/>
+      <circle r="38" fill="#fff" stroke="#99EA48" stroke-width="9"/>
+      <text y="7">100</text>
+      <rect x="-30" y="56" width="60" height="8" rx="4" fill="#d1d5db"/>
+    </g>
+  </g>
+
+  <!-- core web vitals bars -->
+  <g font-size="14" font-weight="700" fill="#000">
+    <text x="92" y="280">LCP</text>
+    <rect x="150" y="268" width="270" height="14" rx="7" fill="#f3f4f6"/>
+    <rect x="150" y="268" width="96" height="14" rx="7" fill="#99EA48"/>
+    <text x="508" y="280" text-anchor="end">0.9 s</text>
+
+    <text x="92" y="318">INP</text>
+    <rect x="150" y="306" width="270" height="14" rx="7" fill="#f3f4f6"/>
+    <rect x="150" y="306" width="62" height="14" rx="7" fill="#99EA48"/>
+    <text x="508" y="318" text-anchor="end">64 ms</text>
+
+    <text x="92" y="356">CLS</text>
+    <rect x="150" y="344" width="270" height="14" rx="7" fill="#f3f4f6"/>
+    <rect x="150" y="344" width="22" height="14" rx="7" fill="#99EA48"/>
+    <text x="508" y="356" text-anchor="end">0.01</text>
+  </g>
+
+  <!-- lightning badge -->
+  <circle cx="540" cy="58" r="44" fill="#99EA48" stroke="#000" stroke-width="3"/>
+  <path d="M546 30l-24 34h16l-6 24 26-36h-17z" fill="#000"/>
+
+  <!-- growth card -->
+  <rect x="20" y="360" width="190" height="96" rx="20" fill="#000"/>
+  <!-- linea in crescita: l'ultimo tratto sale a 45° e termina esattamente nella punta della freccia -->
+  <path d="M56 438 82 418l22 12 54-54" stroke="#99EA48" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M140 376h18v18" stroke="#99EA48" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- sparkles -->
+  <path d="M28 230l5 12 12 5-12 5-5 12-5-12-12-5 12-5z" fill="#99EA48" stroke="#000" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M574 250l3 8 8 3-8 3-3 8-3-8-8-3 8-3z" fill="#000"/>
+</svg>

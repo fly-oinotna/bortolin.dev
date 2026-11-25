@@ -1,0 +1,25 @@
+{
+  "title": "Preventivi con l’intelligenza artificiale: un esempio pratico",
+  "content": {
+    "date": "2026-09-25",
+    "category": "ai",
+    "image": "/src/assets/images/blog/preventivi-con-intelligenza-artificiale.webp",
+    "imageAlt": "Calcolatrice e penna appoggiate su fogli di calcolo",
+    "excerpt": "Dalla richiesta del cliente alla bozza di preventivo in pochi minuti, con i tuoi listini. Come funziona, cosa serve e dove serve ancora una persona.",
+    "lead": "Per molti artigiani e piccole imprese fare preventivi significa passare la sera tra listini, fogli di calcolo e documenti da ricopiare. L’intelligenza artificiale oggi può preparare una **bozza** in pochi minuti. Ti mostro come funziona con un esempio concreto, cosa serve e dove resta indispensabile una persona.",
+    "text": "## L’esempio: un serramentista di Treviso\n\nArriva un’email: “Vorrei un preventivo per sostituire 6 finestre in PVC in una casa a Pordenone, compreso lo smaltimento delle vecchie”. Oggi il titolare apre il listino, calcola misure e quantità, aggiunge posa e smaltimento, impagina tutto e lo invia. Mezz’ora, se va bene.\n\nCon un sistema basato sull’AI, la richiesta viene letta in automatico, le voci vengono riconosciute e abbinate al listino, e in pochi istanti è pronta una bozza con righe, quantità e totale. Il titolare la controlla, corregge un dettaglio e la invia.\n\n## Come funziona, dietro le quinte\n\n1. **Lettura**: l’AI legge la richiesta (email, modulo del sito, nota vocale trascritta) ed estrae cosa serve.\n2. **Abbinamento**: collega ogni voce ai tuoi prodotti, servizi e prezzi.\n3. **Regole**: applica le tue condizioni, come minimi d’ordine, costi di trasferta, sconti.\n4. **Bozza**: prepara il documento nel tuo formato, pronto da rivedere.\n\n## Cosa serve per partire\n\n- un **listino** aggiornato e in formato digitale (anche un foglio di calcolo va bene);\n- le tue **regole** di calcolo scritte in modo chiaro;\n- qualche **preventivo passato** come esempio;\n- il collegamento con gli strumenti che usi già: email, gestionale, archivio documenti.\n\n## Dove serve ancora una persona\n\nL’AI è bravissima a fare il lavoro ripetitivo, ma non conosce il cliente come lo conosci tu. Restano umani:\n\n- i **sopralluoghi** e le misure reali;\n- le valutazioni sui **casi particolari**;\n- la **decisione finale** sul prezzo e sull’invio.\n\n> La regola d’oro: l’AI prepara, una persona controlla e decide.\n\n## Dai preventivi ai consuntivi\n\nLo stesso principio vale a fine lavoro. Rapportini compilati dal telefono, ore e materiali registrati sul posto: il **consuntivo** e la bozza di fattura si preparano da soli, senza ricostruire tutto a fine mese.\n\n## E i dati dei clienti?\n\nI preventivi contengono dati personali e commerciali. Per questo è importante usare servizi professionali, inviare all’AI solo le informazioni necessarie e configurare tutto nel rispetto del GDPR. Prima di partire conviene sempre chiarire dove vengono elaborati i dati e per quanto tempo vengono conservati.\n\n## Quanto tempo si risparmia\n\nDipende da quanti preventivi fai e da quanto sono simili tra loro. Il modo migliore per saperlo è misurare: quanto ci metti oggi per un preventivo tipo, e quanto ci metti dopo un mese di utilizzo. Se il risparmio c’è, si estende ad altri processi; se non c’è, si cambia strada."
+  },
+  "seo": {
+    "title": "Preventivi con l’AI: un esempio pratico | bortolin.dev",
+    "description": "Dalla richiesta del cliente alla bozza di preventivo in pochi minuti, con i tuoi listini. Come funziona, cosa serve e dove serve ancora una persona.",
+    "ogImage": "/src/assets/images/social/og-blog-preventivi-con-intelligenza-artificiale.png",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "markdown": null,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

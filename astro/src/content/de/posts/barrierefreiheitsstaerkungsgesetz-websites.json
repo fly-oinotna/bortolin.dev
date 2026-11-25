@@ -1,0 +1,23 @@
+{
+  "title": "Barrierefreiheitsstärkungsgesetz: Was sich für Ihre Website ändert",
+  "content": {
+    "image": "@it",
+    "imageAlt": "Hände, die auf einer Computertastatur tippen",
+    "excerpt": "Seit dem 28. Juni 2025 müssen viele Websites, die online verkaufen, barrierefrei sein. Wer betroffen ist, was zu prüfen ist und wo Sie anfangen.",
+    "lead": "Seit dem **28. Juni 2025** gilt in der gesamten Europäischen Union der European Accessibility Act. Er verlangt, dass viele digitale Produkte und Dienstleistungen auch für Menschen mit Behinderungen nutzbar sind, und das betrifft auch viele Websites und Onlineshops. In Deutschland ist er als Barrierefreiheitsstärkungsgesetz (BFSG) umgesetzt. Hier erfahren Sie, wer betroffen ist und wo Sie anfangen.",
+    "text": "## Was hinter dem Gesetz steckt\n\nGrundlage ist eine EU-Richtlinie (2019/882), die Deutschland mit dem Barrierefreiheitsstärkungsgesetz umgesetzt hat. Sie legt gemeinsame Anforderungen an die Barrierefreiheit einer Reihe von Produkten und Dienstleistungen fest, damit alle sie nutzen können: auch Menschen mit Sehschwäche, blinde Menschen und alle, die nur mit Tastatur oder Screenreader arbeiten.\n\n## Wer betroffen ist\n\nZu den betroffenen Dienstleistungen gehören der **elektronische Geschäftsverkehr** mit Verbrauchern, Bankdienstleistungen, Personenbeförderung, E-Books und bestimmte elektronische Kommunikationsdienste. In der Praxis gilt: Wenn Sie Produkte oder Dienstleistungen online an Privatkunden verkaufen, sind Sie sehr wahrscheinlich betroffen.\n\nAusnahmen gibt es für **Kleinstunternehmen**, die Dienstleistungen erbringen (weniger als 10 Beschäftigte und Jahresumsatz oder Jahresbilanzsumme bis 2 Millionen Euro). Jeder Fall muss aber geprüft werden: Im Zweifel lohnt sich eine Rechtsberatung.\n\n## Was „barrierefrei“ praktisch bedeutet\n\nTechnische Grundlage ist die europäische Norm EN 301 549, die auf den internationalen WCAG-Richtlinien beruht. Konkret heißt das, eine barrierefreie Website:\n\n- lässt sich **allein mit der Tastatur** bedienen, und man sieht immer, wo man sich befindet;\n- hat Texte mit ausreichendem **Kontrast** zum Hintergrund;\n- beschreibt wichtige Bilder mit einem **Alternativtext**;\n- hat Formulare mit klaren Beschriftungen und verständlichen Fehlermeldungen;\n- funktioniert mit den **Screenreadern**, die blinde Menschen nutzen.\n\n## Nicht nur Pflicht: die Vorteile\n\nEine barrierefreie Website ist für alle leichter zu bedienen: für den, der sie in praller Sonne auf dem Handy öffnet, für Eilige, für ältere Menschen. Und viele Best Practices der Barrierefreiheit helfen auch der SEO, etwa eine klare Überschriftenstruktur und aussagekräftige Alternativtexte.\n\n## So machen Sie einen ersten Check\n\n1. Navigieren Sie **nur mit der Tab-Taste** durch die Website: Erreichen Sie alles und wissen Sie immer, wo Sie sind?\n2. Analysieren Sie die wichtigsten Seiten mit **Lighthouse**, im Bereich Barrierefreiheit.\n3. Prüfen Sie, ob jedes wichtige Bild einen sinnvollen Alternativtext hat.\n4. Füllen Sie Kontakt- und Bestellformulare ohne Maus aus.\n\nDiese automatischen und manuellen Prüfungen ersetzen kein vollständiges Audit, zeigen Ihnen aber deutlich, wie viel Arbeit ansteht.\n\n## Die Erklärung zur Barrierefreiheit\n\nWer unter das Gesetz fällt, muss auch darüber informieren, wie die Dienstleistung die Anforderungen an die Barrierefreiheit erfüllt, meist auf einer eigenen Seite der Website. Dieses Dokument sollte sorgfältig erstellt, regelmäßig aktualisiert und gut sichtbar verlinkt werden.\n\n## Wo Sie anfangen\n\nStarten Sie mit den wichtigsten Seiten: Startseite, Produktseiten, Warenkorb, Bezahlung, Kontakt. Beheben Sie zuerst die Probleme, die die Nutzung blockieren (Tastaturbedienung, Formulare, Kontraste), dann die Details. Und machen Sie Barrierefreiheit zur Arbeitsregel: Jede neue Seite sollte von Anfang an barrierefrei sein."
+  },
+  "seo": {
+    "title": "BFSG: Was sich für Ihre Website ändert | bortolin.dev",
+    "description": "Seit 28. Juni 2025 müssen viele Websites, die online verkaufen, barrierefrei sein. Wer betroffen ist, was zu prüfen ist und wo Sie anfangen.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "european-accessibility-act-siti-web"
+}

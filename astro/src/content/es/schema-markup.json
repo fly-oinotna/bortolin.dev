@@ -1,0 +1,18 @@
+{
+  "general": {
+    "description": "Páginas web rápidas con SEO, velocidad e IA incluidos, además de consultoría SEO, integración de IA y publicidad online."
+  },
+  "person": {
+    "jobTitle": "Diseñador web, desarrollador y consultor SEO",
+    "knowsAbout": [
+      "SEO",
+      "Core Web Vitals",
+      "Lighthouse",
+      "Rendimiento web",
+      "Inteligencia artificial",
+      "Google Ads",
+      "Meta Ads",
+      "WordPress"
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+---
+// Percorso "Home / Servizi / Pagina": l'ultima voce è la pagina corrente (stesso percorso del BreadcrumbList in Base)
+import { t } from '../../i18n/ui';
+import { prefix } from '../../i18n/langs';
+interface Props { items: { name: string; url: string }[]; class?: string }
+const { items, class: cls = 'mb-8 text-sm' } = Astro.props;
+const lang = Astro.currentLocale ?? 'it';
+const ui = t(lang);
+const all = [{ name: ui.home, url: `${prefix(lang)}/` }, ...items];
+---
+<nav aria-label={ui.breadcrumb} class={cls}>
+  <ol class="flex flex-wrap items-center gap-1.5 text-gray-600">
+    {all.map((it, i) => i < all.length - 1
+      ? <><li><a href={it.url} class="hover:text-black hover:underline">{it.name}</a></li><li aria-hidden="true">/</li></>
+      : <li><span aria-current="page" class="font-semibold text-black">{it.name}</span></li>)}
+  </ol>
+</nav>

@@ -1,0 +1,23 @@
+{
+  "title": "Google Ads or Meta Ads: which is right for your business?",
+  "content": {
+    "image": "@it",
+    "imageAlt": "Smartphone showing a social media feed",
+    "excerpt": "One reaches people already looking for you, the other gets you discovered by people who don’t know you yet. How to decide where to start, with real-world examples.",
+    "lead": "Google Ads and Meta Ads (Facebook and Instagram) are the two advertising channels small businesses use most. They’re not rivals: they do different jobs. Understanding the difference saves you from spending in the wrong place.",
+    "text": "## The difference in one sentence\n\n**Google Ads reaches people who are already looking for you.** **Meta Ads gets you discovered by people who don’t know you yet.** On the first you answer a question; on the second you spark interest while people scroll their feed.\n\n## When Google Ads makes sense\n\nGoogle Ads works well when people are actively searching for what you offer: “emergency electrician Manchester”, “van rental Toronto”, “waterproof hiking boots”. The demand is already there; you just need to show up at the right moment.\n\n- services with urgency or a clear need;\n- local businesses with “near me” searches;\n- online stores with products people search for by name or feature.\n\n## When Meta Ads makes sense\n\nMeta Ads is a better fit when the need hasn’t been expressed yet but the product lends itself to being “seen”: restaurants, gyms, events, highly visual products, seasonal offers.\n\n- products or services that sell through images and video;\n- limited-time promotions and launches;\n- lead generation with forms right inside Facebook and Instagram.\n\n## A few examples\n\nA **plumber in Austin** will almost always get more out of Google Ads: someone with a leak at home searches, they don’t scroll Instagram. A **winery in the Barossa Valley**, on the other hand, can use Meta Ads to introduce its wines to local wine lovers. A **bike shop in Dublin** can use both: Google for people searching “e-bike Dublin”, Meta to show off the new models in spring.\n\n## How much budget you need\n\nIt depends on your industry, the competition and your area. With Google Ads, cost per click varies hugely from one sector to another; with Meta Ads you can often start with smaller budgets. Either way, start with a test, measure your **cost per lead** and only invest more in what works.\n\n## The part nobody tells you: tracking\n\nWithout proper tracking you don’t know which ads bring in enquiries and sales, and the platforms can’t optimize. Before you spend a cent you need: conversions set up, the Pixel and Conversions API for Meta, cookie consent handled correctly. It’s the difference between advertising and hoping.\n\n## How to choose, in practice\n\n1. Do people search Google for what you offer? Start with Google Ads.\n2. Does your product sell well through images? Consider Meta Ads.\n3. Got budget for both? Use them together: Meta to get known, Google to get chosen.\n4. Whatever you do: tracking first, campaigns second."
+  },
+  "seo": {
+    "title": "Google Ads or Meta Ads: which should you choose? | bortolin.dev",
+    "description": "One reaches people already looking for you, the other gets you discovered by new audiences. How to decide where to start, with real examples.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  },
+  "original": "google-ads-o-meta-ads"
+}

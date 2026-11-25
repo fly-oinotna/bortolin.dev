@@ -1,0 +1,9 @@
+---
+// Testo dell'editor reso come paragrafi <p>: il primo senza margine, i successivi distanziati.
+// Per testi dentro un elemento esistente usare invece rich() da src/lib/rich.ts.
+import { richParagraphs, type RichOptions, type RichValue } from '../../lib/rich';
+interface Props extends RichOptions { value: RichValue; class?: string; gap?: string }
+const { value, class: cls, gap = 'mt-4', ...opts } = Astro.props;
+const paragraphs = richParagraphs(value, opts);
+---
+{paragraphs.map((html, i) => <p class:list={[cls, i > 0 && gap]} set:html={html} />)}

@@ -1,0 +1,171 @@
+{
+  "title": "Proj.System",
+  "card": {
+    "domain": "projsystem.com",
+    "siteUrl": "https://projsystem.com/",
+    "sectors": [
+      "aziende",
+      "servizi"
+    ],
+    "tags": [
+      "Ingegneria e sicurezza",
+      "Sito aziendale",
+      "WordPress"
+    ],
+    "summary": "Studio professionale di Porcia (PN), attivo dal 2001 in progettazione, sicurezza nei cantieri e sul lavoro, analisi strumentali e formazione.",
+    "features": [
+      "Presentazione chiara di un’offerta ampia: ingegneria, sicurezza, analisi strumentali, formazione",
+      "Pagine dedicate allo studio e al team di professionisti",
+      "Blog, sezione e-learning e richiesta di consulenza sempre a portata di clic"
+    ],
+    "dark": false,
+    "desktopImage": "/src/assets/images/casi-studio/projsystem-desktop.webp",
+    "desktopAlt": "Home page del sito Proj.System, studio di ingegneria e architettura",
+    "mobileImage": "/src/assets/images/casi-studio/projsystem-mobile.webp",
+    "mobileAlt": "Sito Proj.System su smartphone",
+    "longImage": "/src/assets/images/casi-studio/projsystem-pagina-intera.webp",
+    "longAlt": "Home page completa del sito Proj.System"
+  },
+  "hero": {
+    "eyebrow": "Caso studio",
+    "intro": "Il sito di uno studio professionale con un’offerta ampia, organizzata perché ogni cliente trovi subito il servizio che cerca.",
+    "tags": [
+      "Sito aziendale",
+      "Ingegneria e sicurezza",
+      "WordPress"
+    ],
+    "ctaLabel": "Voglio un progetto simile",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "details": [
+      {
+        "label": "Cliente",
+        "value": "Proj.System"
+      },
+      {
+        "label": "Settore",
+        "value": "Ingegneria, sicurezza e formazione"
+      },
+      {
+        "label": "Sede",
+        "value": "Porcia (PN), Friuli Venezia Giulia"
+      },
+      {
+        "label": "Tipo di progetto",
+        "value": "Sito aziendale"
+      },
+      {
+        "label": "Tecnologia",
+        "value": "WordPress"
+      }
+    ]
+  },
+  "client": {
+    "eyebrow": "Il cliente",
+    "title": "Chi è Proj.System",
+    "text": "Proj.System è uno studio professionale fondato a Porcia nel 2001. Ingegneri, architetti, geometri, periti industriali e tecnici della sicurezza seguono progettazione, sicurezza nei cantieri e sul lavoro, analisi strumentali, consulenze tecniche e formazione.\n",
+    "challengeLabel": "La sfida",
+    "challengeText": "Un’offerta molto ampia, rivolta a pubblici diversi: aziende, enti, privati e partecipanti ai corsi. Il rischio era un sito confuso, in cui chi cerca un singolo servizio si perde tra le pagine.",
+    "challengePoints": [
+      "Quattro aree di servizio molto diverse tra loro",
+      "Un team numeroso di professionisti da valorizzare",
+      "Corsi e formazione da comunicare e aggiornare spesso"
+    ]
+  },
+  "solution": {
+    "eyebrow": "La soluzione",
+    "title": "Cosa ho realizzato",
+    "text": "Prima la struttura, poi il design: ogni scelta parte da chi deve usare il sito e da cosa deve trovare.\n",
+    "items": [
+      {
+        "icon": "grid",
+        "title": "Servizi in quattro aree",
+        "text": "Ingegneria e architettura, Sicurezza, Attività strumentale, Formazione: ogni visitatore entra subito nell’area giusta."
+      },
+      {
+        "icon": "users",
+        "title": "Il team in primo piano",
+        "text": "Una pagina dedicata ai professionisti, con ruoli e competenze: la fiducia nasce dalle persone."
+      },
+      {
+        "icon": "chat",
+        "title": "Richiesta di consulenza sempre visibile",
+        "text": "Il pulsante per contattare lo studio è presente in tutte le pagine, anche da smartphone."
+      },
+      {
+        "icon": "book-open",
+        "title": "Blog ed e-learning",
+        "text": "Notizie, approfondimenti e una sezione per la formazione online, aggiornabili in autonomia."
+      }
+    ]
+  },
+  "showcase": {
+    "eyebrow": "Il sito",
+    "title": "Il risultato, su ogni schermo",
+    "text": "Passa con il mouse sulla pagina per scorrerla.\n",
+    "scrollLabel": "Anteprima della home page di Proj.System, scorrevole",
+    "mobileCaption": "Versione smartphone"
+  },
+  "results": {
+    "eyebrow": "Prima e dopo",
+    "title": "Cosa è cambiato",
+    "beforeLabel": "Prima",
+    "before": [
+      "Da completare: com’era il sito o la situazione di partenza",
+      "Da completare: il problema principale"
+    ],
+    "afterLabel": "Dopo",
+    "after": [
+      "Servizi in quattro aree",
+      "Il team in primo piano",
+      "Richiesta di consulenza sempre visibile",
+      "Blog ed e-learning"
+    ],
+    "kpis": [
+      {
+        "label": "Risultato 1",
+        "value": "—",
+        "note": "es. richieste di contatto al mese"
+      },
+      {
+        "label": "Risultato 2",
+        "value": "—",
+        "note": "es. visite da Google"
+      },
+      {
+        "label": "Risultato 3",
+        "value": "—",
+        "note": "es. punteggio Lighthouse"
+      }
+    ]
+  },
+  "cta": {
+    "title": "Il prossimo caso studio può essere il tuo",
+    "text": "Raccontami la tua attività nella call gratuita di 25 minuti: ti dico come lo farei, in quanto tempo e a quale prezzo fisso.",
+    "ctaLabel": "Prenota la call gratuita",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "contact": {
+    "title": "Vuoi un sito come questo?",
+    "formTitle": "Richiedi un preventivo gratuito",
+    "topics": [
+      "nuovo-sito"
+    ]
+  },
+  "seo": {
+    "title": "Proj.System: sito per studio di ingegneria | bortolin.dev",
+    "description": "Come ho realizzato il sito di Proj.System, studio di ingegneria, architettura e sicurezza sul lavoro di Porcia (PN): sfida, soluzione e risultati.",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "ogImage": "/src/assets/images/social/og-caso-projsystem.png",
+    "markdown": null,
+    "customMarkupCode": ""
+  }
+}

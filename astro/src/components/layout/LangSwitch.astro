@@ -1,0 +1,17 @@
+---
+// Selettore lingua (topbar e footer): porta alla stessa pagina nell'altra lingua, o alla home se la pagina non è tradotta.
+import { routeOf } from '../../lib/i18n';
+import { LANGS, prefix } from '../../i18n/langs';
+interface Props { label: string; variant?: 'topbar' | 'footer' }
+const { label, variant = 'topbar' } = Astro.props;
+const current = Astro.currentLocale ?? 'it';
+const urls = routeOf(Astro.url.pathname)?.urls ?? {};
+const LIST = LANGS.map((code) => ({ code, href: urls[code] ?? `${prefix(code)}/` }));
+const footer = variant === 'footer';
+---
+<nav aria-label={label} class:list={footer ? 'mt-6 inline-flex items-center gap-0.5 rounded-full bg-black p-1 text-xs text-white' : 'flex items-center gap-0.5 text-white'}>
+  {LIST.map((l) => (
+    <a href={l.href} hreflang={l.code} lang={l.code} aria-current={l.code === current ? 'true' : undefined}
+      class:list={['rounded-full', footer ? 'px-3 py-1' : 'px-2 py-0.5', l.code === current ? 'bg-bd-green font-semibold text-black' : 'hover:text-bd-green']}>{l.code.toUpperCase()}</a>
+  ))}
+</nav>

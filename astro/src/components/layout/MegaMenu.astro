@@ -1,0 +1,53 @@
+---
+// Mega menu dei servizi: 2/3 servizi + 1/3 offerta in evidenza
+import Icon from '../ui/Icon.astro';
+import Img from '../ui/Img.astro';
+import type { Globals } from '../../lib/content';
+import type { IconName } from '../../lib/icons';
+import { href } from '../../lib/links';
+interface Props { g: Globals }
+const { navigation: nav, offer, offerActive, settings } = Astro.props.g; // offer è null se l’offerta è spenta (offerActive = false)
+---
+<div id="mega-servizi"
+  class="invisible absolute inset-x-0 top-full translate-y-2 border-b border-gray-200 bg-white opacity-0 shadow-xl transition duration-200 group-hover:visible group-hover:translate-y-0 group-hover:opacity-100 group-data-[open]:visible group-data-[open]:translate-y-0 group-data-[open]:opacity-100">
+  <div class="container grid grid-cols-3 gap-8 py-8">
+    <div class:list={['grid grid-cols-2 gap-x-8 gap-y-6', offerActive ? 'col-span-2' : 'col-span-3']}>
+      {nav.mega.groups.map((group) => (
+        <div>
+          <p class="mb-3 px-3 text-xs font-semibold tracking-wider text-gray-500 uppercase">{group.title}</p>
+          <ul class="space-y-1">
+            {group.items.map((it) => (
+              <li>
+                <a href={href(it.link)} class="flex gap-3 rounded-2xl p-3 transition-colors hover:bg-gray-100">
+                  <span class:list={['grid h-10 w-10 shrink-0 place-items-center rounded-full', group.dark ? 'bg-black text-bd-green' : 'bg-bd-green text-black']}><Icon name={it.icon as IconName} size={20} /></span>
+                  <span>
+                    <span class="block font-semibold text-black">{it.label}{it.badge && <> <span class="ml-1 rounded-full bg-black px-2 py-0.5 align-middle text-[10px] font-bold text-bd-green uppercase">{it.badge}</span></>}</span>
+                    <span class="block text-sm text-gray-600">{it.text}</span>
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+      <a href={href(nav.mega.agencyLink)} class="col-span-2 flex items-center justify-between gap-4 rounded-2xl bg-gray-100 px-5 py-4 transition-colors hover:bg-bd-green">
+        <span class="flex items-center gap-3"><Icon name="layers" size={22} /><span><strong class="text-black">{nav.mega.agencyStrong}</strong> {nav.mega.agencyText}</span></span>
+        <Icon name="arrow" size={20} />
+      </a>
+      <a href={href(nav.mega.allLink)} class="col-span-2 -mt-2 inline-flex items-center justify-center gap-1.5 text-sm font-semibold text-black underline underline-offset-4 hover:no-underline">{nav.mega.allLabel}</a>
+    </div>
+
+    {offerActive && (
+      <aside aria-label={settings.a11y.offer} class="relative flex flex-col overflow-hidden rounded-3xl bg-black p-6 text-white">
+        <span class="mb-3 inline-flex w-fit items-center gap-1.5 rounded-full bg-bd-green px-3 py-1 text-xs font-bold text-black uppercase">{offer.eyebrow}</span>
+        <Img src={offer.image} class="-mx-2 mb-2 h-24 w-auto self-start" />
+        <p class="text-xl font-bold text-bd-green">{offer.megaTitle}</p>
+        <p class="mt-2 text-sm text-gray-300">{offer.megaText}</p>
+        <ul class="mt-3 space-y-2 text-sm text-white">
+          {offer.megaItems.map((x) => <li class="flex gap-2"><Icon name="check" size={20} stroke={3} class="mt-0.5 shrink-0 text-bd-green" />{x}</li>)}
+        </ul>
+        <a href={href(offer.ctaLink)} class="btn-primary mt-6 w-full">{offer.ctaLabel} <Icon name="arrow" size={20} /></a>
+      </aside>
+    )}
+  </div>
+</div>

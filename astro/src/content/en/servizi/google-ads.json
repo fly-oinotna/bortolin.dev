@@ -1,0 +1,300 @@
+{
+  "hero": {
+    "breadcrumb": "Google Ads",
+    "eyebrow": "Advertising",
+    "title": "Google Ads that bring in enquiries, not just clicks",
+    "text": "Appear at the top of Google **the very moment a customer searches for you**. I set up and run your campaigns so every euro, dollar or pound you spend works to bring in calls, enquiries and sales, and I show you the numbers to prove it.\n",
+    "ctaLabel": "Get a free account review",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "How it works",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#come-funziona"
+    },
+    "highlights": [
+      "Fixed management fee",
+      "Ad account in your name",
+      "Monthly video report"
+    ],
+    "demoLabel": "Pick an example",
+    "demoCaption": "Examples of sponsored ads in Google results.",
+    "s1Tab": "Electrician",
+    "s1Query": "electrician austin",
+    "s1Ad": "Sponsored",
+    "s1Letter": "E",
+    "s1Name": "Your electrician",
+    "s1Url": "www.yourwebsite.com › emergency-service",
+    "s1Title": "Electrician in Austin | Same-Day Emergency Service",
+    "s1Text": "Home and commercial wiring, repairs and inspections. Free quotes, upfront pricing.",
+    "s1Call": "Call",
+    "s1Chips": [
+      "Free quote",
+      "Available 24/7"
+    ],
+    "s2Tab": "Shop",
+    "s2Query": "bike shop toronto",
+    "s2Ad": "Sponsored",
+    "s2Letter": "B",
+    "s2Name": "Your bike shop",
+    "s2Url": "www.yourshop.com",
+    "s2Title": "Bike Shop in Toronto | E-Bikes and Mountain Bikes",
+    "s2Text": "Test-ride the latest e-bikes in store. Servicing in our own workshop.",
+    "s2Place": "Downtown Toronto",
+    "s2Hours": "Open until 7:30 pm",
+    "s2Tiles": [
+      "E-bikes",
+      "Mountain bikes",
+      "Workshop"
+    ],
+    "s3Tab": "Online store",
+    "s3Query": "men’s hiking shoes",
+    "s3Ad": "Sponsored · Products",
+    "s3Products": [
+      {
+        "name": "Waterproof hiking shoe",
+        "price": "€89.90",
+        "shop": "yourshop.ie",
+        "rating": "4.8"
+      },
+      {
+        "name": "Lightweight trail shoe",
+        "price": "€74.00",
+        "shop": "yourshop.ie",
+        "rating": "4.6"
+      },
+      {
+        "name": "Alpine mountaineering boot",
+        "price": "€139.00",
+        "shop": "yourshop.ie",
+        "rating": "4.9"
+      }
+    ],
+    "s3Note": "Free returns · 1–2 day delivery"
+  },
+  "how": {
+    "eyebrow": "How it works",
+    "title": "Google Ads in plain English",
+    "text": "You choose the searches you want to show up for, write an ad and **only pay when someone clicks**. But the highest bidder doesn’t always win: Google rewards quality too. Here are the three ingredients.\n",
+    "items": [
+      {
+        "icon": "lens",
+        "title": "1. The right searches",
+        "text": "“Emergency electrician Dallas” is worth far more than “how does a circuit breaker work”. I target people ready to get in touch."
+      },
+      {
+        "icon": "ad",
+        "title": "2. An ad that persuades",
+        "text": "A few characters to tell people why they should pick you: clear benefits, real proof and a call to action."
+      },
+      {
+        "icon": "bolt",
+        "title": "3. A page that converts",
+        "text": "Where people land after the click matters as much as the ad. A fast, clear page brings in more enquiries, and Google rewards it with a lower cost per click."
+      }
+    ]
+  },
+  "types": {
+    "eyebrow": "Campaign types",
+    "title": "The right campaign for your business",
+    "text": "You don’t need to be everywhere: you need to be where your customers are. Together we pick the campaigns that make sense for your budget.\n",
+    "items": [
+      {
+        "title": "Search",
+        "text": "Show up when someone searches for exactly what you offer.",
+        "ideal": "Ideal for services and professionals",
+        "highlight": true
+      },
+      {
+        "title": "Performance Max",
+        "text": "One campaign across Search, YouTube, Gmail, Maps and Display.",
+        "ideal": "Ideal with solid tracking in place",
+        "highlight": false
+      },
+      {
+        "title": "Shopping",
+        "text": "Your products, with photo and price, right in the results.",
+        "ideal": "Ideal for online stores",
+        "highlight": false
+      },
+      {
+        "title": "Local and Maps ads",
+        "text": "More calls and store visits from people nearby.",
+        "ideal": "Ideal for local businesses",
+        "highlight": false
+      },
+      {
+        "title": "YouTube and Display",
+        "text": "Get noticed, and stay top of mind with people who’ve already visited.",
+        "ideal": "Ideal for retargeting",
+        "highlight": false
+      }
+    ]
+  },
+  "included": {
+    "eyebrow": "What’s included",
+    "title": "Full management, not just flicking campaigns on",
+    "text": "Conversion tracking is always included: without it, you’re spending in the dark.\n",
+    "ctaLabel": "Get a free account review",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "items": [
+      {
+        "title": "Keyword research and strategy",
+        "text": "Searches from people ready to buy, not just browsing."
+      },
+      {
+        "title": "Campaign structure",
+        "text": "Organized by service and area, so you know where every cent goes."
+      },
+      {
+        "title": "Ad copy",
+        "text": "Written to win the click, with the right extensions."
+      },
+      {
+        "title": "Conversion tracking",
+        "text": "Tag Manager, GA4, enhanced conversions and Consent Mode."
+      },
+      {
+        "title": "Negative keywords",
+        "text": "I block irrelevant searches: less waste from day one."
+      },
+      {
+        "title": "Bid management",
+        "text": "I optimize for enquiries and sales, not clicks."
+      },
+      {
+        "title": "A/B testing",
+        "text": "Ads and pages tested head to head, keeping the winners."
+      },
+      {
+        "title": "Landing page advice",
+        "text": "A fast, clear page converts better and costs less."
+      },
+      {
+        "title": "Monthly video report",
+        "text": "The numbers that matter, explained in a few minutes."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Transparency",
+    "title": "A fixed fee, not a cut of your ad spend",
+    "text": "Lots of agencies charge a percentage of your ad spend: the more you spend, the more they make. Not me. **Management is a fixed fee**, so my only incentive is to make every cent of your budget work as hard as possible.\n",
+    "points": [
+      {
+        "text": "**The account is yours**: campaigns, data and history stay with you. Always.\n"
+      },
+      {
+        "text": "**You pay Google directly**: no hidden markup.\n"
+      },
+      {
+        "text": "**No long lock-in contracts**: if you’re not happy, you’re free to go.\n"
+      }
+    ],
+    "otherLabel": "Percentage-based",
+    "otherValue": "15–20%",
+    "otherText": "of your ad spend: the more you spend, the more they earn, even when that’s not in your interest.",
+    "mineLabel": "With me",
+    "mineValue": "Fixed",
+    "mineText": "A clear fee, set out in the quote. You decide the ad budget.",
+    "note": "The percentages shown reflect typical market rates."
+  },
+  "method": {
+    "eyebrow": "The method",
+    "title": "Measure first, spend second",
+    "text": "",
+    "items": [
+      {
+        "title": "Research",
+        "text": "I study your market, competitors, searches and website."
+      },
+      {
+        "title": "Tracking",
+        "text": "Before a single cent is spent, every enquiry and sale is tracked."
+      },
+      {
+        "title": "Launch",
+        "text": "Campaigns, ads and exclusions ready and double-checked."
+      },
+      {
+        "title": "Optimization",
+        "text": "Every week I cut what doesn’t pay and scale what works."
+      },
+      {
+        "title": "Report",
+        "text": "A video every month: what happened and what’s next."
+      }
+    ]
+  },
+  "offer": {
+    "show": false,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Questions about Google Ads",
+    "text": "Can’t see yours? [Drop me a line](#contatti) and I’ll reply by the next business day.\n",
+    "items": [
+      {
+        "question": "How much budget do I need to start?",
+        "answer": "It depends on your industry and area: in some markets a few euros a day is enough, in others you’ll need more to get useful data. The free review gives you a realistic estimate before you spend a thing.\n"
+      },
+      {
+        "question": "How much does management cost?",
+        "answer": "A fixed monthly fee, set in the quote based on the number and complexity of your campaigns. Never a percentage of your budget.\n"
+      },
+      {
+        "question": "When will I see results?",
+        "answer": "The first data arrives within days. Proper optimization usually takes a few weeks, the time it takes to gather enough clicks and conversions.\n"
+      },
+      {
+        "question": "Do I own the Google Ads account?",
+        "answer": "Yes. The account is in your name, you pay Google directly and I work on it with manager access. If you ever switch providers, everything stays with you.\n"
+      },
+      {
+        "question": "Google Ads or SEO: which is better?",
+        "answer": "They work best together: Google Ads gets results straight away but stops when you stop paying; SEO takes longer but lasts. The best strategy often combines both.\n"
+      },
+      {
+        "question": "Can I pause the campaigns whenever I want?",
+        "answer": "Yes, you can pause campaigns at any time, say when you’re closed or fully booked.\n"
+      }
+    ],
+    "ctaLabel": "Get a free account review",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "advertising"
+    ],
+    "title": "More on online advertising",
+    "text": "How to pick the right channel, and what’s changing now that AI assistants are here.\n",
+    "buttonLabel": "All articles"
+  },
+  "contact": {
+    "title": "Let’s win customers with Google Ads",
+    "formTitle": "Get a free account review",
+    "topics": [
+      "ads"
+    ]
+  },
+  "seo": {
+    "slug": "google-ads",
+    "title": "Fixed-fee Google Ads management for small business | bortolin.dev",
+    "description": "Google Ads management for a fixed fee, never a cut of your ad spend: Search, Shopping and local campaigns, tracking included, plus a monthly report.",
+    "ogImage": "",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "customMarkupCode": ""
+  }
+}

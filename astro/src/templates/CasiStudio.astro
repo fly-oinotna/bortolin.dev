@@ -1,0 +1,124 @@
+---
+// CASI STUDIO (archivio) — contenuti in Keystatic → "Casi studio (archivio)"; i progetti sono la collection "Casi studio".
+// I filtri per settore sono gestiti da main.js ([data-filter-group] + data-tags).
+import Base from '../layouts/Base.astro';
+import Icon from '../components/ui/Icon.astro';
+import Img from '../components/ui/Img.astro';
+import Rich from '../components/ui/Rich.astro';
+import Breadcrumb from '../components/ui/Breadcrumb.astro';
+import SectionHeading from '../components/ui/SectionHeading.astro';
+import Reviews from '../components/sections/Reviews.astro';
+import Contact from '../components/sections/Contact.astro';
+import { read, readGlobals, entries, entry } from '../lib/content';
+import { caseUrl } from '../lib/pages';
+import { href } from '../lib/links';
+import { t } from '../i18n/ui';
+
+interface Props { lang?: string }
+const { lang = 'it' } = Astro.props;
+const g = await readGlobals(lang);
+const p = await read('casiStudio', lang);
+const ui = t(g.lang);
+const s = g.settings.caseStudies;
+const trail = [{ name: p.hero.breadcrumb || p.hero.title, url: g.url('/casi-studio/') }];
+const { hero: h, list } = p;
+const cases = (await Promise.all(list.items.filter(Boolean).map(async (slug) => ({ slug: slug!, e: (await entry('caseStudies', slug, lang))?.entry })))).filter((c) => c.e);
+const allTags = list.filters.map((f) => f.value).join(' ');
+---
+<Base g={g} seo={p.seo} breadcrumb={trail} schema={{ collection: { items: cases.map(({ slug, e }) => ({ name: e!.title, url: g.url(caseUrl(slug)) })) } }}>
+
+  <!-- ================================================= HERO -->
+  <section class="overflow-hidden pt-8 pb-16 md:pt-12 md:pb-20">
+    <div class="container">
+      <Breadcrumb items={trail} />
+      <div class="grid grid-cols-1 items-end gap-10 lg:grid-cols-5 lg:gap-16">
+        <div class="lg:col-span-3">
+          {h.eyebrow && <span class="mb-5 inline-flex rounded-full bg-black px-3 py-1 text-xs font-bold text-bd-green uppercase">{h.eyebrow}</span>}
+          <h1 class="text-4xl leading-tight font-bold md:text-5xl lg:text-6xl">{h.title}</h1>
+          <div class="mt-6"><Rich value={h.text} class="text-lg" /></div>
+          <div class="mt-8 flex flex-wrap items-center gap-4">
+            {h.ctaLabel && <a href={href(h.ctaLink)} class="btn-primary">{h.ctaLabel} <Icon name="arrow" size={20} /></a>}
+            {h.linkLabel && <a href={href(h.linkLink)} class="font-medium text-black underline underline-offset-4 hover:no-underline">{h.linkLabel}</a>}
+          </div>
+        </div>
+        <dl class="grid grid-cols-2 gap-3 lg:col-span-2">
+          <div class="rounded-3xl bg-gray-100 p-5"><dt class="text-sm">{h.projectsLabel}</dt><dd class="text-4xl font-extrabold text-black tabular-nums" data-count={h.projectsValue} data-suffix={h.suffix || undefined}>{h.projectsValue}{h.suffix}</dd></div>
+          <div class="rounded-3xl bg-bd-green p-5 text-black"><dt class="text-sm">{h.yearsLabel}</dt><dd class="text-4xl font-extrabold tabular-nums" data-count={h.yearsValue} data-suffix={h.suffix || undefined}>{h.yearsValue}{h.suffix}</dd></div>
+          <div class="col-span-2 rounded-3xl bg-black p-5 text-white"><dt class="text-sm text-gray-300">{h.languagesLabel}</dt><dd class="text-2xl font-extrabold text-bd-green">{h.languagesValue}</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= ELENCO -->
+  <section id="elenco" class="pb-16 md:pb-24">
+    <div class="container">
+      <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+        <div>
+          <p class="eyebrow"><span>01</span><span>{list.eyebrow}</span></p>
+          <h2 class="mb-0">{list.title}</h2>
+        </div>
+        {list.filters.length > 0 && (
+          <div class="flex flex-wrap gap-2" role="group" aria-label={list.filterLabel} data-filter-group>
+            <button type="button" data-filter="tutti" aria-pressed="true" class="rounded-full bg-gray-100 px-4 py-2 text-sm font-semibold text-black transition-colors hover:bg-gray-200">{list.allLabel}</button>
+            {list.filters.map((f) => <button type="button" data-filter={f.value} aria-pressed="false" class="rounded-full bg-gray-100 px-4 py-2 text-sm font-semibold text-black transition-colors hover:bg-gray-200">{f.label}</button>)}
+          </div>
+        )}
+      </div>
+      <div class="mt-10 space-y-6">
+        {cases.map(({ slug, e }) => {
+          const c = e!.card; const dark = c.dark; const url = g.url(caseUrl(slug));
+          return (
+            <article data-tags={c.sectors.join(' ')} class:list={['grid grid-cols-1 items-center gap-10 rounded-3xl p-6 md:p-10 lg:grid-cols-2 lg:gap-16', dark ? 'bg-black text-white' : 'bg-gray-100']}>
+              <a href={url} class:list={['block', dark && 'lg:order-2']} tabindex="-1" aria-hidden="true">
+                <figure class:list={['overflow-hidden rounded-2xl border-[3px] shadow-2xl', dark ? 'mac-window' : 'mac-window-dark']}>
+                  <div class={dark ? 'mac-bar' : 'mac-bar-dark'}><span class="mac-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="mac-url">{c.domain}</span><span class="mac-spacer" aria-hidden="true"></span></div>
+                  <div class="shot-scroll [--h:20rem]"><Img src={c.longImage} alt="" widths={[400, 560, 720]} sizes="(min-width: 1280px) 540px, (min-width: 1024px) 42vw, 85vw" class="block w-full" /></div>
+                </figure>
+              </a>
+              <div>
+                <ul class="flex flex-wrap gap-2" aria-label={list.tagsLabel}>{e!.hero.tags.map((tg) => <li class:list={['rounded-full px-3 py-1 text-xs font-bold', dark ? 'bg-white/10 text-white' : 'bg-white text-black']}>{tg}</li>)}</ul>
+                <h2 class:list={['mt-4', dark && 'text-bd-green']}>{e!.title}</h2>
+                <p class:list={[dark && 'text-gray-300']}>{e!.hero.intro}</p>
+                <ul class:list={['mt-5 space-y-2 text-sm', dark ? 'text-gray-200' : 'text-black']}>{e!.solution.items.map((it) => <li class="flex gap-2"><Icon name="check" size={16} stroke={3} class:list={['mt-0.5 shrink-0', dark && 'text-bd-green']} /><span>{it.title}</span></li>)}</ul>
+                <div class="mt-8 flex flex-wrap items-center gap-4">
+                  <a href={url} class={dark ? 'btn-primary' : 'btn-secondary'}>{s.readLabel} <Icon name="arrow" size={20} /><span class="sr-only">: {e!.title}</span></a>
+                  {c.siteUrl && <a href={c.siteUrl} target="_blank" rel="noopener" class:list={['inline-flex items-center gap-1 text-sm font-medium underline underline-offset-4 hover:no-underline', dark ? 'text-white' : 'text-black']}>{s.visitLabel} <Icon name="external" size={18} /><span class="sr-only">{ui.newTab}</span></a>}
+                </div>
+              </div>
+            </article>
+          );
+        })}
+        {list.nextTitle && (
+          <a href={href(list.nextLink)} data-tags={allTags} class="group flex flex-col items-center justify-center gap-4 rounded-3xl border-2 border-dashed border-gray-300 p-10 text-center transition-colors hover:border-black hover:bg-bd-green md:p-16">
+            <span class="grid h-16 w-16 place-items-center rounded-full bg-black text-3xl font-light text-bd-green">+</span>
+            <span class="text-2xl font-bold text-black">{list.nextTitle}</span>
+            {list.nextText && <span class="max-w-xl">{list.nextText}</span>}
+            {list.nextLabel && <span class="btn-secondary mt-2">{list.nextLabel}</span>}
+          </a>
+        )}
+      </div>
+    </div>
+  </section>
+
+  <Reviews g={g} n={2} class="pb-16 md:pb-24" />
+
+  <!-- ================================================= INVITO FINALE -->
+  {p.banner.title && (
+    <section class="pb-16 md:pb-24">
+      <div class="container">
+        <div class="grid grid-cols-1 items-center gap-6 rounded-3xl bg-bd-green p-6 md:p-10 lg:grid-cols-3 lg:p-14">
+          <div class="lg:col-span-2">
+            <h2>{p.banner.title}</h2>
+            {p.banner.text && <p class="text-black">{p.banner.text}</p>}
+          </div>
+          <div class="flex flex-wrap gap-3 lg:justify-end">
+            {p.banner.ctaLabel && <a href={href(p.banner.ctaLink)} class="btn-secondary">{p.banner.ctaLabel} <Icon name="arrow" size={20} /></a>}
+            {p.banner.linkLabel && <a href={href(p.banner.linkLink)} class="btn-empty-primary">{p.banner.linkLabel}</a>}
+          </div>
+        </div>
+      </div>
+    </section>
+  )}
+  <Contact g={g} page={p.contact} />
+</Base>

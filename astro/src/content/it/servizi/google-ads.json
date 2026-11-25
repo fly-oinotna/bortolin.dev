@@ -1,0 +1,300 @@
+{
+  "hero": {
+    "breadcrumb": "Google Ads",
+    "eyebrow": "Advertising",
+    "title": "Google Ads che portano richieste, non solo clic",
+    "text": "Compari in cima a Google **nel momento esatto in cui un cliente ti cerca**. Imposto e gestisco le campagne perché ogni euro di budget lavori per portarti telefonate, richieste e vendite, e te lo dimostro con i numeri.\n",
+    "ctaLabel": "Richiedi un’analisi gratuita",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "linkLabel": "Come funziona",
+    "linkLink": {
+      "discriminant": "custom",
+      "value": "#come-funziona"
+    },
+    "highlights": [
+      "Gestione a prezzo fisso",
+      "Account intestato a te",
+      "Report video mensile"
+    ],
+    "demoLabel": "Scegli un esempio",
+    "demoCaption": "Esempi di annunci sponsorizzati nei risultati di Google.",
+    "s1Tab": "Elettricista",
+    "s1Query": "elettricista treviso",
+    "s1Ad": "Sponsorizzato",
+    "s1Letter": "E",
+    "s1Name": "Il tuo elettricista",
+    "s1Url": "www.iltuosito.it › pronto-intervento",
+    "s1Title": "Elettricista a Treviso | Pronto intervento in giornata",
+    "s1Text": "Impianti civili e industriali, guasti e certificazioni. Preventivo gratuito, prezzi chiari.",
+    "s1Call": "Chiama",
+    "s1Chips": [
+      "Preventivo gratuito",
+      "Disponibile 24h"
+    ],
+    "s2Tab": "Negozio",
+    "s2Query": "negozio biciclette pordenone",
+    "s2Ad": "Sponsorizzato",
+    "s2Letter": "B",
+    "s2Name": "Il tuo negozio di bici",
+    "s2Url": "www.iltuonegozio.it",
+    "s2Title": "Negozio di biciclette a Pordenone | Bici elettriche e MTB",
+    "s2Text": "Prova le nuove e-bike in negozio. Assistenza e officina interna.",
+    "s2Place": "In centro a Pordenone",
+    "s2Hours": "Aperto fino alle 19:30",
+    "s2Tiles": [
+      "Bici elettriche",
+      "Mountain bike",
+      "Officina"
+    ],
+    "s3Tab": "E-commerce",
+    "s3Query": "scarpe da trekking uomo",
+    "s3Ad": "Sponsorizzati · Prodotti",
+    "s3Products": [
+      {
+        "name": "Scarpa trekking impermeabile",
+        "price": "89,90 €",
+        "shop": "iltuoshop.it",
+        "rating": "4,8"
+      },
+      {
+        "name": "Scarpa da trail leggera",
+        "price": "74,00 €",
+        "shop": "iltuoshop.it",
+        "rating": "4,6"
+      },
+      {
+        "name": "Scarpone alta montagna",
+        "price": "139,00 €",
+        "shop": "iltuoshop.it",
+        "rating": "4,9"
+      }
+    ],
+    "s3Note": "Reso gratuito · Spedizione in 24/48 ore"
+  },
+  "how": {
+    "eyebrow": "Come funziona",
+    "title": "Google Ads in parole semplici",
+    "text": "Scegli le ricerche per cui vuoi comparire, scrivi un annuncio e **paghi solo quando qualcuno clicca**. Ma non vince chi paga di più: Google premia anche la qualità. Ecco i tre ingredienti.\n",
+    "items": [
+      {
+        "icon": "lens",
+        "title": "1. Le ricerche giuste",
+        "text": "“Elettricista urgente Udine” vale molto più di “come funziona un salvavita”. Scelgo le ricerche di chi è pronto a contattarti."
+      },
+      {
+        "icon": "ad",
+        "title": "2. Un annuncio che convince",
+        "text": "Pochi caratteri per dire perché scegliere te: vantaggi chiari, prove concrete e un invito all’azione."
+      },
+      {
+        "icon": "bolt",
+        "title": "3. Una pagina che converte",
+        "text": "Dove arriva chi clicca conta quanto l’annuncio. Una pagina veloce e chiara porta più richieste, e Google la premia con costi per clic più bassi."
+      }
+    ]
+  },
+  "types": {
+    "eyebrow": "Tipi di campagna",
+    "title": "La campagna giusta per la tua attività",
+    "text": "Non serve essere ovunque: serve essere dove sono i tuoi clienti. Scelgo con te le campagne che hanno senso per il tuo budget.\n",
+    "items": [
+      {
+        "title": "Rete di ricerca",
+        "text": "Compari quando qualcuno cerca esattamente ciò che offri.",
+        "ideal": "Ideale per servizi e professionisti",
+        "highlight": true
+      },
+      {
+        "title": "Performance Max",
+        "text": "Un’unica campagna su Ricerca, YouTube, Gmail, Maps e Display.",
+        "ideal": "Ideale con un buon tracciamento",
+        "highlight": false
+      },
+      {
+        "title": "Shopping",
+        "text": "I tuoi prodotti con foto e prezzo, direttamente nei risultati.",
+        "ideal": "Ideale per e-commerce",
+        "highlight": false
+      },
+      {
+        "title": "Annunci locali e Maps",
+        "text": "Più chiamate e visite in negozio da chi è in zona.",
+        "ideal": "Ideale per attività locali",
+        "highlight": false
+      },
+      {
+        "title": "YouTube e Display",
+        "text": "Farti conoscere e ricordare da chi ti ha già visitato.",
+        "ideal": "Ideale per il remarketing",
+        "highlight": false
+      }
+    ]
+  },
+  "included": {
+    "eyebrow": "Cosa è incluso",
+    "title": "Una gestione completa, non solo “accendere” le campagne",
+    "text": "Il tracciamento delle conversioni è sempre incluso: senza, si spende al buio.\n",
+    "ctaLabel": "Richiedi un’analisi gratuita",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "items": [
+      {
+        "title": "Ricerca parole chiave e strategia",
+        "text": "Le ricerche di chi è pronto a comprare, non di chi curiosa."
+      },
+      {
+        "title": "Struttura delle campagne",
+        "text": "Ordinata per servizi e zone: ogni euro sai dove va."
+      },
+      {
+        "title": "Testi degli annunci",
+        "text": "Scritti per farsi scegliere, con le estensioni giuste."
+      },
+      {
+        "title": "Tracciamento delle conversioni",
+        "text": "Tag Manager, GA4, conversioni avanzate e Consent Mode."
+      },
+      {
+        "title": "Parole chiave negative",
+        "text": "Escludo le ricerche inutili: meno sprechi, da subito."
+      },
+      {
+        "title": "Gestione delle offerte",
+        "text": "Ottimizzo su richieste e vendite, non su clic."
+      },
+      {
+        "title": "Test A/B",
+        "text": "Annunci e pagine messi a confronto, si tiene il migliore."
+      },
+      {
+        "title": "Consulenza sulla pagina di destinazione",
+        "text": "Una pagina veloce e chiara converte di più e costa meno."
+      },
+      {
+        "title": "Report video mensile",
+        "text": "I numeri che contano, spiegati in pochi minuti."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "Trasparenza",
+    "title": "Prezzo fisso, non in percentuale sul budget",
+    "text": "Molte agenzie si fanno pagare una percentuale di quanto spendi in pubblicità: più spendi, più guadagnano. Io no. **La gestione ha un canone fisso**, così il mio interesse è uno solo: che ogni euro ti renda il più possibile.\n",
+    "points": [
+      {
+        "text": "**L’account è tuo**: campagne, dati e storico restano a te, sempre.\n"
+      },
+      {
+        "text": "**Il budget lo paghi direttamente a Google**: nessun ricarico nascosto.\n"
+      },
+      {
+        "text": "**Nessun vincolo lungo**: se non ti trovi bene, sei libero.\n"
+      }
+    ],
+    "otherLabel": "A percentuale",
+    "otherValue": "15–20%",
+    "otherText": "del budget: se spendi di più, chi gestisce guadagna di più, anche quando non conviene a te.",
+    "mineLabel": "Con me",
+    "mineValue": "Fisso",
+    "mineText": "Un canone chiaro, stabilito nel preventivo. Il budget pubblicitario lo decidi tu.",
+    "note": "Le percentuali indicate sono un esempio delle tariffe di mercato più diffuse."
+  },
+  "method": {
+    "eyebrow": "Il metodo",
+    "title": "Prima si misura, poi si spende",
+    "text": "",
+    "items": [
+      {
+        "title": "Analisi",
+        "text": "Studio mercato, concorrenti, ricerche e il tuo sito."
+      },
+      {
+        "title": "Tracciamento",
+        "text": "Prima di spendere un euro, misuro ogni richiesta e vendita."
+      },
+      {
+        "title": "Lancio",
+        "text": "Campagne, annunci ed esclusioni pronte e controllate."
+      },
+      {
+        "title": "Ottimizzazione",
+        "text": "Ogni settimana tolgo ciò che non rende e spingo ciò che funziona."
+      },
+      {
+        "title": "Report",
+        "text": "Ogni mese un video: cosa è successo e cosa facciamo dopo."
+      }
+    ]
+  },
+  "offer": {
+    "show": false,
+    "item": null
+  },
+  "faq": {
+    "eyebrow": "Domande frequenti",
+    "title": "Domande su Google Ads",
+    "text": "Non trovi la tua? [Scrivimi](#contatti), rispondo entro il giorno lavorativo successivo.\n",
+    "items": [
+      {
+        "question": "Quanto budget serve per iniziare?",
+        "answer": "Dipende dal settore e dalla zona: in alcuni mercati bastano pochi euro al giorno, in altri serve di più per avere dati utili. Nell’analisi gratuita ti do una stima realistica, prima di spendere.\n"
+      },
+      {
+        "question": "Quanto costa la gestione?",
+        "answer": "Un canone fisso mensile, stabilito nel preventivo in base al numero e alla complessità delle campagne. Mai una percentuale sul budget.\n"
+      },
+      {
+        "question": "Quando vedrò i primi risultati?",
+        "answer": "I primi dati arrivano in pochi giorni. Per ottimizzare davvero servono di solito alcune settimane, il tempo di raccogliere abbastanza clic e conversioni.\n"
+      },
+      {
+        "question": "L’account Google Ads è mio?",
+        "answer": "Sì. L’account è intestato a te, paghi Google direttamente e io ci lavoro con un accesso da gestore. Se un giorno cambi fornitore, tutto resta a te.\n"
+      },
+      {
+        "question": "Meglio Google Ads o la SEO?",
+        "answer": "Sono complementari: Google Ads porta risultati subito e si spegne quando smetti di pagare; la SEO richiede più tempo ma dura nel tempo. Spesso la strategia migliore le combina.\n"
+      },
+      {
+        "question": "Posso sospendere le campagne quando voglio?",
+        "answer": "Sì, le campagne si possono mettere in pausa in qualsiasi momento, per esempio nei periodi di chiusura o quando hai troppo lavoro.\n"
+      }
+    ],
+    "ctaLabel": "Richiedi un’analisi gratuita",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    }
+  },
+  "blog": {
+    "enabled": true,
+    "categories": [
+      "advertising"
+    ],
+    "title": "Approfondimenti sulla pubblicità online",
+    "text": "Come scegliere il canale giusto e cosa sta cambiando con l’arrivo degli assistenti AI.\n",
+    "buttonLabel": "Tutti gli articoli"
+  },
+  "contact": {
+    "title": "Portiamo clienti con Google Ads",
+    "formTitle": "Richiedi un’analisi gratuita",
+    "topics": [
+      "ads"
+    ]
+  },
+  "seo": {
+    "title": "Gestione Google Ads a prezzo fisso per PMI | bortolin.dev",
+    "description": "Gestione Google Ads a prezzo fisso, mai in percentuale sul budget: campagne di ricerca, Shopping e locali, tracciamento incluso e report mensile.",
+    "robots": "max-snippet:-1,max-image-preview:large,max-video-preview:-1",
+    "sitemapExclude": false,
+    "aboutPage": false,
+    "contactPage": false,
+    "product": false,
+    "customMarkup": false,
+    "ogImage": "/src/assets/images/social/og-google-ads.png",
+    "markdown": null,
+    "customMarkupCode": ""
+  }
+}

@@ -1,0 +1,47 @@
+---
+// Immagine gestita da Keystatic (percorso "/src/assets/images/...").
+// Le foto vengono convertite in webp con srcset responsive; gli SVG passano così come sono.
+import { getImage } from 'astro:assets';
+import type { ImageMetadata } from 'astro';
+import { t } from '../../i18n/ui';
+
+const files = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/**/*.{svg,png,jpg,jpeg,webp,avif}', { eager: true });
+
+interface Props {
+  src?: string | null; alt?: string | null; class?: string; sizes?: string; widths?: number[];
+  loading?: 'lazy' | 'eager'; fetchpriority?: 'high' | 'low' | 'auto';
+}
+const { src, alt: pageAlt, class: cls, sizes = '100vw', widths, loading = 'lazy', fetchpriority } = Astro.props;
+// testo alternativo: quello della pagina, altrimenti quello predefinito della mediateca (src/content/media.json)
+const mediaMeta = (Object.values(import.meta.glob('/src/content/media.json', { eager: true, import: 'default' }))[0] ?? {}) as Record<string, { alt?: string; ai?: string }>;
+// marcatura AI (Media → Marcatura AI): etichetta sull'immagine, come AM Tools 3
+const aiType = src ? mediaMeta[src]?.ai : undefined;
+const aiLabel = aiType && aiType !== 'none' ? (t(Astro.currentLocale ?? 'it').aiBadge as Record<string, string>)[aiType] : undefined;
+// badge ufficiali UE (gli stessi SVG di AM Tools 3 → Images → AI Warning), inseriti inline
+const aiBadges = import.meta.glob('/src/assets/ai-badges/*.svg', { eager: true, query: '?raw', import: 'default' }) as Record<string, string>;
+const aiSvg = aiLabel ? aiBadges[`/src/assets/ai-badges/${aiType}.svg`]?.replace('<svg ', '<svg aria-hidden="true" focusable="false" ') : undefined;
+// con l'etichetta, le classi di impaginazione passano al contenitore e l'immagine lo riempie (mantenendo object-cover/contain)
+const fit = (cls ?? '').split(/\s+/).filter((c) => c.startsWith('object-')).join(' ');
+const alt = pageAlt || (src ? mediaMeta[src]?.alt : '') || '';
+const meta = src ? files[src]?.default : undefined;
+if (src && !meta) throw new Error(`Immagine non trovata: ${src}`);
+
+let out: { src: string; srcset?: string; width: number; height: number } | undefined;
+if (meta) {
+  if (meta.format === 'svg') {
+    out = { src: meta.src, width: meta.width, height: meta.height };
+  } else {
+    const w = (widths ?? [480, 800, 1200]).filter((x) => x <= meta.width);
+    const res = await getImage({ src: meta, widths: w.length ? w : [meta.width], format: 'webp' });
+    out = { src: res.src, srcset: res.srcSet.attribute, width: meta.width, height: meta.height };
+  }
+}
+---
+{out && (aiLabel
+  ? <span class:list={['bd-ai-wrap', cls]}>
+      <img src={out.src} srcset={out.srcset} sizes={out.srcset ? sizes : undefined} alt={alt ?? ''}
+        width={out.width} height={out.height} loading={loading} decoding="async" fetchpriority={fetchpriority} class:list={['block h-full w-full', fit || 'object-contain']} />
+      <span class="bd-ai-badge"><Fragment set:html={aiSvg} /><span class="sr-only">{aiLabel}</span></span>
+    </span>
+  : <img src={out.src} srcset={out.srcset} sizes={out.srcset ? sizes : undefined} alt={alt ?? ''}
+      width={out.width} height={out.height} loading={loading} decoding="async" fetchpriority={fetchpriority} class={cls} />)}

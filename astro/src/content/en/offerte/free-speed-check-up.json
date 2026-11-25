@@ -1,0 +1,46 @@
+{
+  "name": "Free speed check-up",
+  "offer": {
+    "eyebrow": "Launch offer",
+    "deadlineLabel": "Ends 31 January 2027",
+    "title": "{% verde %}Free{% /verde %} speed check-up when you optimize by January",
+    "text": "Book your website optimization by 31 January 2027 and the initial check-up is on me. Once the work is done, you get a before-and-after comparison with the numbers to prove it.\n",
+    "items": [
+      {
+        "title": "Lighthouse report",
+        "text": "mobile and desktop"
+      },
+      {
+        "title": "Google’s real-user data",
+        "text": "your visitors’ Core Web Vitals"
+      },
+      {
+        "title": "Before and after",
+        "text": "on video, once the work is done"
+      }
+    ],
+    "ctaLabel": "Book a check-up",
+    "ctaLink": {
+      "discriminant": "#contatti"
+    },
+    "note": "Check-up worth €190 excl. VAT",
+    "image": "@it",
+    "boxEyebrow": "Speed check-up",
+    "boxValue": "€0",
+    "boxOldValue": "€190",
+    "boxText": "with your website optimization",
+    "stamp": "Free"
+  },
+  "menu": {
+    "megaTitle": "Free speed check-up",
+    "megaText": "Book your optimization by 31 January 2027:",
+    "megaItems": [
+      "Lighthouse report for mobile and desktop",
+      "Google’s real-user Core Web Vitals data",
+      "Before-and-after video once the work is done"
+    ],
+    "mobileText": "when you optimize by 31 January 2027",
+    "cardText": "When you optimize your website by January (worth €190)."
+  },
+  "original": "check-up-velocita"
+}
