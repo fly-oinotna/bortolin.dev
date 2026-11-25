@@ -377,6 +377,9 @@ const singletons = {
       message: t('Campo messaggio'),
       privacy: text('Consenso privacy'),
       submit: t('Pulsante: testo'),
+      sending: t('Invio in corso: testo', 'Sul pulsante mentre il messaggio parte'),
+      success: text('Messaggio inviato: testo', 'Compare al posto del modulo dopo l’invio'),
+      error: t('Errore: testo', 'Se l’invio non riesce'),
     }),
     caseStudies: group('Casi studio', {
       featuresTitle: t('Titolo elenco', 'Sopra le caratteristiche, es. “Cosa contiene il sito”'),

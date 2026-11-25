@@ -7,6 +7,8 @@
 
 [build.environment]
   NODE_VERSION = "22"
+  # il vecchio sito era Next.js: il plugin Next di Netlify resta installato e farebbe fallire il build Astro
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
 
 # cache delle recensioni Google tra un deploy e l'altro (aggiornamento al massimo settimanale)
 [[plugins]]

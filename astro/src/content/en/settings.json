@@ -58,7 +58,10 @@
     ],
     "message": "Tell me about your project",
     "privacy": "I have read the [privacy policy](/informativa-sulla-privacy/) and agree to my data being used so I can be contacted.",
-    "submit": "Send my request"
+    "submit": "Send my request",
+    "sending": "Sending…",
+    "success": "**Thanks, message received!** I’ll get back to you within one business day. If it’s urgent, give me a call or message me on WhatsApp.\n",
+    "error": "Something went wrong. Please try again in a moment, or email me directly at antonio@bortolin.dev."
   },
   "caseStudies": {
     "featuresTitle": "See what’s included",

@@ -77,7 +77,10 @@
     ],
     "message": "Raccontami il tuo progetto",
     "privacy": "Ho letto l’[informativa sulla privacy](/informativa-sulla-privacy/) e acconsento al trattamento dei dati per essere ricontattato.",
-    "submit": "Invia richiesta"
+    "submit": "Invia richiesta",
+    "sending": "Invio in corso…",
+    "success": "**Grazie, messaggio ricevuto!** Ti rispondo entro un giorno lavorativo. Se è urgente, chiamami o scrivimi su WhatsApp.\n",
+    "error": "Invio non riuscito. Riprova tra poco oppure scrivimi direttamente a antonio@bortolin.dev."
   },
   "caseStudies": {
     "featuresTitle": "Cosa contiene il sito",

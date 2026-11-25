@@ -58,7 +58,10 @@
     ],
     "message": "Erzählen Sie mir von Ihrem Projekt",
     "privacy": "Ich habe die [Datenschutzerklärung](/informativa-sulla-privacy/) gelesen und bin mit der Verarbeitung meiner Daten zur Kontaktaufnahme einverstanden.",
-    "submit": "Anfrage senden"
+    "submit": "Anfrage senden",
+    "sending": "Wird gesendet …",
+    "success": "**Danke, Ihre Nachricht ist angekommen!** Ich antworte innerhalb eines Werktags. Wenn es eilt, rufen Sie mich an oder schreiben Sie mir auf WhatsApp.\n",
+    "error": "Senden fehlgeschlagen. Bitte versuchen Sie es gleich noch einmal oder schreiben Sie mir direkt an antonio@bortolin.dev."
   },
   "caseStudies": {
     "featuresTitle": "Was die Website bietet",

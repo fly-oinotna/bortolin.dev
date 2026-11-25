@@ -25,8 +25,12 @@ const lbl = 'block pb-1 text-sm text-gray-700';
       <ContactCards settings={settings} class="mt-8 space-y-3" />
     </div>
 
-    <!-- Il modulo verrà collegato a un servizio di invio (es. funzione serverless) -->
-    <form class="rounded-3xl bg-white p-6 md:p-8 lg:col-span-3" action="#" method="post">
+    <!-- Invio: netlify/functions/contact.mjs (Postmark). Con JavaScript resta sulla pagina; senza, torna qui con ?inviato=1 -->
+    <div class="rounded-3xl bg-white p-6 md:p-8 lg:col-span-3" data-bd-contact>
+    <div class="hidden text-lg text-black" role="status" tabindex="-1" data-bd-done set:html={rich(c.success ?? '')} />
+    <form action="/api/contact" method="post" data-sending={c.sending} data-error={c.error}>
+      <input type="hidden" name="lang" value={Astro.currentLocale ?? 'it'}>
+      <input type="hidden" name="page" value={Astro.url.pathname}>
       <fieldset>
         <legend class="mb-6 text-xl font-semibold text-black">{pg?.formTitle || c.formTitle}</legend>
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -49,8 +53,43 @@ const lbl = 'block pb-1 text-sm text-gray-700';
           <input type="checkbox" name="privacy" required class="mt-0.5 h-5 w-5 shrink-0 accent-black">
           <span set:html={rich(c.privacy, { link: 'underline' }) + ' *'} />
         </label>
-        <button type="submit" class="btn-secondary mt-6 w-full sm:w-auto">{c.submit} <Icon name="arrow" size={20} /></button>
+        <p class="mt-4 hidden text-red-700" role="alert" data-bd-error></p>
+        <button type="submit" class="btn-secondary mt-6 w-full sm:w-auto"><span data-bd-label>{c.submit}</span> <Icon name="arrow" size={20} /></button>
       </fieldset>
     </form>
+    </div>
   </div>
 </section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-bd-contact]').forEach((box) => {
+    const form = box.querySelector('form')!;
+    const done = box.querySelector<HTMLElement>('[data-bd-done]')!;
+    const err = box.querySelector<HTMLElement>('[data-bd-error]')!;
+    const btn = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
+    const label = btn.querySelector<HTMLElement>('[data-bd-label]')!;
+    const idle = label.textContent;
+    const showDone = () => { form.hidden = true; done.classList.remove('hidden'); done.focus(); };
+    const showError = () => { err.textContent = form.dataset.error ?? ''; err.classList.remove('hidden'); };
+    // ritorno dall'invio senza JavaScript
+    const q = new URLSearchParams(location.search);
+    if (q.has('inviato')) showDone(); else if (q.has('errore')) showError();
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      err.classList.add('hidden');
+      btn.disabled = true;
+      label.textContent = form.dataset.sending ?? idle;
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: new URLSearchParams(new FormData(form) as any), headers: { Accept: 'application/json' } });
+        if (!res.ok) throw new Error(String(res.status));
+        showDone();
+      } catch {
+        showError();
+      } finally {
+        btn.disabled = false;
+        label.textContent = idle;
+      }
+    });
+  });
+</script>

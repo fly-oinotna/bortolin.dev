@@ -58,7 +58,10 @@
     ],
     "message": "Cuéntame tu proyecto",
     "privacy": "He leído la [política de privacidad](/informativa-sulla-privacy/) y acepto el tratamiento de mis datos para que me contactes.",
-    "submit": "Enviar solicitud"
+    "submit": "Enviar solicitud",
+    "sending": "Enviando…",
+    "success": "**¡Gracias, mensaje recibido!** Te respondo en un día laborable. Si es urgente, llámame o escríbeme por WhatsApp.\n",
+    "error": "No se ha podido enviar. Inténtalo de nuevo en un momento o escríbeme directamente a antonio@bortolin.dev."
   },
   "caseStudies": {
     "featuresTitle": "Qué incluye la web",
