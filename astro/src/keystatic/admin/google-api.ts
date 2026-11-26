@@ -90,7 +90,7 @@ async function gsc(token: string, property: string) {
     post(token, url, { ...cur }),
     post(token, url, { ...prev }),
     post(token, url, { ...cur, dimensions: ['date'] }),
-    post(token, url, { ...cur, dimensions: ['query'], rowLimit: 8 }),
+    post(token, url, { ...cur, dimensions: ['query'], rowLimit: 100 }),
     post(token, url, { ...cur, dimensions: ['page'], rowLimit: 6 }),
   ]);
   const tot = (r: any) => ({ clicks: r?.clicks ?? 0, impressions: r?.impressions ?? 0, ctr: r?.ctr ?? 0, position: r?.position ?? 0 });
@@ -98,7 +98,9 @@ async function gsc(token: string, property: string) {
     totals: tot(now.rows?.[0]),
     previous: tot(before.rows?.[0]),
     daily: (daily.rows ?? []).map((r: any) => ({ date: r.keys[0], clicks: r.clicks, impressions: r.impressions })),
-    queries: (queries.rows ?? []).map((r: any) => ({ query: r.keys[0], clicks: r.clicks, impressions: r.impressions, position: r.position })),
+    // Google ordina solo per clic: con pochi clic si riordina anche per impressioni e si tengono le prime 8
+    queries: (queries.rows ?? []).map((r: any) => ({ query: r.keys[0], clicks: r.clicks, impressions: r.impressions, position: r.position }))
+      .sort((a: any, b: any) => b.clicks - a.clicks || b.impressions - a.impressions).slice(0, 8),
     pages: (pages.rows ?? []).map((r: any) => ({ page: r.keys[0], clicks: r.clicks, impressions: r.impressions })),
   };
 }

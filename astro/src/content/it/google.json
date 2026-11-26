@@ -1,5 +1,10 @@
 {
-  "searchConsole": {},
+  "searchConsole": {
+    "gscProperty": "sc-domain:bortolin.dev"
+  },
+  "analytics": {
+    "ga4PropertyId": "565881221"
+  },
   "tagManager": {
     "gtmId": "GTM-MWLQBPG3"
   }

@@ -125,14 +125,16 @@ const setupGoogle = (s: any) => `<div class="bd-setup">
     <li>In <a class="bd-link" href="${adminBase()}/singleton/google">Google</a> compila “ID proprietà Google Analytics 4” ${s.ga4 ? '<b>✓</b>' : ''} e “Proprietà per la Dashboard” ${s.gsc ? '<b>✓</b>' : ''}.</li>
   </ol></div>`;
 
+const EMPTY = '<li><span class="muted">Ancora nessun dato nel periodo</span><span></span></li>';
+
 function gscCard(d: any, setup: any) {
   if (!setup.serviceAccount || !setup.gsc) return `<div class="bd-card"><h2>Google Search Console</h2>${setupGoogle(setup)}</div>`;
   if (!d || d.error) return `<div class="bd-card"><h2>Google Search Console</h2><p class="muted">Dati non disponibili: ${esc(d?.error ?? 'errore')}</p></div>`;
   const t = d.totals, p = d.previous;
   return `<div class="bd-card"><h2>Google Search Console</h2><p class="muted">Ultimi 28 giorni (i dati di Google arrivano con 2–3 giorni di ritardo)</p>
     <div class="bd-kpis">${kpi('Clic', t.clicks, p.clicks)}${kpi('Impressioni', t.impressions, p.impressions)}${kpi('CTR', t.ctr, p.ctr, (n) => pf.format(n))}${kpi('Posizione media', t.position, p.position, (n) => n.toFixed(1).replace('.', ','), true)}</div>
-    ${spark(d.daily.map((x: any) => x.clicks))}
-    <h3>Ricerche principali</h3><ul class="bd-list">${d.queries.map((q: any) => `<li><span>${esc(q.query)}</span><span>${nf.format(q.clicks)} clic · pos. ${q.position.toFixed(1).replace('.', ',')}</span></li>`).join('') || '<li><span class="muted">Nessuna ricerca nel periodo</span><span></span></li>'}</ul></div>`;
+    <h3>Impressioni al giorno</h3>${spark(d.daily.map((x: any) => x.impressions))}
+    <h3>Ricerche principali</h3><ul class="bd-list">${d.queries.map((q: any) => `<li><span>${esc(q.query)}</span><span>${nf.format(q.clicks)} clic · ${nf.format(q.impressions)} impr. · pos. ${q.position.toFixed(1).replace('.', ',')}</span></li>`).join('') || EMPTY}</ul></div>`;
 }
 
 function gaCard(d: any, setup: any) {
@@ -141,9 +143,9 @@ function gaCard(d: any, setup: any) {
   const t = d.totals, p = d.previous;
   return `<div class="bd-card"><h2>Google Analytics 4</h2><p class="muted">Ultimi 28 giorni, rispetto ai 28 precedenti (solo visitatori che hanno accettato i cookie statistici)</p>
     <div class="bd-kpis">${kpi('Utenti', t.activeUsers, p.activeUsers)}${kpi('Sessioni', t.sessions, p.sessions)}${kpi('Visualizzazioni', t.screenPageViews, p.screenPageViews)}${kpi('Eventi chiave', t.keyEvents, p.keyEvents)}</div>
-    ${spark(d.daily.map((x: any) => x.value))}
-    <h3>Pagine più viste</h3><ul class="bd-list">${d.pages.map((x: any) => `<li><span>${esc(x.path)}</span><span>${nf.format(x.value)}</span></li>`).join('')}</ul>
-    <h3>Canali</h3><ul class="bd-list">${d.channels.map((x: any) => `<li><span>${esc(x.name)}</span><span>${nf.format(x.value)} sessioni</span></li>`).join('')}</ul></div>`;
+    ${d.daily.length ? `<h3>Sessioni al giorno</h3>${spark(d.daily.map((x: any) => x.value))}` : ''}
+    <h3>Pagine più viste</h3><ul class="bd-list">${d.pages.map((x: any) => `<li><span>${esc(x.path)}</span><span>${nf.format(x.value)}</span></li>`).join('') || EMPTY}</ul>
+    <h3>Canali</h3><ul class="bd-list">${d.channels.map((x: any) => `<li><span>${esc(x.name)}</span><span>${nf.format(x.value)} sessioni</span></li>`).join('') || EMPTY}</ul></div>`;
 }
 
 // ---------------------------------------------------------------- montaggio
