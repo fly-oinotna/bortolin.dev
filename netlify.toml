@@ -4,6 +4,9 @@
   base = "astro"
   command = "npm run build"
   publish = "dist"
+  # build SOLO per il ramo del sito (main): i salvataggi del pannello vanno sul ramo "contenuti" e non devono
+  # avviare build; il sito si aggiorna con "Pubblica sul sito". (uscita 0 = build saltata)
+  ignore = "test \"$BRANCH\" != \"main\""
 
 [build.environment]
   NODE_VERSION = "22"
