@@ -11,6 +11,7 @@
 // Dati: /api/seo-status, /api/publish, /api/google-data. Colori: variabili di Keystar + --bd-accent (theme.ts).
 import { adminBase } from './base';
 import { getProvider, setProvider } from './ai-pref';
+import { deployBadge } from './project';
 
 type Report = any;
 type Page = Report & { url: string; pageTitle: string; kind: string; label?: string; lang: string; itId: string };
@@ -33,6 +34,8 @@ const CSS = `
 .bd-card { background: var(--kui-color-background-surface); border: 1px solid var(--kui-color-border-muted); border-radius: 14px; padding: 20px; min-width: 0; }
 .bd-card.wide { grid-column: 1 / -1; }
 .bd-hello { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; }
+.bd-hello-side { display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.bd-deploy img { display: block; }
 .bd-hello strong { font-size: 22px; color: var(--kui-color-foreground-neutral-emphasis); }
 .bd-score { display: flex; flex-direction: column; gap: 16px; align-items: center; margin-top: 12px; }
 .bd-ring { flex-shrink: 0; }
@@ -260,7 +263,7 @@ async function render(box: HTMLElement) {
     : pub.files?.length ? `${pub.files.length} file modificati da pubblicare: usa “Pubblica sul sito” in basso a destra.` : 'Tutto pubblicato: il sito è aggiornato.';
 
   box.innerHTML = `
-  <div class="bd-hello"><strong>${hello}!</strong><span class="muted">${esc(pubText)}</span></div>
+  <div class="bd-hello"><strong>${hello}!</strong><span class="muted bd-hello-side">${esc(pubText)} ${deployBadge()}</span></div>
   <div class="row">
     <div class="bd-card"><h2>Salute SEO del sito</h2><p class="muted">${scores.length} pagine in ${langs.length} lingue</p>
       <div class="bd-score">${ring(global)}<div class="bd-checks">${perCheck.map((c) => `<div class="bd-check"><span>${esc(c.n)}</span><span class="muted">${c.ok}/${scores.length}</span>${bar(c.ok / scores.length)}</div>`).join('')}</div></div>

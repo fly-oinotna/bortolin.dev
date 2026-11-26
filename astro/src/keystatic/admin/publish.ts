@@ -2,6 +2,8 @@
 // I salvataggi del pannello vanno nel ramo "contenuti"; il sito cambia solo quando si preme questo pulsante.
 // Si aggiorna da solo ogni 20 secondi e quando si torna sulla scheda del browser.
 
+import { deployBadge } from './project';
+
 type State = { enabled?: boolean; commits?: number; files?: string[]; error?: string };
 
 const LIVE_BRANCH = 'main';
@@ -31,10 +33,21 @@ function mount() {
     .bd-publish .n{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 6px;border-radius:999px;background:var(--bd-on-accent);color:var(--bd-accent);font-size:12px}
     .bd-publish .msg{position:absolute;right:0;bottom:56px;width:300px;padding:12px 14px;border-radius:12px;background:#000;color:#fff;font-weight:500;line-height:1.4;box-shadow:0 6px 24px rgba(0,0,0,.25)}
     .bd-publish .msg[hidden]{display:none}
-  </style><p class="msg" hidden role="status"></p><button type="button" hidden></button>`;
+    .bd-publish .deploy{position:absolute;right:0;bottom:54px;display:flex;align-items:center;gap:8px;padding:6px 10px;border-radius:999px;background:var(--kui-color-background-surface,#fff);box-shadow:0 2px 10px rgba(0,0,0,.15);font-weight:500;font-size:12px;white-space:nowrap}
+    .bd-publish .deploy[hidden]{display:none}
+    .bd-publish .deploy img{display:block}
+  </style><p class="msg" hidden role="status"></p><div class="deploy" hidden></div><button type="button" hidden></button>`;
   document.body.append(box);
   const btn = box.querySelector('button')!;
   const msg = box.querySelector<HTMLElement>('.msg')!;
+  const deploy = box.querySelector<HTMLElement>('.deploy')!;
+  // dopo "Pubblica": il badge di Netlify si aggiorna ogni 10 s per 5 minuti (In corso → Riuscito / Errore)
+  const watchDeploy = () => {
+    const draw = () => { deploy.innerHTML = `<span>Deploy</span>${deployBadge()}`; };
+    deploy.hidden = false; draw();
+    const timer = setInterval(draw, 10000);
+    setTimeout(() => { clearInterval(timer); deploy.hidden = true; }, 5 * 60 * 1000);
+  };
   let state: State = {};
   let busy = false;
 
@@ -66,6 +79,7 @@ function mount() {
       const out = await res.json();
       if (!res.ok) throw new Error(out.error || `Errore ${res.status}`);
       say('Pubblicato! Netlify sta aggiornando il sito: sarà online in 1–2 minuti.');
+      setTimeout(watchDeploy, 6000); // dopo il messaggio, il badge dello stato del deploy
     } catch (e) {
       say(`Pubblicazione non riuscita: ${(e as Error).message}`, 0);
     } finally {
