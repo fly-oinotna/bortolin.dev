@@ -3,7 +3,7 @@
 //   2. Pubblicazione: modifiche in attesa (online) o modalità locale
 //   3. Contenuti e traduzioni: quante pagine per tipo e quanto è completa ogni lingua
 //   4. Strumenti di test sulla pagina scelta: PageSpeed Insights, Schema Validator (Google e schema.org), Facebook
-//   5. Google Search Console e Google Analytics 4 (ultimi 28 giorni, /api/google-data)
+//   5. Google Search Console, Google Analytics 4 e Google Ads tramite GA4 (ultimi 28 giorni, /api/google-data)
 //   6. Pagine da sistemare, con il link per modificarle
 // Dati: /api/seo-status, /api/publish, /api/google-data. Colori: variabili di Keystar + --bd-accent (theme.ts).
 import { adminBase } from './base';
@@ -148,6 +148,24 @@ function gaCard(d: any, setup: any) {
     <h3>Canali</h3><ul class="bd-list">${d.channels.map((x: any) => `<li><span>${esc(x.name)}</span><span>${nf.format(x.value)} sessioni</span></li>`).join('') || EMPTY}</ul></div>`;
 }
 
+function adsCard(d: any, setup: any) {
+  if (!setup.serviceAccount || !setup.ga4) return '';
+  if (!d || d.error) return `<div class="bd-card"><h2>Google Ads</h2><p class="muted">Dati non disponibili: ${esc(d?.error ?? 'errore')}</p></div>`;
+  const t = d.totals, p = d.previous;
+  const money = (n: number) => new Intl.NumberFormat('it-IT', { style: 'currency', currency: d.currency || 'EUR' }).format(n);
+  if (!t.cost && !t.clicks && !t.impressions && !p.cost) {
+    return `<div class="bd-card"><h2>Google Ads</h2><div class="bd-setup"><p class="muted">Nessun dato negli ultimi 28 giorni. Se hai campagne attive, collega Google Ads alla proprietà GA4:</p>
+      <ol><li>In Google Analytics: <b>Amministrazione → Collegamenti a prodotti → Collegamenti a Google Ads</b> → <b>Collega</b>.</li>
+      <li>Scegli l’account Google Ads e conferma (lascia attiva la condivisione dei dati).</li>
+      <li>I dati compaiono qui entro 24–48 ore.</li></ol></div></div>`;
+  }
+  const cpc = (x: any) => (x.clicks ? x.cost / x.clicks : 0);
+  const cpa = (x: any) => (x.conversions ? x.cost / x.conversions : 0);
+  return `<div class="bd-card"><h2>Google Ads</h2><p class="muted">Ultimi 28 giorni, rispetto ai 28 precedenti (dati da Google Analytics)</p>
+    <div class="bd-kpis">${kpi('Spesa', t.cost, p.cost, money)}${kpi('Clic', t.clicks, p.clicks)}${kpi('Costo per clic', cpc(t), cpc(p), money, true)}${kpi('Conversioni', t.conversions, p.conversions)}${t.conversions ? kpi('Costo per conversione', cpa(t), cpa(p), money, true) : ''}</div>
+    <h3>Campagne</h3><ul class="bd-list">${d.campaigns.map((c: any) => `<li><span>${esc(c.name)}</span><span>${money(c.cost)} · ${nf.format(c.clicks)} clic</span></li>`).join('') || EMPTY}</ul></div>`;
+}
+
 // ---------------------------------------------------------------- montaggio
 const isDashboard = () => /^\/admin(?:\/branch\/[^/]+)?\/?$/.test(location.pathname);
 
@@ -195,7 +213,7 @@ async function render(box: HTMLElement) {
       <div class="bd-tools" data-bd-tools></div>
     </div>
   </div>
-  <div class="row" data-bd-google><div class="bd-card"><h2>Google Search Console</h2><p class="muted">Caricamento…</p></div><div class="bd-card"><h2>Google Analytics 4</h2><p class="muted">Caricamento…</p></div></div>
+  <div class="row" data-bd-google><div class="bd-card"><h2>Google Search Console</h2><p class="muted">Caricamento…</p></div><div class="bd-card"><h2>Google Analytics 4</h2><p class="muted">Caricamento…</p></div><div class="bd-card"><h2>Google Ads</h2><p class="muted">Caricamento…</p></div></div>
   <div class="bd-card wide"><h2>Pagine da sistemare</h2>
     ${issues.length ? `<p class="muted">${issues.length} pagine sotto 100: le più urgenti per prime.</p>
     <table class="bd-issues"><thead><tr><th>Pagina</th><th>Lingua</th><th>Punteggio</th><th>Da sistemare</th></tr></thead><tbody>
@@ -231,7 +249,7 @@ async function render(box: HTMLElement) {
     const setup = google?.setup ?? { serviceAccount: false, ga4: false, gsc: false };
     g.innerHTML = !setup.serviceAccount || (!setup.ga4 && !setup.gsc)
       ? `<div class="bd-card wide"><h2>Google Search Console e Analytics</h2>${setupGoogle(setup)}</div>`
-      : gscCard(google?.gsc, setup) + gaCard(google?.ga4, setup);
+      : gscCard(google?.gsc, setup) + gaCard(google?.ga4, setup) + adsCard(google?.ads, setup);
   }
 }
 

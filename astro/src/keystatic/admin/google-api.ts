@@ -1,4 +1,4 @@
-// GET /api/google-data — dati di Google Analytics 4 e Search Console per la Dashboard del pannello (ultimi 28 giorni).
+// GET /api/google-data — dati di Google Analytics 4, Search Console e Google Ads (tramite GA4) per la Dashboard (ultimi 28 giorni).
 //
 // Configurazione:
 //   - Keystatic → Google: "ID proprietà Google Analytics 4" e "Proprietà per la Dashboard" (Search Console)
@@ -81,6 +81,35 @@ async function ga4(token: string, id: string) {
   };
 }
 
+/**
+ * Google Ads attraverso GA4 (Google Ads collegato alla proprietà GA4: Amministrazione → Collegamenti a prodotti):
+ * spesa, clic, impressioni, conversioni da traffico a pagamento e campagne principali. Nessuna API o chiave in più.
+ */
+async function ads(token: string, id: string) {
+  const url = `https://analyticsdata.googleapis.com/v1beta/properties/${encodeURIComponent(id)}:runReport`;
+  const ranges = [{ startDate: '28daysAgo', endDate: 'yesterday' }, { startDate: '56daysAgo', endDate: '29daysAgo' }];
+  const paid = { filter: { fieldName: 'sessionDefaultChannelGroup', inListFilter: { values: ['Paid Search', 'Paid Video', 'Paid Shopping', 'Cross-network', 'Paid Other'] } } };
+  // le metriche dei costi di Google Ads in GA4 vogliono una dimensione di campagna: i totali sono la somma delle campagne
+  const [byCampaign, conv] = await Promise.all([
+    post(token, url, { dateRanges: ranges, dimensions: [{ name: 'sessionGoogleAdsCampaignName' }], metrics: ['advertiserAdCost', 'advertiserAdClicks', 'advertiserAdImpressions'].map((name) => ({ name })), limit: 200 }),
+    post(token, url, { dateRanges: ranges, metrics: [{ name: 'keyEvents' }], dimensionFilter: paid }),
+  ]);
+  // con due periodi GA4 aggiunge la dimensione "dateRange" in fondo: date_range_0 = attuale, date_range_1 = precedente
+  const rows = (byCampaign.rows ?? []).map((r: any) => ({
+    name: r.dimensionValues[0].value,
+    range: r.dimensionValues.at(-1)?.value === 'date_range_1' ? 1 : 0,
+    cost: Number(r.metricValues[0].value), clicks: Number(r.metricValues[1].value), impressions: Number(r.metricValues[2].value),
+  }));
+  const keyEvents = (i: number) => Number((conv.rows ?? []).find((r: any) => r.dimensionValues?.[0]?.value === `date_range_${i}`)?.metricValues?.[0]?.value ?? (i === 0 ? conv.rows?.[0]?.metricValues?.[0]?.value : 0) ?? 0);
+  const sum = (i: number) => rows.filter((r) => r.range === i).reduce((t, r) => ({ ...t, cost: t.cost + r.cost, clicks: t.clicks + r.clicks, impressions: t.impressions + r.impressions }), { cost: 0, clicks: 0, impressions: 0, conversions: keyEvents(i) });
+  return {
+    currency: byCampaign.metadata?.currencyCode ?? 'EUR',
+    totals: sum(0),
+    previous: sum(1),
+    campaigns: rows.filter((r) => r.range === 0 && r.name !== '(not set)').sort((x, y) => y.cost - x.cost).slice(0, 6).map(({ name, cost, clicks }) => ({ name, cost, clicks })),
+  };
+}
+
 /** Search Console: clic, impressioni, CTR, posizione (i dati arrivano con ~3 giorni di ritardo), andamento, query e pagine */
 async function gsc(token: string, property: string) {
   const url = `https://searchconsole.googleapis.com/webmasters/v3/sites/${encodeURIComponent(property)}/searchAnalytics/query`;
@@ -120,11 +149,12 @@ export const GET: APIRoute = async ({ request, url }) => {
 
   const token = await accessToken(sa).catch((e) => e as Error);
   if (token instanceof Error) return json({ setup, error: token.message });
-  const [a, s] = await Promise.all([
+  const [a, s, g] = await Promise.all([
     ga4Id ? ga4(token, ga4Id).catch((e) => ({ error: (e as Error).message })) : null,
     property ? gsc(token, property).catch((e) => ({ error: (e as Error).message })) : null,
+    ga4Id ? ads(token, ga4Id).catch((e) => ({ error: (e as Error).message })) : null,
   ]);
-  const data = { ga4: a, gsc: s, updated: new Date().toISOString() };
+  const data = { ga4: a, gsc: s, ads: g, updated: new Date().toISOString() };
   cache.set(key, { at: Date.now(), data });
   return json({ setup, ...data });
 };
