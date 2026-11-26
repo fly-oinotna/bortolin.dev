@@ -1,0 +1,7 @@
+---
+// Pagine 404 delle altre lingue: /en/404/, /es/404/… (in _redirects: /en/*  /en/404/index.html  404)
+import NotFound from '../../templates/NotFound.astro';
+import { TRANSLATIONS } from '../../i18n/langs';
+export const getStaticPaths = () => TRANSLATIONS.map((lang) => ({ params: { lang } }));
+---
+<NotFound lang={Astro.params.lang} />

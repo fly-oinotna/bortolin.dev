@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "eyebrow": "Error 404",
+    "title": "This page got lost. You didn’t.",
+    "text": "The link is wrong, the page has moved or it never existed. It happens to the best websites: **at least this 404 loads in a flash.**\n",
+    "hint": "Move your mouse (or finger) and shine a light",
+    "words": [
+      "<title>",
+      "keyword",
+      "href=\"?\"",
+      "alt",
+      "canonical",
+      "sitemap.xml",
+      "meta",
+      "page/"
+    ],
+    "secret": "You found me! Not the page, but me.",
+    "ctaLabel": "Back to the homepage",
+    "linkLabel": "Drop me a line"
+  },
+  "services": {
+    "eyebrow": "While you’re here",
+    "title": "Maybe you were looking for one of these",
+    "text": "Every service, one click away. Chances are the page you wanted is right below.\n"
+  },
+  "blog": {
+    "eyebrow": "From the blog",
+    "title": "Or read something useful",
+    "ctaLabel": "All articles"
+  },
+  "seo": {
+    "title": "Page not found (404) | bortolin.dev",
+    "description": "The page you’re looking for doesn’t exist or has moved. Head back to the homepage, explore the services or read the latest articles."
+  }
+}

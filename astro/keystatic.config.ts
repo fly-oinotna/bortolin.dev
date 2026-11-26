@@ -3,6 +3,8 @@ import { createElement } from 'react';
 import { t, ta, check, toggle, otherwise, eyebrow, title, text, longText, image, alt, button, destination, icon, repeater, texts, shared } from './src/keystatic/fields';
 import { translatedSingletons, translatedCollections } from './src/keystatic/i18n';
 import { group, sections as s, SEO_LAYOUT } from './src/keystatic/sections';
+import { counted } from './src/keystatic/counted';
+import { SEO_LIMITS } from './src/lib/seo';
 import { blog } from './src/keystatic/blog';
 import { sitiWeb, consulenzaSeo, performance, integrazioneAi, googleAds, aiAds, metaAds, consulenzaDigitale, webAgency, servizi, caseStudy, caseStudiesArchive } from './src/keystatic/servizi';
 
@@ -151,6 +153,35 @@ const singletons = {
   metaAds: singletonJson('Meta Ads', 'servizi/meta-ads', metaAds(POST_CATEGORIES)),
   consulenzaDigitale: singletonJson('Consulenza digitale', 'servizi/consulenza-digitale', consulenzaDigitale(POST_CATEGORIES)),
   webAgency: singletonJson('Per le web agency', 'servizi/sviluppatore-freelance-per-web-agency', webAgency(POST_CATEGORIES)),
+
+  // ============================================================ PAGINA 404
+  // Mostrata per ogni indirizzo che non esiste (una per lingua). Netlify la serve con stato 404: Google non la indicizza.
+  notFound: singletonJson('Pagina 404', '404', {
+    hero: group('Hero', {
+      eyebrow: eyebrow(),
+      title: title('H1'),
+      text: text(),
+      hint: t('Suggerimento', 'Sotto l’animazione, es. “Muovi il mouse: fai luce tu”'),
+      words: texts('Parole perse', 'Parola'),
+      secret: t('Messaggio nascosto', 'Compare solo quando la luce ci passa sopra'),
+      ...button('cta', 'Pulsante'),
+      ...button('link', 'Secondo pulsante'),
+    }),
+    services: group('Servizi', {
+      eyebrow: eyebrow(),
+      title: title('H2'),
+      text: text(),
+    }),
+    blog: group('Dal blog', {
+      eyebrow: eyebrow(),
+      title: title('H2'),
+      ...button('cta', 'Pulsante'),
+    }),
+    seo: group('SEO', {
+      title: counted({ label: 'Meta Title', required: true, limits: SEO_LIMITS.title }),
+      description: counted({ label: 'Meta Description', multiline: true, required: true, limits: SEO_LIMITS.description }),
+    }),
+  }),
 
   // =============================================================== OFFERTA
   // L'offerta mostrata nel mega menu, nel menu mobile e nelle pagine che non ne scelgono una propria
@@ -441,11 +472,11 @@ export default config({
     // Le pagine a layout fisso (Home, Servizi…) sono nell'elenco Pagine, nel gruppo "Pagine a layout fisso" (admin/seo-badges.ts)
     navigation: {
       '': ['pages', 'en_pages', 'es_pages', 'de_pages', 'posts', 'en_posts', 'es_posts', 'de_posts', 'caseStudies', 'en_caseStudies', 'es_caseStudies', 'de_caseStudies'],
-      'Sito': ['navigation', 'en_navigation', 'es_navigation', 'de_navigation', 'offer', 'offers', 'en_offers', 'es_offers', 'de_offers'],
+      'Sito': ['navigation', 'en_navigation', 'es_navigation', 'de_navigation', 'offer', 'offers', 'en_offers', 'es_offers', 'de_offers', 'notFound', 'en_notFound', 'es_notFound', 'de_notFound'],
       'SEO e strumenti': ['cookies', 'en_cookies', 'es_cookies', 'de_cookies', 'google', 'redirects', 'reviews', 'schemaMarkup', 'en_schemaMarkup', 'es_schemaMarkup', 'de_schemaMarkup'],
       'Configurazione': ['settings', 'en_settings', 'es_settings', 'de_settings'],
     },
   },
   collections: { ...collections, ...translatedCollections(collections, ['pages', 'posts', 'caseStudies', 'offers']) },
-  singletons: { ...singletons, ...translatedSingletons(singletons, [...FIXED_KEYS, 'navigation', 'cookies', 'schemaMarkup', 'settings'], [...FIXED_KEYS]) },
+  singletons: { ...singletons, ...translatedSingletons(singletons, [...FIXED_KEYS, 'navigation', 'cookies', 'schemaMarkup', 'settings', 'notFound'], [...FIXED_KEYS]) },
 });

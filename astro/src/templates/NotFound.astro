@@ -1,0 +1,168 @@
+---
+// PAGINA 404 — contenuti in Keystatic → Sito → Pagina 404 (una per lingua).
+// Hero: un "404" al buio e una torcia che segue il mouse (o vaga da sola) e accende numeri, parole perse
+// e un messaggio nascosto. Tutto in SVG + poche righe di JS: niente librerie, niente spostamenti del layout.
+import Base from '../layouts/Base.astro';
+import Icon from '../components/ui/Icon.astro';
+import Rich from '../components/ui/Rich.astro';
+import SectionHeading from '../components/ui/SectionHeading.astro';
+import BlogTeaser from '../components/sections/BlogTeaser.astro';
+import { read, readGlobals } from '../lib/content';
+import { href } from '../lib/links';
+import type { IconName } from '../lib/icons';
+
+interface Props { lang?: string }
+const { lang = 'it' } = Astro.props;
+const g = await readGlobals(lang);
+const p = await read('notFound', lang);
+const { hero: h, services: sv, blog: bl } = p;
+const nav = g.navigation.mega;
+const services = nav.groups.flatMap((gr) => gr.items.map((it) => ({ ...it, dark: gr.dark })));
+
+// parole perse sparse intorno al 404 (coordinate nel viewBox 1200×560), sempre nella stessa posizione
+const SPOTS = [[120, 110, -8], [1010, 95, 6], [70, 300, 4], [1110, 300, -5], [190, 470, 7], [985, 480, -7], [430, 70, 3], [790, 45, -3]];
+const words = h.words.slice(0, SPOTS.length).map((w, i) => ({ w, x: SPOTS[i][0], y: SPOTS[i][1], r: SPOTS[i][2] }));
+// stelle: posizioni pseudo-casuali ma fisse (stesso HTML a ogni build)
+let seed = 7;
+const rnd = () => ((seed = (seed * 16807) % 2147483647) / 2147483647);
+const stars = Array.from({ length: 46 }, () => ({ x: Math.round(rnd() * 1200), y: Math.round(rnd() * 560), r: (rnd() * 1.6 + 0.6).toFixed(1), d: (rnd() * 4).toFixed(2) }));
+---
+<Base g={g} seo={p.seo}>
+
+  <!-- ================================================= HERO: TORCIA NEL BUIO -->
+  <section class="bd-404 relative overflow-hidden bg-black pt-10 pb-16 text-white md:pt-14 md:pb-24" data-bd-404>
+    <div class="container relative">
+      <svg class="bd-404-stage mx-auto block h-auto w-full max-w-5xl select-none" viewBox="0 0 1200 560" aria-hidden="true" focusable="false">
+        <defs>
+          <radialGradient id="bd404-light">
+            <stop offset="0" stop-color="#fff" />
+            <stop offset=".55" stop-color="#fff" stop-opacity=".85" />
+            <stop offset="1" stop-color="#fff" stop-opacity="0" />
+          </radialGradient>
+          <radialGradient id="bd404-glow">
+            <stop offset="0" stop-color="#99ea48" stop-opacity=".28" />
+            <stop offset="1" stop-color="#99ea48" stop-opacity="0" />
+          </radialGradient>
+          <mask id="bd404-mask" maskUnits="userSpaceOnUse" x="0" y="0" width="1200" height="560">
+            <g class="bd-404-spot" transform="translate(600 300)"><circle r="190" fill="url(#bd404-light)" /></g>
+          </mask>
+        </defs>
+
+        <!-- cielo -->
+        <g class="bd-404-stars">
+          {stars.map((s) => <circle cx={s.x} cy={s.y} r={s.r} style={`animation-delay:-${s.d}s`} />)}
+        </g>
+        <!-- alone della torcia -->
+        <g class="bd-404-spot" transform="translate(600 300)"><circle r="300" fill="url(#bd404-glow)" /></g>
+
+        <!-- al buio: solo i contorni -->
+        <g class="bd-404-dim">
+          <text x="600" y="430" text-anchor="middle" class="bd-404-num">404</text>
+          {words.map((w) => <text x={w.x} y={w.y} text-anchor="middle" transform={`rotate(${w.r} ${w.x} ${w.y})`} class="bd-404-word">{w.w}</text>)}
+        </g>
+        <!-- alla luce: pieno, colorato, con il messaggio nascosto -->
+        <g class="bd-404-lit" mask="url(#bd404-mask)">
+          <text x="600" y="430" text-anchor="middle" class="bd-404-num">404</text>
+          {words.map((w) => <text x={w.x} y={w.y} text-anchor="middle" transform={`rotate(${w.r} ${w.x} ${w.y})`} class="bd-404-word">{w.w}</text>)}
+          {h.secret && <text x="600" y="505" text-anchor="middle" class="bd-404-secret">{h.secret}</text>}
+        </g>
+      </svg>
+
+      {h.hint && <p class="mt-2 flex items-center justify-center gap-2 text-sm text-gray-400"><Icon name="sparkles" size={16} />{h.hint}</p>}
+
+      <div class="mx-auto mt-10 max-w-3xl text-center">
+        {h.eyebrow && <span class="inline-flex rounded-full bg-bd-green px-3 py-1 text-xs font-bold text-black uppercase">{h.eyebrow}</span>}
+        <h1 class="mt-5 text-4xl leading-tight font-bold text-white md:text-5xl lg:text-6xl">{h.title}</h1>
+        <div class="mt-6"><Rich value={h.text} class="text-lg text-gray-300" strong="text-white" /></div>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-4">
+          {h.ctaLabel && <a href={href(h.ctaLink)} class="btn-primary">{h.ctaLabel} <Icon name="arrow" size={20} /></a>}
+          {h.linkLabel && <a href={href(h.linkLink)} class="btn-empty-secondary">{h.linkLabel}</a>}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================= SERVIZI -->
+  <section class="py-16 md:py-24">
+    <div class="container">
+      <SectionHeading n={1} eyebrow={sv.eyebrow} title={sv.title} text={sv.text} />
+      <ul class="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {services.map((it) => (
+          <li>
+            <a href={href(it.link)} class="group flex h-full flex-col rounded-3xl bg-gray-100 p-6 transition-colors hover:bg-bd-green">
+              <span class:list={['grid h-11 w-11 place-items-center rounded-full transition-colors', it.dark ? 'bg-black text-bd-green' : 'bg-bd-green text-black group-hover:bg-black group-hover:text-bd-green']}><Icon name={it.icon as IconName} size={22} /></span>
+              <strong class="mt-5 text-lg leading-snug text-black">{it.label}</strong>
+              <span class="mt-1 text-sm text-gray-700">{it.text}</span>
+              <span class="mt-auto flex justify-end pt-5 text-black"><Icon name="arrow" size={20} class="transition-transform group-hover:translate-x-1" /></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <a href={href(nav.agencyLink)} class="mt-4 flex items-center justify-between gap-4 rounded-3xl bg-black p-6 text-white transition-colors hover:bg-gray-900">
+        <span class="flex items-center gap-3"><Icon name="layers" size={22} class="shrink-0 text-bd-green" /><span><strong>{nav.agencyStrong}</strong> {nav.agencyText}</span></span>
+        <Icon name="arrow" size={20} class="shrink-0" />
+      </a>
+    </div>
+  </section>
+
+  <!-- ================================================= DAL BLOG -->
+  <BlogTeaser categories={[]} eyebrow={bl.eyebrow} title={bl.title} buttonLabel={bl.ctaLabel ?? ''} buttonHref={href(bl.ctaLink)} count={2} />
+</Base>
+
+<style>
+  .bd-404-num { font-size: 430px; font-weight: 800; letter-spacing: -0.06em; }
+  .bd-404-word { font-size: 30px; font-weight: 700; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .bd-404-secret { font-size: 32px; font-weight: 700; fill: #99ea48; }
+  .bd-404-dim .bd-404-num { fill: none; stroke: rgba(255, 255, 255, .22); stroke-width: 2; }
+  .bd-404-dim .bd-404-word { fill: rgba(255, 255, 255, .1); }
+  .bd-404-lit .bd-404-num { fill: #99ea48; }
+  .bd-404-lit .bd-404-word { fill: #fff; }
+  .bd-404-stars circle { fill: #fff; opacity: .15; animation: bd-404-twinkle 4s ease-in-out infinite; }
+  @keyframes bd-404-twinkle { 50% { opacity: .7; } }
+  .bd-404 { touch-action: pan-y; }
+  /* l'alone della torcia può uscire dal riquadro dell'SVG (la sezione ha overflow-hidden) */
+  .bd-404-stage { overflow: visible; }
+  @media (prefers-reduced-motion: reduce) { .bd-404-stars circle { animation: none; } }
+</style>
+
+<script>
+  // La torcia: segue il puntatore; se il puntatore è fermo (o non c'è, come sui telefoni) vaga da sola.
+  // Gira solo quando la hero è visibile; con "riduci movimento" resta ferma al centro.
+  const hero = document.querySelector<HTMLElement>('[data-bd-404]');
+  const svg = hero?.querySelector<SVGSVGElement>('svg');
+  if (hero && svg && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    const spots = svg.querySelectorAll<SVGGElement>('.bd-404-spot');
+    const pos = { x: 600, y: 300 };
+    let target: { x: number; y: number } | null = null;
+    let lastMove = 0;
+    let running = false;
+    let raf = 0;
+    const t0 = performance.now();
+
+    const toSvg = (e: PointerEvent) => {
+      const m = svg.getScreenCTM();
+      if (!m) return null;
+      const pt = new DOMPoint(e.clientX, e.clientY).matrixTransform(m.inverse());
+      return { x: pt.x, y: pt.y };
+    };
+    hero.addEventListener('pointermove', (e) => { target = toSvg(e); lastMove = performance.now(); }, { passive: true });
+    hero.addEventListener('pointerdown', (e) => { target = toSvg(e); lastMove = performance.now(); }, { passive: true });
+
+    const frame = (now: number) => {
+      // dopo 2,5 s senza movimenti torna a vagare su un percorso morbido (curva di Lissajous)
+      const idle = !target || now - lastMove > 2500;
+      const t = (now - t0) / 1000;
+      const goal = idle ? { x: 600 + 440 * Math.sin(t * 0.55), y: 290 + 170 * Math.sin(t * 1.1 + 0.6) } : target!;
+      const k = idle ? 0.04 : 0.18;
+      pos.x += (goal.x - pos.x) * k;
+      pos.y += (goal.y - pos.y) * k;
+      const tr = `translate(${pos.x.toFixed(1)} ${pos.y.toFixed(1)})`;
+      spots.forEach((s) => s.setAttribute('transform', tr));
+      raf = requestAnimationFrame(frame);
+    };
+    new IntersectionObserver(([en]) => {
+      if (en.isIntersecting && !running) { running = true; raf = requestAnimationFrame(frame); }
+      else if (!en.isIntersecting && running) { running = false; cancelAnimationFrame(raf); }
+    }).observe(hero);
+  }
+</script>

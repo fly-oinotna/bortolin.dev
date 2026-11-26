@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "eyebrow": "Error 404",
+    "title": "Esta página se ha perdido. Tú no.",
+    "text": "El enlace está mal, la página se ha movido o nunca existió. Les pasa hasta a las mejores webs: **al menos esta 404 carga en un suspiro.**\n",
+    "hint": "Mueve el ratón (o el dedo) y pon tú la luz",
+    "words": [
+      "<title>",
+      "keyword",
+      "href=\"?\"",
+      "alt",
+      "canonical",
+      "sitemap.xml",
+      "meta",
+      "pagina/"
+    ],
+    "secret": "¡Me has encontrado! A la página no, pero a mí sí.",
+    "ctaLabel": "Volver a la portada",
+    "linkLabel": "Escríbeme"
+  },
+  "services": {
+    "eyebrow": "Ya que estás aquí",
+    "title": "Quizá buscabas uno de estos",
+    "text": "Todos los servicios a un clic. Lo más probable es que la página que querías esté aquí abajo.\n"
+  },
+  "blog": {
+    "eyebrow": "Del blog",
+    "title": "O lee algo útil",
+    "ctaLabel": "Todos los artículos"
+  },
+  "seo": {
+    "title": "Página no encontrada (404) | bortolin.dev",
+    "description": "La página que buscas no existe o se ha movido. Vuelve a la portada, descubre los servicios o lee los últimos artículos del blog."
+  }
+}
