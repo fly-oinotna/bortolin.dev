@@ -67,6 +67,7 @@ export default function keystaticAdmin() {
         injectRoute({ entrypoint: './src/keystatic/admin/leads-api.ts', pattern: '/api/leads', prerender: false });
         injectRoute({ entrypoint: './src/keystatic/admin/ai-api.ts', pattern: '/api/ai', prerender: false });
         injectRoute({ entrypoint: './src/keystatic/admin/notfound-api.ts', pattern: '/api/not-found', prerender: false });
+        injectRoute({ entrypoint: './src/keystatic/admin/lighthouse-api.ts', pattern: '/api/lighthouse', prerender: false });
       },
       // controllo del sito a ogni build: /_bd/site-check.json per la Dashboard (avvisa, non blocca)
       'astro:build:done': ({ dir, logger }) => {

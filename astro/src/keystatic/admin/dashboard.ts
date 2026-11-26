@@ -8,7 +8,8 @@
 //   7. Opportunità SEO: ricerche tra la 4ª e la 20ª posizione (Search Console) con la pagina da migliorare
 //   8. Pagine non trovate (404 registrate dal sito) con "Crea redirect" verso una pagina scelta
 //   9. Controllo del sito dell'ultima build (/_bd/site-check.json, scritto da site-check.mjs)
-//  10. AI del pannello: Claude, ChatGPT o Gemini per traduzioni e "Genera con AI" (scelta salvata nel browser)
+//  10. Monitor Lighthouse: misure settimanali di PageSpeed (mobile) con andamento e "Misura ora" (/api/lighthouse)
+//  11. AI del pannello: Claude, ChatGPT o Gemini per traduzioni e "Genera con AI" (scelta salvata nel browser)
 // Dati: /api/seo-status, /api/publish, /api/google-data. Colori: variabili di Keystar + --bd-accent (theme.ts).
 import { adminBase } from './base';
 import { getProvider, setProvider } from './ai-pref';
@@ -251,6 +252,33 @@ function siteCheckCard(r: any) {
       : '<p style="margin-top:8px">Tutto a posto: nessun link rotto, testi alternativi presenti, un H1 per pagina, titoli e descrizioni unici, immagini leggere. ✓</p>'}</div>`;
 }
 
+/** Monitor Lighthouse: ultime misure (mobile), andamento della Performance media, "Misura ora" */
+function lighthouseCard(d: any) {
+  if (!d?.enabled) return `<div class="bd-card wide"><h2>Monitor Lighthouse</h2><p class="muted">Ogni lunedì le pagine principali vengono misurate con PageSpeed Insights (mobile): i risultati li vedi qui nel pannello online.</p></div>`;
+  const btn = '<button type="button" class="bd-btn primary" data-act="lh-run">Misura ora</button>';
+  if (!d.runs.length) return `<div class="bd-card wide"><h2>Monitor Lighthouse</h2><p class="muted">Ancora nessuna misura${d.key ? '' : ' (manca PAGESPEED_API_KEY su Netlify)'}: la prima arriva lunedì, oppure avviala adesso (2–3 minuti).</p><div class="bd-tools">${btn}</div></div>`;
+  const last = d.runs[0];
+  const when = new Intl.DateTimeFormat('it-IT', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }).format(new Date(last.date));
+  const avg = (run: any) => { const ok = run.results.filter((r: any) => r.scores); return ok.length ? ok.reduce((t: number, r: any) => t + r.scores.performance, 0) / ok.length : 0; };
+  const trend = d.runs.slice().reverse().map(avg);
+  const score = (n: number) => `<b style="color:${n >= 90 ? 'var(--kui-color-foreground-accent)' : n >= 50 ? '#b7791f' : '#e5484d'}">${n}</b>`;
+  const ms = (n?: number) => (n == null ? '—' : `${(n / 1000).toFixed(1).replace('.', ',')} s`);
+  return `<div class="bd-card wide"><h2>Monitor Lighthouse</h2><p class="muted">Ultima misura: ${esc(when)} · mobile · ${d.runs.length} misure in archivio</p>
+    ${trend.length > 1 ? `<h3>Performance media nel tempo</h3>${spark(trend)}` : ''}
+    <table class="bd-issues"><thead><tr><th>Pagina</th><th>Perf.</th><th>Access.</th><th>Best pr.</th><th>SEO</th><th>LCP</th><th>CLS</th><th>Utenti reali (CrUX)</th></tr></thead><tbody>
+    ${last.results.map((r: any) => r.error ? `<tr><td>${esc(r.path)}</td><td colspan="7" class="muted">${esc(r.error)}</td></tr>` : `<tr><td>${esc(r.path)}</td><td>${score(r.scores.performance)}</td><td>${score(r.scores.accessibility)}</td><td>${score(r.scores['best-practices'])}</td><td>${score(r.scores.seo)}</td><td>${ms(r.lab.lcp)}</td><td>${r.lab.cls == null ? '—' : r.lab.cls.toFixed(2).replace('.', ',')}</td><td>${r.field ? `LCP ${ms(r.field.lcp)} · INP ${r.field.inp ?? '—'} ms · CLS ${(r.field.cls ?? 0).toFixed(2).replace('.', ',')}` : '<span class="muted">poche visite: dati non ancora disponibili</span>'}</td></tr>`).join('')}
+    </tbody></table><div class="bd-tools">${btn}</div></div>`;
+}
+
+function bindLighthouse(box: HTMLElement) {
+  box.querySelector<HTMLButtonElement>('[data-act="lh-run"]')?.addEventListener('click', async (e) => {
+    const b = e.currentTarget as HTMLButtonElement;
+    b.disabled = true; b.textContent = 'Avvio…';
+    const r = await fetch('/api/lighthouse', { method: 'POST' }).catch(() => null);
+    b.textContent = r?.ok ? 'Misura avviata: ricarica la Dashboard tra 2–3 minuti' : 'Avvio non riuscito: riprova';
+  });
+}
+
 // ---------------------------------------------------------------- montaggio
 const isDashboard = () => /^\/admin(?:\/branch\/[^/]+)?\/?$/.test(location.pathname);
 
@@ -302,6 +330,7 @@ async function render(box: HTMLElement) {
     </div>
   </div>
   <div class="row" data-bd-google><div class="bd-card"><h2>Google Search Console</h2><p class="muted">Caricamento…</p></div><div class="bd-card"><h2>Google Analytics 4</h2><p class="muted">Caricamento…</p></div><div class="bd-card"><h2>Google Ads</h2><p class="muted">Caricamento…</p></div></div>
+  <div data-bd-lh></div>
   <div data-bd-404></div>
   <div data-bd-check></div>
   <div class="bd-card wide"><h2>Pagine da sistemare</h2>
@@ -349,6 +378,8 @@ async function render(box: HTMLElement) {
       ? `<div class="bd-card wide"><h2>Google Search Console e Analytics</h2>${setupGoogle(setup)}</div>`
       : gscCard(google?.gsc, setup) + gaCard(google?.ga4, setup) + adsCard(google?.ads, setup) + oppCard(google?.gsc, pages);
   }
+  const lh = box.querySelector<HTMLElement>('[data-bd-lh]');
+  if (lh) { lh.outerHTML = lighthouseCard(await get('/api/lighthouse')); bindLighthouse(box); }
   const check = box.querySelector<HTMLElement>('[data-bd-check]');
   if (check) check.outerHTML = siteCheckCard(await get('/_bd/site-check.json'));
   const nf404 = box.querySelector<HTMLElement>('[data-bd-404]');
