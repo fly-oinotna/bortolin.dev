@@ -4,6 +4,7 @@
 // Mai su Google: noindex nella pagina e nell'intestazione HTTP, Disallow in robots.txt.
 import { Keystatic } from "./keystatic-page";
 import { REMOTE, REPO, tokenOf, workHead, catchUp } from "./workspace";
+import { adminThemeCss } from "./theme";
 export const prerender = false;
 
 Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow');
@@ -32,6 +33,8 @@ if (REMOTE) {
     <meta name="robots" content="noindex, nofollow" />
     <title>Admin · bortolin.dev</title>
     <link rel="icon" href="/api/site-icon" />
+    <!-- colori del pannello: src/keystatic/admin/theme.ts -->
+    <style is:inline set:html={adminThemeCss()}></style>
   </head>
   <body>
     <Keystatic client:only="react" />
@@ -41,5 +44,6 @@ if (REMOTE) {
     <script src="./media.ts"></script>
     <script src="./i18n.ts"></script>
     <script src="./publish.ts"></script>
+    <script src="./dashboard.ts"></script>
   </body>
 </html>

@@ -26,9 +26,9 @@ function mount() {
   box.className = 'bd-publish';
   box.innerHTML = `<style>
     .bd-publish{position:fixed;right:20px;bottom:20px;z-index:2147483000;font:600 14px/1.2 system-ui,-apple-system,sans-serif}
-    .bd-publish button{display:flex;align-items:center;gap:10px;border:0;border-radius:999px;padding:12px 18px;cursor:pointer;box-shadow:0 6px 24px rgba(0,0,0,.18);background:#99ea48;color:#000}
+    .bd-publish button{display:flex;align-items:center;gap:10px;border:0;border-radius:999px;padding:12px 18px;cursor:pointer;box-shadow:0 6px 24px rgba(0,0,0,.18);background:var(--bd-accent);color:var(--bd-on-accent)}
     .bd-publish button[disabled]{cursor:default;background:#f1f1f1;color:#555;box-shadow:0 2px 10px rgba(0,0,0,.08)}
-    .bd-publish .n{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 6px;border-radius:999px;background:#000;color:#99ea48;font-size:12px}
+    .bd-publish .n{display:inline-grid;place-items:center;min-width:22px;height:22px;padding:0 6px;border-radius:999px;background:var(--bd-on-accent);color:var(--bd-accent);font-size:12px}
     .bd-publish .msg{position:absolute;right:0;bottom:56px;width:300px;padding:12px 14px;border-radius:12px;background:#000;color:#fff;font-weight:500;line-height:1.4;box-shadow:0 6px 24px rgba(0,0,0,.25)}
     .bd-publish .msg[hidden]{display:none}
   </style><p class="msg" hidden role="status"></p><button type="button" hidden></button>`;

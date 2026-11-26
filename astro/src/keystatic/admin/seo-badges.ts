@@ -39,7 +39,7 @@ const CSS = `
 .bd-tip .t { color: #50575e; word-break: break-word; }
 .bd-tr { display: inline-grid; place-items: center; min-width: 22px; height: 13px; padding: 0 4px; margin-left: 6px; border-radius: 3px; font: 600 9px/1 system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: .03em; color: #fff; text-decoration: none; }
 .bd-fixed-item.bd-missing .bd-row-title { opacity: .6; }
-.bd-fixed-ai { all: unset; cursor: pointer; padding: 4px 10px; border-radius: 999px; background: #99EA48; color: #000; font: 600 12px/1.3 var(--kui-typography-font-family-base, system-ui, sans-serif); white-space: nowrap; }
+.bd-fixed-ai { all: unset; cursor: pointer; padding: 4px 10px; border-radius: 999px; background: var(--bd-accent); color: var(--bd-on-accent); font: 600 12px/1.3 var(--kui-typography-font-family-base, system-ui, sans-serif); white-space: nowrap; }
 .bd-tip ul { margin: 2px 0 0; padding-left: 16px; }
 `;
 
@@ -137,7 +137,7 @@ function applySingletons() {
     if (key.includes('/')) continue;
     const sig = JSON.stringify(r);
     document.querySelectorAll<HTMLAnchorElement>(`a[href$="/singleton/${key}"]`).forEach((a) => {
-      if (a.closest('.bd-fixed')) return; // le righe del gruppo "Pagine a layout fisso" hanno già i loro badge
+      if (a.closest('.bd-fixed, .bd-dash')) return; // "Pagine a layout fisso" ha già i suoi badge; la Dashboard non ne vuole
       // sidebar: <a><div>Nome</div></a> → badge dentro il <div>, sotto il nome
       // dashboard: <span class="ellipsis"><a>Nome</a></span> → badge subito dopo il testo (che altrimenti li taglierebbe)
       const inner = a.firstElementChild instanceof HTMLDivElement ? a.firstElementChild : null;

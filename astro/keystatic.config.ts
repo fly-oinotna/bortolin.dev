@@ -262,6 +262,10 @@ const singletons = {
   google: singletonJson('Google', 'google', {
     searchConsole: group('Search Console', {
       gscCode: t('Codice di verifica Google Search Console', 'Solo il codice (content="…"): se incolli tutto il tag <meta> viene estratto da solo.'),
+      gscProperty: t('Proprietà per la Dashboard', 'Dati di Search Console nella Dashboard. Es. sc-domain:bortolin.dev (proprietà di dominio) oppure https://bortolin.dev/. Serve l’account di servizio: vedi “Analytics”.'),
+    }),
+    analytics: group('Analytics', {
+      ga4PropertyId: t('ID proprietà Google Analytics 4', 'Solo numeri, es. 412345678 (Amministrazione → Dettagli proprietà). Per vedere i dati nella Dashboard aggiungi l’account di servizio (variabile GOOGLE_SERVICE_ACCOUNT) come Visualizzatore della proprietà e come utente di Search Console.'),
     }),
     tagManager: group('Tag Manager', {
       gtmId: t('ID Google Tag Manager', 'Es. GTM-ABC1234. Con il banner cookie attivo, GTM parte solo dopo il consenso (Cookies → Tipi di consenso).'),

@@ -20,5 +20,5 @@ export const GET: APIRoute = async ({ url, request }) => {
   for (const p of await allPages()) {
     pages[p.id] = { ...seoReport(p.seo, { markdownEnabled, available, auto: p.auto }), url: p.url, href: origin + p.url, pageTitle: p.title, kind: p.kind, label: p.label, lang: p.lang, itId: p.itId };
   }
-  return new Response(JSON.stringify({ pages }), { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' } });
+  return new Response(JSON.stringify({ site: (import.meta.env.SITE ?? '').replace(/\/$/, ''), pages }), { headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' } });
 };

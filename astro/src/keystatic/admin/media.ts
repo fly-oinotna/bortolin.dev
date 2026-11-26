@@ -39,12 +39,12 @@ const CSS = `
 .bd-media-head input[type=search] { width: 260px; padding: 8px 10px; border: 1px solid var(--m-border); border-radius: 8px; font: inherit; background: var(--m-bg); color: var(--m-fg); }
 .bd-media button { font: inherit; cursor: pointer; border-radius: 8px; padding: 8px 14px; border: 1px solid var(--m-border); background: var(--m-bg); color: var(--m-fg); }
 .bd-media button.primary { background: var(--m-fg); color: var(--m-bg); border-color: var(--m-fg); }
-.bd-media button.green { background: #99ea48; border-color: #99ea48; color: #000; font-weight: 600; }
+.bd-media button.green { background: var(--bd-accent); border-color: var(--bd-accent); color: var(--bd-on-accent); font-weight: 600; }
 .bd-media button.danger { color: var(--m-ko); border-color: color-mix(in srgb, var(--m-ko) 45%, transparent); }
 .bd-media button:disabled { opacity: .45; cursor: not-allowed; }
 .bd-media-body { display: grid; grid-template-columns: 1fr 320px; min-height: 0; }
 .bd-media-grid { overflow: auto; padding: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; align-content: start; grid-auto-rows: max-content; position: relative; }
-.bd-media-grid.drag::after { content: "Rilascia per caricare"; position: absolute; inset: 8px; border: 3px dashed #99ea48; border-radius: 12px; display: grid; place-items: center; font-size: 18px; font-weight: 700; background: rgba(153,234,72,.12); }
+.bd-media-grid.drag::after { content: "Rilascia per caricare"; position: absolute; inset: 8px; border: 3px dashed var(--bd-accent); border-radius: 12px; display: grid; place-items: center; font-size: 18px; font-weight: 700; background: rgba(153,234,72,.12); }
 .bd-media-card { all: unset; box-sizing: border-box; cursor: pointer; border-radius: 10px; border: 2px solid transparent; background: var(--m-card); overflow: hidden; display: grid; align-content: start; min-height: max-content; }
 .bd-media-card:focus-visible, .bd-media-card[aria-pressed="true"] { border-color: var(--m-fg); }
 .bd-media-card .t { width: 100%; aspect-ratio: 4/3; min-height: 0; overflow: hidden; background: var(--m-check); }

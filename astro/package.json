@@ -6,7 +6,8 @@
     "dev": "node scripts/admin-path.mjs && astro dev",
     "build": "node scripts/admin-path.mjs && astro build && node scripts/ssr-paths.mjs",
     "preview": "astro preview",
-    "postinstall": "node scripts/admin-path.mjs"
+    "postinstall": "node scripts/admin-path.mjs",
+    "env:netlify": "node scripts/netlify-env.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.14.0",

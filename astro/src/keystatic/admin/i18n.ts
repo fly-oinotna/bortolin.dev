@@ -21,20 +21,20 @@ let status: Status | null = null;
 let busy = false;
 
 const CSS = `
-.bd-lang { display: flex; gap: 4px; margin: 0 0 12px; padding: 4px; border-radius: 999px; background: var(--kui-color-background-surface-secondary, rgba(127,127,127,.12)); width: fit-content; }
+.bd-lang { display: flex; gap: 4px; margin: 0 0 12px 8px; /* testo "IT" allineato alle voci del menu (24 px) */ padding: 4px; border-radius: 999px; background: var(--kui-color-background-surface-secondary, rgba(127,127,127,.12)); width: fit-content; }
 .bd-lang button { all: unset; cursor: pointer; padding: 4px 12px; border-radius: 999px; font: 600 12px/1.4 var(--kui-typography-font-family-base, system-ui, sans-serif); letter-spacing: .04em; color: var(--kui-color-foreground-neutral-secondary); }
-.bd-lang button[aria-pressed="true"] { background: #99EA48; color: #000; }
-.bd-lang button:focus-visible { outline: 2px solid #99EA48; outline-offset: 2px; }
+.bd-lang button[aria-pressed="true"] { background: var(--bd-accent); color: var(--bd-on-accent); }
+.bd-lang button:focus-visible { outline: 2px solid var(--bd-accent); outline-offset: 2px; }
 #page-title { white-space: nowrap; }
 .bd-tr-bar { display: inline-flex; flex-shrink: 0; align-items: center; gap: 8px; margin-left: 12px; font: 500 12.5px/1.3 var(--kui-typography-font-family-base, system-ui, sans-serif); white-space: nowrap; }
 .bd-tr-bar a, .bd-tr-bar button { all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 6px; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--kui-color-border-muted, rgba(127,127,127,.35)); color: var(--kui-color-foreground-neutral); }
-.bd-tr-bar a:hover, .bd-tr-bar button:hover { border-color: #99EA48; }
-.bd-tr-bar .bd-ai { background: #99EA48; border-color: #99EA48; color: #000; font-weight: 600; }
+.bd-tr-bar a:hover, .bd-tr-bar button:hover { border-color: var(--bd-accent); }
+.bd-tr-bar .bd-ai { background: var(--bd-accent); border-color: var(--bd-accent); color: var(--bd-on-accent); font-weight: 600; }
 .bd-tr-bar .bd-ai[aria-busy="true"] { opacity: .7; cursor: progress; }
 .bd-tr-bar .bd-flag { font-weight: 700; letter-spacing: .04em; }
 .bd-tr-overlay { position: fixed; inset: 0; z-index: 99998; display: grid; place-items: center; background: rgba(0,0,0,.45); }
 .bd-tr-overlay div { max-width: 360px; padding: 22px 26px; border-radius: 12px; background: #fff; color: #1d2327; text-align: center; font: 14px/1.5 system-ui, sans-serif; box-shadow: 0 12px 40px rgba(0,0,0,.3); }
-.bd-tr-overlay i { display: block; width: 28px; height: 28px; margin: 0 auto 12px; border: 3px solid #99EA48; border-right-color: transparent; border-radius: 50%; animation: bd-spin .8s linear infinite; }
+.bd-tr-overlay i { display: block; width: 28px; height: 28px; margin: 0 auto 12px; border: 3px solid var(--bd-accent); border-right-color: transparent; border-radius: 50%; animation: bd-spin .8s linear infinite; }
 @keyframes bd-spin { to { transform: rotate(360deg); } }
 `;
 
