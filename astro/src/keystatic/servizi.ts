@@ -819,7 +819,7 @@ export const caseStudy = () => ({
     before: texts('Prima: punti'),
     afterLabel: t('Dopo: etichetta'),
     after: texts('Dopo: punti'),
-    kpis: repeater('Risultati', { label: t('Etichetta'), value: t('Valore', '— = da completare'), note: t('Nota') }, 'label'),
+    kpis: repeater('Risultati', { label: t('Etichetta'), value: t('Valore', 'Vuoto o — = risultato nascosto'), note: t('Nota') }, 'label'),
   }),
   cta: group('Invito finale', {
     title: title('H2'),
