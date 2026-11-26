@@ -115,13 +115,20 @@ async function gsc(token: string, property: string) {
   const url = `https://searchconsole.googleapis.com/webmasters/v3/sites/${encodeURIComponent(property)}/searchAnalytics/query`;
   const cur = { startDate: ago(30), endDate: ago(3) };
   const prev = { startDate: ago(58), endDate: ago(31) };
-  const [now, before, daily, queries, pages] = await Promise.all([
+  const [now, before, daily, queries, pages, pairs] = await Promise.all([
     post(token, url, { ...cur }),
     post(token, url, { ...prev }),
     post(token, url, { ...cur, dimensions: ['date'] }),
     post(token, url, { ...cur, dimensions: ['query'], rowLimit: 100 }),
     post(token, url, { ...cur, dimensions: ['page'], rowLimit: 6 }),
+    post(token, url, { ...cur, dimensions: ['query', 'page'], rowLimit: 1000 }),
   ]);
+  // OPPORTUNITÀ: ricerche tra la 4ª e la 20ª posizione, con la pagina che si posiziona (vicine alla prima pagina)
+  const opportunities = (pairs.rows ?? [])
+    .map((r: any) => ({ query: r.keys[0], page: r.keys[1], clicks: r.clicks, impressions: r.impressions, ctr: r.ctr, position: r.position }))
+    .filter((r: any) => r.position >= 4 && r.position <= 20 && r.impressions >= 2)
+    .sort((a: any, b: any) => b.impressions - a.impressions || a.position - b.position)
+    .slice(0, 12);
   const tot = (r: any) => ({ clicks: r?.clicks ?? 0, impressions: r?.impressions ?? 0, ctr: r?.ctr ?? 0, position: r?.position ?? 0 });
   return {
     totals: tot(now.rows?.[0]),
@@ -131,6 +138,7 @@ async function gsc(token: string, property: string) {
     queries: (queries.rows ?? []).map((r: any) => ({ query: r.keys[0], clicks: r.clicks, impressions: r.impressions, position: r.position }))
       .sort((a: any, b: any) => b.clicks - a.clicks || b.impressions - a.impressions).slice(0, 8),
     pages: (pages.rows ?? []).map((r: any) => ({ page: r.keys[0], clicks: r.clicks, impressions: r.impressions })),
+    opportunities,
   };
 }
 

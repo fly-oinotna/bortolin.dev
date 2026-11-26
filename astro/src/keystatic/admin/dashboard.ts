@@ -5,7 +5,8 @@
 //   4. Strumenti di test sulla pagina scelta: PageSpeed Insights, Schema Validator (Google e schema.org), Facebook
 //   5. Google Search Console, Google Analytics 4 e Google Ads tramite GA4 (ultimi 28 giorni, /api/google-data)
 //   6. Pagine da sistemare, con il link per modificarle
-//   7. AI del pannello: Claude, ChatGPT o Gemini per traduzioni e "Genera con AI" (scelta salvata nel browser)
+//   7. Opportunità SEO: ricerche tra la 4ª e la 20ª posizione (Search Console) con la pagina da migliorare
+//   8. AI del pannello: Claude, ChatGPT o Gemini per traduzioni e "Genera con AI" (scelta salvata nel browser)
 // Dati: /api/seo-status, /api/publish, /api/google-data. Colori: variabili di Keystar + --bd-accent (theme.ts).
 import { adminBase } from './base';
 import { getProvider, setProvider } from './ai-pref';
@@ -174,6 +175,22 @@ function adsCard(d: any, setup: any) {
     <h3>Campagne</h3><ul class="bd-list">${d.campaigns.map((c: any) => `<li><span>${esc(c.name)}</span><span>${money(c.cost)} · ${nf.format(c.clicks)} clic</span></li>`).join('') || EMPTY}</ul></div>`;
 }
 
+/** Opportunità SEO: ricerche vicine alla prima pagina, con la pagina del sito e cosa fare */
+function oppCard(d: any, pages: [string, Page][]) {
+  if (!d || d.error || !d.opportunities) return '';
+  const byPath = new Map(pages.map(([id, p]) => [p.url, { id, p }]));
+  const rows = d.opportunities.map((o: any) => {
+    let path = o.page; try { path = new URL(o.page).pathname; } catch { /* già un percorso */ }
+    const hit = byPath.get(path) ?? byPath.get(path.endsWith('/') ? path : `${path}/`);
+    const tip = o.position <= 10 ? 'Sei già in prima pagina: un titolo e una descrizione più invitanti portano più clic.' : 'Quasi in prima pagina: rafforza il contenuto su questa ricerca (testo, domande frequenti, link interni).';
+    return `<tr><td><b>${esc(o.query)}</b><br><span class="muted">${esc(tip)}</span></td>
+      <td>${hit ? `<a href="${editHref(hit.id, hit.p)}">${esc(path)}</a>` : esc(path)}</td>
+      <td>${o.position.toFixed(1).replace('.', ',')}</td><td>${nf.format(o.impressions)}</td><td>${nf.format(o.clicks)}</td></tr>`;
+  }).join('');
+  return `<div class="bd-card wide"><h2>Opportunità SEO</h2><p class="muted">Ricerche in cui il sito è tra la 4ª e la 20ª posizione negli ultimi 28 giorni: con poco lavoro possono portare visite.</p>
+    ${rows ? `<table class="bd-issues"><thead><tr><th>Ricerca e cosa fare</th><th>Pagina</th><th>Posizione</th><th>Impressioni</th><th>Clic</th></tr></thead><tbody>${rows}</tbody></table>` : '<p class="muted" style="margin-top:8px">Nessuna per ora: servono più impressioni su Google. Ricontrolla tra qualche settimana.</p>'}</div>`;
+}
+
 // ---------------------------------------------------------------- montaggio
 const isDashboard = () => /^\/admin(?:\/branch\/[^/]+)?\/?$/.test(location.pathname);
 
@@ -268,7 +285,7 @@ async function render(box: HTMLElement) {
     const setup = google?.setup ?? { serviceAccount: false, ga4: false, gsc: false };
     g.innerHTML = !setup.serviceAccount || (!setup.ga4 && !setup.gsc)
       ? `<div class="bd-card wide"><h2>Google Search Console e Analytics</h2>${setupGoogle(setup)}</div>`
-      : gscCard(google?.gsc, setup) + gaCard(google?.ga4, setup) + adsCard(google?.ads, setup);
+      : gscCard(google?.gsc, setup) + gaCard(google?.ga4, setup) + adsCard(google?.ads, setup) + oppCard(google?.gsc, pages);
   }
 }
 
