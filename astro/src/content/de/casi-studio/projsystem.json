@@ -111,15 +111,17 @@
     "title": "Was sich verändert hat",
     "beforeLabel": "Vorher",
     "before": [
-      "Noch zu ergänzen: wie die Website vorher aussah oder der Ausgangspunkt",
-      "Noch zu ergänzen: das Hauptproblem"
+      "Statische Website: Das Büro konnte selbst nichts ändern",
+      "Kaum Erklärungen zu den Leistungen",
+      "Keine Seite für das Team",
+      "Kein Kontaktformular"
     ],
     "afterLabel": "Nachher",
     "after": [
-      "Leistungen in vier Bereichen",
-      "Das Team im Mittelpunkt",
-      "Beratungsanfrage immer sichtbar",
-      "Blog und E-Learning"
+      "Dynamische Website, alle Inhalte vom Büro selbst bearbeitbar",
+      "Leistungen ausführlich beschrieben, Bereich für Bereich",
+      "Das Team im Mittelpunkt, mit Rollen und Spezialgebieten",
+      "Kontaktformular und Beratungsanfrage auf jeder Seite"
     ],
     "kpis": [
       {

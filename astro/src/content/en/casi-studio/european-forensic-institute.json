@@ -111,15 +111,17 @@
     "title": "What changed",
     "beforeLabel": "Before",
     "before": [
-      "To be completed: what the website or the starting point looked like",
-      "To be completed: the main problem"
+      "Built with a page builder and hard to update",
+      "Too many pages, information scattered everywhere",
+      "Dreadful performance, especially on phones",
+      "Very weak SEO"
     ],
     "afterLabel": "After",
     "after": [
-      "A three-language website",
-      "Course pages",
-      "Admissions journey",
-      "Events and news"
+      "Everything pre-built: updating content is easy",
+      "A tidy structure, with everything in its place",
+      "Over 90 on Lighthouse on mobile",
+      "Solid SEO: structure, copy and data for Google"
     ],
     "kpis": [
       {
@@ -133,9 +135,9 @@
         "note": "e.g. visits from Google"
       },
       {
-        "label": "Result 3",
-        "value": "—",
-        "note": "e.g. Lighthouse score"
+        "label": "Mobile performance",
+        "value": "90+",
+        "note": "Lighthouse score, previously very low"
       }
     ]
   },

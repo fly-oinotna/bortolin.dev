@@ -111,15 +111,17 @@
     "title": "What changed",
     "beforeLabel": "Before",
     "before": [
-      "To be completed: what the website or the starting point looked like",
-      "To be completed: the main problem"
+      "A static website the firm couldn’t update themselves",
+      "Little explanation of the services",
+      "No page for the team",
+      "No contact form"
     ],
     "afterLabel": "After",
     "after": [
-      "Services in four areas",
-      "The team in the spotlight",
-      "Consultation requests always in view",
-      "Blog and e-learning"
+      "A dynamic website, with every piece of content editable in-house",
+      "Detailed service pages, area by area",
+      "The team front and center, with roles and specialisms",
+      "A contact form and consultation request on every page"
     ],
     "kpis": [
       {

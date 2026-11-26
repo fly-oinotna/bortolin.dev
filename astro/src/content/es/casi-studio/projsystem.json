@@ -111,15 +111,17 @@
     "title": "Qué ha cambiado",
     "beforeLabel": "Antes",
     "before": [
-      "Por completar: cómo era la web o el punto de partida",
-      "Por completar: el problema principal"
+      "Web estática: el estudio no podía cambiar nada por su cuenta",
+      "Pocas explicaciones sobre los servicios",
+      "Ninguna página dedicada al equipo",
+      "Sin formulario de contacto"
     ],
     "afterLabel": "Después",
     "after": [
-      "Servicios en cuatro áreas",
-      "El equipo en primer plano",
-      "Consultas siempre a la vista",
-      "Blog y e-learning"
+      "Web dinámica, con todos los contenidos editables por el estudio",
+      "Servicios explicados al detalle, área por área",
+      "El equipo en primer plano, con funciones y especialidades",
+      "Formulario de contacto y solicitud de consulta en todas las páginas"
     ],
     "kpis": [
       {

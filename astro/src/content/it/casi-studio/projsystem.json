@@ -112,15 +112,17 @@
     "title": "Cosa è cambiato",
     "beforeLabel": "Prima",
     "before": [
-      "Da completare: com’era il sito o la situazione di partenza",
-      "Da completare: il problema principale"
+      "Sito statico: lo studio non poteva modificare nulla da solo",
+      "Poche spiegazioni sui servizi",
+      "Nessuna pagina dedicata al team",
+      "Nessun modulo di contatto"
     ],
     "afterLabel": "Dopo",
     "after": [
-      "Servizi in quattro aree",
-      "Il team in primo piano",
-      "Richiesta di consulenza sempre visibile",
-      "Blog ed e-learning"
+      "Sito dinamico, con tutti i contenuti modificabili dallo studio",
+      "Servizi descritti nel dettaglio, area per area",
+      "Il team in primo piano, con ruoli e specializzazioni",
+      "Modulo di contatto e richiesta di consulenza su ogni pagina"
     ],
     "kpis": [
       {

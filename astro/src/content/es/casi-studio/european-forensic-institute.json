@@ -111,15 +111,17 @@
     "title": "Qué ha cambiado",
     "beforeLabel": "Antes",
     "before": [
-      "Por completar: cómo era la web o el punto de partida",
-      "Por completar: el problema principal"
+      "Web hecha con un maquetador, difícil de modificar",
+      "Demasiadas páginas, información dispersa",
+      "Rendimiento pésimo, sobre todo en el móvil",
+      "SEO muy deficiente"
     ],
     "afterLabel": "Después",
     "after": [
-      "Una web en tres idiomas",
-      "Páginas de los cursos",
-      "Proceso de admisión",
-      "Eventos y noticias"
+      "Todo preconfigurado: actualizar los contenidos es sencillo",
+      "Estructura ordenada, cada información en su sitio",
+      "Más de 90 en Lighthouse desde el móvil",
+      "SEO cuidado: estructura, textos y datos para Google"
     ],
     "kpis": [
       {
@@ -133,9 +135,9 @@
         "note": "p. ej. visitas desde Google"
       },
       {
-        "label": "Resultado 3",
-        "value": "—",
-        "note": "p. ej. nota de Lighthouse"
+        "label": "Rendimiento en el móvil",
+        "value": "90+",
+        "note": "puntuación de Lighthouse, antes muy baja"
       }
     ]
   },

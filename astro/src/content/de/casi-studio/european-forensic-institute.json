@@ -111,15 +111,17 @@
     "title": "Was sich verändert hat",
     "beforeLabel": "Vorher",
     "before": [
-      "Noch zu ergänzen: wie die Website vorher aussah oder der Ausgangspunkt",
-      "Noch zu ergänzen: das Hauptproblem"
+      "Mit einem Page Builder gebaut, schwer zu bearbeiten",
+      "Zu viele Seiten, Informationen verstreut",
+      "Miserable Performance, vor allem auf dem Smartphone",
+      "Sehr schwaches SEO"
     ],
     "afterLabel": "Nachher",
     "after": [
-      "Eine Website in drei Sprachen",
-      "Studiengangsseiten",
-      "Bewerbungsprozess",
-      "Events und News"
+      "Alles vorbereitet: Inhalte lassen sich einfach aktualisieren",
+      "Klare Struktur, jede Information an ihrem Platz",
+      "Über 90 in Lighthouse auf dem Smartphone",
+      "Sauberes SEO: Struktur, Texte und Daten für Google"
     ],
     "kpis": [
       {
@@ -133,9 +135,9 @@
         "note": "z. B. Besuche über Google"
       },
       {
-        "label": "Ergebnis 3",
-        "value": "—",
-        "note": "z. B. Lighthouse-Wert"
+        "label": "Performance auf dem Smartphone",
+        "value": "90+",
+        "note": "Lighthouse-Wert, vorher sehr niedrig"
       }
     ]
   },

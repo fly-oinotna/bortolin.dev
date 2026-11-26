@@ -112,15 +112,17 @@
     "title": "Cosa è cambiato",
     "beforeLabel": "Prima",
     "before": [
-      "Da completare: com’era il sito o la situazione di partenza",
-      "Da completare: il problema principale"
+      "Sito costruito con un page builder, difficile da modificare",
+      "Troppe pagine, informazioni disperse",
+      "Prestazioni pessime, soprattutto da smartphone",
+      "SEO molto carente"
     ],
     "afterLabel": "Dopo",
     "after": [
-      "Sito in tre lingue",
-      "Schede dei corsi",
-      "Percorso di ammissione",
-      "Eventi e notizie"
+      "Tutto preimpostato: aggiornare i contenuti è semplice",
+      "Struttura ordinata, ogni informazione al suo posto",
+      "Oltre 90 su Lighthouse da smartphone",
+      "SEO curata: struttura, testi e dati per Google"
     ],
     "kpis": [
       {
@@ -134,9 +136,9 @@
         "note": "es. visite da Google"
       },
       {
-        "label": "Risultato 3",
-        "value": "—",
-        "note": "es. punteggio Lighthouse"
+        "label": "Performance da smartphone",
+        "value": "90+",
+        "note": "punteggio Lighthouse, prima molto basso"
       }
     ]
   },
