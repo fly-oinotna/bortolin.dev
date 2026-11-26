@@ -1,4 +1,4 @@
-// Pannello Keystatic (solo in sviluppo) con le aggiunte SEO in stile AM Tools 3:
+// Pannello Keystatic su /admin (in sviluppo e online) con le aggiunte SEO in stile AM Tools 3:
 // stessa integrazione di @keystatic/astro, ma la pagina del pannello è la nostra (src/keystatic/admin/page.astro)
 // ed endpoint in più: /api/seo-status (badge SEO) e /api/site-icon (icona del sito per favicon e sidebar).
 import { mkdirSync, writeFileSync } from 'node:fs';
@@ -55,12 +55,13 @@ export default function keystaticAdmin() {
         const dotAstroDir = new URL('./.astro/', config.root);
         mkdirSync(dotAstroDir, { recursive: true });
         writeFileSync(new URL('keystatic-imports.js', dotAstroDir), 'import "@keystatic/astro/ui";\nimport "@keystatic/astro/api";\nimport "@keystatic/core/ui";\n');
-        injectRoute({ entrypoint: './src/keystatic/admin/page.astro', pattern: '/keystatic/[...params]', prerender: false });
+        injectRoute({ entrypoint: './src/keystatic/admin/page.astro', pattern: '/admin/[...params]', prerender: false });
         injectRoute({ entrypoint: '@keystatic/astro/internal/keystatic-api.js', pattern: '/api/keystatic/[...params]', prerender: false });
         injectRoute({ entrypoint: './src/keystatic/admin/seo-status.ts', pattern: '/api/seo-status', prerender: false });
         injectRoute({ entrypoint: './src/keystatic/admin/site-icon.ts', pattern: '/api/site-icon', prerender: false });
         injectRoute({ entrypoint: './src/keystatic/admin/media-api.ts', pattern: '/api/media', prerender: false });
         injectRoute({ entrypoint: './src/keystatic/admin/translate-api.ts', pattern: '/api/translate', prerender: false });
+        injectRoute({ entrypoint: './src/keystatic/admin/publish-api.ts', pattern: '/api/publish', prerender: false });
       },
     },
   };

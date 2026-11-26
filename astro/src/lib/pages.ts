@@ -36,6 +36,8 @@ export const pageUrl = (slug: string) => `/${slug}/`;
 export const caseUrl = (slug: string) => `/casi-studio/${slug}/`;
 
 let cache: Promise<SitePage[]> | undefined;
+/** il pannello online rilegge l'elenco delle pagine quando il repository cambia */
+export const resetPages = () => { cache = undefined; };
 /** in build l'elenco si calcola una volta sola; in sviluppo sempre aggiornato */
 export function allPages(): Promise<SitePage[]> {
   if (import.meta.env.DEV) return loadPages();

@@ -235,7 +235,7 @@ function close() {
 
 // ---- voce "Media" nella sidebar, in fondo al primo gruppo (dopo Pagine, Post, Casi studio…), stesso aspetto delle altre voci
 function addSidebarItem() {
-  const post = document.querySelector<HTMLAnchorElement>('nav a[href$="/keystatic/collection/posts"]');
+  const post = document.querySelector<HTMLAnchorElement>('nav a[href$="/collection/posts"]');
   const li = post?.closest('li');
   if (!li || li.parentElement?.querySelector('[data-bd-media]')) return;
   const item = li.cloneNode(true) as HTMLLIElement;
@@ -248,7 +248,7 @@ function addSidebarItem() {
   a.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); open(); });
   // ultima voce del gruppo: Media resta in fondo anche quando si aggiungono altre collection
   let last: Element = li;
-  while (last.nextElementSibling && last.nextElementSibling.querySelector('a[href*="/keystatic/collection/"]')) last = last.nextElementSibling;
+  while (last.nextElementSibling && last.nextElementSibling.querySelector('a[href*="/collection/"]')) last = last.nextElementSibling;
   last.after(item);
 }
 let queued = false;

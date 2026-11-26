@@ -2,6 +2,7 @@
 // MT (Meta Title) · MD (Meta Description) · R (Robots) · OG (OG Image) · SM (Schema Markup) · XML (sitemap).
 // Al passaggio del mouse compare il tooltip con tutti i dettagli. I dati arrivano da /api/seo-status e si aggiornano da soli.
 import type { SeoReport } from '../../lib/seo';
+import { adminBase } from './base';
 
 const COLORS = { red: '#f44336', green: '#4caf50', gray: '#777777' };
 type Entry = SeoReport & { url: string; href: string; pageTitle: string; kind?: string; label?: string; lang?: string; itId?: string };
@@ -120,7 +121,7 @@ function trPills(itId: string) {
     pill.style.background = target ? COLORS.green : COLORS.gray;
     pill.title = target ? `Tradotta (${l.toUpperCase()}): apri la traduzione` : `Non ancora tradotta (${l.toUpperCase()})`;
     if (target) {
-      const href = col ? `/keystatic/collection/${l}_${col}/item/${encodeURIComponent(target)}` : `/keystatic/singleton/${l}_${slug}`;
+      const href = col ? `${adminBase()}/collection/${l}_${col}/item/${encodeURIComponent(target)}` : `${adminBase()}/singleton/${l}_${slug}`;
       (pill as HTMLAnchorElement).href = href;
       ['pointerdown', 'mousedown', 'keydown'].forEach((ev) => pill.addEventListener(ev, (e) => e.stopPropagation()));
       pill.addEventListener('click', (e) => { e.stopPropagation(); if (e.metaKey || e.ctrlKey) return; e.preventDefault(); goTo(href); });
@@ -135,7 +136,7 @@ function applySingletons() {
   for (const [key, r] of Object.entries(pages)) {
     if (key.includes('/')) continue;
     const sig = JSON.stringify(r);
-    document.querySelectorAll<HTMLAnchorElement>(`a[href$="/keystatic/singleton/${key}"]`).forEach((a) => {
+    document.querySelectorAll<HTMLAnchorElement>(`a[href$="/singleton/${key}"]`).forEach((a) => {
       if (a.closest('.bd-fixed')) return; // le righe del gruppo "Pagine a layout fisso" hanno già i loro badge
       // sidebar: <a><div>Nome</div></a> → badge dentro il <div>, sotto il nome
       // dashboard: <span class="ellipsis"><a>Nome</a></span> → badge subito dopo il testo (che altrimenti li taglierebbe)
@@ -154,7 +155,7 @@ function applySingletons() {
 
 /** Elenchi di Pagine e Post: titolo, sotto l'indirizzo cliccabile (nuova scheda) e i badge SEO */
 function applyCollections() {
-  const m = location.pathname.match(/\/keystatic\/collection\/([^/]+)\/?$/);
+  const m = location.pathname.match(/\/collection\/([^/]+)\/?$/);
   if (!m) return;
   const kind = decodeURIComponent(m[1]);
   document.querySelectorAll<HTMLElement>('[role="row"][data-key^="key:"]').forEach((rowEl) => {
@@ -202,7 +203,7 @@ const OTHER_TITLE = 'Altre pagine';
 const goTo = (href: string) => { history.pushState(null, '', href); dispatchEvent(new PopStateEvent('popstate')); };
 
 function applyFixedList() {
-  const m = location.pathname.match(/\/keystatic\/collection\/(?:([a-z]{2})_)?pages\/?$/);
+  const m = location.pathname.match(/\/collection\/(?:([a-z]{2})_)?pages\/?$/);
   const grid = document.querySelector<HTMLElement>('main [role="grid"]');
   const old = document.querySelector<HTMLElement>('.bd-fixed');
   if (!m || !grid) { old?.remove(); return; }
@@ -236,7 +237,7 @@ function applyFixedList() {
     }
     const item = document.createElement('a');
     item.className = 'bd-fixed-item';
-    item.href = `/keystatic/singleton/${key}`;
+    item.href = `${adminBase()}/singleton/${key}`;
     item.dataset.search = `${r.label ?? ''} ${r.pageTitle} ${r.url}`.toLowerCase();
     item.addEventListener('click', (e) => { if (e.metaKey || e.ctrlKey) return; e.preventDefault(); goTo(item.href); });
     const row = document.createElement('span');
@@ -300,14 +301,14 @@ function fitGrid(grid: HTMLElement) {
 
 /** aprendo una pagina a layout fisso, nella sidebar resta evidenziato "Pagine" (della stessa lingua) */
 function markPagesNav() {
-  const m = location.pathname.match(/\/keystatic\/singleton\/([^/]+)/);
+  const m = location.pathname.match(/\/singleton\/([^/]+)/);
   const key = m ? decodeURIComponent(m[1]) : '';
   const lm = key.match(/^([a-z]{2})_/);
   const fixedKey = lm ? key.slice(3) : key;
   const st = (window as any).bdI18n?.status;
   const isFixed = !!m && (pages[key]?.kind === 'fixed' || !!st?.fixed.some((f: { key: string }) => f.key === fixedKey));
   const listKey = lm ? `${lm[1]}_pages` : 'pages';
-  document.querySelectorAll<HTMLAnchorElement>('nav a[href$="/keystatic/collection/pages"], nav a[href$="_pages"]').forEach((link) => {
+  document.querySelectorAll<HTMLAnchorElement>('nav a[href$="/collection/pages"], nav a[href$="_pages"]').forEach((link) => {
     const mine = isFixed && link.getAttribute('href')!.endsWith(`/collection/${listKey}`);
     if (mine && link.getAttribute('aria-current') !== 'page') { link.setAttribute('aria-current', 'page'); link.dataset.bdCurrent = ''; }
     else if (!mine && 'bdCurrent' in link.dataset) { delete link.dataset.bdCurrent; if (!location.pathname.endsWith(link.getAttribute('href')!)) link.removeAttribute('aria-current'); }

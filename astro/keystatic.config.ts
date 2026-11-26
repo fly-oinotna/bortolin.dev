@@ -462,7 +462,11 @@ const singletons = {
 const FIXED_KEYS = ['home', 'servizi', 'sitiWeb', 'consulenzaSeo', 'performance', 'integrazioneAi', 'googleAds', 'aiAds', 'metaAds', 'consulenzaDigitale', 'webAgency', 'casiStudio', 'blog'] as const;
 
 export default config({
-  storage: { kind: 'local' },
+  // in locale i file del progetto; online GitHub (ramo "contenuti", poi "Pubblica" → main).
+  // Per creare la GitHub App di Keystatic in locale: PUBLIC_KEYSTATIC_STORAGE=github npm run dev
+  storage: import.meta.env.DEV && import.meta.env.PUBLIC_KEYSTATIC_STORAGE !== 'github'
+    ? { kind: 'local' }
+    : { kind: 'github', repo: { owner: 'fly-oinotna', name: 'bortolin.dev' }, pathPrefix: 'astro' },
   ui: {
     // logo della sidebar = icona del sito (Impostazioni → Generale), servita da /api/site-icon (solo in sviluppo)
     brand: { name: 'bortolin.dev', mark: () => createElement('img', { src: '/api/site-icon', width: 24, height: 24, alt: '', style: { display: 'block', objectFit: 'contain', borderRadius: 4 } }) },

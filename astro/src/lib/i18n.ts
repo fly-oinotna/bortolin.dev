@@ -97,6 +97,8 @@ function loadRoutes(): Route[] {
 }
 
 let cache: Route[] | undefined;
+/** il pannello online rilegge gli indirizzi quando il repository cambia */
+export const resetRoutes = () => { cache = undefined; };
 /** tutte le pagine con gli indirizzi nelle varie lingue (in sviluppo sempre aggiornate) */
 export function routes(): Route[] {
   if (import.meta.env.DEV) return loadRoutes();

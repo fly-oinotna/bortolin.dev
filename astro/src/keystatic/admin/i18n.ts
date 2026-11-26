@@ -1,3 +1,4 @@
+import { adminBase } from './base';
 // TRADUZIONI nel pannello Keystatic:
 //  - selettore di lingua in cima alla sidebar (IT · EN): mostra solo le voci della lingua scelta
 //    (le traduzioni sono le voci "en_…" della config, vedi src/keystatic/i18n.ts; quelle condivise restano sempre visibili);
@@ -41,11 +42,11 @@ const CSS = `
 type Loc = { type: 'singleton' | 'collection' | 'item' | 'other'; key: string; slug?: string };
 function where(): Loc {
   const p = location.pathname;
-  let m = p.match(/\/keystatic\/singleton\/([^/]+)/);
+  let m = p.match(/\/singleton\/([^/]+)/);
   if (m) return { type: 'singleton', key: decodeURIComponent(m[1]) };
-  m = p.match(/\/keystatic\/collection\/([^/]+)\/item\/([^/]+)/);
+  m = p.match(/\/collection\/([^/]+)\/item\/([^/]+)/);
   if (m) return { type: 'item', key: decodeURIComponent(m[1]), slug: decodeURIComponent(m[2]) };
-  m = p.match(/\/keystatic\/collection\/([^/]+)/);
+  m = p.match(/\/collection\/([^/]+)/);
   if (m) return { type: 'collection', key: decodeURIComponent(m[1]) };
   return { type: 'other', key: '' };
 }
@@ -74,15 +75,15 @@ function counterpart(to: string): string {
   if (loc.type === 'other' || !status) return location.pathname;
   const { lang, base } = split(loc.key);
   if (!isTranslatable(base)) return location.pathname;
-  if (loc.type === 'collection') return `/keystatic/collection/${keyIn(to, base)}`;
+  if (loc.type === 'collection') return `${adminBase()}/collection/${keyIn(to, base)}`;
   if (loc.type === 'singleton') {
-    if (to !== DEFAULT && !status.translations[to].singletons[base] && status.fixed.some((f) => f.key === base)) return `/keystatic/collection/${keyIn(to, 'pages')}`;
-    return `/keystatic/singleton/${keyIn(to, base)}`;
+    if (to !== DEFAULT && !status.translations[to].singletons[base] && status.fixed.some((f) => f.key === base)) return `${adminBase()}/collection/${keyIn(to, 'pages')}`;
+    return `${adminBase()}/singleton/${keyIn(to, base)}`;
   }
   // voce di una collection: slug italiano ⇄ slug tradotto
   const itSlug = lang === DEFAULT ? loc.slug! : Object.entries(status.translations[lang].collections[base] ?? {}).find(([, s]) => s === loc.slug)?.[0];
   const target = !itSlug ? undefined : to === DEFAULT ? itSlug : status.translations[to].collections[base]?.[itSlug];
-  return target ? `/keystatic/collection/${keyIn(to, base)}/item/${encodeURIComponent(target)}` : `/keystatic/collection/${keyIn(to, base)}`;
+  return target ? `${adminBase()}/collection/${keyIn(to, base)}/item/${encodeURIComponent(target)}` : `${adminBase()}/collection/${keyIn(to, base)}`;
 }
 
 // ---------------------------------------------------------------- sidebar
@@ -90,7 +91,7 @@ function applyNav() {
   if (!status) return;
   const lang = current();
   const nav = document.querySelector<HTMLElement>('nav');
-  const first = nav?.querySelector<HTMLAnchorElement>('a[href="/keystatic"]');
+  const first = nav?.querySelector<HTMLAnchorElement>(`a[href="${adminBase()}"]`);
   if (nav && first && !nav.querySelector('.bd-lang')) {
     const box = document.createElement('div');
     box.className = 'bd-lang';
@@ -114,9 +115,9 @@ function applyNav() {
   }
   nav?.querySelectorAll<HTMLButtonElement>('.bd-lang button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === lang)));
   // voci della sidebar e della dashboard: solo quelle della lingua scelta (le condivise sempre)
-  document.querySelectorAll<HTMLAnchorElement>('a[href*="/keystatic/collection/"], a[href*="/keystatic/singleton/"]').forEach((a) => {
+  document.querySelectorAll<HTMLAnchorElement>('a[href*="/collection/"], a[href*="/singleton/"]').forEach((a) => {
     if (a.closest('.bd-fixed, .bd-tr-bar')) return;
-    const m = a.getAttribute('href')!.match(/\/keystatic\/(?:collection|singleton)\/([^/]+)$/);
+    const m = a.getAttribute('href')!.match(/\/(?:collection|singleton)\/([^/]+)$/);
     if (!m) return;
     const { lang: l, base } = split(decodeURIComponent(m[1]));
     const hide = l !== DEFAULT ? l !== lang : lang !== DEFAULT && isTranslatable(base);
