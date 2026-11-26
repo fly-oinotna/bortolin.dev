@@ -6,7 +6,8 @@
 //   5. Google Search Console, Google Analytics 4 e Google Ads tramite GA4 (ultimi 28 giorni, /api/google-data)
 //   6. Pagine da sistemare, con il link per modificarle
 //   7. Opportunità SEO: ricerche tra la 4ª e la 20ª posizione (Search Console) con la pagina da migliorare
-//   8. AI del pannello: Claude, ChatGPT o Gemini per traduzioni e "Genera con AI" (scelta salvata nel browser)
+//   8. Pagine non trovate (404 registrate dal sito) con "Crea redirect" verso una pagina scelta
+//   9. AI del pannello: Claude, ChatGPT o Gemini per traduzioni e "Genera con AI" (scelta salvata nel browser)
 // Dati: /api/seo-status, /api/publish, /api/google-data. Colori: variabili di Keystar + --bd-accent (theme.ts).
 import { adminBase } from './base';
 import { getProvider, setProvider } from './ai-pref';
@@ -71,6 +72,7 @@ const CSS = `
 .bd-aiopt label.off { opacity: .55; cursor: not-allowed; }
 .bd-aiopt input { accent-color: var(--bd-accent); }
 .bd-aiopt small { margin-left: auto; color: var(--kui-color-foreground-neutral-tertiary); }
+.bd-404 select { min-width: 220px; padding: 6px 30px 6px 10px; font-size: 13px; }
 .bd-setup ol { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; font-size: 13px; }
 .bd-setup a { color: var(--kui-color-foreground-accent); }
 .bd-setup code { font-size: 12px; padding: 1px 5px; border-radius: 4px; background: var(--kui-color-background-surface-secondary, rgba(127,127,127,.15)); }
@@ -191,6 +193,40 @@ function oppCard(d: any, pages: [string, Page][]) {
     ${rows ? `<table class="bd-issues"><thead><tr><th>Ricerca e cosa fare</th><th>Pagina</th><th>Posizione</th><th>Impressioni</th><th>Clic</th></tr></thead><tbody>${rows}</tbody></table>` : '<p class="muted" style="margin-top:8px">Nessuna per ora: servono più impressioni su Google. Ricontrolla tra qualche settimana.</p>'}</div>`;
 }
 
+/** Pagine non trovate: indirizzi aperti che non esistono, con redirect in un clic */
+function notFoundCard(d: any, pages: [string, Page][]) {
+  if (!d?.enabled) return `<div class="bd-card wide"><h2>Pagine non trovate</h2><p class="muted">Gli indirizzi inesistenti aperti dai visitatori sono registrati online: li vedi qui nel pannello su bortolin.dev/admin.</p></div>`;
+  if (!d.items.length) return `<div class="bd-card wide"><h2>Pagine non trovate</h2><p class="muted">Nessuna pagina 404 visitata di recente. 👍</p></div>`;
+  const options = '<option value="">Scegli la destinazione…</option>' + pages.filter(([, p]) => p.lang === 'it').sort((a, b) => a[1].url.localeCompare(b[1].url)).map(([, p]) => `<option value="${esc(p.url)}">${esc(p.url)} · ${esc(shortTitle(p))}</option>`).join('');
+  const df = new Intl.DateTimeFormat('it-IT', { day: 'numeric', month: 'short' });
+  return `<div class="bd-card wide"><h2>Pagine non trovate</h2><p class="muted">Indirizzi inesistenti aperti dai visitatori (link vecchi, errori di battitura, vecchio sito). Un redirect 301 li porta alla pagina giusta e recupera il valore SEO.</p>
+    <table class="bd-issues bd-404"><thead><tr><th>Indirizzo</th><th>Visite</th><th>Ultima</th><th>Redirect verso</th><th></th></tr></thead><tbody>
+    ${d.items.map((x: any) => `<tr data-path="${esc(x.path)}"><td><b>${esc(x.path)}</b>${Object.keys(x.refs ?? {}).length ? `<br><span class="muted">da ${esc(Object.keys(x.refs).join(', '))}</span>` : ''}</td>
+      <td>${nf.format(x.count)}</td><td>${esc(df.format(new Date(x.last)))}</td>
+      <td><select aria-label="Destinazione del redirect">${options}</select></td>
+      <td style="white-space:nowrap"><button type="button" class="bd-btn primary" data-act="redirect">Crea redirect</button> <button type="button" class="bd-btn" data-act="ignore">Ignora</button></td></tr>`).join('')}
+    </tbody></table></div>`;
+}
+
+function bindNotFound(box: HTMLElement) {
+  box.querySelectorAll<HTMLTableRowElement>('.bd-404 tr[data-path]').forEach((tr) => {
+    const path = tr.dataset.path!;
+    const call = async (method: string, body: object) => {
+      const r = await fetch('/api/not-found', { method, headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
+      const out = await r.json().catch(() => ({}));
+      if (!r.ok) { alert(out.error || `Errore ${r.status}`); return false; }
+      tr.remove();
+      return true;
+    };
+    tr.querySelector('[data-act="redirect"]')!.addEventListener('click', async () => {
+      const to = tr.querySelector('select')!.value;
+      if (!to) { alert('Scegli prima la pagina di destinazione.'); return; }
+      if (await call('POST', { path, to })) alert(`Redirect creato: ${path} → ${to}. Sarà online dopo “Pubblica sul sito”.`);
+    });
+    tr.querySelector('[data-act="ignore"]')!.addEventListener('click', () => call('DELETE', { path }));
+  });
+}
+
 // ---------------------------------------------------------------- montaggio
 const isDashboard = () => /^\/admin(?:\/branch\/[^/]+)?\/?$/.test(location.pathname);
 
@@ -242,6 +278,7 @@ async function render(box: HTMLElement) {
     </div>
   </div>
   <div class="row" data-bd-google><div class="bd-card"><h2>Google Search Console</h2><p class="muted">Caricamento…</p></div><div class="bd-card"><h2>Google Analytics 4</h2><p class="muted">Caricamento…</p></div><div class="bd-card"><h2>Google Ads</h2><p class="muted">Caricamento…</p></div></div>
+  <div data-bd-404></div>
   <div class="bd-card wide"><h2>Pagine da sistemare</h2>
     ${issues.length ? `<p class="muted">${issues.length} pagine sotto 100: le più urgenti per prime.</p>
     <table class="bd-issues"><thead><tr><th>Pagina</th><th>Lingua</th><th>Punteggio</th><th>Da sistemare</th></tr></thead><tbody>
@@ -287,6 +324,8 @@ async function render(box: HTMLElement) {
       ? `<div class="bd-card wide"><h2>Google Search Console e Analytics</h2>${setupGoogle(setup)}</div>`
       : gscCard(google?.gsc, setup) + gaCard(google?.ga4, setup) + adsCard(google?.ads, setup) + oppCard(google?.gsc, pages);
   }
+  const nf404 = box.querySelector<HTMLElement>('[data-bd-404]');
+  if (nf404) { nf404.outerHTML = notFoundCard(await get('/api/not-found'), pages); bindNotFound(box); }
 }
 
 function sync() {
