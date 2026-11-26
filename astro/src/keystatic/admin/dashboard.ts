@@ -2,7 +2,7 @@
 //   1. Salute SEO: punteggio globale dai controlli dei badge (meta title, description, robots, sitemap, schema)
 //   2. Pubblicazione: modifiche in attesa (online) o modalità locale
 //   3. Contenuti e traduzioni: quante pagine per tipo e quanto è completa ogni lingua
-//   4. Strumenti di test sulla pagina scelta: PageSpeed Insights, Rich Results, Schema Validator, W3C, Facebook
+//   4. Strumenti di test sulla pagina scelta: PageSpeed Insights, Schema Validator (Google e schema.org), Facebook
 //   5. Google Search Console e Google Analytics 4 (ultimi 28 giorni, /api/google-data)
 //   6. Pagine da sistemare, con il link per modificarle
 // Dati: /api/seo-status, /api/publish, /api/google-data. Colori: variabili di Keystar + --bd-accent (theme.ts).
@@ -30,7 +30,7 @@ const CSS = `
 .bd-card.wide { grid-column: 1 / -1; }
 .bd-hello { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; }
 .bd-hello strong { font-size: 22px; color: var(--kui-color-foreground-neutral-emphasis); }
-.bd-score { display: flex; gap: 20px; align-items: center; margin-top: 12px; }
+.bd-score { display: flex; flex-direction: column; gap: 16px; align-items: center; margin-top: 12px; }
 .bd-ring { flex-shrink: 0; }
 .bd-ring text { font: 800 26px var(--kui-typography-font-family-base, system-ui); fill: var(--kui-color-foreground-neutral-emphasis); }
 .bd-checks { display: grid; gap: 6px; width: 100%; }
@@ -188,7 +188,7 @@ async function render(box: HTMLElement) {
       <div class="bd-kpis">${types.map((t) => `<div class="bd-kpi"><b>${count('it', t)}</b><span>${esc(TYPE_NAMES[t])}</span></div>`).join('')}</div>
       <h3>Traduzioni</h3><div class="bd-langs">${langs.filter((l) => l !== 'it').map((l) => { const pct = count(l) / Math.max(1, count('it')); return `<div class="bd-check"><span>${esc(LANG_NAMES[l] ?? l)}</span><span class="muted">${count(l)}/${count('it')} · ${pf.format(pct)}</span>${bar(pct)}</div>`; }).join('')}</div>
     </div>
-    <div class="bd-card"><h2>Strumenti di test</h2><p class="muted">Scegli una pagina pubblicata e aprila negli strumenti di Google e del W3C.</p>
+    <div class="bd-card"><h2>Strumenti di test</h2><p class="muted">Scegli una pagina pubblicata e aprila negli strumenti di test.</p>
       <div style="margin-top:12px"><select data-bd-page aria-label="Pagina da analizzare">${options}</select></div>
       <div class="bd-tools" data-bd-tools></div>
     </div>
@@ -209,11 +209,10 @@ async function render(box: HTMLElement) {
     if (!p) return;
     const u = encodeURIComponent(site + p.url);
     const links: [string, string, boolean?][] = [
-      ['PageSpeed · mobile', `https://pagespeed.web.dev/analysis?url=${u}&form_factor=mobile`, true],
-      ['PageSpeed · desktop', `https://pagespeed.web.dev/analysis?url=${u}&form_factor=desktop`],
-      ['Risultati multimediali', `https://search.google.com/test/rich-results?url=${u}`],
-      ['Schema Validator', `https://validator.schema.org/#url=${u}`],
-      ['Validatore HTML (W3C)', `https://validator.w3.org/nu/?doc=${u}`],
+      // PageSpeed parte dalla versione mobile (da lì si passa al desktop con un clic)
+      ['PageSpeed Insights', `https://pagespeed.web.dev/analysis?url=${u}&form_factor=mobile`, true],
+      ['Schema Validator (Google)', `https://search.google.com/test/rich-results?url=${u}`],
+      ['Schema Validator (schema.org)', `https://validator.schema.org/#url=${u}`],
       ['Anteprima Facebook', `https://developers.facebook.com/tools/debug/?q=${u}`],
       ['Apri la pagina', site + p.url],
     ];
