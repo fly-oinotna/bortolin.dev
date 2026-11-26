@@ -7,7 +7,8 @@
 //   6. Pagine da sistemare, con il link per modificarle
 //   7. Opportunità SEO: ricerche tra la 4ª e la 20ª posizione (Search Console) con la pagina da migliorare
 //   8. Pagine non trovate (404 registrate dal sito) con "Crea redirect" verso una pagina scelta
-//   9. AI del pannello: Claude, ChatGPT o Gemini per traduzioni e "Genera con AI" (scelta salvata nel browser)
+//   9. Controllo del sito dell'ultima build (/_bd/site-check.json, scritto da site-check.mjs)
+//  10. AI del pannello: Claude, ChatGPT o Gemini per traduzioni e "Genera con AI" (scelta salvata nel browser)
 // Dati: /api/seo-status, /api/publish, /api/google-data. Colori: variabili di Keystar + --bd-accent (theme.ts).
 import { adminBase } from './base';
 import { getProvider, setProvider } from './ai-pref';
@@ -230,6 +231,26 @@ function bindNotFound(box: HTMLElement) {
   });
 }
 
+/** Controllo del sito: risultato dell'ultima build (link rotti, alt, H1, titoli e descrizioni, immagini pesanti) */
+function siteCheckCard(r: any) {
+  if (!r) return `<div class="bd-card wide"><h2>Controllo del sito</h2><p class="muted">Il controllo gira a ogni build del sito pubblicato: i risultati compaiono qui nel pannello online.</p></div>`;
+  const when = new Intl.DateTimeFormat('it-IT', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }).format(new Date(r.generated));
+  const groups: [string, any[], (x: any) => string][] = [
+    ['Link interni rotti', r.brokenLinks, (x) => `${esc(x.url)} → ${x.links.map(esc).join(', ')}`],
+    ['Immagini senza testo alternativo', r.missingAlt, (x) => `${esc(x.url)}: ${x.images.map(esc).join(', ')}`],
+    ['Pagine senza un solo H1', r.h1, (x) => `${esc(x.url)} (${x.count} H1)`],
+    ['Pagine senza titolo', r.noTitle.map((url: string) => ({ url })), (x) => esc(x.url)],
+    ['Pagine senza meta description', r.noDescription.map((url: string) => ({ url })), (x) => esc(x.url)],
+    ['Titoli duplicati', r.duplicateTitles, (x) => `“${esc(x.text)}”: ${x.urls.map(esc).join(', ')}`],
+    ['Descrizioni duplicate', r.duplicateDescriptions, (x) => `“${esc(x.text.slice(0, 60))}…”: ${x.urls.map(esc).join(', ')}`],
+    ['Immagini più pesanti di 300 KB', r.heavyImages, (x) => `${esc(x.file)} (${x.kb} KB)`],
+  ];
+  const bad = groups.filter(([, list]) => list.length);
+  return `<div class="bd-card wide"><h2>Controllo del sito</h2><p class="muted">Ultima build: ${esc(when)} · ${r.pages} pagine controllate</p>
+    ${bad.length ? bad.map(([title, list, line]) => `<h3>${esc(title)} (${list.length})</h3><ul class="bd-list">${list.slice(0, 8).map((x) => `<li><span>${line(x)}</span><span></span></li>`).join('')}</ul>`).join('')
+      : '<p style="margin-top:8px">Tutto a posto: nessun link rotto, testi alternativi presenti, un H1 per pagina, titoli e descrizioni unici, immagini leggere. ✓</p>'}</div>`;
+}
+
 // ---------------------------------------------------------------- montaggio
 const isDashboard = () => /^\/admin(?:\/branch\/[^/]+)?\/?$/.test(location.pathname);
 
@@ -282,6 +303,7 @@ async function render(box: HTMLElement) {
   </div>
   <div class="row" data-bd-google><div class="bd-card"><h2>Google Search Console</h2><p class="muted">Caricamento…</p></div><div class="bd-card"><h2>Google Analytics 4</h2><p class="muted">Caricamento…</p></div><div class="bd-card"><h2>Google Ads</h2><p class="muted">Caricamento…</p></div></div>
   <div data-bd-404></div>
+  <div data-bd-check></div>
   <div class="bd-card wide"><h2>Pagine da sistemare</h2>
     ${issues.length ? `<p class="muted">${issues.length} pagine sotto 100: le più urgenti per prime.</p>
     <table class="bd-issues"><thead><tr><th>Pagina</th><th>Lingua</th><th>Punteggio</th><th>Da sistemare</th></tr></thead><tbody>
@@ -327,6 +349,8 @@ async function render(box: HTMLElement) {
       ? `<div class="bd-card wide"><h2>Google Search Console e Analytics</h2>${setupGoogle(setup)}</div>`
       : gscCard(google?.gsc, setup) + gaCard(google?.ga4, setup) + adsCard(google?.ads, setup) + oppCard(google?.gsc, pages);
   }
+  const check = box.querySelector<HTMLElement>('[data-bd-check]');
+  if (check) check.outerHTML = siteCheckCard(await get('/_bd/site-check.json'));
   const nf404 = box.querySelector<HTMLElement>('[data-bd-404]');
   if (nf404) { nf404.outerHTML = notFoundCard(await get('/api/not-found'), pages); bindNotFound(box); }
 }

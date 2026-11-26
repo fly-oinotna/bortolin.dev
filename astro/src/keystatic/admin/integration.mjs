@@ -3,6 +3,7 @@
 // ed endpoint in più: /api/seo-status (badge SEO) e /api/site-icon (icona del sito per favicon e sidebar).
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { siteCheck } from './site-check.mjs';
 
 export default function keystaticAdmin() {
   return {
@@ -66,6 +67,16 @@ export default function keystaticAdmin() {
         injectRoute({ entrypoint: './src/keystatic/admin/leads-api.ts', pattern: '/api/leads', prerender: false });
         injectRoute({ entrypoint: './src/keystatic/admin/ai-api.ts', pattern: '/api/ai', prerender: false });
         injectRoute({ entrypoint: './src/keystatic/admin/notfound-api.ts', pattern: '/api/not-found', prerender: false });
+      },
+      // controllo del sito a ogni build: /_bd/site-check.json per la Dashboard (avvisa, non blocca)
+      'astro:build:done': ({ dir, logger }) => {
+        try {
+          const { pages, problems, report } = siteCheck(fileURLToPath(dir));
+          const parts = [['link rotti', report.brokenLinks.length], ['pagine con immagini senza alt', report.missingAlt.length], ['titoli duplicati', report.duplicateTitles.length], ['immagini pesanti', report.heavyImages.length]].filter(([, n]) => n).map(([l, n]) => `${n} ${l}`);
+          logger.info(`controllo del sito: ${pages} pagine, ${problems ? `${problems} da sistemare (${parts.join(', ') || 'vedi la Dashboard'})` : 'tutto a posto'}`);
+        } catch (e) {
+          logger.warn(`controllo del sito non riuscito: ${e.message}`);
+        }
       },
     },
   };
