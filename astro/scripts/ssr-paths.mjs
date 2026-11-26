@@ -4,7 +4,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 
 const FILE = '.netlify/v1/functions/ssr/ssr.mjs';
-const PATHS = ['/admin', '/admin/*', '/api/keystatic/*', '/api/seo-status', '/api/site-icon', '/api/media', '/api/translate', '/api/publish', '/api/google-data'];
+const PATHS = ['/admin', '/admin/*', '/api/keystatic/*', '/api/seo-status', '/api/site-icon', '/api/media', '/api/translate', '/api/publish', '/api/google-data', '/api/leads'];
 
 const src = readFileSync(FILE, 'utf8');
 if (src.includes(`path: ${JSON.stringify(PATHS)}`)) {

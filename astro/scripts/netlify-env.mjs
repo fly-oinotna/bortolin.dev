@@ -12,15 +12,18 @@ import { spawnSync } from 'node:child_process';
 const KEYS = [
   ['GOOGLE_PLACES_API_KEY', 'recensioni Google', true],
   ['GOOGLE_PLACE_ID', 'scheda Google delle recensioni', true],
-  ['POSTMARK_SERVER_TOKEN', 'modulo contatti (Postmark)', true],
+  ['RESEND_API_KEY', 'email del modulo contatti (Resend)', true],
   ['CONTACT_TO', 'destinatario del modulo contatti', false],
   ['CONTACT_FROM', 'mittente del modulo contatti', false],
-  ['ANTHROPIC_API_KEY', 'traduzioni con AI nel pannello', true],
+  ['ANTHROPIC_API_KEY', 'AI del pannello: Claude', false],
+  ['OPENAI_API_KEY', 'AI del pannello: ChatGPT', false],
+  ['GEMINI_API_KEY', 'AI del pannello: Gemini', false],
   ['KEYSTATIC_GITHUB_CLIENT_ID', 'accesso al pannello con GitHub', true],
   ['KEYSTATIC_GITHUB_CLIENT_SECRET', 'accesso al pannello con GitHub', true],
   ['KEYSTATIC_SECRET', 'accesso al pannello con GitHub', true],
   ['PUBLIC_KEYSTATIC_GITHUB_APP_SLUG', 'nome dell’app GitHub del pannello', true],
   ['GOOGLE_SERVICE_ACCOUNT', 'dati di Analytics e Search Console nella Dashboard', false],
+  ['PAGESPEED_API_KEY', 'monitor Lighthouse della Dashboard', false],
 ];
 
 const dry = process.argv.includes('--dry');
