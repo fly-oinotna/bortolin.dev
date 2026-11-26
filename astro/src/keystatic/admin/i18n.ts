@@ -1,4 +1,5 @@
 import { adminBase } from './base';
+import { getProvider } from './ai-pref';
 // TRADUZIONI nel pannello Keystatic:
 //  - selettore di lingua in cima alla sidebar (IT · EN): mostra solo le voci della lingua scelta
 //    (le traduzioni sono le voci "en_…" della config, vedi src/keystatic/i18n.ts; quelle condivise restano sempre visibili);
@@ -136,7 +137,7 @@ async function translate(opts: { lang: string; key?: string; collection?: string
   overlay.innerHTML = `<div><i></i><strong>Traduzione in corso…</strong><br>“${label}” in ${NAME_IT[opts.lang] ?? opts.lang}.<br><small>Può richiedere uno o due minuti.</small></div>`;
   document.body.append(overlay);
   try {
-    const res = await fetch('/api/translate', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(opts) });
+    const res = await fetch('/api/translate', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ provider: getProvider(), ...opts }) });
     const data = await res.json();
     if (!res.ok) {
       if (data.exists && data.href) { goTo(data.href); return; }

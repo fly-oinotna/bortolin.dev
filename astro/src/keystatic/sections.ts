@@ -154,8 +154,8 @@ export const sections = {
    * `page` = chiave della pagina, usata per la cartella del file Markdown.
    */
   seo: (page: string) => ({
-    title: counted({ label: 'Meta Title', required: true, limits: SEO_LIMITS.title }),
-    description: counted({ label: 'Meta Description', multiline: true, required: true, limits: SEO_LIMITS.description }),
+    title: counted({ label: 'Meta Title', required: true, limits: SEO_LIMITS.title, ai: 'title' }),
+    description: counted({ label: 'Meta Description', multiline: true, required: true, limits: SEO_LIMITS.description, ai: 'description' }),
     ogImage: image('social', 'OG Image personalizzata', { description: 'Se vuota viene generata in automatico dal titolo della pagina.', inherit: false }),
     robots: fields.select({ label: 'Robots', options: ROBOTS.map((r) => ({ value: r.value, label: r.label })), defaultValue: ROBOTS_DEFAULT }),
     sitemapExclude: check('Escludi dalla sitemap'),

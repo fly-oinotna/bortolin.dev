@@ -5,8 +5,10 @@
 //   4. Strumenti di test sulla pagina scelta: PageSpeed Insights, Schema Validator (Google e schema.org), Facebook
 //   5. Google Search Console, Google Analytics 4 e Google Ads tramite GA4 (ultimi 28 giorni, /api/google-data)
 //   6. Pagine da sistemare, con il link per modificarle
+//   7. AI del pannello: Claude, ChatGPT o Gemini per traduzioni e "Genera con AI" (scelta salvata nel browser)
 // Dati: /api/seo-status, /api/publish, /api/google-data. Colori: variabili di Keystar + --bd-accent (theme.ts).
 import { adminBase } from './base';
+import { getProvider, setProvider } from './ai-pref';
 
 type Report = any;
 type Page = Report & { url: string; pageTitle: string; kind: string; label?: string; lang: string; itId: string };
@@ -62,6 +64,12 @@ const CSS = `
 .bd-pill { display: inline-block; padding: 1px 8px; border-radius: 99px; font-size: 11px; font-weight: 700; background: var(--kui-color-background-surface-secondary, rgba(127,127,127,.15)); margin: 0 4px 4px 0; }
 .bd-pill.bad { background: color-mix(in srgb, transparent, #e5484d 18%); color: #e5484d; }
 .bd-pill.warn { background: color-mix(in srgb, transparent, #f5a623 22%); color: #b7791f; }
+.bd-aiopt { display: grid; gap: 8px; margin-top: 12px; }
+.bd-aiopt label { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid var(--kui-color-border-muted); border-radius: 10px; cursor: pointer; }
+.bd-aiopt label:has(input:checked) { border-color: var(--bd-accent); background: color-mix(in srgb, transparent, var(--bd-accent) 12%); }
+.bd-aiopt label.off { opacity: .55; cursor: not-allowed; }
+.bd-aiopt input { accent-color: var(--bd-accent); }
+.bd-aiopt small { margin-left: auto; color: var(--kui-color-foreground-neutral-tertiary); }
 .bd-setup ol { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; font-size: 13px; }
 .bd-setup a { color: var(--kui-color-foreground-accent); }
 .bd-setup code { font-size: 12px; padding: 1px 5px; border-radius: 4px; background: var(--kui-color-background-surface-secondary, rgba(127,127,127,.15)); }
@@ -172,7 +180,7 @@ const isDashboard = () => /^\/admin(?:\/branch\/[^/]+)?\/?$/.test(location.pathn
 async function render(box: HTMLElement) {
   box.innerHTML = '<p class="muted">Caricamento della Dashboard…</p>';
   const get = (u: string) => fetch(u, { cache: 'no-store' }).then((r) => (r.ok ? r.json() : null)).catch(() => null);
-  const [seo, pub] = await Promise.all([get('/api/seo-status'), get('/api/publish')]);
+  const [seo, pub, ai] = await Promise.all([get('/api/seo-status'), get('/api/publish'), get('/api/ai')]);
   if (!seo) { box.innerHTML = '<div class="bd-card"><h2>Dashboard</h2><p class="muted">Dati non disponibili: ricarica la pagina (se sei online, accedi di nuovo con GitHub).</p></div>'; return; }
   const site: string = seo.site || location.origin;
   const pages = Object.entries(seo.pages as Record<string, Page>);
@@ -212,6 +220,9 @@ async function render(box: HTMLElement) {
       <div style="margin-top:12px"><select data-bd-page aria-label="Pagina da analizzare">${options}</select></div>
       <div class="bd-tools" data-bd-tools></div>
     </div>
+    <div class="bd-card"><h2>AI del pannello</h2><p class="muted">Per le traduzioni e i pulsanti “Genera con AI”. Si usano solo le AI con la chiave configurata.</p>
+      <div class="bd-aiopt" role="radiogroup" aria-label="AI del pannello">${(['claude', 'openai', 'gemini'] as const).map((p) => { const on = ai?.available?.includes(p); return `<label class="${on ? '' : 'off'}"><input type="radio" name="bd-ai-provider" value="${p}" ${on ? '' : 'disabled'}>${esc(ai?.labels?.[p] ?? p)}<small>${on ? 'chiave presente' : 'chiave mancante'}</small></label>`; }).join('')}</div>
+    </div>
   </div>
   <div class="row" data-bd-google><div class="bd-card"><h2>Google Search Console</h2><p class="muted">Caricamento…</p></div><div class="bd-card"><h2>Google Analytics 4</h2><p class="muted">Caricamento…</p></div><div class="bd-card"><h2>Google Ads</h2><p class="muted">Caricamento…</p></div></div>
   <div class="bd-card wide"><h2>Pagine da sistemare</h2>
@@ -241,6 +252,14 @@ async function render(box: HTMLElement) {
   };
   select.addEventListener('change', drawTools);
   drawTools();
+
+  // AI del pannello: la scelta salvata, oppure la prima disponibile
+  const avail: string[] = ai?.available ?? [];
+  const chosen = avail.includes(getProvider()) ? getProvider() : avail[0];
+  box.querySelectorAll<HTMLInputElement>('input[name="bd-ai-provider"]').forEach((r) => {
+    r.checked = r.value === chosen;
+    r.addEventListener('change', () => setProvider(r.value));
+  });
 
   // Google: dopo, perché può richiedere qualche secondo
   const google = await get('/api/google-data');

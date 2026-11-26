@@ -2,6 +2,7 @@
 // - voce "Media" nella sidebar → gestione: griglia, ricerca, caricamento (anche trascinando), alt predefinito, dove è usata, elimina
 // - campi immagine (src/keystatic/fields.ts → image()) → stessa finestra in modalità "scegli"
 // Dati e file passano da /api/media (src/keystatic/admin/media-api.ts).
+import { getProvider } from './ai-pref';
 
 type Item = { path: string; name: string; folder: string; size: number; mtime: number; alt: string; ai: string; usedIn: string[] };
 
@@ -153,7 +154,7 @@ function renderSide(msg = '', ok = false) {
     ${opts.onSelect ? '<button type="button" class="green" data-act="choose">Usa questa immagine</button>' : ''}
     <label><strong>Testo alternativo predefinito</strong><br><small>Usato quando la pagina non ne indica uno.</small>
       <textarea>${esc(it.alt)}</textarea></label>
-    <button type="button" data-act="alt">Salva il testo alternativo</button>
+    <div class="row"><button type="button" data-act="alt">Salva il testo alternativo</button><button type="button" class="bd-ai-gen" data-act="alt-ai">✦ Genera con AI</button></div>
     <div><strong>Nome del file</strong><br><small>Tutti i riferimenti nei contenuti vengono aggiornati. Salva prima eventuali pagine aperte con modifiche in corso.</small>
       <div class="row"><input type="text" value="${esc(it.name.replace(/\.[^.]+$/, ''))}" aria-label="Nuovo nome del file"><button type="button" data-act="rename">Rinomina</button></div></div>
     <div><strong>Marcatura AI</strong><br><small>AI Act (UE), art. 50: segnala le immagini generate o modificate con l’intelligenza artificiale. Nel sito compare un’etichetta sull’immagine.</small>
@@ -168,6 +169,20 @@ function renderSide(msg = '', ok = false) {
     const alt = side.querySelector('textarea')!.value;
     const res = await fetch(`/api/media?path=${encodeURIComponent(it.path)}`, { method: 'PUT', body: JSON.stringify({ alt }) });
     if (res.ok) { it.alt = alt.trim(); renderSide('Testo alternativo salvato.', true); }
+  });
+  side.querySelector('[data-act="alt-ai"]')!.addEventListener('click', async (e) => {
+    const btn = e.currentTarget as HTMLButtonElement;
+    btn.disabled = true; btn.textContent = 'Genero…';
+    try {
+      const res = await fetch('/api/ai', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ task: 'alt', path: it.path, provider: getProvider() }) });
+      const out = await res.json();
+      if (!res.ok) throw new Error(out.error || `Errore ${res.status}`);
+      side.querySelector('textarea')!.value = out.alt;
+      btn.textContent = 'Generato: controlla e salva';
+    } catch (err) {
+      btn.textContent = '✦ Genera con AI';
+      alert(`Generazione non riuscita: ${(err as Error).message}`);
+    } finally { btn.disabled = false; }
   });
   side.querySelector('[data-act="rename"]')!.addEventListener('click', async () => {
     const name = side.querySelector<HTMLInputElement>('.row input')!.value.trim();

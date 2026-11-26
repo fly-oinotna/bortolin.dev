@@ -178,8 +178,8 @@ const singletons = {
       ...button('cta', 'Pulsante'),
     }),
     seo: group('SEO', {
-      title: counted({ label: 'Meta Title', required: true, limits: SEO_LIMITS.title }),
-      description: counted({ label: 'Meta Description', multiline: true, required: true, limits: SEO_LIMITS.description }),
+      title: counted({ label: 'Meta Title', required: true, limits: SEO_LIMITS.title, ai: 'title' }),
+      description: counted({ label: 'Meta Description', multiline: true, required: true, limits: SEO_LIMITS.description, ai: 'description' }),
     }),
   }),
 

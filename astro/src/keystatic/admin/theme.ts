@@ -51,5 +51,9 @@ export function adminThemeCss(t = ADMIN_THEME) {
 /* testo dei pulsanti pieni con il colore principale (Save, Crea…): leggibile sul verde */
 [data-prominence="high"][data-tone="accent"] { color: var(--bd-on-accent) !important; }
 [data-prominence="high"][data-tone="accent"] svg { color: inherit; }
+/* pulsante "Genera con AI" (campi SEO, mediateca) */
+.bd-ai-gen { all: unset; cursor: pointer; padding: 4px 10px; border-radius: 999px; background: var(--bd-accent); color: var(--bd-on-accent); font: 600 12px/1.4 var(--kui-typography-font-family-base, system-ui, sans-serif); white-space: nowrap; }
+.bd-ai-gen[disabled] { opacity: .6; cursor: progress; }
+.bd-ai-gen:focus-visible { outline: 2px solid var(--bd-accent); outline-offset: 2px; }
 `;
 }

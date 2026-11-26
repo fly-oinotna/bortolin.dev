@@ -64,6 +64,7 @@ export default function keystaticAdmin() {
         injectRoute({ entrypoint: './src/keystatic/admin/publish-api.ts', pattern: '/api/publish', prerender: false });
         injectRoute({ entrypoint: './src/keystatic/admin/google-api.ts', pattern: '/api/google-data', prerender: false });
         injectRoute({ entrypoint: './src/keystatic/admin/leads-api.ts', pattern: '/api/leads', prerender: false });
+        injectRoute({ entrypoint: './src/keystatic/admin/ai-api.ts', pattern: '/api/ai', prerender: false });
       },
     },
   };
