@@ -86,6 +86,23 @@ const CSS = `
 .bd-setup ol { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; font-size: 13px; }
 .bd-setup a { color: var(--kui-color-foreground-accent); }
 .bd-setup code { font-size: 12px; padding: 1px 5px; border-radius: 4px; background: var(--kui-color-background-surface-secondary, rgba(127,127,127,.15)); }
+.bd-sc { --sc: var(--bd-accent); }
+.bd-sc.bad { --sc: #e5484d; }
+.bd-sc-head { display: flex; gap: 16px; align-items: center; }
+.bd-sc-icon { flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; color: var(--sc); background: color-mix(in srgb, transparent, var(--sc) 16%); box-shadow: 0 0 0 6px color-mix(in srgb, transparent, var(--sc) 7%); }
+.bd-sc-icon svg { width: 28px; height: 28px; }
+.bd-sc-icon b { font-size: 22px; font-weight: 800; }
+.bd-sc-status { font-size: 18px; font-weight: 800; color: var(--kui-color-foreground-neutral-emphasis); margin: 2px 0 2px !important; }
+.bd-sc-grid { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.bd-sc-grid li { display: flex; align-items: center; gap: 8px; padding: 9px 10px; border-radius: 10px; font-size: 12.5px; font-weight: 600; border: 1px solid var(--kui-color-border-muted); }
+.bd-sc-grid li.ok { background: color-mix(in srgb, transparent, var(--bd-accent) 7%); }
+.bd-sc-grid li.bad { border-color: color-mix(in srgb, transparent, #e5484d 45%); background: color-mix(in srgb, transparent, #e5484d 9%); }
+.bd-sc-mark { flex-shrink: 0; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 99px; display: grid; place-items: center; font-size: 11px; font-weight: 800; background: var(--bd-accent); color: var(--bd-on-accent); }
+.bd-sc-grid li.bad .bd-sc-mark { background: #e5484d; color: #fff; }
+.bd-sc-detail { margin-top: 12px; border-top: 1px solid var(--kui-color-border-muted); padding-top: 10px; }
+.bd-sc-detail summary { cursor: pointer; font-size: 13px; font-weight: 700; }
+.bd-sc-detail summary span { margin-left: 4px; padding: 1px 7px; border-radius: 99px; background: #e5484d; color: #fff; font-size: 11px; }
+.bd-sc-detail .bd-list { margin-top: 8px; }
 [data-bd-dash-host] > :not(.bd-dash) { display: none !important; }
 `;
 
@@ -246,20 +263,29 @@ function siteCheckCard(r: any) {
   const title = `<h2>${esc(t('Controllo del sito'))}</h2>`;
   if (!r) return `<div class="bd-card">${title}<p class="muted">${esc(t('Il controllo gira a ogni build del sito pubblicato: i risultati compaiono qui nel pannello online.'))}</p></div>`;
   const when = new Intl.DateTimeFormat(fmtLocale(), { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }).format(new Date(r.generated));
-  const groups: [string, any[], (x: any) => string][] = [
-    [t('Link interni rotti'), r.brokenLinks, (x) => `${esc(x.url)} → ${x.links.map(esc).join(', ')}`],
-    [t('Immagini senza testo alternativo'), r.missingAlt, (x) => `${esc(x.url)}: ${x.images.map(esc).join(', ')}`],
-    [t('Pagine senza un solo H1'), r.h1, (x) => `${esc(x.url)} (${x.count} H1)`],
-    [t('Pagine senza titolo'), r.noTitle.map((url: string) => ({ url })), (x) => esc(x.url)],
-    [t('Pagine senza meta description'), r.noDescription.map((url: string) => ({ url })), (x) => esc(x.url)],
-    [t('Titoli duplicati'), r.duplicateTitles, (x) => `“${esc(x.text)}”: ${x.urls.map(esc).join(', ')}`],
-    [t('Descrizioni duplicate'), r.duplicateDescriptions, (x) => `“${esc(x.text.slice(0, 60))}…”: ${x.urls.map(esc).join(', ')}`],
-    [t('Immagini più pesanti di 300 KB'), r.heavyImages, (x) => `${esc(x.file)} (${x.kb} KB)`],
+  // [nome del riquadro (in positivo), titolo del dettaglio, elenco dei problemi, riga del dettaglio]
+  const groups: [string, string, any[], (x: any) => string][] = [
+    [t('Link interni'), t('Link interni rotti'), r.brokenLinks, (x) => `${esc(x.url)} → ${x.links.map(esc).join(', ')}`],
+    [t('Testi alternativi'), t('Immagini senza testo alternativo'), r.missingAlt, (x) => `${esc(x.url)}: ${x.images.map(esc).join(', ')}`],
+    [t('Un H1 per pagina'), t('Pagine senza un solo H1'), r.h1, (x) => `${esc(x.url)} (${x.count} H1)`],
+    [t('Titoli presenti'), t('Pagine senza titolo'), r.noTitle.map((url: string) => ({ url })), (x) => esc(x.url)],
+    [t('Meta description'), t('Pagine senza meta description'), r.noDescription.map((url: string) => ({ url })), (x) => esc(x.url)],
+    [t('Titoli unici'), t('Titoli duplicati'), r.duplicateTitles, (x) => `“${esc(x.text)}”: ${x.urls.map(esc).join(', ')}`],
+    [t('Descrizioni uniche'), t('Descrizioni duplicate'), r.duplicateDescriptions, (x) => `“${esc(x.text.slice(0, 60))}…”: ${x.urls.map(esc).join(', ')}`],
+    [t('Immagini leggere'), t('Immagini più pesanti di 300 KB'), r.heavyImages, (x) => `${esc(x.file)} (${x.kb} KB)`],
   ];
-  const bad = groups.filter(([, list]) => list.length);
-  return `<div class="bd-card">${title}<p class="muted">${esc(t('Ultima build: {when} · {n} pagine controllate', { when, n: r.pages }))}</p>
-    ${bad.length ? bad.map(([title, list, line]) => `<h3>${esc(title)} (${list.length})</h3><ul class="bd-list">${list.slice(0, 8).map((x) => `<li><span>${line(x)}</span><span></span></li>`).join('')}</ul>`).join('')
-      : `<p style="margin-top:8px">${esc(t('Tutto a posto: nessun link rotto, testi alternativi presenti, un H1 per pagina, titoli e descrizioni unici, immagini leggere.'))} ✓</p>`}</div>`;
+  const problems = groups.reduce((n, g) => n + g[2].length, 0);
+  const ok = problems === 0;
+  const icon = ok
+    ? '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>'
+    : `<b>${problems}</b>`;
+  return `<div class="bd-card bd-sc${ok ? ' ok' : ' bad'}">
+    <div class="bd-sc-head"><span class="bd-sc-icon">${icon}</span><div>${title}
+      <p class="bd-sc-status">${esc(ok ? t('Tutto a posto') : t('{n} problemi da sistemare', { n: problems }))}</p>
+      <p class="muted">${esc(t('Ultima build: {when} · {n} pagine controllate', { when, n: r.pages }))}</p></div></div>
+    <ul class="bd-sc-grid">${groups.map(([name, , list]) => `<li class="${list.length ? 'bad' : 'ok'}"><span class="bd-sc-mark">${list.length ? list.length : '✓'}</span>${esc(name)}</li>`).join('')}</ul>
+    ${groups.filter((g) => g[2].length).map(([, detail, list, line]) => `<details class="bd-sc-detail"><summary>${esc(detail)} <span>${list.length}</span></summary><ul class="bd-list">${list.slice(0, 8).map((x) => `<li><span>${line(x)}</span><span></span></li>`).join('')}${list.length > 8 ? `<li><span class="muted">${esc(t('… e altri {n}', { n: list.length - 8 }))}</span><span></span></li>` : ''}</ul></details>`).join('')}
+  </div>`;
 }
 
 /** Monitor Lighthouse: ultime misure (mobile), andamento della Performance media, "Misura ora" */
