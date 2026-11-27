@@ -1,5 +1,14 @@
 {
   "list": {
-    "items": []
+    "items": [
+      {
+        "from": "/servizi/realizzazione-siti-web-statici-e-dinamici",
+        "to": {
+          "discriminant": "/servizi/siti-web/"
+        },
+        "type": "301",
+        "force": false
+      }
+    ]
   }
 }
