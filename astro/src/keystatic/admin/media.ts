@@ -2,6 +2,7 @@
 // - voce "Media" nella sidebar → gestione: griglia, ricerca, caricamento (anche trascinando), alt predefinito, dove è usata, elimina
 // - campi immagine (src/keystatic/fields.ts → image()) → stessa finestra in modalità "scegli"
 // Dati e file passano da /api/media (src/keystatic/admin/media-api.ts).
+import { getProvider } from './ai-pref';
 
 type Item = { path: string; name: string; folder: string; size: number; mtime: number; alt: string; ai: string; usedIn: string[] };
 
@@ -39,12 +40,12 @@ const CSS = `
 .bd-media-head input[type=search] { width: 260px; padding: 8px 10px; border: 1px solid var(--m-border); border-radius: 8px; font: inherit; background: var(--m-bg); color: var(--m-fg); }
 .bd-media button { font: inherit; cursor: pointer; border-radius: 8px; padding: 8px 14px; border: 1px solid var(--m-border); background: var(--m-bg); color: var(--m-fg); }
 .bd-media button.primary { background: var(--m-fg); color: var(--m-bg); border-color: var(--m-fg); }
-.bd-media button.green { background: #99ea48; border-color: #99ea48; color: #000; font-weight: 600; }
+.bd-media button.green { background: var(--bd-accent); border-color: var(--bd-accent); color: var(--bd-on-accent); font-weight: 600; }
 .bd-media button.danger { color: var(--m-ko); border-color: color-mix(in srgb, var(--m-ko) 45%, transparent); }
 .bd-media button:disabled { opacity: .45; cursor: not-allowed; }
 .bd-media-body { display: grid; grid-template-columns: 1fr 320px; min-height: 0; }
 .bd-media-grid { overflow: auto; padding: 16px; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; align-content: start; grid-auto-rows: max-content; position: relative; }
-.bd-media-grid.drag::after { content: "Rilascia per caricare"; position: absolute; inset: 8px; border: 3px dashed #99ea48; border-radius: 12px; display: grid; place-items: center; font-size: 18px; font-weight: 700; background: rgba(153,234,72,.12); }
+.bd-media-grid.drag::after { content: "Rilascia per caricare"; position: absolute; inset: 8px; border: 3px dashed var(--bd-accent); border-radius: 12px; display: grid; place-items: center; font-size: 18px; font-weight: 700; background: rgba(153,234,72,.12); }
 .bd-media-card { all: unset; box-sizing: border-box; cursor: pointer; border-radius: 10px; border: 2px solid transparent; background: var(--m-card); overflow: hidden; display: grid; align-content: start; min-height: max-content; }
 .bd-media-card:focus-visible, .bd-media-card[aria-pressed="true"] { border-color: var(--m-fg); }
 .bd-media-card .t { width: 100%; aspect-ratio: 4/3; min-height: 0; overflow: hidden; background: var(--m-check); }
@@ -153,7 +154,7 @@ function renderSide(msg = '', ok = false) {
     ${opts.onSelect ? '<button type="button" class="green" data-act="choose">Usa questa immagine</button>' : ''}
     <label><strong>Testo alternativo predefinito</strong><br><small>Usato quando la pagina non ne indica uno.</small>
       <textarea>${esc(it.alt)}</textarea></label>
-    <button type="button" data-act="alt">Salva il testo alternativo</button>
+    <div class="row"><button type="button" data-act="alt">Salva il testo alternativo</button><button type="button" class="bd-ai-gen" data-act="alt-ai">✦ Genera con AI</button></div>
     <div><strong>Nome del file</strong><br><small>Tutti i riferimenti nei contenuti vengono aggiornati. Salva prima eventuali pagine aperte con modifiche in corso.</small>
       <div class="row"><input type="text" value="${esc(it.name.replace(/\.[^.]+$/, ''))}" aria-label="Nuovo nome del file"><button type="button" data-act="rename">Rinomina</button></div></div>
     <div><strong>Marcatura AI</strong><br><small>AI Act (UE), art. 50: segnala le immagini generate o modificate con l’intelligenza artificiale. Nel sito compare un’etichetta sull’immagine.</small>
@@ -168,6 +169,20 @@ function renderSide(msg = '', ok = false) {
     const alt = side.querySelector('textarea')!.value;
     const res = await fetch(`/api/media?path=${encodeURIComponent(it.path)}`, { method: 'PUT', body: JSON.stringify({ alt }) });
     if (res.ok) { it.alt = alt.trim(); renderSide('Testo alternativo salvato.', true); }
+  });
+  side.querySelector('[data-act="alt-ai"]')!.addEventListener('click', async (e) => {
+    const btn = e.currentTarget as HTMLButtonElement;
+    btn.disabled = true; btn.textContent = 'Genero…';
+    try {
+      const res = await fetch('/api/ai', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ task: 'alt', path: it.path, provider: getProvider() }) });
+      const out = await res.json();
+      if (!res.ok) throw new Error(out.error || `Errore ${res.status}`);
+      side.querySelector('textarea')!.value = out.alt;
+      btn.textContent = 'Generato: controlla e salva';
+    } catch (err) {
+      btn.textContent = '✦ Genera con AI';
+      alert(`Generazione non riuscita: ${(err as Error).message}`);
+    } finally { btn.disabled = false; }
   });
   side.querySelector('[data-act="rename"]')!.addEventListener('click', async () => {
     const name = side.querySelector<HTMLInputElement>('.row input')!.value.trim();
@@ -235,7 +250,7 @@ function close() {
 
 // ---- voce "Media" nella sidebar, in fondo al primo gruppo (dopo Pagine, Post, Casi studio…), stesso aspetto delle altre voci
 function addSidebarItem() {
-  const post = document.querySelector<HTMLAnchorElement>('nav a[href$="/keystatic/collection/posts"]');
+  const post = document.querySelector<HTMLAnchorElement>('nav a[href$="/collection/posts"]');
   const li = post?.closest('li');
   if (!li || li.parentElement?.querySelector('[data-bd-media]')) return;
   const item = li.cloneNode(true) as HTMLLIElement;
@@ -248,7 +263,7 @@ function addSidebarItem() {
   a.addEventListener('click', (e) => { e.preventDefault(); e.stopPropagation(); open(); });
   // ultima voce del gruppo: Media resta in fondo anche quando si aggiungono altre collection
   let last: Element = li;
-  while (last.nextElementSibling && last.nextElementSibling.querySelector('a[href*="/keystatic/collection/"]')) last = last.nextElementSibling;
+  while (last.nextElementSibling && last.nextElementSibling.querySelector('a[href*="/collection/"]')) last = last.nextElementSibling;
   last.after(item);
 }
 let queued = false;

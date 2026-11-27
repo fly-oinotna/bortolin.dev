@@ -178,8 +178,8 @@ const singletons = {
       ...button('cta', 'Pulsante'),
     }),
     seo: group('SEO', {
-      title: counted({ label: 'Meta Title', required: true, limits: SEO_LIMITS.title }),
-      description: counted({ label: 'Meta Description', multiline: true, required: true, limits: SEO_LIMITS.description }),
+      title: counted({ label: 'Meta Title', required: true, limits: SEO_LIMITS.title, ai: 'title' }),
+      description: counted({ label: 'Meta Description', multiline: true, required: true, limits: SEO_LIMITS.description, ai: 'description' }),
     }),
   }),
 
@@ -262,6 +262,10 @@ const singletons = {
   google: singletonJson('Google', 'google', {
     searchConsole: group('Search Console', {
       gscCode: t('Codice di verifica Google Search Console', 'Solo il codice (content="…"): se incolli tutto il tag <meta> viene estratto da solo.'),
+      gscProperty: t('Proprietà per la Dashboard', 'Dati di Search Console nella Dashboard. Es. sc-domain:bortolin.dev (proprietà di dominio) oppure https://bortolin.dev/. Serve l’account di servizio: vedi “Analytics”.'),
+    }),
+    analytics: group('Analytics', {
+      ga4PropertyId: t('ID proprietà Google Analytics 4', 'Solo numeri, es. 412345678 (Amministrazione → Dettagli proprietà). Per vedere i dati nella Dashboard aggiungi l’account di servizio (variabile GOOGLE_SERVICE_ACCOUNT) come Visualizzatore della proprietà e come utente di Search Console.'),
     }),
     tagManager: group('Tag Manager', {
       gtmId: t('ID Google Tag Manager', 'Es. GTM-ABC1234. Con il banner cookie attivo, GTM parte solo dopo il consenso (Cookies → Tipi di consenso).'),
@@ -462,7 +466,11 @@ const singletons = {
 const FIXED_KEYS = ['home', 'servizi', 'sitiWeb', 'consulenzaSeo', 'performance', 'integrazioneAi', 'googleAds', 'aiAds', 'metaAds', 'consulenzaDigitale', 'webAgency', 'casiStudio', 'blog'] as const;
 
 export default config({
-  storage: { kind: 'local' },
+  // in locale i file del progetto; online GitHub (ramo "contenuti", poi "Pubblica" → main).
+  // Per creare la GitHub App di Keystatic in locale: PUBLIC_KEYSTATIC_STORAGE=github npm run dev
+  storage: import.meta.env.DEV && import.meta.env.PUBLIC_KEYSTATIC_STORAGE !== 'github'
+    ? { kind: 'local' }
+    : { kind: 'github', repo: { owner: 'fly-oinotna', name: 'bortolin.dev' }, pathPrefix: 'astro' },
   ui: {
     // logo della sidebar = icona del sito (Impostazioni → Generale), servita da /api/site-icon (solo in sviluppo)
     brand: { name: 'bortolin.dev', mark: () => createElement('img', { src: '/api/site-icon', width: 24, height: 24, alt: '', style: { display: 'block', objectFit: 'contain', borderRadius: 4 } }) },

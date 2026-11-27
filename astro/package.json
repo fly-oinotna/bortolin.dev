@@ -3,18 +3,22 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview"
+    "dev": "node scripts/admin-path.mjs && astro dev",
+    "build": "node scripts/admin-path.mjs && astro build && node scripts/ssr-paths.mjs",
+    "preview": "astro preview",
+    "postinstall": "node scripts/admin-path.mjs",
+    "env:netlify": "node scripts/netlify-env.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.14.0",
+    "@astrojs/netlify": "^8.2.14",
     "@astrojs/react": "^7.1.0",
     "@fontsource/plus-jakarta-sans": "^5.3.0",
     "@keystar/ui": "^0.10.1",
     "@keystatic/astro": "^6.0.0",
     "@keystatic/core": "^0.6.10",
     "@markdoc/markdoc": "^0.4.0",
+    "@netlify/blobs": "^11.1.11",
     "@tailwindcss/vite": "^4.3.5",
     "astro": "^7.4.1",
     "react": "^19.3.1",

@@ -9,8 +9,8 @@ const CSS = `
 .bd-tabs button { all: unset; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; gap: 8px; width: 100%;
   padding: 9px 12px; border-left: 3px solid transparent; border-radius: 0 6px 6px 0; cursor: pointer; color: inherit; opacity: .75; }
 .bd-tabs button:hover { opacity: 1; background: rgba(127,127,127,.12); }
-.bd-tabs button[aria-selected="true"] { opacity: 1; font-weight: 700; border-left-color: #99ea48; background: rgba(153,234,72,.14); }
-.bd-tabs button:focus-visible { outline: 2px solid #99ea48; outline-offset: -2px; }
+.bd-tabs button[aria-selected="true"] { opacity: 1; font-weight: 700; border-left-color: var(--bd-accent); background: color-mix(in srgb, transparent, var(--bd-accent) 14%); }
+.bd-tabs button:focus-visible { outline: 2px solid var(--bd-accent); outline-offset: -2px; }
 .bd-tabs button.bd-tab-error { color: #f44336; opacity: 1; }
 .bd-tabs button.bd-tab-error::after { content: "●"; font-size: 10px; }
 .bd-tab-hidden { display: none !important; }

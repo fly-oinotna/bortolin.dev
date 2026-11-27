@@ -1,8 +1,9 @@
-// Pannello Keystatic (solo in sviluppo) con le aggiunte SEO in stile AM Tools 3:
+// Pannello Keystatic su /admin (in sviluppo e online) con le aggiunte SEO in stile AM Tools 3:
 // stessa integrazione di @keystatic/astro, ma la pagina del pannello è la nostra (src/keystatic/admin/page.astro)
 // ed endpoint in più: /api/seo-status (badge SEO) e /api/site-icon (icona del sito per favicon e sidebar).
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
+import { siteCheck } from './site-check.mjs';
 
 export default function keystaticAdmin() {
   return {
@@ -55,12 +56,28 @@ export default function keystaticAdmin() {
         const dotAstroDir = new URL('./.astro/', config.root);
         mkdirSync(dotAstroDir, { recursive: true });
         writeFileSync(new URL('keystatic-imports.js', dotAstroDir), 'import "@keystatic/astro/ui";\nimport "@keystatic/astro/api";\nimport "@keystatic/core/ui";\n');
-        injectRoute({ entrypoint: './src/keystatic/admin/page.astro', pattern: '/keystatic/[...params]', prerender: false });
+        injectRoute({ entrypoint: './src/keystatic/admin/page.astro', pattern: '/admin/[...params]', prerender: false });
         injectRoute({ entrypoint: '@keystatic/astro/internal/keystatic-api.js', pattern: '/api/keystatic/[...params]', prerender: false });
         injectRoute({ entrypoint: './src/keystatic/admin/seo-status.ts', pattern: '/api/seo-status', prerender: false });
         injectRoute({ entrypoint: './src/keystatic/admin/site-icon.ts', pattern: '/api/site-icon', prerender: false });
         injectRoute({ entrypoint: './src/keystatic/admin/media-api.ts', pattern: '/api/media', prerender: false });
         injectRoute({ entrypoint: './src/keystatic/admin/translate-api.ts', pattern: '/api/translate', prerender: false });
+        injectRoute({ entrypoint: './src/keystatic/admin/publish-api.ts', pattern: '/api/publish', prerender: false });
+        injectRoute({ entrypoint: './src/keystatic/admin/google-api.ts', pattern: '/api/google-data', prerender: false });
+        injectRoute({ entrypoint: './src/keystatic/admin/leads-api.ts', pattern: '/api/leads', prerender: false });
+        injectRoute({ entrypoint: './src/keystatic/admin/ai-api.ts', pattern: '/api/ai', prerender: false });
+        injectRoute({ entrypoint: './src/keystatic/admin/notfound-api.ts', pattern: '/api/not-found', prerender: false });
+        injectRoute({ entrypoint: './src/keystatic/admin/lighthouse-api.ts', pattern: '/api/lighthouse', prerender: false });
+      },
+      // controllo del sito a ogni build: /_bd/site-check.json per la Dashboard (avvisa, non blocca)
+      'astro:build:done': ({ dir, logger }) => {
+        try {
+          const { pages, problems, report } = siteCheck(fileURLToPath(dir));
+          const parts = [['link rotti', report.brokenLinks.length], ['pagine con immagini senza alt', report.missingAlt.length], ['titoli duplicati', report.duplicateTitles.length], ['immagini pesanti', report.heavyImages.length]].filter(([, n]) => n).map(([l, n]) => `${n} ${l}`);
+          logger.info(`controllo del sito: ${pages} pagine, ${problems ? `${problems} da sistemare (${parts.join(', ') || 'vedi la Dashboard'})` : 'tutto a posto'}`);
+        } catch (e) {
+          logger.warn(`controllo del sito non riuscito: ${e.message}`);
+        }
       },
     },
   };

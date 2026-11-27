@@ -1,15 +1,40 @@
 ---
-// Pagina del pannello Keystatic + aggiunte: favicon del sito, badge SEO, tab a sinistra, switch che nascondono campi
+// Pagina del pannello Keystatic (/admin) + aggiunte: favicon del sito, badge SEO, tab a sinistra, switch che nascondono campi,
+// mediateca, traduzioni e (online) il pulsante "Pubblica sul sito".
+// Mai su Google: noindex nella pagina e nell'intestazione HTTP, Disallow in robots.txt.
 import { Keystatic } from "./keystatic-page";
+import { REMOTE, REPO, tokenOf, workHead, catchUp } from "./workspace";
+import { adminThemeCss } from "./theme";
 export const prerender = false;
+
+Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow');
+Astro.response.headers.set('Cache-Control', 'no-store');
+
+// Online il pannello lavora SEMPRE sul ramo dei contenuti: le modifiche vanno sul sito solo con "Pubblica".
+if (REMOTE) {
+  const rest = Astro.url.pathname.replace(/^\/admin\/?/, '');
+  const token = tokenOf(Astro.request);
+  if (token) {
+    const onLive = rest.startsWith(`branch/${REPO.live}/`) || rest === `branch/${REPO.live}`;
+    const noBranch = rest === '' || /^(collection|singleton)\//.test(rest);
+    if (onLive || noBranch) {
+      try { await workHead(token); await catchUp(token); } catch { /* il pannello mostrerà l'errore di accesso */ }
+      const tail = onLive ? rest.split('/').slice(2).join('/') : rest;
+      return Astro.redirect(`/admin/branch/${REPO.work}${tail ? `/${tail}` : ''}`);
+    }
+  }
+}
 ---
 
 <html lang="it">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex, nofollow" />
     <title>Admin · bortolin.dev</title>
     <link rel="icon" href="/api/site-icon" />
+    <!-- colori del pannello: src/keystatic/admin/theme.ts -->
+    <style is:inline set:html={adminThemeCss()}></style>
   </head>
   <body>
     <Keystatic client:only="react" />
@@ -18,5 +43,9 @@ export const prerender = false;
     <script src="./toggles.ts"></script>
     <script src="./media.ts"></script>
     <script src="./i18n.ts"></script>
+    <script src="./publish.ts"></script>
+    <script src="./dashboard.ts"></script>
+    <script src="./ai-chat.ts"></script>
+    <script src="./leads.ts"></script>
   </body>
 </html>

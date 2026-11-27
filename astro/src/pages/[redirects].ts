@@ -11,7 +11,16 @@ export const getStaticPaths: GetStaticPaths = () => [{ params: { redirects: '_re
 export const GET: APIRoute = async () => {
   const data = await read('redirects');
   const seen = new Set<string>();
-  const lines: string[] = ['# Generato da Keystatic → Redirect: non modificare a mano'];
+  const lines: string[] = [
+    '# Generato da Keystatic → Redirect: non modificare a mano',
+    '',
+    '# Pannello: il vecchio indirizzo /keystatic porta a /admin. GitHub, dopo l\'installazione o l\'accesso',
+    '# all\'app di Keystatic, può tornare su /keystatic?code=… : il codice va al gestore del login.',
+    '/keystatic  code=:code  /api/keystatic/github/oauth/callback?code=:code  302!',
+    '/keystatic  /admin  301!',
+    '/keystatic/*  /admin/:splat  301!',
+    '',
+  ];
   for (const r of data.list.items) {
     const from = r.from.trim();
     let to = href(r.to).trim();

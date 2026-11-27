@@ -25,7 +25,7 @@ const lbl = 'block pb-1 text-sm text-gray-700';
       <ContactCards settings={settings} class="mt-8 space-y-3" />
     </div>
 
-    <!-- Invio: netlify/functions/contact.mjs (Postmark). Con JavaScript resta sulla pagina; senza, torna qui con ?inviato=1 -->
+    <!-- Invio: netlify/functions/contact.mjs (salvataggio nel pannello + email con Resend). Con JavaScript resta sulla pagina; senza, torna qui con ?inviato=1 -->
     <div class="rounded-3xl bg-white p-6 md:p-8 lg:col-span-3" data-bd-contact>
     <div class="hidden text-lg text-black" role="status" tabindex="-1" data-bd-done set:html={rich(c.success ?? '')} />
     <form action="/api/contact" method="post" data-sending={c.sending} data-error={c.error}>

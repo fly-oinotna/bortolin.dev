@@ -126,6 +126,11 @@ const stars = Array.from({ length: 46 }, () => ({ x: Math.round(rnd() * 1200), y
 </style>
 
 <script>
+  // indirizzo inesistente: si segnala (solo percorso e dominio di provenienza) al registro delle 404 del pannello
+  addEventListener('load', () => {
+    try { navigator.sendBeacon?.('/api/404', JSON.stringify({ path: location.pathname, ref: document.referrer })); } catch { /* facoltativo */ }
+  });
+
   // La torcia: segue il puntatore; se il puntatore è fermo (o non c'è, come sui telefoni) vaga da sola.
   // Gira solo quando la hero è visibile; con "riduci movimento" resta ferma al centro.
   const hero = document.querySelector<HTMLElement>('[data-bd-404]');

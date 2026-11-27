@@ -11,7 +11,9 @@
 // Serve la chiave ANTHROPIC_API_KEY nel file .env.
 import type { APIRoute } from 'astro';
 import Anthropic from '@anthropic-ai/sdk';
-import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs';
+import { generateJSON, pick, type Provider } from './ai';
+import { existsSync, readFileSync, readdirSync } from 'node:fs';
+import { open, errorResponse } from './workspace';
 import { dirname } from 'node:path';
 import keystaticConfig from '../../../keystatic.config';
 import { tKey } from '../i18n';
@@ -21,7 +23,6 @@ import { TRANSLATIONS, LANG_NAMES } from '../../i18n/langs';
 
 export const prerender = false;
 
-const MODEL = 'claude-opus-5-5';
 /** contenuti che hanno una traduzione (chiavi italiane) */
 const COLLECTIONS = ['pages', 'posts', 'caseStudies', 'offers'] as const;
 const singletons = keystaticConfig.singletons as Record<string, any>;
@@ -165,38 +166,49 @@ Rules:
 You receive a JSON list of items {id, field, text}: "field" is the editor label of the field (context only). Return every id exactly once with its translated text.`;
 };
 
-async function translate(lang: string, page: string, items: Item[]) {
-  const apiKey = import.meta.env.ANTHROPIC_API_KEY || process.env.ANTHROPIC_API_KEY;
-  const client = new Anthropic(apiKey ? { apiKey } : {});
-  const stream = client.beta.messages.stream({
-    model: MODEL,
-    max_tokens: 64000,
-    betas: ['server-side-fallback-2026-07-01'],
-    fallbacks: 'default',
-    output_config: {
-      effort: 'high',
-      format: {
-        type: 'json_schema',
-        schema: {
-          type: 'object',
-          properties: {
-            slug: { type: 'string' },
-            items: { type: 'array', items: { type: 'object', properties: { id: { type: 'string' }, text: { type: 'string' } }, required: ['id', 'text'], additionalProperties: false } },
-          },
-          required: ['slug', 'items'],
-          additionalProperties: false,
-        },
-      },
-    },
+/**
+ * Traduzione con Claude. Le pagine lunghe sono divise in blocchi tradotti IN PARALLELO (online una funzione ha al massimo
+ * 60 secondi): ogni blocco riceve comunque tutta la pagina come contesto, così tono e termini restano coerenti.
+ */
+const CHUNK_CHARS = 3500;
+async function translate(provider: Provider, lang: string, page: string, items: Item[]) {
+  const chunks: Item[][] = [[]];
+  let size = 0;
+  for (const it of items) {
+    const len = it.text.length + 40;
+    if (size + len > CHUNK_CHARS && chunks[chunks.length - 1].length) { chunks.push([]); size = 0; }
+    chunks[chunks.length - 1].push(it);
+    size += len;
+  }
+  const results = await Promise.all(chunks.map((chunk, i) => translateChunk(provider, lang, page, chunk, chunks.length > 1 ? items : null, i === 0)));
+  const map = new Map<string, string>();
+  for (const r of results) for (const [k, v] of r.map) map.set(k, v);
+  const missing = items.filter((it) => !map.has(it.id)).map((it) => it.id);
+  if (missing.length) throw new Error(`Traduzione incompleta (mancano ${missing.length} testi): riprova.`);
+  return { slug: results[0].slug, map };
+}
+
+async function translateChunk(provider: Provider, lang: string, page: string, items: Item[], context: Item[] | null, withSlug: boolean) {
+  const user = context
+    ? `Page: ${page}\n\nThe whole page, for context only (do NOT return these items unless they are listed below):\n${JSON.stringify(context.map(({ id, text }) => ({ id, text })))}\n\nTranslate ONLY these ${items.length} items and return each of them:\n${JSON.stringify(items)}${withSlug ? '' : '\n\nReturn "" as slug.'}`
+    : `Page: ${page}\n\n${JSON.stringify(items)}`;
+  const out = await generateJSON<{ slug: string; items: { id: string; text: string }[] }>({
+    provider,
     system: SYSTEM(lang),
-    messages: [{ role: 'user', content: `Page: ${page}\n\n${JSON.stringify(items)}` }],
-  } as any);
-  const msg = await stream.finalMessage();
-  if (msg.stop_reason === 'refusal') throw new Error('La traduzione è stata rifiutata dal modello.');
-  if (msg.stop_reason === 'max_tokens') throw new Error('Il testo è troppo lungo per una sola traduzione.');
-  const text = msg.content.flatMap((b: any) => (b.type === 'text' ? [b.text] : [])).join('');
-  const out = JSON.parse(text) as { slug: string; items: { id: string; text: string }[] };
-  return { slug: out.slug, map: new Map(out.items.map((i) => [i.id, i.text])) };
+    user,
+    effort: 'high',
+    schema: {
+      type: 'object',
+      properties: {
+        slug: { type: 'string' },
+        items: { type: 'array', items: { type: 'object', properties: { id: { type: 'string' }, text: { type: 'string' } }, required: ['id', 'text'], additionalProperties: false } },
+      },
+      required: ['slug', 'items'],
+      additionalProperties: false,
+    },
+  });
+  const ids = new Set(items.map((i) => i.id));
+  return { slug: out.slug, map: new Map(out.items.filter((i) => ids.has(i.id)).map((i) => [i.id, i.text])) };
 }
 
 /** traduzione preparata fuori dal pannello */
@@ -205,13 +217,19 @@ const given = (t: { slug: string; items: { id: string; text: string }[] }) => ({
 const slugify = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 // ---------------------------------------------------------------- endpoint
-export const GET: APIRoute = async () => json(status());
+export const GET: APIRoute = async ({ request }) => {
+  try { await open(request, { maxAge: 15000 }); } catch (e) { return errorResponse(e); }
+  return json(status());
+};
 
 export const POST: APIRoute = async ({ request }) => {
-  let body: { lang?: string; key?: string; collection?: string; slug?: string; force?: boolean; prepare?: boolean; translated?: { slug: string; items: { id: string; text: string }[] } };
+  let body: { provider?: string; lang?: string; key?: string; collection?: string; slug?: string; force?: boolean; prepare?: boolean; translated?: { slug: string; items: { id: string; text: string }[] } };
   try { body = await request.json(); } catch { return json({ error: 'Richiesta non valida' }, 400); }
   const lang = body.lang ?? TRANSLATIONS[0];
   if (!(TRANSLATIONS as readonly string[]).includes(lang)) return json({ error: `Lingua non prevista: ${lang}` }, 400);
+  // utente e file aggiornati PRIMA di chiamare l'AI (online: solo chi può modificare il sito)
+  let ws;
+  try { ws = await open(request); } catch (e) { return errorResponse(e); }
 
   try {
     // ---- singleton (pagine a layout fisso, Menu, Impostazioni…)
@@ -222,14 +240,14 @@ export const POST: APIRoute = async ({ request }) => {
       if (existsSync(target) && !body.force && !body.prepare) return json({ error: 'La traduzione esiste già', exists: true }, 409);
       const { data, items } = prepare(tr.schema, readJson(it.path + '.json'));
       if (body.prepare) return json({ page: it.label, items });
-      const { slug, map } = body.translated ? given(body.translated) : await translate(lang, it.label, items);
+      const { slug, map } = body.translated ? given(body.translated) : await translate(pick(body.provider), lang, it.label, items);
       const out = fill(data, map);
       const fixed = FIXED_PAGES.find((p) => p.key === body.key);
       if (fixed && fixed.key !== 'home' && out.seo) out.seo = { slug: slugify(slug) || fixed.url.split('/').filter(Boolean).pop(), ...out.seo };
-      mkdirSync(dirname(target), { recursive: true });
-      writeFileSync(target, JSON.stringify(out, null, 2) + '\n');
+      ws.write(target, JSON.stringify(out, null, 2) + '\n');
+      await ws.save(`Traduzione ${lang.toUpperCase()}: ${it.label}`);
       refreshSite();
-      return json({ ok: true, href: `/keystatic/singleton/${tKey(lang, body.key)}` });
+      return json({ ok: true, href: `/admin/singleton/${tKey(lang, body.key)}` });
     }
 
     // ---- voce di una collection (la cartella della lingua, nome del file = indirizzo tradotto)
@@ -239,24 +257,24 @@ export const POST: APIRoute = async ({ request }) => {
     const source = it.path.replace('*', body.slug) + '.json';
     if (!existsSync(source)) return json({ error: 'Voce italiana non trovata' }, 404);
     const existing = status().translations[lang].collections[col][body.slug];
-    if (existing && !body.force && !body.prepare) return json({ error: 'La traduzione esiste già', exists: true, href: `/keystatic/collection/${tKey(lang, col)}/item/${existing}` }, 409);
+    if (existing && !body.force && !body.prepare) return json({ error: 'La traduzione esiste già', exists: true, href: `/admin/collection/${tKey(lang, col)}/item/${existing}` }, 409);
     const raw = readJson(source);
     const { data, items } = prepare(tr.schema, raw);
     if (body.prepare) return json({ page: `${it.label}: ${raw[it.slugField] ?? body.slug}`, items });
-    const { slug, map } = body.translated ? given(body.translated) : await translate(lang, `${it.label}: ${raw[it.slugField] ?? body.slug}`, items);
+    const { slug, map } = body.translated ? given(body.translated) : await translate(pick(body.provider), lang, `${it.label}: ${raw[it.slugField] ?? body.slug}`, items);
     const out = { ...fill(data, map), original: body.slug };
     const dir = dirname(tr.path);
     let name = slugify(slug) || slugify(out[it.slugField] ?? '') || body.slug;
     if (existing) name = existing; // ritraduzione: stesso indirizzo
     else while (existsSync(`${dir}/${name}.json`)) name += '-2';
-    mkdirSync(dir, { recursive: true });
-    writeFileSync(`${dir}/${name}.json`, JSON.stringify(out, null, 2) + '\n');
+    ws.write(`${dir}/${name}.json`, JSON.stringify(out, null, 2) + '\n');
+    await ws.save(`Traduzione ${lang.toUpperCase()}: ${it.label} › ${name}`);
     refreshSite();
-    return json({ ok: true, href: `/keystatic/collection/${tKey(lang, col)}/item/${name}` });
+    return json({ ok: true, href: `/admin/collection/${tKey(lang, col)}/item/${name}` });
   } catch (e) {
     const err = e as any;
     const msg = err instanceof Anthropic.AuthenticationError || /api.?key|auth/i.test(String(err?.message))
-      ? 'Chiave API mancante o non valida: aggiungi ANTHROPIC_API_KEY nel file .env e riavvia il server.'
+      ? 'Chiave API mancante o non valida: aggiungi ANTHROPIC_API_KEY nel file .env (in locale) o nelle variabili d’ambiente di Netlify (online).'
       : err instanceof Anthropic.RateLimitError ? 'Troppe richieste: riprova tra poco.'
       : err instanceof Anthropic.APIError ? `Errore del servizio AI (${err.status}): ${err.message}`
       : String(err?.message ?? err);

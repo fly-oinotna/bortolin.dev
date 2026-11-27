@@ -8,7 +8,9 @@ import { localize } from './i18n';
 import { DEFAULT_LANG } from '../i18n/langs';
 import { SAME_AS_IT } from '../keystatic/fields';
 
-export const reader = createReader(process.cwd(), keystaticConfig);
+// percorso relativo: si legge dalla cartella di lavoro corrente (il progetto, oppure la copia del repository
+// che il pannello online scarica da GitHub, vedi src/keystatic/admin/workspace.ts)
+export const reader = createReader('.', keystaticConfig);
 
 type Singletons = typeof reader.singletons;
 type Data<K extends keyof Singletons> = NonNullable<Awaited<ReturnType<Singletons[K]['read']>>>;
@@ -28,7 +30,7 @@ async function readRaw(key: string): Promise<any> {
   } catch (e) {
     const file = keystaticConfig.singletons[k].path + '.json';
     if (!existsSync(file)) throw e;
-    console.warn(`[contenuti] "${key}": campi obbligatori da compilare in /keystatic →\n${(e as Error).message}`);
+    console.warn(`[contenuti] "${key}": campi obbligatori da compilare in /admin →\n${(e as Error).message}`);
     data = parseLoose(keystaticConfig.singletons[k].schema, JSON.parse(readFileSync(file, 'utf8')));
   }
   return data;
