@@ -50,13 +50,13 @@ const CSS = `
 .bd-checks { display: grid; gap: 6px; width: 100%; }
 .bd-check { display: grid; grid-template-columns: 1fr auto; gap: 8px; align-items: center; font-size: 13px; }
 .bd-bar { height: 6px; border-radius: 99px; background: var(--kui-color-background-surface-secondary, rgba(127,127,127,.15)); overflow: hidden; grid-column: 1 / -1; }
-.bd-bar i { display: block; height: 100%; border-radius: 99px; background: var(--bd-accent); }
-.bd-bar i.warn { background: #f5a623; } .bd-bar i.bad { background: #e5484d; }
+.bd-bar i { display: block; height: 100%; border-radius: 99px; background: var(--bd-good); }
+.bd-bar i.warn { background: var(--bd-warn); } .bd-bar i.bad { background: var(--bd-bad); }
 .bd-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 12px; margin-top: 12px; }
 .bd-kpi b { display: block; font-size: 22px; color: var(--kui-color-foreground-neutral-emphasis); }
 .bd-kpi span { font-size: 12px; color: var(--kui-color-foreground-neutral-tertiary); }
 .bd-kpi em { font-style: normal; font-size: 12px; font-weight: 600; margin-left: 4px; }
-.bd-kpi em.up { color: ${GREEN}; } .bd-kpi em.down { color: #e5484d; }
+.bd-kpi em.up { color: var(--bd-good-text); } .bd-kpi em.down { color: var(--bd-bad-text); }
 .bd-spark { width: 100%; height: 56px; margin-top: 12px; display: block; }
 .bd-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; font-size: 13px; }
 .bd-list li { display: flex; justify-content: space-between; gap: 12px; padding: 4px 0; border-bottom: 1px solid var(--kui-color-border-muted); }
@@ -74,8 +74,8 @@ const CSS = `
 .bd-issues td { padding: 8px; border-bottom: 1px solid var(--kui-color-border-muted); vertical-align: top; }
 .bd-issues a { color: var(--kui-color-foreground-accent); font-weight: 600; text-decoration: none; }
 .bd-pill { display: inline-block; padding: 1px 8px; border-radius: 99px; font-size: 11px; font-weight: 700; background: var(--kui-color-background-surface-secondary, rgba(127,127,127,.15)); margin: 0 4px 4px 0; }
-.bd-pill.bad { background: color-mix(in srgb, transparent, #e5484d 18%); color: #e5484d; }
-.bd-pill.warn { background: color-mix(in srgb, transparent, #f5a623 22%); color: #b7791f; }
+.bd-pill.bad { background: color-mix(in srgb, transparent, var(--bd-bad) 16%); color: var(--bd-bad-text); }
+.bd-pill.warn { background: color-mix(in srgb, transparent, var(--bd-warn) 20%); color: var(--bd-warn-text); }
 .bd-aiopt { display: grid; gap: 8px; margin-top: 12px; }
 .bd-aiopt label { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border: 1px solid var(--kui-color-border-muted); border-radius: 10px; cursor: pointer; }
 .bd-aiopt label:has(input:checked) { border-color: var(--bd-accent); background: color-mix(in srgb, transparent, var(--bd-accent) 12%); }
@@ -86,8 +86,8 @@ const CSS = `
 .bd-setup ol { margin: 8px 0 0; padding-left: 20px; display: grid; gap: 6px; font-size: 13px; }
 .bd-setup a { color: var(--kui-color-foreground-accent); }
 .bd-setup code { font-size: 12px; padding: 1px 5px; border-radius: 4px; background: var(--kui-color-background-surface-secondary, rgba(127,127,127,.15)); }
-.bd-sc { --sc: var(--bd-accent); }
-.bd-sc.bad { --sc: #e5484d; }
+.bd-sc { --sc: var(--bd-good); }
+.bd-sc.bad { --sc: var(--bd-bad); }
 .bd-sc-head { display: flex; gap: 16px; align-items: center; }
 .bd-sc-icon { flex-shrink: 0; width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center; color: var(--sc); background: color-mix(in srgb, transparent, var(--sc) 16%); box-shadow: 0 0 0 6px color-mix(in srgb, transparent, var(--sc) 7%); }
 .bd-sc-icon svg { width: 28px; height: 28px; }
@@ -95,13 +95,13 @@ const CSS = `
 .bd-sc-status { font-size: 18px; font-weight: 800; color: var(--kui-color-foreground-neutral-emphasis); margin: 2px 0 2px !important; }
 .bd-sc-grid { list-style: none; margin: 18px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
 .bd-sc-grid li { display: flex; align-items: center; gap: 8px; padding: 9px 10px; border-radius: 10px; font-size: 12.5px; font-weight: 600; border: 1px solid var(--kui-color-border-muted); }
-.bd-sc-grid li.ok { background: color-mix(in srgb, transparent, var(--bd-accent) 7%); }
-.bd-sc-grid li.bad { border-color: color-mix(in srgb, transparent, #e5484d 45%); background: color-mix(in srgb, transparent, #e5484d 9%); }
-.bd-sc-mark { flex-shrink: 0; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 99px; display: grid; place-items: center; font-size: 11px; font-weight: 800; background: var(--bd-accent); color: var(--bd-on-accent); }
-.bd-sc-grid li.bad .bd-sc-mark { background: #e5484d; color: #fff; }
+.bd-sc-grid li.ok { background: color-mix(in srgb, transparent, var(--bd-good) 7%); }
+.bd-sc-grid li.bad { border-color: color-mix(in srgb, transparent, var(--bd-bad) 45%); background: color-mix(in srgb, transparent, var(--bd-bad) 9%); }
+.bd-sc-mark { flex-shrink: 0; min-width: 20px; height: 20px; padding: 0 5px; border-radius: 99px; display: grid; place-items: center; font-size: 11px; font-weight: 800; background: var(--bd-good); color: var(--bd-on-status); }
+.bd-sc-grid li.bad .bd-sc-mark { background: var(--bd-bad); color: var(--bd-on-status); }
 .bd-sc-detail { margin-top: 12px; border-top: 1px solid var(--kui-color-border-muted); padding-top: 10px; }
 .bd-sc-detail summary { cursor: pointer; font-size: 13px; font-weight: 700; }
-.bd-sc-detail summary span { margin-left: 4px; padding: 1px 7px; border-radius: 99px; background: #e5484d; color: #fff; font-size: 11px; }
+.bd-sc-detail summary span { margin-left: 4px; padding: 1px 7px; border-radius: 99px; background: var(--bd-bad); color: var(--bd-on-status); font-size: 11px; }
 .bd-sc-detail .bd-list { margin-top: 8px; }
 [data-bd-dash-host] > :not(.bd-dash) { display: none !important; }
 `;
@@ -129,7 +129,7 @@ const editHref = (id: string, p: Page) => (p.kind === 'fixed' ? `${adminBase()}/
 // ---------------------------------------------------------------- pezzi di interfaccia
 function ring(score: number) {
   const r = 42, c = 2 * Math.PI * r;
-  const color = score >= 90 ? 'var(--bd-accent)' : score >= 50 ? '#f5a623' : '#e5484d';
+  const color = score >= 90 ? 'var(--bd-good)' : score >= 50 ? 'var(--bd-warn)' : 'var(--bd-bad)';
   return `<svg class="bd-ring" width="110" height="110" viewBox="0 0 110 110" role="img" aria-label="${esc(t('Punteggio SEO {n} su 100', { n: score }))}">
     <circle cx="55" cy="55" r="${r}" fill="none" stroke="color-mix(in srgb, transparent, currentColor 12%)" stroke-width="10"/>
     <circle cx="55" cy="55" r="${r}" fill="none" stroke="${color}" stroke-width="10" stroke-linecap="round" stroke-dasharray="${(c * score) / 100} ${c}" transform="rotate(-90 55 55)"/>
@@ -141,8 +141,8 @@ function spark(values: number[]) {
   const max = Math.max(...values, 1), w = 300, h = 56;
   const pts = values.map((v, i) => `${((i / (values.length - 1)) * w).toFixed(1)},${(h - 4 - (v / max) * (h - 8)).toFixed(1)}`);
   return `<svg class="bd-spark" viewBox="0 0 ${w} ${h}" preserveAspectRatio="none" aria-hidden="true">
-    <polyline points="0,${h} ${pts.join(' ')} ${w},${h}" fill="color-mix(in srgb, transparent, var(--bd-accent) 18%)" stroke="none"/>
-    <polyline points="${pts.join(' ')}" fill="none" stroke="var(--bd-accent)" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>`;
+    <polyline points="0,${h} ${pts.join(' ')} ${w},${h}" fill="color-mix(in srgb, transparent, var(--bd-chart) 16%)" stroke="none"/>
+    <polyline points="${pts.join(' ')}" fill="none" stroke="var(--bd-chart)" stroke-width="2" vector-effect="non-scaling-stroke"/></svg>`;
 }
 function kpi(label: string, value: number, prev: number | undefined, fmt: (n: number) => string = (n) => nf.format(Math.round(n)), lowerIsBetter = false) {
   let delta = '';
@@ -281,7 +281,7 @@ function siteCheckCard(r: any) {
     : `<b>${problems}</b>`;
   return `<div class="bd-card bd-sc${ok ? ' ok' : ' bad'}">
     <div class="bd-sc-head"><span class="bd-sc-icon">${icon}</span><div>${title}
-      <p class="bd-sc-status">${esc(ok ? t('Tutto a posto') : t('{n} problemi da sistemare', { n: problems }))}</p>
+      <p class="bd-sc-status">${esc(ok ? t('Tutto a posto') : (problems === 1 ? t('1 problema da sistemare') : t('{n} problemi da sistemare', { n: problems })))}</p>
       <p class="muted">${esc(t('Ultima build: {when} · {n} pagine controllate', { when, n: r.pages }))}</p></div></div>
     <ul class="bd-sc-grid">${groups.map(([name, , list]) => `<li class="${list.length ? 'bad' : 'ok'}"><span class="bd-sc-mark">${list.length ? list.length : '✓'}</span>${esc(name)}</li>`).join('')}</ul>
     ${groups.filter((g) => g[2].length).map(([, detail, list, line]) => `<details class="bd-sc-detail"><summary>${esc(detail)} <span>${list.length}</span></summary><ul class="bd-list">${list.slice(0, 8).map((x) => `<li><span>${line(x)}</span><span></span></li>`).join('')}${list.length > 8 ? `<li><span class="muted">${esc(t('… e altri {n}', { n: list.length - 8 }))}</span><span></span></li>` : ''}</ul></details>`).join('')}
@@ -297,7 +297,7 @@ function lighthouseCard(d: any) {
   const when = new Intl.DateTimeFormat(fmtLocale(), { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }).format(new Date(last.date));
   const avg = (run: any) => { const ok = run.results.filter((r: any) => r.scores); return ok.length ? ok.reduce((t: number, r: any) => t + r.scores.performance, 0) / ok.length : 0; };
   const trend = d.runs.slice().reverse().map(avg);
-  const score = (n: number) => `<b style="color:${n >= 90 ? 'var(--kui-color-foreground-accent)' : n >= 50 ? '#b7791f' : '#e5484d'}">${n}</b>`;
+  const score = (n: number) => `<b style="color:${n >= 90 ? 'var(--bd-good-text)' : n >= 50 ? 'var(--bd-warn-text)' : 'var(--bd-bad-text)'}">${n}</b>`;
   const ms = (n?: number) => (n == null ? '—' : `${dec(n / 1000)} s`);
   return `<div class="bd-card wide"><h2>Monitor Lighthouse</h2><p class="muted">${esc(t('Ultima misura: {when} · mobile · {n} misure in archivio', { when, n: d.runs.length }))}</p>
     ${trend.length > 1 ? `<h3>${esc(t('Performance media nel tempo'))}</h3>${spark(trend)}` : ''}

@@ -198,6 +198,7 @@ export const STRINGS: Record<string, Tr> = {
   'Descrizioni uniche': S('Unique descriptions', 'Descripciones únicas', 'Eindeutige Beschreibungen'),
   'Immagini leggere': S('Lightweight images', 'Imágenes ligeras', 'Schlanke Bilder'),
   'Tutto a posto': S('All good', 'Todo en orden', 'Alles in Ordnung'),
+  '1 problema da sistemare': S('1 issue to fix', '1 problema que corregir', '1 Problem zu beheben'),
   '{n} problemi da sistemare': S('{n} issues to fix', '{n} problemas que corregir', '{n} Probleme zu beheben'),
   'Link interni rotti': S('Broken internal links', 'Enlaces internos rotos', 'Defekte interne Links'),
   'Immagini senza testo alternativo': S('Images without alt text', 'Imágenes sin texto alternativo', 'Bilder ohne Alternativtext'),

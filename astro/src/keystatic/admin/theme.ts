@@ -40,8 +40,13 @@ export function adminThemeCss(t = ADMIN_THEME) {
     --kui-color-alias-focus-ring: ${t.accent};
     --kui-color-alias-background-selected: color-mix(in srgb, transparent, ${t.accent} 12%);
     --kui-color-alias-background-selected-hovered: color-mix(in srgb, transparent, ${t.accent} 22%);`;
-  const light = scale('#ffffff', t.accentTextLight);
-  const dark = scale('#1b1b1b', t.accent);
+  // Status colours (Dashboard: scores, bars, site check, Lighthouse) and neutral chart colour.
+  // Deliberately independent of the brand accent: green/amber/red as in any UI, tuned for light and dark.
+  const status = (dark: boolean) => dark
+    ? `--bd-good: #3fb950; --bd-good-text: #56d364; --bd-warn: #d29922; --bd-warn-text: #e3b341; --bd-bad: #f85149; --bd-bad-text: #ff7b72; --bd-on-status: #0d1117; --bd-chart: #8b9bb4;`
+    : `--bd-good: #2da44e; --bd-good-text: #1a7f37; --bd-warn: #d4a72c; --bd-warn-text: #9a6700; --bd-bad: #cf222e; --bd-bad-text: #cf222e; --bd-on-status: #ffffff; --bd-chart: #5b6b86;`;
+  const light = scale('#ffffff', t.accentTextLight) + status(false);
+  const dark = scale('#1b1b1b', t.accent) + status(true);
   return `
 :root { --bd-accent: ${t.accent}; --bd-on-accent: ${t.onAccent}; }
 :root .kui-theme.kui-scheme--light { ${light} }
