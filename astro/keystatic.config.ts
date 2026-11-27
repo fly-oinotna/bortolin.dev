@@ -91,7 +91,7 @@ const collections = {
     slugField: 'name',
     path: 'src/content/it/offerte/*',
     format: { data: 'json' },
-    columns: [],
+    columns: ['name'],
     schema: {
       name: fields.slug({ name: { label: 'Nome dell’offerta (interno)', validation: { isRequired: true } }, slug: { label: 'Identificativo' } }),
       offer: group('Offerta', {

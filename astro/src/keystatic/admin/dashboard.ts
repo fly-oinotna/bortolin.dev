@@ -35,6 +35,8 @@ const CSS = `
 .bd-dash .row { display: grid; gap: 20px; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
 .bd-card { background: var(--kui-color-background-surface); border: 1px solid var(--kui-color-border-muted); border-radius: 14px; padding: 20px; min-width: 0; }
 .bd-card.wide { grid-column: 1 / -1; }
+.bd-dash .row.two { grid-template-columns: 1fr 1fr; }
+@media (max-width: 900px) { .bd-dash .row.two { grid-template-columns: 1fr; } }
 .bd-hello { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; }
 .bd-hello-side { display: inline-flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .bd-deploy img { display: block; }
@@ -166,18 +168,18 @@ function gaCard(d: any, setup: any) {
 
 function adsCard(d: any, setup: any) {
   if (!setup.serviceAccount || !setup.ga4) return '';
-  if (!d || d.error) return `<div class="bd-card"><h2>Google Ads</h2><p class="muted">Dati non disponibili: ${esc(d?.error ?? 'errore')}</p></div>`;
+  if (!d || d.error) return `<div class="bd-card wide"><h2>Google Ads</h2><p class="muted">Dati non disponibili: ${esc(d?.error ?? 'errore')}</p></div>`;
   const t = d.totals, p = d.previous;
   const money = (n: number) => new Intl.NumberFormat('it-IT', { style: 'currency', currency: d.currency || 'EUR' }).format(n);
   if (!t.cost && !t.clicks && !t.impressions && !p.cost) {
-    return `<div class="bd-card"><h2>Google Ads</h2><div class="bd-setup"><p class="muted">Nessun dato negli ultimi 28 giorni. Se hai campagne attive, collega Google Ads alla proprietà GA4:</p>
+    return `<div class="bd-card wide"><h2>Google Ads</h2><div class="bd-setup"><p class="muted">Nessun dato negli ultimi 28 giorni. Se hai campagne attive, collega Google Ads alla proprietà GA4:</p>
       <ol><li>In Google Analytics: <b>Amministrazione → Collegamenti a prodotti → Collegamenti a Google Ads</b> → <b>Collega</b>.</li>
       <li>Scegli l’account Google Ads e conferma (lascia attiva la condivisione dei dati).</li>
       <li>I dati compaiono qui entro 24–48 ore.</li></ol></div></div>`;
   }
   const cpc = (x: any) => (x.clicks ? x.cost / x.clicks : 0);
   const cpa = (x: any) => (x.conversions ? x.cost / x.conversions : 0);
-  return `<div class="bd-card"><h2>Google Ads</h2><p class="muted">Ultimi 28 giorni, rispetto ai 28 precedenti (dati da Google Analytics)</p>
+  return `<div class="bd-card wide"><h2>Google Ads</h2><p class="muted">Ultimi 28 giorni, rispetto ai 28 precedenti (dati da Google Analytics)</p>
     <div class="bd-kpis">${kpi('Spesa', t.cost, p.cost, money)}${kpi('Clic', t.clicks, p.clicks)}${kpi('Costo per clic', cpc(t), cpc(p), money, true)}${kpi('Conversioni', t.conversions, p.conversions)}${t.conversions ? kpi('Costo per conversione', cpa(t), cpa(p), money, true) : ''}</div>
     <h3>Campagne</h3><ul class="bd-list">${d.campaigns.map((c: any) => `<li><span>${esc(c.name)}</span><span>${money(c.cost)} · ${nf.format(c.clicks)} clic</span></li>`).join('') || EMPTY}</ul></div>`;
 }
@@ -200,11 +202,11 @@ function oppCard(d: any, pages: [string, Page][]) {
 
 /** Pagine non trovate: indirizzi aperti che non esistono, con redirect in un clic */
 function notFoundCard(d: any, pages: [string, Page][]) {
-  if (!d?.enabled) return `<div class="bd-card wide"><h2>Pagine non trovate</h2><p class="muted">Gli indirizzi inesistenti aperti dai visitatori sono registrati online: li vedi qui nel pannello su bortolin.dev/admin.</p></div>`;
-  if (!d.items.length) return `<div class="bd-card wide"><h2>Pagine non trovate</h2><p class="muted">Nessuna pagina 404 visitata di recente. 👍</p></div>`;
+  if (!d?.enabled) return `<div class="bd-card"><h2>Pagine non trovate</h2><p class="muted">Gli indirizzi inesistenti aperti dai visitatori sono registrati online: li vedi qui nel pannello su bortolin.dev/admin.</p></div>`;
+  if (!d.items.length) return `<div class="bd-card"><h2>Pagine non trovate</h2><p class="muted">Nessuna pagina 404 visitata di recente. 👍</p></div>`;
   const options = '<option value="">Scegli la destinazione…</option>' + pages.filter(([, p]) => p.lang === 'it').sort((a, b) => a[1].url.localeCompare(b[1].url)).map(([, p]) => `<option value="${esc(p.url)}">${esc(p.url)} · ${esc(shortTitle(p))}</option>`).join('');
   const df = new Intl.DateTimeFormat('it-IT', { day: 'numeric', month: 'short' });
-  return `<div class="bd-card wide"><h2>Pagine non trovate</h2><p class="muted">Indirizzi inesistenti aperti dai visitatori (link vecchi, errori di battitura, vecchio sito). Un redirect 301 li porta alla pagina giusta e recupera il valore SEO.</p>
+  return `<div class="bd-card"><h2>Pagine non trovate</h2><p class="muted">Indirizzi inesistenti aperti dai visitatori (link vecchi, errori di battitura, vecchio sito). Un redirect 301 li porta alla pagina giusta e recupera il valore SEO.</p>
     <table class="bd-issues bd-404"><thead><tr><th>Indirizzo</th><th>Visite</th><th>Ultima</th><th>Redirect verso</th><th></th></tr></thead><tbody>
     ${d.items.map((x: any) => `<tr data-path="${esc(x.path)}"><td><b>${esc(x.path)}</b>${Object.keys(x.refs ?? {}).length ? `<br><span class="muted">da ${esc(Object.keys(x.refs).join(', '))}</span>` : ''}</td>
       <td>${nf.format(x.count)}</td><td>${esc(df.format(new Date(x.last)))}</td>
@@ -234,7 +236,7 @@ function bindNotFound(box: HTMLElement) {
 
 /** Controllo del sito: risultato dell'ultima build (link rotti, alt, H1, titoli e descrizioni, immagini pesanti) */
 function siteCheckCard(r: any) {
-  if (!r) return `<div class="bd-card wide"><h2>Controllo del sito</h2><p class="muted">Il controllo gira a ogni build del sito pubblicato: i risultati compaiono qui nel pannello online.</p></div>`;
+  if (!r) return `<div class="bd-card"><h2>Controllo del sito</h2><p class="muted">Il controllo gira a ogni build del sito pubblicato: i risultati compaiono qui nel pannello online.</p></div>`;
   const when = new Intl.DateTimeFormat('it-IT', { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit' }).format(new Date(r.generated));
   const groups: [string, any[], (x: any) => string][] = [
     ['Link interni rotti', r.brokenLinks, (x) => `${esc(x.url)} → ${x.links.map(esc).join(', ')}`],
@@ -247,7 +249,7 @@ function siteCheckCard(r: any) {
     ['Immagini più pesanti di 300 KB', r.heavyImages, (x) => `${esc(x.file)} (${x.kb} KB)`],
   ];
   const bad = groups.filter(([, list]) => list.length);
-  return `<div class="bd-card wide"><h2>Controllo del sito</h2><p class="muted">Ultima build: ${esc(when)} · ${r.pages} pagine controllate</p>
+  return `<div class="bd-card"><h2>Controllo del sito</h2><p class="muted">Ultima build: ${esc(when)} · ${r.pages} pagine controllate</p>
     ${bad.length ? bad.map(([title, list, line]) => `<h3>${esc(title)} (${list.length})</h3><ul class="bd-list">${list.slice(0, 8).map((x) => `<li><span>${line(x)}</span><span></span></li>`).join('')}</ul>`).join('')
       : '<p style="margin-top:8px">Tutto a posto: nessun link rotto, testi alternativi presenti, un H1 per pagina, titoli e descrizioni unici, immagini leggere. ✓</p>'}</div>`;
 }
@@ -329,10 +331,9 @@ async function render(box: HTMLElement) {
       <div class="bd-aiopt" role="radiogroup" aria-label="AI del pannello">${(['claude', 'openai', 'gemini'] as const).map((p) => { const on = ai?.available?.includes(p); return `<label class="${on ? '' : 'off'}"><input type="radio" name="bd-ai-provider" value="${p}" ${on ? '' : 'disabled'}>${esc(ai?.labels?.[p] ?? p)}<small>${on ? 'chiave presente' : 'chiave mancante'}</small></label>`; }).join('')}</div>
     </div>
   </div>
-  <div class="row" data-bd-google><div class="bd-card"><h2>Google Search Console</h2><p class="muted">Caricamento…</p></div><div class="bd-card"><h2>Google Analytics 4</h2><p class="muted">Caricamento…</p></div><div class="bd-card"><h2>Google Ads</h2><p class="muted">Caricamento…</p></div></div>
+  <div class="row two" data-bd-google><div class="bd-card"><h2>Google Search Console</h2><p class="muted">Caricamento…</p></div><div class="bd-card"><h2>Google Analytics 4</h2><p class="muted">Caricamento…</p></div><div class="bd-card wide"><h2>Google Ads</h2><p class="muted">Caricamento…</p></div></div>
   <div data-bd-lh></div>
-  <div data-bd-404></div>
-  <div data-bd-check></div>
+  <div class="row two"><div data-bd-404></div><div data-bd-check></div></div>
   <div class="bd-card wide"><h2>Pagine da sistemare</h2>
     ${issues.length ? `<p class="muted">${issues.length} pagine sotto 100: le più urgenti per prime.</p>
     <table class="bd-issues"><thead><tr><th>Pagina</th><th>Lingua</th><th>Punteggio</th><th>Da sistemare</th></tr></thead><tbody>

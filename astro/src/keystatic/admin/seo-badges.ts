@@ -30,14 +30,19 @@ const CSS = `
 .bd-row-meta a { font-size: 11.5px; opacity: .75; color: inherit; text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .bd-row-meta a:hover { opacity: 1; }
 .bd-row-text { display: grid; gap: 4px; min-width: 0; }
-.bd-row > .bd-seo { margin-top: 0; flex-basis: auto; justify-content: flex-end; flex-wrap: nowrap; }
+.bd-row .bd-row-side > .bd-seo { margin-top: 0; flex-basis: auto; justify-content: flex-end; flex-wrap: nowrap; }
 .bd-row-host { width: 100%; }
 .bd-row-host > :not(.bd-row) { display: none !important; }
 .bd-tip { position: fixed; z-index: 99999; width: 320px; padding: 12px 14px; border-radius: 8px; background: #fff; color: #1d2327;
   box-shadow: 0 8px 28px rgba(0,0,0,.28); font: 12px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; pointer-events: none; }
 .bd-tip p { margin: 0 0 8px; } .bd-tip p:last-child, .bd-tip ul { margin-bottom: 0; }
 .bd-tip .t { color: #50575e; word-break: break-word; }
-.bd-tr { display: inline-grid; place-items: center; min-width: 22px; height: 13px; padding: 0 4px; margin-left: 6px; border-radius: 3px; font: 600 9px/1 system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: .03em; color: #fff; text-decoration: none; }
+.bd-row-side { display: grid; gap: 5px; justify-items: end; }
+.bd-trs { display: flex; gap: 4px; }
+.bd-tr { display: inline-grid; place-items: center; min-width: 24px; height: 15px; padding: 0 6px; box-sizing: border-box; border-radius: 999px; border: 1px solid; font: 500 9px/1 system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: .06em; text-decoration: none; cursor: default; }
+.bd-tr.ok { border-color: var(--bd-accent, #4caf50); background: color-mix(in srgb, var(--bd-accent, #4caf50) 18%, transparent); color: var(--kui-color-foreground-neutral-emphasis); cursor: pointer; }
+.bd-tr.ok:hover { background: var(--bd-accent, #4caf50); color: var(--bd-on-accent, #000); }
+.bd-tr.no { border-style: dashed; border-color: var(--kui-color-foreground-neutral-tertiary, #777); color: var(--kui-color-foreground-neutral-tertiary, #777); }
 .bd-fixed-item.bd-missing .bd-row-title { opacity: .6; }
 .bd-fixed-ai { all: unset; cursor: pointer; padding: 4px 10px; border-radius: 999px; background: var(--bd-accent); color: var(--bd-on-accent); font: 600 12px/1.3 var(--kui-typography-font-family-base, system-ui, sans-serif); white-space: nowrap; }
 .bd-tip ul { margin: 2px 0 0; padding-left: 16px; }
@@ -110,15 +115,14 @@ function trPills(itId: string) {
   const st = (window as any).bdI18n?.status;
   if (!st) return null;
   const box = document.createElement('span');
-  box.style.display = 'inline-flex';
+  box.className = 'bd-trs';
   for (const l of st.langs as string[]) {
     const [col, slug] = itId.includes('/') ? itId.split('/') : [null, itId];
     const tr = st.translations[l];
     const target = col ? tr.collections[col]?.[slug] : tr.singletons[slug] ? slug : undefined;
     const pill = document.createElement(target ? 'a' : 'span');
-    pill.className = 'bd-tr';
+    pill.className = `bd-tr ${target ? 'ok' : 'no'}`;
     pill.textContent = l.toUpperCase();
-    pill.style.background = target ? COLORS.green : COLORS.gray;
     pill.title = target ? `Tradotta (${l.toUpperCase()}): apri la traduzione` : `Non ancora tradotta (${l.toUpperCase()})`;
     if (target) {
       const href = col ? `${adminBase()}/collection/${l}_${col}/item/${encodeURIComponent(target)}` : `${adminBase()}/singleton/${l}_${slug}`;
@@ -129,6 +133,15 @@ function trPills(itId: string) {
     box.append(pill);
   }
   return box;
+}
+
+/** colonna destra degli elenchi: riquadri SEO e, sotto, le traduzioni (staccate: il passaggio del mouse non apre la SEO) */
+function side(seo: HTMLElement, pills: HTMLElement | null) {
+  const col = document.createElement('span');
+  col.className = 'bd-row-side';
+  col.append(seo);
+  if (pills) col.append(pills);
+  return col;
 }
 
 /** Sidebar e dashboard: pagine a layout fisso (Home…) */
@@ -186,9 +199,7 @@ function applyCollections() {
     const text = document.createElement('span');
     text.className = 'bd-row-text';
     text.append(title, meta);
-    const seo = badgeRow(`${kind}/${slug}`, r);
-    if (r.lang === 'it' && r.itId) { const pills = trPills(r.itId); if (pills) seo.append(pills); }
-    box.append(text, seo);
+    box.append(text, side(badgeRow(`${kind}/${slug}`, r), r.lang === 'it' && r.itId ? trPills(r.itId) : null));
     cell.classList.add('bd-row-host');
     if (old) old.replaceWith(box); else cell.appendChild(box);
   });
@@ -255,9 +266,7 @@ function applyFixedList() {
     ['pointerdown', 'mousedown', 'click', 'keydown'].forEach((ev) => link.addEventListener(ev, (e) => e.stopPropagation()));
     meta.append(link);
     text.append(title, meta);
-    const seo = badgeRow(key, r);
-    if (lang === 'it') { const pills = trPills(itKey); if (pills) seo.append(pills); }
-    row.append(text, seo);
+    row.append(text, side(badgeRow(key, r), lang === 'it' ? trPills(itKey) : null));
     item.append(row);
     list.append(item);
   }

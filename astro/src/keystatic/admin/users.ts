@@ -1,4 +1,4 @@
-// UTENTI (solo admin): clienti che entrano nel pannello con email e password. Voce "Utenti" nella sidebar e pagina
+// UTENTI (solo admin): clienti che entrano nel pannello con email e password. Voce "Utenti" sotto "Impostazioni" e pagina
 // /admin/…/utenti: crea, reimposta password, disattiva, elimina. Dati: /api/users.
 import { adminBase } from './base';
 
@@ -76,18 +76,18 @@ async function render(box: HTMLElement, note = '') {
 }
 
 function sync() {
-  // voce "Utenti" nella sidebar, dopo "Richieste"
-  const leads = document.querySelector<HTMLAnchorElement>('.bd-leads-link');
-  if (leads && !document.querySelector('.bd-users-link')) {
-    const li = leads.closest('li') ?? leads;
+  // voce "Utenti" nella sidebar, nel gruppo "Configurazione" sotto "Impostazioni"
+  const settings = [...document.querySelectorAll<HTMLAnchorElement>('nav a[href*="/singleton/"]')].find((a) => /\/singleton\/(?:[a-z]{2}_)?settings$/.test(a.getAttribute('href') ?? ''));
+  if (settings && !document.querySelector('.bd-users-link')) {
+    const li = settings.closest('li') ?? settings;
     const copy = li.cloneNode(true) as HTMLElement;
     const a = (copy.matches('a') ? copy : copy.querySelector('a')) as HTMLAnchorElement;
-    a.classList.remove('bd-leads-link'); a.classList.add('bd-users-link');
-    a.querySelector('.bd-leads-count')?.remove();
+    a.classList.add('bd-users-link');
     a.href = href();
     a.removeAttribute('aria-current');
     const walker = document.createTreeWalker(a, NodeFilter.SHOW_TEXT);
-    for (let n = walker.nextNode(); n; n = walker.nextNode()) if (n.nodeValue?.trim() === 'Richieste') n.nodeValue = 'Utenti';
+    let first = true;
+    for (let n = walker.nextNode(); n; n = walker.nextNode()) if (n.nodeValue?.trim()) { n.nodeValue = first ? 'Utenti' : ''; first = false; }
     a.addEventListener('click', (e) => { e.preventDefault(); history.pushState(null, '', href()); dispatchEvent(new PopStateEvent('popstate')); });
     li.after(copy);
   }

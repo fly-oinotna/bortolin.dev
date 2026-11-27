@@ -94,6 +94,25 @@ function mount() {
   document.addEventListener('visibilitychange', () => { if (!document.hidden) refresh(); });
 }
 
+/**
+ * Selettore del ramo e menu Git nascosti per tutti: si lavora sempre su "contenuti" e si pubblica col pulsante.
+ * Si nasconde la riga che li contiene entrambi (il più piccolo contenitore comune).
+ */
+function hideBranchPicker() {
+  const picker = document.querySelector<HTMLElement>('[aria-label="Current branch"], [aria-label="Ramo attuale"]');
+  const git = document.querySelector<HTMLElement>('[aria-label="git actions"]');
+  if (!picker || picker.closest('[data-bd-git-hidden]')) return;
+  let row: HTMLElement = picker;
+  if (git) while (row.parentElement && !row.contains(git)) row = row.parentElement;
+  if (row.querySelector('nav')) row = picker; // per sicurezza: mai la sidebar intera
+  row.setAttribute('data-bd-git-hidden', '');
+  row.style.display = 'none';
+}
+
 // solo nel pannello online (indirizzi /admin/branch/…)
-if (location.pathname.startsWith('/admin/branch/')) { guardBranch(); mount(); }
+if (location.pathname.startsWith('/admin/branch/')) {
+  guardBranch(); mount();
+  new MutationObserver(hideBranchPicker).observe(document.body, { childList: true, subtree: true });
+  hideBranchPicker();
+}
 else if ((window as any).__bdClient) mount(); // clienti: pannello senza ramo nell'indirizzo, ma pubblicano anche loro

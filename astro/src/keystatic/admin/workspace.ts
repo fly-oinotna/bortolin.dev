@@ -116,8 +116,22 @@ function untar(gz: Uint8Array, dir: string) {
   }
 }
 
+// un solo download per volta: il pannello fa partire molte richieste insieme e, scaricando lo stesso commit nella
+// stessa cartella, una cancellava i file che un'altra stava leggendo (elenchi di post e pagine rimasti vuoti)
+let syncing: { sha: string; done: Promise<void> } | null = null;
 async function sync(token: string, sha: string) {
+  while (syncing) {
+    const s = syncing;
+    await s.done.catch(() => {});
+    if (syncing === s) syncing = null;
+  }
   if (current?.sha === sha) return;
+  const done = download(token, sha);
+  syncing = { sha, done };
+  try { await done; } finally { if (syncing?.done === done) syncing = null; }
+}
+
+async function download(token: string, sha: string) {
   const res = await fetch(`${API}${repo(`/tarball/${sha}`)}`, { headers: { Authorization: `Bearer ${token}`, 'User-Agent': 'bortolin.dev-admin' } });
   if (!res.ok) throw new HttpError(502, `Download del repository non riuscito (${res.status})`);
   const dir = join(tmpdir(), `bd-ws-${sha.slice(0, 12)}`);
