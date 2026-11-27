@@ -179,7 +179,8 @@ function applyCollections() {
   document.querySelectorAll<HTMLElement>('[role="row"][data-key^="key:"]').forEach((rowEl) => {
     const slug = rowEl.dataset.key!.slice(4);
     const r = pages[`${kind}/${slug}`];
-    const cell = rowEl.querySelector<HTMLElement>('[role="rowheader"], [role="gridcell"]');
+    // la cella del nome (online prima c'è la colonna dello stato: "aggiunta", "modificata")
+    const cell = rowEl.querySelector<HTMLElement>('[role="rowheader"]') ?? rowEl.querySelector<HTMLElement>('[role="gridcell"]');
     if (!r || !cell) return;
     const sig = JSON.stringify(r) + JSON.stringify((window as any).bdI18n?.status?.translations ?? null);
     const old = cell.querySelector<HTMLElement>(':scope > .bd-row');
@@ -336,9 +337,11 @@ function markPagesNav() {
 function applyOffers() {
   if (!/\/collection\/offers\/?$/.test(location.pathname)) return;
   document.querySelectorAll<HTMLElement>('main [role="row"]').forEach((row) => {
+    // colonna dello slug e quella dopo (il nome); online prima c'è la colonna dello stato, che si lascia stare
     const cells = [...row.querySelectorAll<HTMLElement>('[role="rowheader"], [role="gridcell"], [role="columnheader"]')];
-    if (cells.length < 2) return;
-    const [a, b] = cells;
+    const i = cells.findIndex((c) => c.getAttribute('role') === 'rowheader' || c.dataset.key === '@@slug');
+    if (i < 0 || !cells[i + 1]) return;
+    const a = cells[i], b = cells[i + 1];
     // testo originale della cella (sempre quello attuale di Keystatic, che carica i nomi dopo gli slug)
     const text = (c: HTMLElement) => [...c.childNodes].filter((n) => !(n instanceof HTMLElement && n.classList.contains('bd-swap'))).map((n) => n.textContent).join('').trim();
     const ta = text(a), tb = text(b);
