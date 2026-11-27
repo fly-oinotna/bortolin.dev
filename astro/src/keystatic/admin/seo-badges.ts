@@ -172,6 +172,13 @@ function applySingletons() {
   }
 }
 
+/**
+ * Cella del nome (slug) di una riga. Si riconosce dalla chiave di Keystatic ("@@slug…"), non dal ruolo:
+ * online prima c'è la colonna dello stato ("@@status…"), che è anche lei un "rowheader".
+ */
+const slugCell = (row: HTMLElement) =>
+  row.querySelector<HTMLElement>('[data-key^="@@slug"]') ?? row.querySelector<HTMLElement>('[role="rowheader"]');
+
 /** Elenchi di Pagine e Post: titolo, sotto l'indirizzo cliccabile (nuova scheda) e i badge SEO */
 function applyCollections() {
   const m = location.pathname.match(/\/collection\/([^/]+)\/?$/);
@@ -181,7 +188,7 @@ function applyCollections() {
     const slug = rowEl.dataset.key!.slice(4);
     const r = pages[`${kind}/${slug}`];
     // la cella del nome (online prima c'è la colonna dello stato: "aggiunta", "modificata")
-    const cell = rowEl.querySelector<HTMLElement>('[role="rowheader"]') ?? rowEl.querySelector<HTMLElement>('[role="gridcell"]');
+    const cell = slugCell(rowEl);
     if (!r || !cell) return;
     const sig = JSON.stringify(r) + JSON.stringify((window as any).bdI18n?.status?.translations ?? null);
     const old = cell.querySelector<HTMLElement>(':scope > .bd-row');
@@ -340,7 +347,7 @@ function applyOffers() {
   document.querySelectorAll<HTMLElement>('main [role="row"]').forEach((row) => {
     // colonna dello slug e quella dopo (il nome); online prima c'è la colonna dello stato, che si lascia stare
     const cells = [...row.querySelectorAll<HTMLElement>('[role="rowheader"], [role="gridcell"], [role="columnheader"]')];
-    const i = cells.findIndex((c) => c.getAttribute('role') === 'rowheader' || c.dataset.key === '@@slug');
+    const i = cells.findIndex((c) => (c.dataset.key ?? '').startsWith('@@slug'));
     if (i < 0 || !cells[i + 1]) return;
     const a = cells[i], b = cells[i + 1];
     // testo originale della cella (sempre quello attuale di Keystatic, che carica i nomi dopo gli slug)
