@@ -14,7 +14,7 @@ export default async (req) => {
   let ref = '';
   try { ref = body?.ref ? new URL(body.ref).hostname : ''; } catch { /* provenienza non valida */ }
 
-  const store = getStore('errori-404');
+  const store = getStore({ name: 'errori-404', consistency: 'strong' });
   const key = createHash('sha1').update(path).digest('hex').slice(0, 20);
   const now = new Date().toISOString();
   const item = (await store.get(key, { type: 'json' }).catch(() => null)) ?? { path, count: 0, first: now, refs: {} };

@@ -13,7 +13,7 @@ const json = (data: unknown, status = 200) => new Response(JSON.stringify(data),
 
 async function store() {
   const { getStore } = await import('@netlify/blobs');
-  return getStore('richieste');
+  return getStore({ name: 'richieste', consistency: 'strong' });
 }
 
 export const GET: APIRoute = async ({ request }) => {

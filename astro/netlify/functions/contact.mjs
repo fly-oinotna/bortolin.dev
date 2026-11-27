@@ -50,7 +50,7 @@ export default async (req) => {
   const id = `${new Date().toISOString().replace(/[:.]/g, '-')}-${Math.random().toString(36).slice(2, 8)}`;
   let saved = false;
   try {
-    await getStore('richieste').setJSON(id, { id, ...d, status: 'nuova', notes: '', createdAt: new Date().toISOString() });
+    await getStore({ name: 'richieste', consistency: 'strong' }).setJSON(id, { id, ...d, status: 'nuova', notes: '', createdAt: new Date().toISOString() });
     saved = true;
   } catch (e) {
     console.error('[contact] salvataggio non riuscito:', e?.message);
@@ -92,7 +92,7 @@ export default async (req) => {
   }
   if (saved && !sent) {
     // la richiesta c'è, ma l'email no: lo si annota per il pannello
-    try { await getStore('richieste').setJSON(id, { id, ...d, status: 'nuova', notes: '', emailFailed: true, createdAt: new Date().toISOString() }); } catch { /* già salvata */ }
+    try { await getStore({ name: 'richieste', consistency: 'strong' }).setJSON(id, { id, ...d, status: 'nuova', notes: '', emailFailed: true, createdAt: new Date().toISOString() }); } catch { /* già salvata */ }
   }
   return back(saved || sent);
 };

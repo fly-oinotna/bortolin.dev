@@ -16,7 +16,7 @@ const REDIRECTS = 'src/content/it/redirects.json';
 
 async function store() {
   const { getStore } = await import('@netlify/blobs');
-  return getStore('errori-404');
+  return getStore({ name: 'errori-404', consistency: 'strong' });
 }
 
 export const GET: APIRoute = async ({ request }) => {

@@ -13,7 +13,7 @@ export const GET: APIRoute = async ({ request }) => {
   try {
     await authorize(request);
     const { getStore } = await import('@netlify/blobs');
-    const store = getStore('lighthouse');
+    const store = getStore({ name: 'lighthouse', consistency: 'strong' });
     const { blobs } = await store.list({ prefix: 'run-' });
     const keys = blobs.map((b) => b.key).sort().reverse().slice(0, 30);
     const runs = (await Promise.all(keys.map((k) => store.get(k, { type: 'json' })))).filter(Boolean);

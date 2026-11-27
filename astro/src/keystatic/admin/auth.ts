@@ -24,7 +24,7 @@ export const CLIENT_DENIED_KEYS = ['settings', 'cookies', 'google', 'redirects',
 const LOCAL_FILE = join(process.cwd(), 'node_modules', '.cache', 'bd-users.json');
 const localAll = (): Record<string, User> => { try { return JSON.parse(readFileSync(LOCAL_FILE, 'utf8')); } catch { return {}; } };
 const localSave = (all: Record<string, User>) => { mkdirSync(dirname(LOCAL_FILE), { recursive: true }); writeFileSync(LOCAL_FILE, JSON.stringify(all, null, 2)); };
-const blobs = async () => (await import('@netlify/blobs')).getStore('utenti');
+const blobs = async () => (await import('@netlify/blobs')).getStore({ name: 'utenti', consistency: 'strong' });
 const keyOf = (email: string) => email.trim().toLowerCase();
 
 export const users = {

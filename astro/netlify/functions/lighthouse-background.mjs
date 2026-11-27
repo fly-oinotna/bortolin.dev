@@ -40,12 +40,12 @@ export default async (req) => {
   // senza chiave Google userebbe una quota anonima condivisa da tutti, quasi sempre esaurita: meglio dirlo chiaramente
   if (!key) {
     const date = new Date().toISOString();
-    await getStore('lighthouse').setJSON(`run-${date}`, { date, results: PAGES.map((path) => ({ path, error: 'Manca PAGESPEED_API_KEY nelle variabili d’ambiente di Netlify: aggiungila e rifai il deploy.' })) });
+    await getStore({ name: 'lighthouse', consistency: 'strong' }).setJSON(`run-${date}`, { date, results: PAGES.map((path) => ({ path, error: 'Manca PAGESPEED_API_KEY nelle variabili d’ambiente di Netlify: aggiungila e rifai il deploy.' })) });
     return;
   }
   const results = [];
   for (const path of PAGES) results.push(await measure(site, path, key).catch((e) => ({ path, error: e.message })));
-  const store = getStore('lighthouse');
+  const store = getStore({ name: 'lighthouse', consistency: 'strong' });
   const date = new Date().toISOString();
   await store.setJSON(`run-${date}`, { date, results });
   // si tengono solo le ultime misure
