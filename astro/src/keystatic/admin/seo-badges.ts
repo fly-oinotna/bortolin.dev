@@ -33,6 +33,11 @@ const CSS = `
 .bd-row .bd-row-side > .bd-seo { margin-top: 0; flex-basis: auto; justify-content: flex-end; flex-wrap: nowrap; }
 .bd-row-host { width: 100%; }
 .bd-row-host > :not(.bd-row) { display: none !important; }
+.bd-swap-host > :not(.bd-swap) { display: none !important; }
+.bd-swap-host { display: flex; align-items: center; }
+.bd-swap { font: 400 14px/1.3 var(--kui-typography-font-family-base, system-ui, -apple-system, "Segoe UI", sans-serif); color: var(--kui-color-foreground-neutral); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bd-swap.main { font-weight: 600; }
+.bd-swap.head { color: var(--kui-color-foreground-neutral-secondary); }
 .bd-tip { position: fixed; z-index: 99999; width: 320px; padding: 12px 14px; border-radius: 8px; background: #fff; color: #1d2327;
   box-shadow: 0 8px 28px rgba(0,0,0,.28); font: 12px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; pointer-events: none; }
 .bd-tip p { margin: 0 0 8px; } .bd-tip p:last-child, .bd-tip ul { margin-bottom: 0; }
@@ -324,7 +329,33 @@ function markPagesNav() {
   });
 }
 
+/**
+ * Offerte: Keystatic mette sempre lo slug nella prima colonna. Si mostra prima il nome dell'offerta, poi lo slug
+ * (solo l'aspetto: si nasconde il contenuto originale delle celle e si aggiunge il testo scambiato).
+ */
+function applyOffers() {
+  if (!/\/collection\/offers\/?$/.test(location.pathname)) return;
+  document.querySelectorAll<HTMLElement>('main [role="row"]').forEach((row) => {
+    const cells = [...row.querySelectorAll<HTMLElement>('[role="rowheader"], [role="gridcell"], [role="columnheader"]')];
+    if (cells.length < 2) return;
+    const [a, b] = cells;
+    // testo originale della cella (sempre quello attuale di Keystatic, che carica i nomi dopo gli slug)
+    const text = (c: HTMLElement) => [...c.childNodes].filter((n) => !(n instanceof HTMLElement && n.classList.contains('bd-swap'))).map((n) => n.textContent).join('').trim();
+    const ta = text(a), tb = text(b);
+    const head = a.getAttribute('role') === 'columnheader';
+    for (const [cell, show] of [[a, tb], [b, ta]] as const) {
+      const old = cell.querySelector<HTMLElement>(':scope > .bd-swap');
+      if (old && old.textContent === show) continue;
+      const span = old ?? Object.assign(document.createElement('span'), { className: `bd-swap${head ? ' head' : cell === a ? ' main' : ''}` });
+      span.textContent = show;
+      cell.classList.add('bd-swap-host');
+      if (!old) cell.append(span);
+    }
+  });
+}
+
 function apply() {
+  applyOffers();
   applySingletons();
   applyCollections();
   applyFixedList();
