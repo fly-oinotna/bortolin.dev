@@ -57,7 +57,7 @@ export default function keystaticAdmin() {
         mkdirSync(dotAstroDir, { recursive: true });
         writeFileSync(new URL('keystatic-imports.js', dotAstroDir), 'import "@keystatic/astro/ui";\nimport "@keystatic/astro/api";\nimport "@keystatic/core/ui";\n');
         injectRoute({ entrypoint: './src/keystatic/admin/page.astro', pattern: '/admin/[...params]', prerender: false });
-        injectRoute({ entrypoint: '@keystatic/astro/internal/keystatic-api.js', pattern: '/api/keystatic/[...params]', prerender: false });
+        injectRoute({ entrypoint: './src/keystatic/admin/keystatic-api.ts', pattern: '/api/keystatic/[...params]', prerender: false });
         injectRoute({ entrypoint: './src/keystatic/admin/seo-status.ts', pattern: '/api/seo-status', prerender: false });
         injectRoute({ entrypoint: './src/keystatic/admin/site-icon.ts', pattern: '/api/site-icon', prerender: false });
         injectRoute({ entrypoint: './src/keystatic/admin/media-api.ts', pattern: '/api/media', prerender: false });
@@ -68,6 +68,9 @@ export default function keystaticAdmin() {
         injectRoute({ entrypoint: './src/keystatic/admin/ai-api.ts', pattern: '/api/ai', prerender: false });
         injectRoute({ entrypoint: './src/keystatic/admin/notfound-api.ts', pattern: '/api/not-found', prerender: false });
         injectRoute({ entrypoint: './src/keystatic/admin/lighthouse-api.ts', pattern: '/api/lighthouse', prerender: false });
+        injectRoute({ entrypoint: './src/keystatic/admin/auth-api.ts', pattern: '/api/auth', prerender: false });
+        injectRoute({ entrypoint: './src/keystatic/admin/users-api.ts', pattern: '/api/users', prerender: false });
+        injectRoute({ entrypoint: './src/keystatic/admin/login.astro', pattern: '/admin/login', prerender: false });
       },
       // controllo del sito a ogni build: /_bd/site-check.json per la Dashboard (avvisa, non blocca)
       'astro:build:done': ({ dir, logger }) => {

@@ -468,7 +468,9 @@ const FIXED_KEYS = ['home', 'servizi', 'sitiWeb', 'consulenzaSeo', 'performance'
 export default config({
   // in locale i file del progetto; online GitHub (ramo "contenuti", poi "Pubblica" → main).
   // Per creare la GitHub App di Keystatic in locale: PUBLIC_KEYSTATIC_STORAGE=github npm run dev
-  storage: import.meta.env.DEV && import.meta.env.PUBLIC_KEYSTATIC_STORAGE !== 'github'
+  // clienti (email e password, window.__bdClient impostato da admin/page.astro): modalità "locale" verso il nostro server,
+  // che salva su GitHub al posto loro (src/keystatic/admin/keystatic-api.ts)
+  storage: (typeof window !== 'undefined' && (window as any).__bdClient) || (import.meta.env.DEV && import.meta.env.PUBLIC_KEYSTATIC_STORAGE !== 'github')
     ? { kind: 'local' }
     : { kind: 'github', repo: { owner: 'fly-oinotna', name: 'bortolin.dev' }, pathPrefix: 'astro' },
   ui: {
