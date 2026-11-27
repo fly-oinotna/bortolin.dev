@@ -37,6 +37,7 @@ export const POST: APIRoute = async ({ request }) => {
     const { path, to } = await request.json();
     if (!/^\/\S*$/.test(String(path)) || !/^(\/|https?:\/\/)\S*$/.test(String(to))) return json({ error: 'Percorso o destinazione non validi' }, 400);
     const ws = await open(request);
+    if (ws.client) return json({ error: 'I redirect li gestiscono gli amministratori.' }, 403);
     const data = JSON.parse(readFileSync(REDIRECTS, 'utf8'));
     data.list ??= { items: [] };
     if (data.list.items.some((r: any) => r.from === path)) return json({ error: `Esiste già un redirect per ${path}` }, 409);

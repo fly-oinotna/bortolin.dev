@@ -15,6 +15,7 @@ import { dirname, join } from 'node:path';
 import { tmpdir } from 'node:os';
 import { resetRoutes } from '../../lib/i18n';
 import { resetPages } from '../../lib/pages';
+import { appToken, clientOf, type User } from './auth';
 
 export const REPO = { owner: 'fly-oinotna', name: 'bortolin.dev', prefix: 'astro', work: 'contenuti', live: 'main' } as const;
 /** online i file arrivano da GitHub; in sviluppo sono quelli del progetto */
@@ -115,8 +116,22 @@ function untar(gz: Uint8Array, dir: string) {
   }
 }
 
+// un solo download per volta: il pannello fa partire molte richieste insieme e, scaricando lo stesso commit nella
+// stessa cartella, una cancellava i file che un'altra stava leggendo (elenchi di post e pagine rimasti vuoti)
+let syncing: { sha: string; done: Promise<void> } | null = null;
 async function sync(token: string, sha: string) {
+  while (syncing) {
+    const s = syncing;
+    await s.done.catch(() => {});
+    if (syncing === s) syncing = null;
+  }
   if (current?.sha === sha) return;
+  const done = download(token, sha);
+  syncing = { sha, done };
+  try { await done; } finally { if (syncing?.done === done) syncing = null; }
+}
+
+async function download(token: string, sha: string) {
   const res = await fetch(`${API}${repo(`/tarball/${sha}`)}`, { headers: { Authorization: `Bearer ${token}`, 'User-Agent': 'bortolin.dev-admin' } });
   if (!res.ok) throw new HttpError(502, `Download del repository non riuscito (${res.status})`);
   const dir = join(tmpdir(), `bd-ws-${sha.slice(0, 12)}`);
@@ -135,6 +150,8 @@ export interface Change { path: string; content?: Uint8Array | string; remove?: 
 export interface Session {
   remote: boolean;
   token: string | null;
+  /** cliente collegato (null = admin) */
+  client: User | null;
   /** scrive un file (percorso relativo alla cartella del sito, es. "src/content/en/home.json") */
   write(path: string, content: Uint8Array | string): void;
   remove(path: string): void;
@@ -166,11 +183,17 @@ export async function open(request: Request, { maxAge = 0 } = {}): Promise<Sessi
       changes.push({ path: to, content: undefined }); // il contenuto si legge al momento della commit
     },
   };
-  if (!REMOTE) return { remote: false, token: null, ...local, save: async () => {} };
+  const client = await clientOf(request);
+  if (!REMOTE) return { remote: false, token: null, client, ...local, save: async () => {} };
 
-  const token = tokenOf(request);
-  if (!token) throw new HttpError(401, 'Accedi al pannello con GitHub per continuare.');
-  await verify(token);
+  let token: string;
+  if (client) token = await appToken(REPO.owner, REPO.name);
+  else {
+    const t = tokenOf(request);
+    if (!t) throw new HttpError(401, 'Accedi al pannello per continuare.');
+    await verify(t);
+    token = t;
+  }
   let base: string;
   if (current && maxAge && Date.now() - current.checked < maxAge) base = current.sha;
   else {
@@ -181,12 +204,14 @@ export async function open(request: Request, { maxAge = 0 } = {}): Promise<Sessi
   return {
     remote: true,
     token,
+    client,
     ...local,
     async save(message: string) {
       if (!changes.length) return;
       let sha: string;
       try {
-        sha = await commit(token, base, changes, message);
+        // le commit dei clienti le fa l'app GitHub: nel messaggio si scrive chi ha modificato
+        sha = await commit(token, base, changes, client ? `${client.name}: ${message}` : message);
       } catch (e) {
         // la copia locale contiene modifiche che su GitHub non ci sono: si butta e si riscarica alla prossima richiesta
         if (current) rmSync(current.dir, { recursive: true, force: true });
@@ -235,8 +260,11 @@ async function commit(token: string, base: string, changes: Change[], message: s
 // ---------------------------------------------------------------- pubblicazione
 /** controlla l'utente (per le API che non hanno bisogno della copia dei file) */
 export async function authorize(request: Request) {
+  // cliente (email e password): il server lavora con l'app GitHub di Keystatic
+  const client = await clientOf(request);
+  if (client) return appToken(REPO.owner, REPO.name);
   const token = tokenOf(request);
-  if (!token) throw new HttpError(401, 'Accedi al pannello con GitHub per continuare.');
+  if (!token) throw new HttpError(401, 'Accedi al pannello per continuare.');
   await verify(token);
   return token;
 }

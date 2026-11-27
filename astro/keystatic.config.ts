@@ -7,6 +7,7 @@ import { counted } from './src/keystatic/counted';
 import { SEO_LIMITS } from './src/lib/seo';
 import { blog } from './src/keystatic/blog';
 import { sitiWeb, consulenzaSeo, performance, integrazioneAi, googleAds, aiAds, metaAds, consulenzaDigitale, webAgency, servizi, caseStudy, caseStudiesArchive } from './src/keystatic/servizi';
+import { keystaticLocale } from './src/keystatic/admin/ui-i18n';
 
 // ---------------------------------------------------------------------------
 // Contenuti: src/content/<lingua>/*.json · Immagini: src/assets/images/*
@@ -91,7 +92,7 @@ const collections = {
     slugField: 'name',
     path: 'src/content/it/offerte/*',
     format: { data: 'json' },
-    columns: [],
+    columns: ['name'],
     schema: {
       name: fields.slug({ name: { label: 'Nome dell’offerta (interno)', validation: { isRequired: true } }, slug: { label: 'Identificativo' } }),
       offer: group('Offerta', {
@@ -468,7 +469,11 @@ const FIXED_KEYS = ['home', 'servizi', 'sitiWeb', 'consulenzaSeo', 'performance'
 export default config({
   // in locale i file del progetto; online GitHub (ramo "contenuti", poi "Pubblica" → main).
   // Per creare la GitHub App di Keystatic in locale: PUBLIC_KEYSTATIC_STORAGE=github npm run dev
-  storage: import.meta.env.DEV && import.meta.env.PUBLIC_KEYSTATIC_STORAGE !== 'github'
+  // clienti (email e password, window.__bdClient impostato da admin/page.astro): modalità "locale" verso il nostro server,
+  // che salva su GitHub al posto loro (src/keystatic/admin/keystatic-api.ts)
+  // lingua dei comandi del pannello: italiano; per i clienti quella scelta in Utenti (i campi restano in italiano)
+  locale: keystaticLocale() as any,
+  storage: (typeof window !== 'undefined' && (window as any).__bdClient) || (import.meta.env.DEV && import.meta.env.PUBLIC_KEYSTATIC_STORAGE !== 'github')
     ? { kind: 'local' }
     : { kind: 'github', repo: { owner: 'fly-oinotna', name: 'bortolin.dev' }, pathPrefix: 'astro' },
   ui: {

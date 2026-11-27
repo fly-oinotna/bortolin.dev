@@ -3,6 +3,7 @@
 // Al passaggio del mouse compare il tooltip con tutti i dettagli. I dati arrivano da /api/seo-status e si aggiornano da soli.
 import type { SeoReport } from '../../lib/seo';
 import { adminBase } from './base';
+import { t } from './ui-i18n';
 
 const COLORS = { red: '#f44336', green: '#4caf50', gray: '#777777' };
 type Entry = SeoReport & { url: string; href: string; pageTitle: string; kind?: string; label?: string; lang?: string; itId?: string };
@@ -30,14 +31,24 @@ const CSS = `
 .bd-row-meta a { font-size: 11.5px; opacity: .75; color: inherit; text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
 .bd-row-meta a:hover { opacity: 1; }
 .bd-row-text { display: grid; gap: 4px; min-width: 0; }
-.bd-row > .bd-seo { margin-top: 0; flex-basis: auto; justify-content: flex-end; flex-wrap: nowrap; }
+.bd-row .bd-row-side > .bd-seo { margin-top: 0; flex-basis: auto; justify-content: flex-end; flex-wrap: nowrap; }
 .bd-row-host { width: 100%; }
 .bd-row-host > :not(.bd-row) { display: none !important; }
+.bd-swap-host > :not(.bd-swap) { display: none !important; }
+.bd-swap-host { display: flex; align-items: center; }
+.bd-swap { font: 400 14px/1.3 var(--kui-typography-font-family-base, system-ui, -apple-system, "Segoe UI", sans-serif); color: var(--kui-color-foreground-neutral); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bd-swap.main { font-weight: 600; }
+.bd-swap.head { color: var(--kui-color-foreground-neutral-secondary); }
 .bd-tip { position: fixed; z-index: 99999; width: 320px; padding: 12px 14px; border-radius: 8px; background: #fff; color: #1d2327;
   box-shadow: 0 8px 28px rgba(0,0,0,.28); font: 12px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif; pointer-events: none; }
 .bd-tip p { margin: 0 0 8px; } .bd-tip p:last-child, .bd-tip ul { margin-bottom: 0; }
 .bd-tip .t { color: #50575e; word-break: break-word; }
-.bd-tr { display: inline-grid; place-items: center; min-width: 22px; height: 13px; padding: 0 4px; margin-left: 6px; border-radius: 3px; font: 600 9px/1 system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: .03em; color: #fff; text-decoration: none; }
+.bd-row-side { display: grid; gap: 5px; justify-items: end; }
+.bd-trs { display: flex; gap: 4px; }
+.bd-tr { display: inline-grid; place-items: center; min-width: 24px; height: 15px; padding: 0 6px; box-sizing: border-box; border-radius: 999px; border: 1px solid; font: 500 9px/1 system-ui, -apple-system, "Segoe UI", sans-serif; letter-spacing: .06em; text-decoration: none; cursor: default; }
+.bd-tr.ok { border-color: var(--bd-accent, #4caf50); background: color-mix(in srgb, var(--bd-accent, #4caf50) 18%, transparent); color: var(--kui-color-foreground-neutral-emphasis); cursor: pointer; }
+.bd-tr.ok:hover { background: var(--bd-accent, #4caf50); color: var(--bd-on-accent, #000); }
+.bd-tr.no { border-style: dashed; border-color: var(--kui-color-foreground-neutral-tertiary, #777); color: var(--kui-color-foreground-neutral-tertiary, #777); }
 .bd-fixed-item.bd-missing .bd-row-title { opacity: .6; }
 .bd-fixed-ai { all: unset; cursor: pointer; padding: 4px 10px; border-radius: 999px; background: var(--bd-accent); color: var(--bd-on-accent); font: 600 12px/1.3 var(--kui-typography-font-family-base, system-ui, sans-serif); white-space: nowrap; }
 .bd-tip ul { margin: 2px 0 0; padding-left: 16px; }
@@ -50,25 +61,25 @@ function badges(r: SeoReport) {
 
 function tooltip(r: SeoReport) {
   const line = (name: string, x: SeoReport['title']) =>
-    `<p><strong>${name}</strong> <span style="color:${x.color}">- ${x.length} caratteri - ${esc(x.label)}</span><br><span class="t">${esc(x.text) || '—'}</span></p>`;
+    `<p><strong>${name}</strong> <span style="color:${x.color}">- ${esc(t('{n} caratteri', { n: x.length }))} - ${esc(t(x.label))}</span><br><span class="t">${esc(x.text) || '—'}</span></p>`;
   const md = !r.markdown.enabled
-    ? `<span style="color:${COLORS.gray}">Disattivato</span>`
+    ? `<span style="color:${COLORS.gray}">${esc(t('Disattivato'))}</span>`
     : r.markdown.custom
-      ? `<span style="color:${COLORS.green}">Personalizzato</span>`
-      : `<span style="color:${COLORS.red}">Predefinito</span>`;
-  const auto = (r.schema.auto ?? []).map((t) => `<li style="color:${COLORS.green}">${esc(t)} (automatico)</li>`).join('');
+      ? `<span style="color:${COLORS.green}">${esc(t('Personalizzato'))}</span>`
+      : `<span style="color:${COLORS.red}">${esc(t('Predefinito'))}</span>`;
+  const auto = (r.schema.auto ?? []).map((x) => `<li style="color:${COLORS.green}">${esc(x)} (${esc(t('automatico'))})</li>`).join('');
   const types = auto + r.schema.types
-    .map((t) => `<li style="color:${t.enabled ? COLORS.green : COLORS.gray}">${t.label} ${t.enabled ? 'attivo' : 'non attivo'}</li>`)
+    .map((x) => `<li style="color:${x.enabled ? COLORS.green : COLORS.gray}">${x.label} ${esc(t(x.enabled ? 'attivo' : 'non attivo'))}</li>`)
     .join('');
   const custom = r.schema.custom
-    ? `<li style="color:${COLORS.green}">Markup personalizzato attivo</li>`
-    : `<li style="color:${COLORS.gray}">Nessun markup personalizzato</li>`;
+    ? `<li style="color:${COLORS.green}">${esc(t('Markup personalizzato attivo'))}</li>`
+    : `<li style="color:${COLORS.gray}">${esc(t('Nessun markup personalizzato'))}</li>`;
   return [
     line('Meta Title', r.title),
     line('Meta Description', r.description),
     `<p><strong>Robots:</strong> <span style="color:${r.robots.color}">${esc(r.robots.label)}</span></p>`,
-    `<p><strong>OG Image:</strong> <span style="color:${COLORS.green}">${r.og.custom ? 'Personalizzata' : 'Automatica (generata dalla pagina)'}</span></p>`,
-    `<p><strong>Sitemap XML:</strong> <span style="color:${r.sitemap.color}">${esc(r.sitemap.label)}</span></p>`,
+    `<p><strong>OG Image:</strong> <span style="color:${COLORS.green}">${esc(t(r.og.custom ? 'Personalizzata' : 'Automatica (generata dalla pagina)'))}</span></p>`,
+    `<p><strong>Sitemap XML:</strong> <span style="color:${r.sitemap.color}">${esc(t(r.sitemap.label))}</span></p>`,
     `<p><strong>Markdown (llms.txt):</strong> ${md}</p>`,
     `<p><strong>Schema Markup:</strong></p><ul>${types}${custom}</ul>`,
   ].join('');
@@ -95,7 +106,7 @@ const badgeRow = (key: string, r: Entry) => {
   row.className = 'bd-seo';
   row.dataset.key = key;
   row.innerHTML = badges(r);
-  row.setAttribute('aria-label', `SEO: Meta Title ${r.title.label}, Meta Description ${r.description.label}, Robots ${r.robots.label}`);
+  row.setAttribute('aria-label', `SEO: Meta Title ${t(r.title.label)}, Meta Description ${t(r.description.label)}, Robots ${r.robots.label}`);
   // tooltip solo passando sopra i riquadri SEO
   row.addEventListener('mouseenter', () => showTip(row));
   row.addEventListener('mouseleave', hideTip);
@@ -110,16 +121,15 @@ function trPills(itId: string) {
   const st = (window as any).bdI18n?.status;
   if (!st) return null;
   const box = document.createElement('span');
-  box.style.display = 'inline-flex';
+  box.className = 'bd-trs';
   for (const l of st.langs as string[]) {
     const [col, slug] = itId.includes('/') ? itId.split('/') : [null, itId];
     const tr = st.translations[l];
     const target = col ? tr.collections[col]?.[slug] : tr.singletons[slug] ? slug : undefined;
     const pill = document.createElement(target ? 'a' : 'span');
-    pill.className = 'bd-tr';
+    pill.className = `bd-tr ${target ? 'ok' : 'no'}`;
     pill.textContent = l.toUpperCase();
-    pill.style.background = target ? COLORS.green : COLORS.gray;
-    pill.title = target ? `Tradotta (${l.toUpperCase()}): apri la traduzione` : `Non ancora tradotta (${l.toUpperCase()})`;
+    pill.title = target ? t('Tradotta ({l}): apri la traduzione', { l: l.toUpperCase() }) : t('Non ancora tradotta ({l})', { l: l.toUpperCase() });
     if (target) {
       const href = col ? `${adminBase()}/collection/${l}_${col}/item/${encodeURIComponent(target)}` : `${adminBase()}/singleton/${l}_${slug}`;
       (pill as HTMLAnchorElement).href = href;
@@ -129,6 +139,15 @@ function trPills(itId: string) {
     box.append(pill);
   }
   return box;
+}
+
+/** colonna destra degli elenchi: riquadri SEO e, sotto, le traduzioni (staccate: il passaggio del mouse non apre la SEO) */
+function side(seo: HTMLElement, pills: HTMLElement | null) {
+  const col = document.createElement('span');
+  col.className = 'bd-row-side';
+  col.append(seo);
+  if (pills) col.append(pills);
+  return col;
 }
 
 /** Sidebar e dashboard: pagine a layout fisso (Home…) */
@@ -153,6 +172,13 @@ function applySingletons() {
   }
 }
 
+/**
+ * Cella del nome (slug) di una riga. Si riconosce dalla chiave di Keystatic ("@@slug…"), non dal ruolo:
+ * online prima c'è la colonna dello stato ("@@status…"), che è anche lei un "rowheader".
+ */
+const slugCell = (row: HTMLElement) =>
+  row.querySelector<HTMLElement>('[data-key^="@@slug"]') ?? row.querySelector<HTMLElement>('[role="rowheader"]');
+
 /** Elenchi di Pagine e Post: titolo, sotto l'indirizzo cliccabile (nuova scheda) e i badge SEO */
 function applyCollections() {
   const m = location.pathname.match(/\/collection\/([^/]+)\/?$/);
@@ -161,7 +187,8 @@ function applyCollections() {
   document.querySelectorAll<HTMLElement>('[role="row"][data-key^="key:"]').forEach((rowEl) => {
     const slug = rowEl.dataset.key!.slice(4);
     const r = pages[`${kind}/${slug}`];
-    const cell = rowEl.querySelector<HTMLElement>('[role="rowheader"], [role="gridcell"]');
+    // la cella del nome (online prima c'è la colonna dello stato: "aggiunta", "modificata")
+    const cell = slugCell(rowEl);
     if (!r || !cell) return;
     const sig = JSON.stringify(r) + JSON.stringify((window as any).bdI18n?.status?.translations ?? null);
     const old = cell.querySelector<HTMLElement>(':scope > .bd-row');
@@ -186,9 +213,7 @@ function applyCollections() {
     const text = document.createElement('span');
     text.className = 'bd-row-text';
     text.append(title, meta);
-    const seo = badgeRow(`${kind}/${slug}`, r);
-    if (r.lang === 'it' && r.itId) { const pills = trPills(r.itId); if (pills) seo.append(pills); }
-    box.append(text, seo);
+    box.append(text, side(badgeRow(`${kind}/${slug}`, r), r.lang === 'it' && r.itId ? trPills(r.itId) : null));
     cell.classList.add('bd-row-host');
     if (old) old.replaceWith(box); else cell.appendChild(box);
   });
@@ -220,7 +245,7 @@ function applyFixedList() {
   const box = document.createElement('section');
   box.className = 'bd-fixed';
   box.dataset.sig = sig;
-  box.innerHTML = `<h2 class="bd-group-title">${FIXED_TITLE}</h2><div class="bd-fixed-list"></div>`;
+  box.innerHTML = `<h2 class="bd-group-title">${esc(t(FIXED_TITLE))}</h2><div class="bd-fixed-list"></div>`;
   const list = box.querySelector('div')!;
   for (const [key, r, itKey] of fixed) {
     if (!r) {
@@ -229,7 +254,7 @@ function applyFixedList() {
       const item = document.createElement('div');
       item.className = 'bd-fixed-item bd-missing';
       item.dataset.search = label.toLowerCase();
-      item.innerHTML = `<span class="bd-row"><span class="bd-row-text"><span class="bd-row-title"></span><span class="bd-row-meta">Non ancora tradotta</span></span><button type="button" class="bd-fixed-ai">Traduci con AI</button></span>`;
+      item.innerHTML = `<span class="bd-row"><span class="bd-row-text"><span class="bd-row-title"></span><span class="bd-row-meta">${esc(t('Non ancora tradotta'))}</span></span><button type="button" class="bd-fixed-ai">${esc(t('Traduci con AI'))}</button></span>`;
       item.querySelector('.bd-row-title')!.textContent = label;
       item.querySelector('button')!.addEventListener('click', () => (window as any).bdI18n?.translate({ lang, key: itKey }, label));
       list.append(item);
@@ -255,15 +280,13 @@ function applyFixedList() {
     ['pointerdown', 'mousedown', 'click', 'keydown'].forEach((ev) => link.addEventListener(ev, (e) => e.stopPropagation()));
     meta.append(link);
     text.append(title, meta);
-    const seo = badgeRow(key, r);
-    if (lang === 'it') { const pills = trPills(itKey); if (pills) seo.append(pills); }
-    row.append(text, seo);
+    row.append(text, side(badgeRow(key, r), lang === 'it' ? trPills(itKey) : null));
     item.append(row);
     list.append(item);
   }
   const other = document.createElement('h2');
   other.className = 'bd-group-title bd-other-title';
-  other.textContent = OTHER_TITLE;
+  other.textContent = t(OTHER_TITLE);
   grid.before(box, other);
   // stessi margini laterali della tabella di Keystatic
   const g = grid.getBoundingClientRect(), parent = grid.parentElement!.getBoundingClientRect();
@@ -315,7 +338,35 @@ function markPagesNav() {
   });
 }
 
+/**
+ * Offerte: Keystatic mette sempre lo slug nella prima colonna. Si mostra prima il nome dell'offerta, poi lo slug
+ * (solo l'aspetto: si nasconde il contenuto originale delle celle e si aggiunge il testo scambiato).
+ */
+function applyOffers() {
+  if (!/\/collection\/offers\/?$/.test(location.pathname)) return;
+  document.querySelectorAll<HTMLElement>('main [role="row"]').forEach((row) => {
+    // colonna dello slug e quella dopo (il nome); online prima c'è la colonna dello stato, che si lascia stare
+    const cells = [...row.querySelectorAll<HTMLElement>('[role="rowheader"], [role="gridcell"], [role="columnheader"]')];
+    const i = cells.findIndex((c) => (c.dataset.key ?? '').startsWith('@@slug'));
+    if (i < 0 || !cells[i + 1]) return;
+    const a = cells[i], b = cells[i + 1];
+    // testo originale della cella (sempre quello attuale di Keystatic, che carica i nomi dopo gli slug)
+    const text = (c: HTMLElement) => [...c.childNodes].filter((n) => !(n instanceof HTMLElement && n.classList.contains('bd-swap'))).map((n) => n.textContent).join('').trim();
+    const ta = text(a), tb = text(b);
+    const head = a.getAttribute('role') === 'columnheader';
+    for (const [cell, show] of [[a, tb], [b, ta]] as const) {
+      const old = cell.querySelector<HTMLElement>(':scope > .bd-swap');
+      if (old && old.textContent === show) continue;
+      const span = old ?? Object.assign(document.createElement('span'), { className: `bd-swap${head ? ' head' : cell === a ? ' main' : ''}` });
+      span.textContent = show;
+      cell.classList.add('bd-swap-host');
+      if (!old) cell.append(span);
+    }
+  });
+}
+
 function apply() {
+  applyOffers();
   applySingletons();
   applyCollections();
   applyFixedList();

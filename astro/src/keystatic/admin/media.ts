@@ -3,15 +3,16 @@
 // - campi immagine (src/keystatic/fields.ts → image()) → stessa finestra in modalità "scegli"
 // Dati e file passano da /api/media (src/keystatic/admin/media-api.ts).
 import { getProvider } from './ai-pref';
+import { t } from './ui-i18n';
 
 type Item = { path: string; name: string; folder: string; size: number; mtime: number; alt: string; ai: string; usedIn: string[] };
 
 /** Marcatura AI (AI Act, art. 50), come AM Tools 3: il badge compare sull'immagine nel sito */
 const AI_CHOICES = [
   { value: 'none', label: 'Nessuna' },
-  { value: 'ai', label: 'Realizzata con AI' },
-  { value: 'modified', label: 'Modificata con AI' },
-  { value: 'generated', label: 'Generata con AI' },
+  { value: 'ai', get label() { return t('Realizzata con AI'); } },
+  { value: 'modified', get label() { return t('Modificata con AI'); } },
+  { value: 'generated', get label() { return t('Generata con AI'); } },
 ];
 type OpenOptions = { selected?: string; onSelect?: (path: string) => void };
 
@@ -88,15 +89,15 @@ function build() {
   root.hidden = true;
   root.setAttribute('role', 'dialog');
   root.setAttribute('aria-modal', 'true');
-  root.setAttribute('aria-label', 'Mediateca');
+  root.setAttribute('aria-label', t('Mediateca'));
   root.innerHTML = `
     <div class="bd-media-box">
       <div class="bd-media-head">
         <h2>Media</h2>
-        <input type="search" placeholder="Cerca per nome, cartella o testo alternativo" aria-label="Cerca immagini">
-        <button type="button" class="primary" data-act="upload">Carica immagini</button>
+        <input type="search" placeholder="${esc(t('Cerca per nome, cartella o testo alternativo'))}" aria-label="${esc(t('Cerca immagini'))}">
+        <button type="button" class="primary" data-act="upload">${esc(t('Carica immagini'))}</button>
         <input type="file" accept=".svg,.png,.jpg,.jpeg,.webp,.avif,.gif" multiple hidden>
-        <button type="button" data-act="close" aria-label="Chiudi">✕</button>
+        <button type="button" data-act="close" aria-label="${esc(t('Chiudi'))}">✕</button>
       </div>
       <div class="bd-media-body">
         <div class="bd-media-grid" role="list"></div>
@@ -125,7 +126,7 @@ function renderGrid() {
   const grid = root!.querySelector<HTMLElement>('.bd-media-grid')!;
   const q = root!.querySelector<HTMLInputElement>('input[type=search]')!.value.trim().toLowerCase();
   const list = items.filter((i) => !q || `${i.name} ${i.folder} ${i.alt}`.toLowerCase().includes(q));
-  grid.innerHTML = list.length ? '' : '<p class="bd-media-empty">Nessuna immagine. Caricane una con il pulsante in alto o trascinandola qui.</p>';
+  grid.innerHTML = list.length ? '' : `<p class="bd-media-empty">${esc(t('Nessuna immagine. Caricane una con il pulsante in alto o trascinandola qui.'))}</p>`;
   for (const it of list) {
     const b = document.createElement('button');
     b.type = 'button';
@@ -133,7 +134,7 @@ function renderGrid() {
     b.setAttribute('role', 'listitem');
     b.setAttribute('aria-pressed', String(current?.path === it.path));
     b.innerHTML = `<span class="t"><img src="${thumb(it.path, it.mtime)}" alt="" loading="lazy"></span><span class="n" title="${esc(it.name)}">${esc(it.name)}</span>
-      <span class="u ${it.usedIn.length ? '' : 'no'}">${it.usedIn.length ? `Usata in ${it.usedIn.length}` : 'Non usata'}</span>
+      <span class="u ${it.usedIn.length ? '' : 'no'}">${esc(it.usedIn.length ? t('Usata in {n}', { n: it.usedIn.length }) : t('Non usata'))}</span>
       ${it.ai !== 'none' ? `<span class="ai">${esc(AI_CHOICES.find((c) => c.value === it.ai)?.label)}</span>` : ''}`;
     b.addEventListener('click', () => { current = it; renderGrid(); renderSide(); });
     b.addEventListener('dblclick', () => { if (opts.onSelect) choose(it); });
@@ -144,23 +145,23 @@ function renderGrid() {
 function renderSide(msg = '', ok = false) {
   const side = root!.querySelector<HTMLElement>('.bd-media-side')!;
   if (!current) {
-    side.innerHTML = `<p><strong>${opts.onSelect ? 'Scegli un’immagine' : 'Mediateca'}</strong></p><small>Clicca un’immagine per vederne i dettagli${opts.onSelect ? ', doppio clic per sceglierla al volo' : ''}.</small>`;
+    side.innerHTML = `<p><strong>${esc(t(opts.onSelect ? 'Scegli un’immagine' : 'Mediateca'))}</strong></p><small>${esc(t(opts.onSelect ? 'Clicca un’immagine per vederne i dettagli, doppio clic per sceglierla al volo.' : 'Clicca un’immagine per vederne i dettagli.'))}</small>`;
     return;
   }
   const it = current;
   side.innerHTML = `
     <div class="prev"><img src="${thumb(it.path, it.mtime)}" alt=""></div>
     <div><strong style="word-break:break-all">${esc(it.name)}</strong><br><small>${esc(it.folder || '/')} · ${kb(it.size)} <span data-dim></span></small></div>
-    ${opts.onSelect ? '<button type="button" class="green" data-act="choose">Usa questa immagine</button>' : ''}
+    ${opts.onSelect ? `<button type="button" class="green" data-act="choose">${esc(t('Usa questa immagine'))}</button>` : ''}
     <label><strong>Testo alternativo predefinito</strong><br><small>Usato quando la pagina non ne indica uno.</small>
       <textarea>${esc(it.alt)}</textarea></label>
-    <div class="row"><button type="button" data-act="alt">Salva il testo alternativo</button><button type="button" class="bd-ai-gen" data-act="alt-ai">✦ Genera con AI</button></div>
+    <div class="row"><button type="button" data-act="alt">${esc(t('Salva il testo alternativo'))}</button><button type="button" class="bd-ai-gen" data-act="alt-ai">✦ ${esc(t('Genera con AI'))}</button></div>
     <div><strong>Nome del file</strong><br><small>Tutti i riferimenti nei contenuti vengono aggiornati. Salva prima eventuali pagine aperte con modifiche in corso.</small>
-      <div class="row"><input type="text" value="${esc(it.name.replace(/\.[^.]+$/, ''))}" aria-label="Nuovo nome del file"><button type="button" data-act="rename">Rinomina</button></div></div>
+      <div class="row"><input type="text" value="${esc(it.name.replace(/\.[^.]+$/, ''))}" aria-label="${esc(t('Nuovo nome del file'))}"><button type="button" data-act="rename">${esc(t('Rinomina'))}</button></div></div>
     <div><strong>Marcatura AI</strong><br><small>AI Act (UE), art. 50: segnala le immagini generate o modificate con l’intelligenza artificiale. Nel sito compare un’etichetta sull’immagine.</small>
-      <div class="bd-media-ai" role="radiogroup" aria-label="Marcatura AI">${AI_CHOICES.map((c) => `<label><input type="radio" name="bd-ai" value="${c.value}" ${it.ai === c.value ? 'checked' : ''}>${c.label}</label>`).join('')}</div></div>
-    <div><strong>Dove è usata</strong>${it.usedIn.length ? `<ul>${it.usedIn.map((u) => `<li>${esc(u)}</li>`).join('')}</ul>` : '<br><small>In nessuna pagina.</small>'}</div>
-    <button type="button" class="danger" data-act="delete" ${it.usedIn.length ? 'disabled title="Toglila prima dalle pagine in cui è usata"' : ''}>Elimina definitivamente</button>
+      <div class="bd-media-ai" role="radiogroup" aria-label="${esc(t('Marcatura AI'))}">${AI_CHOICES.map((c) => `<label><input type="radio" name="bd-ai" value="${c.value}" ${it.ai === c.value ? 'checked' : ''}>${c.label}</label>`).join('')}</div></div>
+    <div><strong>${esc(t('Dove è usata'))}</strong>${it.usedIn.length ? `<ul>${it.usedIn.map((u) => `<li>${esc(u)}</li>`).join('')}</ul>` : `<br><small>${esc(t('In nessuna pagina.'))}</small>`}</div>
+    <button type="button" class="danger" data-act="delete" ${it.usedIn.length ? `disabled title="${esc(t('Toglila prima dalle pagine in cui è usata'))}"` : ''}>${esc(t('Elimina definitivamente'))}</button>
     ${msg ? `<p class="bd-media-msg ${ok ? 'ok' : ''}">${esc(msg)}</p>` : ''}`;
   const img = side.querySelector<HTMLImageElement>('.prev img')!;
   img.addEventListener('load', () => { side.querySelector('[data-dim]')!.textContent = `· ${img.naturalWidth}×${img.naturalHeight}`; });
@@ -168,7 +169,7 @@ function renderSide(msg = '', ok = false) {
   side.querySelector('[data-act="alt"]')!.addEventListener('click', async () => {
     const alt = side.querySelector('textarea')!.value;
     const res = await fetch(`/api/media?path=${encodeURIComponent(it.path)}`, { method: 'PUT', body: JSON.stringify({ alt }) });
-    if (res.ok) { it.alt = alt.trim(); renderSide('Testo alternativo salvato.', true); }
+    if (res.ok) { it.alt = alt.trim(); renderSide(t('Testo alternativo salvato.'), true); }
   });
   side.querySelector('[data-act="alt-ai"]')!.addEventListener('click', async (e) => {
     const btn = e.currentTarget as HTMLButtonElement;
@@ -178,10 +179,10 @@ function renderSide(msg = '', ok = false) {
       const out = await res.json();
       if (!res.ok) throw new Error(out.error || `Errore ${res.status}`);
       side.querySelector('textarea')!.value = out.alt;
-      btn.textContent = 'Generato: controlla e salva';
+      btn.textContent = t('Generato: controlla e salva');
     } catch (err) {
-      btn.textContent = '✦ Genera con AI';
-      alert(`Generazione non riuscita: ${(err as Error).message}`);
+      btn.textContent = `✦ ${t('Genera con AI')}`;
+      alert(t('Generazione non riuscita: {e}', { e: (err as Error).message }));
     } finally { btn.disabled = false; }
   });
   side.querySelector('[data-act="rename"]')!.addEventListener('click', async () => {
@@ -192,14 +193,14 @@ function renderSide(msg = '', ok = false) {
     await load();
     current = items.find((i) => i.path === data.path) ?? null;
     renderGrid();
-    renderSide(`Rinominato${data.updated ? `: aggiornati i riferimenti in ${data.updated} ${data.updated === 1 ? 'file' : 'file'} di contenuti` : ''}.`, true);
+    renderSide(data.updated ? t('Rinominato: aggiornati i riferimenti in {n} file di contenuti.', { n: data.updated }) : t('Rinominato.'), true);
   });
   side.querySelectorAll<HTMLInputElement>('input[name="bd-ai"]').forEach((r) => r.addEventListener('change', async () => {
     const res = await fetch(`/api/media?path=${encodeURIComponent(it.path)}`, { method: 'PUT', body: JSON.stringify({ ai: r.value }) });
     if (res.ok) { it.ai = r.value; renderGrid(); renderSide('Marcatura AI salvata.', true); }
   }));
   side.querySelector('[data-act="delete"]')!.addEventListener('click', async () => {
-    if (!confirm(`Eliminare definitivamente ${it.name}?`)) return;
+    if (!confirm(t('Eliminare definitivamente {name}?', { name: it.name }))) return;
     const res = await fetch(`/api/media?path=${encodeURIComponent(it.path)}`, { method: 'DELETE' });
     if (!res.ok) return renderSide((await res.json()).error);
     items = items.filter((x) => x !== it);

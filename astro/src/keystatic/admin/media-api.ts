@@ -151,6 +151,7 @@ export const PUT: APIRoute = async ({ url, request }) => {
 export const DELETE: APIRoute = async ({ url, request }) => {
   try {
     const ws = await open(request);
+    if (ws.client) return json({ error: 'Non hai i permessi per eliminare immagini.' }, 403);
     const path = url.searchParams.get('path');
     const file = fileOf(path);
     if (!file || !existsSync(file)) return json({ error: 'Immagine non trovata.' }, 404);

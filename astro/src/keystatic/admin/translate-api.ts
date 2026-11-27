@@ -14,6 +14,7 @@ import Anthropic from '@anthropic-ai/sdk';
 import { generateJSON, pick, type Provider } from './ai';
 import { existsSync, readFileSync, readdirSync } from 'node:fs';
 import { open, errorResponse } from './workspace';
+import { CLIENT_DENIED_KEYS } from './auth';
 import { dirname } from 'node:path';
 import keystaticConfig from '../../../keystatic.config';
 import { tKey } from '../i18n';
@@ -230,6 +231,7 @@ export const POST: APIRoute = async ({ request }) => {
   // utente e file aggiornati PRIMA di chiamare l'AI (online: solo chi può modificare il sito)
   let ws;
   try { ws = await open(request); } catch (e) { return errorResponse(e); }
+  if (ws.client && body.key && CLIENT_DENIED_KEYS.includes(body.key)) return json({ error: 'Non hai i permessi per questa sezione.' }, 403);
 
   try {
     // ---- singleton (pagine a layout fisso, Menu, Impostazioni…)

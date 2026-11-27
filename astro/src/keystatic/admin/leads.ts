@@ -1,11 +1,12 @@
 // RICHIESTE nel pannello: voce "Richieste" nella sidebar (con il numero delle nuove) e pagina /admin/…/richieste
 // con stato (nuova → contattato → preventivo → acquisito / perso), note ed eliminazione. Dati: /api/leads.
 import { adminBase } from './base';
+import { t, fmtLocale } from './ui-i18n';
 
 const STATUS_LABEL: Record<string, string> = { nuova: 'Nuova', contattato: 'Contattato', preventivo: 'Preventivo inviato', acquisito: 'Acquisito', perso: 'Perso' };
 const TOPIC_LABEL: Record<string, string> = {};
 const esc = (s: unknown) => String(s ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
-const df = new Intl.DateTimeFormat('it-IT', { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+const df = new Intl.DateTimeFormat(fmtLocale(), { day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' });
 
 const CSS = `
 .bd-leads-link { display: flex !important; align-items: center; justify-content: space-between; }
@@ -62,27 +63,27 @@ function updateCount() {
 
 function render(box: HTMLElement) {
   if (!enabled) {
-    box.innerHTML = '<h2>Richieste</h2><p class="muted">Le richieste del modulo contatti sono salvate su Netlify: le vedi qui nel pannello online (bortolin.dev/admin). In locale non ci sono.</p>';
+    box.innerHTML = `<h2>${esc(t('Richieste'))}</h2><p class="muted">${esc(t('Le richieste del modulo contatti sono salvate online: le vedi qui nel pannello online. In locale non ci sono.'))}</p>`;
     return;
   }
   const active = (x: any) => !['acquisito', 'perso'].includes(x.status);
   const groups: [string, string, (x: any) => boolean][] = [
-    ['attive', 'Da seguire', active], ['nuova', 'Nuove', (x) => x.status === 'nuova'], ['acquisito', 'Acquisite', (x) => x.status === 'acquisito'], ['perso', 'Perse', (x) => x.status === 'perso'], ['tutte', 'Tutte', () => true],
+    ['attive', t('Da seguire'), active], ['nuova', t('Nuove'), (x) => x.status === 'nuova'], ['acquisito', t('Acquisite'), (x) => x.status === 'acquisito'], ['perso', t('Perse'), (x) => x.status === 'perso'], ['tutte', t('Tutte'), () => true],
   ];
   const list = items.filter(groups.find((g) => g[0] === filter)![2]);
-  box.innerHTML = `<div><h2>Richieste</h2><p class="muted">Dal modulo contatti del sito. Ogni richiesta arriva anche via email.</p></div>
-    <div class="filters" role="group" aria-label="Filtra le richieste">${groups.map(([k, l, fn]) => `<button type="button" data-f="${k}" aria-pressed="${k === filter}">${l} (${items.filter(fn).length})</button>`).join('')}</div>
+  box.innerHTML = `<div><h2>${esc(t('Richieste'))}</h2><p class="muted">${esc(t('Dal modulo contatti del sito. Ogni richiesta arriva anche via email.'))}</p></div>
+    <div class="filters" role="group" aria-label="${esc(t('Filtra le richieste'))}">${groups.map(([k, l, fn]) => `<button type="button" data-f="${k}" aria-pressed="${k === filter}">${l} (${items.filter(fn).length})</button>`).join('')}</div>
     ${list.length ? list.map((x) => `<article class="bd-lead${x.status === 'nuova' ? ' new' : ''}" data-id="${esc(x.id)}">
-      <header><b>${esc(x.name)}</b><span class="muted">${esc(df.format(new Date(x.createdAt)))} · ${esc(String(x.lang || 'it').toUpperCase())}${x.page ? ` · da ${esc(x.page)}` : ''}</span></header>
+      <header><b>${esc(x.name)}</b><span class="muted">${esc(df.format(new Date(x.createdAt)))} · ${esc(String(x.lang || 'it').toUpperCase())}${x.page ? ` · ${esc(t('da {s}', { s: x.page }))}` : ''}</span></header>
       <div class="contacts"><a href="mailto:${esc(x.email)}">${esc(x.email)}</a><a href="tel:${esc(String(x.phone).replace(/\s/g, ''))}">${esc(x.phone)}</a>${x.website ? `<span>${esc(x.website)}</span>` : ''}</div>
       ${x.topics?.length ? `<div class="chips">${x.topics.map((t: string) => `<span>${esc(TOPIC_LABEL[t] ?? t)}</span>`).join('')}</div>` : ''}
       ${x.message ? `<div class="msg">${esc(x.message)}</div>` : ''}
-      ${x.emailFailed ? '<p class="warn">L’email di notifica non era partita: questa richiesta l’hai solo qui.</p>' : ''}
+      ${x.emailFailed ? `<p class="warn">${esc(t('L’email di notifica non era partita: questa richiesta l’hai solo qui.'))}</p>` : ''}
       <div class="tools">
-        <select aria-label="Stato">${Object.entries(STATUS_LABEL).map(([k, l]) => `<option value="${k}"${k === x.status ? ' selected' : ''}>${l}</option>`).join('')}</select>
-        <textarea placeholder="Note (si salvano da sole)" aria-label="Note">${esc(x.notes)}</textarea>
-        <button type="button" class="del">Elimina</button>
-      </div></article>`).join('') : '<p class="muted">Nessuna richiesta in questo elenco.</p>'}`;
+        <select aria-label="${esc(t('Stato'))}">${Object.entries(STATUS_LABEL).map(([k, l]) => `<option value="${k}"${k === x.status ? ' selected' : ''}>${esc(t(l))}</option>`).join('')}</select>
+        <textarea placeholder="${esc(t('Note (si salvano da sole)'))}" aria-label="${esc(t('Note'))}">${esc(x.notes)}</textarea>
+        <button type="button" class="del">${esc(t('Elimina'))}</button>
+      </div></article>`).join('') : `<p class="muted">${esc(t('Nessuna richiesta in questo elenco.'))}</p>`}`;
 
   box.querySelectorAll<HTMLButtonElement>('.filters button').forEach((b) => b.addEventListener('click', () => { filter = b.dataset.f!; render(box); }));
   box.querySelectorAll<HTMLElement>('.bd-lead').forEach((card) => {
@@ -90,12 +91,12 @@ function render(box: HTMLElement) {
     const save = async (patch: Record<string, string>) => {
       const r = await fetch('/api/leads', { method: 'PATCH', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id, ...patch }) });
       if (r.ok) { const { item } = await r.json(); items = items.map((x) => (x.id === id ? item : x)); updateCount(); }
-      else alert('Salvataggio non riuscito: ricarica la pagina e riprova.');
+      else alert(t('Salvataggio non riuscito: ricarica la pagina e riprova.'));
     };
     card.querySelector('select')!.addEventListener('change', async (e) => { await save({ status: (e.target as HTMLSelectElement).value }); render(box); });
     card.querySelector('textarea')!.addEventListener('change', (e) => save({ notes: (e.target as HTMLTextAreaElement).value }));
     card.querySelector('.del')!.addEventListener('click', async () => {
-      if (!confirm('Eliminare definitivamente questa richiesta?')) return;
+      if (!confirm(t('Eliminare definitivamente questa richiesta?'))) return;
       const r = await fetch('/api/leads', { method: 'DELETE', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id }) });
       if (r.ok) { items = items.filter((x) => x.id !== id); updateCount(); render(box); }
     });
@@ -104,7 +105,7 @@ function render(box: HTMLElement) {
 
 function sync() {
   // voce nella sidebar, subito dopo "Dashboard"
-  const dash = [...document.querySelectorAll<HTMLAnchorElement>('nav a')].find((a) => a.textContent?.trim() === 'Dashboard' || a.getAttribute('href') === adminBase());
+  const dash = [...document.querySelectorAll<HTMLAnchorElement>('nav a')].find((a) => a.getAttribute('href') === adminBase() || a.getAttribute('href') === `${adminBase()}/`);
   if (dash && !document.querySelector('.bd-leads-link')) {
     const li = dash.closest('li') ?? dash;
     const copy = li.cloneNode(true) as HTMLElement;
@@ -114,7 +115,8 @@ function sync() {
     a.removeAttribute('aria-current');
     // si cambia solo il testo, lasciando intatti font e stile della voce copiata
     const walker = document.createTreeWalker(a, NodeFilter.SHOW_TEXT);
-    for (let n = walker.nextNode(); n; n = walker.nextNode()) if (n.nodeValue?.trim() === 'Dashboard') n.nodeValue = 'Richieste';
+    let first = true;
+    for (let n = walker.nextNode(); n; n = walker.nextNode()) if (n.nodeValue?.trim()) { n.nodeValue = first ? t('Richieste') : ''; first = false; }
     a.addEventListener('click', (e) => { e.preventDefault(); history.pushState(null, '', leadsHref()); dispatchEvent(new PopStateEvent('popstate')); });
     li.after(copy);
     updateCount();
@@ -136,7 +138,7 @@ function sync() {
   host.setAttribute('data-bd-leads-host', '');
   const box = document.createElement('div');
   box.className = 'bd-leads';
-  box.innerHTML = '<p class="muted">Caricamento delle richieste…</p>';
+  box.innerHTML = `<p class="muted">${esc(t('Caricamento delle richieste…'))}</p>`;
   host.append(box);
   load().then(() => render(box));
 }

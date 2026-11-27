@@ -22,6 +22,8 @@ const KEYS = [
   ['KEYSTATIC_GITHUB_CLIENT_SECRET', 'accesso al pannello con GitHub', true],
   ['KEYSTATIC_SECRET', 'accesso al pannello con GitHub', true],
   ['PUBLIC_KEYSTATIC_GITHUB_APP_SLUG', 'nome dell’app GitHub del pannello', true],
+  ['GITHUB_APP_ID', 'accesso clienti: il server salva per loro', true],
+  ['GITHUB_APP_PRIVATE_KEY', 'accesso clienti: chiave privata dell’app GitHub', true],
   ['GOOGLE_SERVICE_ACCOUNT', 'dati di Analytics e Search Console nella Dashboard', false],
   ['PAGESPEED_API_KEY', 'monitor Lighthouse della Dashboard', false],
 ];

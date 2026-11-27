@@ -5,13 +5,23 @@
 import { Keystatic } from "./keystatic-page";
 import { REMOTE, REPO, tokenOf, workHead, catchUp } from "./workspace";
 import { adminThemeCss } from "./theme";
+import { whoIs, appToken } from "./auth";
 export const prerender = false;
 
 Astro.response.headers.set('X-Robots-Tag', 'noindex, nofollow');
 Astro.response.headers.set('Cache-Control', 'no-store');
 
-// Online il pannello lavora SEMPRE sul ramo dei contenuti: le modifiche vanno sul sito solo con "Pubblica".
-if (REMOTE) {
+// chi è collegato: admin (GitHub) o cliente (email e password). Online, senza accesso → pagina di login
+const who = await whoIs(Astro.request);
+if (REMOTE && !who) return Astro.redirect('/admin/login');
+const client = who?.role === 'cliente' ? who.user : null;
+if (REMOTE && client) {
+  // il cliente lavora sul ramo dei contenuti tramite il server: lo si allinea con il sito pubblicato
+  try { const t = await appToken(REPO.owner, REPO.name); await workHead(t); await catchUp(t); } catch { /* il pannello mostrerà l'errore */ }
+}
+
+// Online il pannello degli admin lavora SEMPRE sul ramo dei contenuti: le modifiche vanno sul sito solo con "Pubblica".
+if (REMOTE && !client) {
   const rest = Astro.url.pathname.replace(/^\/admin\/?/, '');
   const token = tokenOf(Astro.request);
   if (token) {
@@ -33,6 +43,8 @@ if (REMOTE) {
     <meta name="robots" content="noindex, nofollow" />
     <title>Admin · bortolin.dev</title>
     <link rel="icon" href="/api/site-icon" />
+    <!-- ruolo: i clienti usano Keystatic in modalità "locale" verso il server (keystatic-api.ts) e vedono meno sezioni -->
+    <script is:inline define:vars={{ client: client ? { name: client.name, email: client.email, lang: client.lang ?? 'it' } : null }}>window.__bdClient = client;</script>
     <!-- colori del pannello: src/keystatic/admin/theme.ts -->
     <style is:inline set:html={adminThemeCss()}></style>
   </head>
@@ -47,5 +59,8 @@ if (REMOTE) {
     <script src="./dashboard.ts"></script>
     <script src="./ai-chat.ts"></script>
     <script src="./leads.ts"></script>
+    <script src="./role.ts"></script>
+    <script src="./users.ts"></script>
+    <script src="./ks-l10n.ts"></script>
   </body>
 </html>
