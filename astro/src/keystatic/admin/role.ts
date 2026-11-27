@@ -1,6 +1,8 @@
 // PANNELLO DEI CLIENTI (window.__bdClient, impostato da page.astro): niente "SEO e strumenti" e "Configurazione",
 // niente "Elimina" nella mediateca e "Crea redirect"; nome del cliente ed "Esci" nella sidebar.
 // È solo l'interfaccia: i permessi veri li controlla il server (keystatic-api.ts, media-api.ts, translate-api.ts…).
+import { t } from './ui-i18n';
+
 const client = (window as any).__bdClient as { name: string; email: string } | null;
 
 const HIDDEN_GROUPS = ['seo e strumenti', 'configurazione'];
@@ -32,7 +34,8 @@ function hide() {
   if (anchor && !document.querySelector('.bd-who')) {
     const box = document.createElement('div');
     box.className = 'bd-who';
-    box.innerHTML = `<span></span><a href="/admin/login?esci">Esci</a>`;
+    box.innerHTML = `<span></span><a href="/admin/login?esci"></a>`;
+    box.querySelector('a')!.textContent = t('Esci');
     box.querySelector('span')!.textContent = client!.name;
     anchor.after(box);
   }

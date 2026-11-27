@@ -7,7 +7,7 @@ import { createHmac, randomBytes, scryptSync, timingSafeEqual, createSign } from
 import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 
-export interface User { email: string; name: string; passwordHash: string; active: boolean; createdAt: string; lastLogin?: string }
+export interface User { email: string; name: string; passwordHash: string; active: boolean; createdAt: string; lastLogin?: string; /** lingua del pannello (comandi; i campi restano in italiano) */ lang?: 'it' | 'en' | 'es' | 'de' }
 export type Who = { role: 'admin'; user?: undefined } | { role: 'cliente'; user: User };
 
 const REMOTE = !import.meta.env.DEV;

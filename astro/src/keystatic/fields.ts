@@ -10,6 +10,7 @@ import { Button } from '@keystar/ui/button';
 import { highlighterIcon } from '@keystar/ui/icon/icons/highlighterIcon';
 import { ICON_NAMES } from '../lib/icons';
 import { PAGES, CUSTOM } from './pages';
+import { t as ui } from './admin/ui-i18n';
 
 // ---------------------------------------------------------------- base
 export const t = (label: string, description?: string) => fields.text({ label, description });
@@ -145,8 +146,8 @@ function MediaInput(props: { value: string; onChange: (v: string) => void; label
         type: 'button', onClick: open, title: 'Cambia immagine',
         style: { all: 'unset', cursor: 'pointer', width: 120, height: 90, borderRadius: 8, border: '1px solid rgba(127,127,127,.35)', background: 'repeating-conic-gradient(rgba(127,127,127,.18) 0 25%, transparent 0 50%) 0 0/14px 14px', display: 'grid', placeItems: 'center', overflow: 'hidden' },
       }, createElement('img', { src: `/api/media?file=${encodeURIComponent(value)}`, alt: '', style: { maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' } })),
-      createElement(Button, { onPress: open }, value ? 'Cambia dalla libreria' : 'Scegli dalla libreria'),
-      value && createElement(Button, { prominence: 'low', onPress: () => onChange('') }, 'Rimuovi'),
+      createElement(Button, { onPress: open }, ui(value ? 'Cambia dalla libreria' : 'Scegli dalla libreria')),
+      value && createElement(Button, { prominence: 'low', onPress: () => onChange('') }, ui('Rimuovi')),
     ),
     value && createElement('span', { style: { fontSize: 12, opacity: 0.6, wordBreak: 'break-all' } }, value.replace('/src/assets/images/', '')),
     forceValidation && required && !value && createElement('span', { style: { fontSize: 12, color: '#f44336' } }, `${label} è obbligatoria`),

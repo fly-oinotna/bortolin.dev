@@ -1,5 +1,8 @@
 import { adminBase } from './base';
 import { getProvider } from './ai-pref';
+import { t } from './ui-i18n';
+
+const esc = (x: unknown) => String(x ?? '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]!);
 // TRADUZIONI nel pannello Keystatic:
 //  - selettore di lingua in cima alla sidebar (IT · EN): mostra solo le voci della lingua scelta
 //    (le traduzioni sono le voci "en_…" della config, vedi src/keystatic/i18n.ts; quelle condivise restano sempre visibili);
@@ -97,7 +100,7 @@ function applyNav() {
     const box = document.createElement('div');
     box.className = 'bd-lang';
     box.setAttribute('role', 'group');
-    box.setAttribute('aria-label', 'Lingua dei contenuti');
+    box.setAttribute('aria-label', t('Lingua dei contenuti'));
     for (const l of [DEFAULT, ...status.langs]) {
       const b = document.createElement('button');
       b.type = 'button';
@@ -131,10 +134,10 @@ function applyNav() {
 // ---------------------------------------------------------------- intestazione: altra lingua + traduci con AI
 async function translate(opts: { lang: string; key?: string; collection?: string; slug?: string; force?: boolean }, label: string) {
   if (busy) return;
-  if (opts.force && !confirm(`Ritradurre "${label}" con l'AI?\nLa traduzione attuale verrà sostituita (le modifiche fatte a mano si perdono).`)) return;
+  if (opts.force && !confirm(`${t('Ritradurre “{label}” con l’AI?', { label })}\n${t('La traduzione attuale verrà sostituita (le modifiche fatte a mano si perdono).')}`)) return;
   busy = true;
   const overlay = Object.assign(document.createElement('div'), { className: 'bd-tr-overlay' });
-  overlay.innerHTML = `<div><i></i><strong>Traduzione in corso…</strong><br>“${label}” in ${NAME_IT[opts.lang] ?? opts.lang}.<br><small>Può richiedere uno o due minuti.</small></div>`;
+  overlay.innerHTML = `<div><i></i><strong>${esc(t('Traduzione in corso…'))}</strong><br>${esc(t('“{label}” in {lang}.', { label, lang: t(NAME_IT[opts.lang] ?? opts.lang) }))}<br><small>${esc(t('Può richiedere uno o due minuti.'))}</small></div>`;
   document.body.append(overlay);
   try {
     const res = await fetch('/api/translate', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ provider: getProvider(), ...opts }) });
@@ -147,7 +150,7 @@ async function translate(opts: { lang: string; key?: string; collection?: string
     // ricarica completa: Keystatic rilegge il file appena creato
     location.href = data.href;
   } catch (e) {
-    alert(`Traduzione non riuscita.\n${(e as Error).message}`);
+    alert(`${t('Traduzione non riuscita.')}\n${(e as Error).message}`);
   } finally {
     busy = false;
     overlay.remove();
@@ -172,18 +175,18 @@ function applyBar() {
     for (const l of status.langs) {
       const href = counterpart(l);
       const exists = coll ? !!status.translations[l].collections[base]?.[loc.slug!] : status.translations[l].singletons[base];
-      if (exists) parts.push(`<a href="${href}" data-go><span class="bd-flag">${l.toUpperCase()}</span> Apri la versione ${ADJ[l] ?? l} →</a>`);
+      if (exists) parts.push(`<a href="${href}" data-go><span class="bd-flag">${l.toUpperCase()}</span> ${t(`Apri la versione ${ADJ[l] ?? l}`)} →</a>`);
       else {
-        parts.push(`<button type="button" class="bd-ai" data-act="${actions.length}"><span class="bd-flag">${l.toUpperCase()}</span> Traduci con AI</button>`);
+        parts.push(`<button type="button" class="bd-ai" data-act="${actions.length}"><span class="bd-flag">${l.toUpperCase()}</span> ${t('Traduci con AI')}</button>`);
         actions.push(() => translate(coll ? { lang: l, collection: base, slug: loc.slug } : { lang: l, key: base }, label));
       }
     }
   } else {
     const itSlug = coll ? Object.entries(status.translations[lang].collections[base] ?? {}).find(([, s]) => s === loc.slug)?.[0] : base;
     const exists = coll ? !!itSlug : status.translations[lang].singletons[base];
-    parts.push(`<a href="${counterpart(DEFAULT)}" data-go>← <span class="bd-flag">IT</span> Versione italiana</a>`);
+    parts.push(`<a href="${counterpart(DEFAULT)}" data-go>← <span class="bd-flag">IT</span> ${t('Versione italiana')}</a>`);
     if (itSlug || !coll) {
-      parts.push(`<button type="button" class="bd-ai" data-act="${actions.length}">${exists ? 'Ritraduci con AI' : 'Traduci con AI'}</button>`);
+      parts.push(`<button type="button" class="bd-ai" data-act="${actions.length}">${t(exists ? 'Ritraduci con AI' : 'Traduci con AI')}</button>`);
       actions.push(() => translate(coll ? { lang, collection: base, slug: itSlug, force: true } : { lang, key: base, force: exists }, label));
     }
   }

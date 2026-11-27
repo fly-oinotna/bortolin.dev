@@ -3,6 +3,7 @@
 import { fields } from '@keystatic/core';
 import { createElement as h, useState } from 'react';
 import { lengthStatus, length } from '../lib/seo';
+import { t } from './admin/ui-i18n';
 
 interface CountedOptions {
   label: string;
@@ -28,7 +29,7 @@ function AiButton({ field, onChange }: { field: 'title' | 'description'; onChang
   const [state, setState] = useState<{ busy: boolean; msg: string }>({ busy: false, msg: '' });
   const run = async () => {
     const loc = location();
-    if (!loc) { setState({ busy: false, msg: 'Salva prima la voce: l’AI legge il contenuto salvato.' }); return; }
+    if (!loc) { setState({ busy: false, msg: t('Salva prima la voce: l’AI legge il contenuto salvato.') }); return; }
     setState({ busy: true, msg: '' });
     try {
       let provider = '';
@@ -37,13 +38,13 @@ function AiButton({ field, onChange }: { field: 'title' | 'description'; onChang
       const out = await res.json();
       if (!res.ok) throw new Error(out.error || `Errore ${res.status}`);
       onChange(out[field]);
-      setState({ busy: false, msg: 'Generato dal contenuto salvato: controllalo e salva.' });
+      setState({ busy: false, msg: t('Generato dal contenuto salvato: controllalo e salva.') });
     } catch (e) {
       setState({ busy: false, msg: (e as Error).message });
     }
   };
   return h('span', { style: { display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap', flex: '1 1 auto' } },
-    h('button', { type: 'button', onClick: run, disabled: state.busy, className: 'bd-ai-gen' }, state.busy ? 'Genero…' : '✦ Genera con AI'),
+    h('button', { type: 'button', onClick: run, disabled: state.busy, className: 'bd-ai-gen' }, state.busy ? t('Genero…') : `✦ ${t('Genera con AI')}`),
     state.msg && h('span', { style: { color: 'rgba(127,127,127,.95)', flexBasis: '100%' } }, state.msg));
 }
 
@@ -66,7 +67,7 @@ export function counted(o: CountedOptions) {
         h('div', { 'aria-live': 'polite', style: { display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 10, fontSize: 12, fontFamily: 'var(--kui-typography-font-family-base, system-ui, -apple-system, "Segoe UI", sans-serif)' } },
           h('div', { style: { flex: '0 0 120px', height: 6, borderRadius: 3, background: 'rgba(127,127,127,.25)', overflow: 'hidden' } },
             h('div', { style: { width: `${pct}%`, height: '100%', background: s.color, transition: 'width .15s, background .15s' } })),
-          h('strong', { style: { color: s.color, fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap' } }, `${n} caratteri - ${s.label}`),
+          h('strong', { style: { color: s.color, fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap' } }, `${t("{n} caratteri", { n })} - ${t(s.label)}`),
           h('span', { style: { color: 'rgba(127,127,127,.9)', whiteSpace: 'nowrap' } }, `consigliati ${o.limits.good}–${o.limits.max}`),
           o.ai && h(AiButton, { field: o.ai, onChange: props.onChange }),
         ),

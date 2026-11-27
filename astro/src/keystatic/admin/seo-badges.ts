@@ -3,6 +3,7 @@
 // Al passaggio del mouse compare il tooltip con tutti i dettagli. I dati arrivano da /api/seo-status e si aggiornano da soli.
 import type { SeoReport } from '../../lib/seo';
 import { adminBase } from './base';
+import { t } from './ui-i18n';
 
 const COLORS = { red: '#f44336', green: '#4caf50', gray: '#777777' };
 type Entry = SeoReport & { url: string; href: string; pageTitle: string; kind?: string; label?: string; lang?: string; itId?: string };
@@ -60,25 +61,25 @@ function badges(r: SeoReport) {
 
 function tooltip(r: SeoReport) {
   const line = (name: string, x: SeoReport['title']) =>
-    `<p><strong>${name}</strong> <span style="color:${x.color}">- ${x.length} caratteri - ${esc(x.label)}</span><br><span class="t">${esc(x.text) || '—'}</span></p>`;
+    `<p><strong>${name}</strong> <span style="color:${x.color}">- ${esc(t('{n} caratteri', { n: x.length }))} - ${esc(t(x.label))}</span><br><span class="t">${esc(x.text) || '—'}</span></p>`;
   const md = !r.markdown.enabled
-    ? `<span style="color:${COLORS.gray}">Disattivato</span>`
+    ? `<span style="color:${COLORS.gray}">${esc(t('Disattivato'))}</span>`
     : r.markdown.custom
-      ? `<span style="color:${COLORS.green}">Personalizzato</span>`
-      : `<span style="color:${COLORS.red}">Predefinito</span>`;
-  const auto = (r.schema.auto ?? []).map((t) => `<li style="color:${COLORS.green}">${esc(t)} (automatico)</li>`).join('');
+      ? `<span style="color:${COLORS.green}">${esc(t('Personalizzato'))}</span>`
+      : `<span style="color:${COLORS.red}">${esc(t('Predefinito'))}</span>`;
+  const auto = (r.schema.auto ?? []).map((x) => `<li style="color:${COLORS.green}">${esc(x)} (${esc(t('automatico'))})</li>`).join('');
   const types = auto + r.schema.types
-    .map((t) => `<li style="color:${t.enabled ? COLORS.green : COLORS.gray}">${t.label} ${t.enabled ? 'attivo' : 'non attivo'}</li>`)
+    .map((x) => `<li style="color:${x.enabled ? COLORS.green : COLORS.gray}">${x.label} ${esc(t(x.enabled ? 'attivo' : 'non attivo'))}</li>`)
     .join('');
   const custom = r.schema.custom
-    ? `<li style="color:${COLORS.green}">Markup personalizzato attivo</li>`
-    : `<li style="color:${COLORS.gray}">Nessun markup personalizzato</li>`;
+    ? `<li style="color:${COLORS.green}">${esc(t('Markup personalizzato attivo'))}</li>`
+    : `<li style="color:${COLORS.gray}">${esc(t('Nessun markup personalizzato'))}</li>`;
   return [
     line('Meta Title', r.title),
     line('Meta Description', r.description),
     `<p><strong>Robots:</strong> <span style="color:${r.robots.color}">${esc(r.robots.label)}</span></p>`,
-    `<p><strong>OG Image:</strong> <span style="color:${COLORS.green}">${r.og.custom ? 'Personalizzata' : 'Automatica (generata dalla pagina)'}</span></p>`,
-    `<p><strong>Sitemap XML:</strong> <span style="color:${r.sitemap.color}">${esc(r.sitemap.label)}</span></p>`,
+    `<p><strong>OG Image:</strong> <span style="color:${COLORS.green}">${esc(t(r.og.custom ? 'Personalizzata' : 'Automatica (generata dalla pagina)'))}</span></p>`,
+    `<p><strong>Sitemap XML:</strong> <span style="color:${r.sitemap.color}">${esc(t(r.sitemap.label))}</span></p>`,
     `<p><strong>Markdown (llms.txt):</strong> ${md}</p>`,
     `<p><strong>Schema Markup:</strong></p><ul>${types}${custom}</ul>`,
   ].join('');
@@ -105,7 +106,7 @@ const badgeRow = (key: string, r: Entry) => {
   row.className = 'bd-seo';
   row.dataset.key = key;
   row.innerHTML = badges(r);
-  row.setAttribute('aria-label', `SEO: Meta Title ${r.title.label}, Meta Description ${r.description.label}, Robots ${r.robots.label}`);
+  row.setAttribute('aria-label', `SEO: Meta Title ${t(r.title.label)}, Meta Description ${t(r.description.label)}, Robots ${r.robots.label}`);
   // tooltip solo passando sopra i riquadri SEO
   row.addEventListener('mouseenter', () => showTip(row));
   row.addEventListener('mouseleave', hideTip);
@@ -128,7 +129,7 @@ function trPills(itId: string) {
     const pill = document.createElement(target ? 'a' : 'span');
     pill.className = `bd-tr ${target ? 'ok' : 'no'}`;
     pill.textContent = l.toUpperCase();
-    pill.title = target ? `Tradotta (${l.toUpperCase()}): apri la traduzione` : `Non ancora tradotta (${l.toUpperCase()})`;
+    pill.title = target ? t('Tradotta ({l}): apri la traduzione', { l: l.toUpperCase() }) : t('Non ancora tradotta ({l})', { l: l.toUpperCase() });
     if (target) {
       const href = col ? `${adminBase()}/collection/${l}_${col}/item/${encodeURIComponent(target)}` : `${adminBase()}/singleton/${l}_${slug}`;
       (pill as HTMLAnchorElement).href = href;
@@ -237,7 +238,7 @@ function applyFixedList() {
   const box = document.createElement('section');
   box.className = 'bd-fixed';
   box.dataset.sig = sig;
-  box.innerHTML = `<h2 class="bd-group-title">${FIXED_TITLE}</h2><div class="bd-fixed-list"></div>`;
+  box.innerHTML = `<h2 class="bd-group-title">${esc(t(FIXED_TITLE))}</h2><div class="bd-fixed-list"></div>`;
   const list = box.querySelector('div')!;
   for (const [key, r, itKey] of fixed) {
     if (!r) {
@@ -246,7 +247,7 @@ function applyFixedList() {
       const item = document.createElement('div');
       item.className = 'bd-fixed-item bd-missing';
       item.dataset.search = label.toLowerCase();
-      item.innerHTML = `<span class="bd-row"><span class="bd-row-text"><span class="bd-row-title"></span><span class="bd-row-meta">Non ancora tradotta</span></span><button type="button" class="bd-fixed-ai">Traduci con AI</button></span>`;
+      item.innerHTML = `<span class="bd-row"><span class="bd-row-text"><span class="bd-row-title"></span><span class="bd-row-meta">${esc(t('Non ancora tradotta'))}</span></span><button type="button" class="bd-fixed-ai">${esc(t('Traduci con AI'))}</button></span>`;
       item.querySelector('.bd-row-title')!.textContent = label;
       item.querySelector('button')!.addEventListener('click', () => (window as any).bdI18n?.translate({ lang, key: itKey }, label));
       list.append(item);
@@ -278,7 +279,7 @@ function applyFixedList() {
   }
   const other = document.createElement('h2');
   other.className = 'bd-group-title bd-other-title';
-  other.textContent = OTHER_TITLE;
+  other.textContent = t(OTHER_TITLE);
   grid.before(box, other);
   // stessi margini laterali della tabella di Keystatic
   const g = grid.getBoundingClientRect(), parent = grid.parentElement!.getBoundingClientRect();

@@ -3,6 +3,7 @@
 // Si aggiorna da solo ogni 20 secondi e quando si torna sulla scheda del browser.
 
 import { deployBadge } from './project';
+import { t } from './ui-i18n';
 
 type State = { enabled?: boolean; commits?: number; files?: string[]; error?: string };
 
@@ -19,7 +20,7 @@ const guardBranch = () => {
 const label = (f: string) => {
   const m = f.match(/^src\/content\/([a-z]{2})\/(.+)\.json$/);
   if (m) return `${m[1].toUpperCase()} · ${m[2]}`;
-  if (f.startsWith('src/assets/images/')) return `Immagine · ${f.split('/').pop()}`;
+  if (f.startsWith('src/assets/images/')) return `${t('Immagine')} · ${f.split('/').pop()}`;
   return f;
 };
 
@@ -59,7 +60,7 @@ function mount() {
     const n = state.files?.length ?? 0;
     btn.disabled = busy || n === 0;
     btn.title = n ? state.files!.map(label).join('\n') : '';
-    btn.innerHTML = busy ? 'Pubblicazione…' : n ? `Pubblica sul sito <span class="n">${n}</span>` : 'Tutto pubblicato ✓';
+    btn.innerHTML = busy ? t('Pubblicazione…') : n ? `${t('Pubblica sul sito')} <span class="n">${n}</span>` : `${t('Tutto pubblicato')} ✓`;
   };
   const refresh = async () => {
     try {
@@ -72,17 +73,17 @@ function mount() {
 
   btn.addEventListener('click', async () => {
     const files = state.files ?? [];
-    const list = files.slice(0, 10).map((f) => `• ${label(f)}`).join('\n') + (files.length > 10 ? `\n… e altri ${files.length - 10}` : '');
-    if (!confirm(`Pubblicare sul sito ${files.length} file modificati?\n\n${list}\n\nIl sito si aggiorna in 1–2 minuti.`)) return;
+    const list = files.slice(0, 10).map((f) => `• ${label(f)}`).join('\n') + (files.length > 10 ? `\n${t('… e altri {n}', { n: files.length - 10 })}` : '');
+    if (!confirm(`${t('Pubblicare sul sito {n} file modificati?', { n: files.length })}\n\n${list}\n\n${t('Il sito si aggiorna in 1–2 minuti.')}`)) return;
     busy = true; render();
     try {
       const res = await fetch('/api/publish', { method: 'POST' });
       const out = await res.json();
-      if (!res.ok) throw new Error(out.error || `Errore ${res.status}`);
-      say('Pubblicato! Netlify sta aggiornando il sito: sarà online in 1–2 minuti.');
+      if (!res.ok) throw new Error(out.error || t('Errore {n}', { n: res.status }));
+      say(t('Pubblicato! Il sito si sta aggiornando: sarà online in 1–2 minuti.'));
       setTimeout(watchDeploy, 6000); // dopo il messaggio, il badge dello stato del deploy
     } catch (e) {
-      say(`Pubblicazione non riuscita: ${(e as Error).message}`, 0);
+      say(t('Pubblicazione non riuscita: {e}', { e: (e as Error).message }), 0);
     } finally {
       busy = false;
       await refresh();

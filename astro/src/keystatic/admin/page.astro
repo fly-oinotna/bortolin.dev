@@ -44,7 +44,7 @@ if (REMOTE && !client) {
     <title>Admin · bortolin.dev</title>
     <link rel="icon" href="/api/site-icon" />
     <!-- ruolo: i clienti usano Keystatic in modalità "locale" verso il server (keystatic-api.ts) e vedono meno sezioni -->
-    <script is:inline define:vars={{ client: client ? { name: client.name, email: client.email } : null }}>window.__bdClient = client;</script>
+    <script is:inline define:vars={{ client: client ? { name: client.name, email: client.email, lang: client.lang ?? 'it' } : null }}>window.__bdClient = client;</script>
     <!-- colori del pannello: src/keystatic/admin/theme.ts -->
     <style is:inline set:html={adminThemeCss()}></style>
   </head>
@@ -61,5 +61,6 @@ if (REMOTE && !client) {
     <script src="./leads.ts"></script>
     <script src="./role.ts"></script>
     <script src="./users.ts"></script>
+    <script src="./ks-l10n.ts"></script>
   </body>
 </html>

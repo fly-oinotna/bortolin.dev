@@ -96,7 +96,7 @@ document.head.appendChild(Object.assign(document.createElement('style'), { textC
 document.addEventListener('submit', jumpToError, true);
 document.addEventListener('click', (e) => {
   const b = (e.target as HTMLElement).closest('button');
-  if (b && (b.getAttribute('form') || b.textContent?.trim() === 'Save')) jumpToError();
+  if (b && (b.getAttribute('form') || ['Save', 'Salva', 'Guardar', 'Speichern'].includes(b.textContent?.trim() ?? ''))) jumpToError();
 }, true);
 
 let queued = false;
